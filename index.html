@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Executive AI CV Portal — 1-Click HR Director Analyzer & Live Multi-Board Role Search</title>
+  <title>Executive AI CV Portal — 3D Spatial Command Deck · 1-Click HR Analyzer & Live Role Search</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Client-side Multi-Format Document Parsers (PDF.js, Mammoth DOCX, Tesseract OCR) -->
+  <!-- Three.js WebGL 3D Spatial Engine + Client-Side Multi-Format Document Parsers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -40,69 +41,84 @@
 
   <style>
     :root {
-      --bg-canvas: #FAF8F5;
-      --bg-surface: #FFFFFF;
-      --bg-elevated: #F3F0EA;
-      --bg-glass: rgba(255, 255, 255, 0.90);
-      --text-primary: #0F172A;
+      /* Emil Kowalski Precision Easing Curves (improve-animations skill) */
+      --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+      --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+      --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+      /* Cold-Luxury Spatial Light Theme Tokens (design-taste-frontend skill) */
+      --bg-canvas: #F4F6F9;
+      --bg-surface: rgba(255, 255, 255, 0.88);
+      --bg-elevated: rgba(241, 245, 249, 0.84);
+      --bg-glass: rgba(255, 255, 255, 0.82);
+      --text-primary: #0B0F19;
       --text-secondary: #334155;
       --text-muted: #64748B;
-      --border-subtle: #E2E8F0;
-      --border-strong: #CBD5E1;
+      --border-subtle: rgba(148, 163, 184, 0.24);
+      --border-strong: rgba(100, 116, 139, 0.32);
+      --border-specular: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 
-      --accent-indigo: #3730A3;
-      --accent-indigo-hover: #312E81;
-      --accent-indigo-soft: #EEF2FF;
+      --accent-indigo: #4338CA;
+      --accent-indigo-hover: #3730A3;
+      --accent-indigo-soft: rgba(67, 56, 202, 0.10);
 
       --accent-emerald: #059669;
       --accent-emerald-hover: #047857;
-      --accent-emerald-soft: #ECFDF5;
-      --accent-emerald-border: #A7F3D0;
+      --accent-emerald-soft: rgba(5, 150, 105, 0.11);
+      --accent-emerald-border: rgba(16, 185, 129, 0.38);
 
       --accent-rose: #E11D48;
-      --accent-rose-soft: #FFF1F2;
-      --accent-rose-border: #FECDD3;
+      --accent-rose-soft: rgba(225, 29, 72, 0.09);
+      --accent-rose-border: rgba(244, 63, 94, 0.32);
 
       --accent-amber: #D97706;
-      --accent-amber-soft: #FFFBEB;
+      --accent-amber-soft: rgba(217, 119, 6, 0.12);
 
-      --shadow-bezel: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -4px rgba(15, 23, 42, 0.06);
-      --shadow-float: 0 14px 34px -6px rgba(15, 23, 42, 0.10), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
-      --radius-outer: 22px;
-      --radius-inner: 16px;
+      --shadow-bezel: 0 2px 4px rgba(11, 15, 25, 0.04), 0 12px 32px -6px rgba(11, 15, 25, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      --shadow-float: 0 22px 48px -10px rgba(11, 15, 25, 0.15), 0 6px 16px -4px rgba(11, 15, 25, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      --shadow-3d-hover: 0 28px 60px -12px rgba(67, 56, 202, 0.24), 0 8px 24px -4px rgba(16, 185, 129, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+      --radius-outer: 24px;
+      --radius-inner: 18px;
       --radius-pill: 9999px;
 
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'Fraunces', Georgia, serif;
+      --font-serif: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
     [data-theme="dark"] {
-      --bg-canvas: #090D16;
-      --bg-surface: #111827;
-      --bg-elevated: #1E293B;
-      --bg-glass: rgba(17, 24, 39, 0.90);
+      /* $1,000,000 Deep Carbon Obsidian + Liquid Glass Spatial Tokens */
+      --bg-canvas: #060913;
+      --bg-surface: rgba(15, 23, 42, 0.78);
+      --bg-elevated: rgba(30, 41, 59, 0.68);
+      --bg-glass: rgba(11, 17, 32, 0.78);
       --text-primary: #F8FAFC;
       --text-secondary: #CBD5E1;
       --text-muted: #94A3B8;
-      --border-subtle: #1E293B;
-      --border-strong: #334155;
+      --border-subtle: rgba(148, 163, 184, 0.14);
+      --border-strong: rgba(148, 163, 184, 0.26);
+      --border-specular: inset 0 1px 0 rgba(255, 255, 255, 0.14);
 
       --accent-indigo: #6366F1;
       --accent-indigo-hover: #818CF8;
-      --accent-indigo-soft: rgba(99, 102, 241, 0.16);
+      --accent-indigo-soft: rgba(99, 102, 241, 0.18);
 
       --accent-emerald: #10B981;
       --accent-emerald-hover: #34D399;
-      --accent-emerald-soft: rgba(16, 185, 129, 0.15);
-      --accent-emerald-border: rgba(16, 185, 129, 0.35);
+      --accent-emerald-soft: rgba(16, 185, 129, 0.16);
+      --accent-emerald-border: rgba(16, 185, 129, 0.42);
 
       --accent-rose: #FB7185;
-      --accent-rose-soft: rgba(244, 63, 94, 0.14);
-      --accent-rose-border: rgba(244, 63, 94, 0.35);
+      --accent-rose-soft: rgba(244, 63, 94, 0.15);
+      --accent-rose-border: rgba(244, 63, 94, 0.36);
 
       --accent-amber: #FBBF24;
-      --accent-amber-soft: rgba(245, 158, 11, 0.15);
+      --accent-amber-soft: rgba(245, 158, 11, 0.16);
+
+      --shadow-bezel: 0 4px 12px rgba(0, 0, 0, 0.35), 0 20px 44px -10px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.10);
+      --shadow-float: 0 24px 56px -12px rgba(0, 0, 0, 0.68), 0 8px 20px -4px rgba(99, 102, 241, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+      --shadow-3d-hover: 0 32px 68px -12px rgba(0, 0, 0, 0.8), 0 0 34px rgba(99, 102, 241, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.24);
     }
 
     * {
@@ -117,8 +133,194 @@
       color: var(--text-primary);
       line-height: 1.55;
       min-height: 100dvh;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.25s ease, color 0.25s ease;
+      transition: background-color 280ms var(--ease-out), color 280ms var(--ease-out);
+    }
+
+    /* ---------------------------------------------------- 3D WEBGL SPATIAL BACKGROUND CANVAS & VOLUMETRIC OVERLAY */
+    #webgl3dCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.92;
+      transition: opacity 400ms var(--ease-out);
+    }
+
+    [data-theme="light"] #webgl3dCanvas {
+      opacity: 0.45;
+    }
+
+    [data-motion="reduced"] #webgl3dCanvas {
+      opacity: 0.18;
+    }
+
+    .spatial-vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 14%, rgba(99, 102, 241, 0.14), transparent 44%),
+        radial-gradient(circle at 84% 22%, rgba(16, 185, 129, 0.12), transparent 46%),
+        radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.08), transparent 50%);
+    }
+
+    /* Ensure all interactive UI sits cleanly above the 3D WebGL canvas */
+    .wizard-header-wrap,
+    .spatial-command-deck,
+    .context-guide-strip,
+    .workspace-shell {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ---------------------------------------------------- 3D INTERACTIVE PERSPECTIVE TILT & SPECULAR GLARE ENGINE */
+    [data-tilt-3d] {
+      --rx: 0deg;
+      --ry: 0deg;
+      --tz: 0px;
+      --glare-x: 50%;
+      --glare-y: 50%;
+      --glare-alpha: 0;
+      position: relative;
+      transform-style: preserve-3d;
+      will-change: transform, box-shadow;
+      transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateZ(var(--tz));
+      transition:
+        transform 240ms var(--ease-out),
+        box-shadow 240ms var(--ease-out),
+        border-color 220ms var(--ease-out),
+        background-color 220ms var(--ease-out);
+    }
+
+    [data-tilt-3d]::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: radial-gradient(
+        420px circle at var(--glare-x) var(--glare-y),
+        rgba(255, 255, 255, 0.16),
+        rgba(99, 102, 241, 0.08) 38%,
+        transparent 72%
+      );
+      opacity: var(--glare-alpha);
+      transition: opacity 240ms var(--ease-out);
+      z-index: 1;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      [data-tilt-3d]:hover {
+        box-shadow: var(--shadow-3d-hover);
+      }
+    }
+
+    /* ---------------------------------------------------- 3D SPATIAL EXECUTIVE COMMAND TELEMETRY DECK */
+    .spatial-command-deck {
+      max-width: 1540px;
+      margin: 4px auto 12px;
+      padding: 0 24px;
+    }
+
+    .spatial-deck-grid {
+      display: grid;
+      grid-template-columns: 1.45fr repeat(3, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 1120px) {
+      .spatial-deck-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .spatial-deck-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spatial-kpi-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow-bezel);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .spatial-orb-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(16, 185, 129, 0.25));
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+      animation: floatOrb3D 4.5s var(--ease-in-out) infinite alternate;
+    }
+
+    @keyframes floatOrb3D {
+      0% { transform: translate3d(0, -2px, 0) rotate(-3deg); }
+      100% { transform: translate3d(0, 3px, 6px) rotate(4deg); }
+    }
+
+    .spatial-kpi-lbl {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-emerald);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .spatial-kpi-val {
+      font-family: var(--font-serif);
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      margin-top: 2px;
+    }
+
+    .spatial-kpi-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .live-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 10px #10B981;
+      display: inline-block;
+      animation: pulseDotGlow 2s var(--ease-in-out) infinite;
+    }
+
+    @keyframes pulseDotGlow {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
     }
 
     /* ---------------------------------------------------- TOP FLOATING 4-STEP WIZARD BAR */
@@ -127,17 +329,20 @@
       top: 0;
       z-index: 100;
       padding: 14px 24px 10px;
-      background: linear-gradient(180deg, var(--bg-canvas) 65%, rgba(250, 248, 245, 0));
-      backdrop-filter: blur(12px);
+      background: linear-gradient(180deg, var(--bg-canvas) 45%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
     .wizard-bar {
       max-width: 1540px;
       margin: 0 auto;
       background: var(--bg-glass);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
       border: 1px solid var(--border-strong);
       border-radius: var(--radius-pill);
-      padding: 8px 12px;
+      padding: 8px 14px;
       box-shadow: var(--shadow-float);
       display: flex;
       align-items: center;
@@ -150,27 +355,37 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding-left: 8px;
+      padding-left: 6px;
     }
 
     .brand-logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent-indigo), #1E1B4B);
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #4F46E5, #10B981);
       color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 4px 12px rgba(55, 48, 163, 0.3);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.03em;
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      transform-style: preserve-3d;
+      transition: transform 240ms var(--ease-out), box-shadow 240ms var(--ease-out);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .brand-cluster:hover .brand-logo {
+        transform: perspective(400px) rotateY(14deg) rotateX(-8deg) scale(1.05);
+      }
     }
 
     .brand-title {
+      font-family: var(--font-serif);
       font-weight: 800;
-      font-size: 14px;
+      font-size: 14.5px;
       letter-spacing: -0.02em;
       color: var(--text-primary);
     }
@@ -196,7 +411,7 @@
 
     .step-tab {
       flex: 1;
-      border: none;
+      border: 1px solid transparent;
       background: transparent;
       color: var(--text-secondary);
       padding: 9px 14px;
@@ -209,26 +424,39 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+      transition:
+        transform 180ms var(--ease-out),
+        background-color 220ms var(--ease-out),
+        color 220ms var(--ease-out),
+        border-color 220ms var(--ease-out),
+        box-shadow 220ms var(--ease-out);
       text-align: left;
       white-space: nowrap;
     }
 
-    .step-tab:hover {
-      color: var(--text-primary);
-      background: rgba(99, 102, 241, 0.08);
+    @media (hover: hover) and (pointer: fine) {
+      .step-tab:hover {
+        color: var(--text-primary);
+        background: rgba(99, 102, 241, 0.10);
+        transform: translateY(-1px);
+      }
+    }
+
+    .step-tab:active {
+      transform: scale(0.97);
     }
 
     .step-tab.active {
       background: var(--bg-surface);
       color: var(--accent-indigo);
-      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08);
-      border: 1px solid var(--border-strong);
+      box-shadow: 0 4px 16px rgba(99, 102, 241, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      border-color: var(--accent-indigo);
     }
 
     .step-tab.completed .step-num {
       background: var(--accent-emerald);
       color: #fff;
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.45);
     }
 
     .step-num {
@@ -240,26 +468,31 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      font-family: var(--font-mono);
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 700;
       flex-shrink: 0;
+      transition: transform 220ms var(--ease-spring), background-color 220ms var(--ease-out);
     }
 
     .step-tab.active .step-num {
       background: var(--accent-indigo);
       color: #fff;
+      transform: scale(1.08);
     }
 
     .wizard-actions {
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .btn-next-glow {
-      background: linear-gradient(135deg, var(--accent-indigo), #4F46E5);
+      background: linear-gradient(135deg, var(--accent-indigo), #4F46E5, #059669);
+      background-size: 200% 200%;
       color: #ffffff;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.22);
       padding: 10px 20px;
       border-radius: var(--radius-pill);
       font-family: var(--font-sans);
@@ -269,44 +502,77 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 6px 20px rgba(55, 48, 163, 0.35);
-      transition: all 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition:
+        transform 180ms var(--ease-out),
+        box-shadow 220ms var(--ease-out),
+        filter 220ms var(--ease-out);
     }
 
-    .btn-next-glow:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 26px rgba(55, 48, 163, 0.48);
+    @media (hover: hover) and (pointer: fine) {
+      .btn-next-glow:hover {
+        transform: translate3d(0, -2px, 4px);
+        box-shadow: 0 14px 32px rgba(79, 70, 229, 0.52), 0 0 20px rgba(16, 185, 129, 0.3);
+        filter: brightness(1.06);
+      }
+    }
+
+    .btn-next-glow:active {
+      transform: scale(0.97);
     }
 
     .btn-next-glow .arrow-circle {
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.22);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 13px;
+      transition: transform 200ms var(--ease-out);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .btn-next-glow:hover .arrow-circle {
+        transform: translateX(3px);
+      }
     }
 
     .btn-pill-secondary {
       background: var(--bg-surface);
+      backdrop-filter: blur(16px);
       color: var(--text-primary);
       border: 1px solid var(--border-strong);
       padding: 8px 14px;
       border-radius: var(--radius-pill);
+      font-family: var(--font-sans);
       font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.2s ease;
+      box-shadow: var(--border-specular);
+      transition:
+        transform 160ms var(--ease-out),
+        border-color 200ms var(--ease-out),
+        color 200ms var(--ease-out),
+        box-shadow 200ms var(--ease-out),
+        background-color 200ms var(--ease-out);
     }
 
-    .btn-pill-secondary:hover {
-      border-color: var(--accent-indigo);
-      color: var(--accent-indigo);
+    @media (hover: hover) and (pointer: fine) {
+      .btn-pill-secondary:hover {
+        border-color: var(--accent-indigo);
+        color: var(--accent-indigo);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(99, 102, 241, 0.16);
+      }
+    }
+
+    .btn-pill-secondary:active {
+      transform: scale(0.97);
     }
 
     /* ---------------------------------------------------- GUIDED BANNER ("WHERE YOU ARE & WHAT'S NEXT") */
@@ -317,10 +583,12 @@
     }
 
     .context-guide-inner {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
+      background: var(--bg-glass);
+      backdrop-filter: blur(20px) saturate(170%);
+      -webkit-backdrop-filter: blur(20px) saturate(170%);
+      border: 1px solid var(--border-strong);
       border-left: 4px solid var(--accent-indigo);
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 12px 18px;
       display: flex;
       align-items: center;
@@ -333,15 +601,17 @@
     .guide-step-pill {
       background: var(--accent-indigo-soft);
       color: var(--accent-indigo);
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-weight: 700;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding: 4px 10px;
       border-radius: var(--radius-pill);
+      border: 1px solid rgba(99, 102, 241, 0.3);
     }
 
-    /* ---------------------------------------------------- MAIN 2-COLUMN WORKSPACE */
+    /* ---------------------------------------------------- MAIN 2-COLUMN 3D SPATIAL WORKSPACE */
     .workspace-shell {
       max-width: 1540px;
       margin: 0 auto;
@@ -350,6 +620,7 @@
       grid-template-columns: 1.08fr 0.92fr;
       gap: 24px;
       align-items: start;
+      perspective: 1400px;
     }
 
     @media (max-width: 1120px) {
@@ -361,39 +632,46 @@
       }
     }
 
-    /* Double-Bezel Card Architecture */
+    /* Double-Bezel Liquid Glass 3D Card Architecture */
     .bezel-outer {
       background: var(--bg-elevated);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
       padding: 6px;
       border-radius: var(--radius-outer);
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-bezel);
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-float);
+      transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
     }
 
     .bezel-inner {
       background: var(--bg-surface);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
       border-radius: var(--radius-inner);
       border: 1px solid var(--border-subtle);
-      padding: 22px;
+      box-shadow: var(--border-specular);
+      padding: 24px;
     }
 
     .step-pane {
       display: none;
-      animation: fadeUp 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+      transform-origin: top center;
+      animation: step3dEnter 340ms var(--ease-out) both;
     }
 
     .step-pane.active {
       display: block;
     }
 
-    @keyframes fadeUp {
+    @keyframes step3dEnter {
       from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: perspective(1200px) translate3d(0, 16px, -28px) rotateX(2.5deg) scale(0.98);
       }
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: perspective(1200px) translate3d(0, 0, 0) rotateX(0deg) scale(1);
       }
     }
 
@@ -402,23 +680,26 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      font-family: var(--font-mono);
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       color: var(--accent-indigo);
       background: var(--accent-indigo-soft);
-      padding: 4px 11px;
+      border: 1px solid rgba(99, 102, 241, 0.28);
+      padding: 4px 12px;
       border-radius: var(--radius-pill);
       margin-bottom: 8px;
     }
 
     .section-h1 {
       font-family: var(--font-serif);
-      font-size: 25px;
-      font-weight: 700;
+      font-size: clamp(22px, 2.2vw, 27px);
+      font-weight: 800;
       color: var(--text-primary);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
       margin-bottom: 6px;
     }
 
@@ -426,6 +707,7 @@
       font-size: 13.5px;
       color: var(--text-secondary);
       margin-bottom: 18px;
+      max-width: 68ch;
     }
 
     /* Upload Compact Bar */
@@ -436,55 +718,67 @@
       gap: 12px;
       background: var(--bg-elevated);
       border: 1.5px dashed var(--border-strong);
-      border-radius: 14px;
-      padding: 14px 16px;
+      border-radius: 16px;
+      padding: 14px 18px;
       margin-bottom: 18px;
       flex-wrap: wrap;
-      transition: all 0.2s ease;
+      transition:
+        transform 200ms var(--ease-out),
+        border-color 200ms var(--ease-out),
+        background-color 200ms var(--ease-out),
+        box-shadow 200ms var(--ease-out);
     }
 
     .upload-strip:hover, .upload-strip.dragover {
       border-color: var(--accent-indigo);
       background: var(--accent-indigo-soft);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 28px rgba(99, 102, 241, 0.14);
     }
 
-    /* HR Director Scoreboard */
+    /* HR Director 3D Spatial Scoreboard */
     .hr-score-banner {
-      background: linear-gradient(135deg, #0F172A, #1E1B4B);
+      background: linear-gradient(135deg, #090D1A 0%, #1E1B4B 55%, #064E3B 100%);
       color: #ffffff;
-      border-radius: 16px;
-      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 20px 22px;
       margin-bottom: 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
+      box-shadow: 0 20px 44px -10px rgba(6, 9, 19, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.22);
     }
 
     .score-ring-box {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .score-circle {
-      width: 64px;
-      height: 64px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
-      background: rgba(16, 185, 129, 0.18);
+      background: radial-gradient(circle at 30% 30%, rgba(16, 185, 129, 0.32), rgba(6, 78, 59, 0.6));
       border: 3px solid #10B981;
+      box-shadow: 0 0 24px rgba(16, 185, 129, 0.45), inset 0 0 12px rgba(52, 211, 153, 0.35);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-family: var(--font-mono);
       font-weight: 800;
       font-size: 19px;
       color: #34D399;
       flex-shrink: 0;
+      transition: transform 280ms var(--ease-spring), box-shadow 280ms var(--ease-out);
     }
 
     .score-circle span {
+      font-family: var(--font-sans);
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -494,11 +788,11 @@
     .score-pillars {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      gap: 10px;
       width: 100%;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     @media (max-width: 680px) {
@@ -508,26 +802,38 @@
     }
 
     .pillar-mini {
-      background: rgba(255, 255, 255, 0.07);
-      border-radius: 10px;
-      padding: 8px 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 9px 12px;
       font-size: 11.5px;
+      backdrop-filter: blur(8px);
+      transition: transform 200ms var(--ease-out), border-color 200ms var(--ease-out);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .pillar-mini:hover {
+        transform: translateY(-2px);
+        border-color: rgba(52, 211, 153, 0.5);
+      }
     }
 
     .pillar-mini strong {
       display: block;
+      font-family: var(--font-mono);
       font-size: 14px;
       color: #34D399;
+      margin-top: 2px;
     }
 
     /* Hero 1-Click Auto-Fix All Button */
     .btn-autofix-hero {
       width: 100%;
-      background: linear-gradient(135deg, var(--accent-indigo), #4338CA);
+      background: linear-gradient(135deg, #4338CA 0%, #4F46E5 50%, #059669 100%);
       color: #ffffff;
-      border: none;
-      border-radius: 14px;
-      padding: 15px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 16px;
+      padding: 16px 22px;
       font-family: var(--font-sans);
       font-size: 15px;
       font-weight: 800;
@@ -537,39 +843,64 @@
       justify-content: space-between;
       gap: 12px;
       margin-bottom: 18px;
-      box-shadow: 0 8px 24px rgba(55, 48, 163, 0.28);
-      transition: all 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+      box-shadow: 0 12px 32px rgba(79, 70, 229, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      transition:
+        transform 200ms var(--ease-out),
+        box-shadow 220ms var(--ease-out),
+        filter 220ms var(--ease-out);
     }
 
-    .btn-autofix-hero:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(55, 48, 163, 0.4);
+    @media (hover: hover) and (pointer: fine) {
+      .btn-autofix-hero:hover {
+        transform: translate3d(0, -2px, 6px);
+        box-shadow: 0 18px 40px rgba(79, 70, 229, 0.48), 0 0 24px rgba(16, 185, 129, 0.32);
+        filter: brightness(1.05);
+      }
+    }
+
+    .btn-autofix-hero:active {
+      transform: scale(0.98);
     }
 
     .btn-autofix-hero.all-done {
-      background: linear-gradient(135deg, var(--accent-emerald), #047857);
-      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.28);
+      background: linear-gradient(135deg, #059669 0%, #047857 60%, #065F46 100%);
+      box-shadow: 0 12px 32px rgba(5, 150, 105, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.35);
     }
 
-    /* Before/After Suggestion Diff Cards */
+    /* Before/After Suggestion 3D Diff Cards */
     .suggestion-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
+      perspective: 1100px;
     }
 
     .diff-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-strong);
-      border-radius: 14px;
-      padding: 16px;
-      transition: all 0.22s ease;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-bezel);
       position: relative;
+      overflow: hidden;
+      animation: cardStagger3D 360ms var(--ease-out) both;
+    }
+
+    @keyframes cardStagger3D {
+      from {
+        opacity: 0;
+        transform: perspective(1000px) translate3d(0, 14px, -20px) rotateX(2deg);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(1000px) translate3d(0, 0, 0) rotateX(0deg);
+      }
     }
 
     .diff-card.applied {
       border-color: var(--accent-emerald);
       background: var(--accent-emerald-soft);
+      box-shadow: 0 10px 28px rgba(16, 185, 129, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 
     .diff-header {
@@ -579,6 +910,8 @@
       gap: 8px;
       margin-bottom: 10px;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .coord-badge {
@@ -588,8 +921,9 @@
       background: var(--bg-elevated);
       border: 1px solid var(--border-strong);
       color: var(--text-primary);
-      font-size: 11.5px;
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
       padding: 4px 10px;
       border-radius: 8px;
     }
@@ -599,7 +933,8 @@
       font-weight: 700;
       color: var(--accent-indigo);
       background: var(--accent-indigo-soft);
-      padding: 3px 9px;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      padding: 3px 10px;
       border-radius: var(--radius-pill);
     }
 
@@ -608,6 +943,8 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 680px) {
@@ -619,7 +956,7 @@
     .old-wording-box {
       background: var(--accent-rose-soft);
       border: 1px solid var(--accent-rose-border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px 12px;
       font-size: 12.5px;
       color: var(--text-primary);
@@ -627,8 +964,9 @@
 
     .old-wording-box .box-lbl {
       display: block;
-      font-size: 10.5px;
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--accent-rose);
@@ -638,7 +976,7 @@
     .new-wording-box {
       background: var(--accent-emerald-soft);
       border: 1px solid var(--accent-emerald-border);
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 10px 12px;
       font-size: 12.5px;
       color: var(--text-primary);
@@ -647,8 +985,9 @@
 
     .new-wording-box .box-lbl {
       display: block;
-      font-size: 10.5px;
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--accent-emerald);
@@ -658,7 +997,7 @@
     .btn-replace-one {
       width: 100%;
       padding: 10px 16px;
-      border-radius: 10px;
+      border-radius: 11px;
       border: 1.5px solid var(--accent-indigo);
       background: var(--bg-surface);
       color: var(--accent-indigo);
@@ -670,12 +1009,26 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
+      position: relative;
+      z-index: 2;
+      transition:
+        transform 160ms var(--ease-out),
+        background-color 200ms var(--ease-out),
+        color 200ms var(--ease-out),
+        border-color 200ms var(--ease-out),
+        box-shadow 200ms var(--ease-out);
     }
 
-    .btn-replace-one:hover {
-      background: var(--accent-indigo);
-      color: #ffffff;
+    @media (hover: hover) and (pointer: fine) {
+      .btn-replace-one:hover {
+        background: var(--accent-indigo);
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+      }
+    }
+
+    .btn-replace-one:active {
+      transform: scale(0.97);
     }
 
     .btn-replace-one.done {
@@ -688,9 +1041,10 @@
     .role-lock-panel {
       background: var(--bg-elevated);
       border: 1px solid var(--border-strong);
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 16px;
       margin-bottom: 16px;
+      box-shadow: var(--shadow-bezel);
     }
 
     .role-chips-wrap {
@@ -704,7 +1058,7 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      padding: 7px 13px;
+      padding: 7px 14px;
       border-radius: var(--radius-pill);
       font-size: 12.5px;
       font-weight: 800;
@@ -712,14 +1066,30 @@
       background: var(--bg-surface);
       color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.18s ease;
+      transition:
+        transform 160ms var(--ease-out),
+        background-color 180ms var(--ease-out),
+        border-color 180ms var(--ease-out),
+        color 180ms var(--ease-out),
+        box-shadow 180ms var(--ease-out);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .role-chip:hover {
+        transform: translateY(-1px);
+        border-color: var(--accent-indigo);
+      }
+    }
+
+    .role-chip:active {
+      transform: scale(0.96);
     }
 
     .role-chip.active {
       background: var(--accent-indigo);
       border-color: var(--accent-indigo);
       color: #ffffff;
-      box-shadow: 0 3px 10px rgba(55, 48, 163, 0.25);
+      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
     }
 
     .board-badges-row {
@@ -743,45 +1113,52 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      transition: all 0.15s ease;
+      transition:
+        transform 150ms var(--ease-out),
+        background-color 180ms var(--ease-out),
+        border-color 180ms var(--ease-out),
+        color 180ms var(--ease-out);
+    }
+
+    .board-pill:active {
+      transform: scale(0.96);
     }
 
     .board-pill.active {
-      background: #0F172A;
-      color: #ffffff;
-      border-color: #0F172A;
-    }
-
-    [data-theme="dark"] .board-pill.active {
       background: var(--accent-indigo);
+      color: #ffffff;
       border-color: var(--accent-indigo);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
     }
 
-    /* High-Clarity Job Card */
+    /* High-Clarity 3D Perspective Job Card */
     .job-cards-list {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
+      perspective: 1100px;
     }
 
     .exec-job-card {
       background: var(--bg-surface);
-      border: 1.5px solid var(--border-subtle);
-      border-radius: 16px;
-      padding: 16px 18px;
-      transition: all 0.22s ease;
+      border: 1.5px solid var(--border-strong);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow-bezel);
       cursor: pointer;
+      overflow: hidden;
+      animation: cardStagger3D 360ms var(--ease-out) both;
     }
 
-    .exec-job-card:hover {
-      border-color: var(--accent-indigo);
-      box-shadow: var(--shadow-float);
-      transform: translateY(-1px);
+    @media (hover: hover) and (pointer: fine) {
+      .exec-job-card:hover {
+        border-color: var(--accent-indigo);
+      }
     }
 
     .exec-job-card.selected {
       border-color: var(--accent-emerald);
-      box-shadow: 0 0 0 3px var(--accent-emerald-soft);
+      box-shadow: 0 0 0 3px var(--accent-emerald-soft), var(--shadow-float);
     }
 
     .job-card-top {
@@ -790,11 +1167,13 @@
       justify-content: space-between;
       gap: 12px;
       margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
     }
 
     .match-ring-mini {
-      width: 48px;
-      height: 48px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       border: 3px solid var(--accent-emerald);
       background: var(--accent-emerald-soft);
@@ -803,18 +1182,22 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-family: var(--font-mono);
       font-weight: 800;
       font-size: 13px;
       flex-shrink: 0;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.25);
     }
 
     .match-ring-mini small {
+      font-family: var(--font-sans);
       font-size: 8px;
       text-transform: uppercase;
     }
 
     .source-tag {
-      font-size: 11px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -825,20 +1208,27 @@
       border: 1px solid var(--border-strong);
     }
 
-    .source-tag.src-indeed { background: #EEF2FF; color: #1D4ED8; border-color: #BFDBFE; }
-    .source-tag.src-dubizzle { background: #FFF1F2; color: #BE123C; border-color: #FECDD3; }
-    .source-tag.src-linkedin { background: #EFF6FF; color: #0369A1; border-color: #BAE6FD; }
-    .source-tag.src-bayt { background: #ECFDF5; color: #047857; border-color: #A7F3D0; }
-    .source-tag.src-gulftalent { background: #FFFBEB; color: #B45309; border-color: #FDE68A; }
-    .source-tag.src-naukrigulf { background: #F5F3FF; color: #6D28D9; border-color: #DDD6FE; }
+    .source-tag.src-indeed { background: rgba(37, 99, 235, 0.16); color: #60A5FA; border-color: rgba(59, 130, 246, 0.4); }
+    .source-tag.src-dubizzle { background: rgba(225, 29, 72, 0.16); color: #FB7185; border-color: rgba(244, 63, 94, 0.4); }
+    .source-tag.src-linkedin { background: rgba(2, 132, 199, 0.16); color: #38BDF8; border-color: rgba(14, 165, 233, 0.4); }
+    .source-tag.src-bayt { background: rgba(5, 150, 105, 0.16); color: #34D399; border-color: rgba(16, 185, 129, 0.4); }
+    .source-tag.src-gulftalent { background: rgba(217, 119, 6, 0.16); color: #FBBF24; border-color: rgba(245, 158, 11, 0.4); }
+    .source-tag.src-naukrigulf { background: rgba(124, 58, 237, 0.16); color: #A78BFA; border-color: rgba(139, 92, 246, 0.4); }
+
+    [data-theme="light"] .source-tag.src-indeed { background: #EEF2FF; color: #1D4ED8; border-color: #BFDBFE; }
+    [data-theme="light"] .source-tag.src-dubizzle { background: #FFF1F2; color: #BE123C; border-color: #FECDD3; }
+    [data-theme="light"] .source-tag.src-linkedin { background: #EFF6FF; color: #0369A1; border-color: #BAE6FD; }
+    [data-theme="light"] .source-tag.src-bayt { background: #ECFDF5; color: #047857; border-color: #A7F3D0; }
+    [data-theme="light"] .source-tag.src-gulftalent { background: #FFFBEB; color: #B45309; border-color: #FDE68A; }
+    [data-theme="light"] .source-tag.src-naukrigulf { background: #F5F3FF; color: #6D28D9; border-color: #DDD6FE; }
 
     .btn-tailor-job {
       width: 100%;
       margin-top: 12px;
       padding: 11px 16px;
-      border-radius: 10px;
-      border: none;
-      background: var(--accent-emerald);
+      border-radius: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, #059669, #10B981);
       color: #ffffff;
       font-family: var(--font-sans);
       font-size: 13px;
@@ -848,31 +1238,95 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.28);
+      transition:
+        transform 160ms var(--ease-out),
+        box-shadow 200ms var(--ease-out),
+        filter 200ms var(--ease-out);
     }
 
-    .btn-tailor-job:hover {
-      background: var(--accent-emerald-hover);
-      transform: translateY(-1px);
+    @media (hover: hover) and (pointer: fine) {
+      .btn-tailor-job:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 24px rgba(16, 185, 129, 0.42);
+        filter: brightness(1.06);
+      }
     }
 
-    /* ---------------------------------------------------- RIGHT COLUMN: STICKY LIVE A4 EXECUTIVE CV SHEET */
+    .btn-tailor-job:active {
+      transform: scale(0.98);
+    }
+
+    /* ---------------------------------------------------- RIGHT COLUMN: 3D FLOATING A4 EXECUTIVE CV STAGE */
     .cv-preview-sticky {
       position: sticky;
       top: 86px;
+      perspective: 1400px;
+    }
+
+    .cv-3d-stage {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out);
+    }
+
+    .cv-3d-stage.isometric-3d {
+      transform: perspective(1300px) rotateY(-11deg) rotateX(4deg) translateZ(12px);
+    }
+
+    .ai-laser-scanner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #6366F1, #10B981, #38BDF8, transparent);
+      box-shadow: 0 0 24px 6px rgba(16, 185, 129, 0.65);
+      z-index: 25;
+      pointer-events: none;
+      opacity: 0;
+      border-radius: 999px;
+    }
+
+    .ai-laser-scanner.scanning {
+      animation: laserSweep3D 1150ms var(--ease-in-out) forwards;
+    }
+
+    @keyframes laserSweep3D {
+      0% {
+        top: 2%;
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        top: 96%;
+        opacity: 0;
+      }
     }
 
     .cv-sheet {
       background: #FFFFFF;
       color: #0F172A;
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1px solid #CBD5E1;
       padding: 28px 30px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.09);
+      box-shadow:
+        0 24px 54px -12px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.6),
+        0 12px 28px rgba(99, 102, 241, 0.10);
       font-size: 12.5px;
       line-height: 1.55;
       max-height: calc(100dvh - 140px);
       overflow-y: auto;
+      position: relative;
+      transition: transform 320ms var(--ease-out), box-shadow 320ms var(--ease-out);
     }
 
     .cv-header-block {
@@ -889,9 +1343,9 @@
     .cv-name {
       font-family: var(--font-serif);
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 800;
       color: #0F172A;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
     .cv-headline {
@@ -908,6 +1362,7 @@
     }
 
     .cv-sec-title {
+      font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
@@ -946,7 +1401,7 @@
       margin-bottom: 4px;
       padding: 2px 4px;
       border-radius: 6px;
-      transition: background-color 0.4s ease;
+      transition: background-color 320ms var(--ease-out), transform 240ms var(--ease-out);
     }
 
     .upgraded-highlight {
@@ -956,11 +1411,11 @@
       padding: 4px 8px !important;
       border-radius: 6px;
       font-weight: 600;
-      animation: pulseEmerald 1.2s ease;
+      animation: pulseEmerald 900ms var(--ease-out);
     }
 
     @keyframes pulseEmerald {
-      0% { transform: scale(1.01); background: #6EE7B7; }
+      0% { transform: scale(0.985); background: #6EE7B7; }
       100% { transform: scale(1); background: #D1FAE5; }
     }
 
@@ -969,7 +1424,7 @@
       width: 100%;
       min-height: 360px;
       border: 1px solid var(--border-strong);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 16px;
       font-family: var(--font-sans);
       font-size: 13px;
@@ -977,6 +1432,13 @@
       background: var(--bg-surface);
       color: var(--text-primary);
       resize: vertical;
+      transition: border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
+    }
+
+    .cl-editor:focus {
+      outline: none;
+      border-color: var(--accent-indigo);
+      box-shadow: 0 0 0 3px var(--accent-indigo-soft);
     }
 
     /* Built-In Award-Winning CV Writer & Builder Studio Styles */
@@ -1005,19 +1467,30 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.2s ease;
+      transition:
+        transform 160ms var(--ease-out),
+        background-color 200ms var(--ease-out),
+        color 200ms var(--ease-out),
+        border-color 200ms var(--ease-out),
+        box-shadow 200ms var(--ease-out);
     }
 
-    .mode-switch-btn:hover {
-      color: var(--text-primary);
-      background: rgba(99, 102, 241, 0.06);
+    @media (hover: hover) and (pointer: fine) {
+      .mode-switch-btn:hover {
+        color: var(--text-primary);
+        background: rgba(99, 102, 241, 0.08);
+      }
+    }
+
+    .mode-switch-btn:active {
+      transform: scale(0.98);
     }
 
     .mode-switch-btn.active {
       background: var(--bg-surface);
       color: var(--accent-indigo);
       border-color: var(--accent-indigo);
-      box-shadow: 0 4px 14px rgba(55, 48, 163, 0.12);
+      box-shadow: 0 6px 18px rgba(99, 102, 241, 0.18);
     }
 
     .writer-section-card {
@@ -1026,6 +1499,7 @@
       border-radius: 16px;
       padding: 16px;
       margin-bottom: 16px;
+      box-shadow: var(--shadow-bezel);
     }
 
     .writer-section-head {
@@ -1038,7 +1512,8 @@
     }
 
     .writer-section-title {
-      font-size: 13.5px;
+      font-family: var(--font-serif);
+      font-size: 14px;
       font-weight: 800;
       color: var(--text-primary);
       display: flex;
@@ -1060,8 +1535,9 @@
 
     .writer-field-lbl {
       display: block;
-      font-size: 11px;
-      font-weight: 800;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--text-muted);
@@ -1078,11 +1554,13 @@
       font-family: var(--font-sans);
       font-size: 12.5px;
       line-height: 1.45;
+      transition: border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
     }
 
     .writer-input:focus, .writer-textarea:focus {
-      outline: 2px solid var(--accent-indigo);
+      outline: none;
       border-color: var(--accent-indigo);
+      box-shadow: 0 0 0 3px var(--accent-indigo-soft);
     }
 
     .writer-role-card {
@@ -1091,6 +1569,7 @@
       border-radius: 14px;
       padding: 14px;
       margin-bottom: 12px;
+      box-shadow: var(--shadow-bezel);
     }
 
     .writer-bullet-row {
@@ -1103,7 +1582,7 @@
     .btn-ai-magic {
       background: linear-gradient(135deg, #4F46E5, #059669);
       color: #fff;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 7px 12px;
       border-radius: 9px;
       font-family: var(--font-sans);
@@ -1114,13 +1593,23 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.28);
+      transition:
+        transform 160ms var(--ease-out),
+        filter 180ms var(--ease-out),
+        box-shadow 180ms var(--ease-out);
     }
 
-    .btn-ai-magic:hover {
-      transform: translateY(-1px);
-      filter: brightness(1.06);
+    @media (hover: hover) and (pointer: fine) {
+      .btn-ai-magic:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.08);
+        box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+      }
+    }
+
+    .btn-ai-magic:active {
+      transform: scale(0.96);
     }
 
     .skill-edit-tag {
@@ -1146,12 +1635,13 @@
       line-height: 1;
     }
 
-    /* Modal for Add Any Job Listing */
+    /* Modal for Add Any Job Listing (Spatial Scale + Fade) */
     .modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(6px);
+      background: rgba(6, 9, 19, 0.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       z-index: 200;
       display: none;
       align-items: center;
@@ -1161,16 +1651,35 @@
 
     .modal-backdrop.open {
       display: flex;
+      animation: modalBackdropIn 220ms var(--ease-out) both;
+    }
+
+    @keyframes modalBackdropIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .modal-card {
       background: var(--bg-surface);
+      backdrop-filter: blur(24px) saturate(180%);
       border: 1px solid var(--border-strong);
-      border-radius: 20px;
+      border-radius: 22px;
       max-width: 680px;
       width: 100%;
       padding: 24px;
       box-shadow: var(--shadow-float);
+      animation: modalCard3DIn 260ms var(--ease-out) both;
+    }
+
+    @keyframes modalCard3DIn {
+      from {
+        opacity: 0;
+        transform: perspective(1000px) scale(0.95) translate3d(0, 14px, -24px);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(1000px) scale(1) translate3d(0, 0, 0);
+      }
     }
 
     .toast-bar {
@@ -1178,20 +1687,55 @@
       bottom: 22px;
       right: 22px;
       z-index: 300;
-      background: #0F172A;
+      background: rgba(11, 15, 25, 0.94);
+      backdrop-filter: blur(16px);
       color: #fff;
+      border: 1px solid rgba(16, 185, 129, 0.45);
       border-left: 4px solid #10B981;
       padding: 12px 18px;
-      border-radius: 12px;
+      border-radius: 14px;
       font-size: 13px;
       font-weight: 700;
       box-shadow: var(--shadow-float);
       display: none;
       max-width: 520px;
+      animation: toastSlideIn 240ms var(--ease-out) both;
+    }
+
+    @keyframes toastSlideIn {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 12px, 0) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+
+    /* Reduced Motion Accessibility Compliance (improve-animations skill) */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      [data-tilt-3d] {
+        transform: none !important;
+      }
+      .cv-3d-stage.isometric-3d {
+        transform: none !important;
+      }
+    }
+
+    [data-motion="reduced"] [data-tilt-3d],
+    [data-motion="reduced"] .cv-3d-stage.isometric-3d {
+      transform: none !important;
     }
 
     @media print {
-      .wizard-header-wrap, .context-guide-strip, .left-wizard-col {
+      #webgl3dCanvas, .spatial-vignette, .spatial-command-deck, .wizard-header-wrap, .context-guide-strip, .left-wizard-col {
         display: none !important;
       }
       .workspace-shell {
@@ -1210,15 +1754,21 @@
 <body>
 
   <!-- ===================================================================
+       REAL-TIME 60FPS THREE.JS WEBGL 3D SPATIAL CONSTELLATION CANVAS
+       =================================================================== -->
+  <canvas id="webgl3dCanvas" aria-hidden="true"></canvas>
+  <div class="spatial-vignette" aria-hidden="true"></div>
+
+  <!-- ===================================================================
        FLOATING 4-STEP GUIDED WIZARD BAR (NEVER GET LOST)
        =================================================================== -->
   <header class="wizard-header-wrap">
     <div class="wizard-bar">
       <div class="brand-cluster">
-        <div class="brand-logo">AI</div>
+        <div class="brand-logo">3D</div>
         <div>
           <div class="brand-title">Executive AI CV & Live Role Portal</div>
-          <div class="brand-sub">Award-Winning CV Writer · 1-Click HR Analyzer · Strict Live Search</div>
+          <div class="brand-sub">3D Spatial Command Deck · Award-Winning CV Writer · 1-Click HR Analyzer · Strict Live Search</div>
         </div>
       </div>
 
@@ -1251,8 +1801,11 @@
         <button class="btn-pill-secondary" onclick="sendApplicationNow()" style="border-color:var(--accent-emerald);color:var(--accent-emerald);" title="Open Email Program with Cover Letter, Subject & Attached ATS CV PDF">
           ✉️ Send Application
         </button>
+        <button class="btn-pill-secondary" onclick="toggle3DMotion()" id="motion3dBtn" title="Toggle 3D WebGL & Perspective Motion Physics">
+          🧊 3D: ON
+        </button>
         <button class="btn-pill-secondary" onclick="toggleTheme()" id="themeBtn" title="Switch Light/Dark Theme">
-          ☀️ Theme
+          🌙 Dark
         </button>
         <button class="btn-next-glow" id="globalNextBtn" onclick="advanceNextStep()">
           <span id="globalNextBtnText">Next Step: Search Live GM & MD Roles</span>
@@ -1261,6 +1814,52 @@
       </div>
     </div>
   </header>
+
+  <!-- ===================================================================
+       3D SPATIAL EXECUTIVE COMMAND TELEMETRY DECK ($1KK PORTAL ARCHITECTURE)
+       =================================================================== -->
+  <section class="spatial-command-deck" aria-label="3D Spatial Executive Telemetry">
+    <div class="spatial-deck-grid">
+      <div class="spatial-kpi-card" data-tilt-3d>
+        <div>
+          <div class="spatial-kpi-lbl">
+            <span class="live-pulse-dot"></span>
+            <span>3D SPATIAL EXECUTIVE COMMAND ENGINE</span>
+          </div>
+          <div class="spatial-kpi-val" id="deckCameraStatus">Orbital Node 01 · HR Director Diagnostics</div>
+          <div class="spatial-kpi-sub">WebGL 60fps Constellation · Emil Kowalski Spring Physics</div>
+        </div>
+        <div class="spatial-orb-badge">🪐</div>
+      </div>
+
+      <div class="spatial-kpi-card" data-tilt-3d onclick="goToStep(1)" style="cursor:pointer;">
+        <div>
+          <div class="spatial-kpi-lbl">BOARD & ATS CV SCORE</div>
+          <div class="spatial-kpi-val" id="deckScoreMetric">76% → 98% Ready</div>
+          <div class="spatial-kpi-sub" id="deckScoreSub">1-Click Auto-Replace Active</div>
+        </div>
+        <div class="spatial-orb-badge">⚡</div>
+      </div>
+
+      <div class="spatial-kpi-card" data-tilt-3d onclick="goToStep(2)" style="cursor:pointer;">
+        <div>
+          <div class="spatial-kpi-lbl">STRICT ROLE LOCK RADAR</div>
+          <div class="spatial-kpi-val" id="deckRolesMetric">GM · MD · Ops Director</div>
+          <div class="spatial-kpi-sub">Indeed · Dubizzle · LinkedIn · Bayt · GulfTalent</div>
+        </div>
+        <div class="spatial-orb-badge">🎯</div>
+      </div>
+
+      <div class="spatial-kpi-card" data-tilt-3d onclick="sendApplicationNow()" style="cursor:pointer;">
+        <div>
+          <div class="spatial-kpi-lbl">1-CLICK DISPATCH ENGINE</div>
+          <div class="spatial-kpi-val">.EML + ATS CV PDF</div>
+          <div class="spatial-kpi-sub">Opens Email Draft with Subject & Attachment</div>
+        </div>
+        <div class="spatial-orb-badge">✉️</div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===================================================================
        PERSISTENT STEP GUIDE BANNER (TELLS USER EXACTLY WHAT TO DO)
@@ -1274,7 +1873,7 @@
         </span>
       </div>
       <div style="font-size:12px;color:var(--text-muted);font-weight:600;" id="guideStepSub">
-        Zero typing required · Every update appears live on your A4 CV on the right
+        Zero typing required · Every update appears live on your 3D A4 CV Stage on the right
       </div>
     </div>
   </section>
@@ -1358,7 +1957,7 @@
                  =========================================================== -->
             <div id="step1AnalyzerSubView">
               <!-- HR Director Scoreboard -->
-              <div class="hr-score-banner">
+              <div class="hr-score-banner" data-tilt-3d>
                 <div class="score-ring-box">
                   <div class="score-circle" id="hrScoreCircle">
                     <div id="hrScoreNum">76%</div>
@@ -1794,7 +2393,7 @@
     </div>
 
     <!-- =================================================================
-         RIGHT COLUMN: LIVE INTERACTIVE A4 EXECUTIVE CV PREVIEW
+         RIGHT COLUMN: 3D FLOATING A4 EXECUTIVE CV STAGE
          (Structured with .sheet, .hd, section, h5, .sum, .chip, .j, .mini
           so cv-text-pdf.js reads every word natively!)
          ================================================================= -->
@@ -1803,14 +2402,17 @@
         <div class="bezel-inner" style="padding:16px;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
             <div>
-              <span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-emerald);">
-                ● LIVE A4 EXECUTIVE CV SHEET
+              <span style="font-family:var(--font-mono);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-emerald);">
+                ● 3D LIVE A4 EXECUTIVE CV STAGE
               </span>
               <div style="font-size:12px;color:var(--text-muted);" id="liveCvStatusSub">
                 Updates live · Compatible with ATS PDF & .EML Attachment Engine
               </div>
             </div>
             <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="btn-pill-secondary" onclick="toggleCv3dShowcase()" id="btnCv3dToggle" style="padding:6px 10px;font-size:11.5px;" title="Toggle 3D Isometric Executive Sheet Perspective">
+                🧊 3D Isometric View
+              </button>
               <button class="btn-pill-secondary" onclick="openBuiltInCvWriter()" style="padding:6px 10px;font-size:11.5px;">
                 ✍️ Edit in CV Writer
               </button>
@@ -1820,36 +2422,41 @@
             </div>
           </div>
 
-          <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
-          <div class="cv-sheet sheet" id="draftCvSheetEl" style="--accent:#3730A3;">
-            <div class="cv-header-block hd">
-              <div style="width:100%;">
-                <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
-                <div class="cv-headline role" id="cvHeadlineEl">Chief Operating Officer · General Manager · Managing Director</div>
-                <div class="cv-contact-line meta" id="cvContactEl"></div>
+          <!-- 3D STAGE WRAPPER + AI LASER SCAN BEAM -->
+          <div class="cv-3d-stage" id="cv3dStageWrap" data-tilt-3d>
+            <div class="ai-laser-scanner" id="aiLaserScannerEl"></div>
+
+            <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
+            <div class="cv-sheet sheet" id="draftCvSheetEl" style="--accent:#3730A3;">
+              <div class="cv-header-block hd">
+                <div style="width:100%;">
+                  <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
+                  <div class="cv-headline role" id="cvHeadlineEl">Chief Operating Officer · General Manager · Managing Director</div>
+                  <div class="cv-contact-line meta" id="cvContactEl"></div>
+                </div>
               </div>
+
+              <section>
+                <h5 class="cv-sec-title">Executive Summary</h5>
+                <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;"></div>
+                <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#3730A3;background:#EEF2FF;padding:6px 10px;border-radius:8px;font-size:12px;"></div>
+              </section>
+
+              <section>
+                <h5 class="cv-sec-title">Core Executive & Board Competencies</h5>
+                <div id="cvSkillsEl" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+              </section>
+
+              <section>
+                <h5 class="cv-sec-title">Professional Leadership Experience</h5>
+                <div id="cvExperienceEl"></div>
+              </section>
+
+              <section>
+                <h5 class="cv-sec-title">Education & Executive Credentials</h5>
+                <div class="mini" id="cvEducationEl" style="font-size:12px;color:#334155;"></div>
+              </section>
             </div>
-
-            <section>
-              <h5 class="cv-sec-title">Executive Summary</h5>
-              <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;"></div>
-              <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#3730A3;background:#EEF2FF;padding:6px 10px;border-radius:8px;font-size:12px;"></div>
-            </section>
-
-            <section>
-              <h5 class="cv-sec-title">Core Executive & Board Competencies</h5>
-              <div id="cvSkillsEl" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
-            </section>
-
-            <section>
-              <h5 class="cv-sec-title">Professional Leadership Experience</h5>
-              <div id="cvExperienceEl"></div>
-            </section>
-
-            <section>
-              <h5 class="cv-sec-title">Education & Executive Credentials</h5>
-              <div class="mini" id="cvEducationEl" style="font-size:12px;color:#334155;"></div>
-            </section>
           </div>
         </div>
       </div>
@@ -2729,6 +3336,7 @@
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       renderLiveCvSheet();
       renderCvSuggestions();
+      triggerAiLaserScan();
       showToast("🪄 Entire CV polished with C-Suite Executive Wording, P&L KPIs & ATS Keywords!");
     }
 
@@ -2736,6 +3344,7 @@
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       renderCvSuggestions();
       switchStep1Mode("analyzer");
+      triggerAiLaserScan();
       showToast(`🔍 HR Director Audit complete — ${state.suggestions.length} optimization cards ready!`);
     }
 
@@ -2745,10 +3354,19 @@
       const appliedCount = state.suggestions.filter((s) => s.applied).length;
       const remaining = total - appliedCount;
 
-      // Update HR Scoreboard dynamically
+      // Update HR Scoreboard & 3D Command Deck dynamically
       const baseScore = 76;
       const currentScore = total ? Math.round(baseScore + (appliedCount / total) * 22) : 96;
       document.getElementById("hrScoreNum").textContent = currentScore + "%";
+      const deckScoreEl = document.getElementById("deckScoreMetric");
+      const deckScoreSubEl = document.getElementById("deckScoreSub");
+      if (deckScoreEl) {
+        deckScoreEl.textContent = remaining === 0 ? `${currentScore}% Board Ready ✓` : `${currentScore}% → 98% Ready`;
+      }
+      if (deckScoreSubEl) {
+        deckScoreSubEl.textContent = remaining === 0 ? "All HR Director Upgrades Applied" : `${remaining} 1-Click Upgrades Ready`;
+      }
+
       document.getElementById("pilVerbs").textContent = appliedCount === total ? "98% ✓" : `${74 + appliedCount * 4}% → 98%`;
       document.getElementById("pilKpis").textContent = appliedCount === total ? "99% ✓" : `${78 + appliedCount * 3}% → 99%`;
       document.getElementById("pilBoard").textContent = appliedCount === total ? "96% ✓" : `${72 + appliedCount * 4}% → 96%`;
@@ -2777,7 +3395,7 @@
       container.innerHTML = state.suggestions
         .map(
           (s, idx) => `
-        <div class="diff-card ${s.applied ? "applied" : ""}">
+        <div class="diff-card ${s.applied ? "applied" : ""}" data-tilt-3d style="animation-delay:${idx * 45}ms;">
           <div class="diff-header">
             <span class="coord-badge">${escapeHtml(s.locationLabel)}</span>
             <span class="hr-reason-tag">💡 ${escapeHtml(s.reason)}</span>
@@ -2803,6 +3421,8 @@
       `
         )
         .join("");
+
+      if (typeof window.bind3DTiltCards === "function") window.bind3DTiltCards();
     }
 
     function applySuggestionToCvState(s, useNew) {
@@ -2828,6 +3448,7 @@
       applySuggestionToCvState(s, nextState);
       renderLiveCvSheet();
       renderCvSuggestions();
+      if (nextState) triggerAiLaserScan();
 
       const targetLine = document.getElementById(`cv-line-${s.id}`) || document.getElementById("cvSummaryEl");
       if (targetLine && nextState) {
@@ -2849,6 +3470,7 @@
       state.suggestions.forEach((s) => applySuggestionToCvState(s, true));
       renderLiveCvSheet();
       renderCvSuggestions();
+      triggerAiLaserScan();
       showToast(`⚡ All ${state.suggestions.length} HR Director CV improvements applied automatically!`);
     }
 
@@ -3003,6 +3625,7 @@
       renderCvSuggestions();
       renderRoleLockChips();
       renderFilteredJobs();
+      triggerAiLaserScan();
       showToast(`✅ Analyzed ${sourceName} — ${state.suggestions.length} 1-click upgrades ready!`);
     }
 
@@ -3017,6 +3640,7 @@
       renderCvSuggestions();
       renderRoleLockChips();
       renderFilteredJobs();
+      triggerAiLaserScan();
       showToast("↻ Reset to Demo Executive CV.");
     }
 
@@ -3037,6 +3661,11 @@
           `;
         })
         .join("");
+
+      const deckRolesEl = document.getElementById("deckRolesMetric");
+      if (deckRolesEl) {
+        deckRolesEl.textContent = state.selectedRoles.slice(0, 3).join(" · ");
+      }
     }
 
     function toggleTargetRole(role) {
@@ -3165,7 +3794,7 @@
             .join("");
           const srcClass = "src-" + String(j.source || "web").toLowerCase();
           return `
-            <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
+            <div class="exec-job-card ${isSel ? "selected" : ""}" data-tilt-3d style="animation-delay:${i * 45}ms;" onclick="selectAndTailorJob(${i})">
               <div class="job-card-top">
                 <div style="display:flex;gap:12px;align-items:flex-start;">
                   <div class="match-ring-mini">
@@ -3199,6 +3828,8 @@
           `;
         })
         .join("");
+
+      if (typeof window.bind3DTiltCards === "function") window.bind3DTiltCards();
     }
 
     function extractQuickRequirements(textStr) {
@@ -3744,6 +4375,7 @@ ${state.cv.contact}`;
       const headline = document.getElementById("guideStepHeadline");
       const sub = document.getElementById("guideStepSub");
       const nextText = document.getElementById("globalNextBtnText");
+      const deckCam = document.getElementById("deckCameraStatus");
 
       if (stepNum === 1) {
         badge.textContent = "STEP 1 OF 4 · CV ANALYZER & BUILT-IN CV WRITER";
@@ -3751,12 +4383,14 @@ ${state.cv.contact}`;
           'Click "Auto-Fix All CV Improvements in 1 Click" OR click "Built-In Award-Winning CV Writer & Builder" to modify or write a new CV.';
         sub.textContent = "Next: Search live jobs strictly matching your target roles";
         nextText.textContent = "Next Step: Search Live GM & MD Roles";
+        if (deckCam) deckCam.textContent = "Orbital Node 01 · HR Director Diagnostics";
       } else if (stepNum === 2) {
         badge.textContent = "STEP 2 OF 4 · STRICT ROLE-LOCKED LIVE SEARCH";
         headline.textContent =
           'Your target roles are locked above. Click "1-Click Tailor CV & Cover Letter" on any job card from Indeed, Dubizzle, LinkedIn, Bayt, or GulfTalent.';
         sub.textContent = `Active Strict Roles: ${state.selectedRoles.join(" · ")}`;
         nextText.textContent = "Next Step: Review Tailored Application";
+        if (deckCam) deckCam.textContent = "Orbital Node 02 · Multi-Board Live Radar";
         renderRoleLockChips();
         renderFilteredJobs();
       } else if (stepNum === 3) {
@@ -3765,14 +4399,21 @@ ${state.cv.contact}`;
           'Review your auto-tailored Cover Letter & CV, or click "Send Application Now" to open your email draft with the CV PDF attached.';
         sub.textContent = "Languages supported: EN · DE · AR · FR · ES";
         nextText.textContent = "Next Step: Send Application";
+        if (deckCam) deckCam.textContent = "Orbital Node 03 · Tailored Synthesis Studio";
         populateStep3And4ForSelectedJob();
+        triggerAiLaserScan();
       } else if (stepNum === 4) {
         badge.textContent = "STEP 4 OF 4 · SEND APPLICATION (EMAIL + ATTACHED CV PDF)";
         headline.textContent =
           'Click "Send Application" to open your email draft with the Cover Letter in the body, Subject filled, and your ATS CV PDF attached.';
         sub.textContent = "Powered by the Old Portal's RFC-822 .EML + NotoSans ATS PDF Engine";
         nextText.textContent = "✉️ Send Application Now";
+        if (deckCam) deckCam.textContent = "Orbital Node 04 · RFC-822 .EML + PDF Dispatch";
         populateStep3And4ForSelectedJob();
+      }
+
+      if (typeof window.set3DCameraStep === "function") {
+        window.set3DCameraStep(stepNum);
       }
 
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -3877,6 +4518,250 @@ ${state.cv.contact}`;
       return String(s || "").replace(/'/g, "\\'");
     }
 
+    /* ------------------------------------------------------------------
+       9. $1,000,000 3D SPATIAL WEBGL CONSTELLATION ENGINE +
+          3D PERSPECTIVE TILT & AI LASER SCAN CHOREOGRAPHY
+       ------------------------------------------------------------------ */
+    let motion3dEnabled =
+      !window.matchMedia || !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function triggerAiLaserScan() {
+      if (!motion3dEnabled) return;
+      const beam = document.getElementById("aiLaserScannerEl");
+      if (!beam) return;
+      beam.classList.remove("scanning");
+      void beam.offsetWidth;
+      beam.classList.add("scanning");
+    }
+
+    function toggleCv3dShowcase() {
+      const stage = document.getElementById("cv3dStageWrap");
+      const btn = document.getElementById("btnCv3dToggle");
+      if (!stage) return;
+      const isIso = stage.classList.toggle("isometric-3d");
+      if (btn) {
+        btn.textContent = isIso ? "📄 Flat A4 View" : "🧊 3D Isometric View";
+      }
+      triggerAiLaserScan();
+    }
+
+    function toggle3DMotion() {
+      motion3dEnabled = !motion3dEnabled;
+      document.documentElement.setAttribute("data-motion", motion3dEnabled ? "full" : "reduced");
+      const btn = document.getElementById("motion3dBtn");
+      if (btn) {
+        btn.textContent = motion3dEnabled ? "🧊 3D: ON" : "🧊 3D: OFF";
+      }
+      if (!motion3dEnabled) {
+        document.querySelectorAll("[data-tilt-3d]").forEach((el) => {
+          el.style.setProperty("--rx", "0deg");
+          el.style.setProperty("--ry", "0deg");
+          el.style.setProperty("--tz", "0px");
+          el.style.setProperty("--glare-alpha", "0");
+        });
+      }
+      showToast(
+        motion3dEnabled
+          ? "🧊 3D Spatial WebGL & Perspective Tilt Physics Enabled!"
+          : "🛑 Reduced Motion Mode Active — 3D Tilt & WebGL Orbit Paused."
+      );
+    }
+
+    function bind3DTiltCards() {
+      const finePointer =
+        window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (!finePointer) return;
+
+      document.querySelectorAll("[data-tilt-3d]").forEach((card) => {
+        if (card.dataset.tiltBound === "1") return;
+        card.dataset.tiltBound = "1";
+
+        let rafId = null;
+        const isCvStage = card.id === "cv3dStageWrap";
+        const maxTilt = isCvStage ? 3.2 : 5.5;
+        const liftZ = isCvStage ? "6px" : "8px";
+
+        card.addEventListener("pointermove", (e) => {
+          if (!motion3dEnabled || card.classList.contains("isometric-3d")) return;
+          const rect = card.getBoundingClientRect();
+          if (!rect.width || !rect.height) return;
+          const px = (e.clientX - rect.left) / rect.width;
+          const py = (e.clientY - rect.top) / rect.height;
+          const ry = ((px - 0.5) * maxTilt * 2).toFixed(2);
+          const rx = ((0.5 - py) * maxTilt * 2).toFixed(2);
+          const gx = (px * 100).toFixed(1) + "%";
+          const gy = (py * 100).toFixed(1) + "%";
+
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(() => {
+            card.style.setProperty("--rx", `${rx}deg`);
+            card.style.setProperty("--ry", `${ry}deg`);
+            card.style.setProperty("--tz", liftZ);
+            card.style.setProperty("--glare-x", gx);
+            card.style.setProperty("--glare-y", gy);
+            card.style.setProperty("--glare-alpha", "1");
+          });
+        });
+
+        card.addEventListener("pointerleave", () => {
+          if (rafId) cancelAnimationFrame(rafId);
+          card.style.setProperty("--rx", "0deg");
+          card.style.setProperty("--ry", "0deg");
+          card.style.setProperty("--tz", "0px");
+          card.style.setProperty("--glare-alpha", "0");
+        });
+      });
+    }
+    window.bind3DTiltCards = bind3DTiltCards;
+
+    function initWebgl3DSpatialScene() {
+      const canvas = document.getElementById("webgl3dCanvas");
+      if (!canvas || typeof window.THREE === "undefined") return;
+
+      try {
+        const THREE = window.THREE;
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          alpha: true,
+          antialias: true,
+          powerPreference: "high-performance"
+        });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          52,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          1000
+        );
+        camera.position.set(0, 0, 26);
+
+        const rootGroup = new THREE.Group();
+        scene.add(rootGroup);
+
+        // 1. Central Executive Wireframe Core (Icosahedron)
+        const coreGeo = new THREE.IcosahedronGeometry(5.6, 1);
+        const coreMat = new THREE.MeshBasicMaterial({
+          color: 0x6366f1,
+          wireframe: true,
+          transparent: true,
+          opacity: 0.22
+        });
+        const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+        rootGroup.add(coreMesh);
+
+        // 2. Inner Gyroscopic Emerald Ring
+        const ring1Geo = new THREE.TorusGeometry(8.8, 0.045, 16, 120);
+        const ring1Mat = new THREE.MeshBasicMaterial({
+          color: 0x10b981,
+          transparent: true,
+          opacity: 0.36
+        });
+        const ring1Mesh = new THREE.Mesh(ring1Geo, ring1Mat);
+        ring1Mesh.rotation.x = Math.PI / 2.6;
+        rootGroup.add(ring1Mesh);
+
+        // 3. Outer Executive Orbital Ring
+        const ring2Geo = new THREE.TorusGeometry(12.4, 0.035, 16, 140);
+        const ring2Mat = new THREE.MeshBasicMaterial({
+          color: 0x818cf8,
+          transparent: true,
+          opacity: 0.26
+        });
+        const ring2Mesh = new THREE.Mesh(ring2Geo, ring2Mat);
+        ring2Mesh.rotation.y = Math.PI / 3.2;
+        ring2Mesh.rotation.x = -Math.PI / 4.2;
+        rootGroup.add(ring2Mesh);
+
+        // 4. 3D Starfield / Executive Opportunity Nodes (320 particles in 3D space)
+        const particleCount = 320;
+        const positions = new Float32Array(particleCount * 3);
+        for (let i = 0; i < particleCount; i++) {
+          const r = 10 + Math.random() * 28;
+          const theta = Math.random() * Math.PI * 2;
+          const phi = Math.acos(2 * Math.random() - 1);
+          positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+          positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+          positions[i * 3 + 2] = r * Math.cos(phi);
+        }
+        const particleGeo = new THREE.BufferGeometry();
+        particleGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+        const particleMat = new THREE.PointsMaterial({
+          color: 0x34d399,
+          size: 0.16,
+          transparent: true,
+          opacity: 0.65
+        });
+        const particleCloud = new THREE.Points(particleGeo, particleMat);
+        rootGroup.add(particleCloud);
+
+        // Step-Driven Camera & Orbital Rig Targets
+        const stepTargets = {
+          1: { camX: -2.4, camY: 1.1, camZ: 25, rotY: 0.15, rotX: 0.08, color: 0x6366f1 },
+          2: { camX: 2.8, camY: -0.9, camZ: 22.5, rotY: -0.42, rotX: 0.18, color: 0x10b981 },
+          3: { camX: -1.6, camY: -1.4, camZ: 21, rotY: 0.64, rotX: -0.15, color: 0x38bdf8 },
+          4: { camX: 0.0, camY: 0.6, camZ: 19.5, rotY: 1.15, rotX: 0.22, color: 0x10b981 }
+        };
+        let targetRig = { ...stepTargets[1] };
+        let mouseX = 0;
+        let mouseY = 0;
+
+        window.set3DCameraStep = (stepNum) => {
+          targetRig = { ...(stepTargets[stepNum] || stepTargets[1]) };
+          if (coreMat && targetRig.color) {
+            coreMat.color.setHex(targetRig.color);
+          }
+        };
+
+        window.addEventListener(
+          "pointermove",
+          (e) => {
+            mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+            mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+          },
+          { passive: true }
+        );
+
+        window.addEventListener("resize", () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate3D() {
+          requestAnimationFrame(animate3D);
+          if (document.hidden) return;
+
+          if (motion3dEnabled) {
+            coreMesh.rotation.y += 0.0028;
+            coreMesh.rotation.x += 0.0014;
+            ring1Mesh.rotation.z -= 0.0032;
+            ring2Mesh.rotation.z += 0.0022;
+            particleCloud.rotation.y += 0.0009;
+
+            // Smooth spring-like interpolation toward the active Step's 3D Camera Rig + Mouse Parallax
+            const desiredCamX = targetRig.camX + mouseX * 1.8;
+            const desiredCamY = targetRig.camY - mouseY * 1.4;
+            camera.position.x += (desiredCamX - camera.position.x) * 0.045;
+            camera.position.y += (desiredCamY - camera.position.y) * 0.045;
+            camera.position.z += (targetRig.camZ - camera.position.z) * 0.045;
+
+            rootGroup.rotation.y += (targetRig.rotY + mouseX * 0.18 - rootGroup.rotation.y) * 0.04;
+            rootGroup.rotation.x += (targetRig.rotX + mouseY * 0.12 - rootGroup.rotation.x) * 0.04;
+          }
+
+          camera.lookAt(0, 0, 0);
+          renderer.render(scene, camera);
+        }
+
+        animate3D();
+      } catch (e) {
+        console.warn("WebGL 3D Spatial Fallback:", e);
+      }
+    }
+
     /* Boot on DOM ready */
     document.addEventListener("DOMContentLoaded", () => {
       state.suggestions = buildHrDirectorSuggestions(state.cv);
@@ -3885,6 +4770,9 @@ ${state.cv.contact}`;
       renderRoleLockChips();
       renderFilteredJobs();
       populateStep3And4ForSelectedJob();
+      bind3DTiltCards();
+      initWebgl3DSpatialScene();
+      setTimeout(triggerAiLaserScan, 450);
     });
   </script>
 </body>
