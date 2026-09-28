@@ -1,0 +1,1534 @@
+{
+  "generatedAt": "2026-09-28T03:54:01.667Z",
+  "total": 168,
+  "staleSources": 2,
+  "sources": [
+    {
+      "id": "ahk",
+      "name": "AHK VAE — Current Job Posting",
+      "url": "https://vae.ahk.de/en/services/career-in-the-uae/current-job-posting",
+      "ok": false,
+      "count": 10,
+      "ms": 157,
+      "error": "fetch failed",
+      "stale": true,
+      "staleSince": "2026-09-27T09:45:09.119Z",
+      "note": "fetch failed — these 10 listings are carried over from 2026-09-27T09:45:09.119Z, not a fresh read",
+      "jobs": [
+        {
+          "title": "Member Directory",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/members/member-directory",
+          "kind": "page"
+        },
+        {
+          "title": "Board of Directors & Honorary Advisory Board",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/members/board-of-directors-honorary-advisory-board",
+          "kind": "page"
+        },
+        {
+          "title": "Your Partner for International Trade Fair Participation",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/trade-fairs/your-partner-for-international-trade-fair-participation",
+          "kind": "page"
+        },
+        {
+          "title": "Filetype: pdf Manager Marketing & Sales DZT Filesize: 215.21 kb",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/content/download/966949/19343104?version=2",
+          "kind": "document"
+        },
+        {
+          "title": "Filetype: pdf Mitarbeiter*in für den Empfang/Telefonzentrale Filesize: 157.91 kb",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/content/download/973931/19491686?version=1",
+          "kind": "document"
+        },
+        {
+          "title": "Filetype: pdf Internship Oman Office Filesize: 241.11 kb",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/content/download/888119/16546037?version=2",
+          "kind": "document"
+        },
+        {
+          "title": "Receptionist and Telephone Operator (f/m/d) - The Embassy of the Federal Republic of Germany in Abu Dhabi",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://workdrive.zohoexternal.com/file/w51976dc660526f9d45d698d266a9f3ceb9d0",
+          "kind": "document"
+        },
+        {
+          "title": "Treasury and Investment Manager (m/f/d) - Departer",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://careers.departer.de/job/36254/treasury-amd-investment-manager-m-f-d",
+          "kind": "page"
+        },
+        {
+          "title": "Regional Sales Manager (m/f/d) Extrusion Technology, GCC - Departer",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://careers.departer.de/job/36119/regional-sales-manager-m-f-d-extrusion-technology-gcc",
+          "kind": "page"
+        },
+        {
+          "title": "Internship at the AHK",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/services/career-in-the-uae/internship-at-the-ahk",
+          "kind": "page"
+        }
+      ]
+    },
+    {
+      "id": "departer",
+      "name": "Departer — The German Headhunter",
+      "url": "https://careers.departer.de/",
+      "audience": {
+        "market": "gulf",
+        "lang": "de"
+      },
+      "ok": true,
+      "count": 10,
+      "ms": 2379,
+      "bytes": 153000,
+      "note": null,
+      "jobs": [
+        {
+          "title": "Financial Controller (m/f/d) UAE",
+          "company": "via Departer — The German Headhunter",
+          "location": "UAE",
+          "url": "https://careers.departer.de/job/35821/financial-controller-m-f-d-uae",
+          "ref": "35821",
+          "kind": "page"
+        },
+        {
+          "title": "Managing Director ANZ (m/f/d) Industrial Packaging",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37545/managing-director-anz-m-f-d-industrial-packaging",
+          "ref": "37545",
+          "kind": "page"
+        },
+        {
+          "title": "Personalreferent/HR Generalist (m/w/d)",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37512/personalreferent-hr-generalist-m-w-d",
+          "ref": "37512",
+          "kind": "page"
+        },
+        {
+          "title": "Managing Director (m/f/d) GCC",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37479/managing-director-m-f-d-gcc",
+          "ref": "37479",
+          "kind": "page"
+        },
+        {
+          "title": "Managing Director (m/f/d) Australia & New Zealand",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/36782/managing-director-m-f-d-australia-new-zealand",
+          "ref": "36782",
+          "kind": "page"
+        },
+        {
+          "title": "Regional CEO (m/f/d) Southeast Asia & Greater China",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/36815/regional-ceo-m-f-d-southeast-asia-greater-china",
+          "ref": "36815",
+          "kind": "page"
+        },
+        {
+          "title": "Head of Sales MEA (m/f/d) Building Materials",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/36848/head-of-sales-mea-m-f-d-building-materials",
+          "ref": "36848",
+          "kind": "page"
+        },
+        {
+          "title": "Entwicklungsleiter International m/w/d",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37049/entwicklungsleiter-international-m-w-d",
+          "ref": "37049",
+          "kind": "page"
+        },
+        {
+          "title": "Country Manager UK (m/f/d) AI-Powered Solar & Energy Platform",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/35755/country-manager-uk-m-f-d-ai-powered-solar-energy-platform",
+          "ref": "35755",
+          "kind": "page"
+        },
+        {
+          "title": "Business Development Manager Vietnam - Subsidiary Setup (m/f/d)",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37412/business-development-manager-vietnam-subsidiary-setup-m-f-d",
+          "ref": "37412",
+          "kind": "page"
+        }
+      ]
+    },
+    {
+      "id": "charterhouse",
+      "name": "Charterhouse — Middle East",
+      "url": "https://www.charterhouseme.ae/jobs/",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 7,
+      "ms": 3162,
+      "bytes": 814766,
+      "note": null,
+      "jobs": [
+        {
+          "title": "Executive Assistant",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/executive-assistant-53763",
+          "ref": "53763",
+          "kind": "page"
+        },
+        {
+          "title": "Store Manager",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/store-manager-53772",
+          "ref": "53772",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Group Accountant",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/senior-group-accountant-53752",
+          "ref": "53752",
+          "kind": "page"
+        },
+        {
+          "title": "Investment Operations Manager – Systematic Hedge Fund",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/investment-operations-manager-systematic-hedge-fund-53384",
+          "ref": "53384",
+          "kind": "page"
+        },
+        {
+          "title": "Director of Fund Raising",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/director-of-fund-raising-53338",
+          "ref": "53338",
+          "kind": "page"
+        },
+        {
+          "title": "International Tax Manager",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/group-finance-and-tax-manager-53740",
+          "ref": "53740",
+          "kind": "page"
+        },
+        {
+          "title": "Business Analyst",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/business-analyst-53767",
+          "ref": "53767",
+          "kind": "page"
+        }
+      ]
+    },
+    {
+      "id": "michaelpage",
+      "name": "Michael Page — Middle East",
+      "url": "https://www.michaelpage.ae/jobs",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 30,
+      "ms": 301,
+      "bytes": 173908,
+      "note": null,
+      "jobs": [
+        {
+          "title": "General Manager (sales) - MNC FMCG",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/general-manager-fmcg/ref/jn-072026-7069059",
+          "ref": "jn-072026-7069059",
+          "kind": "page"
+        },
+        {
+          "title": "Data Protection Officer (Technical Data Governance)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/data-protection-officer-technical-data-governance/ref/jn-092026-7094653",
+          "ref": "jn-092026-7094653",
+          "kind": "page"
+        },
+        {
+          "title": "Director of Contracts - Mixed Use Developments - Dubai - RE Developer",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/director-contracts-mixed-use-developments-re-developer/ref/jn-092026-7112649",
+          "ref": "jn-092026-7112649",
+          "kind": "page"
+        },
+        {
+          "title": "Project Director - Master-Planned Communities - RE Developer - Dubai",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/project-director-master-planned-communities-re-developer/ref/jn-092026-7112647",
+          "ref": "jn-092026-7112647",
+          "kind": "page"
+        },
+        {
+          "title": "Project Director - Mixed use Developments - RE Developer",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/project-director-mixed-use-developments-re-developer/ref/jn-092026-7112651",
+          "ref": "jn-092026-7112651",
+          "kind": "page"
+        },
+        {
+          "title": "Legal Counsel - Qatar",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/legal-counsel-qatar/ref/jn-092026-7111895",
+          "ref": "jn-092026-7111895",
+          "kind": "page"
+        },
+        {
+          "title": "Office Manager - Multinational Firm",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/office-manager/ref/jn-092026-7110964",
+          "ref": "jn-092026-7110964",
+          "kind": "page"
+        },
+        {
+          "title": "Human Resources Manager",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/hr-manager/ref/jn-092026-7111060",
+          "ref": "jn-092026-7111060",
+          "kind": "page"
+        },
+        {
+          "title": "Tax Manager",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/tax-manager/ref/jn-092026-7110986",
+          "ref": "jn-092026-7110986",
+          "kind": "page"
+        },
+        {
+          "title": "Director Strategy and Advisory - Africa",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/director-strategy-and-advisory-africa/ref/jn-092026-7110490",
+          "ref": "jn-092026-7110490",
+          "kind": "page"
+        },
+        {
+          "title": "Head of Compliance - Commodities/Trading",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/head-compliance-commoditiestrading/ref/jn-092026-7108922",
+          "ref": "jn-092026-7108922",
+          "kind": "page"
+        },
+        {
+          "title": "Sales Operations Specialist - Hospitality Supplies",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/sales-operations-specialist-hospitality-supplies/ref/jn-092026-7110377",
+          "ref": "jn-092026-7110377",
+          "kind": "page"
+        },
+        {
+          "title": "Head of Sales",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/head-sales/ref/jn-092026-7108903",
+          "ref": "jn-092026-7108903",
+          "kind": "page"
+        },
+        {
+          "title": "Executive Assistant - Multinational Firm",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/executive-assistant/ref/jn-092026-7102858",
+          "ref": "jn-092026-7102858",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Backend Engineer - Distributed Systems",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/senior-backend-engineer/ref/jn-012026-6928265",
+          "ref": "jn-012026-6928265",
+          "kind": "page"
+        },
+        {
+          "title": "Finance Manager",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/finance-manager/ref/jn-082026-7089915",
+          "ref": "jn-082026-7089915",
+          "kind": "page"
+        },
+        {
+          "title": "Tax Compliance Coordination Analyst",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/tax-compliance-coordination-analyst/ref/jn-092026-7107732",
+          "ref": "jn-092026-7107732",
+          "kind": "page"
+        },
+        {
+          "title": "Tax Controls, Risk & Reporting Analyst",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/tax-control-risk-and-reporting-analyst/ref/jn-092026-7107733",
+          "ref": "jn-092026-7107733",
+          "kind": "page"
+        },
+        {
+          "title": "Tax Specialist - Tanzania - H/F",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/tax-specialist-tanzania-hf/ref/jn-092026-7107443",
+          "ref": "jn-092026-7107443",
+          "kind": "page"
+        },
+        {
+          "title": "Regional tax specialist - Ghana (F/H)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/regional-tax-specialist-ghana-fh/ref/jn-092026-7107385",
+          "ref": "jn-092026-7107385",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Investment Associate - Private Equity",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/senior-investment-associate-private-equity/ref/jn-092026-7107020",
+          "ref": "jn-092026-7107020",
+          "kind": "page"
+        },
+        {
+          "title": "Legal Counsel - FinTech",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/legal-counsel-fintech/ref/jn-092026-7107197",
+          "ref": "jn-092026-7107197",
+          "kind": "page"
+        },
+        {
+          "title": "Sales Associate, Education (Mandarin Speaking)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/sales-associate-education-mandarin-speaking/ref/jn-092026-7098603",
+          "ref": "jn-092026-7098603",
+          "kind": "page"
+        },
+        {
+          "title": "Human Resources Manager",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/human-resources-manager/ref/jn-092026-7103096",
+          "ref": "jn-092026-7103096",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Financial Controller",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/senior-financial-controller/ref/jn-092026-7105355",
+          "ref": "jn-092026-7105355",
+          "kind": "page"
+        },
+        {
+          "title": "Data Analyst - Specialist (UAE National)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/specialist-data-analysis-management/ref/jn-092026-7102013",
+          "ref": "jn-092026-7102013",
+          "kind": "page"
+        },
+        {
+          "title": "Sales Director",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/sales-director-retail/ref/jn-092026-7103808",
+          "ref": "jn-092026-7103808",
+          "kind": "page"
+        },
+        {
+          "title": "Junior Paralegal- Multinational Firm",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/junior-paralegal/ref/jn-092026-7103866",
+          "ref": "jn-092026-7103866",
+          "kind": "page"
+        },
+        {
+          "title": "Marketing Manager - Upcoming Premium EV Launch - UAE",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/marketing-manager-upcoming-premium-ev-launch-uae/ref/jn-092026-7100750",
+          "ref": "jn-092026-7100750",
+          "kind": "page"
+        },
+        {
+          "title": "Finance Manager - Ghana - H/F",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/finance-manager-ghana-hf/ref/jn-092026-7101125",
+          "ref": "jn-092026-7101125",
+          "kind": "page"
+        }
+      ]
+    },
+    {
+      "id": "pageexecutive",
+      "name": "Page Executive — director level and above",
+      "url": "https://www.pageexecutive.com/jobs/",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 30,
+      "ms": 1272,
+      "bytes": 273544,
+      "note": null,
+      "jobs": [
+        {
+          "title": "Director of Finance - Customer",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
+          "ref": "jn-082026-7091934",
+          "kind": "page"
+        },
+        {
+          "title": "Deputy Chief Finance Officer",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/deputy-chief-finance-officer/ref/jn-082026-7091542",
+          "ref": "jn-082026-7091542",
+          "kind": "page"
+        },
+        {
+          "title": "Director of Financial Services",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-financial-services/ref/jn-072026-7071248",
+          "ref": "jn-072026-7071248",
+          "kind": "page"
+        },
+        {
+          "title": "Director of Finance",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-finance/ref/jn-072026-7074184",
+          "ref": "jn-072026-7074184",
+          "kind": "page"
+        },
+        {
+          "title": "Corporate Venture Capitalist",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/corporate-venture-capitalist/ref/jn-082026-7089429",
+          "ref": "jn-082026-7089429",
+          "kind": "page"
+        },
+        {
+          "title": "Marketing and PR Communication Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/marketing-and-pr-director/ref/jn-092026-7105494",
+          "ref": "jn-092026-7105494",
+          "kind": "page"
+        },
+        {
+          "title": "Chief Commercial Officer",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/chief-commercial-officer/ref/jn-092026-7110431",
+          "ref": "jn-092026-7110431",
+          "kind": "page"
+        },
+        {
+          "title": "Global Key Account Manager ASML",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/global-key-account-manager-asml/ref/jn-092026-7110447",
+          "ref": "jn-092026-7110447",
+          "kind": "page"
+        },
+        {
+          "title": "Tokenization Product Director - Collateral",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/tokenization-product-director-collateral/ref/jn-092026-7112484",
+          "ref": "jn-092026-7112484",
+          "kind": "page"
+        },
+        {
+          "title": "Head of Project Controlling (m/w/d) - Technologieunternehmen",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-project-controlling-mwd-technologieunternehmen/ref/jn-082026-7086452",
+          "ref": "jn-082026-7086452",
+          "kind": "page"
+        },
+        {
+          "title": "Group QESH Manager (Quality-led)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/group-qesh-manager-quality-led/ref/jn-092026-7110460",
+          "ref": "jn-092026-7110460",
+          "kind": "page"
+        },
+        {
+          "title": "Group Head of Sales",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/group-head-sales/ref/jn-072026-7074888",
+          "ref": "jn-072026-7074888",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Partner / Partner - Consumer & Retail",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-consumer-retail/ref/jn-092026-7098104",
+          "ref": "jn-092026-7098104",
+          "kind": "page"
+        },
+        {
+          "title": "Partner or Senior Partner - Industrial & Manufacturing",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-industrial-manufacturing/ref/jn-092026-7098273",
+          "ref": "jn-092026-7098273",
+          "kind": "page"
+        },
+        {
+          "title": "Director/a de Gestión Económico-Financiera - ARAGON",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/directora-de-gesti%C3%B3n-econ%C3%B3mico-financiera/ref/jn-092026-7103993",
+          "ref": "jn-092026-7103993",
+          "kind": "page"
+        },
+        {
+          "title": "Director of Rooms - Luxury 5-Star Hotel Lake Geneva Region",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-rooms-luxury-5-star-hotel-lake-geneva-region/ref/jn-092026-7109181",
+          "ref": "jn-092026-7109181",
+          "kind": "page"
+        },
+        {
+          "title": "Global IT Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/global-it-director/ref/jn-092026-7108167",
+          "ref": "jn-092026-7108167",
+          "kind": "page"
+        },
+        {
+          "title": "Interim Controller - 3 Month Contract - Fort Worth, TX",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/interim-controller-3-month-contract-fort-worth-tx/ref/jn-092026-7111737",
+          "ref": "jn-092026-7111737",
+          "kind": "page"
+        },
+        {
+          "title": "Head of Finance - Renewables - Dallas, TX",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-finance-renewables-dallas-tx/ref/jn-092026-7105589",
+          "ref": "jn-092026-7105589",
+          "kind": "page"
+        },
+        {
+          "title": "Chief Executive Officer (CEO), Private Equity-Backed Industrial Company",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/ceo-private-equity-backed-industrial-company/ref/jn-092026-7111168",
+          "ref": "jn-092026-7111168",
+          "kind": "page"
+        },
+        {
+          "title": "General Manager | Italian Packaging Group | Spanish Plant",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/general-manager-italian-packaging-group-spanish-plant/ref/jn-092026-7110594",
+          "ref": "jn-092026-7110594",
+          "kind": "page"
+        },
+        {
+          "title": "Food & Beverage Director (Luxury Alpine Resort)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/food-beverage-director-luxury-alpine-resort/ref/jn-052026-7015573",
+          "ref": "jn-052026-7015573",
+          "kind": "page"
+        },
+        {
+          "title": "Site Director - International Transport & Logistics Company",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/site-director-international-transport-logistics-company/ref/jn-072026-7062358",
+          "ref": "jn-072026-7062358",
+          "kind": "page"
+        },
+        {
+          "title": "Vice President - Operations, Vietnam",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/vp-operations-vietnam-toy-production/ref/jn-092026-7109929",
+          "ref": "jn-092026-7109929",
+          "kind": "page"
+        },
+        {
+          "title": "Chief Technology Officer ( CTO )",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/chief-technology-officer-cto-saas-edtech/ref/jn-082026-7091917",
+          "ref": "jn-082026-7091917",
+          "kind": "page"
+        },
+        {
+          "title": "International Sales Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/international-sales-director/ref/jn-092026-7104939",
+          "ref": "jn-092026-7104939",
+          "kind": "page"
+        },
+        {
+          "title": "Finance Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/finance-director/ref/jn-092026-7110852",
+          "ref": "jn-092026-7110852",
+          "kind": "page"
+        },
+        {
+          "title": "Senior Manager - Commercial Finance & FP&A - Norwood, MA",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-manager-commercial-finance-fpa-norwood-ma/ref/jn-082026-7090273",
+          "ref": "jn-082026-7090273",
+          "kind": "page"
+        },
+        {
+          "title": "HR Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/hr-director/ref/jn-092026-7107492",
+          "ref": "jn-092026-7107492",
+          "kind": "page"
+        },
+        {
+          "title": "CFO | Fintech",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/cfo/ref/jn-092026-7104683",
+          "ref": "jn-092026-7104683",
+          "kind": "page"
+        }
+      ]
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn — public job search, senior UAE roles",
+      "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 57,
+      "ms": 15092,
+      "note": null,
+      "jobs": [
+        {
+          "title": "Investment Director / Managing Director",
+          "company": "Hedge Impact headhunting",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/investment-director-managing-director-at-hedge-impact-headhunting-4470580918",
+          "ref": "4470580918",
+          "posted": "2026-09-27",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "preview group",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-4465957889",
+          "ref": "4465957889",
+          "posted": "2026-09-16",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "CCB- UAE Head",
+          "company": "Citi",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/ccb-uae-head-at-citi-4471023142",
+          "ref": "4471023142",
+          "posted": "2026-09-26",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Managing Director — Employer of Record (EOR) Business Unit",
+          "company": "Mercans",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-%E2%80%94-employer-of-record-eor-business-unit-at-mercans-4468474397",
+          "ref": "4468474397",
+          "posted": "2026-09-20",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Managing Director - Glass & Aluminium Business Unit",
+          "company": "Greenbull Group Dubai",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-glass-aluminium-business-unit-at-greenbull-group-dubai-4468528895",
+          "ref": "4468528895",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "MD - Investments (UAE National)",
+          "company": "Mark Williams Recruitment",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/md-investments-uae-national-at-mark-williams-recruitment-4464798955",
+          "ref": "4464798955",
+          "posted": "2026-09-14",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Senior Executive Officer",
+          "company": "Nameless Ventures",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/senior-executive-officer-at-nameless-ventures-4469887870",
+          "ref": "4469887870",
+          "posted": "2026-09-21",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "EyeSpy Recruitment - iGaming Specialists",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-eyespy-recruitment-igaming-specialists-4463379501",
+          "ref": "4463379501",
+          "posted": "2026-09-04",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Managing Director",
+          "company": "Angle Recruitment, Maritime Talent Experts",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-at-angle-recruitment-maritime-talent-experts-4469349176",
+          "ref": "4469349176",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "Daikan Hospitality Group",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
+          "ref": "4470924431",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Store General Manager (Supermarket)",
+          "company": "GMG",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/store-general-manager-supermarket-at-gmg-4466266392",
+          "ref": "4466266392",
+          "posted": "2026-09-17",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager",
+          "company": "LA Vita Landscaping & Pools",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-la-vita-landscaping-pools-4462360929",
+          "ref": "4462360929",
+          "posted": "2026-09-05",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager",
+          "company": "AL Gahwa AL Arabiya | القهوة العربية",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-al-gahwa-al-arabiya-%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-4464098707",
+          "ref": "4464098707",
+          "posted": "2026-09-07",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager – Facilities Management",
+          "company": "Ali & Sons Holding LLC",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-%E2%80%93-facilities-management-at-ali-sons-holding-llc-4463002735",
+          "ref": "4463002735",
+          "posted": "2026-09-09",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager - F&B Multi Concepts",
+          "company": "C2i",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-f-b-multi-concepts-at-c2i-4466046601",
+          "ref": "4466046601",
+          "posted": "2026-09-14",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager - Joinery Business Unit",
+          "company": "Greenbull Group Dubai",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-joinery-business-unit-at-greenbull-group-dubai-4468970729",
+          "ref": "4468970729",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager",
+          "company": "April Quest",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-april-quest-4468746651",
+          "ref": "4468746651",
+          "posted": "2026-09-21",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Country Leader, Amazon Business MENA, AB Emerging & Expansion",
+          "company": "Amazon",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/country-leader-amazon-business-mena-ab-emerging-expansion-at-amazon-4455905009",
+          "ref": "4455905009",
+          "posted": "2026-09-09",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager, UAE - Cash",
+          "company": "Brink’s Inc",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-uae-cash-at-brink%E2%80%99s-inc-4443350324",
+          "ref": "4443350324",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Restaurant General Managers - F&amp;B (Single Site &amp; Multi Site)",
+          "company": "The Food and Beverage Group",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/restaurant-general-managers-f-amp-b-single-site-amp-multi-site-at-the-food-and-beverage-group-4397790323",
+          "ref": "4397790323",
+          "posted": "2026-04-06",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations",
+          "company": "Confidential Careers",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-confidential-careers-4465542115",
+          "ref": "4465542115",
+          "posted": "2026-09-15",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations",
+          "company": "Confidential Careers",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-confidential-careers-4465553036",
+          "ref": "4465553036",
+          "posted": "2026-09-15",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations & Development - Emirati Applicants",
+          "company": "Course",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-development-emirati-applicants-at-course-4462281530",
+          "ref": "4462281530",
+          "posted": "2026-09-08",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Operations Director (Pharmaceutical & Healthcare Distribution)",
+          "company": "Arabian Ethicals",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/operations-director-pharmaceutical-healthcare-distribution-at-arabian-ethicals-4435638680",
+          "ref": "4435638680",
+          "posted": "2026-07-09",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations",
+          "company": "Food People",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-food-people-4465506533",
+          "ref": "4465506533",
+          "posted": "2026-09-15",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations",
+          "company": "Palazzo Versace Dubai",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-palazzo-versace-dubai-4471423282",
+          "ref": "4471423282",
+          "posted": "2026-09-24",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Operations Director",
+          "company": "Creation Business Consultants",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/operations-director-at-creation-business-consultants-4461107779",
+          "ref": "4461107779",
+          "posted": "2026-09-04",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Operations",
+          "company": "Confidential",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-confidential-4466860092",
+          "ref": "4466860092",
+          "posted": "2026-09-16",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Banking Operations",
+          "company": "Confidential",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-banking-operations-at-confidential-4463284975",
+          "ref": "4463284975",
+          "posted": "2026-09-08",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director - Operations (Housing Solutions)",
+          "company": "OMNIYAT",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-operations-housing-solutions-at-omniyat-4460967777",
+          "ref": "4460967777",
+          "posted": "2026-09-02",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Group Chief Executive Officer",
+          "company": "Legend Holding Group",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/group-chief-executive-officer-at-legend-holding-group-4465558740",
+          "ref": "4465558740",
+          "posted": "2026-09-15",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "IMPETUS EXECUTIVE",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-impetus-executive-4465724030",
+          "ref": "4465724030",
+          "posted": "2026-09-14",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "wowJobs",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-wowjobs-4470139385",
+          "ref": "4470139385",
+          "posted": "2026-09-25",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "MD / President, Global DTC",
+          "company": "SUMWON STUDIOS",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/md-president-global-dtc-at-sumwon-studios-4463979100",
+          "ref": "4463979100",
+          "posted": "2026-09-11",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Operating Officer (COO)",
+          "company": "UNISON INTERNATIONAL CONSULTING (The Recruitment Company)",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-coo-at-unison-international-consulting-the-recruitment-company-4468898614",
+          "ref": "4468898614",
+          "posted": "2026-09-18",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Operating Officer (Water Treatment Solutions)",
+          "company": "The Greater Change",
+          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-water-treatment-solutions-at-the-greater-change-4445934292",
+          "ref": "4445934292",
+          "posted": "2026-07-19",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Operating Officer",
+          "company": "Nord Line Holding",
+          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-at-nord-line-holding-4452252265",
+          "ref": "4452252265",
+          "posted": "2026-08-17",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Operating Officer (Crypto)",
+          "company": "Evotym",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-crypto-at-evotym-4470051576",
+          "ref": "4470051576",
+          "posted": "2026-09-25",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief Growth Officer-Cryptocurrency Exchange",
+          "company": "CXM",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-growth-officer-cryptocurrency-exchange-at-cxm-4444548227",
+          "ref": "4444548227",
+          "posted": "2026-07-20",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Managing Director (Catering & Facilities Management)",
+          "company": "Confidential",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-catering-facilities-management-at-confidential-4468368782",
+          "ref": "4468368782",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Country Director - Infrastructure",
+          "company": "Guildhall | The #1 Ranked Executive Search & Recruitment Agency in Dubai, UAE",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/country-director-infrastructure-at-guildhall-the-%231-ranked-executive-search-recruitment-agency-in-dubai-uae-4464764952",
+          "ref": "4464764952",
+          "posted": "2026-09-14",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager - Wood Al Majal Joint Venture",
+          "company": "Wood",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-wood-al-majal-joint-venture-at-wood-4459328107",
+          "ref": "4459328107",
+          "posted": "2026-09-17",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager, EOR",
+          "company": "Deel",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-eor-at-deel-4456502399",
+          "ref": "4456502399",
+          "posted": "2026-09-15",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "UAE Country Manager",
+          "company": "Anton",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/uae-country-manager-at-anton-4459930898",
+          "ref": "4459930898",
+          "posted": "2026-09-02",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager, Nigeria",
+          "company": "Taptap Send",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-nigeria-at-taptap-send-4366053834",
+          "ref": "4366053834",
+          "posted": "2026-09-27",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Country Manager (UAE)",
+          "company": "Coins.ph",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/country-manager-uae-at-coins-ph-4467463000",
+          "ref": "4467463000",
+          "posted": "2026-09-17",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "UAE Country Manager – Emirati National",
+          "company": "eyouth",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/uae-country-manager-%E2%80%93-emirati-national-at-eyouth-4464295202",
+          "ref": "4464295202",
+          "posted": "2026-09-12",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director, International Business Development, Middle East & Asia Pacific (C5ISR)",
+          "company": "L3Harris Technologies",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-international-business-development-middle-east-asia-pacific-c5isr-at-l3harris-technologies-4457322646",
+          "ref": "4457322646",
+          "posted": "2026-09-11",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director, Business Development - Middle East",
+          "company": "Anduril Industries",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-business-development-middle-east-at-anduril-industries-4469175836",
+          "ref": "4469175836",
+          "posted": "2026-09-18",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "X-BAT Business Development Director, Middle East (R4949)",
+          "company": "Shield AI",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/x-bat-business-development-director-middle-east-r4949-at-shield-ai-4416497377",
+          "ref": "4416497377",
+          "posted": "2026-09-24",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Business Development Director",
+          "company": "Hill International, Inc.",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/business-development-director-at-hill-international-inc-4428074138",
+          "ref": "4428074138",
+          "posted": "2026-06-16",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Business Development Director-Business Setup & Corporate Services",
+          "company": "Avyanco Business Setup Consultancy",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/business-development-director-business-setup-corporate-services-at-avyanco-business-setup-consultancy-4466212688",
+          "ref": "4466212688",
+          "posted": "2026-09-16",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director - Business Development",
+          "company": "EDGE",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-business-development-at-edge-4453708816",
+          "ref": "4453708816",
+          "posted": "2026-09-27",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director of Business Development",
+          "company": "Loft Orbital",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-business-development-at-loft-orbital-4450169616",
+          "ref": "4450169616",
+          "posted": "2026-08-12",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Director, International Business Development & Government Relations (UAE)",
+          "company": "L3Harris Technologies",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-international-business-development-government-relations-uae-at-l3harris-technologies-4456196383",
+          "ref": "4456196383",
+          "posted": "2026-09-09",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Enterprise Sales Director",
+          "company": "訊凱國際 Cooler Master Co., Ltd.",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/enterprise-sales-director-at-%E8%A8%8A%E5%87%B1%E5%9C%8B%E9%9A%9B-cooler-master-co-ltd-4464445478",
+          "ref": "4464445478",
+          "posted": "2026-09-08",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Working Capital Sales Director",
+          "company": "Visa",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/working-capital-sales-director-at-visa-4462863682",
+          "ref": "4462863682",
+          "posted": "2026-09-25",
+          "kind": "page",
+          "src": "linkedin"
+        }
+      ]
+    },
+    {
+      "id": "websearch",
+      "name": "Open web search (AIsa)",
+      "url": "https://api.aisa.one/apis/v1/tavily/search",
+      "ok": false,
+      "count": 24,
+      "ms": 858,
+      "error": "AIsa HTTP 402 on \"managing director jobs Dubai UAE hiring now\"",
+      "stale": true,
+      "staleSince": "2026-09-11T08:29:26.565Z",
+      "note": "fetch failed — these 24 listings are carried over from 2026-09-11T08:29:26.565Z, not a fresh read",
+      "jobs": [
+        {
+          "title": "Managing Director Jobs (Sep 2026) | GulfTalent",
+          "company": "via gulftalent.com",
+          "location": "",
+          "url": "https://www.gulftalent.com/jobs/title/managing-director",
+          "kind": "search"
+        },
+        {
+          "title": "Managing Director Jobs in the Middle East (Sep 2026) - Bayt.com",
+          "company": "via bayt.com",
+          "location": "",
+          "url": "https://www.bayt.com/en/international/jobs/managing-director-jobs",
+          "kind": "search"
+        },
+        {
+          "title": "100+ Managing Director Jobs, Employment in Dubai 8 September 2026| Indeed",
+          "company": "via ae.indeed.com",
+          "location": "",
+          "url": "https://ae.indeed.com/q-managing-director-l-dubai-jobs.html",
+          "kind": "search"
+        },
+        {
+          "title": "496 Managing director jobs in United Arab Emirates",
+          "company": "via glassdoor.com",
+          "location": "",
+          "url": "https://www.glassdoor.com/Job/united-arab-emirates-managing-director-jobs-SRCH_IL.0,20_IN6_KO21,38.htm",
+          "kind": "search"
+        },
+        {
+          "title": "Managing Director jobs in Dubai (25)",
+          "company": "via efinancialcareers.com",
+          "location": "",
+          "url": "https://www.efinancialcareers.com/jobs/Managing-Director/in-Dubai-Dubai-United-Arab-Emirates",
+          "kind": "search"
+        },
+        {
+          "title": "Executive Director Jobs in UAE - 169 Vacancies Sep 2026",
+          "company": "via naukrigulf.com",
+          "location": "",
+          "url": "https://www.naukrigulf.com/executive-director-jobs-in-uae",
+          "kind": "search"
+        },
+        {
+          "title": "6000+ Director jobs in United Arab Emirates",
+          "company": "via uk.linkedin.com",
+          "location": "",
+          "url": "https://uk.linkedin.com/jobs/director-jobs-ae",
+          "kind": "search"
+        },
+        {
+          "title": "Director jobs | Michael Page",
+          "company": "via michaelpage.ae",
+          "location": "",
+          "url": "https://www.michaelpage.ae/jobs/director",
+          "kind": "search"
+        },
+        {
+          "title": "General Manager Jobs in UAE - 117 Vacancies Sep 2026",
+          "company": "via naukrigulf.com",
+          "location": "",
+          "url": "https://www.naukrigulf.com/general-manager-jobs-in-uae",
+          "kind": "search"
+        },
+        {
+          "title": "300+ General Manager Jobs, Employment 7 September 2026| Indeed",
+          "company": "via ae.indeed.com",
+          "location": "",
+          "url": "https://ae.indeed.com/q-general-manager-jobs.html",
+          "kind": "search"
+        },
+        {
+          "title": "General Manager Jobs in Abu Dhabi (Sep 2026) | GulfTalent",
+          "company": "via gulftalent.com",
+          "location": "",
+          "url": "https://www.gulftalent.com/uae/jobs/abu-dhabi/title/general-manager",
+          "kind": "search"
+        },
+        {
+          "title": "General Manager Sales Jobs in UAE - 46 Vacancies Sep 2026",
+          "company": "via naukrigulf.com",
+          "location": "",
+          "url": "https://www.naukrigulf.com/general-manager-sales-jobs-in-uae",
+          "kind": "search"
+        },
+        {
+          "title": "75+ General Manager Jobs, Employment in Abu Dhabi 7 September 2026| Indeed",
+          "company": "via ae.indeed.com",
+          "location": "",
+          "url": "https://ae.indeed.com/q-general-manager-l-abu-dhabi-jobs.html",
+          "kind": "search"
+        },
+        {
+          "title": "General Manager Jobs (Sep 2026) | GulfTalent",
+          "company": "via gulftalent.com",
+          "location": "",
+          "url": "https://www.gulftalent.com/jobs/title/general-manager",
+          "kind": "search"
+        },
+        {
+          "title": "General Manager jobs | Michael Page",
+          "company": "via michaelpage.ae",
+          "location": "",
+          "url": "https://www.michaelpage.ae/jobs/general-manager",
+          "kind": "search"
+        },
+        {
+          "title": "16000+ Management jobs in United Arab Emirates - Dubai",
+          "company": "via linkedin.com",
+          "location": "",
+          "url": "https://www.linkedin.com/jobs/management-jobs-united-arab-emirates",
+          "kind": "search"
+        },
+        {
+          "title": "C-suite & Advisory - Hanson Search",
+          "company": "via hansonsearch.com",
+          "location": "",
+          "url": "https://www.hansonsearch.com/job-category/c-suite-advisory",
+          "kind": "search"
+        },
+        {
+          "title": "Chief Jobs United Arab Emirates (UAE) Hiring Now 2026 – Chief Jobs | The C-Suite Job Board",
+          "company": "via chiefjobs.com",
+          "location": "",
+          "url": "https://www.chiefjobs.com/uae",
+          "kind": "search"
+        },
+        {
+          "title": "CEO Jobs in UAE - 140 Vacancies Sep 2026",
+          "company": "via naukrigulf.com",
+          "location": "",
+          "url": "https://www.naukrigulf.com/ceo-jobs-in-uae",
+          "kind": "search"
+        },
+        {
+          "title": "75+ Chief Executive Officer Jobs, Employment in Dubai 7 September 2026| Indeed",
+          "company": "via ae.indeed.com",
+          "location": "",
+          "url": "https://ae.indeed.com/q-chief-executive-officer-l-dubai-jobs.html",
+          "kind": "search"
+        },
+        {
+          "title": "Chief Executive Officer Jobs in UAE (Sep 2026) - Bayt.com",
+          "company": "via bayt.com",
+          "location": "",
+          "url": "https://www.bayt.com/en/uae/jobs/chief-executive-officer-jobs",
+          "kind": "search"
+        },
+        {
+          "title": "Ceo jobs in United Arab Emirates | Michael Page",
+          "company": "via michaelpage.ae",
+          "location": "",
+          "url": "https://www.michaelpage.ae/jobs/ceo/united-arab-emirates",
+          "kind": "search"
+        },
+        {
+          "title": "40 ceo Jobs in Abu Dhabi, United Arab Emirates, July 2026",
+          "company": "via glassdoor.com",
+          "location": "",
+          "url": "https://www.glassdoor.com/Job/ceo-jobs-SRCH_IM953_KO0,3.htm",
+          "kind": "search"
+        },
+        {
+          "title": "21 Uae Ceo jobs in United States",
+          "company": "via linkedin.com",
+          "location": "",
+          "url": "https://www.linkedin.com/jobs/uae-ceo-jobs",
+          "kind": "search"
+        }
+      ]
+    }
+  ]
+}
