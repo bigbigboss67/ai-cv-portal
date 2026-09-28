@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" defer></script>
 <style>
   :root {
     --bg-obsidian: #080E1C;
@@ -429,11 +433,24 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 16px 20px;
-    background: linear-gradient(135deg, rgba(212, 175, 90, 0.12), rgba(17, 29, 53, 0.92));
-    border: 1px dashed var(--brass-border);
+    padding: 18px 22px;
+    background: linear-gradient(135deg, rgba(212, 175, 90, 0.14), rgba(17, 29, 53, 0.94));
+    border: 1.5px dashed var(--brass-border);
     border-radius: var(--radius-md);
     margin-bottom: 18px;
+    transition: all 180ms var(--ease-out);
+    cursor: pointer;
+  }
+  .intake-banner:hover,
+  .intake-banner.drag-over {
+    border-color: var(--brass-bright);
+    background: linear-gradient(135deg, rgba(212, 175, 90, 0.22), rgba(22, 36, 66, 0.96));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+  .intake-banner.loaded {
+    border-style: solid;
+    border-color: var(--emerald-border);
+    background: linear-gradient(135deg, rgba(78, 159, 118, 0.14), rgba(17, 29, 53, 0.94));
   }
   .intake-banner h3 {
     font-family: var(--font-display);
@@ -445,6 +462,53 @@
     font-size: 12.5px;
     color: var(--text-secondary);
     margin-top: 2px;
+  }
+  .format-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .format-chip {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    background: rgba(8, 14, 28, 0.65);
+    border: 1px solid var(--line-strong);
+    color: var(--brass-bright);
+  }
+  .modal-dropzone {
+    border: 1.5px dashed var(--brass-border);
+    border-radius: var(--radius-md);
+    padding: 22px 18px;
+    text-align: center;
+    background: rgba(8, 14, 28, 0.55);
+    cursor: pointer;
+    transition: all 180ms var(--ease-out);
+    margin-bottom: 14px;
+  }
+  .modal-dropzone:hover,
+  .modal-dropzone.drag-over {
+    border-color: var(--brass-bright);
+    background: rgba(212, 175, 90, 0.12);
+  }
+  .upload-status-bar {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    background: rgba(78, 159, 118, 0.12);
+    border: 1px solid var(--emerald-border);
+    color: var(--emerald-bright);
+    margin-bottom: 12px;
+    display: none;
+  }
+  .upload-status-bar.show { display: block; }
+  .upload-status-bar.err {
+    background: var(--coral-dim);
+    border-color: var(--coral-border);
+    color: var(--coral);
   }
 
   /* Promotion Gap Bridge */
@@ -1020,7 +1084,9 @@
     </nav>
 
     <div class="top-actions">
-      <button class="btn btn-ghost btn-sm" id="btnOpenCvModal">↑ Load / Paste My CV</button>
+      <input type="file" id="cvFileInput" multiple accept=".pdf,.docx,.doc,.odt,.rtf,.zip,.csv,.json,.yaml,.yml,.html,.htm,.md,.markdown,.txt,.png,.jpg,.jpeg,.webp" style="display:none">
+      <button class="btn btn-brass btn-sm" id="btnDirectUpload">↑ Upload CV File</button>
+      <button class="btn btn-ghost btn-sm" id="btnOpenCvModal">✎ Paste / Inspect CV</button>
       <button class="btn btn-ghost btn-sm" id="btnToggleDossier">✦ Public Dossier View</button>
     </div>
   </header>
@@ -1061,15 +1127,27 @@
          STAGE 1: CV & PROMOTION STUDIO (Unifies apply.html + Profile + Builder + Review)
          ===================================================================== -->
     <section class="stage-pane active" id="stage-studio">
-      <div class="intake-banner">
+      <div class="intake-banner" id="bannerDropZone" title="Click or drag and drop your CV file in any format">
         <div>
-          <h3>Your CV, Audited for Your Next Promotion</h3>
-          <p>100% browser-local parsing (PDF, DOCX headers/footers, LinkedIn ZIP). Zero invented metrics — every promotion gap below is bridged using your own verified numbers.</p>
+          <h3 id="bannerTitle">Drop Your CV in Any Format — or Click to Browse</h3>
+          <p id="bannerSubtitle">100% browser-local extraction. Zero invented metrics — every promotion gap below is bridged using your own verified numbers.</p>
+          <div class="format-chips">
+            <span class="format-chip">PDF</span>
+            <span class="format-chip">Word (.docx / .doc)</span>
+            <span class="format-chip">LinkedIn (.zip / .csv)</span>
+            <span class="format-chip">OpenDocument (.odt)</span>
+            <span class="format-chip">Rich Text (.rtf)</span>
+            <span class="format-chip">JSON / RenderCV YAML</span>
+            <span class="format-chip">HTML / Markdown / TXT</span>
+            <span class="format-chip">Scanned Image OCR (.png / .jpg)</span>
+          </div>
         </div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn btn-brass" id="btnBannerUpload">Drop CV / LinkedIn Export</button>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <button class="btn btn-brass" id="btnBannerUpload" type="button">↑ Choose CV File (Any Format)</button>
+          <button class="btn btn-ghost" id="btnBannerPaste" type="button">✎ Paste Text</button>
         </div>
       </div>
+      <div class="upload-status-bar" id="bannerStatus"></div>
 
       <div class="studio-grid">
         <!-- LEFT COLUMN: Promotion Gap Bridge + /cv-reviewer Checklist -->
@@ -1214,20 +1292,39 @@
   </main>
 </div>
 
-<!-- MODAL: LOAD / PASTE CUSTOM CV OR PREVIEW DOSSIER -->
+<!-- MODAL: UNIVERSAL CV UPLOADER (ANY FORMAT) + TEXT INSPECTOR -->
 <div class="modal-backdrop" id="cvModal">
   <div class="modal-card">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-      <h3 style="font-family:var(--font-display);font-size:24px">Load or Paste Your CV</h3>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <h3 style="font-family:var(--font-display);font-size:24px">Upload Your CV (Any Format) or Paste Text</h3>
       <button class="btn btn-sm" id="btnCloseCvModal">✕ Close</button>
     </div>
-    <p style="font-size:12.5px;color:var(--text-secondary);margin-bottom:12px">
-      Paste your CV text or summary + bullets below. The portal will detect your current rung, calculate your <b>Next Promotion Role</b> readiness, and re-score all vacancies live.
-    </p>
-    <textarea class="input-field" id="customCvTextarea" rows="8" style="width:100%;margin-bottom:14px;font-family:var(--font-mono);font-size:12px" placeholder="Paste your CV text here (Name, Title, Experience bullets with metrics)..."></textarea>
-    <div style="display:flex;justify-content:flex-end;gap:10px">
-      <button class="btn btn-ghost" id="btnResetDemoCv">Reset to Executive Demo Profile</button>
-      <button class="btn btn-brass" id="btnParseCustomCv">Analyze CV &amp; Find Promotion Roles →</button>
+
+    <div class="modal-dropzone" id="modalDropZone">
+      <div style="font-size:24px;margin-bottom:6px">📄 ↑</div>
+      <div style="font-weight:700;font-size:14px;color:var(--text-primary)" id="modalDropTitle">
+        Click to Choose a File or Drag &amp; Drop Here
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-top:4px">
+        Supports <b>PDF</b>, <b>Word (.docx / .doc)</b>, <b>OpenDocument (.odt)</b>, <b>Rich Text (.rtf)</b>, <b>LinkedIn Export (.zip / .csv)</b>, <b>JSON / RenderCV YAML</b>, <b>HTML / Markdown / TXT</b>, and <b>Scanned Images (.png / .jpg OCR)</b>
+      </div>
+      <div style="margin-top:12px">
+        <button class="btn btn-brass btn-sm" type="button" id="btnModalBrowse">Browse Files on Computer…</button>
+      </div>
+    </div>
+
+    <div class="upload-status-bar" id="modalUploadStatus"></div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <span style="font-size:11.5px;font-family:var(--font-mono);text-transform:uppercase;color:var(--text-muted)">Extracted / Pasted CV Text (Editable before analysis)</span>
+      <span style="font-size:11px;color:var(--text-muted)" id="charCountLabel">0 chars</span>
+    </div>
+    <textarea class="input-field" id="customCvTextarea" rows="7" style="width:100%;margin-bottom:14px;font-family:var(--font-mono);font-size:12px" placeholder="Upload any CV file above (auto-populates here) or paste your CV text directly..."></textarea>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-ghost btn-sm" id="btnResetDemoCv">↺ Reset to Executive Demo Profile</button>
+      <div style="display:flex;gap:10px">
+        <button class="btn btn-brass" id="btnParseCustomCv">Analyze CV &amp; Find Promotion Roles →</button>
+      </div>
     </div>
   </div>
 </div>
@@ -2040,28 +2137,509 @@
     };
   });
 
-  // Modal handlers
+  /* ---------------- UNIVERSAL MULTI-FORMAT CV FILE EXTRACTOR & PARSER ---------------- */
+  const DEMO_PROFILE_BACKUP = JSON.parse(JSON.stringify(STATE.profile));
+  const fileInput = document.getElementById('cvFileInput');
   const modal = document.getElementById('cvModal');
+  const bannerDropZone = document.getElementById('bannerDropZone');
+  const modalDropZone = document.getElementById('modalDropZone');
+  const bannerStatus = document.getElementById('bannerStatus');
+  const modalStatus = document.getElementById('modalUploadStatus');
+  const customTextarea = document.getElementById('customCvTextarea');
+  const charCountLabel = document.getElementById('charCountLabel');
+
   const openModal = () => modal.classList.add('open');
   const closeModal = () => modal.classList.remove('open');
+
+  function setUploadStatus(msg, isError = false) {
+    [bannerStatus, modalStatus].forEach(el => {
+      if (!el) return;
+      el.textContent = msg;
+      el.className = 'upload-status-bar show' + (isError ? ' err' : '');
+    });
+  }
+
+  // 1. PDF Extraction (preserves visual lines & spacing via pdf.js)
+  function pdfItemsToText(items) {
+    let out = '', prev = null;
+    for (let i = 0; i < items.length; i++) {
+      const it = items[i], t = it.transform || [0, 0, 0, 0, 0, 0], str = it.str || '';
+      if (prev && out) {
+        const size = Math.abs(t[3]) || it.height || 10, p = prev.transform || t;
+        if (prev.hasEOL || Math.abs(t[5] - p[5]) > size * 0.5) {
+          if (!/\n$/.test(out)) out += '\n';
+        } else if (str && !/\s$/.test(out) && !/^\s/.test(str) && t[4] - (p[4] + (prev.width || 0)) > size * 0.15) {
+          out += ' ';
+        }
+      }
+      out += str;
+      if (str || it.hasEOL) prev = it;
+    }
+    return out.replace(/[ \t]+\n/g, '\n');
+  }
+
+  async function extractPdfBuffer(buf) {
+    const pdfjsLib = window.pdfjsLib;
+    if (!pdfjsLib) throw new Error('PDF reader library is still loading — please try again in a second.');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+    const pages = [];
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const tc = await page.getTextContent();
+      pages.push(pdfItemsToText(tc.items));
+    }
+    return pages.join('\n');
+  }
+
+  // 2. Word XML & DOCX Header/Footer + Body Extraction
+  function wordXmlToText(xml) {
+    return String(xml)
+      .replace(/<w:delText[^>]*>[\s\S]*?<\/w:delText>|<w:instrText[^>]*>[\s\S]*?<\/w:instrText>/g, '')
+      .replace(/<w:tab\/>/g, '\t')
+      .replace(/<w:(?:br|cr)(?: [^>]*)?\/>|<\/w:p>|<\/text:p>|<\/text:h>/g, '\n')
+      .replace(/<[^>]+>/g, '')
+      .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&')
+      .split('\n').map(l => l.replace(/\s+$/, '')).filter(l => l.trim()).join('\n');
+  }
+
+  async function extractDocxBuffer(buf) {
+    let headFoot = [];
+    if (window.JSZip) {
+      try {
+        const zip = await window.JSZip.loadAsync(buf);
+        const hfFiles = Object.keys(zip.files).filter(n => /^word\/(header|footer)\d*\.xml$/i.test(n)).sort();
+        for (const fName of hfFiles) {
+          const xml = await zip.files[fName].async('string');
+          const txt = wordXmlToText(xml);
+          if (txt && !headFoot.includes(txt)) headFoot.push(txt);
+        }
+      } catch (_) {}
+    }
+    if (window.mammoth) {
+      const res = await window.mammoth.extractRawText({ arrayBuffer: buf });
+      return [headFoot.join('\n'), res.value].filter(Boolean).join('\n\n');
+    }
+    throw new Error('DOCX reader library is still loading.');
+  }
+
+  // 3. Legacy Binary .DOC Extractor (extracts UTF-16LE & ASCII text runs)
+  function extractLegacyDocBuffer(buf) {
+    const u8 = new Uint8Array(buf);
+    let ascii = '', cur = '';
+    for (let i = 0; i < u8.length; i++) {
+      const b = u8[i];
+      if ((b >= 32 && b <= 126) || b === 10 || b === 13 || b === 9) {
+        cur += String.fromCharCode(b);
+      } else {
+        if (cur.trim().length >= 5) ascii += cur + '\n';
+        cur = '';
+      }
+    }
+    if (cur.trim().length >= 5) ascii += cur;
+    // Also scan UTF-16LE runs
+    let u16 = '', cur16 = '';
+    for (let i = 0; i + 1 < u8.length; i += 2) {
+      const code = u8[i] | (u8[i + 1] << 8);
+      if ((code >= 32 && code <= 126) || (code >= 0x00C0 && code <= 0x024F) || (code >= 0x0600 && code <= 0x06FF) || code === 10 || code === 13) {
+        cur16 += String.fromCharCode(code);
+      } else {
+        if (cur16.trim().length >= 6) u16 += cur16 + '\n';
+        cur16 = '';
+      }
+    }
+    const combined = (u16.length > ascii.length * 0.5 ? u16 + '\n' + ascii : ascii)
+      .split(/\r?\n/)
+      .map(l => l.trim())
+      .filter(l => l.length >= 3 && !/^(MSWordDoc|Word\.Document|Normal\.dot|Microsoft Office|Root Entry|CompObj|SummaryInformation)/i.test(l));
+    return combined.join('\n');
+  }
+
+  // 4. OpenDocument (.ODT) Extractor
+  async function extractOdtBuffer(buf) {
+    if (!window.JSZip) throw new Error('ZIP/ODT reader library is still loading.');
+    const zip = await window.JSZip.loadAsync(buf);
+    if (zip.files['content.xml']) {
+      const xml = await zip.files['content.xml'].async('string');
+      return wordXmlToText(xml);
+    }
+    throw new Error('Could not find content.xml inside ODT file.');
+  }
+
+  // 5. Rich Text Format (.RTF) Extractor
+  function extractRtfText(rtf) {
+    return String(rtf)
+      .replace(/\\par\b|\\line\b/g, '\n')
+      .replace(/\\tab\b/g, '\t')
+      .replace(/\\'([0-9a-fA-F]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
+      .replace(/\\u(-?\d+)\??/g, (_, dec) => String.fromCodePoint(Number(dec) < 0 ? Number(dec) + 65536 : Number(dec)))
+      .replace(/\{\\(?:fonttbl|colortbl|stylesheet|info|pict|object)[\s\S]*?\}/g, '')
+      .replace(/\\[a-zA-Z]+-?\d*\s?/g, '')
+      .replace(/[{}]/g, '')
+      .split(/\r?\n/).map(l => l.trim()).filter(Boolean).join('\n');
+  }
+
+  // 6. Structured JSON / RenderCV YAML Extractor
+  function structuredObjToCvText(obj) {
+    if (!obj || typeof obj !== 'object') return '';
+    const lines = [];
+    const cv = obj.cv || obj.basics || obj.profile || obj;
+    if (cv.name) lines.push(cv.name);
+    if (cv.label || cv.headline || cv.title) lines.push(cv.label || cv.headline || cv.title);
+    const contact = [cv.email, cv.phone, cv.location?.city || cv.location || cv.city].filter(Boolean).join(' · ');
+    if (contact) lines.push(contact);
+    if (cv.summary) {
+      lines.push('\nSUMMARY');
+      lines.push(typeof cv.summary === 'string' ? cv.summary : (cv.summary.en || JSON.stringify(cv.summary)));
+    }
+    const secs = cv.sections || obj;
+    if (Array.isArray(secs.summary)) {
+      lines.push('\nSUMMARY');
+      lines.push(secs.summary.join(' '));
+    }
+    const work = secs.experience || secs.work || obj.work || obj.experience || [];
+    if (Array.isArray(work) && work.length) {
+      lines.push('\nEXPERIENCE');
+      work.forEach(w => {
+        const title = w.position || w.title || w.t || 'Role';
+        const comp = w.company || w.name || w.organization || w.c || '';
+        const dates = w.dates || w.d || [w.startDate || w.start_date, w.endDate || w.end_date || 'Present'].filter(Boolean).join(' – ') || '2020 – Present';
+        lines.push(`${title} — ${comp} (${dates})`);
+        const highlights = w.highlights || w.bullets || [];
+        highlights.forEach(h => lines.push('• ' + (typeof h === 'string' ? h : (h.x || JSON.stringify(h)))));
+      });
+    }
+    const skills = secs.skills || obj.skills || obj.competencies || [];
+    if (Array.isArray(skills) && skills.length) {
+      lines.push('\nSKILLS');
+      lines.push(skills.map(s => typeof s === 'string' ? s : (s.name || s.keywords?.join(', ') || s[0] || '')).filter(Boolean).join(' · '));
+    }
+    return lines.join('\n');
+  }
+
+  // 7. LinkedIn ZIP / Archive Extractor
+  async function extractZipBuffer(buf) {
+    if (!window.JSZip) throw new Error('ZIP reader library is still loading.');
+    const zip = await window.JSZip.loadAsync(buf);
+    const names = Object.keys(zip.files).filter(n => !zip.files[n].dir);
+    const out = [];
+    for (const name of names) {
+      const low = name.toLowerCase();
+      if (low.endsWith('.pdf')) {
+        out.push(await extractPdfBuffer(await zip.files[name].async('arraybuffer')));
+      } else if (low.endsWith('.docx')) {
+        out.push(await extractDocxBuffer(await zip.files[name].async('arraybuffer')));
+      } else if (low.endsWith('.csv') || low.endsWith('.txt') || low.endsWith('.md') || low.endsWith('.json') || low.endsWith('.yaml') || low.endsWith('.yml')) {
+        const txt = await zip.files[name].async('string');
+        if ( /(profile|positions|education|skills|languages|summary)/i.test(low) || !low.endsWith('.csv') ) {
+          out.push(`--- ${name} ---\n` + txt);
+        }
+      }
+    }
+    return out.join('\n\n');
+  }
+
+  // 8. Image OCR Extractor (loads Tesseract.js on demand)
+  async function extractImageOcr(file) {
+    setUploadStatus(`Running local browser OCR on image "${file.name}" (this takes ~5–10s)…`);
+    if (!window.Tesseract) {
+      await new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js';
+        s.onload = resolve;
+        s.onerror = () => reject(new Error('Could not load OCR engine.'));
+        document.head.appendChild(s);
+      });
+    }
+    const result = await window.Tesseract.recognize(file, 'eng');
+    return (result && result.data && result.data.text) ? result.data.text : '';
+  }
+
+  // Master Dispatcher for Any File Format
+  async function extractAnyFile(file) {
+    const name = (file.name || '').toLowerCase();
+    const ext = name.split('.').pop();
+    if (ext === 'pdf') {
+      const txt = await extractPdfBuffer(await file.arrayBuffer());
+      if (txt.replace(/\s+/g, '').length < 60) {
+        return await extractImageOcr(file);
+      }
+      return { text: txt, format: 'PDF Document' };
+    }
+    if (ext === 'docx') {
+      return { text: await extractDocxBuffer(await file.arrayBuffer()), format: 'Word DOCX (+Headers/Footers)' };
+    }
+    if (ext === 'doc') {
+      return { text: extractLegacyDocBuffer(await file.arrayBuffer()), format: 'Word DOC (Legacy Binary)' };
+    }
+    if (ext === 'odt') {
+      return { text: await extractOdtBuffer(await file.arrayBuffer()), format: 'OpenDocument Text (ODT)' };
+    }
+    if (ext === 'rtf') {
+      return { text: extractRtfText(await file.text()), format: 'Rich Text Format (RTF)' };
+    }
+    if (ext === 'zip') {
+      return { text: await extractZipBuffer(await file.arrayBuffer()), format: 'ZIP Archive / LinkedIn Export' };
+    }
+    if (ext === 'json') {
+      const raw = await file.text();
+      try {
+        const obj = JSON.parse(raw);
+        return { text: structuredObjToCvText(obj) || raw, format: 'JSON Resume / Profile' };
+      } catch (_) {
+        return { text: raw, format: 'JSON Text' };
+      }
+    }
+    if (ext === 'yaml' || ext === 'yml') {
+      const raw = await file.text();
+      try {
+        const obj = window.jsyaml ? window.jsyaml.load(raw) : null;
+        return { text: (obj && structuredObjToCvText(obj)) || raw, format: 'RenderCV / YAML Profile' };
+      } catch (_) {
+        return { text: raw, format: 'YAML Text' };
+      }
+    }
+    if (ext === 'html' || ext === 'htm') {
+      const raw = await file.text();
+      const doc = new DOMParser().parseFromString(raw, 'text/html');
+      return { text: doc.body ? doc.body.innerText : raw, format: 'HTML Document' };
+    }
+    if (['png', 'jpg', 'jpeg', 'webp', 'bmp'].includes(ext)) {
+      return { text: await extractImageOcr(file), format: 'Image OCR' };
+    }
+    // Default fallback: CSV, Markdown, TXT, or any other text-readable file
+    const rawText = await file.text();
+    return { text: rawText, format: ext ? ext.toUpperCase() + ' File' : 'Text File' };
+  }
+
+  // Parse Raw CV Text into Structured Portal Profile + Promotion Ladder
+  function parseCvTextToProfile(rawText, sourceLabel = 'Uploaded CV') {
+    const clean = String(rawText || '').replace(/\0/g, '').trim();
+    if (!clean) return false;
+
+    const lines = clean.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    const emailMatch = clean.match(/[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}/);
+    const phoneMatch = clean.match(/(?:\+|00)?\d[\d\s().\/-]{7,16}\d/);
+
+    // Guess candidate name from first 8 lines
+    let detectedName = STATE.profile.name;
+    for (let i = 0; i < Math.min(8, lines.length); i++) {
+      const l = lines[i].replace(/^[#*•\-–—\s]+/, '').trim();
+      if (l.length >= 4 && l.length <= 42 && !/@|\d{3}|curriculum|resume|lebenslauf|summary|profile|experience/i.test(l)) {
+        const words = l.split(/\s+/);
+        if (words.length >= 2 && words.length <= 4) {
+          detectedName = l;
+          break;
+        }
+      }
+    }
+
+    // Extract dated experience blocks or bulleted roles
+    const dateRx = /\b((?:jan|feb|mar|mär|apr|may|mai|jun|jul|aug|sep|oct|okt|nov|dec|dez)[a-z.]*\s+)?((?:19|20)\d{2})\s*(?:[–—\-]|to|bis|until)\s*(?:((?:jan|feb|mar|mär|apr|may|mai|jun|jul|aug|sep|oct|okt|nov|dec|dez)[a-z.]*\s+)?((?:19|20)\d{2})|present|current|heute|now|aktuell)\b/i;
+    const expEntries = [];
+    let currentRole = null;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (/^(education|ausbildung|skills|competencies|languages|sprachen|certifications)$/i.test(line)) {
+        if (currentRole) { expEntries.push(currentRole); currentRole = null; }
+        continue;
+      }
+      const dm = line.match(dateRx);
+      if (dm && line.length < 115) {
+        if (currentRole && currentRole.bullets.length) expEntries.push(currentRole);
+        const dateStr = dm[0].trim();
+        const remainder = line.replace(dm[0], '').replace(/^[|,\-–—()·\s]+|[|,\-–—()·\s]+$/g, '').trim();
+        let roleTitle = remainder || (lines[i - 1] && lines[i - 1].length < 75 ? lines[i - 1] : 'Senior Leadership Mandate');
+        let companyName = (lines[i + 1] && lines[i + 1].length < 70 && !dateRx.test(lines[i + 1]) && !/^[•\-*]/.test(lines[i + 1])) ? lines[i + 1] : sourceLabel;
+        if (roleTitle.includes('—') || roleTitle.includes('·') || roleTitle.includes('|') || roleTitle.includes(' at ')) {
+          const parts = roleTitle.split(/\s*(?:—|·|\|| at )\s*/i);
+          roleTitle = parts[0].trim();
+          companyName = parts.slice(1).join(' · ').trim() || companyName;
+        }
+        currentRole = { title: roleTitle, company: companyName, dates: dateStr, bullets: [] };
+      } else if (currentRole) {
+        const bClean = line.replace(/^[•\-*–—·▪●]\s*/, '').trim();
+        if (bClean.length >= 22 && bClean !== currentRole.company && bClean !== currentRole.title) {
+          currentRole.bullets.push(bClean);
+        }
+      }
+    }
+    if (currentRole && currentRole.bullets.length) expEntries.push(currentRole);
+
+    // Fallback if CV had no standard date ranges: collect all substantive bullet/achievement lines
+    if (!expEntries.length) {
+      const genericBullets = lines
+        .filter(l => l.length >= 28 && !/@/.test(l) && l !== detectedName)
+        .map(l => l.replace(/^[•\-*–—·▪●]\s*/, '').trim())
+        .slice(0, 8);
+      if (genericBullets.length) {
+        expEntries.push({
+          title: 'Senior Lead / Executive Role (Parsed from ' + sourceLabel + ')',
+          company: 'Uploaded CV Record',
+          dates: 'Recent Tenure',
+          bullets: genericBullets
+        });
+      }
+    }
+
+    // Summary extraction
+    const summaryCand = lines.find(l => l.length >= 85 && !/@/.test(l)) || STATE.profile.summary;
+
+    // Detect Seniority Rung & Update Trajectory Bar
+    const low = clean.toLowerCase();
+    let detectedRung = 'Senior Manager / Department Head';
+    if (/\b(chief|ceo|coo|cfo|cto|cso|managing director|geschäftsführer|board chair|president|general manager)\b/i.test(low)) {
+      detectedRung = 'Managing Director / General Manager / VP';
+    } else if (/\b(director|vice president|vp|head of|direktor|bereichsleiter)\b/i.test(low)) {
+      detectedRung = 'Director / Head of Function';
+    } else if (/\b(manager|lead|principal|teamleiter)\b/i.test(low)) {
+      detectedRung = 'Manager / Team Lead';
+    }
+    document.getElementById('currentRungLabel').textContent = detectedRung;
+
+    // Update Profile State
+    STATE.profile.name = detectedName;
+    STATE.profile.headline = (expEntries[0]?.title || detectedRung) + ' · Verified CV Profile';
+    if (emailMatch) STATE.profile.email = emailMatch[0];
+    if (phoneMatch) STATE.profile.phone = phoneMatch[0].trim();
+    STATE.profile.summary = summaryCand.slice(0, 460);
+    if (expEntries.length) {
+      STATE.profile.experience = expEntries.slice(0, 5).map(e => ({
+        title: e.title,
+        company: e.company,
+        dates: e.dates,
+        bullets: e.bullets.slice(0, 5)
+      }));
+    }
+
+    // Update Brand Seal Initials & Subheader
+    const initials = detectedName.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'CV';
+    const sealEl = document.querySelector('.brand-seal');
+    if (sealEl) sealEl.textContent = initials;
+    const subEl = document.getElementById('navCandidateSub');
+    if (subEl) subEl.textContent = `${sourceLabel} · ${expEntries.length} Roles Parsed Locally`;
+
+    // Check if capital/M&A/CapEx is already evidenced in the uploaded CV
+    if (/\b(capex|m&a|equity|debt|million|mio|aed|usd|eur|\$|€)\b/i.test(low)) {
+      STATE.capitalUnlocked = /\b(capex|m&a|investor|facility|credit line|debt|equity)\b/i.test(low);
+    }
+
+    renderAll();
+    return true;
+  }
+
+  async function handleUploadedFiles(fileList) {
+    const files = Array.from(fileList || []);
+    if (!files.length) return;
+    setUploadStatus(`Reading ${files.map(f => f.name).join(', ')} locally in your browser…`);
+    try {
+      const parts = [];
+      const formats = [];
+      for (const f of files) {
+        const res = await extractAnyFile(f);
+        if (res && res.text) {
+          parts.push(res.text);
+          formats.push(res.format);
+        }
+      }
+      const combinedText = parts.join('\n\n').trim();
+      if (combinedText.length < 20) {
+        setUploadStatus(`Could not extract readable text from "${files[0].name}". Try another file or paste text below.`, true);
+        return;
+      }
+      customTextarea.value = combinedText;
+      charCountLabel.textContent = `${combinedText.length.toLocaleString()} chars`;
+      const label = files.length === 1 ? files[0].name : `${files.length} files`;
+      parseCvTextToProfile(combinedText, label);
+
+      bannerDropZone.classList.add('loaded');
+      document.getElementById('bannerTitle').textContent = `✓ Loaded: ${label} (${formats.join(' + ')})`;
+      document.getElementById('bannerSubtitle').textContent = `${combinedText.length.toLocaleString()} characters extracted locally · Profile, Promotion Readiness & Job Matches updated live.`;
+      document.getElementById('modalDropTitle').textContent = `✓ Loaded: ${label} (${combinedText.length.toLocaleString()} chars)`;
+      setUploadStatus(`✓ Successfully parsed "${label}" (${formats.join(', ')}) — ${combinedText.length.toLocaleString()} characters extracted locally.`);
+    } catch (err) {
+      setUploadStatus(`Could not parse file: ${err.message || err}`, true);
+    }
+  }
+
+  // Trigger native file picker
+  const triggerFileBrowser = (e) => {
+    if (e) e.stopPropagation();
+    fileInput.value = '';
+    fileInput.click();
+  };
+
+  document.getElementById('btnDirectUpload').onclick = triggerFileBrowser;
+  document.getElementById('btnBannerUpload').onclick = triggerFileBrowser;
+  document.getElementById('btnModalBrowse').onclick = triggerFileBrowser;
+  document.getElementById('btnBannerPaste').onclick = (e) => { e.stopPropagation(); openModal(); };
   document.getElementById('btnOpenCvModal').onclick = openModal;
-  document.getElementById('btnBannerUpload').onclick = openModal;
   document.getElementById('btnCloseCvModal').onclick = closeModal;
 
+  bannerDropZone.onclick = (e) => {
+    if (e.target.closest('#btnBannerPaste')) return;
+    triggerFileBrowser(e);
+  };
+  modalDropZone.onclick = triggerFileBrowser;
+
+  fileInput.onchange = () => {
+    if (fileInput.files && fileInput.files.length) {
+      handleUploadedFiles(fileInput.files);
+    }
+  };
+
+  // Drag & Drop wiring for both Stage 1 Banner and Modal Dropzone
+  [bannerDropZone, modalDropZone].forEach(zone => {
+    if (!zone) return;
+    ['dragenter', 'dragover'].forEach(ev => {
+      zone.addEventListener(ev, e => {
+        e.preventDefault();
+        e.stopPropagation();
+        zone.classList.add('drag-over');
+      });
+    });
+    ['dragleave', 'drop'].forEach(ev => {
+      zone.addEventListener(ev, e => {
+        e.preventDefault();
+        e.stopPropagation();
+        zone.classList.remove('drag-over');
+      });
+    });
+    zone.addEventListener('drop', e => {
+      if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length) {
+        handleUploadedFiles(e.dataTransfer.files);
+      }
+    });
+  });
+
+  customTextarea.oninput = () => {
+    charCountLabel.textContent = `${customTextarea.value.length.toLocaleString()} chars`;
+  };
+
   document.getElementById('btnParseCustomCv').onclick = () => {
-    const raw = document.getElementById('customCvTextarea').value.trim();
+    const raw = customTextarea.value.trim();
     if (raw) {
-      const lines = raw.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-      if (lines[0] && lines[0].length < 45) STATE.profile.name = lines[0];
-      if (lines[1]) STATE.profile.summary = lines.slice(1, 4).join(' ');
+      parseCvTextToProfile(raw, 'Custom CV');
+      setUploadStatus(`✓ Analyzed ${raw.length.toLocaleString()} characters and updated Promotion Radar.`);
     }
     closeModal();
-    renderAll();
   };
 
   document.getElementById('btnResetDemoCv').onclick = () => {
+    STATE.profile = JSON.parse(JSON.stringify(DEMO_PROFILE_BACKUP));
     STATE.capitalUnlocked = false;
     STATE.bulletRewriteApplied = false;
+    customTextarea.value = '';
+    charCountLabel.textContent = '0 chars';
+    bannerDropZone.classList.remove('loaded');
+    document.getElementById('bannerTitle').textContent = 'Drop Your CV in Any Format — or Click to Browse';
+    document.getElementById('bannerSubtitle').textContent = '100% browser-local extraction. Zero invented metrics — every promotion gap below is bridged using your own verified numbers.';
+    document.querySelector('.brand-seal').textContent = 'MH';
+    document.getElementById('navCandidateSub').textContent = 'Executive Dossier · 24 yrs · GCC & DACH';
+    document.getElementById('currentRungLabel').textContent = 'Managing Director / Business Unit Head';
+    bannerStatus.className = 'upload-status-bar';
+    modalStatus.className = 'upload-status-bar';
     closeModal();
     renderAll();
   };
