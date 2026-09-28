@@ -13,16 +13,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
 
-  <!-- Core Portal Engines -->
-  <script src="role-title.js"></script>
-  <script src="mailbox-kind.js"></script>
-  <script src="posting-keywords.js"></script>
-  <script src="intake-parse.js"></script>
-  <script src="intake-fit.js"></script>
-  <script src="linkedin-company.js"></script>
-  <script src="fetch-address.js"></script>
-  <script src="cv-text-pdf.js"></script>
-  <script src="eml.js"></script>
+  <!-- Core Portal ES Module Bridge (Old Portal Email + ATS PDF + Address Engines) -->
+  <script type="module">
+    import { buildEml, downloadBlob, letterDocument } from "./eml.js";
+    import { buildCvTextPdf, buildCvTextPdfBytes } from "./cv-text-pdf.js";
+    import { buildApplicationPdf, applicationFilename, buildApplicationPdfBytes } from "./pdf.js";
+    import { fetchAddresses, findApplicationAddress, siteFromLinkedInCompany, mailboxKind } from "./fetch-address.js";
+    import * as RT from "./role-title.js";
+    import * as PK from "./posting-keywords.js";
+    window.buildEml = buildEml;
+    window.downloadBlob = downloadBlob;
+    window.letterDocument = letterDocument;
+    window.buildCvTextPdf = buildCvTextPdf;
+    window.buildCvTextPdfBytes = buildCvTextPdfBytes;
+    window.buildApplicationPdf = buildApplicationPdf;
+    window.applicationFilename = applicationFilename;
+    window.buildApplicationPdfBytes = buildApplicationPdfBytes;
+    window.fetchAddresses = fetchAddresses;
+    window.findApplicationAddress = findApplicationAddress;
+    window.siteFromLinkedInCompany = siteFromLinkedInCompany;
+    window.mailboxKind = mailboxKind;
+    window.ROLE_TITLE = RT;
+    window.RoleTitle = RT;
+    window.POSTING_KW = PK;
+  </script>
 
   <style>
     :root {
@@ -965,6 +979,173 @@
       resize: vertical;
     }
 
+    /* Built-In Award-Winning CV Writer & Builder Studio Styles */
+    .mode-switch-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: var(--bg-elevated);
+      padding: 6px;
+      border-radius: 16px;
+      border: 1px solid var(--border-strong);
+      margin-bottom: 18px;
+    }
+
+    .mode-switch-btn {
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-secondary);
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .mode-switch-btn:hover {
+      color: var(--text-primary);
+      background: rgba(99, 102, 241, 0.06);
+    }
+
+    .mode-switch-btn.active {
+      background: var(--bg-surface);
+      color: var(--accent-indigo);
+      border-color: var(--accent-indigo);
+      box-shadow: 0 4px 14px rgba(55, 48, 163, 0.12);
+    }
+
+    .writer-section-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .writer-section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .writer-section-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .writer-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 720px) {
+      .writer-grid-2, .mode-switch-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .writer-field-lbl {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .writer-input, .writer-textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .writer-input:focus, .writer-textarea:focus {
+      outline: 2px solid var(--accent-indigo);
+      border-color: var(--accent-indigo);
+    }
+
+    .writer-role-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+
+    .writer-bullet-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .btn-ai-magic {
+      background: linear-gradient(135deg, #4F46E5, #059669);
+      color: #fff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 9px;
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 800;
+      cursor: pointer;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-ai-magic:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+    }
+
+    .skill-edit-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text-primary);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .skill-edit-tag button {
+      border: none;
+      background: transparent;
+      color: var(--accent-rose);
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 13px;
+      line-height: 1;
+    }
+
     /* Modal for Add Any Job Listing */
     .modal-backdrop {
       position: fixed;
@@ -1006,6 +1187,7 @@
       font-weight: 700;
       box-shadow: var(--shadow-float);
       display: none;
+      max-width: 520px;
     }
 
     @media print {
@@ -1036,14 +1218,14 @@
         <div class="brand-logo">AI</div>
         <div>
           <div class="brand-title">Executive AI CV & Live Role Portal</div>
-          <div class="brand-sub">HR Director CV Analyzer · Strict Role Search · 1-Click Application</div>
+          <div class="brand-sub">Award-Winning CV Writer · 1-Click HR Analyzer · Strict Live Search</div>
         </div>
       </div>
 
       <nav class="stepper-nav" aria-label="4-Step Guided Progress">
         <button class="step-tab active" id="stepTab1" onclick="goToStep(1)">
           <span class="step-num" id="stepNum1">1</span>
-          <span>1. Upload & 1-Click CV Analyzer</span>
+          <span>1. CV Analyzer & Built-In CV Writer</span>
         </button>
         <button class="step-tab" id="stepTab2" onclick="goToStep(2)">
           <span class="step-num" id="stepNum2">2</span>
@@ -1051,17 +1233,23 @@
         </button>
         <button class="step-tab" id="stepTab3" onclick="goToStep(3)">
           <span class="step-num" id="stepNum3">3</span>
-          <span>3. 1-Click Tailored CV & Cover Letter</span>
+          <span>3. Tailored CV & Cover Letter</span>
         </button>
         <button class="step-tab" id="stepTab4" onclick="goToStep(4)">
           <span class="step-num" id="stepNum4">4</span>
-          <span>4. Send Ready Application</span>
+          <span>4. Send Application (Email + CV PDF)</span>
         </button>
       </nav>
 
       <div class="wizard-actions">
+        <button class="btn-pill-secondary" onclick="openBuiltInCvWriter()" title="Open Built-In Award-Winning CV Writer & Builder to modify or write a new CV">
+          ✍️ CV Writer & Builder
+        </button>
         <button class="btn-pill-secondary" onclick="openAddJobModal()" title="Paste any job URL, screenshot, PDF, or text">
           ➕ Add Job Ad
+        </button>
+        <button class="btn-pill-secondary" onclick="sendApplicationNow()" style="border-color:var(--accent-emerald);color:var(--accent-emerald);" title="Open Email Program with Cover Letter, Subject & Attached ATS CV PDF">
+          ✉️ Send Application
         </button>
         <button class="btn-pill-secondary" onclick="toggleTheme()" id="themeBtn" title="Switch Light/Dark Theme">
           ☀️ Theme
@@ -1080,13 +1268,13 @@
   <section class="context-guide-strip">
     <div class="context-guide-inner">
       <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-        <span class="guide-step-pill" id="guideStepBadge">STEP 1 OF 4 · CV ANALYZER</span>
+        <span class="guide-step-pill" id="guideStepBadge">STEP 1 OF 4 · CV ANALYZER & CV WRITER</span>
         <span style="font-size:13.5px;font-weight:700;color:var(--text-primary);" id="guideStepHeadline">
-          Review the HR Director's suggestions below and click "Auto-Fix All CV Improvements in 1 Click" — your live CV on the right updates automatically.
+          Use the 1-Click HR Director Analyzer OR switch to the Built-In Award-Winning CV Writer to modify or write a brand-new CV.
         </span>
       </div>
       <div style="font-size:12px;color:var(--text-muted);font-weight:600;" id="guideStepSub">
-        Zero typing required · Every replacement is highlighted in green on your CV
+        Zero typing required · Every update appears live on your A4 CV on the right
       </div>
     </div>
   </section>
@@ -1102,15 +1290,15 @@
     <div class="left-wizard-col">
 
       <!-- ===============================================================
-           STEP 1: UPLOAD CV & 1-CLICK HR DIRECTOR CV ANALYZER
+           STEP 1: 1-CLICK HR DIRECTOR CV ANALYZER + BUILT-IN AWARD-WINNING CV WRITER & BUILDER
            =============================================================== -->
       <section class="step-pane active" id="stepPane1">
         <div class="bezel-outer">
           <div class="bezel-inner">
-            <div class="section-eyebrow">👔 Step 1 · Act as HR Director & CV Analyzer</div>
-            <h1 class="section-h1">HR Director CV Analyzer & 1-Click Auto-Improver</h1>
+            <div class="section-eyebrow">👔 Step 1 · HR Director CV Analyzer & Award-Winning CV Writer</div>
+            <h1 class="section-h1">Analyze & Auto-Fix Your CV — or Modify & Write a New CV</h1>
             <p class="section-lead">
-              Upload your CV in any format (or use your active CV below). Our HR Director engine locates weak phrases, shows where each improvement belongs, and replaces old wording with executive wording in <strong>1 click</strong>.
+              Upload any CV file, use the <strong>1-Click HR Director Analyzer</strong> to automatically replace weak wording, or use the <strong>Built-In Award-Winning CV Writer & Builder</strong> to modify any section or write a brand-new executive CV.
             </p>
 
             <!-- Universal CV Upload Dropzone -->
@@ -1129,10 +1317,13 @@
               <div style="display:flex;gap:8px;flex-wrap:wrap;">
                 <input type="file" id="cvFileInput" accept=".pdf,.docx,.doc,.rtf,.txt,.html,.json,.png,.jpg,.jpeg" style="display:none" onchange="handleCvFileSelect(event)" />
                 <button class="btn-pill-secondary" onclick="document.getElementById('cvFileInput').click()">
-                  📂 Choose CV File
+                  📂 Upload CV File
                 </button>
                 <button class="btn-pill-secondary" onclick="togglePasteCvBox()">
                   📋 Paste CV Text
+                </button>
+                <button class="btn-pill-secondary" style="border-color:var(--accent-indigo);color:var(--accent-indigo);" onclick="switchStep1Mode('writer')">
+                  ✍️ Modify / Write New CV
                 </button>
                 <button class="btn-pill-secondary" onclick="resetToDemoCv()">
                   ↻ Reset Demo CV
@@ -1150,73 +1341,215 @@
               </div>
             </div>
 
-            <!-- HR Director Scoreboard -->
-            <div class="hr-score-banner">
-              <div class="score-ring-box">
-                <div class="score-circle" id="hrScoreCircle">
-                  <div id="hrScoreNum">76%</div>
-                  <span>HR Score</span>
-                </div>
-                <div>
-                  <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#A5B4FC;font-weight:800;">
-                    HR Director Executive Audit
-                  </div>
-                  <div style="font-size:16px;font-weight:800;margin-top:2px;" id="hrAuditHeadline">
-                    6 Wording Upgrades Ready to Boost Shortlist Rate to 98%
-                  </div>
-                  <div style="font-size:12px;color:#CBD5E1;margin-top:2px;" id="hrAuditSub">
-                    Detected Target Roles: <strong>General Manager · Managing Director · Operations Director · COO</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div class="score-pillars">
-                <div class="pillar-mini">
-                  <span>Executive Verbs</span>
-                  <strong id="pilVerbs">74% → 98%</strong>
-                </div>
-                <div class="pillar-mini">
-                  <span>P&L & KPIs</span>
-                  <strong id="pilKpis">78% → 99%</strong>
-                </div>
-                <div class="pillar-mini">
-                  <span>Board Authority</span>
-                  <strong id="pilBoard">72% → 96%</strong>
-                </div>
-                <div class="pillar-mini">
-                  <span>ATS Keywords</span>
-                  <strong id="pilAts">80% → 98%</strong>
-                </div>
-              </div>
-            </div>
-
-            <!-- HERO 1-CLICK AUTO-FIX ALL BUTTON -->
-            <button class="btn-autofix-hero" id="btnAutoFixAll" onclick="applyAllCvSuggestions()">
-              <div style="display:flex;align-items:center;gap:12px;text-align:left;">
-                <span style="font-size:22px;">⚡</span>
-                <div>
-                  <div id="btnAutoFixTitle">Auto-Fix All 6 CV Improvements in 1 Click</div>
-                  <div style="font-size:11.5px;font-weight:600;opacity:0.9;" id="btnAutoFixSub">
-                    Automatically replaces weak wording with HR Director executive wording across your entire CV
-                  </div>
-                </div>
-              </div>
-              <span style="background:rgba(255,255,255,0.2);padding:6px 14px;border-radius:999px;font-size:12px;white-space:nowrap;" id="btnAutoFixBadge">
-                Apply All Now →
-              </span>
-            </button>
-
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
-              <div style="font-size:13px;font-weight:800;color:var(--text-primary);">
-                📍 Line-by-Line Wording Suggestions (Where to Put It & 1-Click Replace)
-              </div>
-              <button class="btn-pill-secondary" onclick="undoAllCvSuggestions()" id="btnUndoAll" style="display:none;">
-                ↺ Undo All Replacements
+            <!-- DUAL-MODE SWITCHER: 1-CLICK HR ANALYZER vs. BUILT-IN AWARD-WINNING CV WRITER & BUILDER -->
+            <div class="mode-switch-bar" role="tablist">
+              <button type="button" class="mode-switch-btn active" id="modeBtnAnalyzer" onclick="switchStep1Mode('analyzer')">
+                <span>🔍 1-Click HR Director CV Analyzer</span>
+                <span style="font-size:11px;background:var(--accent-emerald-soft);color:var(--accent-emerald);padding:2px 8px;border-radius:999px;">Auto-Replace</span>
+              </button>
+              <button type="button" class="mode-switch-btn" id="modeBtnWriter" onclick="switchStep1Mode('writer')">
+                <span>✍️ Built-In Award-Winning CV Writer & Builder</span>
+                <span style="font-size:11px;background:var(--accent-indigo-soft);color:var(--accent-indigo);padding:2px 8px;border-radius:999px;">Modify or Write New CV</span>
               </button>
             </div>
 
-            <!-- Dynamic Before/After Suggestion Cards -->
-            <div class="suggestion-grid" id="cvSuggestionCards"></div>
+            <!-- ===========================================================
+                 SUB-VIEW A: 1-CLICK HR DIRECTOR CV ANALYZER
+                 =========================================================== -->
+            <div id="step1AnalyzerSubView">
+              <!-- HR Director Scoreboard -->
+              <div class="hr-score-banner">
+                <div class="score-ring-box">
+                  <div class="score-circle" id="hrScoreCircle">
+                    <div id="hrScoreNum">76%</div>
+                    <span>HR Score</span>
+                  </div>
+                  <div>
+                    <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#A5B4FC;font-weight:800;">
+                      HR Director Executive Audit
+                    </div>
+                    <div style="font-size:16px;font-weight:800;margin-top:2px;" id="hrAuditHeadline">
+                      6 Wording Upgrades Ready to Boost Shortlist Rate to 98%
+                    </div>
+                    <div style="font-size:12px;color:#CBD5E1;margin-top:2px;" id="hrAuditSub">
+                      Detected Target Roles: <strong>General Manager · Managing Director · Operations Director · COO</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="score-pillars">
+                  <div class="pillar-mini">
+                    <span>Executive Verbs</span>
+                    <strong id="pilVerbs">74% → 98%</strong>
+                  </div>
+                  <div class="pillar-mini">
+                    <span>P&L & KPIs</span>
+                    <strong id="pilKpis">78% → 99%</strong>
+                  </div>
+                  <div class="pillar-mini">
+                    <span>Board Authority</span>
+                    <strong id="pilBoard">72% → 96%</strong>
+                  </div>
+                  <div class="pillar-mini">
+                    <span>ATS Keywords</span>
+                    <strong id="pilAts">80% → 98%</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- HERO 1-CLICK AUTO-FIX ALL BUTTON -->
+              <button class="btn-autofix-hero" id="btnAutoFixAll" onclick="applyAllCvSuggestions()">
+                <div style="display:flex;align-items:center;gap:12px;text-align:left;">
+                  <span style="font-size:22px;">⚡</span>
+                  <div>
+                    <div id="btnAutoFixTitle">Auto-Fix All 6 CV Improvements in 1 Click</div>
+                    <div style="font-size:11.5px;font-weight:600;opacity:0.9;" id="btnAutoFixSub">
+                      Automatically replaces weak wording with HR Director executive wording across your entire CV
+                    </div>
+                  </div>
+                </div>
+                <span style="background:rgba(255,255,255,0.2);padding:6px 14px;border-radius:999px;font-size:12px;white-space:nowrap;" id="btnAutoFixBadge">
+                  Apply All Now →
+                </span>
+              </button>
+
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+                <div style="font-size:13px;font-weight:800;color:var(--text-primary);">
+                  📍 Line-by-Line Wording Suggestions (Where to Put It & 1-Click Replace)
+                </div>
+                <div style="display:flex;gap:8px;">
+                  <button class="btn-pill-secondary" onclick="switchStep1Mode('writer')">
+                    ✍️ Open CV Writer to Edit Any Line
+                  </button>
+                  <button class="btn-pill-secondary" onclick="undoAllCvSuggestions()" id="btnUndoAll" style="display:none;">
+                    ↺ Undo All Replacements
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dynamic Before/After Suggestion Cards -->
+              <div class="suggestion-grid" id="cvSuggestionCards"></div>
+            </div>
+
+            <!-- ===========================================================
+                 SUB-VIEW B: BUILT-IN AWARD-WINNING CV WRITER & BUILDER
+                 (Modify Existing CV or Write a Brand-New Executive CV)
+                 =========================================================== -->
+            <div id="step1WriterSubView" style="display:none;">
+              <!-- Top AI Ghostwriter & New CV Preset Bar -->
+              <div style="background:linear-gradient(135deg,#0F172A,#1E1B4B);color:#fff;border-radius:16px;padding:16px 18px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+                <div>
+                  <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#A5B4FC;font-weight:800;">
+                    🏆 Award-Winning Executive CV Builder & Ghostwriter
+                  </div>
+                  <div style="font-size:15px;font-weight:800;margin-top:2px;">
+                    Modify Your Current CV or Start Writing a Brand-New Executive CV
+                  </div>
+                  <div style="font-size:12px;color:#CBD5E1;">
+                    Every edit updates the live A4 CV on the right immediately — or use 1-Click AI Ghostwriter buttons to write sections for you.
+                  </div>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button type="button" class="btn-ai-magic" onclick="aiPolishEntireCvInWriter()">
+                    🪄 1-Click AI Executive Polish Entire CV
+                  </button>
+                  <button type="button" class="btn-pill-secondary" style="background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.25);" onclick="rerunAnalyzerFromWriter()">
+                    🔍 Re-Run HR Audit on Edited CV
+                  </button>
+                </div>
+              </div>
+
+              <!-- 1-Click Start New CV / Role Template Picker -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">🆕 Start Brand-New CV or Load Role Blueprint (1-Click)</div>
+                  <span style="font-size:11.5px;color:var(--text-muted);">Choose a template to start writing a new CV or keep modifying your current CV below</span>
+                </div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button type="button" class="btn-pill-secondary" onclick="startNewCvPreset('gm')">👔 New General Manager CV</button>
+                  <button type="button" class="btn-pill-secondary" onclick="startNewCvPreset('md')">🏛️ New Managing Director CV</button>
+                  <button type="button" class="btn-pill-secondary" onclick="startNewCvPreset('od')">⚙️ New Operations Director CV</button>
+                  <button type="button" class="btn-pill-secondary" onclick="startNewCvPreset('coo')">🚀 New Chief Operating Officer (COO) CV</button>
+                  <button type="button" class="btn-pill-secondary" onclick="startNewCvPreset('blank')">📄 Start Blank Custom CV (Write from Scratch)</button>
+                </div>
+              </div>
+
+              <!-- SECTION 1: PERSONAL IDENTITY, TARGET HEADLINE & CONTACT -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">👤 1. Candidate Identity, Target Role Headline & Contact</div>
+                  <button type="button" class="btn-ai-magic" onclick="aiGenerateHeadlineAndFocus()">
+                    ✨ 1-Click AI Write Executive Headline
+                  </button>
+                </div>
+                <div class="writer-grid-2" style="margin-bottom:10px;">
+                  <div>
+                    <label class="writer-field-lbl">Full Name</label>
+                    <input type="text" class="writer-input" id="wrNameInput" oninput="updateWriterTopFields()" placeholder="e.g. AHMED AL-MANSOOR" />
+                  </div>
+                  <div>
+                    <label class="writer-field-lbl">Executive Target Role Headline</label>
+                    <input type="text" class="writer-input" id="wrHeadlineInput" oninput="updateWriterTopFields()" placeholder="e.g. General Manager · Managing Director · Operations Director" />
+                  </div>
+                </div>
+                <div style="margin-bottom:10px;">
+                  <label class="writer-field-lbl">Contact Line (Location · Phone · Email · LinkedIn · Visa/Nationality)</label>
+                  <input type="text" class="writer-input" id="wrContactInput" oninput="updateWriterTopFields()" placeholder="Dubai, UAE · +971 50 000 0000 · email@domain.com · linkedin.com/in/yourname" />
+                </div>
+                <div>
+                  <label class="writer-field-lbl">Target Mandate / Executive Focus Banner</label>
+                  <input type="text" class="writer-input" id="wrFocusInput" oninput="updateWriterTopFields()" placeholder="Target Mandate: General Manager / Managing Director — Full P&L Ownership & Multi-Site Operations" />
+                </div>
+              </div>
+
+              <!-- SECTION 2: AWARD-WINNING AI EXECUTIVE SUMMARY WRITER -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">📝 2. Executive Summary & Board Pitch Writer</div>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                    <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('General Manager')">✨ AI Write GM Summary</button>
+                    <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Managing Director')">✨ AI Write MD Summary</button>
+                    <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Operations Director')">✨ AI Write Operations Director Summary</button>
+                    <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('COO & Turnaround')">✨ AI Write COO P&L Summary</button>
+                  </div>
+                </div>
+                <textarea class="writer-textarea" rows="4" id="wrSummaryInput" oninput="updateWriterTopFields()" placeholder="Write your executive summary or click any AI Ghostwriter button above..."></textarea>
+              </div>
+
+              <!-- SECTION 3: PROFESSIONAL EXPERIENCE & ACHIEVEMENT BUILDER -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">🏢 3. Professional Experience & Quantified Achievements Builder</div>
+                  <button type="button" class="btn-next-glow" style="padding:7px 14px;font-size:12px;" onclick="addWriterRole()">
+                    + Add New Job Role
+                  </button>
+                </div>
+                <div id="writerRolesContainer"></div>
+              </div>
+
+              <!-- SECTION 4: CORE EXECUTIVE COMPETENCIES & ATS SKILLS BUILDER -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">🎯 4. Core Executive Competencies & ATS Keywords</div>
+                  <button type="button" class="btn-ai-magic" onclick="aiPopulateExecutiveSkills()">
+                    ✨ 1-Click Auto-Add Executive Skills for Target Roles
+                  </button>
+                </div>
+                <div id="writerSkillsTags" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+                <div style="display:flex;gap:8px;">
+                  <input type="text" class="writer-input" id="wrNewSkillInput" placeholder="Type a skill or competency (e.g. Full P&L Ownership $100M+, EBITDA Turnaround)..." onkeydown="if(event.key==='Enter'){event.preventDefault();addWriterSkill();}" />
+                  <button type="button" class="btn-pill-secondary" onclick="addWriterSkill()">+ Add Skill</button>
+                </div>
+              </div>
+
+              <!-- SECTION 5: EDUCATION, CERTIFICATIONS & LANGUAGES -->
+              <div class="writer-section-card">
+                <div class="writer-section-head">
+                  <div class="writer-section-title">🎓 5. Education, Executive Credentials & Languages</div>
+                </div>
+                <textarea class="writer-textarea" rows="3" id="wrEducationInput" oninput="updateWriterTopFields()" placeholder="e.g. Executive MBA · B.Sc. Mechanical Engineering · Lean Six Sigma Master Black Belt · English, Arabic, German"></textarea>
+              </div>
+            </div>
 
             <!-- Step 1 Bottom Next Action -->
             <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
@@ -1346,11 +1679,29 @@
 
             <textarea class="cl-editor" id="coverLetterTextarea" oninput="state.customCoverLetter = this.value"></textarea>
 
+            <!-- Direct 1-Click Send Application CTA right inside Step 3 as well -->
+            <div style="margin-top:14px;">
+              <button class="btn-autofix-hero all-done" onclick="sendApplicationNow()" style="margin-bottom:0;">
+                <div style="display:flex;align-items:center;gap:12px;text-align:left;">
+                  <span style="font-size:24px;">✉️</span>
+                  <div>
+                    <div>Send Application Now (Open Email Program with Cover Letter + Attached CV PDF + Subject)</div>
+                    <div style="font-size:11.5px;font-weight:600;opacity:0.92;">
+                      Generates your ATS CV PDF, embeds the styled Cover Letter & Subject into an .EML compose draft, and opens your email client
+                    </div>
+                  </div>
+                </div>
+                <span style="background:rgba(255,255,255,0.22);padding:6px 14px;border-radius:999px;font-size:12px;white-space:nowrap;">
+                  Send Application →
+                </span>
+              </button>
+            </div>
+
             <!-- Step 3 Bottom Next Action -->
-            <div style="margin-top:18px;padding-top:16px;border-top:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
               <button class="btn-pill-secondary" onclick="goToStep(2)">← Back to Job Search</button>
               <button class="btn-next-glow" onclick="goToStep(4)">
-                <span>Go to Step 4: Send Ready Application (.EML + ATS PDF)</span>
+                <span>Go to Step 4: Recipient Routing & Send Application</span>
                 <span class="arrow-circle">→</span>
               </button>
             </div>
@@ -1359,15 +1710,15 @@
       </section>
 
       <!-- ===============================================================
-           STEP 4: SEND READY APPLICATION (.EML + ATS PDF EXPORT HUB)
+           STEP 4: SEND READY APPLICATION (OPEN EMAIL PROGRAM WITH COVER LETTER + ATTACHED CV PDF + SUBJECT)
            =============================================================== -->
       <section class="step-pane" id="stepPane4">
         <div class="bezel-outer">
           <div class="bezel-inner">
-            <div class="section-eyebrow">🚀 Step 4 · Ready-to-Send Application Package</div>
-            <h2 class="section-h1">Finalize & Export Your Application in 1 Click</h2>
+            <div class="section-eyebrow">🚀 Step 4 · 1-Click Send Application (Old Portal Email + Attached CV PDF Engine)</div>
+            <h2 class="section-h1">Send Application — Opens Email Program with Cover Letter, Subject & Attached CV</h2>
             <p class="section-lead">
-              Your tailored CV, Cover Letter, Subject Line, and Recipient Address are packaged and ready. Download the complete <code>.EML</code> email draft (with your tailored ATS PDF already attached) or export standalone PDFs.
+              Click <strong>"✉️ Send Application"</strong> below. Just like the original portal, it builds your real selectable <strong>ATS CV PDF</strong>, formats your <strong>Executive Cover Letter</strong> as a rich email body, fills the <strong>To:</strong> and <strong>Subject:</strong> headers, and opens your email draft with the CV PDF attached.
             </p>
 
             <!-- Email Routing Box -->
@@ -1378,7 +1729,7 @@
                     Recipient HR / Recruiter Email (To:)
                   </label>
                   <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                    <input type="text" id="exportToEmail" placeholder="careers@company.com (or click Auto-Find HR Email)"
+                    <input type="text" id="exportToEmail" placeholder="careers@company.com (or click Auto-Find Company HR Email)"
                            style="flex:1;padding:10px 12px;border-radius:10px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-surface);color:var(--text-primary);" />
                     <button class="btn-pill-secondary" id="btnFindHrEmail" onclick="autoFindRecipientEmail()">
                       🔍 Auto-Find Company HR Email
@@ -1397,24 +1748,32 @@
               </div>
             </div>
 
-            <!-- 3 Big Export Buttons -->
+            <!-- PRIMARY SEND APPLICATION CTA + FALLBACKS -->
             <div style="display:flex;flex-direction:column;gap:12px;">
-              <button class="btn-autofix-hero all-done" onclick="downloadReadyEmlPackage()" style="margin-bottom:0;">
+              <button class="btn-autofix-hero all-done" id="btnSendApplicationPrimary" onclick="sendApplicationNow()" style="margin-bottom:0;">
                 <div style="display:flex;align-items:center;gap:12px;text-align:left;">
-                  <span style="font-size:24px;">📧</span>
+                  <span style="font-size:26px;">✉️</span>
                   <div>
-                    <div>Download Complete Email Draft (.EML) with Attached ATS CV PDF</div>
-                    <div style="font-size:11.5px;font-weight:600;opacity:0.9;">
-                      Opens directly in Outlook, Apple Mail, or Thunderbird with To, Subject, Cover Letter & attached PDF
+                    <div id="btnSendAppTitle">Send Application — Open Email Draft with Cover Letter & Attached CV PDF</div>
+                    <div style="font-size:11.5px;font-weight:600;opacity:0.92;" id="btnSendAppSub">
+                      Attaches your tailored ATS CV PDF + places the designed Cover Letter in the email body + sets Subject & Recipient (X-Unsent: 1)
                     </div>
                   </div>
                 </div>
-                <span style="background:rgba(255,255,255,0.22);padding:6px 14px;border-radius:999px;font-size:12px;">
-                  Download .EML →
+                <span style="background:rgba(255,255,255,0.22);padding:6px 14px;border-radius:999px;font-size:12px;white-space:nowrap;">
+                  Open Email Draft →
                 </span>
               </button>
 
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+              <!-- Old Portal Tip Banner -->
+              <div id="sendAppStatusBanner" style="background:var(--accent-indigo-soft);border:1px solid var(--border-strong);border-radius:12px;padding:12px 14px;font-size:12px;color:var(--text-secondary);line-height:1.5;">
+                💡 <strong>How 1-Click Email + Attached CV Works (Old Portal Engine):</strong> Clicking <strong>Send Application</strong> builds your `.eml` draft with `X-Unsent: 1` (containing the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF) AND copies the Cover Letter to your clipboard. <em>Tip: In your browser's download bar, right-click the `.eml` file once and tick <strong>"Always open files of this type"</strong> — Outlook / Apple Mail / Thunderbird will then pop open automatically every time you click Send Application!</em>
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;">
+                <button class="btn-replace-one" onclick="openMailtoAndDownloadPdf()">
+                  📬 Open Default Mail App (mailto:) + Download CV PDF
+                </button>
                 <button class="btn-replace-one" onclick="downloadStandaloneAtsPdf()">
                   📄 Download Tailored ATS Text PDF
                 </button>
@@ -1436,51 +1795,61 @@
 
     <!-- =================================================================
          RIGHT COLUMN: LIVE INTERACTIVE A4 EXECUTIVE CV PREVIEW
-         (Always visible so the user sees every 1-click change live)
+         (Structured with .sheet, .hd, section, h5, .sum, .chip, .j, .mini
+          so cv-text-pdf.js reads every word natively!)
          ================================================================= -->
-    <aside class="cv-preview-sticky">
+    <aside class="cv-preview-sticky" id="pane">
       <div class="bezel-outer">
         <div class="bezel-inner" style="padding:16px;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
             <div>
               <span style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent-emerald);">
-                ● LIVE A4 EXECUTIVE CV PREVIEW
+                ● LIVE A4 EXECUTIVE CV SHEET
               </span>
               <div style="font-size:12px;color:var(--text-muted);" id="liveCvStatusSub">
-                Updates automatically in 1 click
+                Updates live · Compatible with ATS PDF & .EML Attachment Engine
               </div>
             </div>
-            <div style="display:flex;gap:6px;">
-              <button class="btn-pill-secondary" onclick="downloadStandaloneAtsPdf()" style="padding:6px 12px;font-size:11.5px;">
-                📄 Export ATS PDF
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="btn-pill-secondary" onclick="openBuiltInCvWriter()" style="padding:6px 10px;font-size:11.5px;">
+                ✍️ Edit in CV Writer
+              </button>
+              <button class="btn-pill-secondary" onclick="downloadStandaloneAtsPdf()" style="padding:6px 10px;font-size:11.5px;">
+                📄 ATS PDF
               </button>
             </div>
           </div>
 
-          <!-- THE LIVE A4 CV SHEET (Read by cv-text-pdf.js & eml.js) -->
-          <div class="cv-sheet" id="draftCvSheetEl">
-            <div class="cv-header-block">
-              <div>
-                <div class="cv-name" id="cvNameEl">AHMED AL-MANSOOR</div>
-                <div class="cv-headline" id="cvHeadlineEl">Chief Operating Officer · General Manager · Managing Director</div>
-                <div class="cv-contact-line" id="cvContactEl">
-                  Dubai, United Arab Emirates · +971 50 482 9104 · ahmed.almansoor.exec@gmail.com · linkedin.com/in/ahmedalmansoor
-                </div>
+          <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
+          <div class="cv-sheet sheet" id="draftCvSheetEl" style="--accent:#3730A3;">
+            <div class="cv-header-block hd">
+              <div style="width:100%;">
+                <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
+                <div class="cv-headline role" id="cvHeadlineEl">Chief Operating Officer · General Manager · Managing Director</div>
+                <div class="cv-contact-line meta" id="cvContactEl"></div>
               </div>
             </div>
 
-            <div class="cv-sec-title">Executive Summary</div>
-            <p id="cvSummaryEl" style="margin-bottom:8px;"></p>
-            <p id="cvFocusLineEl" style="font-weight:700;color:#3730A3;background:#EEF2FF;padding:6px 10px;border-radius:8px;font-size:12px;"></p>
+            <section>
+              <h5 class="cv-sec-title">Executive Summary</h5>
+              <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;"></div>
+              <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#3730A3;background:#EEF2FF;padding:6px 10px;border-radius:8px;font-size:12px;"></div>
+            </section>
 
-            <div class="cv-sec-title">Core Executive & Board Competencies</div>
-            <div id="cvSkillsEl" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+            <section>
+              <h5 class="cv-sec-title">Core Executive & Board Competencies</h5>
+              <div id="cvSkillsEl" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+            </section>
 
-            <div class="cv-sec-title">Professional Leadership Experience</div>
-            <div id="cvExperienceEl"></div>
+            <section>
+              <h5 class="cv-sec-title">Professional Leadership Experience</h5>
+              <div id="cvExperienceEl"></div>
+            </section>
 
-            <div class="cv-sec-title">Education & Executive Credentials</div>
-            <div id="cvEducationEl" style="font-size:12px;color:#334155;"></div>
+            <section>
+              <h5 class="cv-sec-title">Education & Executive Credentials</h5>
+              <div class="mini" id="cvEducationEl" style="font-size:12px;color:#334155;"></div>
+            </section>
           </div>
         </div>
       </div>
@@ -1909,29 +2278,38 @@
     }
 
     /* ------------------------------------------------------------------
-       3. RENDERING THE LIVE CV & 1-CLICK SUGGESTION CARDS
+       3. RENDERING THE LIVE CV SHEET (100% COMPATIBLE WITH cv-text-pdf.js readSheet())
        ------------------------------------------------------------------ */
-    function renderLiveCvSheet() {
+    function renderLiveCvSheet(skipWriterSync) {
       const cv = state.cv;
       document.getElementById("cvNameEl").textContent = cv.name || "EXECUTIVE CANDIDATE";
       const hlEl = document.getElementById("cvHeadlineEl");
       hlEl.textContent = cv.headline || "";
-      hlEl.className = "cv-headline" + (state.upgradedKeys.has("sug-headline") ? " upgraded-highlight" : "");
+      hlEl.className = "cv-headline role" + (state.upgradedKeys.has("sug-headline") ? " upgraded-highlight" : "");
 
-      document.getElementById("cvContactEl").textContent = cv.contact || "";
+      // Render .meta > div elements so cv-text-pdf.js readSheet() captures each contact item cleanly
+      const contactParts = String(cv.contact || "")
+        .split(/\s*[·|]\s*/)
+        .map((s) => s.trim())
+        .filter(Boolean);
+      const contactEl = document.getElementById("cvContactEl");
+      contactEl.innerHTML = contactParts
+        .map((part, idx) => `<div style="display:inline">${escapeHtml(part)}${idx < contactParts.length - 1 ? " · " : ""}</div>`)
+        .join("");
 
       const sumEl = document.getElementById("cvSummaryEl");
       sumEl.textContent = cv.summary || "";
-      sumEl.className = state.upgradedKeys.has("sug-summary") ? "upgraded-highlight" : "";
+      sumEl.className = "sum" + (state.upgradedKeys.has("sug-summary") ? " upgraded-highlight" : "");
 
       const focusEl = document.getElementById("cvFocusLineEl");
       focusEl.textContent = cv.focusLine || "";
 
+      // Render .chip elements so cv-text-pdf.js readSheet() captures all competencies
       const skillsEl = document.getElementById("cvSkillsEl");
       skillsEl.innerHTML = (cv.skills || [])
         .map(
           (s) =>
-            `<span style="background:${
+            `<span class="chip" style="background:${
               state.injectedKeywords.has(s) ? "#D1FAE5" : "#F1F5F9"
             };color:${
               state.injectedKeywords.has(s) ? "#065F46" : "#1E293B"
@@ -1941,6 +2319,7 @@
         )
         .join("");
 
+      // Render .j (.t, .d, .c, ul > li) so cv-text-pdf.js readSheet() captures every role & bullet
       const expEl = document.getElementById("cvExperienceEl");
       expEl.innerHTML = (cv.roles || [])
         .map((r, rIdx) => {
@@ -1952,12 +2331,12 @@
             })
             .join("");
           return `
-            <div class="cv-role-item">
+            <div class="cv-role-item j">
               <div class="cv-role-head">
-                <span>${escapeHtml(r.title)}</span>
-                <span style="font-size:11.5px;color:#475569;font-weight:700;">${escapeHtml(r.dates || "")}</span>
+                <span class="t">${escapeHtml(r.title || "")}</span>
+                <span class="d" style="font-size:11.5px;color:#475569;font-weight:700;">${escapeHtml(r.dates || "")}</span>
               </div>
-              <div class="cv-role-org">${escapeHtml(r.company || "")}${r.location ? " · " + escapeHtml(r.location) : ""}</div>
+              <div class="cv-role-org c">${escapeHtml(r.company || "")}${r.location ? " · " + escapeHtml(r.location) : ""}</div>
               <ul class="cv-bullet-list">${bulletsHtml}</ul>
             </div>
           `;
@@ -1965,6 +2344,399 @@
         .join("");
 
       document.getElementById("cvEducationEl").textContent = cv.education || "";
+
+      if (!skipWriterSync) {
+        syncCvWriterInputs();
+      }
+    }
+
+    /* ------------------------------------------------------------------
+       3B. BUILT-IN AWARD-WINNING CV WRITER & BUILDER STUDIO
+       (Modify Current CV or Write a Brand-New Executive CV in 1 Click)
+       ------------------------------------------------------------------ */
+    function switchStep1Mode(mode) {
+      state.step1Mode = mode;
+      const isWriter = mode === "writer";
+      document.getElementById("step1AnalyzerSubView").style.display = isWriter ? "none" : "block";
+      document.getElementById("step1WriterSubView").style.display = isWriter ? "block" : "none";
+      document.getElementById("modeBtnAnalyzer").classList.toggle("active", !isWriter);
+      document.getElementById("modeBtnWriter").classList.toggle("active", isWriter);
+      if (isWriter) {
+        syncCvWriterInputs();
+      }
+    }
+
+    function openBuiltInCvWriter() {
+      goToStep(1);
+      switchStep1Mode("writer");
+      showToast("✍️ Opened Built-In Award-Winning CV Writer & Builder!");
+    }
+
+    function syncCvWriterInputs() {
+      const cv = state.cv;
+      const nameInp = document.getElementById("wrNameInput");
+      if (!nameInp) return;
+      if (document.activeElement !== nameInp) nameInp.value = cv.name || "";
+
+      const hlInp = document.getElementById("wrHeadlineInput");
+      if (hlInp && document.activeElement !== hlInp) hlInp.value = cv.headline || "";
+
+      const ctInp = document.getElementById("wrContactInput");
+      if (ctInp && document.activeElement !== ctInp) ctInp.value = cv.contact || "";
+
+      const fcInp = document.getElementById("wrFocusInput");
+      if (fcInp && document.activeElement !== fcInp) fcInp.value = cv.focusLine || "";
+
+      const sumInp = document.getElementById("wrSummaryInput");
+      if (sumInp && document.activeElement !== sumInp) sumInp.value = cv.summary || "";
+
+      const eduInp = document.getElementById("wrEducationInput");
+      if (eduInp && document.activeElement !== eduInp) eduInp.value = cv.education || "";
+
+      renderWriterRolesEditor();
+      renderWriterSkillsEditor();
+    }
+
+    function updateWriterTopFields() {
+      state.cv.name = document.getElementById("wrNameInput").value;
+      state.cv.headline = document.getElementById("wrHeadlineInput").value;
+      state.cv.contact = document.getElementById("wrContactInput").value;
+      state.cv.focusLine = document.getElementById("wrFocusInput").value;
+      state.cv.summary = document.getElementById("wrSummaryInput").value;
+      state.cv.education = document.getElementById("wrEducationInput").value;
+      renderLiveCvSheet(true);
+    }
+
+    function renderWriterRolesEditor() {
+      const container = document.getElementById("writerRolesContainer");
+      if (!container) return;
+      const roles = state.cv.roles || [];
+      container.innerHTML = roles
+        .map((r, rIdx) => {
+          const bulletsHtml = (r.bullets || [])
+            .map(
+              (b, bIdx) => `
+              <div class="writer-bullet-row">
+                <span style="font-weight:800;color:var(--accent-indigo);padding-top:7px;">•</span>
+                <textarea class="writer-textarea" rows="2"
+                          oninput="updateWriterBullet(${rIdx}, ${bIdx}, this.value)"
+                          placeholder="Describe your achievement or type a rough note and click '🪄 AI Executive Upgrade'...">${escapeHtml(b)}</textarea>
+                <div style="display:flex;flex-direction:column;gap:4px;">
+                  <button type="button" class="btn-ai-magic" onclick="aiUpgradeSingleWriterBullet(${rIdx}, ${bIdx})" title="1-Click AI Rewrite as Quantified C-Suite Achievement">
+                    🪄 AI Upgrade
+                  </button>
+                  <button type="button" class="btn-pill-secondary" style="padding:5px 8px;font-size:11px;color:var(--accent-rose);" onclick="removeWriterBullet(${rIdx}, ${bIdx})" title="Delete Bullet">
+                    ✕ Remove
+                  </button>
+                </div>
+              </div>
+            `
+            )
+            .join("");
+
+          return `
+            <div class="writer-role-card">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+                <span style="font-size:12px;font-weight:800;color:var(--accent-indigo);text-transform:uppercase;">
+                  Role #${rIdx + 1} · ${escapeHtml(r.title || "Executive Position")}
+                </span>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                  ${rIdx > 0 ? `<button type="button" class="btn-pill-secondary" style="padding:4px 9px;font-size:11px;" onclick="moveWriterRole(${rIdx}, -1)">↑ Move Up</button>` : ""}
+                  ${rIdx < roles.length - 1 ? `<button type="button" class="btn-pill-secondary" style="padding:4px 9px;font-size:11px;" onclick="moveWriterRole(${rIdx}, 1)">↓ Move Down</button>` : ""}
+                  <button type="button" class="btn-pill-secondary" style="padding:4px 9px;font-size:11px;color:var(--accent-rose);" onclick="removeWriterRole(${rIdx})">🗑️ Delete Role</button>
+                </div>
+              </div>
+
+              <div class="writer-grid-2" style="margin-bottom:8px;">
+                <div>
+                  <label class="writer-field-lbl">Job Title / Executive Mandate</label>
+                  <input type="text" class="writer-input" value="${escapeHtml(r.title || "")}" oninput="updateWriterRoleField(${rIdx}, 'title', this.value)" placeholder="e.g. General Manager / Managing Director" />
+                </div>
+                <div>
+                  <label class="writer-field-lbl">Company / Organization</label>
+                  <input type="text" class="writer-input" value="${escapeHtml(r.company || "")}" oninput="updateWriterRoleField(${rIdx}, 'company', this.value)" placeholder="e.g. Al-Futtaim Industrial Group" />
+                </div>
+              </div>
+
+              <div class="writer-grid-2" style="margin-bottom:10px;">
+                <div>
+                  <label class="writer-field-lbl">Location (City, Country / Region)</label>
+                  <input type="text" class="writer-input" value="${escapeHtml(r.location || "")}" oninput="updateWriterRoleField(${rIdx}, 'location', this.value)" placeholder="e.g. Dubai, UAE" />
+                </div>
+                <div>
+                  <label class="writer-field-lbl">Dates (From – To)</label>
+                  <input type="text" class="writer-input" value="${escapeHtml(r.dates || "")}" oninput="updateWriterRoleField(${rIdx}, 'dates', this.value)" placeholder="e.g. 2020 – Present" />
+                </div>
+              </div>
+
+              <label class="writer-field-lbl" style="margin-bottom:6px;">Key Executive Achievements & P&L Impact Bullets</label>
+              <div>${bulletsHtml}</div>
+
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+                <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:6px 12px;" onclick="addWriterBullet(${rIdx})">
+                  + Add Custom Bullet
+                </button>
+                <button type="button" class="btn-ai-magic" onclick="insertAwardWinningBulletTemplate(${rIdx}, 'pnl')">
+                  💎 + Insert P&L & EBITDA Bullet
+                </button>
+                <button type="button" class="btn-ai-magic" onclick="insertAwardWinningBulletTemplate(${rIdx}, 'ops')">
+                  💎 + Insert Multi-Site Operations Bullet
+                </button>
+                <button type="button" class="btn-ai-magic" onclick="insertAwardWinningBulletTemplate(${rIdx}, 'supply')">
+                  💎 + Insert Supply Chain & Turnaround Bullet
+                </button>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    function renderWriterSkillsEditor() {
+      const container = document.getElementById("writerSkillsTags");
+      if (!container) return;
+      container.innerHTML = (state.cv.skills || [])
+        .map(
+          (s, idx) => `
+          <span class="skill-edit-tag">
+            <span>${escapeHtml(s)}</span>
+            <button type="button" onclick="removeWriterSkill(${idx})" title="Remove Skill">×</button>
+          </span>
+        `
+        )
+        .join("");
+    }
+
+    function updateWriterRoleField(rIdx, field, val) {
+      if (!state.cv.roles[rIdx]) return;
+      state.cv.roles[rIdx][field] = val;
+      renderLiveCvSheet(true);
+    }
+
+    function updateWriterBullet(rIdx, bIdx, val) {
+      if (!state.cv.roles[rIdx] || !state.cv.roles[rIdx].bullets) return;
+      state.cv.roles[rIdx].bullets[bIdx] = val;
+      renderLiveCvSheet(true);
+    }
+
+    function addWriterRole() {
+      state.cv.roles.unshift({
+        title: "General Manager / Managing Director",
+        company: "Enterprise Operations Group",
+        location: "Dubai, UAE",
+        dates: "2022 – Present",
+        bullets: [
+          "Directed full $95M+ P&L and 320+ cross-functional staff across regional commercial and industrial operations, lifting EBITDA by 19% YoY."
+        ]
+      });
+      renderLiveCvSheet();
+      showToast("➕ Added new executive role to your CV!");
+    }
+
+    function removeWriterRole(rIdx) {
+      if (state.cv.roles.length <= 1) {
+        showToast("⚠️ Keep at least one role in your CV.");
+        return;
+      }
+      state.cv.roles.splice(rIdx, 1);
+      renderLiveCvSheet();
+      showToast("🗑️ Removed role from CV.");
+    }
+
+    function moveWriterRole(rIdx, dir) {
+      const target = rIdx + dir;
+      if (target < 0 || target >= state.cv.roles.length) return;
+      const tmp = state.cv.roles[rIdx];
+      state.cv.roles[rIdx] = state.cv.roles[target];
+      state.cv.roles[target] = tmp;
+      renderLiveCvSheet();
+    }
+
+    function addWriterBullet(rIdx) {
+      if (!state.cv.roles[rIdx]) return;
+      state.cv.roles[rIdx].bullets.push(
+        "Spearheaded operational excellence, commercial growth, and strict KPI governance across multi-site business units."
+      );
+      renderLiveCvSheet();
+    }
+
+    function removeWriterBullet(rIdx, bIdx) {
+      if (!state.cv.roles[rIdx]) return;
+      state.cv.roles[rIdx].bullets.splice(bIdx, 1);
+      renderLiveCvSheet();
+    }
+
+    function aiUpgradeSingleWriterBullet(rIdx, bIdx) {
+      if (!state.cv.roles[rIdx] || !state.cv.roles[rIdx].bullets) return;
+      const oldB = state.cv.roles[rIdx].bullets[bIdx] || "";
+      let improved = upgradeBulletAsHrDirector(oldB, state.cv.roles[rIdx].title, rIdx, bIdx);
+      if (improved === oldB) {
+        improved = `Architected and executed ${oldB.replace(/\.$/, "")}, delivering +18% EBITDA margin expansion, 98.5% SLA compliance, and sustainable operational scale.`;
+      }
+      state.cv.roles[rIdx].bullets[bIdx] = improved;
+      state.upgradedKeys.add(`sug-r${rIdx}-b${bIdx}`);
+      renderLiveCvSheet();
+      showToast("🪄 Bullet upgraded with award-winning executive impact!");
+    }
+
+    function insertAwardWinningBulletTemplate(rIdx, type) {
+      if (!state.cv.roles[rIdx]) return;
+      const templates = {
+        pnl: "Owned full $110M+ consolidated P&L, capital allocation, and Board governance across regional business units, expanding EBITDA margin by +21% YoY.",
+        ops: "Directed 400+ multi-disciplinary staff across manufacturing, logistics, and commercial operations, achieving 99.1% OTIF delivery and zero lost-time HSE incidents.",
+        supply: "Led end-to-end supply chain, strategic procurement, and Lean Six Sigma turnaround, reducing landed operating costs by 17% ($12.4M savings) and unlocking $8.5M in working capital."
+      };
+      state.cv.roles[rIdx].bullets.push(templates[type] || templates.pnl);
+      state.upgradedKeys.add(`sug-r${rIdx}-b${state.cv.roles[rIdx].bullets.length - 1}`);
+      renderLiveCvSheet();
+      showToast("💎 Inserted award-winning executive bullet into your CV!");
+    }
+
+    function addWriterSkill() {
+      const inp = document.getElementById("wrNewSkillInput");
+      const val = (inp.value || "").trim();
+      if (!val) return;
+      if (!state.cv.skills.includes(val)) {
+        state.cv.skills.push(val);
+        state.injectedKeywords.add(val);
+      }
+      inp.value = "";
+      renderLiveCvSheet();
+      showToast(`✅ Added "${val}" to your CV skills!`);
+    }
+
+    function removeWriterSkill(idx) {
+      state.cv.skills.splice(idx, 1);
+      renderLiveCvSheet();
+    }
+
+    function aiPopulateExecutiveSkills() {
+      const execSkills = [
+        "Full P&L Ownership ($120M+)",
+        "General Management & MD Mandate",
+        "Multi-Site Industrial & Commercial Operations",
+        "EBITDA Turnaround & Margin Expansion",
+        "End-to-End Supply Chain & Strategic Procurement",
+        "Board Governance & Joint Ventures",
+        "Working Capital & CAPEX/OPEX Control",
+        "Lean Six Sigma & ERP/SAP Transformation",
+        "UAE, KSA, GCC & DACH Market Expansion"
+      ];
+      execSkills.forEach((s) => {
+        if (!state.cv.skills.some((x) => x.toLowerCase() === s.toLowerCase())) {
+          state.cv.skills.push(s);
+          state.injectedKeywords.add(s);
+        }
+      });
+      renderLiveCvSheet();
+      showToast("✨ Auto-populated C-Suite & ATS Executive Skills!");
+    }
+
+    function aiGenerateHeadlineAndFocus() {
+      const roles = state.selectedRoles.length
+        ? state.selectedRoles.slice(0, 4).join(" · ")
+        : "General Manager · Managing Director · Operations Director · Chief Operating Officer";
+      state.cv.headline = roles;
+      state.cv.focusLine = `Target Mandate: ${roles.replace(/·/g, "/")} — Full P&L Ownership, Multi-Site Operations & Strategic Turnaround.`;
+      state.upgradedKeys.add("sug-headline");
+      renderLiveCvSheet();
+      showToast("✨ Generated Executive Headline & Target Mandate Banner!");
+    }
+
+    function aiWriteSummaryForRole(roleLabel) {
+      const map = {
+        "General Manager":
+          "Award-winning General Manager and C-Suite Operations Executive with 15+ years of full P&L ownership ($120M+), multi-site industrial & commercial leadership, and high-growth market expansion across the UAE, Saudi Arabia, and Europe. Proven track record scaling revenue, leading 450+ staff, and delivering double-digit EBITDA growth.",
+        "Managing Director":
+          "Board-level Managing Director (Geschäftsführer) with 15+ years steering diversified commercial, industrial, and distribution enterprises across the GCC and DACH regions. Expert in corporate governance, joint-venture leadership, M&A integration, working-capital optimization, and sustainable enterprise value creation.",
+        "Operations Director":
+          "Results-driven Regional Operations Director with deep mastery in multi-plant manufacturing, end-to-end supply chain resilience, strategic procurement, and Lean Six Sigma transformation. Consistently delivers 15–25% OPEX reduction, 98.5%+ OTIF performance, and world-class QHSE/ISO governance.",
+        "COO & Turnaround":
+          "Transformational Chief Operating Officer (COO) and Turnaround Leader specializing in rapid P&L restructuring, multi-subsidiary operational alignment, ERP modernization, and cash-flow acceleration across family conglomerates and multinational groups in the Middle East."
+      };
+      state.cv.summary = map[roleLabel] || map["General Manager"];
+      state.upgradedKeys.add("sug-summary");
+      renderLiveCvSheet();
+      showToast(`✨ AI Ghostwriter crafted a board-ready ${roleLabel} Executive Summary!`);
+    }
+
+    function startNewCvPreset(preset) {
+      if (preset === "blank") {
+        state.cv = {
+          name: "YOUR FULL NAME",
+          headline: "General Manager · Managing Director · Operations Director",
+          contact: "Dubai, UAE · +971 50 000 0000 · your.email@domain.com · linkedin.com/in/yourprofile",
+          summary:
+            "Executive leader with full P&L accountability, multi-site operational leadership, and strategic commercial growth across the UAE and GCC.",
+          focusLine: "Target Mandate: General Manager / Managing Director / Operations Director — Full P&L Ownership & Operational Excellence.",
+          skills: [
+            "Full P&L Ownership",
+            "General Management",
+            "Operations Leadership",
+            "Supply Chain & Procurement",
+            "Board Reporting & KPI Governance",
+            "Commercial Growth"
+          ],
+          roles: [
+            {
+              title: "General Manager / Operations Director",
+              company: "Your Current Company Name",
+              location: "Dubai, UAE",
+              dates: "2021 – Present",
+              bullets: [
+                "Directed full P&L, daily operations, and cross-functional teams to deliver sustained revenue and EBITDA margin growth.",
+                "Optimized supply chain, procurement, and customer delivery SLAs across regional markets."
+              ]
+            }
+          ],
+          education: "Executive MBA / Bachelor's Degree · Professional Certifications · Languages: English, Arabic"
+        };
+      } else {
+        const titles = {
+          gm: "General Manager · Country Manager · Chief Operating Officer",
+          md: "Managing Director · Geschäftsführer · Board Executive",
+          od: "Operations Director · VP Operations · Supply Chain Director",
+          coo: "Chief Operating Officer (COO) · Group General Manager · Managing Director"
+        };
+        state.cv = JSON.parse(JSON.stringify(DEMO_CV));
+        state.cv.headline = titles[preset] || DEMO_CV.headline;
+        aiWriteSummaryForRole(
+          preset === "md"
+            ? "Managing Director"
+            : preset === "od"
+            ? "Operations Director"
+            : preset === "coo"
+            ? "COO & Turnaround"
+            : "General Manager"
+        );
+      }
+      state.suggestions = buildHrDirectorSuggestions(state.cv);
+      renderLiveCvSheet();
+      renderCvSuggestions();
+      showToast("🆕 Loaded CV blueprint in the Built-In CV Writer — customize any field live!");
+    }
+
+    function aiPolishEntireCvInWriter() {
+      aiGenerateHeadlineAndFocus();
+      aiWriteSummaryForRole("General Manager");
+      (state.cv.roles || []).forEach((r, rIdx) => {
+        (r.bullets || []).forEach((b, bIdx) => {
+          state.cv.roles[rIdx].bullets[bIdx] = upgradeBulletAsHrDirector(b, r.title, rIdx, bIdx);
+          state.upgradedKeys.add(`sug-r${rIdx}-b${bIdx}`);
+        });
+      });
+      aiPopulateExecutiveSkills();
+      state.suggestions = buildHrDirectorSuggestions(state.cv);
+      renderLiveCvSheet();
+      renderCvSuggestions();
+      showToast("🪄 Entire CV polished with C-Suite Executive Wording, P&L KPIs & ATS Keywords!");
+    }
+
+    function rerunAnalyzerFromWriter() {
+      state.suggestions = buildHrDirectorSuggestions(state.cv);
+      renderCvSuggestions();
+      switchStep1Mode("analyzer");
+      showToast(`🔍 HR Director Audit complete — ${state.suggestions.length} optimization cards ready!`);
     }
 
     function renderCvSuggestions() {
@@ -2548,7 +3320,7 @@
       }
 
       // Automatically tailor the CV's Focus Line & Headline to this exact job
-      const cleanRoleTitle = window.RoleTitle ? window.RoleTitle.cleanRoleTitle(job.title) : job.title;
+      const cleanRoleTitle = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       state.cv.focusLine = `Tailored Mandate for ${job.company || "Target Employer"}: ${cleanRoleTitle} (${job.location || "UAE"}) — Full P&L Governance, Operational Turnaround & Strategic Execution.`;
 
       populateStep3And4ForSelectedJob();
@@ -2582,7 +3354,7 @@
 
     function populateStep3And4ForSelectedJob() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
-      const cleanRole = window.RoleTitle ? window.RoleTitle.cleanRoleTitle(job.title) : job.title;
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
       document.getElementById("step3JobHeadline").textContent = `Tailored for: ${cleanRole}`;
       document.getElementById("step3JobSub").textContent = `${job.company || "Verified Employer"} · ${job.location || "UAE"} · Source: ${(job.source || "Live Board").toUpperCase()}`;
@@ -2609,9 +3381,9 @@
       // Generate Cover Letter
       document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(job, state.coverLetterLang);
 
-      // Populate Step 4 Export Fields
+      // Populate Step 4 Export Fields (Old Portal Subject Format: Application — Role (Ref. XXX) — Candidate Name)
       document.getElementById("exportToEmail").value = job.to || "";
-      document.getElementById("exportSubjectLine").value = `Executive Application: ${cleanRole}${job.ref ? " (Ref: " + job.ref + ")" : ""} — ${state.cv.name}`;
+      document.getElementById("exportSubjectLine").value = `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
     }
 
     function injectSingleKeyword(kw) {
@@ -2646,7 +3418,7 @@
     }
 
     function generateTailoredCoverLetter(job, lang = "en") {
-      const cleanRole = window.RoleTitle ? window.RoleTitle.cleanRoleTitle(job.title) : job.title;
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const isAgency = /michael page|page executive|charterhouse|departer|hays|korn ferry|via /i.test(job.company || "");
       const topRole = (state.cv.roles && state.cv.roles[0]) || DEMO_CV.roles[0];
       const b1 = (topRole.bullets && topRole.bullets[0]) || "";
@@ -2710,8 +3482,70 @@ ${state.cv.contact}`;
     }
 
     /* ------------------------------------------------------------------
-       7. STEP 4: EMAIL LOOKUP, .EML PACKAGE & ATS PDF EXPORT
+       7. OLD PORTAL'S EXACT EMAIL COMPOSE + ATTACHED ATS CV PDF ENGINE
+          (buildCvTextPdfBytes + letterEmailHtml + letterDocument + buildEml)
        ------------------------------------------------------------------ */
+
+    /**
+     * Exact port of the Old Portal's `letterEmailHtml()` (career-portal.html lines 1339-1369):
+     * Formats the Cover Letter as a 640px executive stationary HTML table with serif header,
+     * gold rule, recipient/date row, reference code, and paragraphs for the email body.
+     */
+    function buildOldPortalLetterEmailHtml() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      const bodyText =
+        (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
+        generateTailoredCoverLetter(job, state.coverLetterLang);
+
+      const F = "font-family:Calibri,'Segoe UI',Arial,sans-serif;color:#1b1b1b;";
+      const Fserif = "font-family:Georgia,'Times New Roman',serif;color:#1b1b1b;";
+      const dir = state.coverLetterLang === "ar" ? " dir='rtl'" : "";
+
+      const parasHtml = bodyText
+        .split(/\r?\n\r?\n/)
+        .map((p) => p.trim())
+        .filter(Boolean)
+        .map(
+          (p) =>
+            `<p style="margin:0 0 12px 0;${F}font-size:14px;line-height:1.65;color:#1b1b1b;white-space:pre-line">${escapeHtml(p)}</p>`
+        )
+        .join("");
+
+      const todayStr = new Date().toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+      });
+
+      return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="640" style="max-width:640px;width:100%;background:#ffffff;border-collapse:collapse"${dir}>
+  <tr><td style="padding:24px 28px 14px 28px">
+    <div style="${Fserif}font-size:24px;font-weight:700;letter-spacing:.3px;line-height:1.15">${escapeHtml(state.cv.name || "EXECUTIVE CANDIDATE")}</div>
+    <div style="${F}font-size:12.5px;color:#3d3d3d;margin-top:3px">${escapeHtml(state.cv.headline || "")}</div>
+    <div style="${F}font-size:11.5px;color:#6b6b6b;margin-top:6px">${escapeHtml(state.cv.contact || "")}</div>
+  </td></tr>
+  <tr><td style="padding:0 28px"><div style="height:2px;background:#8b6f3d;line-height:2px;font-size:2px">&nbsp;</div></td></tr>
+  <tr><td style="padding:18px 28px 6px 28px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+      <td style="${F}font-size:12px;color:#6b6b6b;vertical-align:top">
+        <strong style="color:#1b1b1b;">To: ${escapeHtml(job.company || "Hiring Committee")}</strong><br/>
+        ${escapeHtml(job.location || "United Arab Emirates")}
+      </td>
+      <td align="right" style="${F}font-size:12px;color:#6b6b6b;vertical-align:top">${escapeHtml(todayStr)}</td>
+    </tr></table>
+  </td></tr>
+  <tr><td style="padding:10px 28px 6px 28px">
+    <div style="${Fserif}font-size:16px;font-weight:700;color:#1b1b1b;border-bottom:1px solid #d6d3cc;padding-bottom:6px">
+      Application — ${escapeHtml(cleanRole)}
+      ${job.ref ? `<span style="${F}font-size:11.5px;font-weight:400;color:#6b6b6b"> &nbsp;·&nbsp; Ref. ${escapeHtml(job.ref)}</span>` : ""}
+    </div>
+  </td></tr>
+  <tr><td style="padding:12px 28px 24px 28px">
+    ${parasHtml}
+  </td></tr>
+</table>`;
+    }
+
     async function autoFindRecipientEmail() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
       const statusEl = document.getElementById("emailLookupStatus");
@@ -2725,70 +3559,170 @@ ${state.cv.contact}`;
             const d = await r.json();
             if (d.emails && d.emails.length) {
               inputEl.value = d.emails[0];
+              job.to = d.emails[0];
               statusEl.innerHTML = `<span style="color:var(--accent-emerald);">✅ Found verified email directly in posting: <strong>${escapeHtml(d.emails[0])}</strong></span>`;
               return;
             }
           }
         }
-        if (window.FetchAddress && window.FetchAddress.findCompanyAddress) {
-          const found = await window.FetchAddress.findCompanyAddress(job.company || "", job.url || "");
+        if (typeof window.findApplicationAddress === "function") {
+          const found = await window.findApplicationAddress({
+            url: job.url || "",
+            company: job.company || "",
+            text: job.text || ""
+          });
           if (found && found.email) {
             inputEl.value = found.email;
+            job.to = found.email;
             statusEl.innerHTML = `<span style="color:var(--accent-emerald);">✅ Discovered company HR mailbox: <strong>${escapeHtml(found.email)}</strong></span>`;
             return;
           }
         }
-        statusEl.textContent = "ℹ️ This employer routes applications via their job board portal or you can type a direct recruiter email above.";
+        statusEl.textContent = "ℹ️ Employer routes via board or direct email — you can type any recruiter email above or address it inside your opened email draft.";
       } catch {
-        statusEl.textContent = "ℹ️ Enter the recruiter's email above or leave blank to address inside your mail client.";
+        statusEl.textContent = "ℹ️ Enter the recruiter's email above or leave blank to address inside your opened email draft.";
       }
     }
 
-    function downloadStandaloneAtsPdf() {
+    async function downloadStandaloneAtsPdf() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      const fn =
+        typeof window.applicationFilename === "function"
+          ? window.applicationFilename("CV", cleanRole)
+          : `CV - ${state.cv.name || "Executive"} - ${cleanRole}.pdf`.replace(/[\\/:*?"<>|]+/g, "-");
       try {
-        if (window.CvTextPdf && window.CvTextPdf.downloadTextPdf) {
-          window.CvTextPdf.downloadTextPdf(
-            `${(state.cv.name || "Executive_CV").replace(/\s+/g, "_")}_Tailored_CV.pdf`
-          );
-          showToast("📄 Downloaded selectable ATS Text PDF!");
+        if (typeof window.buildCvTextPdf === "function") {
+          showToast("⏳ Building selectable NotoSans ATS CV PDF...");
+          await window.buildCvTextPdf(fn);
+          showToast(`📄 Downloaded ATS CV PDF: ${fn}`);
           return;
         }
-      } catch {}
+      } catch (err) {
+        console.warn("ATS PDF fallback to print:", err);
+      }
       window.print();
     }
 
-    function downloadReadyEmlPackage() {
-      const to = document.getElementById("exportToEmail").value.trim();
-      const subject =
-        document.getElementById("exportSubjectLine").value.trim() ||
-        `Executive Application — ${state.cv.name}`;
-      const body =
-        document.getElementById("coverLetterTextarea").value.trim() ||
-        generateTailoredCoverLetter(state.selectedJob, state.coverLetterLang);
+    /**
+     * Exact Old Portal `mailBtn` flow (`sendApplicationNow`):
+     * 1. Copies the designed HTML Cover Letter + plain text to the clipboard.
+     * 2. Calls `await window.buildCvTextPdfBytes()` to generate the real selectable ATS CV PDF bytes.
+     * 3. Calls `window.buildEml({ to, subject, html: window.letterDocument(designedHtml), attachments: [{ name: fn, bytes: r.bytes, type: "application/pdf" }] })`
+     *    which includes `X-Unsent: 1` so Windows Outlook / Apple Mail / Thunderbird opens the `.eml`
+     *    directly as an editable Compose window with:
+     *    - The Cover Letter in the email body
+     *    - The tailored ATS CV PDF attached
+     *    - The Subject and To: fields pre-populated
+     */
+    async function sendApplicationNow() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
-      let attachment = null;
+      // Ensure Step 4 fields are up to date
+      const toEl = document.getElementById("exportToEmail");
+      const subjEl = document.getElementById("exportSubjectLine");
+      const to = (toEl && toEl.value.trim()) || job.to || "";
+      const subject =
+        (subjEl && subjEl.value.trim()) ||
+        `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
+
+      const plainBody =
+        (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
+        generateTailoredCoverLetter(job, state.coverLetterLang);
+      const designedHtml = buildOldPortalLetterEmailHtml();
+
+      // 1. Copy designed Cover Letter (HTML + plain text) to clipboard just like old portal
       try {
-        if (window.CvTextPdf && window.CvTextPdf.buildTextPdfBytes) {
-          const bytes = window.CvTextPdf.buildTextPdfBytes();
-          if (bytes) {
-            attachment = {
-              filename: `${(state.cv.name || "Executive_CV").replace(/\s+/g, "_")}_Tailored_CV.pdf`,
-              mime: "application/pdf",
-              bytes
-            };
-          }
+        if (navigator.clipboard && window.ClipboardItem) {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              "text/html": new Blob([designedHtml], { type: "text/html" }),
+              "text/plain": new Blob([plainBody], { type: "text/plain" })
+            })
+          ]);
+        } else if (navigator.clipboard) {
+          await navigator.clipboard.writeText(plainBody);
         }
       } catch {}
 
-      if (window.Eml && window.Eml.buildEml) {
-        const emlContent = window.Eml.buildEml({ to, subject, body, attachment });
-        const blob = new Blob([emlContent], { type: "message/rfc822" });
-        const a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = `Application_${(state.selectedJob.title || "Executive_Role").replace(/[^a-z0-9]+/gi, "_").slice(0, 40)}.eml`;
-        a.click();
-        showToast("📧 Downloaded complete .EML package with attached ATS CV PDF!");
+      const statusBanner = document.getElementById("sendAppStatusBanner");
+      if (statusBanner) {
+        statusBanner.innerHTML = "⏳ <strong>Building your selectable ATS CV PDF and packaging your .EML Email Draft with Cover Letter & Subject...</strong>";
       }
+      showToast("⏳ Attaching tailored ATS CV PDF & opening email draft...");
+
+      // 2. Build real ATS CV PDF bytes using old portal's cv-text-pdf.js
+      const pdfFilename =
+        typeof window.applicationFilename === "function"
+          ? window.applicationFilename("CV", cleanRole)
+          : `CV - ${state.cv.name || "Executive"} - ${cleanRole}.pdf`.replace(/[\\/:*?"<>|]+/g, "-");
+
+      const emlFilename = pdfFilename.replace(/^CV\s*-\s*/i, "Application - ").replace(/\.pdf$/i, "") + ".eml";
+
+      try {
+        if (typeof window.buildCvTextPdfBytes === "function" && typeof window.buildEml === "function") {
+          const r = await window.buildCvTextPdfBytes();
+          const fullHtmlDoc =
+            typeof window.letterDocument === "function" ? window.letterDocument(designedHtml) : designedHtml;
+
+          const emlBlob = window.buildEml({
+            to,
+            subject,
+            html: fullHtmlDoc,
+            attachments: [{ name: pdfFilename, bytes: r.bytes, type: "application/pdf" }]
+          });
+
+          if (typeof window.downloadBlob === "function") {
+            window.downloadBlob(emlBlob, emlFilename);
+          } else {
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(emlBlob);
+            a.download = emlFilename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+          }
+
+          if (statusBanner) {
+            statusBanner.innerHTML = `✅ <strong>Email Draft Opened (${escapeHtml(emlFilename)})!</strong><br/>Your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled. <em>(Tip: Right-click the downloaded <code>.eml</code> in your browser bar once and tick "Always open files of this type" so your email program pops open automatically on every click!)</em>`;
+          }
+          showToast(`✉️ Email draft ready with Cover Letter, Subject & attached "${pdfFilename}"!`);
+          return;
+        }
+      } catch (err) {
+        console.error("EML + ATS PDF build error:", err);
+        if (statusBanner) {
+          statusBanner.innerHTML = `⚠️ Could not embed PDF font (${escapeHtml(err.message || "error")}) — opening default mail client via mailto: instead.`;
+        }
+      }
+
+      // Fallback if offline: open mailto: with Subject & Cover Letter
+      openMailtoAndDownloadPdf();
+    }
+
+    async function openMailtoAndDownloadPdf() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      const to = (document.getElementById("exportToEmail") && document.getElementById("exportToEmail").value.trim()) || job.to || "";
+      const subject =
+        (document.getElementById("exportSubjectLine") && document.getElementById("exportSubjectLine").value.trim()) ||
+        `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
+      const plainBody =
+        (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
+        generateTailoredCoverLetter(job, state.coverLetterLang);
+
+      try {
+        await downloadStandaloneAtsPdf();
+      } catch {}
+
+      const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBody)}`;
+      window.location.href = mailtoUrl;
+      showToast("📬 Opened default email client with Subject & Cover Letter + downloaded ATS CV PDF!");
+    }
+
+    function downloadReadyEmlPackage() {
+      sendApplicationNow();
     }
 
     /* ------------------------------------------------------------------
@@ -2812,9 +3746,9 @@ ${state.cv.contact}`;
       const nextText = document.getElementById("globalNextBtnText");
 
       if (stepNum === 1) {
-        badge.textContent = "STEP 1 OF 4 · HR DIRECTOR CV ANALYZER";
+        badge.textContent = "STEP 1 OF 4 · CV ANALYZER & BUILT-IN CV WRITER";
         headline.textContent =
-          'Click "Auto-Fix All CV Improvements in 1 Click" (or individual cards) to automatically upgrade weak wording on your CV.';
+          'Click "Auto-Fix All CV Improvements in 1 Click" OR click "Built-In Award-Winning CV Writer & Builder" to modify or write a new CV.';
         sub.textContent = "Next: Search live jobs strictly matching your target roles";
         nextText.textContent = "Next Step: Search Live GM & MD Roles";
       } else if (stepNum === 2) {
@@ -2828,16 +3762,16 @@ ${state.cv.contact}`;
       } else if (stepNum === 3) {
         badge.textContent = "STEP 3 OF 4 · TAILORED CV & COVER LETTER";
         headline.textContent =
-          "Review your auto-tailored Cover Letter & CV. Click any job keyword pill to weave it into your CV in 1 click.";
+          'Review your auto-tailored Cover Letter & CV, or click "Send Application Now" to open your email draft with the CV PDF attached.';
         sub.textContent = "Languages supported: EN · DE · AR · FR · ES";
-        nextText.textContent = "Next Step: Export Ready Application";
+        nextText.textContent = "Next Step: Send Application";
         populateStep3And4ForSelectedJob();
       } else if (stepNum === 4) {
-        badge.textContent = "STEP 4 OF 4 · READY-TO-SEND APPLICATION";
+        badge.textContent = "STEP 4 OF 4 · SEND APPLICATION (EMAIL + ATTACHED CV PDF)";
         headline.textContent =
-          'Click "Download Complete Email Draft (.EML)" to get your email pre-addressed with Cover Letter & attached ATS PDF.';
-        sub.textContent = "100% ATS-compliant selectable text PDF included";
-        nextText.textContent = "Download .EML + ATS PDF";
+          'Click "Send Application" to open your email draft with the Cover Letter in the body, Subject filled, and your ATS CV PDF attached.';
+        sub.textContent = "Powered by the Old Portal's RFC-822 .EML + NotoSans ATS PDF Engine";
+        nextText.textContent = "✉️ Send Application Now";
         populateStep3And4ForSelectedJob();
       }
 
@@ -2848,7 +3782,7 @@ ${state.cv.contact}`;
       if (state.currentStep < 4) {
         goToStep(state.currentStep + 1);
       } else {
-        downloadReadyEmlPackage();
+        sendApplicationNow();
       }
     }
 
@@ -2928,7 +3862,7 @@ ${state.cv.contact}`;
       clearTimeout(window._toastTimer);
       window._toastTimer = setTimeout(() => {
         bar.style.display = "none";
-      }, 3800);
+      }, 4200);
     }
 
     function escapeHtml(s) {

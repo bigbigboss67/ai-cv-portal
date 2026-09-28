@@ -101,33 +101,29 @@ export function modelText(model) {
  */
 export function readSheet(sheet) {
   const txt = (el) => clean(el && el.textContent);
-  const hd = sheet.querySelector(".hd, .cv-hdr");
+  const hd = sheet.querySelector(".hd");
   const model = {
-    name: txt(hd && hd.querySelector("h1, .cv-name")),
-    headline: txt(hd && hd.querySelector(".role, .cv-role-tag")),
-    contact: hd ? [...hd.querySelectorAll(".meta > div, .cv-meta > div")].map(txt).filter(Boolean) : [],
+    name: txt(hd && hd.querySelector("h1")),
+    headline: txt(hd && hd.querySelector(".role")),
+    contact: hd ? [...hd.querySelectorAll(".meta > div")].map(txt).filter(Boolean) : [],
     sections: [],
   };
-  for (const sec of sheet.querySelectorAll("section, .cv-sec")) {
-    const title = txt(sec.querySelector("h5, .cv-sec-title"));
-    const jobs = [...sec.querySelectorAll(".j, .cv-job")];
-    const chips = [...sec.querySelectorAll(".chip, .cv-chip")];
+  for (const sec of sheet.querySelectorAll("section")) {
+    const title = txt(sec.querySelector("h5"));
+    const jobs = [...sec.querySelectorAll(".j")];
+    const chips = [...sec.querySelectorAll(".chip")];
     if (jobs.length) {
       model.sections.push({ title, jobs: jobs.map((j) => ({
-        t: txt(j.querySelector(".t, .cv-job-title")), d: txt(j.querySelector(".d, .cv-date")), c: txt(j.querySelector(".c, .cv-co")),
-        bullets: [...j.querySelectorAll("li")].map((li) => {
-          const clone = li.cloneNode(true);
-          clone.querySelectorAll(".promo-inline-tag").forEach((tag) => tag.remove());
-          return bulletText(clone.textContent);
-        }).filter(Boolean),
+        t: txt(j.querySelector(".t")), d: txt(j.querySelector(".d")), c: txt(j.querySelector(".c")),
+        bullets: [...j.querySelectorAll("li")].map((li) => bulletText(li.textContent)).filter(Boolean),
       })) });
     } else if (chips.length) {
       model.sections.push({ title, items: chips.map(txt).filter(Boolean) });
     } else {
       const lines = [];
       for (const el of sec.children) {
-        if (el.tagName === "H5" || el.classList.contains("cv-sec-title")) continue;
-        if (el.classList.contains("sum") || el.classList.contains("cv-sum")) {
+        if (el.tagName === "H5") continue;
+        if (el.classList.contains("sum")) {
           String(el.innerText || el.textContent || "").split(/\n+/).map(clean).filter(Boolean)
             .forEach((t, k) => lines.push({ text: t, gap: k > 0 }));
           continue;
@@ -283,12 +279,7 @@ function notoSans() {
 /* ---------- building the file ---------- */
 
 function cvSheet() {
-  return (
-    document.getElementById("draftCvSheetEl") ||
-    document.getElementById("liveCvSheet") ||
-    [...document.querySelectorAll("#pane .sheet, .cv-sheet")].find((s) => !s.classList.contains("letter") && !s.classList.contains("is-letter-sheet")) ||
-    null
-  );
+  return document.getElementById("draftCvSheetEl") || [...document.querySelectorAll("#pane .sheet, .cv-sheet")].find((s) => !s.classList.contains("letter")) || null;
 }
 
 /**
