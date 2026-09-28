@@ -1,18 +1,19 @@
 /**
  * POST /api/match
  *
- * Takes CV text (plus optional location & target roles), extracts the candidate's
- * current seniority rung, skills, languages, and Next Promotion / Step-Up roles
- * (via coach.js ladder), and searches the live internet across multiple sources:
+ * Strict Role-Locked Multi-Board Live Internet Job Search Engine.
+ * Searches across:
+ *  - LinkedIn Guest Jobs API (+ full 3,500+ char posting hydration)
+ *  - Indeed (UAE / GCC / Global)
+ *  - Dubizzle (Dubai / UAE)
+ *  - Bayt (MENA)
+ *  - Naukrigulf (UAE / GCC)
+ *  - GulfTalent (UAE / GCC)
+ *  - Page Executive, Michael Page, Charterhouse, Departer, AHK VAE, Arbeitnow
+ *  - Daily Scraped Board Feed (data/listings.json)
  *
- *  1. LinkedIn Public Guest Job Search + Guest Posting Hydration (no API key needed)
- *  2. Live Executive Search Boards: Page Executive, Michael Page, Charterhouse, Departer, AHK VAE
- *  3. Live Public Job APIs: Arbeitnow & Remotive (with full descriptions)
- *  4. Open Web Vacancy Search: AIsa/Tavily (when AISA_API_KEY is set) + DuckDuckGo HTML Search (zero-key fallback)
- *  5. Daily Scraped Board Feed (data/listings.json — 168 real Gulf/DACH listings)
- *
- * Hydrates the top LinkedIn matches with their full job description & application
- * email so every listing converts directly into a complete Draft Application.
+ * Strictly filters results to the user's chosen Target Roles (e.g. General Manager,
+ * Managing Director, Operations Director) so zero irrelevant or junior listings appear.
  */
 
 const AISA = "https://api.aisa.one/apis/v1";
@@ -40,7 +41,7 @@ function phrases(text) {
 
 function titles(text) {
   const re =
-    /\b((?:senior |group |regional |country |deputy |executive |general )?(?:managing director|director|chief [a-z]+ officer|ceo|coo|cfo|cso|cto|vice president|vp|head of [a-z &]{3,28}|general manager|regional manager|country manager|project manager|product manager|operations manager|sales manager|account manager|business (?:advisor|analyst|consultant|development manager|development director)|consultant|engineer|architect|analyst|controller|accountant|designer|developer))\b/gi;
+    /\b((?:senior |group |regional |country |deputy |executive |general )?(?:managing director|operations director|director of operations|commercial director|supply chain director|chief [a-z]+ officer|ceo|coo|cfo|cso|cto|vice president|vp|head of [a-z &]{3,28}|general manager|regional manager|country manager|project director|plant director|director))\b/gi;
   const seen = new Map();
   let m;
   while ((m = re.exec(text))) {
@@ -58,7 +59,7 @@ function places(text) {
 }
 
 const SKILL_WORDS =
-  /\b(p&l|profit and loss|budget|forecast|procurement|logistics|supply chain|import|export|wholesale|distribution|retail|real estate|construction|building materials|automotive|mobility|fleet|media|publishing|feasibility|negotiation|stakeholder|board|governance|compliance|restructuring|turnaround|market entry|business development|digital transformation|ai|crm|erp|sap|excel|powerpoint|sql|python|javascript|react|node|aws|azure)\b/gi;
+  /\b(p&l|profit and loss|budget|forecast|procurement|logistics|supply chain|import|export|wholesale|distribution|retail|real estate|construction|building materials|automotive|mobility|fleet|media|publishing|feasibility|negotiation|stakeholder|board|governance|compliance|restructuring|turnaround|market entry|business development|digital transformation|ai|crm|erp|sap|manufacturing|lean|six sigma|ebitda|capex|opex)\b/gi;
 
 function skills(text) {
   const seen = new Map();
@@ -95,24 +96,28 @@ const cleanRole = (s) =>
     .trim();
 
 function wantedRoles(sig, prefs) {
-  const typed = prefs.roles ? prefs.roles.split(/[,;\n]/).map(cleanRole).filter(Boolean) : [];
-  const defaults = sig.titles.length ? sig.titles.map(cleanRole) : ["general manager", "managing director", "operations director"];
-  return (typed.length ? typed : defaults).filter((r) => r.length >= 3).slice(0, 6);
+  if (Array.isArray(prefs.targetRoles) && prefs.targetRoles.length) {
+    const arr = prefs.targetRoles.map(cleanRole).filter((r) => r.length >= 2);
+    if (arr.length) return arr.slice(0, 8);
+  }
+  const typed = prefs.roles ? String(prefs.roles).split(/[,;\n|]/).map(cleanRole).filter(Boolean) : [];
+  const defaults = sig.titles.length
+    ? sig.titles.map(cleanRole)
+    : ["general manager", "managing director", "operations director", "chief operating officer"];
+  return (typed.length ? typed : defaults).filter((r) => r.length >= 2).slice(0, 8);
 }
 
 function buildQueries(sig, prefs) {
   const where = (prefs.location || sig.places[0] || "Dubai UAE").trim();
-  const roles = wantedRoles(sig, prefs).slice(0, 3);
+  const roles = wantedRoles(sig, prefs).slice(0, 4);
   const loc = where ? ` in ${where}` : "";
-  const qs = roles.map((r) => `${r} jobs${loc} hiring now`);
-  if (sig.skills.length) qs.push(`${sig.level} ${sig.skills.slice(0, 3).join(" ")} vacancy${loc}`);
-  return [...new Set(qs)].slice(0, 4);
+  return [...new Set(roles.map((r) => `"${r}" jobs${loc}`))].slice(0, 4);
 }
 
 async function stepUpRoles(sig, text, explicitStepRole = "") {
   const out = [];
   if (explicitStepRole) {
-    explicitStepRole
+    String(explicitStepRole)
       .split(/[,;|]/)
       .map(cleanRole)
       .filter((r) => r.length >= 3)
@@ -127,16 +132,10 @@ async function stepUpRoles(sig, text, explicitStepRole = "") {
   } catch {}
   if (!out.length) {
     if (sig.level === "executive") out.push("chief executive officer", "group managing director", "chief operating officer");
-    else if (sig.level === "director") out.push("managing director", "general manager", "vice president");
-    else out.push("operations director", "head of business development", "general manager");
+    else if (sig.level === "director") out.push("managing director", "general manager", "operations director");
+    else out.push("operations director", "general manager", "managing director");
   }
   return out.slice(0, 3);
-}
-
-function buildStepQueries(step, sig, prefs) {
-  const where = (prefs.location || sig.places[0] || "Dubai UAE").trim();
-  const loc = where ? ` in ${where}` : "";
-  return [...new Set((step || []).map((r) => `${r} jobs${loc} hiring now`))].slice(0, 2);
 }
 
 const countTracks = (list) => ({
@@ -170,40 +169,60 @@ async function webSearchWithFallback(key, query, signal) {
   return boards.fetchDuckDuckGoJobs(query, 9000);
 }
 
-const BOARD = /(linkedin|bayt|gulftalent|naukrigulf|indeed|efinancialcareers|glassdoor|monster|stepstone|xing|dubizzle|michaelpage|pageexecutive|charterhouse|departer|ahk\.de|greenhouse|lever\.co|workable|ashbyhq|jobs?\.|careers?\.)/i;
+const BOARD =
+  /(linkedin|bayt|gulftalent|naukrigulf|indeed|dubizzle|efinancialcareers|glassdoor|monster|stepstone|xing|michaelpage|pageexecutive|charterhouse|departer|ahk\.de|greenhouse|lever\.co|workable|ashbyhq|jobs?\.|careers?\.)/i;
 const STALE = /\b(20(1\d|2[0-4]))\b/;
 
-function score(hit, sig, prefs) {
+function detectBoardSource(urlOrHost) {
+  const s = String(urlOrHost || "").toLowerCase();
+  if (s.includes("indeed")) return "indeed";
+  if (s.includes("dubizzle")) return "dubizzle";
+  if (s.includes("linkedin")) return "linkedin";
+  if (s.includes("bayt")) return "bayt";
+  if (s.includes("naukrigulf")) return "naukrigulf";
+  if (s.includes("gulftalent")) return "gulftalent";
+  if (s.includes("pageexecutive")) return "pageexecutive";
+  if (s.includes("michaelpage")) return "michaelpage";
+  if (s.includes("charterhouse")) return "charterhouse";
+  if (s.includes("departer")) return "departer";
+  if (s.includes("ahk.de")) return "ahk";
+  if (s.includes("arbeitnow")) return "arbeitnow";
+  return s || "websearch";
+}
+
+function score(hit, sig, prefs, activeRoles) {
   const hay = `${hit.title || ""} ${hit.content || ""}`.toLowerCase();
   const url = String(hit.url || "");
-  let s = 20;
+  let s = 45;
   const why = [];
 
-  for (const t of sig.titles) {
-    if (hay.includes(t)) {
-      s += 18;
-      why.push(t);
-    }
+  const matchedRole = boards.matchStrictRole(hit.title || "", activeRoles);
+  if (matchedRole) {
+    s += 32;
+    why.push(matchedRole);
   }
+
   for (const sk of sig.skills) {
     if (hay.includes(sk)) {
-      s += 5;
+      s += 4;
       why.push(sk);
     }
   }
 
   const where = (prefs.location || sig.places[0] || "").toLowerCase();
   if (where && hay.includes(where)) {
-    s += 14;
+    s += 10;
     why.push(where);
   }
 
-  if (BOARD.test(url)) s += 10;
-  if (/\b(apply|vacancy|vacancies|hiring|job|position|opening|mandate)\b/.test(hay)) s += 6;
+  if (BOARD.test(url)) s += 8;
   if (STALE.test(hit.title || "")) s -= 12;
-  if (!hit.content || hit.content.length < 40) s -= 4;
 
-  return { s: Math.min(98, Math.max(35, s)), why: [...new Set(why)].slice(0, 6) };
+  return {
+    s: Math.min(99, Math.max(40, s)),
+    matchedRole,
+    why: [...new Set(why)].slice(0, 6),
+  };
 }
 
 let DAILY = null;
@@ -224,7 +243,6 @@ function roleHit(textStr, role) {
     .filter((w) => w.length >= 2 && !STOP.has(w));
   if (!words.length) return false;
   if (words.every((w) => hay.includes(" " + w))) return true;
-  // Also match high-signal multi-word stems when at least 1 core role noun + 1 domain word match
   const hits = words.filter((w) => hay.includes(" " + w));
   return words.length >= 2 && hits.length >= 2;
 }
@@ -247,7 +265,7 @@ const LOWER_RUNG = /\b(assistant|asst|junior|jr|intern|internship|trainee|gradua
 
 function rankDaily(listings, sig, prefs, step = []) {
   const roles = wantedRoles(sig, prefs);
-  const steps = (step || []).filter(Boolean);
+  const steps = prefs.strictRoleOnly ? [] : (step || []).filter(Boolean);
   const where = String(prefs.location || sig.places[0] || "").trim().toLowerCase();
   const gulfWanted = !where || GULF.test(where) || PLACES.some((p) => p.toLowerCase() === where);
   const out = [];
@@ -256,12 +274,18 @@ function rankDaily(listings, sig, prefs, step = []) {
     for (const j of src.jobs || []) {
       const url = String(j.url || "");
       if (j.kind === "search" || !/^https?:\/\//i.test(url)) continue;
-      const title = String(j.title || "").trim();
+      const rawTitle = String(j.title || "").trim();
+      const title = boards.cleanJobTitleForMatch(rawTitle) || rawTitle;
       if (GERMAN_TITLE.test(title) && !speaksGerman(sig)) continue;
-      const hits = roles.filter((r) => roleHit(title, r));
-      const stepHits = hits.length ? [] : steps.filter((r) => roleHit(title, r));
+
+      const strictMatch = boards.matchStrictRole(title, roles);
+      const hits = strictMatch ? [strictMatch.toLowerCase()] : roles.filter((r) => roleHit(title, r));
+      const stepHits = hits.length || prefs.strictRoleOnly ? [] : steps.filter((r) => roleHit(title, r));
       const skillHits = (sig.skills || []).filter((sk) => `${title} ${j.text || ""}`.toLowerCase().includes(sk));
+
+      if (prefs.strictRoleOnly && !strictMatch) continue;
       if (!hits.length && !stepHits.length && skillHits.length < 2) continue;
+
       const track = stepHits.length ? "step" : "level";
       const lower = `${title} ${j.location || ""} ${j.text || ""}`.toLowerCase();
       if (where && ELSEWHERE.test(title) && !GULF.test(title) && !lower.includes(where)) continue;
@@ -276,12 +300,16 @@ function rankDaily(listings, sig, prefs, step = []) {
         : gulfWanted && (/\.ae$/.test(host) || host === "vae.ahk.de")
         ? "UAE board"
         : "";
-      let s = 58 + 14 * (hits.length || stepHits.length) + 4 * skillHits.length + (exact ? 12 : region ? 6 : 0) - (track === "step" ? 3 : 0);
-      for (const t of sig.titles) if (roleHit(title, cleanRole(t))) s += 8;
-      if (LOWER_RUNG.test(title) && ![...roles, ...steps].some((r) => LOWER_RUNG.test(r))) s -= 30;
-      if (s < 45) continue;
+      let s =
+        68 +
+        14 * (hits.length || stepHits.length) +
+        4 * skillHits.length +
+        (exact ? 10 : region ? 6 : 0) -
+        (track === "step" ? 3 : 0);
+      if (LOWER_RUNG.test(title)) continue;
       out.push({
         title,
+        matchedRole: strictMatch || hits[0] || stepHits[0] || "Executive Role",
         url,
         snippet:
           j.text ||
@@ -293,46 +321,35 @@ function rankDaily(listings, sig, prefs, step = []) {
             .filter(Boolean)
             .join(" · "),
         text: j.text || "",
-        source: j.src || src.id || host,
+        source: detectBoardSource(j.src || src.id || host),
         company: j.company || "",
-        location: j.location || titleGulf || "",
-        posted: j.posted || "",
+        location: j.location || titleGulf || prefs.location || "UAE",
+        posted: j.posted || "live",
         ref: j.ref || "",
-        score: Math.min(98, s),
+        score: Math.min(99, s),
         track,
-        matched: [...new Set([...(hits.length ? hits : stepHits), ...skillHits.slice(0, 4), ...(region ? [region] : [])])],
+        matched: [...new Set([strictMatch || hits[0], ...skillHits.slice(0, 4), ...(region ? [region] : [])].filter(Boolean))],
         places: places(`${title} ${j.location || ""}`).slice(0, 3),
       });
     }
   }
-  return out.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, 35);
+  return out.sort((a, b) => b.score - a.score || a.title.localeCompare(b.title)).slice(0, 45);
 }
 
-const BOARD_TIMEOUT_MS = 10000;
+const BOARD_TIMEOUT_MS = 9500;
 
 async function liveBoards(sig, prefs, step = []) {
-  const roles = wantedRoles(sig, prefs).slice(0, 3);
-  const stepRoles = (step || []).filter((r) => !roles.includes(r)).slice(0, 2);
+  const roles = wantedRoles(sig, prefs).slice(0, 4);
+  const stepRoles = prefs.strictRoleOnly ? [] : (step || []).filter((r) => !roles.includes(r)).slice(0, 2);
   const where = String(prefs.location || sig.places[0] || "United Arab Emirates").trim();
   const tasks = [];
 
-  for (const r of stepRoles) {
-    tasks.push({
-      id: "linkedin",
-      track: "step",
-      label: `LinkedIn Live: ${r} in ${where} (+1 Rung Promotion)`,
-      run: () =>
-        boards
-          .fetchText(boards.linkedInUrl(r, where), BOARD_TIMEOUT_MS)
-          .then(boards.parseLinkedIn)
-          .then((list) => list.map((x) => ({ ...x, trackHint: "step" }))),
-    });
-  }
+  // 1. LinkedIn Live Search per Target Role
   for (const r of roles) {
     tasks.push({
       id: "linkedin",
       track: "level",
-      label: `LinkedIn Live: ${r} in ${where} (Core Fit)`,
+      label: `LinkedIn Live: ${r} in ${where}`,
       run: () =>
         boards
           .fetchText(boards.linkedInUrl(r, where), BOARD_TIMEOUT_MS)
@@ -340,8 +357,29 @@ async function liveBoards(sig, prefs, step = []) {
           .then((list) => list.map((x) => ({ ...x, trackHint: "level" }))),
     });
   }
+  for (const r of stepRoles) {
+    tasks.push({
+      id: "linkedin",
+      track: "step",
+      label: `LinkedIn Live: ${r} in ${where}`,
+      run: () =>
+        boards
+          .fetchText(boards.linkedInUrl(r, where), BOARD_TIMEOUT_MS)
+          .then(boards.parseLinkedIn)
+          .then((list) => list.map((x) => ({ ...x, trackHint: "step" }))),
+    });
+  }
 
-  // Live Executive & Regional Boards
+  // 2. Indeed, Dubizzle, Bayt, Naukrigulf, GulfTalent Live Role Search
+  for (const boardId of ["indeed", "dubizzle", "bayt", "naukrigulf", "gulftalent"]) {
+    tasks.push({
+      id: boardId,
+      label: `${boardId.toUpperCase()} Live Search: ${roles.join(", ")} in ${where}`,
+      run: () => boards.fetchBoardByRoleSearch(boardId, roles, where, BOARD_TIMEOUT_MS),
+    });
+  }
+
+  // 3. Executive Headhunter Boards (Page Executive, Michael Page, Charterhouse, Departer)
   tasks.push({
     id: "pageexecutive",
     label: "Page Executive Live Board",
@@ -361,11 +399,6 @@ async function liveBoards(sig, prefs, step = []) {
     id: "departer",
     label: "Departer German Headhunter Live Board",
     run: () => boards.fetchText("https://careers.departer.de/", BOARD_TIMEOUT_MS).then(boards.parseDeparter),
-  });
-  tasks.push({
-    id: "arbeitnow",
-    label: "Arbeitnow Live European/DACH API",
-    run: () => boards.fetchArbeitnow(BOARD_TIMEOUT_MS),
   });
 
   const settled = await Promise.allSettled(tasks.map((t) => t.run()));
@@ -394,10 +427,6 @@ async function liveBoards(sig, prefs, step = []) {
   };
 }
 
-/**
- * Hydrate top LinkedIn matches with their full job description text & printed emails
- * so when the user clicks "Convert to Draft", the full requirements are already present.
- */
 async function hydrateTopLinkedInMatches(matches, maxHydrate = 5) {
   const targets = matches
     .filter((m) => /linkedin\.com\/jobs\/view\//i.test(m.url) && (!m.text || m.text.length < 160))
@@ -443,22 +472,24 @@ async function handler(req, res) {
   body = body || {};
 
   const text = String(body.text || "");
-  if (text.trim().length < 40) {
+  if (text.trim().length < 20) {
     res.status(400).json({ error: "CV text too short — upload or paste your CV first." });
     return;
   }
 
   const prefs = {
     location: String(body.location || "").slice(0, 80),
-    roles: String(body.roles || "").slice(0, 160),
+    roles: String(body.roles || "").slice(0, 240),
+    targetRoles: Array.isArray(body.targetRoles) ? body.targetRoles.map(String) : [],
     stepRole: String(body.stepRole || "").slice(0, 160),
+    strictRoleOnly: body.strictRoleOnly !== false,
   };
 
   const key = process.env.AISA_API_KEY || "";
   const sig = readCv(text);
+  const activeRoles = wantedRoles(sig, prefs);
   const step = await stepUpRoles(sig, text, prefs.stepRole);
   const queries = buildQueries(sig, prefs);
-  const allQueries = [...queries, ...buildStepQueries(step, sig, prefs)];
 
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), SEARCH_TIMEOUT_MS);
@@ -467,7 +498,7 @@ async function handler(req, res) {
     board = { listings: { sources: [] }, searches: [], found: 0, failures: [] };
   try {
     [batches, board] = await Promise.all([
-      Promise.allSettled(allQueries.slice(0, 4).map((q) => webSearchWithFallback(key, q, ac.signal))),
+      Promise.allSettled(queries.slice(0, 4).map((q) => webSearchWithFallback(key, q, ac.signal))),
       liveBoards(sig, prefs, step),
     ]);
   } finally {
@@ -477,24 +508,13 @@ async function handler(req, res) {
   const webFailures = batches.filter((b) => b.status === "rejected").map((b) => String(b.reason));
   const failures = [...webFailures, ...board.failures];
 
-  const trackOf = new Map();
-  batches.forEach((b, i) => {
-    if (b.status !== "fulfilled") return;
-    const t = i < queries.length ? "level" : "step";
-    for (const h of b.value || []) {
-      const u = String(h.url || "");
-      if (t === "level" || !trackOf.has(u)) trackOf.set(u, t);
-    }
-  });
-
   const hits = batches.flatMap((b) => (b.status === "fulfilled" ? b.value : []));
   const boardRanked = rankDaily(board.listings, sig, prefs, step);
 
-  // Also rank the shipped daily listings (168 scraped vacancies from AHK, Departer, Charterhouse, Michael Page, Page Executive, LinkedIn)
   const daily = dailyListings();
   const dailyRanked = daily ? rankDaily(daily, sig, prefs, step) : [];
 
-  const searched = [...allQueries, ...board.searches];
+  const searched = [...queries, ...board.searches];
 
   const byUrl = new Map();
   for (const h of hits) {
@@ -505,24 +525,28 @@ async function handler(req, res) {
 
   const webRanked = [...byUrl.values()]
     .map((h) => {
-      const { s, why } = score(h, sig, prefs);
+      const cleanedTitle = boards.cleanJobTitleForMatch(h.title || "Untitled Vacancy");
+      const { s, matchedRole, why } = score({ ...h, title: cleanedTitle }, sig, prefs, activeRoles);
+      if (prefs.strictRoleOnly && !matchedRole) return null;
       const host = hostOf(h.url);
+      const src = detectBoardSource(h.url);
       return {
-        title: h.title || "Untitled Vacancy",
+        title: cleanedTitle,
+        matchedRole: matchedRole || activeRoles[0] || "Executive Role",
         url: h.url,
         snippet: String(h.content || "").slice(0, 380),
         text: String(h.content || ""),
         company: host ? `via ${host}` : "",
         location: places(`${h.title || ""} ${h.content || ""}`)[0] || prefs.location || "UAE / International",
         posted: "live web",
-        source: host,
+        source: src,
         score: s,
-        track: trackOf.get(String(h.url || "")) || "level",
+        track: "level",
         matched: why,
         places: places(`${h.title || ""} ${h.content || ""}`).slice(0, 3),
       };
     })
-    .filter((r) => r.score >= 40);
+    .filter(Boolean);
 
   const merged = new Map();
   for (const r of [...boardRanked, ...webRanked, ...dailyRanked]) {
@@ -530,14 +554,15 @@ async function handler(req, res) {
     merged.set(r.url, r);
   }
 
-  const ranked = [...merged.values()].sort((a, b) => b.score - a.score).slice(0, 30);
+  const ranked = [...merged.values()].sort((a, b) => b.score - a.score).slice(0, 40);
 
-  // Hydrate top LinkedIn results with full job descriptions & printed emails
   await hydrateTopLinkedInMatches(ranked, 5);
 
   res.status(200).json({
     ok: true,
     profile: sig,
+    activeRoles,
+    strictRoleOnly: prefs.strictRoleOnly,
     queries: searched,
     counts: {
       raw: hits.length + board.found + dailyRanked.length,
@@ -554,7 +579,6 @@ async function handler(req, res) {
 module.exports = handler;
 module.exports.readCv = readCv;
 module.exports.buildQueries = buildQueries;
-module.exports.buildStepQueries = buildStepQueries;
 module.exports.stepUpRoles = stepUpRoles;
 module.exports.rankDaily = rankDaily;
 module.exports._setListings = (d) => {

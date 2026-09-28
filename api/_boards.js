@@ -1,24 +1,27 @@
 /**
- * Live Internet Job Boards & Zero-Key Vacancy Scrapers
+ * Live Internet Job Boards & Multi-Source Vacancy Scrapers
  * Shared by:
- *  - POST /api/match (live multi-source CV + Next Promotion Role job matcher)
+ *  - POST /api/match (strict role-locked live multi-board job matcher)
  *  - GET  /api/job-detail (on-demand full job posting & email reader)
- *  - scripts/fetch-listings.mjs (daily scheduled GitHub Actions scraper)
+ *  - scripts/fetch-listings.mjs (scheduled multi-board scraper)
  *
- * Includes:
- *  1. LinkedIn Public Guest Search + Guest Job Detail API (no login/key required)
- *  2. Michael Page UAE & GCC (michaelpage.ae)
- *  3. Page Executive — Director / VP / C-Suite (pageexecutive.com)
- *  4. Charterhouse Middle East (charterhouseme.ae)
- *  5. Departer — The German Headhunter Middle East & DACH (careers.departer.de)
- *  6. AHK VAE — German Emirati Joint Council (vae.ahk.de)
- *  7. Arbeitnow Live Public Job API (European / German / Remote roles with full JD)
- *  8. Remotive Live Public Job API (Global / Remote leadership & specialist roles)
- *  9. DuckDuckGo HTML Open-Web Job Search (zero-key fallback when AISA_API_KEY is unset)
+ * Sources covered:
+ *  1. LinkedIn Public Guest Search + Guest Job Detail API (linkedin.com)
+ *  2. Indeed UAE / GCC / Global (ae.indeed.com / indeed.com)
+ *  3. Dubizzle UAE Jobs (dubai.dubizzle.com / uae.dubizzle.com)
+ *  4. Bayt MENA Jobs (bayt.com)
+ *  5. Naukrigulf Executive Jobs (naukrigulf.com)
+ *  6. GulfTalent UAE & GCC (gulftalent.com)
+ *  7. Michael Page UAE & GCC (michaelpage.ae)
+ *  8. Page Executive — Director / VP / C-Suite (pageexecutive.com)
+ *  9. Charterhouse Middle East (charterhouseme.ae)
+ * 10. Departer — The German Headhunter Middle East & DACH (careers.departer.de)
+ * 11. AHK VAE — German Emirati Joint Council (vae.ahk.de)
+ * 12. Arbeitnow & Remotive Public Job APIs + Open-Web Search
  */
 
 const UA =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
 
 const decode = (s) =>
   String(s || "")
@@ -58,7 +61,7 @@ const first = (re, s) => {
   return m ? m[1] : "";
 };
 
-async function fetchText(url, timeoutMs = 12000) {
+async function fetchText(url, timeoutMs = 11000) {
   const res = await fetch(url, {
     headers: {
       "user-agent": UA,
@@ -86,6 +89,132 @@ function anchors(html, base) {
     out.push({ href: abs, text: text(m[4]) });
   }
   return out;
+}
+
+/* ---------------------------------------------------------------- Strict Role Title Matching Engine */
+
+const ROLE_SYNONYMS = {
+  "general manager": [
+    "general manager",
+    "group general manager",
+    "regional general manager",
+    "country general manager",
+    "divisional general manager",
+    "cluster general manager",
+    "gm ",
+    " gm",
+    "geschäftsführer",
+  ],
+  "managing director": [
+    "managing director",
+    "group managing director",
+    "regional managing director",
+    "executive managing director",
+    "country managing director",
+    "country director",
+    "geschäftsführer",
+    "vorstand",
+  ],
+  "operations director": [
+    "operations director",
+    "director of operations",
+    "director operations",
+    "director - operations",
+    "group operations director",
+    "regional operations director",
+    "vp operations",
+    "vice president operations",
+    "vice president of operations",
+    "head of operations",
+    "plant director",
+    "manufacturing director",
+    "industrial director",
+  ],
+  "chief operating officer": [
+    "chief operating officer",
+    "chief operations officer",
+    "coo",
+    "group coo",
+    "regional coo",
+  ],
+  "chief executive officer": [
+    "chief executive officer",
+    "ceo",
+    "group ceo",
+    "president & ceo",
+  ],
+  "commercial director": [
+    "commercial director",
+    "director of commercial",
+    "chief commercial officer",
+    "cco",
+    "vp commercial",
+    "head of commercial",
+  ],
+  "supply chain director": [
+    "supply chain director",
+    "director of supply chain",
+    "vp supply chain",
+    "head of supply chain",
+    "logistics director",
+    "director of logistics",
+    "procurement director",
+  ],
+  "business development director": [
+    "business development director",
+    "director of business development",
+    "vp business development",
+    "head of business development",
+  ],
+};
+
+const JUNIOR_NOISE =
+  /\b(assistant|asst\.?|junior|jr\.?|intern|internship|trainee|graduate|receptionist|secretary|clerk|cashier|waiter|barista|driver|cleaner|technician|nurse|teacher|tutor)\b/i;
+
+function cleanJobTitleForMatch(rawTitle) {
+  return String(rawTitle || "")
+    .replace(/\s*[|\-–—•]\s*(indeed|dubizzle|linkedin|bayt|gulftalent|naukrigulf|michael page|page executive|charterhouse|departer|glassdoor|monster).*$/i, "")
+    .replace(/\b(job|jobs|vacancy|vacancies|hiring|career|careers)\s+in\s+[a-z\s,]+$/i, "")
+    .trim();
+}
+
+/**
+ * Checks if a job title strictly matches at least one of the user's wanted roles.
+ * Returns the matched canonical role string (e.g. "General Manager") or null if no match.
+ */
+function matchStrictRole(rawTitle, wantedRolesList = []) {
+  const cleaned = cleanJobTitleForMatch(rawTitle);
+  const low = " " + cleaned.toLowerCase().replace(/[^\p{L}\p{N}&]+/gu, " ") + " ";
+  if (JUNIOR_NOISE.test(low)) return null;
+
+  const roles = (wantedRolesList || [])
+    .map((r) => String(r || "").toLowerCase().replace(/\s+/g, " ").trim())
+    .filter((r) => r.length >= 2);
+
+  if (!roles.length) return cleaned;
+
+  for (const role of roles) {
+    const syns = ROLE_SYNONYMS[role] || [role];
+    for (const syn of syns) {
+      const normSyn = " " + syn.toLowerCase().replace(/[^\p{L}\p{N}&]+/gu, " ").trim() + " ";
+      if (low.includes(normSyn)) {
+        return role
+          .split(" ")
+          .map((w) => (w.length <= 3 && /^(gm|md|coo|ceo|cfo|vp)$/i.test(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)))
+          .join(" ");
+      }
+    }
+    // Also check if all significant words in `role` appear in the title
+    const stop = new Set(["of", "and", "the", "for", "in", "at", "to", "a"]);
+    const words = role.split(" ").filter((w) => w.length >= 2 && !stop.has(w));
+    if (words.length >= 2 && words.every((w) => low.includes(" " + w + " ") || low.includes(" " + w + "s "))) {
+      return role
+        .split(" ")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
+    }
+  }
+  return null;
 }
 
 /* ---------------------------------------------------------------- 1. LinkedIn Guest Search & Posting Detail */
@@ -361,9 +490,25 @@ async function fetchRemotive(timeoutMs = 9000) {
   }));
 }
 
-/* ---------------------------------------------------------------- 5. Zero-Key Open Web Vacancy Search (DuckDuckGo HTML) */
+/* ---------------------------------------------------------------- 5. Multi-Engine Open Web Vacancy Search (Bing RSS + Yahoo + DuckDuckGo) */
 
-async function fetchDuckDuckGoJobs(query, timeoutMs = 10000) {
+async function fetchBingRssJobs(query, timeoutMs = 8500) {
+  const url = `https://www.bing.com/search?format=rss&count=12&q=${encodeURIComponent(query)}`;
+  const xml = await fetchText(url, timeoutMs);
+  const out = [];
+  for (const m of String(xml || "").matchAll(/<item>([\s\S]*?)<\/item>/gi)) {
+    const item = m[1];
+    const title = text(first(/<title>([\s\S]*?)<\/title>/i, item));
+    const link = text(first(/<link>([\s\S]*?)<\/link>/i, item));
+    const desc = text(first(/<description>([\s\S]*?)<\/description>/i, item));
+    if (!link || !/^https?:\/\//i.test(link) || !title) continue;
+    if (/bing\.com|microsoft\.com/i.test(link)) continue;
+    out.push({ title, url: link, content: desc });
+  }
+  return out;
+}
+
+async function fetchDuckDuckGoOnly(query, timeoutMs = 8500) {
   const url = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
   const html = await fetchText(url, timeoutMs);
   const out = [];
@@ -371,7 +516,9 @@ async function fetchDuckDuckGoJobs(query, timeoutMs = 10000) {
   for (const b of blocks) {
     const rawHref = first(/class="result__a"[^>]*href="([^"]+)"/i, b);
     const title = text(first(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i, b));
-    const snippet = text(first(/class="result__snippet"[^>]*>([\s\S]*?)<\/a>|class="result__snippet"[^>]*>([\s\S]*?)<\/div>/i, b));
+    const snippet = text(
+      first(/class="result__snippet"[^>]*>([\s\S]*?)<\/a>|class="result__snippet"[^>]*>([\s\S]*?)<\/div>/i, b)
+    );
     let realUrl = rawHref;
     const uddg = /[?&]uddg=([^&]+)/.exec(rawHref);
     if (uddg) {
@@ -381,14 +528,156 @@ async function fetchDuckDuckGoJobs(query, timeoutMs = 10000) {
     }
     if (!realUrl || !/^https?:\/\//i.test(realUrl) || !title) continue;
     if (/duckduckgo\.com/i.test(realUrl)) continue;
-    out.push({
-      title,
-      url: realUrl,
-      content: snippet,
-    });
-    if (out.length >= 10) break;
+    out.push({ title, url: realUrl, content: snippet });
+    if (out.length >= 12) break;
   }
   return out;
+}
+
+async function fetchDuckDuckGoJobs(query, timeoutMs = 9500) {
+  try {
+    const bing = await fetchBingRssJobs(query, timeoutMs);
+    if (bing.length >= 2) return bing;
+  } catch {}
+  try {
+    const ddg = await fetchDuckDuckGoOnly(query, timeoutMs);
+    if (ddg.length) return ddg;
+  } catch {}
+  return [];
+}
+
+/* ---------------------------------------------------------------- 6. Indeed, Dubizzle, Bayt, Naukrigulf & GulfTalent Live Search Connectors */
+
+function parseBaytHtml(html) {
+  const jobs = [];
+  const seen = new Set();
+  for (const a of anchors(html, "https://www.bayt.com")) {
+    const m = /bayt\.com\/en\/[a-z-]+\/jobs\/([a-z0-9-]+-(\d{5,}))\/?/i.exec(a.href);
+    if (!m || seen.has(m[2])) continue;
+    const title = a.text.trim();
+    if (!title || title.length < 5 || /^(apply|view|read more|similar jobs)$/i.test(title)) continue;
+    seen.add(m[2]);
+    const place = MPAGE_PLACE.exec(title + " " + a.href);
+    jobs.push({
+      title: cleanJobTitleForMatch(title),
+      company: "Bayt Verified Employer",
+      location: place ? place[1] : "UAE / GCC",
+      url: a.href.split("?")[0],
+      ref: "BAYT-" + m[2],
+      posted: "live",
+      kind: "page",
+      src: "bayt",
+    });
+  }
+  return jobs;
+}
+
+function parseDubizzleHtml(html) {
+  const jobs = [];
+  const seen = new Set();
+  for (const a of anchors(html, "https://dubai.dubizzle.com")) {
+    const m = /dubizzle\.com\/jobs\/[a-z0-9-]+\/\d{4}\/\d{1,2}\/\d{1,2}\/([a-z0-9-]+)-(\d+)\/?/i.exec(a.href);
+    if (!m || seen.has(m[2])) continue;
+    const title = a.text.trim() || m[1].replace(/-/g, " ");
+    if (!title || title.length < 4) continue;
+    seen.add(m[2]);
+    jobs.push({
+      title: cleanJobTitleForMatch(title),
+      company: "Dubizzle UAE Employer",
+      location: "Dubai, UAE",
+      url: a.href.split("?")[0],
+      ref: "DBZ-" + m[2],
+      posted: "live",
+      kind: "page",
+      src: "dubizzle",
+    });
+  }
+  return jobs;
+}
+
+/**
+ * Fetches live board jobs from Indeed, Dubizzle, Bayt, Naukrigulf, and GulfTalent
+ * for the user's specific roles and location using a dual-path strategy:
+ * direct board scraping + multi-engine index discovery.
+ */
+async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE", timeoutMs = 9500) {
+  const activeRoles = (roles && roles.length ? roles : ["General Manager", "Managing Director", "Operations Director"]).slice(0, 3);
+  const loc = location || "Dubai UAE";
+  const jobs = [];
+  const seenUrls = new Set();
+
+  const addJob = (j) => {
+    if (!j || !j.url || seenUrls.has(j.url)) return;
+    seenUrls.add(j.url);
+    jobs.push(j);
+  };
+
+  if (boardId === "bayt") {
+    for (const r of activeRoles.slice(0, 2)) {
+      try {
+        const baytUrl = `https://www.bayt.com/en/uae/jobs/${slug(r)}-jobs/`;
+        const html = await fetchText(baytUrl, timeoutMs);
+        parseBaytHtml(html).forEach(addJob);
+      } catch {}
+    }
+  }
+
+  if (boardId === "gulftalent") {
+    for (const r of activeRoles.slice(0, 2)) {
+      try {
+        const html = await fetchText(gulfTalentUrl(r), timeoutMs);
+        parseGulfTalent(html).forEach(addJob);
+      } catch {}
+    }
+  }
+
+  if (boardId === "dubizzle") {
+    try {
+      const html = await fetchText("https://dubai.dubizzle.com/jobs/", timeoutMs);
+      parseDubizzleHtml(html).forEach(addJob);
+    } catch {}
+  }
+
+  const siteHostMap = {
+    indeed: { host: "ae.indeed.com", src: "indeed", label: "Indeed UAE" },
+    dubizzle: { host: "dubizzle.com/jobs", src: "dubizzle", label: "Dubizzle Jobs" },
+    bayt: { host: "bayt.com/en/uae/jobs", src: "bayt", label: "Bayt UAE" },
+    naukrigulf: { host: "naukrigulf.com", src: "naukrigulf", label: "Naukrigulf" },
+    gulftalent: { host: "gulftalent.com/uae/jobs", src: "gulftalent", label: "GulfTalent" },
+  };
+
+  const cfg = siteHostMap[boardId];
+  if (cfg && jobs.length < 4) {
+    for (const r of activeRoles.slice(0, 2)) {
+      try {
+        const q = `site:${cfg.host} "${r}" ${loc}`;
+        const hits = await fetchDuckDuckGoJobs(q, timeoutMs);
+        for (const h of hits) {
+          const cleanedTitle = cleanJobTitleForMatch(h.title);
+          if (!cleanedTitle || cleanedTitle.length < 4) continue;
+          const place = MPAGE_PLACE.exec(`${h.title} ${h.content} ${loc}`);
+          addJob({
+            title: cleanedTitle,
+            company: `via ${cfg.label}`,
+            location: place ? place[1] : loc,
+            url: h.url,
+            ref: `${cfg.src.toUpperCase()}-${Math.abs(
+              Array.from(h.url).reduce((a, c) => (a * 31 + c.charCodeAt(0)) | 0, 7)
+            )
+              .toString(36)
+              .slice(0, 6)
+              .toUpperCase()}`,
+            posted: "live",
+            text: h.content || "",
+            kind: "page",
+            src: cfg.src,
+          });
+        }
+      } catch {}
+    }
+  }
+
+  return jobs;
 }
 
 module.exports = {
@@ -398,6 +687,8 @@ module.exports = {
   htmlToLines,
   fetchText,
   anchors,
+  cleanJobTitleForMatch,
+  matchStrictRole,
   linkedInUrl,
   parseLinkedIn,
   linkedInJobId,
@@ -412,4 +703,5 @@ module.exports = {
   fetchArbeitnow,
   fetchRemotive,
   fetchDuckDuckGoJobs,
+  fetchBoardByRoleSearch,
 };
