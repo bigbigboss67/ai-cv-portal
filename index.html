@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career Design Master — Executive & Promotion Workspace (Redesign Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-obsidian: #080E1C;
+    --bg-shell: #0C1528;
+    --bg-card: #111D35;
+    --bg-card-hover: #162442;
+    --bg-elevated: #19294B;
+    --line-subtle: #1F3156;
+    --line-strong: #2C4370;
+
+    --text-primary: #F4F1EA;
+    --text-secondary: #A5B2C6;
+    --text-muted: #6E7E99;
+
+    --brass: #D4AF5A;
+    --brass-bright: #EAD08E;
+    --brass-dim: rgba(212, 175, 90, 0.14);
+    --brass-border: rgba(212, 175, 90, 0.42);
+
+    --emerald: #4E9F76;
+    --emerald-bright: #7CD4A6;
+    --emerald-dim: rgba(78, 159, 118, 0.15);
+    --emerald-border: rgba(78, 159, 118, 0.45);
+
+    --amber: #E09F50;
+    --amber-dim: rgba(224, 159, 80, 0.15);
+    --amber-border: rgba(224, 159, 80, 0.45);
+
+    --coral: #DE6B58;
+    --coral-dim: rgba(222, 107, 88, 0.15);
+    --coral-border: rgba(222, 107, 88, 0.45);
+
+    --paper: #FAF7F0;
+    --paper-ink: #16181D;
+    --paper-muted: #5A5D64;
+    --paper-line: #E2DDD1;
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg-obsidian); color: var(--text-primary); font-family: var(--font-sans); font-size: 14px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; border: none; background: none; }
+
+  /* Subtle ambient background texture */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(80% 50% at 50% 0%, rgba(212, 175, 90, 0.07) 0%, transparent 60%),
+      radial-gradient(60% 50% at 90% 90%, rgba(78, 159, 118, 0.05) 0%, transparent 60%);
+    z-index: 0;
+  }
+
+  .app-shell {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* ================= TOP HEADER & STAGE NAVIGATION ================= */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8, 14, 28, 0.88);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-subtle);
+    padding: 0 28px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-seal {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: 1px solid var(--brass-border);
+    background: linear-gradient(145deg, rgba(212, 175, 90, 0.2), rgba(17, 29, 53, 0.9));
+    display: grid;
+    place-items: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--brass-bright);
+    letter-spacing: 0.04em;
+  }
+  .brand-text b {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+  }
+  .brand-text span {
+    display: block;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  /* 4-Stage Guided Pipeline Navigation (Replaces 10 flat tabs) */
+  .stage-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-shell);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--line-subtle);
+  }
+  .stage-btn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 15px;
+    border-radius: 7px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all 180ms var(--ease-out);
+    position: relative;
+  }
+  .stage-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .stage-btn.active {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+    border: 1px solid var(--brass-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  .stage-num {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+  }
+  .stage-btn.active .stage-num {
+    background: var(--brass-dim);
+    color: var(--brass-bright);
+  }
+  .stage-badge {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    padding: 1px 7px;
+    border-radius: 99px;
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+  }
+  .stage-btn.active .stage-badge {
+    background: var(--brass);
+    color: var(--bg-obsidian);
+    font-weight: 700;
+  }
+
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ================= PROMOTION TRAJECTORY COMMAND BAR ================= */
+  .trajectory-bar {
+    background: linear-gradient(90deg, rgba(17, 29, 53, 0.95) 0%, rgba(22, 36, 66, 0.95) 50%, rgba(17, 29, 53, 0.95) 100%);
+    border-bottom: 1px solid var(--line-subtle);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .traj-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .traj-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    background: rgba(8, 14, 28, 0.65);
+    border: 1px solid var(--line-subtle);
+  }
+  .traj-lbl {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+  .traj-val {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+  .traj-arrow {
+    color: var(--brass);
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .traj-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 12px;
+    border-radius: var(--radius-sm);
+    background: var(--brass-dim);
+    border: 1px solid var(--brass-border);
+  }
+  .traj-select {
+    background: transparent;
+    border: none;
+    color: var(--brass-bright);
+    font-weight: 700;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+  }
+  .traj-select option {
+    background: var(--bg-card);
+    color: var(--text-primary);
+  }
+
+  .traj-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .readiness-meter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .meter-bar {
+    width: 110px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brass), var(--emerald-bright));
+    transition: width 350ms var(--ease-out);
+  }
+  .meter-num {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brass-bright);
+  }
+
+  /* ================= BUTTONS & BADGES ================= */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+    border: 1px solid var(--line-strong);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    transition: all 160ms var(--ease-out);
+  }
+  .btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--text-secondary);
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn-brass {
+    background: var(--brass);
+    border-color: var(--brass);
+    color: var(--bg-obsidian);
+    font-weight: 700;
+  }
+  .btn-brass:hover {
+    background: var(--brass-bright);
+    border-color: var(--brass-bright);
+  }
+  .btn-ghost {
+    background: transparent;
+    border-color: var(--line-subtle);
+    color: var(--text-secondary);
+  }
+  .btn-ghost:hover {
+    color: var(--text-primary);
+    border-color: var(--brass-border);
+  }
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 11.5px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 99px;
+    letter-spacing: 0.03em;
+  }
+  .badge-promo {
+    background: var(--brass-dim);
+    color: var(--brass-bright);
+    border: 1px solid var(--brass-border);
+  }
+  .badge-core {
+    background: var(--emerald-dim);
+    color: var(--emerald-bright);
+    border: 1px solid var(--emerald-border);
+  }
+  .badge-warn {
+    background: var(--amber-dim);
+    color: var(--amber);
+    border: 1px solid var(--amber-border);
+  }
+  .badge-crit {
+    background: var(--coral-dim);
+    color: var(--coral);
+    border: 1px solid var(--coral-border);
+  }
+
+  /* ================= MAIN WORKSPACE CONTAINER ================= */
+  .workspace {
+    flex: 1;
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 28px 60px;
+  }
+
+  .stage-pane {
+    display: none;
+    animation: fadeIn 240ms var(--ease-out);
+  }
+  .stage-pane.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ================= CARDS & PANELS ================= */
+  .panel {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .panel-header {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.015);
+  }
+  .panel-title {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-body {
+    padding: 18px;
+  }
+
+  /* ================= STAGE 1: CV & PROMOTION STUDIO ================= */
+  .studio-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (max-width: 1120px) {
+    .studio-grid { grid-template-columns: 1fr; }
+  }
+
+  .intake-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(212, 175, 90, 0.12), rgba(17, 29, 53, 0.92));
+    border: 1px dashed var(--brass-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 18px;
+  }
+  .intake-banner h3 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .intake-banner p {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-top: 2px;
+  }
+
+  /* Promotion Gap Bridge */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .pillar-card {
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line-subtle);
+    background: rgba(8, 14, 28, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .pillar-card.pass {
+    border-left: 3px solid var(--emerald);
+  }
+  .pillar-card.gap {
+    border-left: 3px solid var(--amber);
+    background: rgba(224, 159, 80, 0.06);
+  }
+  .pillar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+  .pillar-ev {
+    font-size: 11.5px;
+    color: var(--text-secondary);
+  }
+
+  .unlock-box {
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    background: rgba(212, 175, 90, 0.08);
+    border: 1px solid var(--brass-border);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .unlock-box h4 {
+    font-size: 13px;
+    color: var(--brass-bright);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .unlock-input-row {
+    display: flex;
+    gap: 8px;
+  }
+  .input-field {
+    flex: 1;
+    background: var(--bg-obsidian);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    padding: 9px 12px;
+    font-size: 13px;
+    color: var(--text-primary);
+    outline: none;
+  }
+  .input-field:focus {
+    border-color: var(--brass);
+  }
+
+  /* CV Reviewer Checklist */
+  .checklist-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .chk-item {
+    padding: 13px 15px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line-subtle);
+    background: rgba(8, 14, 28, 0.45);
+    margin-bottom: 10px;
+  }
+  .chk-item.crit { border-left: 3px solid var(--coral); }
+  .chk-item.warn { border-left: 3px solid var(--amber); }
+  .chk-item.pass { border-left: 3px solid var(--emerald); }
+  .chk-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .chk-head b { font-size: 13px; }
+  .rewrite-diff {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: var(--bg-obsidian);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .diff-before {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--coral);
+  }
+  .diff-after {
+    color: var(--emerald-bright);
+    font-weight: 500;
+  }
+
+  /* Live Rendered CV Sheet */
+  .sheet-sticky {
+    position: sticky;
+    top: 84px;
+  }
+  .sheet-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .seg-group {
+    display: inline-flex;
+    background: var(--bg-shell);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+  }
+  .seg-btn {
+    padding: 5px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: 4px;
+  }
+  .seg-btn.active {
+    background: var(--bg-card-hover);
+    color: var(--brass-bright);
+  }
+
+  .cv-sheet {
+    background: var(--paper);
+    color: var(--paper-ink);
+    border-radius: 6px;
+    padding: 40px 44px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+    transition: all 240ms var(--ease-out);
+  }
+  .cv-sheet.theme-dossier {
+    background: #0B1630;
+    color: #F4F1E8;
+    border: 1px solid var(--brass-border);
+  }
+  .cv-sheet.theme-dossier .cv-hdr { border-bottom-color: var(--brass); }
+  .cv-sheet.theme-dossier .cv-role-tag { color: var(--brass-bright); }
+  .cv-sheet.theme-dossier .cv-sec-title { color: var(--brass); border-bottom-color: #233459; }
+  .cv-sheet.theme-dossier .cv-meta,
+  .cv-sheet.theme-dossier .cv-co,
+  .cv-sheet.theme-dossier .cv-date { color: #9DA6BA; }
+  .cv-sheet.theme-dossier .cv-sum,
+  .cv-sheet.theme-dossier .cv-bullets li { color: #DCE0E9; }
+
+  .cv-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--paper-ink);
+    margin-bottom: 18px;
+  }
+  .cv-name {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .cv-role-tag {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #986C1F;
+    margin-top: 6px;
+    font-weight: 600;
+  }
+  .cv-meta {
+    text-align: right;
+    font-size: 11px;
+    color: var(--paper-muted);
+    line-height: 1.6;
+  }
+  .cv-sec { margin-bottom: 18px; }
+  .cv-sec-title {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--paper-muted);
+    border-bottom: 1px solid var(--paper-line);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .cv-sum {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--paper-ink);
+  }
+  .cv-job { margin-bottom: 14px; }
+  .cv-job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .cv-job-title {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .cv-date {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--paper-muted);
+  }
+  .cv-co {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--paper-muted);
+    margin-bottom: 5px;
+  }
+  .cv-bullets {
+    padding-left: 16px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+  .cv-bullets li { margin-bottom: 4px; }
+  .cv-bullets li.promoted-bullet {
+    font-weight: 600;
+    position: relative;
+  }
+  .promo-inline-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: rgba(212, 175, 90, 0.22);
+    color: #8A6214;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .cv-sheet.theme-dossier .promo-inline-tag {
+    color: var(--brass-bright);
+  }
+
+  /* ================= STAGE 2: JOB & PROMOTION RADAR ================= */
+  .radar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+  }
+  .track-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .track-pill {
+    padding: 8px 15px;
+    border-radius: 99px;
+    font-size: 12.5px;
+    font-weight: 600;
+    border: 1px solid var(--line-subtle);
+    color: var(--text-secondary);
+    background: var(--bg-obsidian);
+    transition: all 160ms ease;
+  }
+  .track-pill.active {
+    border-color: var(--brass);
+    background: var(--brass-dim);
+    color: var(--brass-bright);
+  }
+
+  .radar-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+    align-items: start;
+  }
+  @media (max-width: 1100px) {
+    .radar-grid { grid-template-columns: 1fr; }
+  }
+
+  .job-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-left: 3px solid var(--line-strong);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 180ms var(--ease-out);
+  }
+  .job-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--line-strong);
+  }
+  .job-card.selected {
+    background: var(--bg-card-hover);
+    border-color: var(--brass-border);
+    border-left: 4px solid var(--brass);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+  .job-card.is-promo {
+    border-left-color: var(--brass);
+  }
+  .job-card.is-core {
+    border-left-color: var(--emerald);
+  }
+
+  .job-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .job-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  .job-card-sub {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+  .score-ring {
+    min-width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(8, 14, 28, 0.7);
+    border: 1px solid var(--brass-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+  }
+  .score-ring b {
+    font-size: 16px;
+    color: var(--brass-bright);
+    line-height: 1.1;
+  }
+  .score-ring span {
+    font-size: 9px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+  .promo-why-strip {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    background: rgba(212, 175, 90, 0.08);
+    border: 1px solid rgba(212, 175, 90, 0.25);
+    font-size: 12px;
+    color: var(--brass-bright);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .kw-tag {
+    font-size: 11px;
+    padding: 3px 9px;
+    border-radius: 99px;
+    font-family: var(--font-mono);
+  }
+  .kw-tag.hit {
+    background: var(--emerald-dim);
+    color: var(--emerald-bright);
+    border: 1px solid var(--emerald-border);
+  }
+  .kw-tag.gap {
+    background: transparent;
+    color: var(--amber);
+    border: 1px dashed var(--amber-border);
+  }
+
+  /* Swap card inside Inspector */
+  .swap-card {
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: rgba(8, 14, 28, 0.6);
+    border: 1px solid var(--line-subtle);
+    margin-top: 10px;
+  }
+
+  /* ================= STAGE 3: TAILORED APPLICATION STUDIO ================= */
+  .draft-grid {
+    display: grid;
+    grid-template-columns: 1fr 370px;
+    gap: 24px;
+    align-items: start;
+  }
+  @media (max-width: 1120px) {
+    .draft-grid { grid-template-columns: 1fr; }
+  }
+  .letter-para {
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+    transition: background 150ms ease;
+  }
+  .letter-para:hover {
+    background: rgba(212, 175, 90, 0.12);
+  }
+  .letter-para.forward-bridge {
+    background: rgba(212, 175, 90, 0.15);
+    border-left-color: #B38622;
+  }
+  .para-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8A6214;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .cv-sheet.theme-dossier .para-label {
+    color: var(--brass-bright);
+  }
+
+  /* ================= STAGE 4: PIPELINE TRACKER ================= */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 800px) {
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  .kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+  }
+  .kpi-card b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 38px;
+    line-height: 1;
+    color: var(--brass-bright);
+  }
+  .kpi-card span {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tracker-table th {
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+  .tracker-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line-subtle);
+    font-size: 13px;
+  }
+  .tracker-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  /* ================= MODAL FOR CUSTOM CV PASTE / UPLOAD ================= */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(4, 8, 18, 0.82);
+    backdrop-filter: blur(8px);
+    z-index: 300;
+    display: none;
+    place-items: center;
+    padding: 20px;
+  }
+  .modal-backdrop.open {
+    display: grid;
+  }
+  .modal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--brass-border);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 680px;
+    padding: 24px;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+  }
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+  <!-- TOP HEADER WITH 4-STAGE GUIDED WORKFLOW -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-seal">MH</div>
+      <div class="brand-text">
+        <b id="navCandidateName">Marcus Haller</b>
+        <span id="navCandidateSub">Executive Dossier · 24 yrs · GCC &amp; DACH</span>
+      </div>
+    </div>
+
+    <nav class="stage-nav" aria-label="Portal workflow stages">
+      <button class="stage-btn active" data-stage="studio">
+        <span class="stage-num">01</span>
+        <span>CV &amp; Promotion Studio</span>
+        <span class="stage-badge" id="badgeStudio">83%</span>
+      </button>
+      <button class="stage-btn" data-stage="radar">
+        <span class="stage-num">02</span>
+        <span>Job &amp; Promotion Radar</span>
+        <span class="stage-badge" id="badgeRadar">8</span>
+      </button>
+      <button class="stage-btn" data-stage="draft">
+        <span class="stage-num">03</span>
+        <span>Tailored Application</span>
+        <span class="stage-badge" id="badgeDraft">91</span>
+      </button>
+      <button class="stage-btn" data-stage="tracker">
+        <span class="stage-num">04</span>
+        <span>Pipeline &amp; Outreach</span>
+        <span class="stage-badge" id="badgeTracker">5</span>
+      </button>
+    </nav>
+
+    <div class="top-actions">
+      <button class="btn btn-ghost btn-sm" id="btnOpenCvModal">↑ Load / Paste My CV</button>
+      <button class="btn btn-ghost btn-sm" id="btnToggleDossier">✦ Public Dossier View</button>
+    </div>
+  </header>
+
+  <!-- PERSISTENT CAREER TRAJECTORY & PROMOTION BAR -->
+  <div class="trajectory-bar">
+    <div class="traj-left">
+      <div class="traj-pill">
+        <span class="traj-lbl">Detected Rung</span>
+        <span class="traj-val" id="currentRungLabel">Managing Director / Business Unit Head</span>
+      </div>
+      <span class="traj-arrow">→</span>
+      <div class="traj-select-wrap">
+        <span class="traj-lbl" style="color:var(--brass-bright)">🚀 Next Promotion Target</span>
+        <select class="traj-select" id="promoTargetSelect" aria-label="Select target promotion role">
+          <option value="group_ceo">Group Chief Executive Officer (CEO) — +1 Rung Step-Up</option>
+          <option value="regional_md">Regional Managing Director (MEA / GCC) — +1 Rung Step-Up</option>
+          <option value="coo_dev">Chief Operating Officer (Real Estate / Multi-Site) — +1 Rung Step-Up</option>
+          <option value="cso_holding">Chief Strategy Officer (Diversified Holding) — +1 Rung Step-Up</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="traj-right">
+      <div class="readiness-meter">
+        <span class="traj-lbl">Promotion Evidence Readiness</span>
+        <div class="meter-bar"><div class="meter-fill" id="promoMeterFill" style="width: 83%"></div></div>
+        <span class="meter-num" id="promoMeterText">83% (5/6 Pillars)</span>
+      </div>
+      <button class="btn btn-brass btn-sm" id="btnJumpToPromoJobs">Find Step-Up Jobs →</button>
+    </div>
+  </div>
+
+  <!-- MAIN WORKSPACE -->
+  <main class="workspace">
+
+    <!-- =====================================================================
+         STAGE 1: CV & PROMOTION STUDIO (Unifies apply.html + Profile + Builder + Review)
+         ===================================================================== -->
+    <section class="stage-pane active" id="stage-studio">
+      <div class="intake-banner">
+        <div>
+          <h3>Your CV, Audited for Your Next Promotion</h3>
+          <p>100% browser-local parsing (PDF, DOCX headers/footers, LinkedIn ZIP). Zero invented metrics — every promotion gap below is bridged using your own verified numbers.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-brass" id="btnBannerUpload">Drop CV / LinkedIn Export</button>
+        </div>
+      </div>
+
+      <div class="studio-grid">
+        <!-- LEFT COLUMN: Promotion Gap Bridge + /cv-reviewer Checklist -->
+        <div style="display:flex;flex-direction:column;gap:18px">
+
+          <!-- Promotion Gap Bridge Card -->
+          <div class="panel">
+            <div class="panel-header">
+              <span class="panel-title">🚀 Next Promotion Gap Bridge (`coach.js` Ladder Engine)</span>
+              <span class="badge badge-promo" id="bridgeTargetBadge">Target: Group CEO</span>
+            </div>
+            <div class="panel-body">
+              <p style="font-size:12.5px;color:var(--text-secondary);margin-bottom:14px">
+                Screeners hiring for <b style="color:var(--text-primary)" id="bridgeRoleName">Group Chief Executive Officer</b> look for 6 executive pillars. Your CV already proves 5 of 6:
+              </p>
+
+              <div class="pillars-grid" id="pillarsGrid"></div>
+
+              <div class="unlock-box" id="unlockBox">
+                <h4>⚡ Unlock Missing Promotion Pillar: Capital Allocation / M&amp;A / Investor Relations</h4>
+                <p style="font-size:12px;color:var(--text-secondary)">
+                  Your CV mentions board chairing and P&amp;L ownership, but does not state a verified figure for <b>capital raised, debt/equity structured, or CapEx deployed</b>. Add one verified fact to reach <b>96% Promotion Readiness</b>:
+                </p>
+                <div class="unlock-input-row">
+                  <input type="text" class="input-field" id="unlockMetricInput" value="Structured AED 42M in trade finance and CapEx facilities across 3 regional subsidiaries">
+                  <button class="btn btn-brass" id="btnUnlockPillar">Add Verified Bullet →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- /cv-reviewer Severity-Tiered Checklist -->
+          <div class="panel">
+            <div class="panel-header">
+              <span class="panel-title">📋 `/cv-reviewer` Best-Practice Audit</span>
+              <div class="checklist-tabs" style="margin:0">
+                <button class="btn btn-sm" data-chkfilter="all">All (7)</button>
+                <button class="btn btn-sm" data-chkfilter="crit" style="color:var(--coral)">🟥 Critical (1)</button>
+                <button class="btn btn-sm" data-chkfilter="warn" style="color:var(--amber)">⚠️ Warnings (2)</button>
+                <button class="btn btn-sm" data-chkfilter="pass" style="color:var(--emerald-bright)">✅ Passed (4)</button>
+              </div>
+            </div>
+            <div class="panel-body" id="cvReviewerList"></div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Live Rendered CV Sheet -->
+        <div class="sheet-sticky">
+          <div class="sheet-toolbar">
+            <div class="seg-group" id="themeSwitcher">
+              <button class="seg-btn active" data-theme="parchment">Parchment (ATS Safe)</button>
+              <button class="seg-btn" data-theme="dossier">Executive Dossier (Navy/Brass)</button>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-sm" id="btnExportYaml">Export RenderCV YAML</button>
+              <button class="btn btn-brass btn-sm" onclick="window.print()">Print / Save PDF</button>
+            </div>
+          </div>
+
+          <div class="cv-sheet" id="liveCvSheet"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 2: JOB & PROMOTION RADAR (Unifies Search + Match + Targets + Globe)
+         ===================================================================== -->
+    <section class="stage-pane" id="stage-radar">
+      <div class="radar-controls">
+        <div class="track-pills" id="radarTrackFilter">
+          <button class="track-pill active" data-track="all">All Matches (6)</button>
+          <button class="track-pill" data-track="promo">🚀 Next Promotion / Step-Up Roles (4)</button>
+          <button class="track-pill" data-track="core">🎯 Core Level Fit (2)</button>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <input type="text" class="input-field" id="radarSearchInput" placeholder="Filter by keyword, city, or sector…" style="width:240px;padding:7px 12px">
+        </div>
+      </div>
+
+      <div class="radar-grid">
+        <!-- Left: Ranked Job Cards -->
+        <div id="radarJobList"></div>
+
+        <!-- Right: Deep JD Analysis & Promotion Stretch Inspector -->
+        <div class="panel sheet-sticky" id="radarInspector"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 3: TAILORED APPLICATION STUDIO (Unifies Draft + Application Review)
+         ===================================================================== -->
+    <section class="stage-pane" id="stage-draft">
+      <div class="draft-grid">
+        <!-- Left: Tailored Cover Letter & CV with Forward Bridge Highlight -->
+        <div>
+          <div class="sheet-toolbar">
+            <div class="seg-group" id="draftDocToggle">
+              <button class="seg-btn active" data-doc="both">Cover Letter + Tailored CV</button>
+              <button class="seg-btn" data-doc="letter">Cover Letter Only</button>
+              <button class="seg-btn" data-doc="cv">Tailored CV Only</button>
+            </div>
+            <div class="seg-group" id="draftLangToggle">
+              <button class="seg-btn active" data-lang="EN">English (EN)</button>
+              <button class="seg-btn" data-lang="DE">Deutsch (DE)</button>
+              <button class="seg-btn" data-lang="AR">العربية (AR)</button>
+            </div>
+          </div>
+
+          <div id="draftSheetsContainer" style="display:flex;flex-direction:column;gap:22px"></div>
+        </div>
+
+        <!-- Right: Live Readiness Scorecard + 6-Second Scan + Send Gate -->
+        <div class="sheet-sticky" style="display:flex;flex-direction:column;gap:16px" id="draftRightRail"></div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         STAGE 4: PIPELINE & OUTREACH TRACKER
+         ===================================================================== -->
+    <section class="stage-pane" id="stage-tracker">
+      <div class="kpi-row">
+        <div class="kpi-card"><b>6</b><span>Matched Roles in Pipeline</span></div>
+        <div class="kpi-card"><b>4</b><span>🚀 Step-Up Promotion Roles</span></div>
+        <div class="kpi-card"><b>2</b><span>Active Interviews / Replies</span></div>
+        <div class="kpi-card"><b style="color:var(--amber)">1</b><span>Follow-Up Nudge Due (&gt;14d)</span></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">📊 Application &amp; Executive Search Pipeline</span>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-sm" id="btnSimulateReply">✉ Simulate Incoming Recruiter Reply (.eml)</button>
+          </div>
+        </div>
+        <div class="panel-body" style="padding:0">
+          <table class="tracker-table" id="trackerTable"></table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- MODAL: LOAD / PASTE CUSTOM CV OR PREVIEW DOSSIER -->
+<div class="modal-backdrop" id="cvModal">
+  <div class="modal-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <h3 style="font-family:var(--font-display);font-size:24px">Load or Paste Your CV</h3>
+      <button class="btn btn-sm" id="btnCloseCvModal">✕ Close</button>
+    </div>
+    <p style="font-size:12.5px;color:var(--text-secondary);margin-bottom:12px">
+      Paste your CV text or summary + bullets below. The portal will detect your current rung, calculate your <b>Next Promotion Role</b> readiness, and re-score all vacancies live.
+    </p>
+    <textarea class="input-field" id="customCvTextarea" rows="8" style="width:100%;margin-bottom:14px;font-family:var(--font-mono);font-size:12px" placeholder="Paste your CV text here (Name, Title, Experience bullets with metrics)..."></textarea>
+    <div style="display:flex;justify-content:flex-end;gap:10px">
+      <button class="btn btn-ghost" id="btnResetDemoCv">Reset to Executive Demo Profile</button>
+      <button class="btn btn-brass" id="btnParseCustomCv">Analyze CV &amp; Find Promotion Roles →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  /* ---------------- STATE ---------------- */
+  const STATE = {
+    stage: 'studio',
+    promoTarget: 'group_ceo',
+    capitalUnlocked: false,
+    chkFilter: 'all',
+    cvTheme: 'parchment',
+    radarTrack: 'all',
+    radarQuery: '',
+    selectedJobId: 'j1',
+    draftDoc: 'both',
+    draftLang: 'EN',
+    swapsApplied: { j1: false, j2: false },
+    bulletRewriteApplied: false,
+    profile: {
+      name: 'Marcus Haller',
+      headline: 'Managing Director & Regional P&L Operator · GCC & DACH',
+      city: 'Dubai, UAE',
+      email: 'm.haller@executive-dossier.ae',
+      phone: '+971 50 842 1940',
+      workRights: 'German Passport (EU) · UAE Golden Visa',
+      langs: 'German (Native) · Arabic (Native) · English (Fluent)',
+      summary: 'Managing Director and operational turnaround leader with 24 years of experience scaling trading desks, media groups, and multi-site fleet operations across the UAE and Central Europe. Proven record leading up to 250 staff, chairing corporate boards, and driving full regional P&L growth.',
+      experience: [
+        {
+          title: 'Independent Executive Advisor',
+          company: 'Gulf & DACH Industrial Mandates · Dubai',
+          dates: 'Jan 2014 – Present',
+          bullets: [
+            'Advised 14 European mid-cap groups on UAE & Saudi market entry, commercial distribution, and operational turnaround',
+            'Cut supply-chain and distribution overhead by 22% across 3 regional trading mandates within 12 months',
+            'Responsible for managing stakeholder relationships and commercial negotiations across GCC markets'
+          ]
+        },
+        {
+          title: 'Founder & Managing Director',
+          company: 'Meridian Heavy Trading LLC · Dubai',
+          dates: 'Mar 2009 – Dec 2013',
+          bullets: [
+            'Built a building-materials and heavy-machinery trading business from first shipment to AED 68M annual regional turnover',
+            'Negotiated 6 exclusive DACH & European manufacturer distribution agreements covering the UAE, Qatar, and Oman'
+          ]
+        },
+        {
+          title: 'Managing Director & Board Chair',
+          company: 'Northgate Media & Publishing Group',
+          dates: 'Jun 2006 – Feb 2009',
+          bullets: [
+            'Directed a multi-site broadcast and publishing organization of 250 staff with full group P&L accountability',
+            'Chaired the executive board and restructured 4 underperforming business units, lifting EBITDA margin by 15%'
+          ]
+        }
+      ],
+      education: 'Kaufmann im Groß- und Außenhandel — IHK Chamber of Commerce, Germany',
+      skills: ['P&L Ownership', 'Market Entry (GCC & DACH)', 'Turnaround & Restructuring', 'Board Governance', '250+ Team Leadership', 'Contract Negotiation', 'Distribution & Logistics', 'AI Workflow Automation']
+    }
+  };
+
+  const PROMO_TARGETS = {
+    group_ceo: {
+      title: 'Group Chief Executive Officer (CEO)',
+      pillars: [
+        { id: 'pl', name: 'Full P&L Ownership', pass: true, ev: 'Evidenced: AED 68M turnover & group P&L' },
+        { id: 'board', name: 'Board & Shareholder Governance', pass: true, ev: 'Evidenced: Chaired board at Northgate Media' },
+        { id: 'scale', name: 'Organization Scale (100+ Staff)', pass: true, ev: 'Evidenced: Led 250 staff across multiple units' },
+        { id: 'multi', name: 'Multi-Market GCC & EU Track Record', pass: true, ev: 'Evidenced: UAE, Qatar, Oman & DACH' },
+        { id: 'change', name: 'Turnaround & Restructuring', pass: true, ev: 'Evidenced: +15% EBITDA turnaround & -22% opex' },
+        { id: 'capital', name: 'Capital Allocation / M&A / Debt-Equity', pass: false, ev: 'Missing metric: Add CapEx, M&A, or facility size' }
+      ]
+    },
+    regional_md: {
+      title: 'Regional Managing Director (MEA / GCC)',
+      pillars: [
+        { id: 'pl', name: 'Regional Multi-Country P&L', pass: true, ev: 'Evidenced: AED 68M across UAE, Qatar & Oman' },
+        { id: 'scale', name: 'Multi-Site Team Leadership', pass: true, ev: 'Evidenced: 250 staff & regional branch network' },
+        { id: 'multi', name: 'Cross-Border Market Entry', pass: true, ev: 'Evidenced: 14 EU-to-GCC market entries' },
+        { id: 'board', name: 'HQ & Board Reporting', pass: true, ev: 'Evidenced: Board chair & principal reporting' },
+        { id: 'change', name: 'Distributor & Supplier Network', pass: true, ev: 'Evidenced: 6 exclusive European supply agreements' },
+        { id: 'capital', name: 'Trade Finance & Working Capital', pass: false, ev: 'Optional boost: State working-capital line size' }
+      ]
+    },
+    coo_dev: {
+      title: 'Chief Operating Officer (Multi-Site / Real Estate)',
+      pillars: [
+        { id: 'pl', name: 'Operational P&L & Cost Control', pass: true, ev: 'Evidenced: -22% overhead & +15% EBITDA' },
+        { id: 'scale', name: 'Department Heads & 200+ Staff', pass: true, ev: 'Evidenced: 250 staff across broadcast & trade' },
+        { id: 'change', name: 'Process & Turnaround Execution', pass: true, ev: 'Evidenced: Restructured 4 business units' },
+        { id: 'board', name: 'Governance & KPI Architecture', pass: true, ev: 'Evidenced: Board-level governance & reporting' },
+        { id: 'multi', name: 'Contractor & Supply Chain', pass: true, ev: 'Evidenced: Heavy equipment & building materials' },
+        { id: 'capital', name: 'Project CapEx / Feasibility Oversight', pass: false, ev: 'Missing metric: State project CapEx size' }
+      ]
+    },
+    cso_holding: {
+      title: 'Chief Strategy Officer (Diversified Holding)',
+      pillars: [
+        { id: 'board', name: 'Board & Chairman Advisory', pass: true, ev: 'Evidenced: 14 mandates + Board Chair' },
+        { id: 'multi', name: 'New Vertical Market Entry', pass: true, ev: 'Evidenced: GCC & European expansion' },
+        { id: 'change', name: 'Portfolio Restructuring', pass: true, ev: 'Evidenced: 4 units restructured (+15% EBITDA)' },
+        { id: 'pl', name: 'Commercial Feasibility & P&L', pass: true, ev: 'Evidenced: Built AED 68M desk from zero' },
+        { id: 'scale', name: 'Trilingual Stakeholder Negotiation', pass: true, ev: 'Evidenced: Native DE & AR, Fluent EN' },
+        { id: 'capital', name: 'Investor Relations & Capital Allocation', pass: false, ev: 'Missing metric: Add equity/debt investment figure' }
+      ]
+    }
+  };
+
+  const JOBS = [
+    {
+      id: 'j1',
+      title: 'Chief Executive Officer — B2B Engineering & Trading Group',
+      company: 'Confidential Family Group via The Greater Change',
+      city: 'Sharjah / Dubai, UAE',
+      track: 'promo',
+      rungDelta: '+1 Rung Promotion (MD → Group CEO)',
+      baseScore: 91,
+      stage: 'interview',
+      posted: '3 days ago',
+      PromoWhy: 'Your 250-staff leadership at Northgate + AED 68M trading P&L at Meridian exceed their 30-year B2B transformation mandate.',
+      mustHaves: ['Full P&L Accountability', 'Operational Turnaround', 'Governance & Board Reporting', 'B2B Pipeline Conversion'],
+      hits: ['P&L Ownership (AED 68M)', 'Turnaround (+15% EBITDA)', '250 Staff Leadership', 'Board Governance'],
+      gaps: ['Capital / M&A Facility Size'],
+      swap: {
+        from: 'Cut supply-chain and distribution overhead by 22% across 3 regional trading mandates',
+        to: 'Drove operational excellence and cut distribution overhead by 22% across 3 regional trading mandates',
+        term: 'operational excellence'
+      },
+      jdSummary: 'Full accountability for performance, governance, and profitability of an established 30-year B2B engineering and trading group. Lead transformation into a process-driven organization, install executive reporting, and convert strategic commercial pipeline.'
+    },
+    {
+      id: 'j2',
+      title: 'Chief Strategy Officer — Diversified GCC Holding',
+      company: 'Al Mirqab Holding',
+      city: 'Dubai, UAE',
+      track: 'promo',
+      rungDelta: '+1 Rung Promotion (Advisor/MD → C-Suite CSO)',
+      baseScore: 89,
+      stage: 'applied',
+      posted: '2 days ago',
+      PromoWhy: 'Rare trilingual (German/Arabic/English) fit + board chairing + real estate/media subsidiary turnaround.',
+      mustHaves: ['Group Strategy & Market Entry', 'Board Stakeholder Management', 'Investor Relations', 'Arabic + English Fluency'],
+      hits: ['Market Entry (14 Mandates)', 'Board Governance', 'Arabic & English Native/Fluent', 'Media & Trading P&L'],
+      gaps: ['Investor Relations / Capital Structuring'],
+      swap: {
+        from: 'Advised 14 European mid-cap groups on UAE & Saudi market entry',
+        to: 'Led group strategy and GCC market entry for 14 European mid-cap groups',
+        term: 'group strategy'
+      },
+      jdSummary: 'Lead group strategy, market entry into new GCC verticals, investor relations, and board-level stakeholder management across real estate, trading, and media subsidiaries.'
+    },
+    {
+      id: 'j3',
+      title: 'Chief Operating Officer — Luxury Real Estate Developer',
+      company: 'Confidential Developer via Guildhall Executive',
+      city: 'Dubai, UAE',
+      track: 'promo',
+      rungDelta: '+1 Rung Promotion (Unit MD → Group COO)',
+      baseScore: 87,
+      stage: 'draft',
+      posted: '5 days ago',
+      PromoWhy: 'Pulls sales, finance, construction supply, and operations under one framework — matches your 250-person multi-department scale.',
+      mustHaves: ['Multi-Department COO Oversight', 'Western/European Leadership Discipline', 'Full Operational P&L', 'Construction / Property Exposure'],
+      hits: ['European + GCC Leadership', '250-Staff Multi-Unit Scale', 'Building Materials & Supply Chain', 'Full P&L'],
+      gaps: [],
+      swap: null,
+      jdSummary: 'Unify sales, marketing, finance, construction, customer care, technology, and HR under one operating framework for a premier Dubai developer, holding department heads accountable.'
+    },
+    {
+      id: 'j4',
+      title: 'Vice President — Regional Operations & Head of MEA Sales',
+      company: 'DACH Building Materials Group via Departer',
+      city: 'Dubai, UAE',
+      track: 'promo',
+      rungDelta: 'Regional VP Mandate (MEA)',
+      baseScore: 94,
+      stage: 'interview',
+      posted: '1 week ago',
+      PromoWhy: 'Direct bullseye: German headhunter mandate requiring native German, building-materials P&L, and MEA distributor network.',
+      mustHaves: ['MEA Regional P&L', 'Building Materials Sector', 'German + English Fluency', '25+ Regional Staff'],
+      hits: ['Building Materials (Meridian)', 'Native German + Arabic + English', 'MEA Distributor Network', 'Regional P&L'],
+      gaps: [],
+      swap: null,
+      jdSummary: 'Regional leadership for a German building-materials group across the Middle East and Africa. Lead a multi-market organization, manage distributors and developers, and own the regional P&L.'
+    },
+    {
+      id: 'j5',
+      title: 'Managing Director — Mobility & Corporate Fleet UAE',
+      company: 'Emirates Drive Group',
+      city: 'Dubai, UAE',
+      track: 'core',
+      rungDelta: 'Core Level Fit (Managing Director)',
+      baseScore: 95,
+      stage: 'applied',
+      posted: '4 days ago',
+      PromoWhy: 'High-conversion lateral match: 120-staff multi-station P&L and B2B fleet contracts match your Continental Mobility + MD background.',
+      mustHaves: ['Full UAE P&L & Operations', '120+ Staff Leadership', 'B2B Corporate Fleet Contracts', 'Cost Control'],
+      hits: ['250 Staff Leadership', 'Regional Fleet & Branch P&L', 'B2B Contract Negotiation', 'Cost Control (-22%)'],
+      gaps: [],
+      swap: null,
+      jdSummary: 'Full P&L and operations responsibility for UAE car rental and chauffeur group. Lead 120 staff across stations and negotiate enterprise B2B fleet agreements.'
+    },
+    {
+      id: 'j6',
+      title: 'Senior Executive Advisor — German-Emirati Joint Council (AHK)',
+      company: 'AHK UAE / German Emirati Joint Council',
+      city: 'Dubai, UAE',
+      track: 'core',
+      rungDelta: 'Core Level Fit (Executive Advisory)',
+      baseScore: 96,
+      stage: 'ack',
+      posted: '5 days ago',
+      PromoWhy: '96% match: Native German + Arabic + 14 DACH-to-GCC market entry mandates.',
+      mustHaves: ['Native German + Arabic + English', 'GCC Market Entry Advisory', 'C-Level Network in UAE', 'Contract & Partner Structuring'],
+      hits: ['Native DE + AR + Fluent EN', '14 Market Entry Mandates', 'IHK Kaufmann + 24 Yrs', 'Contract Structuring'],
+      gaps: [],
+      swap: null,
+      jdSummary: 'Support German Mittelstand companies entering the UAE and Gulf region with market analysis, regulatory advisory, partner search, and executive workshops.'
+    }
+  ];
+
+  /* ---------------- RENDER HELPERS ---------------- */
+  function getTargetObj() {
+    const base = JSON.parse(JSON.stringify(PROMO_TARGETS[STATE.promoTarget]));
+    if (STATE.capitalUnlocked) {
+      base.pillars.forEach(p => {
+        if (p.id === 'capital') {
+          p.pass = true;
+          p.ev = 'Evidenced: AED 42M trade finance & CapEx structured';
+        }
+      });
+    }
+    return base;
+  }
+
+  function getJobScore(j) {
+    let s = j.baseScore;
+    if (STATE.capitalUnlocked && j.gaps.length) s = Math.min(98, s + 5);
+    if (STATE.swapsApplied[j.id]) s = Math.min(99, s + 2);
+    if (STATE.bulletRewriteApplied) s = Math.min(99, s + 1);
+    return s;
+  }
+
+  function renderAll() {
+    // Update stage buttons
+    document.querySelectorAll('.stage-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.stage === STATE.stage);
+    });
+    document.querySelectorAll('.stage-pane').forEach(p => {
+      p.classList.toggle('active', p.id === 'stage-' + STATE.stage);
+    });
+
+    // Update Trajectory bar
+    const tgt = getTargetObj();
+    const passedCount = tgt.pillars.filter(p => p.pass).length;
+    const pct = Math.round((passedCount / tgt.pillars.length) * 100);
+    document.getElementById('promoMeterFill').style.width = pct + '%';
+    document.getElementById('promoMeterText').textContent = `${pct}% (${passedCount}/${tgt.pillars.length} Pillars)`;
+    document.getElementById('badgeStudio').textContent = pct + '%';
+    document.getElementById('navCandidateName').textContent = STATE.profile.name;
+
+    renderStudio(tgt, pct);
+    renderRadar();
+    renderDraft(tgt);
+    renderTracker();
+  }
+
+  /* ---------------- STAGE 1 RENDER ---------------- */
+  function renderStudio(tgt) {
+    document.getElementById('bridgeTargetBadge').textContent = 'Target: ' + tgt.title.split('—')[0].trim();
+    document.getElementById('bridgeRoleName').textContent = tgt.title;
+
+    const grid = document.getElementById('pillarsGrid');
+    grid.innerHTML = tgt.pillars.map(p => `
+      <div class="pillar-card ${p.pass ? 'pass' : 'gap'}">
+        <div class="pillar-top">
+          <span>${p.name}</span>
+          <span class="badge ${p.pass ? 'badge-core' : 'badge-warn'}">${p.pass ? '✓ Evidenced' : 'Missing on CV'}</span>
+        </div>
+        <div class="pillar-ev">${p.ev}</div>
+      </div>
+    `).join('');
+
+    document.getElementById('unlockBox').style.display = STATE.capitalUnlocked ? 'none' : 'flex';
+
+    // /cv-reviewer Checklist items
+    const items = [
+      {
+        sev: STATE.bulletRewriteApplied ? 'pass' : 'crit',
+        icon: STATE.bulletRewriteApplied ? '✅ Pass' : '🟥 Critical',
+        title: STATE.bulletRewriteApplied
+          ? 'All bullets lead with strong past-tense action verbs & quantified outcomes (STAR/XYZ)'
+          : '1 bullet describes duties ("Responsible for...") instead of quantified accomplishments',
+        detail: STATE.bulletRewriteApplied
+          ? 'Rewritten using XYZ structure with verified contract value.'
+          : 'Rule: Bullets must show accomplishments, not job duties. Weak opener "Responsible for" hurts executive screening.',
+        canFix: !STATE.bulletRewriteApplied,
+        before: 'Responsible for managing stakeholder relationships and commercial negotiations across GCC markets',
+        after: 'Negotiated AED 28M in multi-year GCC commercial agreements across 14 senior stakeholder accounts'
+      },
+      {
+        sev: STATE.capitalUnlocked ? 'pass' : 'warn',
+        icon: STATE.capitalUnlocked ? '✅ Pass' : '⚠️ Warning',
+        title: STATE.capitalUnlocked
+          ? 'Promotion-level Capital & CapEx scale is explicitly quantified'
+          : 'Next-Promotion Gap: Capital allocation / M&A figure not stated for Group CEO step-up',
+        detail: 'Executive screeners filtering for Group CEO / CSO roles scan for capital or facility figures alongside P&L.'
+      },
+      {
+        sev: 'warn',
+        icon: '⚠️ Warning',
+        title: 'Dates use hyphens in 1 older role — standardized to en-dashes (Mar 2009 – Dec 2013)',
+        detail: 'Auto-formatted in the live sheet preview on the right.'
+      },
+      {
+        sev: 'pass',
+        icon: '✅ Pass',
+        title: 'Single-column ATS-safe hierarchy with Senior Summary at top (64 words)',
+        detail: 'Matches Senior (10+ YoE) section order: Summary → Experience → Skills → Education.'
+      },
+      {
+        sev: 'pass',
+        icon: '✅ Pass',
+        title: '83% of experience bullets carry verified numbers (AED 68M, 250 staff, +15% EBITDA, -22% opex)',
+        detail: 'Exceeds the 50% executive benchmark in coach.js.'
+      },
+      {
+        sev: 'pass',
+        icon: '✅ Pass',
+        title: 'Zero bias-causing personal data (no DOB, marital status, or photo in ATS mode)',
+        detail: 'Work rights ("German Passport · UAE Golden Visa") stated cleanly.'
+      }
+    ];
+
+    const filtered = items.filter(i => STATE.chkFilter === 'all' || i.sev === STATE.chkFilter);
+    document.getElementById('cvReviewerList').innerHTML = filtered.map(i => `
+      <div class="chk-item ${i.sev}">
+        <div class="chk-head">
+          <b>${i.title}</b>
+          <span class="badge ${i.sev === 'crit' ? 'badge-crit' : i.sev === 'warn' ? 'badge-warn' : 'badge-core'}">${i.icon}</span>
+        </div>
+        <div style="font-size:12px;color:var(--text-secondary)">${i.detail}</div>
+        ${i.canFix ? `
+          <div class="rewrite-diff">
+            <div class="diff-before">− ${i.before}</div>
+            <div class="diff-after">+ ${i.after}</div>
+            <div style="margin-top:4px">
+              <button class="btn btn-brass btn-sm" id="btnApplyBulletFix">✓ Apply STAR/XYZ Rewrite to Master CV</button>
+            </div>
+          </div>
+        ` : ''}
+      </div>
+    `).join('');
+
+    const fixBtn = document.getElementById('btnApplyBulletFix');
+    if (fixBtn) {
+      fixBtn.onclick = () => {
+        STATE.bulletRewriteApplied = true;
+        STATE.profile.experience[0].bullets[2] = 'Negotiated AED 28M in multi-year GCC commercial agreements across 14 senior stakeholder accounts';
+        renderAll();
+      };
+    }
+
+    // Render Live CV Sheet
+    const sheet = document.getElementById('liveCvSheet');
+    sheet.className = 'cv-sheet' + (STATE.cvTheme === 'dossier' ? ' theme-dossier' : '');
+    sheet.innerHTML = buildCvHtml(null);
+  }
+
+  function buildCvHtml(job) {
+    const p = STATE.profile;
+    const tgt = getTargetObj();
+    const roleHeader = job ? `${job.title.split('—')[0].trim()} · Tailored Executive Profile` : `${p.headline} · Target: ${tgt.title.split('(')[0].trim()}`;
+    const summaryText = job
+      ? `${p.summary} Proven readiness for the ${job.title.split('—')[0].trim()} mandate at ${job.company.replace(/Confidential.*via /i, '')}, combining ${job.hits.slice(0, 3).join(', ')}.`
+      : p.summary;
+
+    return `
+      <div class="cv-hdr">
+        <div>
+          <div class="cv-name">${p.name}</div>
+          <div class="cv-role-tag">${roleHeader}</div>
+        </div>
+        <div class="cv-meta">
+          <div>${p.email}</div>
+          <div>${p.phone} · ${p.city}</div>
+          <div>${p.workRights}</div>
+        </div>
+      </div>
+
+      <div class="cv-sec">
+        <div class="cv-sec-title">Executive Profile</div>
+        <p class="cv-sum" contenteditable="true">${summaryText}</p>
+      </div>
+
+      <div class="cv-sec">
+        <div class="cv-sec-title">Career Track Record (Promoted by Relevance &amp; Scale)</div>
+        ${p.experience.map((e, idx) => `
+          <div class="cv-job">
+            <div class="cv-job-top">
+              <span class="cv-job-title">${e.title}</span>
+              <span class="cv-date">${e.dates}</span>
+            </div>
+            <div class="cv-co">${e.company}</div>
+            <ul class="cv-bullets">
+              ${e.bullets.map((b, bi) => {
+                let text = b;
+                if (job && STATE.swapsApplied[job.id] && job.swap && b.includes('Cut supply-chain')) {
+                  text = job.swap.to;
+                }
+                const isPromoted = (bi === 0 || text.includes('AED'));
+                return `<li class="${isPromoted ? 'promoted-bullet' : ''}" contenteditable="true">
+                  ${text}
+                  ${isPromoted ? `<span class="promo-inline-tag">★ Scope Evidence</span>` : ''}
+                </li>`;
+              }).join('')}
+            </ul>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="cv-sec">
+        <div class="cv-sec-title">Core Competencies &amp; Languages</div>
+        <div style="font-size:12px;line-height:1.6">
+          <b>Competencies:</b> ${p.skills.join(' · ')}<br>
+          <b>Languages:</b> ${p.langs} · <b>Education:</b> ${p.education}
+        </div>
+      </div>
+    `;
+  }
+
+  /* ---------------- STAGE 2 RENDER ---------------- */
+  function renderRadar() {
+    const q = STATE.radarQuery.toLowerCase().trim();
+    const filtered = JOBS.filter(j => {
+      if (STATE.radarTrack !== 'all' && j.track !== STATE.radarTrack) return false;
+      if (q && !(j.title + ' ' + j.company + ' ' + j.city + ' ' + j.jdSummary).toLowerCase().includes(q)) return false;
+      return true;
+    });
+
+    document.getElementById('badgeRadar').textContent = filtered.length;
+
+    const listEl = document.getElementById('radarJobList');
+    listEl.innerHTML = filtered.map(j => {
+      const sc = getJobScore(j);
+      const active = j.id === STATE.selectedJobId;
+      const gaps = STATE.capitalUnlocked ? [] : j.gaps;
+      return `
+        <div class="job-card ${j.track === 'promo' ? 'is-promo' : 'is-core'} ${active ? 'selected' : ''}" data-jobid="${j.id}">
+          <div class="job-card-top">
+            <div>
+              <div style="display:flex;gap:8px;align-items:center;margin-bottom:6px;flex-wrap:wrap">
+                <span class="badge ${j.track === 'promo' ? 'badge-promo' : 'badge-core'}">
+                  ${j.track === 'promo' ? '🚀 ' + j.rungDelta : '🎯 ' + j.rungDelta}
+                </span>
+                <span style="font-size:11.5px;color:var(--text-muted);font-family:var(--font-mono)">${j.posted}</span>
+              </div>
+              <div class="job-card-title">${j.title}</div>
+              <div class="job-card-sub">${j.company} · ${j.city}</div>
+            </div>
+            <div class="score-ring">
+              <b>${sc}%</b>
+              <span>Match</span>
+            </div>
+          </div>
+
+          <div class="promo-why-strip">
+            <span>✦ <b>Why you qualify:</b> ${j.PromoWhy}</span>
+          </div>
+
+          <div class="tag-row">
+            ${j.hits.map(h => `<span class="kw-tag hit">✓ ${h}</span>`).join('')}
+            ${gaps.map(g => `<span class="kw-tag gap">Gap: ${g}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    listEl.querySelectorAll('.job-card').forEach(card => {
+      card.onclick = () => {
+        STATE.selectedJobId = card.dataset.jobid;
+        renderAll();
+      };
+    });
+
+    // Inspector Panel
+    const selJob = JOBS.find(j => j.id === STATE.selectedJobId) || JOBS[0];
+    const selScore = getJobScore(selJob);
+    const selGaps = STATE.capitalUnlocked ? [] : selJob.gaps;
+    const inspector = document.getElementById('radarInspector');
+
+    inspector.innerHTML = `
+      <div class="panel-header">
+        <span class="panel-title">🔍 `/job-application` JD &amp; Promotion Inspector</span>
+        <span class="badge ${selJob.track === 'promo' ? 'badge-promo' : 'badge-core'}">${selScore}% Fit</span>
+      </div>
+      <div class="panel-body" style="display:flex;flex-direction:column;gap:14px">
+        <div>
+          <h3 style="font-size:17px;font-weight:700">${selJob.title}</h3>
+          <p style="font-size:12.5px;color:var(--text-secondary);margin-top:2px">${selJob.company} · ${selJob.city}</p>
+        </div>
+
+        <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.6;padding:10px 12px;background:rgba(8,14,28,0.5);border-radius:6px">
+          ${selJob.jdSummary}
+        </p>
+
+        <div>
+          <div class="panel-title" style="margin-bottom:8px">Must-Have Requirements vs. Your Record</div>
+          <div class="tag-row" style="margin-top:0">
+            ${selJob.hits.map(h => `<span class="kw-tag hit">✓ ${h}</span>`).join('')}
+            ${selGaps.map(g => `<span class="kw-tag gap">⚠️ ${g}</span>`).join('')}
+          </div>
+        </div>
+
+        ${selJob.swap ? `
+          <div class="swap-card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+              <span class="badge badge-promo">Recruiter Lens D · 1-Click Keyword Swap</span>
+              <span style="font-size:11px;color:var(--text-muted)">Term: "${selJob.swap.term}"</span>
+            </div>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px"><b>Your line:</b> ${selJob.swap.from}</div>
+            <div style="font-size:12px;color:var(--emerald-bright);margin-bottom:10px"><b>With posting's term:</b> ${selJob.swap.to}</div>
+            <button class="btn btn-sm ${STATE.swapsApplied[selJob.id] ? 'btn-ghost' : 'btn-brass'}" id="btnToggleSwap">
+              ${STATE.swapsApplied[selJob.id] ? '✓ Swap Applied to Draft (Click to Undo)' : 'Apply Posting Term to This Job\'s CV'}
+            </button>
+          </div>
+        ` : ''}
+
+        <div style="display:flex;gap:10px;margin-top:6px">
+          <button class="btn btn-brass" style="width:100%;justify-content:center;padding:12px" id="btnOpenDraftForJob">
+            Open Tailored Promotion Application Studio →
+          </button>
+        </div>
+      </div>
+    `;
+
+    const swapBtn = document.getElementById('btnToggleSwap');
+    if (swapBtn) {
+      swapBtn.onclick = () => {
+        STATE.swapsApplied[selJob.id] = !STATE.swapsApplied[selJob.id];
+        renderAll();
+      };
+    }
+
+    const goDraftBtn = document.getElementById('btnOpenDraftForJob');
+    if (goDraftBtn) {
+      goDraftBtn.onclick = () => {
+        STATE.stage = 'draft';
+        renderAll();
+      };
+    }
+  }
+
+  /* ---------------- STAGE 3 RENDER ---------------- */
+  function renderDraft(tgt) {
+    const job = JOBS.find(j => j.id === STATE.selectedJobId) || JOBS[0];
+    const score = Math.min(98, getJobScore(job) + 3);
+    document.getElementById('badgeDraft').textContent = score;
+
+    const isAr = STATE.draftLang === 'AR';
+    const isDe = STATE.draftLang === 'DE';
+    const dirAttr = isAr ? ' dir="rtl"' : '';
+
+    const hookPara = isDe
+      ? `mit großem Interesse bewerbe ich mich um das Mandat als ${job.title.split('—')[0].trim()}. Ihre Suche nach einer Führungspersönlichkeit, die operative Exzellenz, Governance und nachhaltiges Ergebniswachstum verbindet, deckt sich unmittelbar mit meiner 24-jährigen Laufbahn im Golfraum und in der DACH-Region.`
+      : isAr
+      ? `أتقدم إليكم بطلبي لتولي منصب ${job.title.split('—')[0].trim()}، مستنداً إلى خبرة تنفيذية تمتد لأربعة وعشرين عاماً في قيادة الشركات والمجموعات التجارية والإعلامية في دول الخليج وأوروبا.`
+      : `I am writing regarding the ${job.title.split('—')[0].trim()} mandate. Your requirement for a decisive operator who can unify multi-department execution, install board-grade governance, and convert commercial pipeline aligns directly with my 24 years building and turning around businesses across the UAE and Europe.`;
+
+    const evidencePara = isDe
+      ? `Als Managing Director der Northgate Media Group trug ich die volle GuV-Verantwortung für 250 Mitarbeiter, führte den Verwaltungsrat und steigerte die EBITDA-Marge durch die Restrukturierung von vier Geschäftsbereichen um 15 %. Zuvor baute ich bei Meridian Heavy Trading in Dubai das Regionalgeschäft von der ersten Lieferung auf 68 Mio. AED Jahresumsatz aus.`
+      : isAr
+      ? `خلال عملي كمدير عام ورئيس لمجلس الإدارة، قمت بقيادة فرق تصل إلى 250 موظفاً وتحقيق نمو في الأرباح التشغيلية بنسبة 15%، إلى جانب تأسيس أعمال تجارية إقليمية في دبي بقيمة 68 مليون درهم.`
+      : `As Managing Director and Board Chair at Northgate Media Group, I held full P&L accountability across 250 staff and restructured four business units to lift EBITDA margin by 15%. In Dubai, I founded and scaled Meridian Heavy Trading from first shipment to AED 68M in annual regional turnover${STATE.capitalUnlocked ? ', while structuring AED 42M in trade finance and CapEx facilities' : ''}.`;
+
+    const bridgePara = isDe
+      ? `Warum dieser nächste Schritt folgerichtig ist: Nachdem ich bereits Organisationen mit 250 Mitarbeitern geführt, 14 Markteintritte begleitet und Beiräte geleitet habe, bringt meine Berufung in diese übergeordnete Rolle die bereits bewiesene Skalierung auf Gruppenebene — ohne Einarbeitungsrisiko im Markt.`
+      : isAr
+      ? `إن الانتقال إلى هذا الدور القيادي على مستوى المجموعة يمثل الامتداد الطبيعي لمسيرتي التنفيذية في إدارة الربحية والحوكمة وتطوير الأسواق الإقليمية.`
+      : `Stepping into the ${job.title.split('—')[0].trim()} mandate is the natural continuation of this trajectory: having already operated at 250-person headcount scale, chaired boards, and delivered 14 GCC market entries, I bring proven next-rung execution without the ramp-up risk of a first-time operator.`;
+
+    const letterHtml = `
+      <div class="cv-sheet ${STATE.cvTheme === 'dossier' ? 'theme-dossier' : ''}"${dirAttr}>
+        <div class="cv-hdr">
+          <div>
+            <div class="cv-name">${STATE.profile.name}</div>
+            <div class="cv-role-tag">Application · ${job.title}</div>
+          </div>
+          <div class="cv-meta">
+            <div>${STATE.profile.email}</div>
+            <div>${STATE.profile.phone} · ${STATE.profile.city}</div>
+          </div>
+        </div>
+
+        <div style="font-size:12px;color:var(--paper-muted);margin-bottom:18px">
+          <b>To:</b> ${job.company} (${job.city}) · ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </div>
+
+        <div class="letter-para" contenteditable="true">
+          <span class="para-label">Paragraph 1 · The Specific Hook (Why This Mandate)</span>
+          <p style="font-size:13.5px;line-height:1.7">${hookPara}</p>
+        </div>
+
+        <div class="letter-para" contenteditable="true">
+          <span class="para-label">Paragraph 2 · Quantified Proof (Matching JD Must-Haves)</span>
+          <p style="font-size:13.5px;line-height:1.7">${evidencePara}</p>
+        </div>
+
+        <div class="letter-para forward-bridge" contenteditable="true">
+          <span class="para-label">🚀 Paragraph 3 · The Promotion Forward Bridge (\`/job-application\` Step-Up Framing)</span>
+          <p style="font-size:13.5px;line-height:1.7">${bridgePara}</p>
+        </div>
+
+        <div style="margin-top:18px;font-size:13px">
+          ${isDe ? 'Mit freundlichen Grüßen' : isAr ? 'وتفضلوا بقبول فائق الاحترام،' : 'Yours sincerely,'}<br>
+          <b>${STATE.profile.name}</b>
+        </div>
+      </div>
+    `;
+
+    const cvHtml = `<div class="cv-sheet ${STATE.cvTheme === 'dossier' ? 'theme-dossier' : ''}">${buildCvHtml(job)}</div>`;
+    const container = document.getElementById('draftSheetsContainer');
+    container.innerHTML = STATE.draftDoc === 'letter' ? letterHtml : STATE.draftDoc === 'cv' ? cvHtml : (letterHtml + cvHtml);
+
+    // Right rail: Readiness & 6-Second Scan
+    document.getElementById('draftRightRail').innerHTML = `
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">🛡️ Send Gate &amp; 6-Second Scan</span>
+          <span class="badge badge-core">${score} / 100 · Ready</span>
+        </div>
+        <div class="panel-body" style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between">
+            <span style="font-family:var(--font-display);font-size:44px;font-weight:700;color:var(--emerald-bright);line-height:1">${score}</span>
+            <span style="font-size:12px;color:var(--emerald-bright)">✓ Above 85 Send Gate Threshold</span>
+          </div>
+          <div class="meter-bar" style="width:100%"><div class="meter-fill" style="width:${score}%"></div></div>
+
+          <div style="font-size:12px;display:flex;flex-direction:column;gap:8px;margin-top:4px">
+            <div>✅ <b>6-Second Title Match:</b> Target role named in Summary &amp; Letter header</div>
+            <div>✅ <b>Quantified Density:</b> 83% of bullets carry verified figures</div>
+            <div>✅ <b>Promotion Forward Bridge:</b> Paragraph 3 explicitly bridges MD scale → ${job.title.split('—')[0].trim()}</div>
+            <div>✅ <b>Zero Hallucinated Claims:</b> All ${job.hits.length} matched tags backed by CV lines</div>
+          </div>
+
+          <div style="border-top:1px solid var(--line-subtle);padding-top:12px;display:flex;flex-direction:column;gap:8px">
+            <button class="btn btn-brass" style="width:100%;justify-content:center;padding:11px" id="btnPrepareEml">
+              ✉ Prepare .EML Draft + ATS Text PDF
+            </button>
+            <button class="btn" style="width:100%;justify-content:center" onclick="window.print()">
+              ⬇ Save Designed PDF Packet
+            </button>
+            <div id="draftSendFeedback" style="font-size:11.5px;color:var(--emerald-bright);text-align:center;min-height:18px"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">🎯 Quick Switch Role</span>
+        </div>
+        <div class="panel-body" style="display:flex;flex-direction:column;gap:8px">
+          ${JOBS.slice(0, 4).map(j => `
+            <button class="btn btn-sm ${j.id === job.id ? 'btn-brass' : 'btn-ghost'}" style="justify-content:space-between;text-align:left" data-quickjob="${j.id}">
+              <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:220px">${j.title.split('—')[0]}</span>
+              <span>${getJobScore(j)}%</span>
+            </button>
+          `).join('')}
+        </div>
+      </div>
+    `;
+
+    const emlBtn = document.getElementById('btnPrepareEml');
+    if (emlBtn) {
+      emlBtn.onclick = () => {
+        document.getElementById('draftSendFeedback').textContent = '✓ Prepared .eml with HTML cover letter + ATS text PDF attached & marked Prepared in Tracker.';
+      };
+    }
+
+    document.querySelectorAll('[data-quickjob]').forEach(b => {
+      b.onclick = () => {
+        STATE.selectedJobId = b.dataset.quickjob;
+        renderAll();
+      };
+    });
+  }
+
+  /* ---------------- STAGE 4 RENDER ---------------- */
+  function renderTracker() {
+    const tbl = document.getElementById('trackerTable');
+    tbl.innerHTML = `
+      <thead>
+        <tr>
+          <th>Role &amp; Employer</th>
+          <th>Track / Rung</th>
+          <th>Fit</th>
+          <th>Stage</th>
+          <th>Next Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${JOBS.map(j => `
+          <tr>
+            <td>
+              <b style="color:var(--text-primary)">${j.title}</b>
+              <div style="font-size:11.5px;color:var(--text-secondary)">${j.company} · ${j.city}</div>
+            </td>
+            <td>
+              <span class="badge ${j.track === 'promo' ? 'badge-promo' : 'badge-core'}">
+                ${j.track === 'promo' ? '🚀 Step-Up' : '🎯 Core Fit'}
+              </span>
+            </td>
+            <td style="font-family:var(--font-mono);font-weight:600;color:var(--brass-bright)">${getJobScore(j)}%</td>
+            <td>
+              <span class="badge ${j.stage === 'interview' ? 'badge-promo' : j.stage === 'applied' ? 'badge-core' : 'badge-warn'}">
+                ${j.stage.toUpperCase()}
+              </span>
+            </td>
+            <td>
+              <button class="btn btn-sm" data-trkopen="${j.id}">Open Application →</button>
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    `;
+
+    tbl.querySelectorAll('[data-trkopen]').forEach(b => {
+      b.onclick = () => {
+        STATE.selectedJobId = b.dataset.trkopen;
+        STATE.stage = 'draft';
+        renderAll();
+      };
+    });
+  }
+
+  /* ---------------- EVENT WIRING ---------------- */
+  document.querySelectorAll('.stage-btn').forEach(btn => {
+    btn.onclick = () => {
+      STATE.stage = btn.dataset.stage;
+      renderAll();
+    };
+  });
+
+  document.getElementById('promoTargetSelect').onchange = (e) => {
+    STATE.promoTarget = e.target.value;
+    renderAll();
+  };
+
+  document.getElementById('btnJumpToPromoJobs').onclick = () => {
+    STATE.stage = 'radar';
+    STATE.radarTrack = 'promo';
+    document.querySelectorAll('#radarTrackFilter .track-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.track === 'promo');
+    });
+    renderAll();
+  };
+
+  document.getElementById('btnUnlockPillar').onclick = () => {
+    const val = document.getElementById('unlockMetricInput').value.trim();
+    if (!val) return;
+    STATE.capitalUnlocked = true;
+    STATE.profile.experience[1].bullets.push(val);
+    renderAll();
+  };
+
+  document.querySelectorAll('[data-chkfilter]').forEach(b => {
+    b.onclick = () => {
+      STATE.chkFilter = b.dataset.chkfilter;
+      renderAll();
+    };
+  });
+
+  document.querySelectorAll('#themeSwitcher .seg-btn').forEach(b => {
+    b.onclick = () => {
+      STATE.cvTheme = b.dataset.theme;
+      document.querySelectorAll('#themeSwitcher .seg-btn').forEach(x => x.classList.toggle('active', x === b));
+      renderAll();
+    };
+  });
+
+  document.querySelectorAll('#radarTrackFilter .track-pill').forEach(b => {
+    b.onclick = () => {
+      STATE.radarTrack = b.dataset.track;
+      document.querySelectorAll('#radarTrackFilter .track-pill').forEach(x => x.classList.toggle('active', x === b));
+      renderAll();
+    };
+  });
+
+  document.getElementById('radarSearchInput').oninput = (e) => {
+    STATE.radarQuery = e.target.value;
+    renderRadar();
+  };
+
+  document.querySelectorAll('#draftDocToggle .seg-btn').forEach(b => {
+    b.onclick = () => {
+      STATE.draftDoc = b.dataset.doc;
+      document.querySelectorAll('#draftDocToggle .seg-btn').forEach(x => x.classList.toggle('active', x === b));
+      renderAll();
+    };
+  });
+
+  document.querySelectorAll('#draftLangToggle .seg-btn').forEach(b => {
+    b.onclick = () => {
+      STATE.draftLang = b.dataset.lang;
+      document.querySelectorAll('#draftLangToggle .seg-btn').forEach(x => x.classList.toggle('active', x === b));
+      renderAll();
+    };
+  });
+
+  // Modal handlers
+  const modal = document.getElementById('cvModal');
+  const openModal = () => modal.classList.add('open');
+  const closeModal = () => modal.classList.remove('open');
+  document.getElementById('btnOpenCvModal').onclick = openModal;
+  document.getElementById('btnBannerUpload').onclick = openModal;
+  document.getElementById('btnCloseCvModal').onclick = closeModal;
+
+  document.getElementById('btnParseCustomCv').onclick = () => {
+    const raw = document.getElementById('customCvTextarea').value.trim();
+    if (raw) {
+      const lines = raw.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+      if (lines[0] && lines[0].length < 45) STATE.profile.name = lines[0];
+      if (lines[1]) STATE.profile.summary = lines.slice(1, 4).join(' ');
+    }
+    closeModal();
+    renderAll();
+  };
+
+  document.getElementById('btnResetDemoCv').onclick = () => {
+    STATE.capitalUnlocked = false;
+    STATE.bulletRewriteApplied = false;
+    closeModal();
+    renderAll();
+  };
+
+  document.getElementById('btnToggleDossier').onclick = () => {
+    STATE.cvTheme = STATE.cvTheme === 'dossier' ? 'parchment' : 'dossier';
+    document.querySelectorAll('#themeSwitcher .seg-btn').forEach(x => x.classList.toggle('active', x.dataset.theme === STATE.cvTheme));
+    renderAll();
+  };
+
+  document.getElementById('btnSimulateReply').onclick = () => {
+    JOBS[1].stage = 'interview';
+    renderAll();
+  };
+
+  document.getElementById('btnExportYaml').onclick = () => {
+    const yaml = `cv:\n  name: ${STATE.profile.name}\n  location: ${STATE.profile.city}\n  email: ${STATE.profile.email}\n  phone: "${STATE.profile.phone}"\n  sections:\n    summary:\n      - "${STATE.profile.summary}"\ndesign:\n  theme: classic\n`;
+    const blob = new Blob([yaml], { type: 'text/yaml' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'rendercv_profile.yaml';
+    a.click();
+  };
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
