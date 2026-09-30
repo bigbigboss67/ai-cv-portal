@@ -455,10 +455,19 @@ async function hydrateTopLinkedInMatches(matches, maxHydrate = 5) {
       if (detail && detail.text) {
         m.text = detail.text;
         m.snippet = detail.text.slice(0, 380);
-        if (detail.company && !m.company) m.company = detail.company;
+        if (detail.company && (!m.company || /^via\s+/i.test(m.company))) m.company = detail.company;
         if (detail.location && !m.location) m.location = detail.location;
         if (detail.posted && !m.posted) m.posted = detail.posted;
-        if (detail.emails && detail.emails.length) m.to = detail.emails[0];
+        if (detail.emails && detail.emails.length) {
+          m.to = detail.emails[0];
+          m.emailVia = "Extracted Directly from LinkedIn Job Posting";
+        } else if (typeof boards.resolveJobRecipientEmail === "function") {
+          const r = boards.resolveJobRecipientEmail({ ...m, to: "" });
+          if (r && r.email) {
+            m.to = r.email;
+            m.emailVia = r.via;
+          }
+        }
       }
     })
   );

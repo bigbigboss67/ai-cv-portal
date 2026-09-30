@@ -4770,6 +4770,42 @@ ${state.cv.contact}`;
           }
         }
 
+        // Tier 2B: LinkedIn-Specific Guest Posting & Company About Website Lookup (/api/site + siteFromLinkedInCompany)
+        const isLinkedIn = job.source === "linkedin" || /linkedin\.com/i.test(job.url || "");
+        if ((isLinkedIn || !job.site) && (job.company || isLinkedIn)) {
+          try {
+            const siteQs = new URLSearchParams({
+              name: (job.company || "").replace(/^via\s+/i, ""),
+              where: job.location || "",
+              linkedin: isLinkedIn && job.url ? job.url : (job.ref || "")
+            });
+            const sr = await fetch(`/api/site?${siteQs.toString()}`);
+            if (sr.ok) {
+              const sd = await sr.json();
+              const liPostingEmail =
+                (sd && sd.emails && Array.isArray(sd.emails.apply) && sd.emails.apply[0]) ||
+                (sd && sd.emails && Array.isArray(sd.emails.other) && sd.emails.other[0]) ||
+                "";
+              if (liPostingEmail) {
+                job.to = liPostingEmail;
+                job.emailVia = "Extracted Directly from LinkedIn Job Posting";
+                syncUiForJob();
+                return job.to;
+              }
+              if (sd && sd.url && !job.site) {
+                job.site = sd.url;
+              } else if (sd && sd.slug && !job.site && typeof window.siteFromLinkedInCompany === "function") {
+                const readerSite = await window.siteFromLinkedInCompany(sd.slug);
+                if (readerSite) job.site = readerSite;
+              }
+              if (job.site) {
+                resolveJobRecipientEmailClient(job);
+                syncUiForJob();
+              }
+            }
+          } catch {}
+        }
+
         // Tier 3: Client-side fetch-address.js reader across postingUrl & siteUrl
         if (typeof window.findApplicationAddress === "function" && ((job.url && /^https?:\/\//i.test(job.url)) || job.site)) {
           const found = await window.findApplicationAddress({
