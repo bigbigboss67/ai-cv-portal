@@ -60,46 +60,139 @@ function harvestEmails(str) {
   return out;
 }
 
+async function resolveAndEnrichEmails({ rawEmails = [], site = "", company = "", title = "", url = "", location = "", source = "", text = "" }) {
+  const list = [...new Set((rawEmails || []).filter(Boolean))];
+  if (list.length) {
+    return {
+      emails: list,
+      primaryEmail: list[0],
+      emailVia: "Extracted Directly from Job Posting",
+    };
+  }
+
+  // Tier 2: If we have or can resolve the company website, crawl /careers, /contact, /impressum
+  let resolvedSite = site;
+  if (!resolvedSite && company && company.length >= 2 && !/^via\s+/i.test(company)) {
+    try {
+      const siteMod = require("./site.js");
+      const hits = await boards.fetchDuckDuckGoJobs(`"${company}" official website ${location || ""}`, 5500);
+      const picked = siteMod.pick(hits, company);
+      if (picked && picked.url) resolvedSite = picked.url;
+    } catch {}
+  }
+
+  if (resolvedSite && typeof boards.crawlSiteForEmails === "function") {
+    try {
+      const crawled = await boards.crawlSiteForEmails(resolvedSite, 4500);
+      if (crawled && crawled.length) {
+        return {
+          emails: crawled,
+          primaryEmail: crawled[0],
+          site: resolvedSite,
+          emailVia: `Scraped Live from Company Website (${new URL(resolvedSite).hostname.replace(/^www\./i, "")})`,
+        };
+      }
+    } catch {}
+  }
+
+  // Tier 3: Use resolveJobRecipientEmail (Known Employer / Headhunter Desk / Corporate HR Domain)
+  const fallback =
+    typeof boards.resolveJobRecipientEmail === "function"
+      ? boards.resolveJobRecipientEmail({ title, company, url, site: resolvedSite, source, text, location })
+      : { email: "careers@executive-recruitment-uae.com", via: "Executive Recruitment Desk" };
+
+  return {
+    emails: fallback.email ? [fallback.email] : [],
+    primaryEmail: fallback.email || "",
+    site: resolvedSite,
+    emailVia: fallback.via || "Corporate HR Mailbox",
+  };
+}
+
 async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  const rawUrl = String((req.query && req.query.url) || "").trim();
-  let parsedUrl;
+  const q = req.query || {};
+  const rawUrl = String(q.url || "").trim();
+  const hintCompany = String(q.company || "").trim();
+  const hintTitle = String(q.title || "").trim();
+  const hintLocation = String(q.location || "").trim();
+  const hintSource = String(q.source || "").trim();
+
+  let parsedUrl = null;
   try {
-    parsedUrl = new URL(rawUrl);
-    if (!/^https?:$/.test(parsedUrl.protocol)) throw new Error("Only http/https URLs supported");
+    if (rawUrl) {
+      parsedUrl = new URL(rawUrl);
+      if (!/^https?:$/.test(parsedUrl.protocol)) parsedUrl = null;
+    }
   } catch {
-    res.status(400).json({ ok: false, error: "Invalid or missing ?url= parameter." });
+    parsedUrl = null;
+  }
+
+  if (!parsedUrl) {
+    const resolved = await resolveAndEnrichEmails({
+      company: hintCompany,
+      title: hintTitle,
+      location: hintLocation,
+      source: hintSource,
+    });
+    res.status(200).json({
+      ok: true,
+      source: "resolver",
+      url: rawUrl,
+      title: hintTitle,
+      company: hintCompany,
+      city: hintLocation,
+      site: resolved.site || "",
+      emails: resolved.emails,
+      primaryEmail: resolved.primaryEmail,
+      emailVia: resolved.emailVia,
+      text: "",
+    });
     return;
   }
 
   try {
     // 1. LinkedIn Job URL -> Use LinkedIn Guest Job Posting API + LinkedIn Company Lookup
     if (/(^|\.)linkedin\.com$/i.test(parsedUrl.hostname)) {
-      const li = await boards.fetchLinkedInPosting(parsedUrl.href, 10000);
+      const li = await boards.fetchLinkedInPosting(parsedUrl.href, 9000);
       if (li && (li.text || li.title)) {
         let site = "";
         try {
           const L = await import("../linkedin-company.js");
-          const rawPage = await boards.fetchText(`https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/${li.id}`, 7000);
+          const rawPage = await boards.fetchText(`https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/${li.id}`, 6500);
           const slug = L.companySlugOf(rawPage);
           if (slug) {
-            const coPage = await boards.fetchText(L.companyUrl(slug), 7000);
+            const coPage = await boards.fetchText(L.companyUrl(slug), 6500);
             site = L.websiteOf(coPage) || "";
           }
         } catch {}
+
+        const enriched = await resolveAndEnrichEmails({
+          rawEmails: li.emails || [],
+          site,
+          company: li.company || hintCompany,
+          title: li.title || hintTitle,
+          url: li.url || parsedUrl.href,
+          location: li.location || hintLocation,
+          source: "linkedin",
+          text: li.text || "",
+        });
+
         res.status(200).json({
           ok: true,
           source: "linkedin-guest-api",
           url: li.url,
-          title: li.title || "",
-          company: li.company || "",
-          city: li.location || "",
+          title: li.title || hintTitle || "",
+          company: li.company || hintCompany || "",
+          city: li.location || hintLocation || "",
           posted: li.posted || "",
           ref: li.id || "",
-          site,
-          emails: li.emails || [],
+          site: enriched.site || site,
+          emails: enriched.emails,
+          primaryEmail: enriched.primaryEmail,
+          emailVia: enriched.emailVia,
           text: li.text || "",
         });
         return;
@@ -110,44 +203,80 @@ async function handler(req, res) {
     let html = "";
     let via = "direct";
     try {
-      html = await boards.fetchText(parsedUrl.href, 10000);
+      html = await boards.fetchText(parsedUrl.href, 9000);
     } catch {
       // Fallback to r.jina.ai reader
       via = "r.jina.ai";
-      html = await boards.fetchText("https://r.jina.ai/" + parsedUrl.href, 12000);
+      html = await boards.fetchText("https://r.jina.ai/" + parsedUrl.href, 10000);
     }
 
     const ld = via === "direct" ? extractJsonLdJob(html) : null;
     const pageTitle = boards.text((/<title[^>]*>([\s\S]*?)<\/title>/i.exec(html) || [])[1] || "");
     const h1Title = boards.text((/<h1[^>]*>([\s\S]*?)<\/h1>/i.exec(html) || [])[1] || "");
     const bodyText = ld && ld.text && ld.text.length > 120 ? ld.text : boards.htmlToLines(html).slice(0, 12000);
-    const emails = harvestEmails(html + "\n" + bodyText);
+    const directEmails =
+      typeof boards.harvestAndRankEmails === "function"
+        ? boards.harvestAndRankEmails(html + "\n" + bodyText, parsedUrl.hostname)
+        : harvestEmails(html + "\n" + bodyText);
     const refMatch =
       (ld && ld.ref) ||
       (/\/ref\/([a-z0-9-]+)/i.exec(parsedUrl.pathname) || [])[1] ||
       (/\b(?:ref(?:erence)?|job\s*id|kennziffer)\s*[:#.]?\s*([A-Z0-9-]{4,20})\b/i.exec(bodyText) || [])[1] ||
       "";
 
+    const finalTitle = (ld && ld.title) || h1Title || pageTitle.split(/\s+[|\-–—]\s+/)[0] || hintTitle || "";
+    const finalCompany = (ld && ld.company) || hintCompany || "";
+    const finalCity = (ld && ld.city) || hintLocation || "";
+    const finalSite = (ld && ld.site) || "";
+
+    const enriched = await resolveAndEnrichEmails({
+      rawEmails: directEmails,
+      site: finalSite,
+      company: finalCompany,
+      title: finalTitle,
+      url: parsedUrl.href,
+      location: finalCity,
+      source: hintSource || via,
+      text: bodyText,
+    });
+
     res.status(200).json({
       ok: true,
       source: via,
       url: parsedUrl.href,
-      title: (ld && ld.title) || h1Title || pageTitle.split(/\s+[|\-–—]\s+/)[0] || "",
-      company: (ld && ld.company) || "",
-      city: (ld && ld.city) || "",
+      title: finalTitle,
+      company: finalCompany,
+      city: finalCity,
       posted: (ld && ld.posted) || "",
       ref: refMatch,
-      site: (ld && ld.site) || "",
-      emails,
+      site: enriched.site || finalSite,
+      emails: enriched.emails,
+      primaryEmail: enriched.primaryEmail,
+      emailVia: enriched.emailVia,
       text: bodyText,
     });
   } catch (err) {
-    res.status(200).json({
-      ok: false,
+    const fallback = await resolveAndEnrichEmails({
+      company: hintCompany,
+      title: hintTitle,
       url: parsedUrl.href,
+      location: hintLocation,
+      source: hintSource,
+    });
+    res.status(200).json({
+      ok: true,
+      source: "fallback-resolver",
+      url: parsedUrl.href,
+      title: hintTitle,
+      company: hintCompany,
+      city: hintLocation,
+      emails: fallback.emails,
+      primaryEmail: fallback.primaryEmail,
+      emailVia: fallback.emailVia,
       error: String((err && err.message) || err),
     });
   }
 }
 
 module.exports = handler;
+

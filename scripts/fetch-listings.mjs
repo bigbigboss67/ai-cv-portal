@@ -404,6 +404,19 @@ async function main() {
     }
   }
 
+  // Ensure every single job listing in every source has an automatically resolved `to` email address
+  for (const src of sources) {
+    for (const j of src.jobs || []) {
+      if (!j.to && typeof boards.resolveJobRecipientEmail === "function") {
+        const resolved = boards.resolveJobRecipientEmail({ ...j, source: j.src || src.id });
+        if (resolved && resolved.email) {
+          j.to = resolved.email;
+          j.emailVia = resolved.via;
+        }
+      }
+    }
+  }
+
   const out = {
     generatedAt: new Date().toISOString(),
     total,

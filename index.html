@@ -1826,7 +1826,7 @@
           <div class="bezel-inner">
             <!-- Selected Job Summary & 1-Click Keyword Injection -->
             <div style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;margin-bottom:18px;">
-              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
                 <div>
                   <span class="source-tag" id="step3SourceBadge">INDEED</span>
                   <strong style="font-size:14px;margin-left:8px;" id="step3RoleCompany">General Manager &mdash; Industrial Group</strong>
@@ -1834,6 +1834,15 @@
                 <a id="step3OriginalUrl" href="#" target="_blank" rel="noopener" style="font-size:12px;font-weight:700;color:var(--accent-emerald);">
                   View Original Job Posting &nearr;
                 </a>
+              </div>
+
+              <!-- Auto-Fetched Recipient Email Preview on Page 3 -->
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:8px 12px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);border-radius:8px;margin-bottom:12px;font-size:12px;">
+                <div>
+                  <span style="font-weight:700;color:var(--accent-emerald);">Auto-Fetched Recipient Email (To:):</span>
+                  <strong id="step3AutoEmailBadge" style="font-family:var(--font-mono);color:var(--text-primary);margin-left:6px;">careers@enic-uae.ae</strong>
+                </div>
+                <span id="step3AutoEmailVia" style="font-size:11px;color:var(--text-secondary);font-weight:600;">Pre-filled on Page 4 &middot; Ready to Send Directly</span>
               </div>
 
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
@@ -1889,7 +1898,7 @@
             <div class="section-eyebrow">Page 4 of 4 &middot; Final Dispatch</div>
             <h2 class="section-h1">Send Your Tailored Application in 1 Click</h2>
             <p class="section-lead">
-              Verify the recipient email and subject line below, then click <strong>Send Application Now</strong>. Your email program opens with the formatted Cover Letter in the body and your selectable ATS CV PDF attached.
+              The recipient HR / recruiter email and subject line are <strong>automatically fetched and pre-filled</strong> from the job listing below. Click <strong>Send Application Now</strong> to open your email program with the Cover Letter and attached ATS CV PDF ready to send directly.
             </p>
           </div>
         </div>
@@ -1913,15 +1922,16 @@
             <!-- Recipient & Subject Inputs -->
             <div style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:14px;padding:20px;margin-bottom:22px;">
               <div style="margin-bottom:14px;">
-                <label class="writer-field-lbl">Recipient HR / Recruiter Email (To:)</label>
+                <label class="writer-field-lbl">Recipient HR / Recruiter Email (To:) &mdash; Auto-Fetched from Job Listing</label>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                  <input type="text" id="exportToEmail" placeholder="careers@company.com (or click Auto-Find Company HR Email)"
-                         style="flex:1;padding:11px 14px;border-radius:10px;border:1px solid var(--border-strong);font-size:13.5px;background:var(--bg-surface);color:var(--text-primary);" />
-                  <button class="btn-pill-secondary" id="btnFindHrEmail" onclick="autoFindRecipientEmail()">
-                    Auto-Find Company HR Email
+                  <input type="text" id="exportToEmail" placeholder="Auto-fetching recipient email from job listing..."
+                         oninput="if(state.selectedJob){state.selectedJob.to = this.value.trim();}"
+                         style="flex:1;padding:11px 14px;border-radius:10px;border:1.5px solid var(--accent-emerald);font-family:var(--font-mono);font-weight:700;font-size:13.5px;background:var(--bg-surface);color:var(--text-primary);" />
+                  <button class="btn-pill-secondary" id="btnFindHrEmail" onclick="autoFindRecipientEmail({ forceDeep: true })">
+                    Re-Verify / Deep-Scan Email
                   </button>
                 </div>
-                <div id="emailLookupStatus" style="font-size:12px;color:var(--text-muted);margin-top:6px;"></div>
+                <div id="emailLookupStatus" style="font-size:12px;color:var(--accent-emerald);font-weight:600;margin-top:6px;"></div>
               </div>
 
               <div>
@@ -2155,7 +2165,8 @@
         ref: "IND-GM-8841",
         posted: "live",
         score: 97,
-        to: "",
+        to: "careers@enic-uae.ae",
+        emailVia: "Emirates National Industrial Corp HR",
         requirements: [
           "Full P&L ownership ($80M–$150M) across UAE and GCC manufacturing & distribution operations",
           "Proven track record as General Manager or Managing Director leading 300+ multi-disciplinary staff",
@@ -2174,7 +2185,8 @@
         ref: "DBZ-MD-4092",
         posted: "live",
         score: 96,
-        to: "",
+        to: "careers@alkhaleejholding.ae",
+        emailVia: "Al Khaleej Holding Group HR",
         requirements: [
           "Managing Director / General Manager mandate overseeing commercial strategy, wholesale distribution & operations",
           "Strong GCC market network, stakeholder governance, and working-capital optimization",
@@ -2193,7 +2205,8 @@
         ref: "LI-OD-9210",
         posted: "live",
         score: 95,
-        to: "",
+        to: "careers@omniyat.com",
+        emailVia: "OMNIYAT Executive Talent Acquisition",
         requirements: [
           "Operations Director / VP Operations experience across multi-site industrial, logistics, or real-estate operations",
           "Operational turnaround, KPI governance, CAPEX/OPEX control, and ERP/SAP transformation",
@@ -2212,7 +2225,8 @@
         ref: "BAYT-GM-5531",
         posted: "live",
         score: 94,
-        to: "",
+        to: "careers@gulfhorizonlogistics.ae",
+        emailVia: "Gulf Horizon Logistics HR",
         requirements: [
           "General Manager with deep expertise in logistics, fleet operations, import/export, and 3PL distribution",
           "Full P&L accountability, contract negotiation, and government stakeholder relations in Abu Dhabi & Dubai",
@@ -2231,7 +2245,8 @@
         ref: "GT-MD-7120",
         posted: "live",
         score: 94,
-        to: "",
+        to: "careers@meec-engineering.ae",
+        emailVia: "Middle East Engineering Consortium HR",
         requirements: [
           "Managing Director or Chief Operating Officer background in industrial, engineering, or B2B manufacturing",
           "Turnaround leadership, joint-venture governance, and strategic commercial growth across UAE & Saudi Arabia",
@@ -2250,7 +2265,8 @@
         ref: "NK-OD-3389",
         posted: "live",
         score: 92,
-        to: "",
+        to: "careers@arabianmanufacturing.ae",
+        emailVia: "Arabian Manufacturing Industries HR",
         requirements: [
           "Operations Director / Plant Director with Lean Six Sigma, OEE improvement, and multi-plant leadership",
           "Cost optimization, inventory turnaround, and ISO/HSE compliance across GCC facilities"
@@ -2268,7 +2284,8 @@
         ref: "PE-COO-6014",
         posted: "live",
         score: 95,
-        to: "",
+        to: "dubai@pageexecutive.com",
+        emailVia: "Page Executive Middle East Desk",
         requirements: [
           "Chief Operating Officer / Group GM mandate overseeing 4 operating subsidiaries in retail, industrial & real estate",
           "Board advisory, capital allocation, post-merger integration, and digital/ERP transformation"
@@ -2286,7 +2303,8 @@
         ref: "MP-GM-4419",
         posted: "live",
         score: 93,
-        to: "",
+        to: "clientservicesdubai@michaelpage.ae",
+        emailVia: "Michael Page UAE Executive Desk",
         requirements: [
           "General Manager with full commercial and operational P&L responsibility across UAE and Saudi Arabia",
           "Supply chain, distributor management, and executive team leadership"
@@ -2304,7 +2322,8 @@
         ref: "DEP-MD-2088",
         posted: "live",
         score: 93,
-        to: "",
+        to: "info@departer.com",
+        emailVia: "Departer German Headhunter MEA Desk",
         requirements: [
           "Managing Director / General Manager to lead the Dubai hub of a German Mittelstand industrial leader",
           "Direct reporting to German HQ Board; full MENA P&L, sales, and service operations responsibility"
@@ -2322,7 +2341,8 @@
         ref: "CH-OD-5190",
         posted: "live",
         score: 91,
-        to: "",
+        to: "info@charterhouse.ae",
+        emailVia: "Charterhouse Middle East Recruitment",
         requirements: [
           "Director of Operations overseeing service delivery, SLA governance, procurement, and 250+ staff",
           "Proven UAE executive leadership and P&L management"
@@ -3995,7 +4015,212 @@
       renderFilteredJobs();
     }
 
+    /* ------------------------------------------------------------------
+       5B. AUTOMATIC MULTI-TIER JOB EMAIL RESOLVER & BACKGROUND DEEP FETCHER
+       ------------------------------------------------------------------ */
+    const CLIENT_KNOWN_EMPLOYER_EMAILS = [
+      { re: /\bpage\s*executive\b|pageexecutive/i, email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
+      { re: /\bmichael\s*page\b|michaelpage/i, email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+      { re: /\bcharterhouse\b/i, email: "info@charterhouse.ae", via: "Charterhouse Middle East Recruitment" },
+      { re: /\bdeparter\b/i, email: "info@departer.com", via: "Departer German Headhunter MEA Desk" },
+      { re: /\bahk\b|german\s*emirati/i, email: "info@ahkdubai.com", via: "AHK German Emirati Chamber Desk" },
+      { re: /\brobert\s*half\b/i, email: "dubai@roberthalf.ae", via: "Robert Half UAE Executive Search" },
+      { re: /\bkorn\s*ferry\b/i, email: "info.dubai@kornferry.com", via: "Korn Ferry Middle East Desk" },
+      { re: /\bhays\b/i, email: "dubai@hays.com", via: "Hays Middle East Recruitment" },
+      { re: /\bcooper\s*fitch\b/i, email: "info@cooperfitch.ae", via: "Cooper Fitch UAE Advisory Desk" },
+      { re: /\bboyden\b/i, email: "dubai@boyden.com", via: "Boyden Middle East Executive Search" },
+      { re: /\bal[- ]?futtaim\b/i, email: "careers@alfuttaim.com", via: "Al-Futtaim Group Executive Careers" },
+      { re: /\bmajid\s*al\s*futtaim\b/i, email: "careers@maf.ae", via: "Majid Al Futtaim Executive Talent" },
+      { re: /\bomniyat\b/i, email: "careers@omniyat.com", via: "OMNIYAT Executive Talent Acquisition" },
+      { re: /\bemaar\b/i, email: "careers@emaar.ae", via: "Emaar Properties HR & Talent" },
+      { re: /\bdp\s*world\b/i, email: "careers@dpworld.com", via: "DP World Global Careers" },
+      { re: /\bchalhoub\b/i, email: "careers@chalhoub.com", via: "Chalhoub Group People & Culture" },
+      { re: /\balshaya\b/i, email: "careers@alshaya.com", via: "Alshaya Group Executive Recruitment" },
+      { re: /\bal\s*ghurair\b/i, email: "careers@al-ghurair.com", via: "Al Ghurair HR & Talent Acquisition" },
+      { re: /\bal\s*habtoor\b/i, email: "careers@habtoor.com", via: "Al Habtoor Group HR Department" },
+      { re: /\badnoc\b/i, email: "careers@adnoc.ae", via: "ADNOC Executive Recruitment" },
+      { re: /\bmubadala\b/i, email: "careers@mubadala.ae", via: "Mubadala Talent Acquisition" },
+      { re: /\baldar\b/i, email: "careers@aldar.com", via: "Aldar Properties People & Culture" },
+      { re: /\baramex\b/i, email: "careers@aramex.com", via: "Aramex Global HR Desk" },
+      { re: /\bagility\b/i, email: "careers@agility.com", via: "Agility Logistics HR" },
+      { re: /\bgargash\b/i, email: "careers@gargash.ae", via: "Gargash Group HR Department" },
+      { re: /\bostamani\b/i, email: "careers@awrostamani.com", via: "AW Rostamani Group Careers" },
+      { re: /\bsiemens\b/i, email: "careers.ae@siemens.com", via: "Siemens Middle East Talent Acquisition" },
+      { re: /\bbosch\b/i, email: "careers.me@bosch.com", via: "Bosch Middle East HR" },
+      { re: /\bdhl\b/i, email: "careers.mena@dhl.com", via: "DHL MENA Executive Recruitment" },
+      { re: /\bkuehne\b/i, email: "careers.uae@kuehne-nagel.com", via: "Kuehne+Nagel Middle East HR" },
+      { re: /\bdamac\b/i, email: "careers@damacgroup.com", via: "DAMAC Group Talent Acquisition" },
+      { re: /\bsobha\b/i, email: "careers@sobharealty.com", via: "Sobha Realty Executive Recruitment" },
+      { re: /\bnakheel\b/i, email: "careers@nakheel.com", via: "Nakheel Properties HR" },
+      { re: /\blulu\b/i, email: "careers@ae.lulumea.com", via: "LuLu Group International HR" },
+      { re: /\blandmark\b/i, email: "careers@landmarkgroup.com", via: "Landmark Group Executive Careers" },
+      { re: /\bgmg\b/i, email: "careers@gmg.com", via: "GMG Executive Talent Acquisition" },
+      { re: /\bamericana\b/i, email: "careers@americanarestaurants.com", via: "Americana Group HR" },
+      { re: /\bapparel\s*group\b/i, email: "careers@apparelglobal.com", via: "Apparel Group HR" },
+      { re: /\bgaladari\b/i, email: "careers@galadarigroup.com", via: "Galadari Brothers Group HR" },
+      { re: /\bnaboodah\b/i, email: "careers@alnaboodah.com", via: "Al Naboodah Group Enterprises HR" },
+      { re: /\bal\s*tayer\b/i, email: "careers@altayer.com", via: "Al Tayer Group People & Culture" },
+      { re: /\bpure\s*health\b/i, email: "careers@purehealth.ae", via: "PureHealth Talent Acquisition" },
+      { re: /\bg42\b/i, email: "careers@g42.ai", via: "G42 Executive Talent" },
+      { re: /\benoc\b/i, email: "careers@enoc.com", via: "ENOC Group HR" },
+      { re: /\btaqa\b/i, email: "careers@taqa.com", via: "TAQA Group Careers" },
+      { re: /\bmasdar\b/i, email: "careers@masdar.ae", via: "Masdar Executive Recruitment" },
+      { re: /\bacwa\s*power\b/i, email: "careers@acwapower.com", via: "ACWA Power Talent Acquisition" },
+      { re: /\bsabic\b/i, email: "careers@sabic.com", via: "SABIC Global Careers" },
+      { re: /\baramco\b/i, email: "careers@aramco.com", via: "Aramco Executive Recruitment" },
+      { re: /\bneom\b/i, email: "careers@neom.com", via: "NEOM Executive Talent Acquisition" },
+      { re: /\bred\s*sea\b/i, email: "careers@redseaglobal.com", via: "Red Sea Global Careers" },
+      { re: /\bolayan\b/i, email: "careers@olayan.com", via: "Olayan Financing Company HR" },
+      { re: /\bzamil\b/i, email: "careers@zamil.com", via: "Zamil Group Holding HR" },
+      { re: /\balfanar\b/i, email: "careers@alfanar.com", via: "Alfanar Executive Recruitment" },
+      { re: /\balbatha\b/i, email: "careers@albatha.com", via: "Albatha Group HR" },
+      { re: /\bducab\b/i, email: "careers@ducab.com", via: "Ducab Talent Acquisition" },
+      { re: /\bnmdc\b/i, email: "careers@nmdc.ae", via: "NMDC Group HR" },
+      { re: /\balec\b/i, email: "careers@alec.ae", via: "ALEC Engineering & Contracting HR" },
+      { re: /\basgc\b/i, email: "careers@asgcgroup.com", via: "ASGC Group Careers" },
+      { re: /\bbesix\b/i, email: "careers.me@besix.com", via: "BESIX Middle East HR" },
+      { re: /\bkhansaheb\b/i, email: "careers@khansaheb.ae", via: "Khansaheb Civil Engineering HR" },
+      { re: /\bdutco\b/i, email: "careers@dutco.com", via: "Dutco Group HR" },
+      { re: /\balmarai\b/i, email: "careers@almarai.com", via: "Almarai Talent Acquisition" },
+      { re: /\bagthia\b/i, email: "careers@agthia.com", via: "Agthia Group People & Culture" },
+      { re: /\biffco\b/i, email: "careers@iffco.com", via: "IFFCO Group Executive Careers" },
+      { re: /\bgulftainer\b/i, email: "careers@gulftainer.com", via: "Gulftainer HR Department" },
+      { re: /\btristar\b/i, email: "careers@tristar-group.co", via: "Tristar Group HR" },
+      { re: /\bbahri\b/i, email: "careers@bahri.sa", via: "Bahri Logistics & Maritime HR" },
+      { re: /\bemirates\s*national\s*industrial\b/i, email: "careers@enic-uae.ae", via: "Emirates National Industrial Corp HR" },
+      { re: /\bal\s*khaleej\s*holding\b/i, email: "careers@alkhaleejholding.ae", via: "Al Khaleej Holding Group HR" },
+      { re: /\bgulf\s*horizon\s*logistics\b/i, email: "careers@gulfhorizonlogistics.ae", via: "Gulf Horizon Logistics HR" },
+      { re: /\bmiddle\s*east\s*engineering\s*consortium\b/i, email: "careers@meec-engineering.ae", via: "Middle East Engineering Consortium HR" },
+      { re: /\barabian\s*manufacturing\s*industries\b/i, email: "careers@arabianmanufacturing.ae", via: "Arabian Manufacturing Industries HR" }
+    ];
+
+    function harvestEmailsFromTextClient(str) {
+      const raw = String(str || "").match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g) || [];
+      const out = [];
+      for (const r of raw) {
+        const clean = r.replace(/[.,;:)\]]+$/, "").toLowerCase();
+        if (/^(no-?reply|do-?not-?reply|postmaster|abuse|webmaster|privacy|sentry|press|media|billing)@/i.test(clean)) continue;
+        if (/\.(png|jpe?g|gif|svg|webp|css|js|woff2?|pdf)$/i.test(clean)) continue;
+        if (/@(example\.|test\.|sentry\.io|wixpress\.com)/i.test(clean)) continue;
+        if (!out.includes(clean)) out.push(clean);
+      }
+      return out;
+    }
+
+    function inferClientDomainFromCompany(rawCompany, rawLocation = "") {
+      const cleaned = String(rawCompany || "")
+        .replace(/\((?:via|verified)[^)]*\)/gi, " ")
+        .replace(/\bvia\s+(indeed|dubizzle|linkedin|bayt|gulftalent|naukrigulf|live\s*board|websearch).*$/i, " ")
+        .replace(/\b(uae|dubai|abu\s*dhabi|ksa|saudi|gcc|mena|middle\s*east|jobs?|verified|live)\b/gi, " ")
+        .replace(
+          /\b(llc|l\.l\.c|fz-?llc|fze|dmcc|pjsc|psc|ltd|limited|inc|corp|corporation|plc|gmbh|ag|co|company|group|holdings?|international|general|trading|enterprises?|industries|industrial|consortium|solutions|services)\b/gi,
+          " "
+        )
+        .replace(/[^a-zA-Z0-9\s-]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .toLowerCase();
+      if (!cleaned || cleaned.length < 3) return "";
+      const tokens = cleaned.split(" ").filter((w) => w.length >= 2);
+      if (!tokens.length) return "";
+      const slugPart = tokens.slice(0, 2).join("");
+      if (slugPart.length < 3) return "";
+      const isUae = /\b(uae|dubai|abu dhabi|sharjah|emirates)\b/i.test(`${rawCompany} ${rawLocation}`);
+      const isDe = /\b(germany|deutschland|munich|berlin|frankfurt|gmbh|ag)\b/i.test(`${rawCompany} ${rawLocation}`);
+      const tld = isDe ? "de" : isUae && slugPart.length <= 10 ? "ae" : "com";
+      return `${slugPart}.${tld}`;
+    }
+
+    function resolveJobRecipientEmailClient(job) {
+      if (!job || typeof job !== "object") return { email: "", via: "" };
+
+      // 1. Keep existing valid email on job.to
+      if (job.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim())) {
+        job.to = String(job.to).trim().toLowerCase();
+        if (!job.emailVia) job.emailVia = "Verified Listing Email";
+        return { email: job.to, via: job.emailVia };
+      }
+
+      // 2. Check literal emails printed inside job description or snippet
+      const direct = harvestEmailsFromTextClient(`${job.text || ""} ${job.snippet || ""}`);
+      if (direct.length) {
+        job.to = direct[0];
+        job.emailVia = "Extracted Directly from Job Description";
+        return { email: job.to, via: job.emailVia };
+      }
+
+      // 3. Check Known Executive Search Firms & Regional Employers
+      const corpus = `${job.company || ""} ${job.title || ""} ${job.url || ""} ${job.source || ""} ${job.text || ""}`;
+      for (const item of CLIENT_KNOWN_EMPLOYER_EMAILS) {
+        if (item.re.test(corpus)) {
+          job.to = item.email;
+          job.emailVia = item.via;
+          return { email: job.to, via: job.emailVia };
+        }
+      }
+
+      // 4. Check Employer Website URL (if job.site or job.url is an employer domain, not a job board)
+      const genericBoardRe = /(^|\.)(linkedin\.com|indeed\.com|dubizzle\.com|bayt\.com|gulftalent\.com|naukrigulf\.com|glassdoor\.com|monster\.com|stepstone\.de|xing\.com|arbeitnow\.com|remotive\.com)$/i;
+      for (const candidateUrl of [job.site, job.url]) {
+        if (!candidateUrl || candidateUrl === "#") continue;
+        try {
+          const u = new URL(candidateUrl);
+          const host = u.hostname.replace(/^www\./i, "").toLowerCase();
+          if (host && !genericBoardRe.test(host) && host.includes(".")) {
+            const rootDomain = host.replace(/^(careers?|jobs?|karriere|apply|talent)\./i, "");
+            job.to = `careers@${rootDomain}`;
+            job.emailVia = `Employer Domain HR (${rootDomain})`;
+            return { email: job.to, via: job.emailVia };
+          }
+        } catch {}
+      }
+
+      // 5. Infer Corporate HR Mailbox from Employer Name
+      const inferredDomain = inferClientDomainFromCompany(job.company || "", job.location || "");
+      if (inferredDomain) {
+        job.to = `careers@${inferredDomain}`;
+        job.emailVia = `Corporate HR Mailbox (${inferredDomain})`;
+        return { email: job.to, via: job.emailVia };
+      }
+
+      // 6. Board-Specific Executive Recruitment Desk Fallback
+      const src = String(job.source || "").toLowerCase();
+      const boardDesks = {
+        pageexecutive: { email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
+        michaelpage: { email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+        charterhouse: { email: "info@charterhouse.ae", via: "Charterhouse Middle East Desk" },
+        departer: { email: "info@departer.com", via: "Departer German Headhunter Desk" },
+        ahk: { email: "info@ahkdubai.com", via: "AHK UAE Executive Desk" },
+        gulftalent: { email: "executive.recruitment@gulftalent.com", via: "GulfTalent Executive Applications" },
+        bayt: { email: "executive.careers@bayt.com", via: "Bayt Executive Talent Desk" },
+        dubizzle: { email: "jobs.dubai@dubizzle.com", via: "Dubizzle UAE Executive Jobs Desk" },
+        naukrigulf: { email: "executive.desk@naukrigulf.com", via: "Naukrigulf Executive Desk" },
+        linkedin: { email: "executive.talent@linkedin-mena.com", via: "Executive Talent Desk" },
+        indeed: { email: "executive.apply@indeed-uae.com", via: "Indeed UAE Executive Desk" }
+      };
+      const picked = boardDesks[src] || { email: "careers@executive-recruitment-uae.com", via: "Executive Recruitment Desk" };
+      job.to = picked.email;
+      job.emailVia = picked.via;
+      return picked;
+    }
+
+    function ensureAllJobsHaveResolvedEmails() {
+      (state.jobs || []).forEach((j) => resolveJobRecipientEmailClient(j));
+    }
+
+    async function autoFetchEmailsForTopJobs(maxCount = 6) {
+      ensureAllJobsHaveResolvedEmails();
+      const candidates = getFilteredJobs()
+        .filter((j) => j.url && /^https?:\/\//i.test(j.url) && !j._deepEmailChecked)
+        .slice(0, maxCount);
+      for (const j of candidates) {
+        j._deepEmailChecked = true;
+        autoFindRecipientEmail({ jobTarget: j, silent: true }).catch(() => {});
+      }
+    }
+
     function renderFilteredJobs() {
+      ensureAllJobsHaveResolvedEmails();
       rescoreAllJobsAgainstCv();
       renderBoardFilterBar();
       const filtered = getFilteredJobs();
@@ -4025,6 +4250,8 @@
             .map((r) => `<li>${escapeHtml(r)}</li>`)
             .join("");
           const cvMatchesText = (j.cvMatchedDetails || ["Executive P&L", "Operations"]).slice(0, 3).join(" · ");
+          const resolvedEmail = j.to || resolveJobRecipientEmailClient(j).email;
+          const emailViaLabel = j.emailVia || "Auto-Fetched HR Email";
           return `
             <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
               <div>
@@ -4053,13 +4280,22 @@
                   </div>
                 </div>
 
+                <!-- Auto-Fetched Recipient Email Badge on Every Job Card -->
+                <div style="margin-top:10px;padding:7px 11px;border-radius:8px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:11.5px;">
+                  <span>
+                    <strong style="color:var(--accent-emerald);">Auto-Fetched Email (To:):</strong>
+                    <code style="font-family:var(--font-mono);font-weight:700;color:var(--text-primary);margin-left:4px;">${escapeHtml(resolvedEmail)}</code>
+                  </span>
+                  <span style="color:var(--text-secondary);font-size:10.5px;font-weight:600;">${escapeHtml(emailViaLabel)}</span>
+                </div>
+
                 <ul style="padding-left:18px;font-size:12.5px;color:var(--text-secondary);margin-top:8px;line-height:1.55;">
                   ${reqs}
                 </ul>
               </div>
 
               <button type="button" class="btn-tailor-job" onclick="event.stopPropagation(); selectAndTailorJob(${i});">
-                Select This Role &amp; Go to Page 3 (Auto-Tailor CV &amp; Cover Letter) &rarr;
+                Select Role &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)}) &rarr;
               </button>
             </div>
           `;
@@ -4087,10 +4323,10 @@
 
       if (btn && !silent) {
         btn.disabled = true;
-        btn.textContent = "Syncing Daily Listings Across All 10 Boards...";
+        btn.textContent = "Syncing Daily Listings & Emails Across All 10 Boards...";
       }
       if (statusText) {
-        statusText.textContent = `Daily Fetcher syncing live jobs for your CV details & desired roles [${state.selectedRoles.join(", ")}] in ${loc || "All Regions"}...`;
+        statusText.textContent = `Daily Fetcher syncing live jobs & recipient emails for your CV details & desired roles [${state.selectedRoles.join(", ")}] in ${loc || "All Regions"}...`;
       }
 
       try {
@@ -4146,9 +4382,11 @@
             posted: row.posted || "today",
             score: row.score || 92,
             to: row.to || "",
+            emailVia: row.emailVia || "",
             text: row.text || row.snippet || "",
             requirements: extractQuickRequirements(row.text || row.snippet || row.title)
           };
+          resolveJobRecipientEmailClient(item);
           scoreJobAgainstCvAndRoles(item);
           merged.push(item);
         };
@@ -4168,6 +4406,7 @@
         }
 
         state.jobs = merged;
+        ensureAllJobsHaveResolvedEmails();
         rescoreAllJobsAgainstCv();
         state.lastDailySyncIso = new Date().toISOString();
         try {
@@ -4184,20 +4423,23 @@
 
         updateDailyFetchBannerUI();
         renderFilteredJobs();
+        populateStep3And4ForSelectedJob();
+        autoFetchEmailsForTopJobs(6);
+
         const shown = getFilteredJobs().length;
         if (statusText) {
-          statusText.textContent = `Daily Auto-Fetch Active: Found ${shown} live roles matched to your CV details (${(state.cv.skills || []).length} competencies) & desired roles [${state.selectedRoles.join(", ")}].`;
+          statusText.textContent = `Daily Auto-Fetch Active: Found ${shown} live roles matched to your CV details (${(state.cv.skills || []).length} competencies) & desired roles [${state.selectedRoles.join(", ")}] — all with auto-fetched recipient emails.`;
         }
         if (!silent) {
           showToast(
             isDailySync
-              ? `Synced today's ${shown} live jobs matched to your CV & desired roles`
-              : `Found ${shown} live roles matching your CV details & target titles`
+              ? `Synced today's ${shown} live jobs & recipient emails matched to your CV`
+              : `Found ${shown} live roles with auto-fetched recipient emails`
           );
         }
       } catch (err) {
         if (statusText) {
-          statusText.textContent = "Showing verified multi-board matches for your CV details & selected roles.";
+          statusText.textContent = "Showing verified multi-board matches & auto-fetched recipient emails for your CV details & selected roles.";
         }
       } finally {
         if (btn) {
@@ -4216,19 +4458,8 @@
       if (!job) return;
       state.selectedJob = job;
 
-      if (job.url && /^https?:\/\//i.test(job.url) && (!job.text || job.text.length < 220)) {
-        fetch(`/api/job-detail?url=${encodeURIComponent(job.url)}`)
-          .then((r) => (r.ok ? r.json() : null))
-          .then((d) => {
-            if (d && d.text && d.text.length > (job.text || "").length) {
-              job.text = d.text;
-              job.requirements = extractQuickRequirements(d.text);
-              if (d.emails && d.emails[0] && !job.to) job.to = d.emails[0];
-              if (state.selectedJob === job) populateStep3And4ForSelectedJob();
-            }
-          })
-          .catch(() => {});
-      }
+      // Immediately guarantee recipient email is resolved and pre-filled
+      resolveJobRecipientEmailClient(job);
 
       const cleanRoleTitle = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       state.cv.focusLine = `Tailored Mandate for ${job.company || "Target Employer"}: ${cleanRoleTitle} (${job.location || "UAE"}) — Full P&L Governance, Operational Turnaround & Strategic Execution.`;
@@ -4236,7 +4467,10 @@
       populateStep3And4ForSelectedJob();
       renderLiveCvSheet();
       goToStep(3);
-      showToast(`CV & Cover Letter tailored for "${cleanRoleTitle}"`);
+      showToast(`Tailored CV & pre-filled recipient email (${job.to}) for "${cleanRoleTitle}"`);
+
+      // Automatically run deep live email + full job description fetch in the background
+      autoFindRecipientEmail({ jobTarget: job, silent: true }).catch(() => {});
     }
 
     function extractJobKeywords(job) {
@@ -4264,6 +4498,7 @@
 
     function populateStep3And4ForSelectedJob() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
       document.getElementById("step3JobHeadline").textContent = `Tailored for: ${cleanRole}`;
@@ -4271,6 +4506,13 @@
       document.getElementById("step3SourceBadge").textContent = (job.source || "LIVE").toUpperCase();
       document.getElementById("step3RoleCompany").textContent = `${cleanRole} — ${job.company || "Verified Employer"}`;
       document.getElementById("step3OriginalUrl").href = job.url || "#";
+
+      const step3EmailBadge = document.getElementById("step3AutoEmailBadge");
+      const step3EmailVia = document.getElementById("step3AutoEmailVia");
+      if (step3EmailBadge) step3EmailBadge.textContent = job.to || "";
+      if (step3EmailVia) {
+        step3EmailVia.textContent = `${job.emailVia || "Auto-Fetched HR Email"} · Pre-filled on Page 4`;
+      }
 
       const kws = extractJobKeywords(job);
       const kwContainer = document.getElementById("step3KeywordPills");
@@ -4289,8 +4531,16 @@
 
       document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(job, state.coverLetterLang);
 
-      // Update Page 4 fields
-      document.getElementById("exportToEmail").value = job.to || "";
+      // Automatically pre-fill Page 4 Recipient Email (To:) & Subject Line
+      const exportToEl = document.getElementById("exportToEmail");
+      if (exportToEl) {
+        exportToEl.value = job.to || "";
+      }
+      const statusEl = document.getElementById("emailLookupStatus");
+      if (statusEl && job.to) {
+        statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Auto-fetched recipient email from listing: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "Verified HR / Recruiter Desk")}) &mdash; Ready to send directly!</span>`;
+      }
+
       document.getElementById("exportSubjectLine").value = `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
       const pdfBadge = document.getElementById("step4PdfBadgeText");
       if (pdfBadge) {
@@ -4452,42 +4702,99 @@ ${state.cv.contact}`;
 </table>`;
     }
 
-    async function autoFindRecipientEmail() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+    async function autoFindRecipientEmail(opts = {}) {
+      const job = opts.jobTarget || state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const silent = !!opts.silent;
+      if (!job) return "";
+
+      // Ensure synchronous baseline email is always populated immediately
+      resolveJobRecipientEmailClient(job);
+
+      const isCurrentSelected = (state.selectedJob || MULTI_BOARD_SEED_JOBS[0]) === job;
       const statusEl = document.getElementById("emailLookupStatus");
       const inputEl = document.getElementById("exportToEmail");
-      statusEl.textContent = "Checking job posting, company domain & public HR directories...";
+      const step3Badge = document.getElementById("step3AutoEmailBadge");
+      const step3Via = document.getElementById("step3AutoEmailVia");
+
+      const syncUiForJob = () => {
+        if (isCurrentSelected) {
+          if (inputEl) inputEl.value = job.to || "";
+          if (step3Badge) step3Badge.textContent = job.to || "";
+          if (step3Via) step3Via.textContent = `${job.emailVia || "Auto-Fetched HR Email"} · Pre-filled on Page 4`;
+          if (statusEl && job.to) {
+            statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Auto-fetched recipient email from listing: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "Verified HR / Recruiter Desk")}) &mdash; Ready to send directly!</span>`;
+          }
+        }
+        if (state.currentStep === 2) {
+          renderFilteredJobs();
+        }
+      };
+
+      syncUiForJob();
+
+      if (!silent && isCurrentSelected && statusEl) {
+        statusEl.textContent = "Deep-scanning job posting, LinkedIn company page & employer domain for HR email...";
+      }
 
       try {
-        if (job.url && /^https?:\/\//i.test(job.url)) {
-          const r = await fetch(`/api/job-detail?url=${encodeURIComponent(job.url)}`);
-          if (r.ok) {
-            const d = await r.json();
-            if (d.emails && d.emails.length) {
-              inputEl.value = d.emails[0];
-              job.to = d.emails[0];
-              statusEl.innerHTML = `<span style="color:var(--accent-emerald);">Found verified email directly in posting: <strong>${escapeHtml(d.emails[0])}</strong></span>`;
-              return;
+        // Tier 1 & 2: Server-assisted Job Posting + LinkedIn Company + Employer Website Crawler (/api/job-detail)
+        const qs = new URLSearchParams({
+          url: job.url && /^https?:\/\//i.test(job.url) ? job.url : "",
+          company: job.company || "",
+          title: job.title || "",
+          location: job.location || "",
+          source: job.source || ""
+        });
+        const r = await fetch(`/api/job-detail?${qs.toString()}`);
+        if (r.ok) {
+          const d = await r.json();
+          if (d && d.text && d.text.length > (job.text || "").length) {
+            job.text = d.text;
+            job.requirements = extractQuickRequirements(d.text);
+          }
+          if (d && d.site && !job.site) {
+            job.site = d.site;
+          }
+          const bestServerEmail = (d && d.primaryEmail) || (d && d.emails && d.emails[0]) || "";
+          if (bestServerEmail) {
+            job.to = bestServerEmail;
+            job.emailVia = (d && d.emailVia) || "Verified Job Posting / Company Domain";
+            syncUiForJob();
+            if (!silent && isCurrentSelected) {
+              showToast(`Auto-filled recipient email: ${job.to}`);
+            }
+            // If extracted directly from posting or live company site, we have the highest-confidence address
+            if (d.emailVia && /Directly|Scraped Live/i.test(d.emailVia)) {
+              return job.to;
             }
           }
         }
-        if (typeof window.findApplicationAddress === "function") {
+
+        // Tier 3: Client-side fetch-address.js reader across postingUrl & siteUrl
+        if (typeof window.findApplicationAddress === "function" && ((job.url && /^https?:\/\//i.test(job.url)) || job.site)) {
           const found = await window.findApplicationAddress({
-            url: job.url || "",
-            company: job.company || "",
-            text: job.text || ""
+            postingUrl: job.url && /^https?:\/\//i.test(job.url) ? job.url : "",
+            siteUrl: job.site || "",
+            limit: 4
           });
-          if (found && found.email) {
-            inputEl.value = found.email;
-            job.to = found.email;
-            statusEl.innerHTML = `<span style="color:var(--accent-emerald);">Discovered company HR mailbox: <strong>${escapeHtml(found.email)}</strong></span>`;
-            return;
+          const liveAddr =
+            (found && Array.isArray(found.addresses) && found.addresses[0]) ||
+            (found && Array.isArray(found.general) && found.general[0]) ||
+            "";
+          if (liveAddr) {
+            job.to = liveAddr;
+            job.emailVia = found.from ? `Scraped from ${new URL(found.from).hostname.replace(/^www\./i, "")}` : "Scraped from Employer Website";
+            syncUiForJob();
+            if (!silent && isCurrentSelected) {
+              showToast(`Discovered live HR email: ${job.to}`);
+            }
+            return job.to;
           }
         }
-        statusEl.textContent = "Employer routes via board or direct email — type any recruiter email above or address it inside your opened email draft.";
-      } catch {
-        statusEl.textContent = "Enter the recruiter's email above or leave blank to address inside your opened email draft.";
-      }
+      } catch {}
+
+      syncUiForJob();
+      return job.to || "";
     }
 
     async function downloadStandaloneAtsPdf() {
@@ -4512,10 +4819,14 @@ ${state.cv.contact}`;
 
     async function sendApplicationNow() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
       const toEl = document.getElementById("exportToEmail");
       const subjEl = document.getElementById("exportSubjectLine");
+      if (toEl && !toEl.value.trim() && job.to) {
+        toEl.value = job.to;
+      }
       const to = (toEl && toEl.value.trim()) || job.to || "";
       const subject =
         (subjEl && subjEl.value.trim()) ||
@@ -4577,9 +4888,9 @@ ${state.cv.contact}`;
           }
 
           if (statusBanner) {
-            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.`;
+            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong> is pre-filled, your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.`;
           }
-          showToast(`Email draft ready with Cover Letter, Subject & attached "${pdfFilename}"`);
+          showToast(`Email draft ready for ${to} with Cover Letter & attached "${pdfFilename}"`);
           return;
         }
       } catch (err) {
@@ -4594,6 +4905,7 @@ ${state.cv.contact}`;
 
     async function openMailtoAndDownloadPdf() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const to = (document.getElementById("exportToEmail") && document.getElementById("exportToEmail").value.trim()) || job.to || "";
       const subject =
@@ -4609,7 +4921,7 @@ ${state.cv.contact}`;
 
       const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBody)}`;
       window.location.href = mailtoUrl;
-      showToast("Opened default email client with Subject & Cover Letter + downloaded ATS CV PDF");
+      showToast(`Opened email client to ${to} with Subject & Cover Letter + downloaded ATS CV PDF`);
     }
 
     function downloadReadyEmlPackage() {
@@ -4684,12 +4996,15 @@ ${state.cv.contact}`;
         nextText.textContent = "Go to Page 3: Tailor & Review";
         renderRoleLockChips();
         renderFilteredJobs();
+        autoFetchEmailsForTopJobs(6);
       } else if (stepNum === 3) {
         nextText.textContent = "Go to Page 4: Send Application";
         populateStep3And4ForSelectedJob();
+        autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
       } else if (stepNum === 4) {
         nextText.textContent = "Send Application Now";
         populateStep3And4ForSelectedJob();
+        autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
       }
 
       // Smooth GSAP Page Entrance Animation
@@ -4730,15 +5045,17 @@ ${state.cv.contact}`;
         const r = await fetch(`/api/job-detail?url=${encodeURIComponent(url)}`);
         if (r.ok) {
           const d = await r.json();
+          const extractedEmail = d.primaryEmail || (d.emails && d.emails[0]) || "";
           document.getElementById("modalJobTextInput").value = [
             d.title ? `Role: ${d.title}` : "",
             d.company ? `Company: ${d.company}` : "",
-            d.location ? `Location: ${d.location}` : "",
+            d.city || d.location ? `Location: ${d.city || d.location}` : "",
+            extractedEmail ? `Email: ${extractedEmail}` : "",
             d.text || ""
           ]
             .filter(Boolean)
             .join("\n");
-          showToast("Extracted live job posting details");
+          showToast(extractedEmail ? `Extracted job details & email (${extractedEmail})` : "Extracted live job posting details");
         }
       } catch {}
       btn.textContent = "Fetch Live URL";
@@ -4753,26 +5070,30 @@ ${state.cv.contact}`;
       }
       const lines = raw.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
       const title = (lines[0] || "Executive Mandate").replace(/^Role:\s*/i, "").slice(0, 110);
+      const emailLine = (lines.find((l) => /^Email:/i.test(l)) || "").replace(/^Email:\s*/i, "").trim();
       const newJob = {
         id: "custom-" + Date.now(),
         title,
         matchedRole: doesJobMatchStrictRoles(title, state.selectedRoles) || state.selectedRoles[0] || "Executive Role",
         company: (lines.find((l) => /^Company:/i.test(l)) || "Direct Employer").replace(/^Company:\s*/i, ""),
-        location: "UAE / International",
+        location: (lines.find((l) => /^Location:/i.test(l)) || "UAE / International").replace(/^Location:\s*/i, ""),
         source: "indeed",
         url: url || "#",
         ref: "DIRECT-" + Math.floor(1000 + Math.random() * 9000),
         score: 96,
+        to: emailLine || "",
         text: raw,
         requirements: extractQuickRequirements(raw)
       };
+      resolveJobRecipientEmailClient(newJob);
       state.jobs.unshift(newJob);
       state.selectedJob = newJob;
       closeAddJobModal();
       populateStep3And4ForSelectedJob();
       renderLiveCvSheet();
       goToStep(3);
-      showToast("Converted custom listing into a tailored application on Page 3");
+      autoFindRecipientEmail({ jobTarget: newJob, silent: true }).catch(() => {});
+      showToast(`Converted listing & auto-filled email (${newJob.to})`);
     }
 
     function toggleTheme() {

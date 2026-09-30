@@ -85,70 +85,90 @@
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/members/member-directory",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Board of Directors & Honorary Advisory Board",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/members/board-of-directors-honorary-advisory-board",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Your Partner for International Trade Fair Participation",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/trade-fairs/your-partner-for-international-trade-fair-participation",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Filetype: pdf Manager Marketing & Sales DZT Filesize: 215.21 kb",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/content/download/966949/19343104?version=2",
-          "kind": "document"
+          "kind": "document",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Filetype: pdf Mitarbeiter*in für den Empfang/Telefonzentrale Filesize: 157.91 kb",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/content/download/973931/19491686?version=1",
-          "kind": "document"
+          "kind": "document",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Filetype: pdf Internship Oman Office Filesize: 241.11 kb",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/content/download/888119/16546037?version=2",
-          "kind": "document"
+          "kind": "document",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Receptionist and Telephone Operator (f/m/d) - The Embassy of the Federal Republic of Germany in Abu Dhabi",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://workdrive.zohoexternal.com/file/w51976dc660526f9d45d698d266a9f3ceb9d0",
-          "kind": "document"
+          "kind": "document",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
           "title": "Treasury and Investment Manager (m/f/d) - Departer",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/36254/treasury-amd-investment-manager-m-f-d",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Regional Sales Manager (m/f/d) Extrusion Technology, GCC - Departer",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/36119/regional-sales-manager-m-f-d-extrusion-technology-gcc",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Internship at the AHK",
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/services/career-in-the-uae/internship-at-the-ahk",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
         }
       ]
     },
@@ -170,7 +190,9 @@
           "location": "UAE",
           "url": "https://careers.departer.de/job/35821/financial-controller-m-f-d-uae",
           "ref": "35821",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Managing Director ANZ (m/f/d) Industrial Packaging",
@@ -178,7 +200,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/37545/managing-director-anz-m-f-d-industrial-packaging",
           "ref": "37545",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Personalreferent/HR Generalist (m/w/d)",
@@ -186,7 +210,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/37512/personalreferent-hr-generalist-m-w-d",
           "ref": "37512",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Managing Director (m/f/d) GCC",
@@ -194,7 +220,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/37479/managing-director-m-f-d-gcc",
           "ref": "37479",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Managing Director (m/f/d) Australia & New Zealand",
@@ -202,7 +230,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/36782/managing-director-m-f-d-australia-new-zealand",
           "ref": "36782",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Regional CEO (m/f/d) Southeast Asia & Greater China",
@@ -210,7 +240,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/36815/regional-ceo-m-f-d-southeast-asia-greater-china",
           "ref": "36815",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Head of Sales MEA (m/f/d) Building Materials",
@@ -218,7 +250,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/36848/head-of-sales-mea-m-f-d-building-materials",
           "ref": "36848",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Entwicklungsleiter International m/w/d",
@@ -226,7 +260,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/37049/entwicklungsleiter-international-m-w-d",
           "ref": "37049",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Country Manager UK (m/f/d) AI-Powered Solar & Energy Platform",
@@ -234,7 +270,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/35755/country-manager-uk-m-f-d-ai-powered-solar-energy-platform",
           "ref": "35755",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         },
         {
           "title": "Business Development Manager Vietnam - Subsidiary Setup (m/f/d)",
@@ -242,7 +280,9 @@
           "location": "",
           "url": "https://careers.departer.de/job/37412/business-development-manager-vietnam-subsidiary-setup-m-f-d",
           "ref": "37412",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
         }
       ]
     },
@@ -265,7 +305,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/executive-assistant-53763",
           "ref": "53763",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "Store Manager",
@@ -273,7 +315,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/store-manager-53772",
           "ref": "53772",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "Senior Group Accountant",
@@ -281,7 +325,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/senior-group-accountant-53752",
           "ref": "53752",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "Investment Operations Manager – Systematic Hedge Fund",
@@ -289,7 +335,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/investment-operations-manager-systematic-hedge-fund-53384",
           "ref": "53384",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "Director of Fund Raising",
@@ -297,7 +345,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/director-of-fund-raising-53338",
           "ref": "53338",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "International Tax Manager",
@@ -305,7 +355,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/group-finance-and-tax-manager-53740",
           "ref": "53740",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         },
         {
           "title": "Business Analyst",
@@ -313,7 +365,9 @@
           "location": "",
           "url": "https://www.charterhouseme.ae/job/business-analyst-53767",
           "ref": "53767",
-          "kind": "page"
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
         }
       ]
     },
@@ -336,7 +390,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/general-manager-fmcg/ref/jn-072026-7069059",
           "ref": "jn-072026-7069059",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Corporate Governance & KYC Officer",
@@ -344,7 +400,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/corporate-governance-kyc-officer/ref/jn-092026-7113262",
           "ref": "jn-092026-7113262",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Tech Lead - Cabinet de conseil",
@@ -352,7 +410,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/tech-lead-tunisie/ref/jn-092026-7114460",
           "ref": "jn-092026-7114460",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Chief Digital Officer - New AI Build",
@@ -360,7 +420,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/chief-digital-officer-new-ai-build/ref/jn-092026-7113093",
           "ref": "jn-092026-7113093",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Head of People & Culture - UAE National",
@@ -368,7 +430,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/head-people-culture-uae-national/ref/jn-092026-7113042",
           "ref": "jn-092026-7113042",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Finance Manager, Head of Finance",
@@ -376,7 +440,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/head-finance-business-partnering-uae-national/ref/jn-092026-7113145",
           "ref": "jn-092026-7113145",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Group CFO - Leading Regional Business - Dubai",
@@ -384,7 +450,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/group-cfo/ref/jn-092026-7114038",
           "ref": "jn-092026-7114038",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Senior Associate, Collections",
@@ -392,7 +460,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/senior-associate-collections/ref/jn-092026-7112900",
           "ref": "jn-092026-7112900",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Director of Cyber Security (Emirati Talent)",
@@ -400,7 +470,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/director-cyber-security-emirati-talent/ref/jn-092026-7113158",
           "ref": "jn-092026-7113158",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "CFO, Chief Financial Officer",
@@ -408,7 +480,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/cfo/ref/jn-092026-7113190",
           "ref": "jn-092026-7113190",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Data Protection Officer (Technical Data Governance)",
@@ -416,7 +490,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/data-protection-officer-technical-data-governance/ref/jn-092026-7094653",
           "ref": "jn-092026-7094653",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Director of Contracts - Mixed Use Developments - Dubai - RE Developer",
@@ -424,7 +500,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/director-contracts-mixed-use-developments-re-developer/ref/jn-092026-7112649",
           "ref": "jn-092026-7112649",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Project Director - Master-Planned Communities - RE Developer - Dubai",
@@ -432,7 +510,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/project-director-master-planned-communities-re-developer/ref/jn-092026-7112647",
           "ref": "jn-092026-7112647",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Project Director - Mixed use Developments - RE Developer",
@@ -440,7 +520,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/project-director-mixed-use-developments-re-developer/ref/jn-092026-7112651",
           "ref": "jn-092026-7112651",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Legal Counsel - Qatar",
@@ -448,7 +530,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/legal-counsel-qatar/ref/jn-092026-7111895",
           "ref": "jn-092026-7111895",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Office Manager - Multinational Firm",
@@ -456,7 +540,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/office-manager/ref/jn-092026-7110964",
           "ref": "jn-092026-7110964",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Human Resources Manager",
@@ -464,7 +550,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/hr-manager/ref/jn-092026-7111060",
           "ref": "jn-092026-7111060",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Tax Manager",
@@ -472,7 +560,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/tax-manager/ref/jn-092026-7110986",
           "ref": "jn-092026-7110986",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Director Strategy and Advisory - Africa",
@@ -480,7 +570,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/director-strategy-and-advisory-africa/ref/jn-092026-7110490",
           "ref": "jn-092026-7110490",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Head of Compliance - Commodities/Trading",
@@ -488,7 +580,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/head-compliance-commoditiestrading/ref/jn-092026-7108922",
           "ref": "jn-092026-7108922",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Sales Operations Specialist - Hospitality Supplies",
@@ -496,7 +590,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/sales-operations-specialist-hospitality-supplies/ref/jn-092026-7110377",
           "ref": "jn-092026-7110377",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Head of Sales",
@@ -504,7 +600,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/head-sales/ref/jn-092026-7108903",
           "ref": "jn-092026-7108903",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Executive Assistant - Multinational Firm",
@@ -512,7 +610,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/executive-assistant/ref/jn-092026-7102858",
           "ref": "jn-092026-7102858",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Senior Backend Engineer - Distributed Systems",
@@ -520,7 +620,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/senior-backend-engineer/ref/jn-012026-6928265",
           "ref": "jn-012026-6928265",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Finance Manager",
@@ -528,7 +630,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/finance-manager/ref/jn-082026-7089915",
           "ref": "jn-082026-7089915",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Tax Compliance Coordination Analyst",
@@ -536,7 +640,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/tax-compliance-coordination-analyst/ref/jn-092026-7107732",
           "ref": "jn-092026-7107732",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Tax Controls, Risk & Reporting Analyst",
@@ -544,7 +650,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/tax-control-risk-and-reporting-analyst/ref/jn-092026-7107733",
           "ref": "jn-092026-7107733",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Tax Specialist - Tanzania - H/F",
@@ -552,7 +660,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/tax-specialist-tanzania-hf/ref/jn-092026-7107443",
           "ref": "jn-092026-7107443",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Regional tax specialist - Ghana (F/H)",
@@ -560,7 +670,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/regional-tax-specialist-ghana-fh/ref/jn-092026-7107385",
           "ref": "jn-092026-7107385",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         },
         {
           "title": "Senior Investment Associate - Private Equity",
@@ -568,7 +680,9 @@
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/senior-investment-associate-private-equity/ref/jn-092026-7107020",
           "ref": "jn-092026-7107020",
-          "kind": "page"
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     },
@@ -590,7 +704,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
           "ref": "jn-082026-7091934",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Deputy Chief Finance Officer",
@@ -598,7 +714,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/deputy-chief-finance-officer/ref/jn-082026-7091542",
           "ref": "jn-082026-7091542",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Director of Financial Services",
@@ -606,7 +724,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-financial-services/ref/jn-072026-7071248",
           "ref": "jn-072026-7071248",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Director of Finance",
@@ -614,7 +734,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance/ref/jn-072026-7074184",
           "ref": "jn-072026-7074184",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Corporate Venture Capitalist",
@@ -622,7 +744,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/corporate-venture-capitalist/ref/jn-082026-7089429",
           "ref": "jn-082026-7089429",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Marketing and PR Communication Director",
@@ -630,7 +754,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/marketing-and-pr-director/ref/jn-092026-7105494",
           "ref": "jn-092026-7105494",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Chief Commercial Officer",
@@ -638,7 +764,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/chief-commercial-officer/ref/jn-092026-7110431",
           "ref": "jn-092026-7110431",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Global Key Account Manager ASML",
@@ -646,7 +774,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/global-key-account-manager-asml/ref/jn-092026-7110447",
           "ref": "jn-092026-7110447",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Tokenization Product Director - Collateral",
@@ -654,7 +784,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/tokenization-product-director-collateral/ref/jn-092026-7112484",
           "ref": "jn-092026-7112484",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Head of Project Controlling (m/w/d) - Technologieunternehmen",
@@ -662,7 +794,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/head-project-controlling-mwd-technologieunternehmen/ref/jn-082026-7086452",
           "ref": "jn-082026-7086452",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Group QESH Manager (Quality-led)",
@@ -670,7 +804,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/group-qesh-manager-quality-led/ref/jn-092026-7110460",
           "ref": "jn-092026-7110460",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Group Head of Sales",
@@ -678,7 +814,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/group-head-sales/ref/jn-072026-7074888",
           "ref": "jn-072026-7074888",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Senior Partner / Partner - Consumer & Retail",
@@ -686,7 +824,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-consumer-retail/ref/jn-092026-7098104",
           "ref": "jn-092026-7098104",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Partner or Senior Partner - Industrial & Manufacturing",
@@ -694,7 +834,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-industrial-manufacturing/ref/jn-092026-7098273",
           "ref": "jn-092026-7098273",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Director/a de Gestión Económico-Financiera - ARAGON",
@@ -702,7 +844,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/directora-de-gesti%C3%B3n-econ%C3%B3mico-financiera/ref/jn-092026-7103993",
           "ref": "jn-092026-7103993",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Director of Rooms - Luxury 5-Star Hotel Lake Geneva Region",
@@ -710,7 +854,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-rooms-luxury-5-star-hotel-lake-geneva-region/ref/jn-092026-7109181",
           "ref": "jn-092026-7109181",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Global IT Director",
@@ -718,7 +864,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/global-it-director/ref/jn-092026-7108167",
           "ref": "jn-092026-7108167",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Interim Controller - 3 Month Contract - Fort Worth, TX",
@@ -726,7 +874,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/interim-controller-3-month-contract-fort-worth-tx/ref/jn-092026-7111737",
           "ref": "jn-092026-7111737",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Head of Finance - Renewables - Dallas, TX",
@@ -734,7 +884,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/head-finance-renewables-dallas-tx/ref/jn-092026-7105589",
           "ref": "jn-092026-7105589",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Chief Executive Officer (CEO), Private Equity-Backed Industrial Company",
@@ -742,7 +894,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/ceo-private-equity-backed-industrial-company/ref/jn-092026-7111168",
           "ref": "jn-092026-7111168",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "General Manager | Italian Packaging Group | Spanish Plant",
@@ -750,7 +904,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/general-manager-italian-packaging-group-spanish-plant/ref/jn-092026-7110594",
           "ref": "jn-092026-7110594",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Food & Beverage Director (Luxury Alpine Resort)",
@@ -758,7 +914,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/food-beverage-director-luxury-alpine-resort/ref/jn-052026-7015573",
           "ref": "jn-052026-7015573",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Site Director - International Transport & Logistics Company",
@@ -766,7 +924,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/site-director-international-transport-logistics-company/ref/jn-072026-7062358",
           "ref": "jn-072026-7062358",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Vice President - Operations, Vietnam",
@@ -774,7 +934,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/vp-operations-vietnam-toy-production/ref/jn-092026-7109929",
           "ref": "jn-092026-7109929",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Chief Technology Officer ( CTO )",
@@ -782,7 +944,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/chief-technology-officer-cto-saas-edtech/ref/jn-082026-7091917",
           "ref": "jn-082026-7091917",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "International Sales Director",
@@ -790,7 +954,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/international-sales-director/ref/jn-092026-7104939",
           "ref": "jn-092026-7104939",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Finance Director",
@@ -798,7 +964,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/finance-director/ref/jn-092026-7110852",
           "ref": "jn-092026-7110852",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "Senior Manager - Commercial Finance & FP&A - Norwood, MA",
@@ -806,7 +974,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/senior-manager-commercial-finance-fpa-norwood-ma/ref/jn-082026-7090273",
           "ref": "jn-082026-7090273",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "HR Director",
@@ -814,7 +984,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/hr-director/ref/jn-092026-7107492",
           "ref": "jn-092026-7107492",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         },
         {
           "title": "CFO | Fintech",
@@ -822,7 +994,9 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/cfo/ref/jn-092026-7104683",
           "ref": "jn-092026-7104683",
-          "kind": "page"
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -846,7 +1020,9 @@
           "ref": "4473281614",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@deltaexecutive.com",
+          "emailVia": "Corporate HR Mailbox (deltaexecutive.com)"
         },
         {
           "title": "Managing Director, Global Infrastructure Co-Investments & Minority Direct Investments, Dubai",
@@ -856,7 +1032,9 @@
           "ref": "4473274800",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@deltaexecutive.com",
+          "emailVia": "Corporate HR Mailbox (deltaexecutive.com)"
         },
         {
           "title": "Investment Director / Managing Director",
@@ -866,7 +1044,9 @@
           "ref": "4470580918",
           "posted": "2026-09-27",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@hedgeimpact.com",
+          "emailVia": "Corporate HR Mailbox (hedgeimpact.com)"
         },
         {
           "title": "Chief Executive Officer",
@@ -876,7 +1056,9 @@
           "ref": "4465957889",
           "posted": "2026-09-16",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@preview.ae",
+          "emailVia": "Corporate HR Mailbox (preview.ae)"
         },
         {
           "title": "Managing Director",
@@ -886,7 +1068,9 @@
           "ref": "4471726569",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@enseafzco.ae",
+          "emailVia": "Corporate HR Mailbox (enseafzco.ae)"
         },
         {
           "title": "CCB- UAE Head",
@@ -896,7 +1080,9 @@
           "ref": "4471023142",
           "posted": "2026-09-26",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@citi.ae",
+          "emailVia": "Corporate HR Mailbox (citi.ae)"
         },
         {
           "title": "Managing Director — Employer of Record (EOR) Business Unit",
@@ -906,7 +1092,9 @@
           "ref": "4468474397",
           "posted": "2026-09-20",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@mercans.ae",
+          "emailVia": "Corporate HR Mailbox (mercans.ae)"
         },
         {
           "title": "Managing Director - Glass & Aluminium Business Unit",
@@ -916,7 +1104,9 @@
           "ref": "4468528895",
           "posted": "2026-09-23",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@greenbull.ae",
+          "emailVia": "Corporate HR Mailbox (greenbull.ae)"
         },
         {
           "title": "Chief Executive Officer",
@@ -926,7 +1116,9 @@
           "ref": "4463379501",
           "posted": "2026-09-04",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@eyespyrecruitment.com",
+          "emailVia": "Corporate HR Mailbox (eyespyrecruitment.com)"
         },
         {
           "title": "Managing Director",
@@ -936,7 +1128,9 @@
           "ref": "4469349176",
           "posted": "2026-09-23",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@anglerecruitment.com",
+          "emailVia": "Corporate HR Mailbox (anglerecruitment.com)"
         },
         {
           "title": "Store General Manager (Supermarket)",
@@ -946,7 +1140,9 @@
           "ref": "4466266392",
           "posted": "2026-09-17",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@gmg.com",
+          "emailVia": "GMG Executive Talent Acquisition"
         },
         {
           "title": "General Manager",
@@ -956,7 +1152,9 @@
           "ref": "4462360929",
           "posted": "2026-09-05",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@lavita.ae",
+          "emailVia": "Corporate HR Mailbox (lavita.ae)"
         },
         {
           "title": "General Manager",
@@ -966,7 +1164,9 @@
           "ref": "4464098707",
           "posted": "2026-09-07",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@algahwa.ae",
+          "emailVia": "Corporate HR Mailbox (algahwa.ae)"
         },
         {
           "title": "General Manager – Facilities Management",
@@ -976,7 +1176,9 @@
           "ref": "4463002735",
           "posted": "2026-09-09",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@alisons.ae",
+          "emailVia": "Corporate HR Mailbox (alisons.ae)"
         },
         {
           "title": "General Manager Urgent Hiring",
@@ -986,7 +1188,9 @@
           "ref": "4445950376",
           "posted": "2026-07-27",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@sanapure.ae",
+          "emailVia": "Corporate HR Mailbox (sanapure.ae)"
         },
         {
           "title": "General Manager - F&B Multi Concepts",
@@ -996,7 +1200,9 @@
           "ref": "4466046601",
           "posted": "2026-09-14",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@c2i.ae",
+          "emailVia": "Corporate HR Mailbox (c2i.ae)"
         },
         {
           "title": "General Manager - Joinery Business Unit",
@@ -1006,7 +1212,9 @@
           "ref": "4468970729",
           "posted": "2026-09-23",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@greenbull.ae",
+          "emailVia": "Corporate HR Mailbox (greenbull.ae)"
         },
         {
           "title": "Moving Services General Manager",
@@ -1016,7 +1224,9 @@
           "ref": "4472741455",
           "posted": "2026-09-28",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@alchemyglobal.com",
+          "emailVia": "Corporate HR Mailbox (alchemyglobal.com)"
         },
         {
           "title": "General Manager",
@@ -1026,7 +1236,9 @@
           "ref": "4468746651",
           "posted": "2026-09-21",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@aprilquest.ae",
+          "emailVia": "Corporate HR Mailbox (aprilquest.ae)"
         },
         {
           "title": "Director, General Manager Sales - UAE",
@@ -1036,7 +1248,9 @@
           "ref": "4466446461",
           "posted": "2026-09-12",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@cisco.ae",
+          "emailVia": "Corporate HR Mailbox (cisco.ae)"
         },
         {
           "title": "Director of Operations",
@@ -1046,7 +1260,9 @@
           "ref": "4465542115",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidentialcareers.com",
+          "emailVia": "Corporate HR Mailbox (confidentialcareers.com)"
         },
         {
           "title": "Director of Operations",
@@ -1056,7 +1272,9 @@
           "ref": "4465553036",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidentialcareers.com",
+          "emailVia": "Corporate HR Mailbox (confidentialcareers.com)"
         },
         {
           "title": "Director of Operations & Development - Emirati Applicants",
@@ -1066,7 +1284,9 @@
           "ref": "4462281530",
           "posted": "2026-09-08",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@course.ae",
+          "emailVia": "Corporate HR Mailbox (course.ae)"
         },
         {
           "title": "Operations Director (Pharmaceutical & Healthcare Distribution)",
@@ -1076,7 +1296,9 @@
           "ref": "4435638680",
           "posted": "2026-07-09",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@arabianethicals.com",
+          "emailVia": "Corporate HR Mailbox (arabianethicals.com)"
         },
         {
           "title": "Director of Operations",
@@ -1086,7 +1308,9 @@
           "ref": "4465506533",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@foodpeople.ae",
+          "emailVia": "Corporate HR Mailbox (foodpeople.ae)"
         },
         {
           "title": "Director of Operations",
@@ -1096,7 +1320,9 @@
           "ref": "4471423282",
           "posted": "2026-09-24",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@palazzoversace.com",
+          "emailVia": "Corporate HR Mailbox (palazzoversace.com)"
         },
         {
           "title": "Operations Director",
@@ -1106,7 +1332,9 @@
           "ref": "4461107779",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@creationbusiness.com",
+          "emailVia": "Corporate HR Mailbox (creationbusiness.com)"
         },
         {
           "title": "Director - Operations - Dubai Holding Real Estate (National Talent)",
@@ -1116,7 +1344,9 @@
           "ref": "4472745286",
           "posted": "2026-09-28",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "executive.talent@linkedin-mena.com",
+          "emailVia": "Executive Talent Desk"
         },
         {
           "title": "Director of Operations",
@@ -1126,7 +1356,9 @@
           "ref": "4466860092",
           "posted": "2026-09-16",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidential.com",
+          "emailVia": "Corporate HR Mailbox (confidential.com)"
         },
         {
           "title": "Director of Operations",
@@ -1136,7 +1368,9 @@
           "ref": "4466511469",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidential.com",
+          "emailVia": "Corporate HR Mailbox (confidential.com)"
         },
         {
           "title": "Group Chief Executive Officer",
@@ -1146,7 +1380,9 @@
           "ref": "4465558740",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@legend.ae",
+          "emailVia": "Corporate HR Mailbox (legend.ae)"
         },
         {
           "title": "Chief Executive Officer",
@@ -1156,7 +1392,9 @@
           "ref": "4470924431",
           "posted": "2026-09-23",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@daikanhospitality.com",
+          "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
         },
         {
           "title": "Chief Executive Officer",
@@ -1166,7 +1404,9 @@
           "ref": "4470139385",
           "posted": "2026-09-25",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@wowjobs.ae",
+          "emailVia": "Corporate HR Mailbox (wowjobs.ae)"
         },
         {
           "title": "MD / President, Global DTC",
@@ -1176,7 +1416,9 @@
           "ref": "4463979100",
           "posted": "2026-09-11",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@sumwonstudios.com",
+          "emailVia": "Corporate HR Mailbox (sumwonstudios.com)"
         },
         {
           "title": "MD, Global DTC",
@@ -1186,7 +1428,9 @@
           "ref": "4465017842",
           "posted": "2026-09-09",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@drayton.ae",
+          "emailVia": "Corporate HR Mailbox (drayton.ae)"
         },
         {
           "title": "Chief Operating Officer (COO)",
@@ -1196,7 +1440,9 @@
           "ref": "4468898614",
           "posted": "2026-09-18",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@unisonconsulting.com",
+          "emailVia": "Corporate HR Mailbox (unisonconsulting.com)"
         },
         {
           "title": "Chief Operating Officer (Water Treatment Solutions)",
@@ -1206,7 +1452,9 @@
           "ref": "4445934292",
           "posted": "2026-07-19",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@thegreater.ae",
+          "emailVia": "Corporate HR Mailbox (thegreater.ae)"
         },
         {
           "title": "Chief Operating Officer",
@@ -1216,7 +1464,9 @@
           "ref": "4452252265",
           "posted": "2026-08-17",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@nordline.ae",
+          "emailVia": "Corporate HR Mailbox (nordline.ae)"
         },
         {
           "title": "Chief Operating Officer (Crypto)",
@@ -1226,7 +1476,9 @@
           "ref": "4470051576",
           "posted": "2026-09-25",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@evotym.ae",
+          "emailVia": "Corporate HR Mailbox (evotym.ae)"
         },
         {
           "title": "Chief Growth Officer-Cryptocurrency Exchange",
@@ -1236,7 +1488,9 @@
           "ref": "4444548227",
           "posted": "2026-07-20",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@cxm.ae",
+          "emailVia": "Corporate HR Mailbox (cxm.ae)"
         },
         {
           "title": "Managing Director (Catering & Facilities Management)",
@@ -1246,7 +1500,9 @@
           "ref": "4468368782",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidential.com",
+          "emailVia": "Corporate HR Mailbox (confidential.com)"
         },
         {
           "title": "Country Director - Infrastructure",
@@ -1256,7 +1512,9 @@
           "ref": "4464764952",
           "posted": "2026-09-14",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@guildhallthe.com",
+          "emailVia": "Corporate HR Mailbox (guildhallthe.com)"
         },
         {
           "title": "General Manager, UAE - Cash",
@@ -1266,7 +1524,9 @@
           "ref": "4443350324",
           "posted": "2026-09-23",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@brink.ae",
+          "emailVia": "Corporate HR Mailbox (brink.ae)"
         },
         {
           "title": "General Manager - Wood Al Majal Joint Venture",
@@ -1276,7 +1536,9 @@
           "ref": "4459328107",
           "posted": "2026-09-17",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@wood.ae",
+          "emailVia": "Corporate HR Mailbox (wood.ae)"
         },
         {
           "title": "Country Manager",
@@ -1286,7 +1548,9 @@
           "ref": "4471287014",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@leadingqsr.ae",
+          "emailVia": "Corporate HR Mailbox (leadingqsr.ae)"
         },
         {
           "title": "General Manager, EOR",
@@ -1296,7 +1560,9 @@
           "ref": "4456502399",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@deel.ae",
+          "emailVia": "Corporate HR Mailbox (deel.ae)"
         },
         {
           "title": "UAE Country Manager",
@@ -1306,7 +1572,9 @@
           "ref": "4459930898",
           "posted": "2026-09-02",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@anton.ae",
+          "emailVia": "Corporate HR Mailbox (anton.ae)"
         },
         {
           "title": "General Manager, Nigeria",
@@ -1316,7 +1584,9 @@
           "ref": "4366053834",
           "posted": "2026-09-27",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@taptapsend.ae",
+          "emailVia": "Corporate HR Mailbox (taptapsend.ae)"
         },
         {
           "title": "Country Manager (UAE)",
@@ -1326,7 +1596,9 @@
           "ref": "4467463000",
           "posted": "2026-09-17",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@coinsph.ae",
+          "emailVia": "Corporate HR Mailbox (coinsph.ae)"
         },
         {
           "title": "Director, General Manager Sales - UAE",
@@ -1336,7 +1608,9 @@
           "ref": "4466438510",
           "posted": "2026-09-12",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@cisco.ae",
+          "emailVia": "Corporate HR Mailbox (cisco.ae)"
         },
         {
           "title": "UAE Country Manager – Emirati National",
@@ -1346,7 +1620,9 @@
           "ref": "4464295202",
           "posted": "2026-09-12",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@eyouth.ae",
+          "emailVia": "Corporate HR Mailbox (eyouth.ae)"
         },
         {
           "title": "Commercial Director",
@@ -1356,7 +1632,9 @@
           "ref": "4468202559",
           "posted": "2026-09-16",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@theglobal.ae",
+          "emailVia": "Corporate HR Mailbox (theglobal.ae)"
         },
         {
           "title": "Commercial Director",
@@ -1366,7 +1644,9 @@
           "ref": "4463436337",
           "posted": "2026-09-10",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@menasapartners.com",
+          "emailVia": "Corporate HR Mailbox (menasapartners.com)"
         },
         {
           "title": "Commercial Director",
@@ -1376,7 +1656,9 @@
           "ref": "4471706839",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidentialcareers.com",
+          "emailVia": "Corporate HR Mailbox (confidentialcareers.com)"
         },
         {
           "title": "Commercial Director",
@@ -1386,7 +1668,9 @@
           "ref": "4445899537",
           "posted": "2026-08-03",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@conxdigital.com",
+          "emailVia": "Corporate HR Mailbox (conxdigital.com)"
         },
         {
           "title": "Director, Commercial Payments, Visa Government Solutions - CEMEA",
@@ -1396,7 +1680,9 @@
           "ref": "4440652041",
           "posted": "2026-08-27",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@visa.ae",
+          "emailVia": "Corporate HR Mailbox (visa.ae)"
         },
         {
           "title": "Multi Property Commercial Director",
@@ -1406,7 +1692,9 @@
           "ref": "4450361660",
           "posted": "2026-08-07",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@thefirst.ae",
+          "emailVia": "Corporate HR Mailbox (thefirst.ae)"
         },
         {
           "title": "Business Unit Director",
@@ -1416,7 +1704,9 @@
           "ref": "4470116952",
           "posted": "2026-09-28",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@kineticbusiness.com",
+          "emailVia": "Corporate HR Mailbox (kineticbusiness.com)"
         },
         {
           "title": "Director – Retail Commercial Strategy",
@@ -1426,7 +1716,9 @@
           "ref": "4463972428",
           "posted": "2026-09-11",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidential.com",
+          "emailVia": "Corporate HR Mailbox (confidential.com)"
         },
         {
           "title": "Commercial Director",
@@ -1436,7 +1728,9 @@
           "ref": "4392893262",
           "posted": "2026-09-10",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@wasaelproperty.com",
+          "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
         },
         {
           "title": "Director - Commercial Sales, Newton",
@@ -1446,7 +1740,9 @@
           "ref": "4463465031",
           "posted": "2026-09-10",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@affle.ae",
+          "emailVia": "Corporate HR Mailbox (affle.ae)"
         },
         {
           "title": "Director & Manager Supply Chain",
@@ -1456,7 +1752,9 @@
           "ref": "4466563200",
           "posted": "2026-09-15",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@auxotalent.ae",
+          "emailVia": "Corporate HR Mailbox (auxotalent.ae)"
         },
         {
           "title": "HEAD OF SUPPLY CHAIN for MAE BU",
@@ -1466,7 +1764,9 @@
           "ref": "4462940127",
           "posted": "2026-09-07",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@midea.ae",
+          "emailVia": "Corporate HR Mailbox (midea.ae)"
         },
         {
           "title": "Head - Supply Chain",
@@ -1476,7 +1776,9 @@
           "ref": "4471275294",
           "posted": "2026-09-29",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@apparelglobal.com",
+          "emailVia": "Apparel Group HR"
         },
         {
           "title": "Head - Logistics - 3PL",
@@ -1486,7 +1788,9 @@
           "ref": "4471300585",
           "posted": "2026-09-27",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@geniushrtech.com",
+          "emailVia": "Corporate HR Mailbox (geniushrtech.com)"
         },
         {
           "title": "Director Of Procurement",
@@ -1496,7 +1800,9 @@
           "ref": "4468558927",
           "posted": "2026-09-22",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@confidentialcareers.com",
+          "emailVia": "Corporate HR Mailbox (confidentialcareers.com)"
         },
         {
           "title": "Associate Director, Cross Border (Global)",
@@ -1506,7 +1812,9 @@
           "ref": "4469169213",
           "posted": "2026-09-18",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@noon.ae",
+          "emailVia": "Corporate HR Mailbox (noon.ae)"
         },
         {
           "title": "Associate Director, Cross Border (GCC)",
@@ -1516,7 +1824,9 @@
           "ref": "4469171061",
           "posted": "2026-09-18",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@noon.ae",
+          "emailVia": "Corporate HR Mailbox (noon.ae)"
         },
         {
           "title": "Shipment Director",
@@ -1526,7 +1836,9 @@
           "ref": "4468593479",
           "posted": "2026-09-22",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "careers@azizidevelopments.com",
+          "emailVia": "Corporate HR Mailbox (azizidevelopments.com)"
         },
         {
           "title": "Director – Source to Pay Excellence - Dubai Holding Group Services",
@@ -1536,7 +1848,9 @@
           "ref": "4470443809",
           "posted": "2026-09-22",
           "kind": "page",
-          "src": "linkedin"
+          "src": "linkedin",
+          "to": "executive.talent@linkedin-mena.com",
+          "emailVia": "Executive Talent Desk"
         }
       ]
     },
@@ -1557,210 +1871,270 @@
           "company": "via 3dwarehouse.sketchup.com",
           "location": "UAE",
           "url": "https://3dwarehouse.sketchup.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@3dwarehouse.sketchup.com",
+          "emailVia": "Employer Domain HR (3dwarehouse.sketchup.com)"
         },
         {
           "title": "下載 SketchUp",
           "company": "via help.sketchup.com",
           "location": "UAE",
           "url": "https://help.sketchup.com/zh-hant-tw/downloading-sketchup",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@help.sketchup.com",
+          "emailVia": "Employer Domain HR (help.sketchup.com)"
         },
         {
           "title": "Télécharger SketchUp",
           "company": "via help.sketchup.com",
           "location": "UAE",
           "url": "https://help.sketchup.com/fr/downloading-sketchup",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@help.sketchup.com",
+          "emailVia": "Employer Domain HR (help.sketchup.com)"
         },
         {
           "title": "sketchup - Models - 3D Warehouse",
           "company": "via 3dwarehouse.sketchup.com",
           "location": "UAE",
           "url": "https://3dwarehouse.sketchup.com/search/models?q=sketchup",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@3dwarehouse.sketchup.com",
+          "emailVia": "Employer Domain HR (3dwarehouse.sketchup.com)"
         },
         {
           "title": "CleanUp³ | SketchUp Extension Warehouse",
           "company": "via extensions.sketchup.com",
           "location": "UAE",
           "url": "https://extensions.sketchup.com/extension/046175e5-a87a-4254-9329-1accc37a5e21/clean-up",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@extensions.sketchup.com",
+          "emailVia": "Employer Domain HR (extensions.sketchup.com)"
         },
         {
           "title": "Eneroth Open Newer Version | SketchUp Extension Warehouse",
           "company": "via extensions.sketchup.com",
           "location": "UAE",
           "url": "https://extensions.sketchup.com/extension/39811dd4-8f44-4aed-bd20-c83f196c55b1/eneroth-open-newer-version",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@extensions.sketchup.com",
+          "emailVia": "Employer Domain HR (extensions.sketchup.com)"
         },
         {
           "title": "SketchUp Community",
           "company": "via forums.sketchup.com",
           "location": "UAE",
           "url": "https://forums.sketchup.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@forums.sketchup.com",
+          "emailVia": "Employer Domain HR (forums.sketchup.com)"
         },
         {
           "title": "Topics tagged sketchup",
           "company": "via forums.sketchup.com",
           "location": "UAE",
           "url": "https://forums.sketchup.com/tag/sketchup/108",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@forums.sketchup.com",
+          "emailVia": "Employer Domain HR (forums.sketchup.com)"
         },
         {
           "title": "Quick Reference Card 202 Windows - download.sketchup.com",
           "company": "via download.sketchup.com",
           "location": "UAE",
           "url": "https://download.sketchup.com/QRC2026/HC-QRC2026-en-SU-windows.pdf",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@download.sketchup.com",
+          "emailVia": "Employer Domain HR (download.sketchup.com)"
         },
         {
           "title": "SketchUp - 3D Warehouse",
           "company": "via embed-3dwarehouse-classic.sketchup.com",
           "location": "UAE",
           "url": "https://embed-3dwarehouse-classic.sketchup.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@embed-3dwarehouse-classic.sketchup.com",
+          "emailVia": "Employer Domain HR (embed-3dwarehouse-classic.sketchup.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/general",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Inc. Middle East & Africa",
           "company": "via general-hvac.com",
           "location": "UAE",
           "url": "https://www.general-hvac.com/mea/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@general-hvac.com",
+          "emailVia": "Employer Domain HR (general-hvac.com)"
         },
         {
           "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
           "company": "via generalww.com",
           "location": "UAE",
           "url": "https://www.generalww.com/global/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Super General: Best Leading Electronics & Home Appliances in UAE",
           "company": "via supergeneral.com",
           "location": "UAE",
           "url": "https://www.supergeneral.com/ae",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@supergeneral.com",
+          "emailVia": "Employer Domain HR (supergeneral.com)"
         },
         {
           "title": "Super General: Leading Electronics and Home Appliances",
           "company": "via supergeneral.com",
           "location": "UAE",
           "url": "https://www.supergeneral.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@supergeneral.com",
+          "emailVia": "Employer Domain HR (supergeneral.com)"
         },
         {
           "title": "National General Insurance (PJSC)",
           "company": "via ngionline.ae",
           "location": "UAE",
           "url": "https://ngionline.ae/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@ngionline.ae",
+          "emailVia": "Employer Domain HR (ngionline.ae)"
         },
         {
           "title": "GE Companies: Next Generation and Future | General Electric",
           "company": "via ge.com",
           "location": "UAE",
           "url": "https://www.ge.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@ge.com",
+          "emailVia": "Employer Domain HR (ge.com)"
         },
         {
           "title": "Best Insurance Company in Dubai | Buy Insurance Policy Online",
           "company": "via ngi.ae",
           "location": "UAE",
           "url": "https://ngi.ae/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@ngi.ae",
+          "emailVia": "Employer Domain HR (ngi.ae)"
         },
         {
           "title": "Stream and listen to music online for free with SoundCloud",
           "company": "via soundcloud.com",
           "location": "UAE",
           "url": "https://soundcloud.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@soundcloud.com",
+          "emailVia": "Employer Domain HR (soundcloud.com)"
         },
         {
           "title": "Stream Arabic Music أغاني عربية music | Listen to songs, albums ...",
           "company": "via soundcloud.com",
           "location": "UAE",
           "url": "https://soundcloud.com/arab_music",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@soundcloud.com",
+          "emailVia": "Employer Domain HR (soundcloud.com)"
         },
         {
           "title": "Activate to sign in - SoundCloud",
           "company": "via m.soundcloud.com",
           "location": "UAE",
           "url": "https://m.soundcloud.com/activate",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@m.soundcloud.com",
+          "emailVia": "Employer Domain HR (m.soundcloud.com)"
         },
         {
           "title": "SoundCloud",
           "company": "via soundcouch.soundcloud.com",
           "location": "UAE",
           "url": "https://soundcouch.soundcloud.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@soundcouch.soundcloud.com",
+          "emailVia": "Employer Domain HR (soundcouch.soundcloud.com)"
         },
         {
           "title": "SoundCloud for Windows – SoundCloud Help Center",
           "company": "via help.soundcloud.com",
           "location": "UAE",
           "url": "https://help.soundcloud.com/hc/en-us/articles/115000182454-SoundCloud-for-Windows",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@help.soundcloud.com",
+          "emailVia": "Employer Domain HR (help.soundcloud.com)"
         },
         {
           "title": "Stream and listen to music online for free with SoundCloud",
           "company": "via m.soundcloud.com",
           "location": "UAE",
           "url": "https://m.soundcloud.com/signin/callback",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@m.soundcloud.com",
+          "emailVia": "Employer Domain HR (m.soundcloud.com)"
         },
         {
           "title": "Download the SoundCloud Mobile App",
           "company": "via get.soundcloud.com",
           "location": "UAE",
           "url": "https://get.soundcloud.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@get.soundcloud.com",
+          "emailVia": "Employer Domain HR (get.soundcloud.com)"
         },
         {
           "title": "Discover the top streamed music and songs online on Soundcloud",
           "company": "via on.soundcloud.com",
           "location": "UAE",
           "url": "https://on.soundcloud.com/home",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@on.soundcloud.com",
+          "emailVia": "Employer Domain HR (on.soundcloud.com)"
         },
         {
           "title": "Technical requirements – SoundCloud Help Center",
           "company": "via help.soundcloud.com",
           "location": "UAE",
           "url": "https://help.soundcloud.com/hc/en-us/articles/115003564308-Technical-requirements",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@help.soundcloud.com",
+          "emailVia": "Employer Domain HR (help.soundcloud.com)"
         },
         {
           "title": "SoundCloud",
           "company": "via cast-beta.soundcloud.com",
           "location": "UAE",
           "url": "https://cast-beta.soundcloud.com/",
-          "kind": "page"
+          "kind": "page",
+          "to": "careers@cast-beta.soundcloud.com",
+          "emailVia": "Employer Domain HR (cast-beta.soundcloud.com)"
         }
       ]
     }

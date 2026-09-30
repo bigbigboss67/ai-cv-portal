@@ -307,6 +307,21 @@ function rankDaily(listings, sig, prefs, step = []) {
         (exact ? 10 : region ? 6 : 0) -
         (track === "step" ? 3 : 0);
       if (LOWER_RUNG.test(title)) continue;
+      const detectedSrc = detectBoardSource(j.src || src.id || host);
+      const locVal = j.location || titleGulf || prefs.location || "UAE";
+      const resolvedEmail =
+        typeof boards.resolveJobRecipientEmail === "function"
+          ? boards.resolveJobRecipientEmail({
+              title,
+              company: j.company || "",
+              url,
+              source: detectedSrc,
+              text: j.text || "",
+              location: locVal,
+              to: j.to || "",
+            })
+          : { email: j.to || "", via: "" };
+
       out.push({
         title,
         matchedRole: strictMatch || hits[0] || stepHits[0] || "Executive Role",
@@ -321,11 +336,13 @@ function rankDaily(listings, sig, prefs, step = []) {
             .filter(Boolean)
             .join(" · "),
         text: j.text || "",
-        source: detectBoardSource(j.src || src.id || host),
+        source: detectedSrc,
         company: j.company || "",
-        location: j.location || titleGulf || prefs.location || "UAE",
+        location: locVal,
         posted: j.posted || "live",
         ref: j.ref || "",
+        to: resolvedEmail.email || "",
+        emailVia: resolvedEmail.via || "",
         score: Math.min(99, s),
         track,
         matched: [...new Set([strictMatch || hits[0], ...skillHits.slice(0, 4), ...(region ? [region] : [])].filter(Boolean))],
@@ -530,16 +547,31 @@ async function handler(req, res) {
       if (prefs.strictRoleOnly && !matchedRole) return null;
       const host = hostOf(h.url);
       const src = detectBoardSource(h.url);
+      const locVal = places(`${h.title || ""} ${h.content || ""}`)[0] || prefs.location || "UAE / International";
+      const coVal = host ? `via ${host}` : "";
+      const resolvedEmail =
+        typeof boards.resolveJobRecipientEmail === "function"
+          ? boards.resolveJobRecipientEmail({
+              title: cleanedTitle,
+              company: coVal,
+              url: h.url,
+              source: src,
+              text: String(h.content || ""),
+              location: locVal,
+            })
+          : { email: "", via: "" };
       return {
         title: cleanedTitle,
         matchedRole: matchedRole || activeRoles[0] || "Executive Role",
         url: h.url,
         snippet: String(h.content || "").slice(0, 380),
         text: String(h.content || ""),
-        company: host ? `via ${host}` : "",
-        location: places(`${h.title || ""} ${h.content || ""}`)[0] || prefs.location || "UAE / International",
+        company: coVal,
+        location: locVal,
         posted: "live web",
         source: src,
+        to: resolvedEmail.email || "",
+        emailVia: resolvedEmail.via || "",
         score: s,
         track: "level",
         matched: why,

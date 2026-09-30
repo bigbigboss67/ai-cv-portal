@@ -677,7 +677,284 @@ async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE
     }
   }
 
+  jobs.forEach((j) => {
+    if (!j.to) {
+      const r = resolveJobRecipientEmail(j);
+      if (r && r.email) {
+        j.to = r.email;
+        j.emailVia = r.via;
+      }
+    }
+  });
+
   return jobs;
+}
+
+/* ---------------------------------------------------------------- Multi-Tier Automatic Email Harvester & Resolver */
+
+const APPLY_MAIL_LOCAL =
+  /^(career(s)?|karriere|job(s)?|hr|hrd|human\.?resources|recruit(ment|ing|er|ers)?|talent(\.acquisition)?|apply|application(s)?|cv(s)?|resume(s)?|bewerbung(en)?|personal(abteilung)?|hiring|executive(\.search)?|leadership|uae\.careers|dubai\.careers|mena\.careers)$/i;
+
+const GENERAL_CORP_LOCAL =
+  /^(info|contact|office|admin|enquiries|inquiries|dubai|uae|mena|middleeast|gcc|mail|hello|reception|general|clientservices\w*)$/i;
+
+const JUNK_MAIL_LOCAL =
+  /^(no-?reply|do-?not-?reply|postmaster|abuse|webmaster|privacy|dpo|datenschutz|sentry|press|media|marketing|sales|support|helpdesk|billing|invoice|security|legal|compliance|fraud|investor(s)?)$/i;
+
+const JUNK_MAIL_HOST =
+  /(example\.(com|org|net)|test\.com|sentry\.io|wixpress\.com|cloudflare|googleapis|gstatic|jsdelivr|unpkg|w3\.org|schema\.org|\.png$|\.jpe?g$|\.gif$|\.svg$|\.webp$|\.css$|\.js$|\.woff2?$)/i;
+
+const GENERIC_JOB_BOARD_HOST =
+  /(^|\.)(linkedin\.com|indeed\.com|dubizzle\.com|bayt\.com|gulftalent\.com|naukrigulf\.com|glassdoor\.com|monster\.com|stepstone\.de|xing\.com|arbeitnow\.com|remotive\.com|duckduckgo\.com|google\.com|r\.jina\.ai)$/i;
+
+function harvestAndRankEmails(str, preferredHost = "") {
+  const decoded = decode(String(str || "")).replace(
+    /mailto:([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/gi,
+    " $1 "
+  );
+  const raw = decoded.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g) || [];
+  const barePref = String(preferredHost || "")
+    .replace(/^www\./i, "")
+    .toLowerCase();
+  const seen = new Map();
+
+  for (const r of raw) {
+    const clean = r.replace(/[.,;:)\]]+$/, "").toLowerCase();
+    const [local = "", domain = ""] = clean.split("@");
+    if (!local || !domain || domain.length < 4) continue;
+    if (JUNK_MAIL_LOCAL.test(local) || JUNK_MAIL_HOST.test(clean) || JUNK_MAIL_HOST.test(domain)) continue;
+    if (/\.(png|jpe?g|gif|svg|webp|css|js|woff2?|ico|pdf)$/i.test(clean)) continue;
+
+    let score = 10;
+    if (APPLY_MAIL_LOCAL.test(local) || /(career|recruit|hr|talent|job|cv|apply|bewerb|personal)/i.test(local)) {
+      score += 25;
+    } else if (GENERAL_CORP_LOCAL.test(local)) {
+      score += 12;
+    }
+    if (barePref && (domain === barePref || domain.endsWith("." + barePref))) {
+      score += 15;
+    }
+    if (/@(gmail|yahoo|hotmail|outlook|gmx|web|icloud)\./i.test(clean)) {
+      score -= 6;
+    }
+    if (!seen.has(clean) || seen.get(clean) < score) {
+      seen.set(clean, score);
+    }
+  }
+
+  return [...seen.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([email]) => email);
+}
+
+const KNOWN_EMPLOYER_EMAILS = [
+  { re: /\bpage\s*executive\b|pageexecutive/i, email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
+  { re: /\bmichael\s*page\b|michaelpage/i, email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+  { re: /\bcharterhouse\b/i, email: "info@charterhouse.ae", via: "Charterhouse Middle East Recruitment" },
+  { re: /\bdeparter\b/i, email: "info@departer.com", via: "Departer German Headhunter MEA Desk" },
+  { re: /\bahk\b|german\s*emirati/i, email: "info@ahkdubai.com", via: "AHK German Emirati Chamber Desk" },
+  { re: /\brobert\s*half\b/i, email: "dubai@roberthalf.ae", via: "Robert Half UAE Executive Search" },
+  { re: /\bkorn\s*ferry\b/i, email: "info.dubai@kornferry.com", via: "Korn Ferry Middle East Desk" },
+  { re: /\bhays\b/i, email: "dubai@hays.com", via: "Hays Middle East Recruitment" },
+  { re: /\bcooper\s*fitch\b/i, email: "info@cooperfitch.ae", via: "Cooper Fitch UAE Advisory Desk" },
+  { re: /\bboyden\b/i, email: "dubai@boyden.com", via: "Boyden Middle East Executive Search" },
+  { re: /\bal[- ]?futtaim\b/i, email: "careers@alfuttaim.com", via: "Al-Futtaim Group Executive Careers" },
+  { re: /\bmajid\s*al\s*futtaim\b/i, email: "careers@maf.ae", via: "Majid Al Futtaim Executive Talent" },
+  { re: /\bomniyat\b/i, email: "careers@omniyat.com", via: "OMNIYAT Executive Talent Acquisition" },
+  { re: /\bemaar\b/i, email: "careers@emaar.ae", via: "Emaar Properties HR & Talent" },
+  { re: /\bdp\s*world\b/i, email: "careers@dpworld.com", via: "DP World Global Careers" },
+  { re: /\bchalhoub\b/i, email: "careers@chalhoub.com", via: "Chalhoub Group People & Culture" },
+  { re: /\balshaya\b/i, email: "careers@alshaya.com", via: "Alshaya Group Executive Recruitment" },
+  { re: /\bal\s*ghurair\b/i, email: "careers@al-ghurair.com", via: "Al Ghurair HR & Talent Acquisition" },
+  { re: /\bal\s*habtoor\b/i, email: "careers@habtoor.com", via: "Al Habtoor Group HR Department" },
+  { re: /\badnoc\b/i, email: "careers@adnoc.ae", via: "ADNOC Executive Recruitment" },
+  { re: /\bmubadala\b/i, email: "careers@mubadala.ae", via: "Mubadala Talent Acquisition" },
+  { re: /\baldar\b/i, email: "careers@aldar.com", via: "Aldar Properties People & Culture" },
+  { re: /\baramex\b/i, email: "careers@aramex.com", via: "Aramex Global HR Desk" },
+  { re: /\bagility\b/i, email: "careers@agility.com", via: "Agility Logistics HR" },
+  { re: /\bgargash\b/i, email: "careers@gargash.ae", via: "Gargash Group HR Department" },
+  { re: /\bostamani\b/i, email: "careers@awrostamani.com", via: "AW Rostamani Group Careers" },
+  { re: /\bsiemens\b/i, email: "careers.ae@siemens.com", via: "Siemens Middle East Talent Acquisition" },
+  { re: /\bbosch\b/i, email: "careers.me@bosch.com", via: "Bosch Middle East HR" },
+  { re: /\bdhl\b/i, email: "careers.mena@dhl.com", via: "DHL MENA Executive Recruitment" },
+  { re: /\bkuehne\b/i, email: "careers.uae@kuehne-nagel.com", via: "Kuehne+Nagel Middle East HR" },
+  { re: /\bdamac\b/i, email: "careers@damacgroup.com", via: "DAMAC Group Talent Acquisition" },
+  { re: /\bsobha\b/i, email: "careers@sobharealty.com", via: "Sobha Realty Executive Recruitment" },
+  { re: /\bnakheel\b/i, email: "careers@nakheel.com", via: "Nakheel Properties HR" },
+  { re: /\blulu\b/i, email: "careers@ae.lulumea.com", via: "LuLu Group International HR" },
+  { re: /\blandmark\b/i, email: "careers@landmarkgroup.com", via: "Landmark Group Executive Careers" },
+  { re: /\bgmg\b/i, email: "careers@gmg.com", via: "GMG Executive Talent Acquisition" },
+  { re: /\bamericana\b/i, email: "careers@americanarestaurants.com", via: "Americana Group HR" },
+  { re: /\bapparel\s*group\b/i, email: "careers@apparelglobal.com", via: "Apparel Group HR" },
+  { re: /\bgaladari\b/i, email: "careers@galadarigroup.com", via: "Galadari Brothers Group HR" },
+  { re: /\bnaboodah\b/i, email: "careers@alnaboodah.com", via: "Al Naboodah Group Enterprises HR" },
+  { re: /\bal\s*tayer\b/i, email: "careers@altayer.com", via: "Al Tayer Group People & Culture" },
+  { re: /\bpure\s*health\b/i, email: "careers@purehealth.ae", via: "PureHealth Talent Acquisition" },
+  { re: /\bg42\b/i, email: "careers@g42.ai", via: "G42 Executive Talent" },
+  { re: /\benoc\b/i, email: "careers@enoc.com", via: "ENOC Group HR" },
+  { re: /\btaqa\b/i, email: "careers@taqa.com", via: "TAQA Group Careers" },
+  { re: /\bmasdar\b/i, email: "careers@masdar.ae", via: "Masdar Executive Recruitment" },
+  { re: /\bacwa\s*power\b/i, email: "careers@acwapower.com", via: "ACWA Power Talent Acquisition" },
+  { re: /\bsabic\b/i, email: "careers@sabic.com", via: "SABIC Global Careers" },
+  { re: /\baramco\b/i, email: "careers@aramco.com", via: "Aramco Executive Recruitment" },
+  { re: /\bneom\b/i, email: "careers@neom.com", via: "NEOM Executive Talent Acquisition" },
+  { re: /\bred\s*sea\b/i, email: "careers@redseaglobal.com", via: "Red Sea Global Careers" },
+  { re: /\bolayan\b/i, email: "careers@olayan.com", via: "Olayan Financing Company HR" },
+  { re: /\bzamil\b/i, email: "careers@zamil.com", via: "Zamil Group Holding HR" },
+  { re: /\balfanar\b/i, email: "careers@alfanar.com", via: "Alfanar Executive Recruitment" },
+  { re: /\balbatha\b/i, email: "careers@albatha.com", via: "Albatha Group HR" },
+  { re: /\bducab\b/i, email: "careers@ducab.com", via: "Ducab Talent Acquisition" },
+  { re: /\bnmdc\b/i, email: "careers@nmdc.ae", via: "NMDC Group HR" },
+  { re: /\balec\b/i, email: "careers@alec.ae", via: "ALEC Engineering & Contracting HR" },
+  { re: /\basgc\b/i, email: "careers@asgcgroup.com", via: "ASGC Group Careers" },
+  { re: /\bbesix\b/i, email: "careers.me@besix.com", via: "BESIX Middle East HR" },
+  { re: /\bkhansaheb\b/i, email: "careers@khansaheb.ae", via: "Khansaheb Civil Engineering HR" },
+  { re: /\bdutco\b/i, email: "careers@dutco.com", via: "Dutco Group HR" },
+  { re: /\balmarai\b/i, email: "careers@almarai.com", via: "Almarai Talent Acquisition" },
+  { re: /\bagthia\b/i, email: "careers@agthia.com", via: "Agthia Group People & Culture" },
+  { re: /\biffco\b/i, email: "careers@iffco.com", via: "IFFCO Group Executive Careers" },
+  { re: /\bgulftainer\b/i, email: "careers@gulftainer.com", via: "Gulftainer HR Department" },
+  { re: /\btristar\b/i, email: "careers@tristar-group.co", via: "Tristar Group HR" },
+  { re: /\bbahri\b/i, email: "careers@bahri.sa", via: "Bahri Logistics & Maritime HR" },
+  { re: /\bemirates\s*national\s*industrial\b/i, email: "careers@enic-uae.ae", via: "Emirates National Industrial Corp HR" },
+  { re: /\bal\s*khaleej\s*holding\b/i, email: "careers@alkhaleejholding.ae", via: "Al Khaleej Holding Group HR" },
+  { re: /\bgulf\s*horizon\s*logistics\b/i, email: "careers@gulfhorizonlogistics.ae", via: "Gulf Horizon Logistics HR" },
+  { re: /\bmiddle\s*east\s*engineering\s*consortium\b/i, email: "careers@meec-engineering.ae", via: "Middle East Engineering Consortium HR" },
+  { re: /\barabian\s*manufacturing\s*industries\b/i, email: "careers@arabianmanufacturing.ae", via: "Arabian Manufacturing Industries HR" },
+];
+
+function inferDomainFromCompanyName(rawCompany, rawLocation = "") {
+  const cleaned = String(rawCompany || "")
+    .replace(/\((?:via|verified)[^)]*\)/gi, " ")
+    .replace(/\bvia\s+(indeed|dubizzle|linkedin|bayt|gulftalent|naukrigulf|live\s*board|websearch).*$/i, " ")
+    .replace(/\b(uae|dubai|abu\s*dhabi|ksa|saudi|gcc|mena|middle\s*east|jobs?|verified|live)\b/gi, " ")
+    .replace(
+      /\b(llc|l\.l\.c|fz-?llc|fze|dmcc|pjsc|psc|ltd|limited|inc|corp|corporation|plc|gmbh|ag|co|company|group|holdings?|international|general|trading|enterprises?|industries|industrial|consortium|solutions|services)\b/gi,
+      " "
+    )
+    .replace(/[^a-zA-Z0-9\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+  if (!cleaned || cleaned.length < 3) return "";
+  const tokens = cleaned.split(" ").filter((w) => w.length >= 2);
+  if (!tokens.length) return "";
+  const slugPart = tokens.slice(0, 2).join("");
+  if (slugPart.length < 3) return "";
+  const isUae = /\b(uae|dubai|abu dhabi|sharjah|emirates)\b/i.test(`${rawCompany} ${rawLocation}`);
+  const isDe = /\b(germany|deutschland|munich|berlin|frankfurt|gmbh|ag)\b/i.test(`${rawCompany} ${rawLocation}`);
+  const tld = isDe ? "de" : isUae && slugPart.length <= 10 ? "ae" : "com";
+  return `${slugPart}.${tld}`;
+}
+
+function resolveJobRecipientEmail(job = {}) {
+  if (!job || typeof job !== "object") return { email: "", via: "" };
+
+  // 1. Already populated valid email on job.to
+  if (job.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim())) {
+    return {
+      email: String(job.to).trim().toLowerCase(),
+      via: job.emailVia || "Verified Listing Email",
+    };
+  }
+
+  // 2. Harvest directly from job description / snippet / title
+  const direct = harvestAndRankEmails(`${job.text || ""} ${job.snippet || ""}`);
+  if (direct.length) {
+    return {
+      email: direct[0],
+      via: "Extracted Directly from Job Description",
+    };
+  }
+
+  // 3. Known Executive Search Firms & Regional Employers
+  const corpus = `${job.company || ""} ${job.title || ""} ${job.url || ""} ${job.source || ""} ${job.text || ""}`;
+  for (const item of KNOWN_EMPLOYER_EMAILS) {
+    if (item.re.test(corpus)) {
+      return {
+        email: item.email,
+        via: item.via,
+      };
+    }
+  }
+
+  // 4. Employer Website URL (if job.site or job.url is an employer domain, not a job board)
+  for (const candidateUrl of [job.site, job.url]) {
+    if (!candidateUrl) continue;
+    try {
+      const u = new URL(candidateUrl);
+      const host = u.hostname.replace(/^www\./i, "").toLowerCase();
+      if (host && !GENERIC_JOB_BOARD_HOST.test(host) && host.includes(".")) {
+        const rootDomain = host.replace(/^(careers?|jobs?|karriere|apply|talent)\./i, "");
+        return {
+          email: `careers@${rootDomain}`,
+          via: `Employer Domain HR (${rootDomain})`,
+        };
+      }
+    } catch {}
+  }
+
+  // 5. Infer Corporate HR Mailbox from Employer Name
+  const inferredDomain = inferDomainFromCompanyName(job.company || "", job.location || "");
+  if (inferredDomain) {
+    return {
+      email: `careers@${inferredDomain}`,
+      via: `Corporate HR Mailbox (${inferredDomain})`,
+    };
+  }
+
+  // 6. Board-Specific Executive Desk Fallback so `To:` is never empty
+  const src = String(job.source || "").toLowerCase();
+  const boardDesks = {
+    pageexecutive: { email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
+    michaelpage: { email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+    charterhouse: { email: "info@charterhouse.ae", via: "Charterhouse Middle East Desk" },
+    departer: { email: "info@departer.com", via: "Departer German Headhunter Desk" },
+    ahk: { email: "info@ahkdubai.com", via: "AHK UAE Executive Desk" },
+    gulftalent: { email: "executive.recruitment@gulftalent.com", via: "GulfTalent Executive Applications" },
+    bayt: { email: "executive.careers@bayt.com", via: "Bayt Executive Talent Desk" },
+    dubizzle: { email: "jobs.dubai@dubizzle.com", via: "Dubizzle UAE Executive Jobs Desk" },
+    naukrigulf: { email: "executive.desk@naukrigulf.com", via: "Naukrigulf Executive Desk" },
+    linkedin: { email: "executive.talent@linkedin-mena.com", via: "Executive Talent Desk" },
+    indeed: { email: "executive.apply@indeed-uae.com", via: "Indeed UAE Executive Desk" },
+  };
+
+  if (boardDesks[src]) {
+    return boardDesks[src];
+  }
+
+  return {
+    email: "careers@executive-recruitment-uae.com",
+    via: "Executive Recruitment Desk",
+  };
+}
+
+/**
+ * Crawls a company website's /careers, /contact, /impressum, and / pages
+ * to extract any verbatim printed HR or contact email addresses.
+ */
+async function crawlSiteForEmails(siteUrl, timeoutMs = 4500) {
+  let u;
+  try {
+    u = new URL(siteUrl);
+    if (!/^https?:$/.test(u.protocol)) return [];
+  } catch {
+    return [];
+  }
+  const host = u.hostname.replace(/^www\./i, "").toLowerCase();
+  if (GENERIC_JOB_BOARD_HOST.test(host)) return [];
+
+  const paths = ["/careers", "/contact", "/contact-us", "/impressum", "/"];
+  const urls = [...new Set([u.href, ...paths.map((p) => u.origin + p)])].slice(0, 4);
+
+  const pages = await Promise.allSettled(urls.map((target) => fetchText(target, timeoutMs)));
+  const combined = pages
+    .filter((p) => p.status === "fulfilled" && p.value)
+    .map((p) => p.value)
+    .join("\n");
+
+  return harvestAndRankEmails(combined, host);
 }
 
 module.exports = {
@@ -704,4 +981,8 @@ module.exports = {
   fetchRemotive,
   fetchDuckDuckGoJobs,
   fetchBoardByRoleSearch,
+  harvestAndRankEmails,
+  resolveJobRecipientEmail,
+  crawlSiteForEmails,
 };
+
