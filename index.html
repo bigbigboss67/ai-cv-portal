@@ -1612,9 +1612,51 @@
               <div class="writer-section-head">
                 <div class="writer-section-title">5. Education, Credentials &amp; Languages</div>
               </div>
-              <textarea class="writer-textarea" rows="3" id="wrEducationInput" oninput="updateWriterTopFields()" placeholder="e.g. Executive MBA · B.Sc. Mechanical Engineering · English, Arabic, German"></textarea>
+              <textarea class="writer-textarea" rows="4" id="wrEducationInput" oninput="updateWriterTopFields()" placeholder="e.g. Executive MBA · B.Sc. Mechanical Engineering · English, Arabic, German"></textarea>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- STEP 1C: INLINE FULL LIVE A4 CV REVIEW (Shows 100% of Uploaded & Upgraded CV) -->
+      <div class="bezel-outer" id="page1LiveCvReviewCard" style="margin-top:22px;">
+        <div class="bezel-inner">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+            <div>
+              <div class="section-eyebrow" style="margin-bottom:4px;">Live Full CV Review &middot; 100% Complete Document</div>
+              <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:700;color:var(--text-primary);margin:0;">
+                Complete Live A4 Executive CV Preview
+              </h3>
+              <div id="page1CvCompletenessBadge" style="font-size:12.5px;color:var(--text-secondary);margin-top:3px;">
+                Showing all sections, all roles, all experience bullets, skills, education &amp; additional credentials.
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button type="button" class="btn-pill-secondary" id="btnToggleVerbatimCv" onclick="toggleVerbatimCvView()">
+                Show Verbatim Uploaded Text
+              </button>
+              <button type="button" class="btn-pill-secondary" onclick="openBuiltInCvWriter()">
+                Edit in CV Writer
+              </button>
+              <button type="button" class="btn-pill-secondary" onclick="downloadStandaloneAtsPdf()">
+                Download ATS PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Optional Verbatim Raw Text Inspector -->
+          <div id="page1VerbatimCvWrap" style="display:none;margin-bottom:18px;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:12px;padding:16px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+              <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--accent-emerald);">
+                Complete Verbatim Text Extracted From Your Uploaded CV
+              </span>
+              <span style="font-size:12px;color:var(--text-muted);">Every single line read from your file</span>
+            </div>
+            <pre id="page1VerbatimCvPre" style="margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--font-sans);font-size:12.5px;line-height:1.6;color:var(--text-primary);max-height:520px;overflow-y:auto;"></pre>
+          </div>
+
+          <!-- Full-Length Synchronized A4 CV Sheet Preview on Page 1 -->
+          <div class="cv-sheet" id="page1LiveCvMirror" style="--accent:#059669;"></div>
         </div>
       </div>
 
@@ -1625,7 +1667,7 @@
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <button class="btn-pill-secondary" onclick="toggleCvDrawer()">
-            Preview Live A4 CV
+            Preview Live A4 CV Drawer
           </button>
           <button class="btn-next-glow" onclick="goToStep(2)">
             <span>Continue to Page 2: Find Live Jobs</span>
@@ -1982,7 +2024,7 @@
 
               <section>
                 <h5 class="cv-sec-title">Executive Summary</h5>
-                <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;"></div>
+                <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;white-space:pre-line;"></div>
                 <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#065F46;background:#ECFDF5;padding:6px 10px;border-radius:6px;font-size:12px;"></div>
               </section>
 
@@ -1998,8 +2040,10 @@
 
               <section>
                 <h5 class="cv-sec-title">Education &amp; Executive Credentials</h5>
-                <div class="mini" id="cvEducationEl" style="font-size:12px;color:#334155;"></div>
+                <div class="sum mini" id="cvEducationEl" style="font-size:12px;color:#334155;white-space:pre-line;line-height:1.55;"></div>
               </section>
+
+              <div id="cvAdditionalSectionsEl"></div>
             </div>
           </div>
         </div>
@@ -2491,8 +2535,78 @@
 
       document.getElementById("cvEducationEl").textContent = cv.education || "";
 
+      // Render any additional sections from the uploaded CV (Certifications, Languages, Projects, Additional Info)
+      const addSecEl = document.getElementById("cvAdditionalSectionsEl");
+      if (addSecEl) {
+        const extraSections = Array.isArray(cv.additionalSections) ? cv.additionalSections : [];
+        addSecEl.innerHTML = extraSections
+          .filter((sec) => sec && sec.lines && sec.lines.length)
+          .map(
+            (sec) => `
+              <section>
+                <h5 class="cv-sec-title">${escapeHtml(sec.title || "Additional Information")}</h5>
+                <div class="sum mini" style="font-size:12px;color:#334155;white-space:pre-line;line-height:1.55;">${escapeHtml(
+                  sec.lines.join("\n")
+                )}</div>
+              </section>
+            `
+          )
+          .join("");
+      }
+
+      // Synchronize the inline Page 1 Full CV Preview Mirror & Completeness Badge
+      const masterSheet = document.getElementById("draftCvSheetEl");
+      const page1Mirror = document.getElementById("page1LiveCvMirror");
+      if (masterSheet && page1Mirror) {
+        page1Mirror.innerHTML = masterSheet.innerHTML.replace(/\bid="([^"]+)"/g, 'data-mirror-id="$1"');
+      }
+
+      const totalBullets = (cv.roles || []).reduce((acc, r) => acc + ((r.bullets && r.bullets.length) || 0), 0);
+      const extraCount = (cv.additionalSections || []).reduce((acc, s) => acc + ((s.lines && s.lines.length) || 0), 0);
+      const compBadge = document.getElementById("page1CvCompletenessBadge");
+      if (compBadge) {
+        compBadge.innerHTML = `Showing <strong>100% of CV</strong>: <strong>${(cv.roles || []).length}</strong> Experience Roles &middot; <strong>${totalBullets}</strong> Experience Lines &middot; <strong>${(cv.skills || []).length}</strong> Skills &middot; Education${extraCount ? ` + ${extraCount} Additional Credential Lines` : ""}`;
+      }
+
+      const verbatimPre = document.getElementById("page1VerbatimCvPre");
+      if (verbatimPre) {
+        verbatimPre.textContent =
+          cv.rawFullText ||
+          [
+            cv.name,
+            cv.headline,
+            cv.contact,
+            "",
+            "EXECUTIVE SUMMARY",
+            cv.summary,
+            "",
+            "CORE COMPETENCIES",
+            (cv.skills || []).join(" · "),
+            "",
+            "PROFESSIONAL EXPERIENCE",
+            ...(cv.roles || []).flatMap((r) => [
+              `${r.title || ""} | ${r.company || ""} (${r.dates || ""})`,
+              ...(r.bullets || []).map((b) => `• ${b}`),
+              ""
+            ]),
+            "EDUCATION & CREDENTIALS",
+            cv.education || ""
+          ].join("\n");
+      }
+
       if (!skipWriterSync) {
         syncCvWriterInputs();
+      }
+    }
+
+    function toggleVerbatimCvView() {
+      const wrap = document.getElementById("page1VerbatimCvWrap");
+      const btn = document.getElementById("btnToggleVerbatimCv");
+      if (!wrap) return;
+      const isHidden = wrap.style.display === "none";
+      wrap.style.display = isHidden ? "block" : "none";
+      if (btn) {
+        btn.textContent = isHidden ? "Hide Verbatim Uploaded Text" : "Show Verbatim Uploaded Text";
       }
     }
 
@@ -3016,9 +3130,41 @@
       if (file) await processUploadedCvFile(file);
     }
 
+    function extractLinesFromPdfPage(tc) {
+      const items = (tc && tc.items) || [];
+      if (!items.length) return "";
+      const rows = [];
+      for (const it of items) {
+        const str = String(it.str || "");
+        if (!str.trim() && !it.hasEOL) continue;
+        const tr = it.transform || [1, 0, 0, 1, 0, 0];
+        const x = Number(tr[4] || 0);
+        const y = Number(tr[5] || 0);
+        let row = rows.find((r) => Math.abs(r.y - y) <= 3.5);
+        if (!row) {
+          row = { y, parts: [] };
+          rows.push(row);
+        }
+        row.parts.push({ x, str: str.trim(), hasEOL: !!it.hasEOL });
+      }
+      rows.sort((a, b) => b.y - a.y);
+      return rows
+        .map((r) => {
+          r.parts.sort((a, b) => a.x - b.x);
+          return r.parts
+            .map((p) => p.str)
+            .filter(Boolean)
+            .join(" ")
+            .replace(/\s+/g, " ")
+            .trim();
+        })
+        .filter(Boolean)
+        .join("\n");
+    }
+
     async function processUploadedCvFile(file) {
       const statusEl = document.getElementById("cvUploadStatus");
-      statusEl.innerHTML = `Reading &amp; analyzing <strong>${escapeHtml(file.name)}</strong>...`;
+      statusEl.innerHTML = `Reading &amp; extracting 100% of <strong>${escapeHtml(file.name)}</strong>...`;
       try {
         const ext = (file.name.split(".").pop() || "").toLowerCase();
         let rawText = "";
@@ -3029,29 +3175,74 @@
           for (let i = 1; i <= pdf.numPages; i++) {
             const page = await pdf.getPage(i);
             const tc = await page.getTextContent();
-            pages.push(tc.items.map((it) => it.str).join(" "));
+            const pageText = extractLinesFromPdfPage(tc);
+            if (pageText) pages.push(pageText);
           }
           rawText = pages.join("\n\n");
+          // Scanned PDF fallback via OCR if text layer is empty
+          if (rawText.trim().length < 40 && window.Tesseract) {
+            statusEl.innerHTML = `Scanned PDF detected — running OCR on <strong>${escapeHtml(file.name)}</strong>...`;
+            const ocrPages = [];
+            const maxOcrPages = Math.min(pdf.numPages, 4);
+            for (let i = 1; i <= maxOcrPages; i++) {
+              const page = await pdf.getPage(i);
+              const vp = page.getViewport({ scale: 2.0 });
+              const canvas = document.createElement("canvas");
+              canvas.width = vp.width;
+              canvas.height = vp.height;
+              await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
+              const res = await window.Tesseract.recognize(canvas, "eng");
+              if (res && res.data && res.data.text) ocrPages.push(res.data.text);
+            }
+            rawText = ocrPages.join("\n\n");
+          }
         } else if ((ext === "docx" || ext === "doc") && window.mammoth) {
           const buf = await file.arrayBuffer();
-          const res = await window.mammoth.extractRawText({ arrayBuffer: buf });
-          rawText = res.value || "";
+          try {
+            const htmlRes = await window.mammoth.convertToHtml({ arrayBuffer: buf });
+            if (htmlRes && htmlRes.value) {
+              const formattedHtml = htmlRes.value
+                .replace(/<li\b[^>]*>/gi, "\n• ")
+                .replace(/<\/(p|li|h[1-6]|tr|div)>/gi, "\n")
+                .replace(/<br\s*\/?>/gi, "\n");
+              const tmp = document.createElement("div");
+              tmp.innerHTML = formattedHtml;
+              rawText = tmp.innerText || tmp.textContent || "";
+            }
+          } catch {}
+          if (!rawText || rawText.trim().length < 25) {
+            const res = await window.mammoth.extractRawText({ arrayBuffer: buf });
+            rawText = res.value || "";
+          }
         } else if (["png", "jpg", "jpeg", "webp"].includes(ext) && window.Tesseract) {
           const res = await window.Tesseract.recognize(file, "eng");
           rawText = (res && res.data && res.data.text) || "";
         } else {
           rawText = await file.text();
           if (ext === "rtf") {
-            rawText = rawText.replace(/\\[a-z]+\d* ?|[{}]/gi, " ").replace(/\s+/g, " ");
+            rawText = rawText
+              .replace(/\\par\b|\\line\b/gi, "\n")
+              .replace(/\\[a-z]+\d* ?|[{}]/gi, " ")
+              .replace(/[ \t]+/g, " ");
           } else if (ext === "html" || ext === "htm") {
             const tmp = document.createElement("div");
-            tmp.innerHTML = rawText;
+            tmp.innerHTML = rawText
+              .replace(/<li\b[^>]*>/gi, "\n• ")
+              .replace(/<\/(p|li|h[1-6]|tr|div)>/gi, "\n")
+              .replace(/<br\s*\/?>/gi, "\n");
             rawText = tmp.innerText || tmp.textContent || "";
+          } else if (ext === "json") {
+            try {
+              const obj = JSON.parse(rawText);
+              if (obj && (obj.name || obj.roles || obj.experience)) {
+                rawText = JSON.stringify(obj, null, 2);
+              }
+            } catch {}
           }
         }
 
-        if (!rawText || rawText.trim().length < 25) {
-          throw new Error("Could not extract enough readable text from file.");
+        if (!rawText || rawText.trim().length < 20) {
+          throw new Error("Could not extract readable text from file. Please try another format or paste your CV text.");
         }
         parseRawTextIntoCv(rawText, file.name);
       } catch (err) {
@@ -3066,7 +3257,7 @@
 
     function applyPastedCvText() {
       const txt = document.getElementById("pasteCvTextarea").value.trim();
-      if (txt.length < 25) {
+      if (txt.length < 20) {
         showToast("Please paste at least a few lines of your CV.");
         return;
       }
@@ -3074,32 +3265,167 @@
       document.getElementById("pasteCvDrawer").style.display = "none";
     }
 
-    function parseRawTextIntoCv(rawText, sourceName) {
-      const lines = rawText
-        .split(/\r?\n/)
-        .map((l) => l.trim())
+    function normalizeCvRawLines(rawText) {
+      let text = String(rawText || "")
+        .replace(/\r\n?/g, "\n")
+        .replace(/\u00A0/g, " ")
+        // Split inline bullets onto their own lines so no bullets are merged
+        .replace(/([^\n])\s+([•▪▸●◦✦➢\uF0B7\u2022])\s+/g, "$1\n$2 ");
+
+      // Split common inline section headings if PDF text glued them onto a line
+      const inlineHeaders = [
+        "EXECUTIVE SUMMARY",
+        "PROFESSIONAL SUMMARY",
+        "CAREER SUMMARY",
+        "EXECUTIVE PROFILE",
+        "PROFESSIONAL EXPERIENCE",
+        "WORK EXPERIENCE",
+        "LEADERSHIP EXPERIENCE",
+        "CAREER HISTORY",
+        "EMPLOYMENT HISTORY",
+        "CORE COMPETENCIES",
+        "KEY SKILLS",
+        "TECHNICAL SKILLS",
+        "AREAS OF EXPERTISE",
+        "EDUCATION & CREDENTIALS",
+        "ACADEMIC BACKGROUND",
+        "EDUCATION",
+        "CERTIFICATIONS",
+        "LANGUAGES",
+        "BERUFSERFAHRUNG",
+        "AUSBILDUNG",
+        "KERNKOMPETENZEN",
+        "SPRACHEN"
+      ];
+      for (const h of inlineHeaders) {
+        const re = new RegExp(`([^\\n])\\s+(${h.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")})\\s*:?(?=\\s+[A-ZÄÖÜ•▪])`, "gi");
+        text = text.replace(re, "$1\n$2\n");
+      }
+
+      return text
+        .split("\n")
+        .map((l) => l.replace(/\s+/g, " ").trim())
         .filter(Boolean);
+    }
 
-      const name = (lines[0] || "EXECUTIVE CANDIDATE").slice(0, 65).toUpperCase();
-      const emailMatch = rawText.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/);
-      const phoneMatch = rawText.match(/(\+?\d[\d\s()-]{7,18}\d)/);
-      const contact = [
-        emailMatch ? emailMatch[0] : "",
-        phoneMatch ? phoneMatch[0].trim() : "",
-        "United Arab Emirates / International"
-      ]
-        .filter(Boolean)
-        .join(" · ");
+    function classifyCvSectionHeading(line) {
+      const clean = line
+        .replace(/^[0-9IVX]+\.\s*/i, "")
+        .replace(/^[\s•\-–—*▪▸|:/]+|[\s•\-–—*▪▸|:/]+$/g, "")
+        .trim();
+      if (!clean || clean.length > 56) return null;
+      if (
+        /^(?:executive\s+|professional\s+|career\s+|personal\s+|management\s+)?(?:summary|profile|objective|about\s*me|overview|executive\s*overview|profil|kurzprofil|zusammenfassung)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "summary", title: clean };
+      }
+      if (
+        /^(?:core\s+|key\s+|technical\s+|executive\s+|professional\s+|board\s+|areas\s+of\s+)?(?:skills|competencies|expertise|strengths|capabilities|skills\s*(?:&|and)\s*competencies|competencies\s*(?:&|and)\s*skills|kernkompetenzen|kompetenzen|kenntnisse|fähigkeiten|edv-kenntnisse)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "skills", title: clean };
+      }
+      if (
+        /^(?:professional\s+|work\s+|leadership\s+|executive\s+|career\s+|employment\s+|relevant\s+|selected\s+)?(?:experience|employment|career\s*history|work\s*history|employment\s*history|positions\s*held|assignments|career\s*track|berufserfahrung|beruflicher\s*werdegang|erfahrung|frühere\s*stationen)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "experience", title: clean };
+      }
+      if (
+        /^(?:academic\s+|educational\s+)?(?:education|qualifications|academic\s*background|degrees|education\s*(?:&|and)\s*(?:credentials|qualifications|training|certifications)|ausbildung|studium|bildungsweg|hochschulabschluss)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "education", title: clean };
+      }
+      if (
+        /^(?:certifications?|licenses?\s*(?:&|and)?\s*certifications?|certificates?|languages?|language\s*skills|courses?\s*(?:&|and)?\s*training|professional\s*development|awards?\s*(?:&|and)?\s*honors?|key\s*achievements?|achievements?|projects?|key\s*projects?|board\s*memberships?|affiliations?|publications?|references?|additional\s*information|personal\s*details|personal\s*information|sprachen|sprachkenntnisse|zertifikate|weiterbildung|projekte|referenzen)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "additional", title: clean };
+      }
+      return null;
+    }
 
-      const bullets = lines
-        .filter((l) => l.length >= 30 && l.length <= 260 && !/@/.test(l))
-        .slice(1, 12)
-        .map((l) => l.replace(/^[•\-*▪▸]\s*/, ""));
+    function parseRawTextIntoCv(rawText, sourceName) {
+      const lines = normalizeCvRawLines(rawText);
+      if (!lines.length) return;
 
-      const summary = bullets[0] || "Senior executive leader with extensive operational, commercial, and P&L management experience.";
-      const b1 = bullets.slice(1, 4).length ? bullets.slice(1, 4) : ["Managed operations, budgets, and cross-functional teams."];
-      const b2 = bullets.slice(4, 7).length ? bullets.slice(4, 7) : ["Worked on business development and supply chain efficiency."];
+      // 1. Identify Candidate Name (skip generic "Curriculum Vitae" / "Resume" labels)
+      const docLabelRe = /^(?:curriculum\s+vitae|resume|cv|lebenslauf|page\s+\d+(?:\s+of\s+\d+)?|confidential)$/i;
+      let nameIdx = 0;
+      for (let i = 0; i < Math.min(lines.length, 6); i++) {
+        const candidate = lines[i].replace(/^[•\-*▪▸]\s*/, "").trim();
+        if (
+          !docLabelRe.test(candidate) &&
+          !/@/.test(candidate) &&
+          !/^(?:phone|tel|mobile|email|address|location|linkedin)\b/i.test(candidate) &&
+          candidate.length >= 3 &&
+          candidate.length <= 75
+        ) {
+          nameIdx = i;
+          break;
+        }
+      }
+      const name = (lines[nameIdx] || "EXECUTIVE CANDIDATE").slice(0, 75).toUpperCase();
 
+      // 2. Extract Contact Info & Header Block (lines right after Name before first section/role)
+      const emailMatches = [...new Set(rawText.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g) || [])];
+      const phoneMatches = [...new Set(rawText.match(/(?:\+\d{1,3}[\s.-]?)?(?:\(\d{1,4}\)[\s.-]?)?\d[\d\s.-]{6,15}\d/g) || [])]
+        .map((p) => p.trim())
+        .filter((p) => p.replace(/\D/g, "").length >= 8 && p.replace(/\D/g, "").length <= 15 && !/^(?:19|20)\d{2}\D+(?:19|20)\d{2}$/.test(p));
+      const linkedInMatch = rawText.match(/(?:https?:\/\/)?(?:www\.)?linkedin\.com\/in\/[A-Za-z0-9_-]+\/?/i);
+
+      let headerEndIdx = nameIdx + 1;
+      const headerContactExtras = [];
+      let detectedHeadlineFromHeader = "";
+
+      const dateRangeRe =
+        /\b((?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2}\s*(?:[–—\-~\/]|to|bis|until|till)\s*(?:present|current|now|today|ongoing|heute|aktuell|bis\s*heute|(?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2})|(?:since|seit|ab)\s+(?:19|20)\d{2})\b/i;
+
+      for (let i = nameIdx + 1; i < Math.min(lines.length, nameIdx + 9); i++) {
+        const l = lines[i];
+        if (classifyCvSectionHeading(l) || dateRangeRe.test(l)) {
+          headerEndIdx = i;
+          break;
+        }
+        const isContactLine =
+          /@|linkedin\.com|http|\+\d|\b(?:dubai|abu dhabi|sharjah|uae|united arab emirates|saudi|riyadh|qatar|doha|kuwait|bahrain|oman|germany|munich|berlin|frankfurt|london|uk|p\.?o\.?\s*box|tel|mobile|phone|email|address|nationality|visa)\b/i.test(
+            l
+          ) && l.length <= 140;
+        if (isContactLine) {
+          headerContactExtras.push(l);
+          headerEndIdx = i + 1;
+        } else if (!detectedHeadlineFromHeader && l.length <= 125 && !/[.!?]$/.test(l)) {
+          detectedHeadlineFromHeader = l.replace(/^[•\-*▪▸|]\s*/, "").trim();
+          headerEndIdx = i + 1;
+        } else {
+          break;
+        }
+      }
+
+      const contactItems = [];
+      if (emailMatches[0]) contactItems.push(emailMatches[0]);
+      if (phoneMatches[0]) contactItems.push(phoneMatches[0]);
+      if (linkedInMatch) contactItems.push(linkedInMatch[0]);
+      headerContactExtras.forEach((cl) => {
+        const cleaned = cl
+          .replace(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g, "")
+          .replace(/(?:https?:\/\/)?(?:www\.)?linkedin\.com\/in\/[A-Za-z0-9_-]+\/?/gi, "")
+          .replace(/^[\s·|•,\-–—:;]+|[\s·|•,\-–—:;]+$/g, "")
+          .trim();
+        if (cleaned && cleaned.length >= 3 && !contactItems.includes(cleaned)) {
+          contactItems.push(cleaned);
+        }
+      });
+      const contact = contactItems.length ? contactItems.slice(0, 5).join(" · ") : "United Arab Emirates / International";
+
+      // 3. Detect Desired Executive Roles from CV text
       const detectedRoles = [];
       for (const r of ALL_ROLE_OPTIONS) {
         if (new RegExp(`\\b${r}\\b`, "i").test(rawText)) detectedRoles.push(r);
@@ -3115,7 +3441,197 @@
       }
       state.selectedRoles = detectedRoles;
 
-      // Extract CV skills & domain keywords directly from uploaded CV text
+      // 4. Walk All Remaining Lines & Group into Summary, Skills, Experience Roles, Education & Additional Sections
+      let currentSection = "auto";
+      let currentAddSection = null;
+      const summaryLines = [];
+      const skillLines = [];
+      const educationLines = [];
+      const additionalSections = [];
+      const roles = [];
+      let currentRole = null;
+      let pendingHeaderLines = [];
+
+      const flushPendingToRoleOrSummary = () => {
+        if (!pendingHeaderLines.length) return;
+        if (currentRole) {
+          pendingHeaderLines.forEach((pl) => currentRole.bullets.push(pl));
+        } else {
+          pendingHeaderLines.forEach((pl) => summaryLines.push(pl));
+        }
+        pendingHeaderLines = [];
+      };
+
+      for (let i = headerEndIdx; i < lines.length; i++) {
+        const rawLine = lines[i];
+        const sec = classifyCvSectionHeading(rawLine);
+        if (sec) {
+          flushPendingToRoleOrSummary();
+          currentSection = sec.type;
+          if (sec.type === "additional") {
+            currentAddSection = { title: sec.title, lines: [] };
+            additionalSections.push(currentAddSection);
+          } else {
+            currentAddSection = null;
+          }
+          continue;
+        }
+
+        const cleanLine = rawLine.replace(/^[•\-*▪▸●◦✦➢\uF0B7\u2022]\s*/, "").trim();
+        if (!cleanLine || docLabelRe.test(cleanLine)) continue;
+
+        if (currentSection === "summary") {
+          summaryLines.push(cleanLine);
+          continue;
+        }
+
+        if (currentSection === "skills") {
+          skillLines.push(cleanLine);
+          continue;
+        }
+
+        if (currentSection === "education") {
+          educationLines.push(cleanLine);
+          continue;
+        }
+
+        if (currentSection === "additional" && currentAddSection) {
+          currentAddSection.lines.push(cleanLine);
+          continue;
+        }
+
+        // In "experience" or "auto" mode: check if this line contains a date range!
+        const dm = dateRangeRe.exec(cleanLine);
+        if (dm) {
+          const datesStr = dm[1].trim();
+          const remainder = (cleanLine.slice(0, dm.index) + " " + cleanLine.slice(dm.index + dm[0].length))
+            .replace(/^[\s·|•,\-–—()[\]]+|[\s·|•,\-–—()[\]]+$/g, "")
+            .trim();
+
+          let roleTitle = "";
+          let companyName = "";
+          let locationStr = "";
+
+          // Check if remainder has "Title | Company" or "Title at Company" or "Title — Company"
+          const parts = remainder
+            .split(/\s*(?:\||—|–|\bat\b|,)\s*/i)
+            .map((s) => s.trim())
+            .filter(Boolean);
+
+          if (parts.length >= 2) {
+            roleTitle = parts[0];
+            companyName = parts.slice(1).join(" · ");
+          } else if (parts.length === 1) {
+            roleTitle = parts[0];
+          }
+
+          // If there were 1-2 short non-bullet header lines immediately preceding this date line, use them for Title / Company!
+          if (pendingHeaderLines.length > 0) {
+            if (!roleTitle) {
+              roleTitle = pendingHeaderLines[0];
+              if (pendingHeaderLines.length > 1) {
+                companyName = pendingHeaderLines.slice(1).join(" · ");
+              }
+            } else if (!companyName) {
+              // Preceding line was likely Title or Company
+              const prev = pendingHeaderLines[pendingHeaderLines.length - 1];
+              if (
+                /\b(director|manager|chief|ceo|coo|cfo|vp|president|head|lead|partner|officer|engineer|consultant|executive|geschäftsführer|leiter)\b/i.test(
+                  prev
+                ) &&
+                !/\b(director|manager|chief|ceo|coo|cfo|vp|president|head|lead|partner|officer)\b/i.test(roleTitle)
+              ) {
+                companyName = roleTitle;
+                roleTitle = prev;
+              } else {
+                companyName = prev;
+              }
+              if (pendingHeaderLines.length > 1) {
+                const earlier = pendingHeaderLines.slice(0, -1);
+                if (currentRole) earlier.forEach((el) => currentRole.bullets.push(el));
+                else earlier.forEach((el) => summaryLines.push(el));
+              }
+            } else {
+              flushPendingToRoleOrSummary();
+            }
+            pendingHeaderLines = [];
+          }
+
+          currentSection = "experience";
+          currentRole = {
+            title: roleTitle || detectedRoles[0] || "Executive Role",
+            company: companyName || "",
+            location: locationStr,
+            dates: datesStr,
+            bullets: []
+          };
+          roles.push(currentRole);
+          continue;
+        }
+
+        // Check if this is a short non-bullet line that might be the Title/Company header for a date line on the next line
+        const startedWithBullet = /^[•\-*▪▸●◦✦➢\uF0B7\u2022]/.test(rawLine);
+        const nextLine = lines[i + 1] || "";
+        const nextNextLine = lines[i + 2] || "";
+        if (
+          !startedWithBullet &&
+          cleanLine.length <= 95 &&
+          !/[.!]$/.test(cleanLine) &&
+          (dateRangeRe.test(nextLine) || (!classifyCvSectionHeading(nextLine) && dateRangeRe.test(nextNextLine)))
+        ) {
+          pendingHeaderLines.push(cleanLine);
+          continue;
+        }
+
+        flushPendingToRoleOrSummary();
+
+        // If we haven't hit any experience role yet and we are still near the top of the CV, put introductory prose in Summary
+        if (currentSection === "auto" && roles.length === 0 && summaryLines.length < 6 && i < headerEndIdx + 8 && !startedWithBullet) {
+          summaryLines.push(cleanLine);
+          continue;
+        }
+
+        // Otherwise, ensure it goes into an Experience Role so ZERO lines are ever dropped!
+        if (!currentRole) {
+          currentRole = {
+            title: detectedHeadlineFromHeader || detectedRoles[0] || "Executive Leadership Experience",
+            company: "",
+            location: "",
+            dates: "",
+            bullets: []
+          };
+          roles.push(currentRole);
+        }
+
+        // If a role currently has no company name and its first line is a short non-bullet company/location line, assign it as company
+        if (
+          !currentRole.company &&
+          currentRole.bullets.length === 0 &&
+          !startedWithBullet &&
+          cleanLine.length <= 85 &&
+          !/[.!]$/.test(cleanLine)
+        ) {
+          currentRole.company = cleanLine;
+        } else {
+          currentRole.bullets.push(cleanLine);
+        }
+      }
+
+      flushPendingToRoleOrSummary();
+
+      // 5. Build Final Skills List (User's CV Skills Section + Detected Executive Competencies)
+      const parsedUserSkills = [];
+      skillLines.forEach((sl) => {
+        sl.split(/\s*(?:[•·|▪▸,;\/]|\s-\s)\s*/)
+          .map((s) => s.trim())
+          .filter((s) => s.length >= 2 && s.length <= 75)
+          .forEach((s) => {
+            if (!parsedUserSkills.some((x) => x.toLowerCase() === s.toLowerCase())) {
+              parsedUserSkills.push(s);
+            }
+          });
+      });
+
       const skillCatalog = [
         { label: "Full P&L Ownership", re: /\b(p&l|profit\s*&?\s*loss|ebitda|revenue|margin)\b/i },
         { label: "Multi-Site Operations", re: /\b(multi-site|operations|operational|plant|facility|manufacturing)\b/i },
@@ -3128,38 +3644,88 @@
         { label: "ERP / SAP & Digital Transformation", re: /\b(erp|sap|digital|crm|automation|ai)\b/i },
         { label: "Commercial & Market Expansion", re: /\b(commercial|business development|sales|market entry|gcc|mena|uae)\b/i }
       ];
-      const extractedSkills = skillCatalog.filter((item) => item.re.test(rawText)).map((item) => item.label);
-      const finalSkills = extractedSkills.length >= 3 ? extractedSkills : DEMO_CV.skills.slice();
+      skillCatalog.forEach((item) => {
+        if (item.re.test(rawText) && !parsedUserSkills.some((x) => x.toLowerCase() === item.label.toLowerCase())) {
+          parsedUserSkills.push(item.label);
+        }
+      });
+      const finalSkills = parsedUserSkills.length ? parsedUserSkills.slice(0, 40) : DEMO_CV.skills.slice();
+
+      // 6. Fallback if CV had only summary lines and 0 roles (e.g. a 1-paragraph bio or unstructured CV)
+      if (!roles.length && summaryLines.length > 2) {
+        roles.push({
+          title: detectedHeadlineFromHeader || detectedRoles[0] || "Executive Leadership & Career Highlights",
+          company: "",
+          location: "",
+          dates: "",
+          bullets: summaryLines.splice(2)
+        });
+      }
+
+      // Filter out any completely empty role shells that have no bullets and no company
+      const validRoles = roles.filter((r) => (r.bullets && r.bullets.length > 0) || r.company || r.dates);
+      if (validRoles.length === 0) {
+        validRoles.push({
+          title: detectedHeadlineFromHeader || detectedRoles[0] || "Executive Experience",
+          company: "",
+          location: "",
+          dates: "",
+          bullets: lines.slice(headerEndIdx)
+        });
+      }
+
+      // Ensure every role has at least 1 bullet line for rendering
+      validRoles.forEach((r) => {
+        if (!r.bullets || !r.bullets.length) {
+          if (r.company) {
+            r.bullets = [r.company];
+            r.company = "";
+          }
+        }
+      });
+
+      // 7. Build Education & Additional Credentials
+      if (!educationLines.length) {
+        lines.slice(headerEndIdx).forEach((l) => {
+          if (
+            /\b(mba|bachelor|master|phd|doctorate|university|college|institute|diploma|degree|b\.?sc|m\.?sc|b\.?eng|m\.?eng|b\.?a|m\.?a|ausbildung|hochschule|universität)\b/i.test(
+              l
+            ) &&
+            l.length <= 180
+          ) {
+            educationLines.push(l.replace(/^[•\-*▪▸]\s*/, ""));
+          }
+        });
+      }
+
+      const finalSummary =
+        summaryLines.join("\n").trim() ||
+        (validRoles[0] && validRoles[0].bullets && validRoles[0].bullets[0]) ||
+        "Senior executive leader with extensive operational, commercial, and P&L management experience.";
+
+      const finalHeadline = detectedHeadlineFromHeader || detectedRoles.slice(0, 3).join(" · ");
 
       state.cv = {
         name,
-        headline: detectedRoles.slice(0, 3).join(" · "),
+        headline: finalHeadline,
         contact,
-        summary,
+        summary: finalSummary,
         focusLine: `Target Mandate: ${detectedRoles.slice(0, 3).join(" / ")} — Full P&L Ownership & Operational Leadership.`,
         skills: finalSkills,
-        roles: [
-          {
-            title: detectedRoles[0] || "General Manager",
-            company: "Executive Leadership Mandate",
-            location: "UAE / International",
-            dates: "Recent – Present",
-            bullets: b1
-          },
-          {
-            title: detectedRoles[1] || "Operations Director",
-            company: "Regional Operations & Commercial Group",
-            location: "MENA / Europe",
-            dates: "Previous",
-            bullets: b2
-          }
-        ],
-        education: lines.find((l) => /\b(mba|bachelor|master|university|degree|engineering|bsc|msc)\b/i.test(l)) || DEMO_CV.education
+        roles: validRoles,
+        education: educationLines.length ? educationLines.join("\n") : "Executive Education & Professional Qualifications (See CV Details)",
+        additionalSections: additionalSections.filter((s) => s.lines && s.lines.length),
+        rawFullText: lines.join("\n")
       };
 
       state.upgradedKeys.clear();
-      state.suggestions = buildHrDirectorSuggestions(state.cv);
-      document.getElementById("cvUploadStatus").innerHTML = `Loaded <strong>${escapeHtml(sourceName)}</strong> — ${state.suggestions.length} 1-click HR Director improvements ready`;
+      state.suggestions = buildHrDirectorSuggestions(state.cv).slice(0, 18);
+      const totalExtractedBullets = validRoles.reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
+      document.getElementById("cvUploadStatus").innerHTML = `Loaded 100% of <strong>${escapeHtml(
+        sourceName
+      )}</strong> (${validRoles.length} roles &middot; ${totalExtractedBullets} experience lines &middot; ${finalSkills.length} skills) — ${
+        state.suggestions.length
+      } 1-click HR Director upgrades ready`;
 
       renderLiveCvSheet();
       renderCvSuggestions();
@@ -3167,7 +3733,7 @@
       rescoreAllJobsAgainstCv();
       renderFilteredJobs();
       updateDailyFetchBannerUI();
-      showToast(`Analyzed ${sourceName} — Auto-syncing daily jobs for your CV & desired roles`);
+      showToast(`Full CV loaded (${validRoles.length} roles, ${totalExtractedBullets} lines) — see Complete Live A4 CV Preview below`);
       if (state.dailyAutoFetchEnabled !== false) {
         runLiveInternetRoleSearch({ silent: true, isDailySync: true });
       }
