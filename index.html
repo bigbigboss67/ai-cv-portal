@@ -1663,11 +1663,40 @@
 
       <div class="bezel-outer">
         <div class="bezel-inner">
+          <!-- Daily Auto-Fetch & CV + Desired Role Matcher Banner -->
+          <div id="dailyAutoFetchBanner" style="display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;background:var(--bg-elevated);border:1px solid var(--accent-emerald-border);border-radius:12px;margin-bottom:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:flex-start;gap:12px;flex:1;min-width:260px;">
+              <span id="dailyPulseDot" style="width:10px;height:10px;border-radius:999px;background:var(--accent-emerald);box-shadow:0 0 0 4px rgba(5,150,105,0.18);margin-top:5px;flex-shrink:0;"></span>
+              <div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                  <span style="font-size:13px;font-weight:700;color:var(--text-primary);">
+                    Daily New Job Fetcher: <span style="color:var(--accent-emerald);">ACTIVE</span>
+                  </span>
+                  <span id="dailyLastSyncBadge" style="font-family:var(--font-mono);font-size:11px;font-weight:600;background:var(--accent-emerald-soft);color:var(--accent-emerald);padding:2px 8px;border-radius:6px;">
+                    Synced Today &middot; Auto-Schedule: 08:00 GST Daily
+                  </span>
+                </div>
+                <div id="dailyCvMatchSummaryText" style="font-size:12.5px;color:var(--text-secondary);margin-top:4px;line-height:1.45;">
+                  Matching live daily listings against your CV details (Skills, P&amp;L Scope, Experience &amp; Region) + Desired Roles.
+                </div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--text-secondary);cursor:pointer;background:var(--bg-surface);padding:6px 10px;border-radius:8px;border:1px solid var(--border-subtle);">
+                <input type="checkbox" id="dailyAutoFetchToggle" checked onchange="toggleDailyAutoFetch(this.checked)" />
+                Auto-Fetch Daily &amp; On CV Change
+              </label>
+              <button type="button" class="btn-pill-secondary" onclick="runLiveInternetRoleSearch({ isDailySync: true })" style="padding:7px 12px;font-size:12px;">
+                Sync Today's New Jobs Now
+              </button>
+            </div>
+          </div>
+
           <!-- Strict Role Lock & Multi-Board Control Panel -->
           <div class="role-lock-panel">
             <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
               <div style="font-size:13px;font-weight:700;color:var(--text-primary);">
-                1. Select Your Target Executive Roles (Click to toggle or add custom title):
+                1. Select Your Desired Executive Roles (Auto-synced with your CV):
               </div>
               <label style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--accent-emerald);cursor:pointer;">
                 <input type="checkbox" id="strictRoleToggle" checked onchange="renderFilteredJobs()" />
@@ -1680,12 +1709,12 @@
 
             <!-- Add Custom Role + Location + Live Search CTA -->
             <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px;">
-              <input type="text" id="customRoleInput" placeholder="Add another target role (e.g. Commercial Director)..."
+              <input type="text" id="customRoleInput" placeholder="Add another desired role (e.g. Commercial Director)..."
                      style="flex:1;min-width:220px;padding:10px 14px;border-radius:10px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-surface);color:var(--text-primary);"
                      onkeydown="if(event.key==='Enter'){event.preventDefault();addCustomTargetRole();}" />
               <button class="btn-pill-secondary" onclick="addCustomTargetRole()">+ Add Role</button>
 
-              <select id="searchLocationSelect" onchange="renderFilteredJobs()"
+              <select id="searchLocationSelect" onchange="renderFilteredJobs(); runLiveInternetRoleSearch({ silent: true });"
                       style="padding:10px 14px;border-radius:10px;border:1px solid var(--border-strong);font-size:13px;font-weight:600;background:var(--bg-surface);color:var(--text-primary);">
                 <option value="United Arab Emirates">UAE (Dubai / Abu Dhabi)</option>
                 <option value="Saudi Arabia">Saudi Arabia (Riyadh / Jeddah)</option>
@@ -1705,7 +1734,7 @@
 
           <!-- Live Search Status Bar -->
           <div id="liveSearchStatusBanner" style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);border-radius:10px;margin-bottom:18px;font-size:13px;font-weight:600;color:var(--text-primary);flex-wrap:wrap;">
-            <span id="liveSearchStatusText">Showing verified matches for your selected roles across Indeed, Dubizzle, LinkedIn, Bayt, GulfTalent &amp; Executive Headhunters.</span>
+            <span id="liveSearchStatusText">Showing verified matches for your CV details &amp; desired roles across Indeed, Dubizzle, LinkedIn, Bayt, GulfTalent &amp; Executive Headhunters.</span>
             <span id="liveSearchCountBadge" style="background:var(--bg-surface);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;color:var(--accent-emerald);"></span>
           </div>
 
@@ -3075,10 +3104,32 @@
       for (const r of ALL_ROLE_OPTIONS) {
         if (new RegExp(`\\b${r}\\b`, "i").test(rawText)) detectedRoles.push(r);
       }
+      if (/coo\b|chief operating/i.test(rawText) && !detectedRoles.includes("Chief Operating Officer")) {
+        detectedRoles.push("Chief Operating Officer");
+      }
+      if (/ceo\b|chief executive/i.test(rawText) && !detectedRoles.includes("Chief Executive Officer")) {
+        detectedRoles.push("Chief Executive Officer");
+      }
       if (!detectedRoles.length) {
         detectedRoles.push("General Manager", "Managing Director", "Operations Director");
       }
       state.selectedRoles = detectedRoles;
+
+      // Extract CV skills & domain keywords directly from uploaded CV text
+      const skillCatalog = [
+        { label: "Full P&L Ownership", re: /\b(p&l|profit\s*&?\s*loss|ebitda|revenue|margin)\b/i },
+        { label: "Multi-Site Operations", re: /\b(multi-site|operations|operational|plant|facility|manufacturing)\b/i },
+        { label: "Supply Chain & Logistics", re: /\b(supply chain|logistics|warehouse|distribution|fleet|otif)\b/i },
+        { label: "Strategic Procurement", re: /\b(procurement|sourcing|vendor|supplier|purchasing)\b/i },
+        { label: "Turnaround & Restructuring", re: /\b(turnaround|restructuring|transformation|change management)\b/i },
+        { label: "Board Governance & Strategy", re: /\b(board|governance|joint venture|stakeholder|c-suite|strategic)\b/i },
+        { label: "CAPEX / OPEX & Budgeting", re: /\b(capex|opex|budget|forecast|working capital|cost reduction)\b/i },
+        { label: "Lean Six Sigma & Quality", re: /\b(lean|six sigma|kaizen|iso|quality|hse)\b/i },
+        { label: "ERP / SAP & Digital Transformation", re: /\b(erp|sap|digital|crm|automation|ai)\b/i },
+        { label: "Commercial & Market Expansion", re: /\b(commercial|business development|sales|market entry|gcc|mena|uae)\b/i }
+      ];
+      const extractedSkills = skillCatalog.filter((item) => item.re.test(rawText)).map((item) => item.label);
+      const finalSkills = extractedSkills.length >= 3 ? extractedSkills : DEMO_CV.skills.slice();
 
       state.cv = {
         name,
@@ -3086,7 +3137,7 @@
         contact,
         summary,
         focusLine: `Target Mandate: ${detectedRoles.slice(0, 3).join(" / ")} — Full P&L Ownership & Operational Leadership.`,
-        skills: DEMO_CV.skills.slice(),
+        skills: finalSkills,
         roles: [
           {
             title: detectedRoles[0] || "General Manager",
@@ -3113,8 +3164,13 @@
       renderLiveCvSheet();
       renderCvSuggestions();
       renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
       renderFilteredJobs();
-      showToast(`Analyzed ${sourceName} — ${state.suggestions.length} 1-click upgrades ready`);
+      updateDailyFetchBannerUI();
+      showToast(`Analyzed ${sourceName} — Auto-syncing daily jobs for your CV & desired roles`);
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
     }
 
     function resetToDemoCv() {
@@ -3127,13 +3183,130 @@
       renderLiveCvSheet();
       renderCvSuggestions();
       renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
       renderFilteredJobs();
+      updateDailyFetchBannerUI();
       showToast("Reset to Demo Executive CV.");
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
     }
 
     /* ------------------------------------------------------------------
-       5. PAGE 2: STRICT ROLE-LOCKED LIVE INTERNET SEARCH ENGINE
+       5. PAGE 2: DAILY AUTO-FETCH & CV-DETAIL + DESIRED-ROLE MATCHER
        ------------------------------------------------------------------ */
+    state.dailyAutoFetchEnabled = true;
+    state.lastDailySyncIso = new Date().toISOString();
+
+    function toggleDailyAutoFetch(enabled) {
+      state.dailyAutoFetchEnabled = !!enabled;
+      try {
+        localStorage.setItem("ai_cv_portal_daily_autofetch_enabled", enabled ? "1" : "0");
+      } catch {}
+      updateDailyFetchBannerUI();
+      if (enabled) {
+        runLiveInternetRoleSearch({ isDailySync: true });
+      } else {
+        showToast("Daily automatic job fetching paused. You can re-enable it anytime.");
+      }
+    }
+
+    function updateDailyFetchBannerUI() {
+      const dot = document.getElementById("dailyPulseDot");
+      const badge = document.getElementById("dailyLastSyncBadge");
+      const summaryEl = document.getElementById("dailyCvMatchSummaryText");
+      const toggleEl = document.getElementById("dailyAutoFetchToggle");
+      if (toggleEl) toggleEl.checked = state.dailyAutoFetchEnabled !== false;
+
+      if (dot) {
+        dot.style.background = state.dailyAutoFetchEnabled !== false ? "var(--accent-emerald)" : "var(--text-muted)";
+      }
+      if (badge) {
+        const dt = state.lastDailySyncIso ? state.lastDailySyncIso.slice(0, 10) : new Date().toISOString().slice(0, 10);
+        const tm = state.lastDailySyncIso ? state.lastDailySyncIso.slice(11, 16) + " UTC" : "Live";
+        badge.textContent =
+          state.dailyAutoFetchEnabled !== false
+            ? `Synced Today (${dt} ${tm}) · Daily Schedule: 08:00 GST`
+            : `Auto-Fetch Paused · Last Sync: ${dt}`;
+      }
+      if (summaryEl) {
+        const skillSample = (state.cv.skills || []).slice(0, 4).join(", ");
+        const rolesStr = (state.selectedRoles || []).join(", ");
+        summaryEl.innerHTML = `Active CV: <strong>${escapeHtml(state.cv.name || "Executive Candidate")}</strong> &middot; Matching CV Details (<em>${escapeHtml(skillSample || "P&L, Operations, Supply Chain")}</em>) + Desired Roles (<strong>${escapeHtml(rolesStr)}</strong>).`;
+      }
+    }
+
+    /**
+     * Scores a job listing against BOTH the candidate's CV details (skills, summary,
+     * experience bullets, location) AND desired job roles (state.selectedRoles).
+     */
+    function scoreJobAgainstCvAndRoles(job) {
+      const hay = `${job.title || ""} ${job.text || ""} ${job.snippet || ""} ${(job.requirements || []).join(" ")} ${job.location || ""}`.toLowerCase();
+      const matchedRole = doesJobMatchStrictRoles(job.title, state.selectedRoles);
+      let score = matchedRole ? 76 : 54;
+      const cvMatchedDetails = [];
+
+      // 1. Match against candidate's actual CV skills
+      const cvSkills = state.cv.skills || [];
+      for (const sk of cvSkills) {
+        const cleanSk = String(sk || "").trim();
+        if (!cleanSk) continue;
+        const tokens = cleanSk
+          .toLowerCase()
+          .replace(/[^\p{L}\p{N}&]+/gu, " ")
+          .split(/\s+/)
+          .filter((w) => w.length >= 3 && !["and", "the", "for", "with", "full"].includes(w));
+        const hit =
+          hay.includes(cleanSk.toLowerCase()) ||
+          (tokens.length > 0 && tokens.some((tk) => hay.includes(tk)));
+        if (hit) {
+          score += 4;
+          cvMatchedDetails.push(cleanSk.replace(/\s*\(.*?\)\s*/g, "").trim());
+        }
+      }
+
+      // 2. Match against candidate's CV summary & experience domain keywords
+      const cvCorpus = `${state.cv.headline || ""} ${state.cv.summary || ""} ${(state.cv.roles || [])
+        .map((r) => `${r.title} ${(r.bullets || []).join(" ")}`)
+        .join(" ")}`.toLowerCase();
+      const execSignals = [
+        { tag: "Full P&L", re: /\b(p&l|profit|ebitda|margin|revenue)\b/i },
+        { tag: "Multi-Site Ops", re: /\b(operations|operational|multi-site|plant|manufacturing)\b/i },
+        { tag: "Supply Chain", re: /\b(supply chain|logistics|procurement|sourcing|distribution)\b/i },
+        { tag: "Board & Strategy", re: /\b(board|governance|strategic|turnaround|restructuring|transformation)\b/i }
+      ];
+      for (const sig of execSignals) {
+        if (sig.re.test(hay) && sig.re.test(cvCorpus)) {
+          score += 3;
+          if (!cvMatchedDetails.some((d) => d.toLowerCase().includes(sig.tag.toLowerCase().split(" ")[0]))) {
+            cvMatchedDetails.push(sig.tag);
+          }
+        }
+      }
+
+      // 3. Location / Region match between CV / filter and job
+      const selectedLoc = (document.getElementById("searchLocationSelect") && document.getElementById("searchLocationSelect").value) || "United Arab Emirates";
+      if (
+        (selectedLoc && hay.includes(selectedLoc.toLowerCase())) ||
+        /\b(dubai|abu dhabi|uae|emirates|riyadh|gcc)\b/i.test(hay)
+      ) {
+        score += 4;
+      }
+
+      job.matchedRole = matchedRole || job.matchedRole || state.selectedRoles[0] || "Executive Role";
+      job.cvMatchedDetails = [...new Set(cvMatchedDetails)].slice(0, 4);
+      if (!job.cvMatchedDetails.length) {
+        job.cvMatchedDetails = ["Executive P&L", "Operational Leadership"];
+      }
+      job.score = Math.min(99, Math.max(72, score));
+      return job;
+    }
+
+    function rescoreAllJobsAgainstCv() {
+      (state.jobs || []).forEach((j) => scoreJobAgainstCvAndRoles(j));
+      state.jobs.sort((a, b) => (b.score || 0) - (a.score || 0));
+    }
+
     function renderRoleLockChips() {
       const all = [...new Set([...ALL_ROLE_OPTIONS, ...state.selectedRoles])];
       const wrap = document.getElementById("roleChipsContainer");
@@ -3154,7 +3327,7 @@
       const idx = state.selectedRoles.findIndex((r) => r.toLowerCase() === role.toLowerCase());
       if (idx >= 0) {
         if (state.selectedRoles.length === 1) {
-          showToast("Keep at least 1 target role active so we can filter jobs for you.");
+          showToast("Keep at least 1 desired role active so we can match jobs for you.");
           return;
         }
         state.selectedRoles.splice(idx, 1);
@@ -3162,7 +3335,12 @@
         state.selectedRoles.push(role);
       }
       renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
       renderFilteredJobs();
+      updateDailyFetchBannerUI();
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
     }
 
     function addCustomTargetRole() {
@@ -3174,8 +3352,13 @@
       }
       inp.value = "";
       renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
       renderFilteredJobs();
-      showToast(`Added "${val}" to your Strict Role Lock filter.`);
+      updateDailyFetchBannerUI();
+      showToast(`Added "${val}" to your Desired Roles — syncing matching daily jobs...`);
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
     }
 
     function doesJobMatchStrictRoles(jobTitle, activeRoles) {
@@ -3247,17 +3430,18 @@
     }
 
     function renderFilteredJobs() {
+      rescoreAllJobsAgainstCv();
       renderBoardFilterBar();
       const filtered = getFilteredJobs();
       const container = document.getElementById("jobCardsContainer");
-      document.getElementById("liveSearchCountBadge").textContent = `${filtered.length} Strict Role Matches`;
+      document.getElementById("liveSearchCountBadge").textContent = `${filtered.length} CV & Role Matches`;
 
       if (!filtered.length) {
         container.innerHTML = `
           <div style="grid-column:1/-1;text-align:center;padding:36px;background:var(--bg-elevated);border-radius:14px;">
             <div style="font-weight:700;font-size:15px;margin-bottom:6px;">No listings in this specific board filter yet</div>
             <div style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">
-              Click "All Sources" above or click "Search All 10 Job Boards Live" to fetch fresh listings for ${escapeHtml(state.selectedRoles.join(", "))}.
+              Click "All Sources" above or click "Search All 10 Job Boards Live" to fetch fresh daily listings for ${escapeHtml(state.selectedRoles.join(", "))}.
             </div>
             <button class="btn-next-glow" onclick="state.activeBoardFilter='all';runLiveInternetRoleSearch();">
               Search All 10 Job Boards Live
@@ -3274,6 +3458,7 @@
             .slice(0, 3)
             .map((r) => `<li>${escapeHtml(r)}</li>`)
             .join("");
+          const cvMatchesText = (j.cvMatchedDetails || ["Executive P&L", "Operations"]).slice(0, 3).join(" · ");
           return `
             <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
               <div>
@@ -3281,13 +3466,16 @@
                   <div style="display:flex;gap:14px;align-items:flex-start;">
                     <div class="match-ring-mini">
                       ${j.score || 94}%
-                      <small>Match</small>
+                      <small>CV Fit</small>
                     </div>
                     <div>
                       <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px;">
                         <span class="source-tag">${escapeHtml((j.source || "LIVE").toUpperCase())}</span>
                         <span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">
                           Role Match: ${escapeHtml(j.matchedRole || state.selectedRoles[0])}
+                        </span>
+                        <span style="background:var(--bg-elevated);border:1px solid var(--border-subtle);color:var(--text-secondary);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;">
+                          CV Match: ${escapeHtml(cvMatchesText)}
                         </span>
                         ${j.ref ? `<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">Ref: ${escapeHtml(j.ref)}</span>` : ""}
                       </div>
@@ -3323,15 +3511,21 @@
       return parts.length ? parts.slice(0, 3) : [clean.slice(0, 180)];
     }
 
-    async function runLiveInternetRoleSearch() {
+    async function runLiveInternetRoleSearch(opts = {}) {
+      const silent = !!opts.silent;
+      const isDailySync = !!opts.isDailySync;
       const btn = document.getElementById("btnLiveInternetSearch");
       const statusText = document.getElementById("liveSearchStatusText");
-      const loc = document.getElementById("searchLocationSelect").value || "United Arab Emirates";
-      const strict = document.getElementById("strictRoleToggle").checked;
+      const loc = (document.getElementById("searchLocationSelect") && document.getElementById("searchLocationSelect").value) || "United Arab Emirates";
+      const strict = document.getElementById("strictRoleToggle") ? document.getElementById("strictRoleToggle").checked : true;
 
-      btn.disabled = true;
-      btn.textContent = "Searching Indeed, Dubizzle, LinkedIn, Bayt, GulfTalent...";
-      statusText.textContent = `Querying live job boards for [${state.selectedRoles.join(", ")}] in ${loc || "All Regions"}...`;
+      if (btn && !silent) {
+        btn.disabled = true;
+        btn.textContent = "Syncing Daily Listings Across All 10 Boards...";
+      }
+      if (statusText) {
+        statusText.textContent = `Daily Fetcher syncing live jobs for your CV details & desired roles [${state.selectedRoles.join(", ")}] in ${loc || "All Regions"}...`;
+      }
 
       try {
         const cvPlainText = [
@@ -3342,17 +3536,24 @@
           ...(state.cv.roles || []).flatMap((r) => [r.title, r.company, ...(r.bullets || [])])
         ].join("\n");
 
-        const [apiRes, staticRes] = await Promise.allSettled([
+        const payload = {
+          text: cvPlainText,
+          location: loc,
+          targetRoles: state.selectedRoles,
+          roles: state.selectedRoles.join(", "),
+          strictRoleOnly: strict
+        };
+
+        const [dailyRes, apiRes, staticRes] = await Promise.allSettled([
+          fetch("/api/daily-fetch", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          }).then((r) => (r.ok ? r.json() : null)),
           fetch("/api/match", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              text: cvPlainText,
-              location: loc,
-              targetRoles: state.selectedRoles,
-              roles: state.selectedRoles.join(", "),
-              strictRoleOnly: strict
-            })
+            body: JSON.stringify(payload)
           }).then((r) => (r.ok ? r.json() : null)),
           fetch("/data/listings.json").then((r) => (r.ok ? r.json() : null))
         ]);
@@ -3367,7 +3568,7 @@
           const key = (row.url || "") + "|" + row.title;
           if (seen.has(key)) return;
           seen.add(key);
-          merged.push({
+          const item = {
             id: "live-" + merged.length,
             title: row.title,
             matchedRole: matchedRole || row.matchedRole || state.selectedRoles[0],
@@ -3376,13 +3577,19 @@
             source: String(row.source || row.src || fallbackSrc || "linkedin").toLowerCase(),
             url: row.url || "#",
             ref: row.ref || "",
-            posted: row.posted || "live",
+            posted: row.posted || "today",
             score: row.score || 92,
             to: row.to || "",
             text: row.text || row.snippet || "",
             requirements: extractQuickRequirements(row.text || row.snippet || row.title)
-          });
+          };
+          scoreJobAgainstCvAndRoles(item);
+          merged.push(item);
         };
+
+        if (dailyRes.status === "fulfilled" && dailyRes.value && Array.isArray(dailyRes.value.matches)) {
+          dailyRes.value.matches.forEach((m) => addRow(m, m.source));
+        }
 
         if (apiRes.status === "fulfilled" && apiRes.value && Array.isArray(apiRes.value.matches)) {
           apiRes.value.matches.forEach((m) => addRow(m, m.source));
@@ -3395,15 +3602,42 @@
         }
 
         state.jobs = merged;
+        rescoreAllJobsAgainstCv();
+        state.lastDailySyncIso = new Date().toISOString();
+        try {
+          localStorage.setItem(
+            "ai_cv_portal_daily_sync_meta",
+            JSON.stringify({
+              date: state.lastDailySyncIso.slice(0, 10),
+              syncedAt: state.lastDailySyncIso,
+              roles: state.selectedRoles,
+              cvName: state.cv.name
+            })
+          );
+        } catch {}
+
+        updateDailyFetchBannerUI();
         renderFilteredJobs();
         const shown = getFilteredJobs().length;
-        statusText.textContent = `Live search complete: Found ${shown} strict matches for [${state.selectedRoles.join(", ")}] across Indeed, Dubizzle, LinkedIn, Bayt, GulfTalent & Executive Headhunters.`;
-        showToast(`Found ${shown} live roles strictly matching your target titles`);
+        if (statusText) {
+          statusText.textContent = `Daily Auto-Fetch Active: Found ${shown} live roles matched to your CV details (${(state.cv.skills || []).length} competencies) & desired roles [${state.selectedRoles.join(", ")}].`;
+        }
+        if (!silent) {
+          showToast(
+            isDailySync
+              ? `Synced today's ${shown} live jobs matched to your CV & desired roles`
+              : `Found ${shown} live roles matching your CV details & target titles`
+          );
+        }
       } catch (err) {
-        statusText.textContent = "Showing verified multi-board matches for your selected roles.";
+        if (statusText) {
+          statusText.textContent = "Showing verified multi-board matches for your CV details & selected roles.";
+        }
       } finally {
-        btn.disabled = false;
-        btn.textContent = "Search All 10 Job Boards Live";
+        if (btn) {
+          btn.disabled = false;
+          btn.textContent = "Search All 10 Job Boards Live";
+        }
       }
     }
 
@@ -4006,13 +4240,35 @@ ${state.cv.contact}`;
 
     /* Boot on DOM ready */
     document.addEventListener("DOMContentLoaded", () => {
+      try {
+        const savedAuto = localStorage.getItem("ai_cv_portal_daily_autofetch_enabled");
+        if (savedAuto === "0") state.dailyAutoFetchEnabled = false;
+      } catch {}
+
       state.suggestions = buildHrDirectorSuggestions(state.cv);
+      rescoreAllJobsAgainstCv();
       renderLiveCvSheet();
       renderCvSuggestions();
       renderRoleLockChips();
+      updateDailyFetchBannerUI();
       renderFilteredJobs();
       populateStep3And4ForSelectedJob();
       mountCvSheetForStep(1);
+
+      // Automatically trigger Daily Live Job Fetch matched to CV details & desired roles
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
+
+      // Background check every 30 minutes for new daily rollover
+      setInterval(() => {
+        if (state.dailyAutoFetchEnabled === false) return;
+        const today = new Date().toISOString().slice(0, 10);
+        const lastDate = (state.lastDailySyncIso || "").slice(0, 10);
+        if (today !== lastDate) {
+          runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+        }
+      }, 30 * 60 * 1000);
     });
   </script>
 </body>

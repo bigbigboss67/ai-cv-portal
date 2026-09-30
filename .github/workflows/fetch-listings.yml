@@ -41,6 +41,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No change - nothing to commit."
           else
-            git commit -m "chore: refresh job listings ($(date -u +%Y-%m-%d))"
-            git push
+            git commit -m "chore: refresh daily job listings ($(date -u +%Y-%m-%d))"
+            git push origin HEAD:main || true
+            git push origin HEAD:master || true
           fi

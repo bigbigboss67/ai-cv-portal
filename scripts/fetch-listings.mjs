@@ -288,7 +288,7 @@ async function collectWebSearch() {
    is a handful of reads on each site.                                       */
 const BOARD_ROLES = [
   "managing director", "general manager", "operations director", "chief executive officer",
-  "chief operating officer", "country manager", "business development director",
+  "chief operating officer", "country manager", "commercial director", "supply chain director",
 ];
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -301,14 +301,12 @@ async function collectBoard(url, parse) {
       seen.add(j.ref);
       jobs.push(j);
     }
-    await pause(1500);
+    await pause(1200);
   }
   return jobs;
 }
 const collectLinkedIn = () => collectBoard((r) => boards.linkedInUrl(r, "United Arab Emirates"), boards.parseLinkedIn);
-/* GulfTalent was read here until 20 September 2026, when it began answering 403
-   to this machine and to GitHub Actions alike. Its reader is still in
-   api/_boards.js, tested, for the day it lets a robot in again. */
+const collectRoleBoard = (boardId) => () => boards.fetchBoardByRoleSearch(boardId, BOARD_ROLES.slice(0, 4), "Dubai UAE", 11000);
 
 /* `audience` says who a source is for: the market it covers, and the language a
    candidate needs before its listings are worth showing them. Two of these are
@@ -316,6 +314,11 @@ const collectLinkedIn = () => collectBoard((r) => boards.linkedInUrl(r, "United 
    collects them all either way, because one shared file serves every candidate;
    the filtering belongs where a candidate is known. */
 const SOURCES = [
+  { id: "indeed", name: "Indeed UAE — Executive & Director Roles", url: "https://ae.indeed.com", collect: collectRoleBoard("indeed"), audience: { market: "gulf" } },
+  { id: "dubizzle", name: "Dubizzle UAE — Senior & Executive Jobs", url: "https://dubai.dubizzle.com/jobs/", collect: collectRoleBoard("dubizzle"), audience: { market: "gulf" } },
+  { id: "bayt", name: "Bayt MENA — Executive Roles", url: "https://www.bayt.com/en/uae/jobs/", collect: collectRoleBoard("bayt"), audience: { market: "gulf" } },
+  { id: "gulftalent", name: "GulfTalent UAE — Senior Management", url: "https://www.gulftalent.com/uae/jobs", collect: collectRoleBoard("gulftalent"), audience: { market: "gulf" } },
+  { id: "naukrigulf", name: "Naukrigulf UAE — Executive Search", url: "https://www.naukrigulf.com", collect: collectRoleBoard("naukrigulf"), audience: { market: "gulf" } },
   { id: "ahk", name: "AHK VAE — Current Job Posting", url: AHK_URL, parse: parseAhk, audience: { market: "gulf", lang: "de" } },
   { id: "departer", name: "Departer — The German Headhunter", url: DEPARTER_URL, parse: parseDeparter, audience: { market: "gulf", lang: "de" } },
   { id: "charterhouse", name: "Charterhouse — Middle East", url: CHARTER_URL, parse: parseCharterhouse, audience: { market: "gulf" } },
