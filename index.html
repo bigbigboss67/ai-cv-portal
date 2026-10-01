@@ -2293,13 +2293,13 @@
       flex-shrink: 0;
     }
     .wizard-bar.glass-capsule .stepper-nav {
-      flex-shrink: 1;
+      flex: 0 0 auto;
       padding: 3px;
-      gap: 3px;
+      gap: 4px;
     }
     .wizard-bar.glass-capsule .step-tab {
-      padding: 5px 11px;
-      font-size: 12px;
+      padding: 5px 10px;
+      font-size: 11.5px;
       gap: 6px;
     }
     .wizard-bar.glass-capsule .step-num {
@@ -2329,7 +2329,7 @@
         padding: 10px 14px;
       }
     }
-    .hud-readiness-badge {
+    .hud-readiness-badge, .hud-readiness-chip {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -2342,6 +2342,8 @@
       color: var(--accent-emerald);
       border: 1px solid rgba(16, 185, 129, 0.35);
       letter-spacing: 0.05em;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     /* 2. ATS Machine X-Ray Viewport & Scanned Highlights */
@@ -2639,6 +2641,192 @@
       border: 1px solid rgba(245, 158, 11, 0.3);
       padding: 2px 8px;
       border-radius: 999px;
+    }
+
+    /* ===================================================================
+       APPLICATION TRACKER & FOLLOW-UP COMMAND CENTER STYLES
+       =================================================================== */
+    .tracker-nav-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .tracker-nav-btn:hover {
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+    }
+    .tracker-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: 999px;
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border-strong);
+      line-height: 1.4;
+    }
+    .tracker-badge.has-due {
+      background: rgba(239, 68, 68, 0.16);
+      color: #ef4444;
+      border-color: rgba(239, 68, 68, 0.45);
+      animation: pulseAlert 2s infinite ease-in-out;
+    }
+    @keyframes pulseAlert {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      50% { box-shadow: 0 0 0 5px rgba(239, 68, 68, 0); }
+    }
+    .tracker-stage-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+    .tracker-stage-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 160ms ease;
+    }
+    .tracker-stage-pill:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+    }
+    .tracker-stage-pill.active {
+      background: var(--accent-emerald-soft);
+      border-color: var(--accent-emerald-border);
+      color: var(--accent-emerald);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.18);
+    }
+    .tracker-app-card {
+      background: var(--bg-elevated);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tracker-app-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.25);
+    }
+    .tracker-app-card.status-due {
+      border-color: rgba(239, 68, 68, 0.45);
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.03) 0%, var(--bg-elevated) 100%);
+    }
+    .tracker-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .tracker-platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+    .tracker-stage-select {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      color: var(--text-primary);
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tracker-followup-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+    }
+    .tracker-followup-badge.due {
+      background: rgba(239, 68, 68, 0.14);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .tracker-followup-badge.upcoming {
+      background: rgba(14, 165, 233, 0.12);
+      color: #0284c7;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    .tracker-followup-badge.done {
+      background: rgba(16, 185, 129, 0.14);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .tracker-notes-box {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      resize: vertical;
+      min-height: 48px;
+      margin-top: 6px;
+    }
+    .tracker-modal-dialog {
+      max-width: 920px;
+      width: 95%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 28px;
+    }
+    .btn-track-job-card {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 160ms ease;
+    }
+    .btn-track-job-card:hover {
+      border-color: var(--accent-emerald);
+      color: var(--accent-emerald);
+      background: var(--accent-emerald-soft);
     }
 
     /* Language-Dedicated Role Filter Bar & Badges */
@@ -2969,19 +3157,19 @@
       <nav class="stepper-nav" aria-label="4-Page Guided Flow">
         <button class="step-tab active" id="stepTab1" onclick="goToStep(1)">
           <span class="step-num" id="stepNum1">1</span>
-          <span>Page 1: Your CV</span>
+          <span>Your CV</span>
         </button>
         <button class="step-tab" id="stepTab2" onclick="goToStep(2)">
           <span class="step-num" id="stepNum2">2</span>
-          <span>Page 2: Find Live Jobs</span>
+          <span>Find Jobs</span>
         </button>
         <button class="step-tab" id="stepTab3" onclick="goToStep(3)">
           <span class="step-num" id="stepNum3">3</span>
-          <span>Page 3: Tailor & Review</span>
+          <span>Tailor &amp; Review</span>
         </button>
         <button class="step-tab" id="stepTab4" onclick="goToStep(4)">
           <span class="step-num" id="stepNum4">4</span>
-          <span>Page 4: Send Application</span>
+          <span>Send Application</span>
         </button>
       </nav>
 
@@ -2990,6 +3178,11 @@
           <span class="hud-pulse"></span>
           <span id="hudReadinessVal">Ready: 98%</span>
         </div>
+        <button type="button" class="btn-pill-secondary tracker-nav-btn" onclick="openApplicationTrackerModal()" id="btnOpenTracker" title="Track and follow up on all executive job applications">
+          <span style="font-size:13px;">📊</span>
+          <span>Tracker &amp; Follow-Ups</span>
+          <span class="tracker-badge" id="hudTrackerBadge">0</span>
+        </button>
         <button class="btn-pill-secondary" onclick="toggleCvDrawer()" id="btnToggleCvDrawer">
           Preview Live A4 CV
         </button>
@@ -4042,24 +4235,40 @@
           </div>
         </div>
 
-        <!-- MY EXECUTIVE DISPATCHES & APPLICATION TIMELINE LEDGER -->
+        <!-- BUILT-IN APPLICATION TRACKER & FOLLOW-UP COMMAND CENTER -->
         <div class="dispatches-ledger-wrap" id="dispatchesLedgerContainer">
           <div class="dispatches-ledger-header">
             <div>
-              <div style="font-size:16px;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                <span>My Executive Dispatches &amp; Application Ledger</span>
-                <span class="followup-target-badge" id="dispatchesCountChip">0 Dispatched</span>
+              <div style="font-size:17px;font-weight:800;color:var(--text-primary);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                <span>📊 Application Tracker &amp; Follow-Up Command Center</span>
+                <span class="followup-target-badge" id="dispatchesCountChip">0 Tracked</span>
               </div>
-              <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">
-                Private local ledger &middot; 4-day executive follow-up countdown &middot; 1-click check-in generator
+              <div style="font-size:12.5px;color:var(--text-secondary);margin-top:4px;">
+                Track every application across stages &middot; 4-day follow-up countdowns &middot; 1-click tailored check-in email generator
               </div>
             </div>
-            <div style="display:flex;align-items:center;gap:8px;">
-              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;" onclick="clearExecutiveDispatches()">
-                Clear Ledger History
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:6px 13px;border-color:var(--accent-emerald);color:var(--accent-emerald);font-weight:700;" onclick="openLogExternalAppModal()">
+                + Log External Application
+              </button>
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:6px 12px;" onclick="loadDemoApplications()" id="btnLoadSampleApps">
+                ✨ Load Sample Jobs
+              </button>
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:6px 12px;" onclick="exportTrackerCsv()" title="Download Excel-compatible CSV">
+                📥 Export CSV
+              </button>
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:6px 10px;color:var(--text-muted);" onclick="clearExecutiveDispatches()">
+                Clear
               </button>
             </div>
           </div>
+
+          <!-- Application Stage Filter Pills -->
+          <div class="tracker-stage-row" id="trackerStageFilterRow">
+            <!-- Dynamically populated by renderTrackerFilterPills() -->
+          </div>
+
+          <!-- Tracked Applications Cards List -->
           <div id="dispatchesTimelineList">
             <!-- Dynamically populated by renderDispatchesLedger() -->
           </div>
@@ -4268,6 +4477,184 @@
       <div style="display:flex;justify-content:flex-end;gap:8px;">
         <button class="btn-pill-secondary" onclick="closeAddJobModal()">Cancel</button>
         <button class="btn-next-glow" onclick="convertModalJobToApplication()">Convert to Tailored Application &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: FULL APPLICATION TRACKER & FOLLOW-UP HUB
+       =================================================================== -->
+  <div class="modal-backdrop" id="applicationTrackerModal" onclick="if(event.target===this)closeApplicationTrackerModal()">
+    <div class="modal-card tracker-modal-dialog">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid var(--border-subtle);padding-bottom:12px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:22px;">📊</span>
+          <div>
+            <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:700;">Executive Application Tracker</h3>
+            <p style="font-size:12px;color:var(--text-secondary);margin:0;">Monitor application stages &middot; 4-day follow-up countdowns &middot; Tailored executive check-in generator</p>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;border-color:var(--accent-emerald);color:var(--accent-emerald);font-weight:700;" onclick="openLogExternalAppModal()">
+            + Log External Application
+          </button>
+          <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 10px;" onclick="closeApplicationTrackerModal()">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <!-- Stage Filter Pills in Modal -->
+      <div class="tracker-stage-row" id="modalTrackerStageFilterRow"></div>
+
+      <!-- Application List in Modal -->
+      <div id="modalTrackerTimelineList" style="max-height:60vh;overflow-y:auto;padding-right:4px;"></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: LOG EXTERNAL APPLICATION
+       =================================================================== -->
+  <div class="modal-backdrop" id="logExternalAppModal" onclick="if(event.target===this)closeLogExternalAppModal()">
+    <div class="modal-card" style="max-width:580px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;border-bottom:1px solid var(--border-subtle);padding-bottom:10px;">
+        <h3 style="font-family:var(--font-serif);font-size:19px;font-weight:700;">Log External Application</h3>
+        <button type="button" class="btn-pill-secondary" onclick="closeLogExternalAppModal()">Close</button>
+      </div>
+      <p style="font-size:12.5px;color:var(--text-secondary);margin-bottom:14px;">
+        Track any mandate you applied to on LinkedIn, Indeed, Company portals, or via executive search partners.
+      </p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Target Role Title *</label>
+          <input type="text" id="logRoleTitleInput" placeholder="e.g. Managing Director / COO"
+                 style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);" />
+        </div>
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Company Name *</label>
+          <input type="text" id="logCompanyInput" placeholder="e.g. Siemens DACH / Gulf JV"
+                 style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);" />
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Platform / Source</label>
+          <select id="logPlatformSelect" style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);">
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Direct Company Portal">Direct Company Career Portal</option>
+            <option value="Indeed">Indeed</option>
+            <option value="Headhunter / Recruiter">Executive Recruiter / Headhunter</option>
+            <option value="Bayt">Bayt</option>
+            <option value="GulfTalent">GulfTalent</option>
+            <option value="Departer">Departer (German Search)</option>
+            <option value="Page Executive">Page Executive / Michael Page</option>
+            <option value="Referral / Personal Network">Personal Referral / Board Contact</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Location</label>
+          <input type="text" id="logLocationInput" placeholder="e.g. Dubai, UAE / Munich, Germany"
+                 style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);" />
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Recruiter / Contact Email</label>
+          <input type="email" id="logEmailInput" placeholder="recruiter@employer.com"
+                 style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);" />
+        </div>
+        <div>
+          <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Initial Stage</label>
+          <select id="logInitialStageSelect" style="width:100%;padding:9px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;background:var(--bg-elevated);color:var(--text-primary);">
+            <option value="applied">Applied (Start 4-Day Follow-Up Timer)</option>
+            <option value="screening">Screening / Recruiter Call</option>
+            <option value="interview">Interview Scheduled</option>
+            <option value="offer">Offer Received</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <label style="font-size:11.5px;font-weight:700;display:block;margin-bottom:4px;">Notes / Salary / Recruiter Name (Optional)</label>
+        <textarea id="logNotesInput" rows="3" placeholder="e.g. Applied via John Doe (Talent Lead). Discussed $140K base + bonus. Follow-up expected next Tuesday."
+                  style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border-strong);font-size:12.5px;background:var(--bg-elevated);color:var(--text-primary);resize:vertical;"></textarea>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:8px;">
+        <button type="button" class="btn-pill-secondary" onclick="closeLogExternalAppModal()">Cancel</button>
+        <button type="button" class="btn-next-glow" onclick="saveExternalApplication()">Save to Tracker &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: BUILT-IN MULTI-STRATEGY FOLLOW-UP GENERATOR
+       =================================================================== -->
+  <div class="modal-backdrop" id="followUpGeneratorModal" onclick="if(event.target===this)closeFollowUpModal()">
+    <div class="modal-card" style="max-width:680px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;border-bottom:1px solid var(--border-subtle);padding-bottom:10px;">
+        <div>
+          <h3 style="font-family:var(--font-serif);font-size:19px;font-weight:700;">Executive Follow-Up Email Generator</h3>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0;" id="fuModalSubTitle">Tailored outreach &middot; Pre-filled subject &amp; body</p>
+        </div>
+        <button type="button" class="btn-pill-secondary" onclick="closeFollowUpModal()">Close</button>
+      </div>
+
+      <!-- Template Strategy Selector -->
+      <div style="margin-bottom:12px;">
+        <label style="font-size:11.5px;font-weight:700;color:var(--text-secondary);display:block;margin-bottom:6px;">Select Follow-Up Strategy:</label>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;" id="fuTemplatePillsContainer">
+          <button type="button" class="lang-filter-pill active" onclick="setFollowUpTemplate('standard')" id="btnFuTplStandard">
+            🗓️ 4-Day Standard Check-In
+          </button>
+          <button type="button" class="lang-filter-pill" onclick="setFollowUpTemplate('value_add')" id="btnFuTplValueAdd">
+            💡 Strategic Value-Add
+          </button>
+          <button type="button" class="lang-filter-pill" onclick="setFollowUpTemplate('second')" id="btnFuTplSecond">
+            ⏳ Second Follow-Up (Day 10+)
+          </button>
+          <button type="button" class="lang-filter-pill" onclick="setFollowUpTemplate('thank_you')" id="btnFuTplThankYou">
+            🤝 Post-Interview Thank You
+          </button>
+        </div>
+      </div>
+
+      <!-- Recipient & Subject Header -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+        <div>
+          <label style="font-size:11px;font-weight:700;color:var(--text-secondary);display:block;margin-bottom:3px;">Recipient (To:)</label>
+          <input type="text" id="fuRecipientInput"
+                 style="width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--border-strong);font-size:12px;background:var(--bg-elevated);color:var(--text-primary);font-family:var(--font-mono);" />
+        </div>
+        <div>
+          <label style="font-size:11px;font-weight:700;color:var(--text-secondary);display:block;margin-bottom:3px;">Subject Line</label>
+          <input type="text" id="fuSubjectInput"
+                 style="width:100%;padding:8px 10px;border-radius:6px;border:1px solid var(--border-strong);font-size:12px;background:var(--bg-elevated);color:var(--text-primary);" />
+        </div>
+      </div>
+
+      <!-- Follow-Up Text Area -->
+      <div style="margin-bottom:14px;">
+        <label style="font-size:11px;font-weight:700;color:var(--text-secondary);display:block;margin-bottom:3px;">Email Body (Editable)</label>
+        <textarea id="fuEmailBodyTextarea" rows="8"
+                  style="width:100%;padding:12px;border-radius:8px;border:1px solid var(--border-strong);font-size:13px;line-height:1.6;background:var(--bg-elevated);color:var(--text-primary);font-family:var(--font-sans);resize:vertical;"></textarea>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span style="font-size:11.5px;color:var(--text-muted);" id="fuStatusNotice">
+          Sending or copying will automatically mark application as <strong>Followed Up</strong>.
+        </span>
+        <div style="display:flex;gap:8px;">
+          <button type="button" class="btn-pill-secondary" onclick="copyFollowUpEmail()">
+            📋 Copy Text
+          </button>
+          <button type="button" class="btn-next-glow" onclick="sendFollowUpEmail()">
+            ✉️ Open in Mail Client &rarr;
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -5264,144 +5651,651 @@
     }
 
     /* ------------------------------------------------------------------
-       PRIVATE LOCAL "MY EXECUTIVE DISPATCHES" APPLICATION TIMELINE LEDGER
+       APPLICATION TRACKER & 4-DAY FOLLOW-UP COMMAND CENTER ENGINE
        ------------------------------------------------------------------ */
-    function getStoredDispatches() {
+    const TRACKER_STORAGE_KEY = "ai_cv_portal_applications_tracker";
+    const LEGACY_STORAGE_KEY = "ai_cv_portal_dispatches";
+
+    state.trackerFilter = "all";
+    state.activeFollowUpAppId = null;
+    state.activeFollowUpTemplate = "standard";
+
+    function getStoredApplications() {
       try {
-        const raw = localStorage.getItem("ai_cv_portal_dispatches");
-        return raw ? JSON.parse(raw) : [];
+        let list = [];
+        const raw = localStorage.getItem(TRACKER_STORAGE_KEY);
+        if (raw) {
+          list = JSON.parse(raw);
+        } else {
+          // Automatic migration from legacy dispatches if available
+          const legacyRaw = localStorage.getItem(LEGACY_STORAGE_KEY);
+          if (legacyRaw) {
+            const legacyList = JSON.parse(legacyRaw);
+            list = legacyList.map((item) => ({
+              id: item.id || "app_" + Date.now() + "_" + Math.random().toString(36).substr(2, 4),
+              role: item.role,
+              company: item.company,
+              location: item.location || "UAE",
+              to: item.to || "",
+              contactName: "",
+              platform: item.method || "1-Click Direct Application",
+              subject: item.subject || `Application — ${item.role}`,
+              appliedAt: item.dispatchedAt || Date.now(),
+              targetFollowUpAt: item.targetFollowUpAt || (Date.now() + 4 * 24 * 60 * 60 * 1000),
+              stage: item.stage || "applied",
+              notes: item.notes || "",
+              salary: item.salary || "",
+              followUpsCount: item.followUpsCount || 0,
+              lastFollowedUpAt: item.lastFollowedUpAt || null
+            }));
+            try { localStorage.setItem(TRACKER_STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+          }
+        }
+        return Array.isArray(list) ? list : [];
       } catch (e) {
         return [];
       }
     }
 
-    function saveStoredDispatches(list) {
+    function saveStoredApplications(list) {
       try {
-        localStorage.setItem("ai_cv_portal_dispatches", JSON.stringify(list));
+        localStorage.setItem(TRACKER_STORAGE_KEY, JSON.stringify(list));
       } catch (e) {}
+      renderApplicationTracker();
     }
 
+    function trackApplication(data, source = "portal") {
+      if (!data || !data.role) return;
+      const list = getStoredApplications();
+      const now = Date.now();
+      const followUpIntervalMs = 4 * 24 * 60 * 60 * 1000; // 4 calendar days
+
+      const newApp = {
+        id: "app_" + now + "_" + Math.random().toString(36).substr(2, 4),
+        role: data.role.trim(),
+        company: (data.company || "Executive Employer").trim(),
+        location: (data.location || "UAE").trim(),
+        to: (data.to || "").trim(),
+        contactName: (data.contactName || "").trim(),
+        platform: data.platform || (source === "portal" ? "Direct Portal Dispatch" : "External Application"),
+        subject: data.subject || `Application — ${data.role} — ${state.cv.name || "Executive Candidate"}`,
+        appliedAt: data.appliedAt || now,
+        targetFollowUpAt: data.targetFollowUpAt || (now + followUpIntervalMs),
+        stage: data.stage || "applied",
+        notes: data.notes || "",
+        salary: data.salary || "",
+        followUpsCount: 0,
+        lastFollowedUpAt: null
+      };
+
+      // Deduplication check
+      const isDuplicate = list.some(
+        (a) => a.role.toLowerCase() === newApp.role.toLowerCase() &&
+               a.company.toLowerCase() === newApp.company.toLowerCase() &&
+               (now - a.appliedAt < 15000)
+      );
+      if (isDuplicate) return;
+
+      list.unshift(newApp);
+      saveStoredApplications(list);
+      showToast(`Tracked application for "${newApp.role}" at ${newApp.company}`);
+    }
+
+    // Called when user clicks "Send Application Now" or "Open Mail App" on Page 4
     function recordExecutiveDispatch(job, method, to, subject) {
       if (!job) return;
-      const list = getStoredDispatches();
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
-      const newDispatch = {
-        id: "disp_" + Date.now(),
+      trackApplication({
         role: cleanRole,
         company: job.company || "Executive Employer",
         location: job.location || "UAE",
         to: to || job.to || "",
-        subject: subject || "",
-        dispatchedAt: Date.now(),
-        targetFollowUpAt: Date.now() + (4 * 24 * 60 * 60 * 1000), // 4 calendar days
-        method: method || "1-Click Direct Application",
-        status: "dispatched"
-      };
-      if (list.length && list[0].role === newDispatch.role && (Date.now() - list[0].dispatchedAt < 10000)) {
-        return;
-      }
-      list.unshift(newDispatch);
-      saveStoredDispatches(list.slice(0, 30));
-      renderDispatchesLedger();
+        platform: method || "1-Click Direct Application",
+        subject: subject || `Application — ${cleanRole} — ${state.cv.name || "Executive Candidate"}`,
+        stage: "applied"
+      }, "portal");
     }
 
-    function renderDispatchesLedger() {
-      const container = document.getElementById("dispatchesTimelineList");
-      const countChip = document.getElementById("dispatchesCountChip");
-      if (!container) return;
-      const list = getStoredDispatches();
-      if (countChip) {
-        countChip.textContent = `${list.length} Dispatched`;
+    // Called from Page 2 job card
+    function quickTrackJobByIndex(index) {
+      const filtered = getFilteredJobs();
+      const job = filtered[index] || state.jobs[index];
+      if (!job) return;
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      trackApplication({
+        role: cleanRole,
+        company: job.company || "Executive Employer",
+        location: job.location || "UAE",
+        to: job.to || "",
+        platform: (job.source ? job.source.toUpperCase() : "Live Job Board"),
+        stage: "applied"
+      }, "page2_card");
+    }
+
+    function updateApplicationStage(id, newStage) {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === id);
+      if (!app) return;
+      app.stage = newStage;
+      if (newStage === "followed_up") {
+        app.followUpsCount = (app.followUpsCount || 0) + 1;
+        app.lastFollowedUpAt = Date.now();
       }
+      saveStoredApplications(list);
+      showToast(`Updated status to "${getStageLabel(newStage)}"`);
+    }
+
+    function updateApplicationNotes(id, notes) {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === id);
+      if (!app) return;
+      app.notes = notes;
+      saveStoredApplications(list);
+    }
+
+    function removeExecutiveDispatch(id) {
+      const list = getStoredApplications().filter((a) => a.id !== id);
+      saveStoredApplications(list);
+      showToast("Application removed from tracker");
+    }
+
+    function clearExecutiveDispatches() {
+      if (confirm("Clear your entire application tracking history in this browser?")) {
+        localStorage.removeItem(TRACKER_STORAGE_KEY);
+        localStorage.removeItem(LEGACY_STORAGE_KEY);
+        renderApplicationTracker();
+        showToast("Application tracker cleared");
+      }
+    }
+
+    function getStageLabel(stage) {
+      const map = {
+        applied: "Applied",
+        screening: "Screening / HR Call",
+        interview: "Executive Interview",
+        offer: "Offer Received",
+        followed_up: "Followed Up",
+        archived: "Archived"
+      };
+      return map[stage] || stage;
+    }
+
+    function loadDemoApplications() {
+      const now = Date.now();
+      const oneDay = 24 * 60 * 60 * 1000;
+      const demoList = [
+        {
+          id: "app_demo_1",
+          role: "General Manager / Geschäftsführer — German Industrial Automation Hub",
+          company: "AHK German Emirati Chamber / DACH Tech Group",
+          location: "Dubai & Abu Dhabi, UAE",
+          to: "info@ahkdubai.com",
+          contactName: "Jens Becker (Executive Search Director)",
+          platform: "Departer (German Search)",
+          subject: "Application — General Manager / Geschäftsführer (Ref: AHK-GM-9102)",
+          appliedAt: now - (5 * oneDay), // 5 days ago -> OVERDUE follow-up!
+          targetFollowUpAt: now - (1 * oneDay),
+          stage: "applied",
+          notes: "German-speaking mandate. Submitted tailored executive CV and bilingual DACH governance brief.",
+          salary: "AED 90K/mo + Executive Bonus",
+          followUpsCount: 0,
+          lastFollowedUpAt: null
+        },
+        {
+          id: "app_demo_2",
+          role: "Directeur Général / General Manager — Francophone Infrastructure & Energy",
+          company: "TotalEnergies / French Engineering Consortium (Page Executive)",
+          location: "Dubai, UAE",
+          to: "dubai@pageexecutive.com",
+          contactName: "Claire Renard (Senior Partner)",
+          platform: "Page Executive",
+          subject: "Executive Application — Directeur Général (Ref: PE-FR-8820)",
+          appliedAt: now - (2 * oneDay),
+          targetFollowUpAt: now + (2 * oneDay),
+          stage: "screening",
+          notes: "Screening call completed. Recruiter confirmed strong fit for Paris HQ coordination; awaiting panel schedule.",
+          salary: "€160K - €190K Package",
+          followUpsCount: 0,
+          lastFollowedUpAt: null
+        },
+        {
+          id: "app_demo_3",
+          role: "Executive Director of Operations — National Supply Chain & Manufacturing",
+          company: "Al-Futtaim / Emirates Industrial Consortium",
+          location: "Dubai, UAE",
+          to: "executive.recruitment@gulftalent.com",
+          contactName: "Tariq Mansoor (VP Talent)",
+          platform: "GulfTalent",
+          subject: "Application — Executive Director of Operations (Ref: GT-AR-5520)",
+          appliedAt: now - (1 * oneDay),
+          targetFollowUpAt: now + (3 * oneDay),
+          stage: "applied",
+          notes: "Applied via GulfTalent VIP channel. Emphasized multi-plant manufacturing and Lean Six Sigma OTIF results.",
+          salary: "AED 85K/mo + Housing & Vehicle",
+          followUpsCount: 0,
+          lastFollowedUpAt: null
+        }
+      ];
+
+      saveStoredApplications(demoList);
+      showToast("✨ Loaded 3 sample executive applications with live follow-up countdowns!");
+    }
+
+    function exportTrackerCsv() {
+      const list = getStoredApplications();
       if (!list.length) {
-        container.innerHTML = `
-          <div style="text-align:center;padding:26px 16px;color:var(--text-secondary);font-size:12.5px;background:var(--bg-elevated);border-radius:12px;border:1px dashed var(--border-subtle);">
-            <strong>No applications dispatched yet.</strong><br/>
-            When you click <strong>Send Application Now</strong> or <strong>Open Mail App</strong> on Page 4, your application is logged here locally with a 4-day executive follow-up countdown &amp; 1-click check-in email generator.
+        showToast("No applications to export yet.");
+        return;
+      }
+      const headers = ["Role", "Company", "Location", "Platform", "Recipient Email", "Contact Name", "Stage", "Applied Date", "Follow-Up Due", "Notes", "Salary"];
+      const rows = list.map((a) => [
+        `"${(a.role || "").replace(/"/g, '""')}"`,
+        `"${(a.company || "").replace(/"/g, '""')}"`,
+        `"${(a.location || "").replace(/"/g, '""')}"`,
+        `"${(a.platform || "").replace(/"/g, '""')}"`,
+        `"${(a.to || "").replace(/"/g, '""')}"`,
+        `"${(a.contactName || "").replace(/"/g, '""')}"`,
+        `"${getStageLabel(a.stage)}"`,
+        `"${new Date(a.appliedAt).toLocaleDateString('en-GB')}"`,
+        `"${new Date(a.targetFollowUpAt).toLocaleDateString('en-GB')}"`,
+        `"${(a.notes || "").replace(/"/g, '""')}"`,
+        `"${(a.salary || "").replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `executive_applications_tracker_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("📥 Exported applications tracker to CSV");
+    }
+
+    function setTrackerFilter(filterKey) {
+      state.trackerFilter = filterKey;
+      renderApplicationTracker();
+    }
+
+    function renderTrackerFilterPills() {
+      const list = getStoredApplications();
+      const now = Date.now();
+      let dueCount = 0;
+      let appliedCount = 0;
+      let screenCount = 0;
+      let offerCount = 0;
+      let archCount = 0;
+
+      list.forEach((a) => {
+        if (a.stage === "applied") appliedCount++;
+        else if (a.stage === "screening" || a.stage === "interview") screenCount++;
+        else if (a.stage === "offer") offerCount++;
+        else if (a.stage === "archived") archCount++;
+
+        const isClosed = ["offer", "archived"].includes(a.stage);
+        if (!isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up") {
+          dueCount++;
+        }
+      });
+
+      const filters = [
+        { id: "all", label: `All (${list.length})` },
+        { id: "due", label: `⚡ Follow-Up Due (${dueCount})`, isAlert: dueCount > 0 },
+        { id: "applied", label: `📤 Applied (${appliedCount})` },
+        { id: "screening", label: `🗓️ Interviewing (${screenCount})` },
+        { id: "offer", label: `🏆 Offers (${offerCount})` },
+        { id: "archived", label: `📁 Archived (${archCount})` }
+      ];
+
+      const html = filters.map((f) => {
+        const isActive = state.trackerFilter === f.id;
+        const alertStyle = f.isAlert ? "border-color:rgba(239,68,68,0.5);color:#ef4444;" : "";
+        return `
+          <button type="button" class="tracker-stage-pill ${isActive ? "active" : ""}" style="${alertStyle}" onclick="setTrackerFilter('${f.id}')">
+            ${f.label}
+          </button>
+        `;
+      }).join("");
+
+      const pageRow = document.getElementById("trackerStageFilterRow");
+      if (pageRow) pageRow.innerHTML = html;
+      const modalRow = document.getElementById("modalTrackerStageFilterRow");
+      if (modalRow) modalRow.innerHTML = html;
+    }
+
+    function generateTrackerCardsHtml(apps) {
+      if (!apps.length) {
+        return `
+          <div style="text-align:center;padding:36px 20px;background:var(--bg-elevated);border-radius:14px;border:1.5px dashed var(--border-subtle);">
+            <div style="font-size:28px;margin-bottom:8px;">📊</div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text-primary);">No applications in this view yet</div>
+            <div style="font-size:13px;color:var(--text-secondary);max-width:480px;margin:0 auto 16px;line-height:1.55;">
+              Applications sent on Page 4 or tracked on Page 2 are automatically stored here. You can also log any application submitted on LinkedIn or company portals.
+            </div>
+            <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+              <button type="button" class="btn-pill-secondary" style="font-weight:700;border-color:var(--accent-emerald);color:var(--accent-emerald);" onclick="openLogExternalAppModal()">
+                + Log External Application
+              </button>
+              <button type="button" class="btn-next-glow" onclick="loadDemoApplications()">
+                ✨ Load 3 Sample Applications (Instant Test)
+              </button>
+            </div>
           </div>
         `;
-        return;
       }
 
       const now = Date.now();
-      container.innerHTML = list.map((item) => {
-        const sentDateStr = new Date(item.dispatchedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
-        const diffMs = item.targetFollowUpAt - now;
+      return apps.map((app) => {
+        const sentDateStr = new Date(app.appliedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" });
+        const diffMs = app.targetFollowUpAt - now;
         const daysLeft = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-        let badgeHtml = "";
-        if (daysLeft > 0) {
-          badgeHtml = `<span class="followup-target-badge"><span class="hud-pulse"></span> Follow-up in ${daysLeft} day${daysLeft > 1 ? "s" : ""}</span>`;
+        const daysElapsed = Math.max(1, Math.round((now - app.appliedAt) / (1000 * 60 * 60 * 24)));
+        const isClosed = ["offer", "archived"].includes(app.stage);
+
+        let countdownBadge = "";
+        let isDue = false;
+
+        if (app.stage === "followed_up") {
+          const fuDateStr = app.lastFollowedUpAt ? new Date(app.lastFollowedUpAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short" }) : "Recently";
+          countdownBadge = `<span class="tracker-followup-badge done">✓ Followed up (${fuDateStr})</span>`;
+        } else if (isClosed) {
+          countdownBadge = `<span class="tracker-followup-badge" style="background:var(--bg-surface);color:var(--text-muted);border:1px solid var(--border-subtle);">${getStageLabel(app.stage)}</span>`;
+        } else if (daysLeft <= 0) {
+          isDue = true;
+          countdownBadge = `<span class="tracker-followup-badge due"><span class="hud-pulse" style="background:#ef4444;"></span> ⚠️ Follow-Up Due Now (${daysElapsed}d elapsed)</span>`;
         } else {
-          badgeHtml = `<span class="followup-target-badge" style="color:var(--accent-rose);border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.1);">&#9888; Follow-up Due Now</span>`;
+          countdownBadge = `<span class="tracker-followup-badge upcoming"><span class="hud-pulse"></span> Follow-up in ${daysLeft} day${daysLeft > 1 ? "s" : ""}</span>`;
         }
 
+        const stages = [
+          { val: "applied", label: "📤 Applied" },
+          { val: "screening", label: "🗓️ Screening Call" },
+          { val: "interview", label: "🎯 Executive Interview" },
+          { val: "offer", label: "🏆 Offer Received" },
+          { val: "followed_up", label: "✓ Followed Up" },
+          { val: "archived", label: "📁 Archived / Closed" }
+        ];
+
+        const optionsHtml = stages.map(s => `<option value="${s.val}" ${app.stage === s.val ? "selected" : ""}>${s.label}</option>`).join("");
+
         return `
-          <div class="dispatch-item-card">
-            <div style="flex:1;min-width:240px;">
-              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
-                <strong style="font-size:14px;color:var(--text-primary);">${escapeHtml(item.role)}</strong>
-                <span style="font-size:12px;color:var(--text-secondary);">&middot; ${escapeHtml(item.company)}</span>
-                ${badgeHtml}
+          <div class="tracker-app-card ${isDue ? "status-due" : ""}" id="app_card_${app.id}">
+            <div class="tracker-card-header">
+              <div style="flex:1;min-width:260px;">
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+                  <strong style="font-size:15px;color:var(--text-primary);">${escapeHtml(app.role)}</strong>
+                  <span class="tracker-platform-badge">${escapeHtml(app.platform)}</span>
+                  ${countdownBadge}
+                </div>
+                <div style="font-size:13px;color:var(--text-secondary);font-weight:600;margin-bottom:6px;">
+                  ${escapeHtml(app.company)} &middot; <span style="font-weight:400;color:var(--text-muted);">${escapeHtml(app.location)}</span>
+                </div>
+                <div style="font-size:11.5px;color:var(--text-muted);display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                  <span>Applied: <strong>${sentDateStr}</strong></span>
+                  ${app.to ? `<span>To: <code style="font-family:var(--font-mono);color:var(--text-secondary);">${escapeHtml(app.to)}</code></span>` : ""}
+                  ${app.salary ? `<span style="color:var(--accent-amber);font-weight:600;">💰 ${escapeHtml(app.salary)}</span>` : ""}
+                </div>
               </div>
-              <div style="font-size:11.5px;color:var(--text-muted);display:flex;gap:12px;flex-wrap:wrap;">
-                <span>Sent: ${escapeHtml(sentDateStr)}</span>
-                <span>To: <code style="font-family:var(--font-mono);color:var(--text-secondary);">${escapeHtml(item.to)}</code></span>
-                <span>Via: ${escapeHtml(item.method)}</span>
+
+              <!-- Stage Selector & Quick Actions -->
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+                  <label style="font-size:10px;text-transform:uppercase;color:var(--text-muted);font-weight:700;">Stage</label>
+                  <select class="tracker-stage-select" onchange="updateApplicationStage('${escapeAttr(app.id)}', this.value)">
+                    ${optionsHtml}
+                  </select>
+                </div>
+                <button type="button" class="btn-next-glow" style="padding:7px 14px;font-size:12px;font-weight:700;" onclick="openFollowUpModal('${escapeAttr(app.id)}')">
+                  ✉️ Follow Up &rarr;
+                </button>
+                <button type="button" class="btn-pill-secondary" style="padding:7px 10px;font-size:12px;" onclick="removeExecutiveDispatch('${escapeAttr(app.id)}')">
+                  &times;
+                </button>
               </div>
             </div>
-            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;color:var(--accent-emerald);border-color:var(--accent-emerald);" onclick="generateExecutiveFollowUp('${escapeAttr(item.id)}')">
-                Generate 4-Day Follow-Up &rarr;
-              </button>
-              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 9px;color:var(--text-muted);" onclick="removeExecutiveDispatch('${escapeAttr(item.id)}')">
-                &times;
-              </button>
+
+            <!-- Notes & Recruiter Intel -->
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:3px;">
+                <label style="font-size:11px;font-weight:700;color:var(--text-muted);">
+                  📝 Recruiter Notes &amp; Next Steps
+                </label>
+                ${app.contactName ? `<span style="font-size:11px;color:var(--text-secondary);">Contact: <strong>${escapeHtml(app.contactName)}</strong></span>` : ""}
+              </div>
+              <textarea class="tracker-notes-box" placeholder="Add recruiter contact info, interview feedback, or discussion points here (auto-saves)..." onblur="updateApplicationNotes('${escapeAttr(app.id)}', this.value)">${escapeHtml(app.notes || "")}</textarea>
             </div>
           </div>
         `;
       }).join("");
     }
 
-    function clearExecutiveDispatches() {
-      if (confirm("Clear your executive dispatch ledger history in this browser?")) {
-        localStorage.removeItem("ai_cv_portal_dispatches");
-        renderDispatchesLedger();
-        showToast("Application ledger cleared");
+    function renderApplicationTracker() {
+      renderTrackerFilterPills();
+      const list = getStoredApplications();
+      const now = Date.now();
+
+      // Calculate follow-up due count
+      let dueCount = 0;
+      list.forEach((a) => {
+        const isClosed = ["offer", "archived"].includes(a.stage);
+        if (!isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up") {
+          dueCount++;
+        }
+      });
+
+      // Update HUD Tracker Badge
+      const hudBadge = document.getElementById("hudTrackerBadge");
+      if (hudBadge) {
+        if (dueCount > 0) {
+          hudBadge.className = "tracker-badge has-due";
+          hudBadge.innerHTML = `⚡ ${dueCount} Due`;
+        } else {
+          hudBadge.className = "tracker-badge";
+          hudBadge.textContent = list.length;
+        }
       }
+
+      // Update Page 4 Dispatches Count Chip
+      const countChip = document.getElementById("dispatchesCountChip");
+      if (countChip) {
+        countChip.textContent = `${list.length} Tracked ${dueCount > 0 ? " · ⚡ " + dueCount + " Follow-Up Due" : ""}`;
+      }
+
+      // Filter list according to active filter
+      const filtered = list.filter((a) => {
+        if (state.trackerFilter === "all") return true;
+        if (state.trackerFilter === "due") {
+          const isClosed = ["offer", "archived"].includes(a.stage);
+          return !isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up";
+        }
+        return a.stage === state.trackerFilter;
+      });
+
+      const cardHtml = generateTrackerCardsHtml(filtered);
+
+      const pageContainer = document.getElementById("dispatchesTimelineList");
+      if (pageContainer) pageContainer.innerHTML = cardHtml;
+
+      const modalContainer = document.getElementById("modalTrackerTimelineList");
+      if (modalContainer) modalContainer.innerHTML = cardHtml;
     }
 
-    function removeExecutiveDispatch(id) {
-      const list = getStoredDispatches().filter((d) => d.id !== id);
-      saveStoredDispatches(list);
-      renderDispatchesLedger();
+    // Backwards-compatible alias for any existing caller
+    function renderDispatchesLedger() {
+      renderApplicationTracker();
     }
 
-    function generateExecutiveFollowUp(id) {
-      const list = getStoredDispatches();
-      const item = list.find((d) => d.id === id);
-      if (!item) return;
-      const followUpSubject = `Following Up — ${item.role} — ${state.cv.name || "Executive Candidate"}`;
-      const followUpBody = `Dear Hiring Committee,
+    function openFollowUpModal(id) {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === id);
+      if (!app) return;
+      state.activeFollowUpAppId = id;
+      state.activeFollowUpTemplate = "standard";
 
-I am writing to briefly follow up on my executive candidacy submitted on ${new Date(item.dispatchedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short" })} for the ${item.role} mandate with ${item.company}.
+      const subTitle = document.getElementById("fuModalSubTitle");
+      if (subTitle) {
+        const days = Math.max(1, Math.round((Date.now() - app.appliedAt) / (1000 * 60 * 60 * 24)));
+        subTitle.textContent = `${app.role} at ${app.company} · Applied ${days} day${days > 1 ? "s" : ""} ago`;
+      }
 
-I remain keen to contribute my operational leadership and P&L experience to your organization. Should you require any supplementary case studies, references, or strategic documentation, please do not hesitate to reach out.
+      const recInput = document.getElementById("fuRecipientInput");
+      if (recInput) recInput.value = app.to || "";
 
-Thank you for your consideration, and I look forward to the opportunity to connect.
+      updateFollowUpModalText();
 
-Sincerely,
+      const modal = document.getElementById("followUpGeneratorModal");
+      if (modal) modal.classList.add("open");
+    }
 
-${state.cv.name}
-${state.cv.headline}
-${state.cv.contact}`;
+    function closeFollowUpModal() {
+      const modal = document.getElementById("followUpGeneratorModal");
+      if (modal) modal.classList.remove("open");
+      state.activeFollowUpAppId = null;
+    }
+
+    function setFollowUpTemplate(tplKey) {
+      state.activeFollowUpTemplate = tplKey;
+      const pills = [
+        { id: "btnFuTplStandard", key: "standard" },
+        { id: "btnFuTplValueAdd", key: "value_add" },
+        { id: "btnFuTplSecond", key: "second" },
+        { id: "btnFuTplThankYou", key: "thank_you" }
+      ];
+      pills.forEach((p) => {
+        const el = document.getElementById(p.id);
+        if (el) el.classList.toggle("active", p.key === tplKey);
+      });
+      updateFollowUpModalText();
+    }
+
+    function updateFollowUpModalText() {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === state.activeFollowUpAppId);
+      if (!app) return;
+      const tpl = state.activeFollowUpTemplate || "standard";
+      const candidateName = (state.cv && state.cv.name) || "Executive Candidate";
+      const candidateHeadline = (state.cv && state.cv.headline) || "General Manager · Managing Director · Operations Director";
+      const candidateContact = (state.cv && state.cv.contact) || "";
+      const appliedDateStr = new Date(app.appliedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short" });
+
+      let subject = `Following Up — ${app.role} — ${candidateName}`;
+      let body = "";
+
+      if (tpl === "standard") {
+        subject = `Following Up — ${app.role} — ${candidateName}`;
+        body = `Dear ${app.contactName || "Hiring Committee"},\n\nI am writing to briefly follow up on my executive candidacy submitted on ${appliedDateStr} for the ${app.role} mandate with ${app.company}.\n\nI remain very keen to bring my operational leadership, P&L ownership, and strategic scale-up experience to your organization. I understand recruitment processes involve multiple stakeholder reviews, and I wanted to reiterate my strong enthusiasm for the role.\n\nPlease let me know if any supplementary case studies, references, or executive documentation would assist your evaluation at this stage.\n\nThank you for your time, and I look forward to speaking soon.\n\nSincerely,\n\n${candidateName}\n${candidateHeadline}\n${candidateContact}`;
+      } else if (tpl === "value_add") {
+        subject = `Strategic Perspectives & Follow-Up — ${app.role} — ${candidateName}`;
+        body = `Dear ${app.contactName || "Hiring Committee"},\n\nFollowing my application submitted on ${appliedDateStr} for the ${app.role} mandate with ${app.company}, I have been reflecting further on your strategic priorities in ${app.location || "the region"}.\n\nIn my recent mandates leading operational turnarounds and full P&L structures, we captured immediate double-digit EBITDA margin gains by restructuring supplier contracts and streamlining multi-site execution. I see direct parallels to ${app.company}'s current growth vector and would welcome the chance to share these concrete frameworks.\n\nI look forward to discussing how my experience can generate immediate value for your executive team.\n\nBest regards,\n\n${candidateName}\n${candidateHeadline}\n${candidateContact}`;
+      } else if (tpl === "second") {
+        subject = `Checking In — ${app.role} Search Status — ${candidateName}`;
+        body = `Dear ${app.contactName || "Hiring Committee"},\n\nI hope this note finds you well.\n\nI am writing to politely check in regarding the status of the ${app.role} search at ${app.company}, for which I applied recently.\n\nAs my executive discussions with other organizations are progressing, ${app.company} remains one of my top choices due to the strategic significance of this mandate. Could you please share an update on your timeline for the next round of interviews?\n\nThank you very much for your guidance.\n\nWarm regards,\n\n${candidateName}\n${candidateHeadline}\n${candidateContact}`;
+      } else if (tpl === "thank_you") {
+        subject = `Thank You — ${app.role} Interview Discussion — ${candidateName}`;
+        body = `Dear ${app.contactName || "Interview Team"},\n\nThank you very much for the insightful conversation regarding the ${app.role} mandate with ${app.company}.\n\nOur discussion further confirmed that my background in multi-site operational leadership, working capital optimization, and Board governance directly addresses your upcoming operational milestones. I am particularly excited about the vision shared for expanding your footprint in ${app.location || "the UAE & GCC"}.\n\nPlease let me know if there are any follow-up questions I can clarify as you proceed to the next stage.\n\nSincerely,\n\n${candidateName}\n${candidateHeadline}\n${candidateContact}`;
+      }
+
+      const subjInput = document.getElementById("fuSubjectInput");
+      if (subjInput) subjInput.value = subject;
+      const bodyArea = document.getElementById("fuEmailBodyTextarea");
+      if (bodyArea) bodyArea.value = body;
+    }
+
+    function sendFollowUpEmail() {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === state.activeFollowUpAppId);
+      if (!app) return;
+      const to = (document.getElementById("fuRecipientInput")?.value || app.to || "").trim();
+      const subject = (document.getElementById("fuSubjectInput")?.value || "").trim();
+      const body = (document.getElementById("fuEmailBodyTextarea")?.value || "").trim();
+
+      app.stage = "followed_up";
+      app.followUpsCount = (app.followUpsCount || 0) + 1;
+      app.lastFollowedUpAt = Date.now();
+      // Set next follow-up timer for 7 days
+      app.targetFollowUpAt = Date.now() + (7 * 24 * 60 * 60 * 1000);
+      saveStoredApplications(list);
+
+      const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.open(mailtoUrl, "_blank");
+      closeFollowUpModal();
+      showToast("Opened follow-up email in mail client & updated tracker status!");
+    }
+
+    function copyFollowUpEmail() {
+      const list = getStoredApplications();
+      const app = list.find((a) => a.id === state.activeFollowUpAppId);
+      const body = (document.getElementById("fuEmailBodyTextarea")?.value || "").trim();
 
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(followUpBody).then(() => {
-          showToast("4-Day executive follow-up copied to clipboard!");
+        navigator.clipboard.writeText(body).then(() => {
+          showToast("Follow-up email copied to clipboard!");
         });
       }
-      const mailtoUrl = `mailto:${encodeURIComponent(item.to)}?subject=${encodeURIComponent(followUpSubject)}&body=${encodeURIComponent(followUpBody)}`;
-      window.open(mailtoUrl, "_blank");
+      if (app) {
+        app.stage = "followed_up";
+        app.followUpsCount = (app.followUpsCount || 0) + 1;
+        app.lastFollowedUpAt = Date.now();
+        app.targetFollowUpAt = Date.now() + (7 * 24 * 60 * 60 * 1000);
+        saveStoredApplications(list);
+      }
+      closeFollowUpModal();
+    }
+
+    function openApplicationTrackerModal() {
+      renderApplicationTracker();
+      const modal = document.getElementById("applicationTrackerModal");
+      if (modal) modal.classList.add("open");
+    }
+
+    function closeApplicationTrackerModal() {
+      const modal = document.getElementById("applicationTrackerModal");
+      if (modal) modal.classList.remove("open");
+    }
+
+    function openLogExternalAppModal() {
+      const modal = document.getElementById("logExternalAppModal");
+      if (modal) {
+        modal.classList.add("open");
+        const titleInput = document.getElementById("logRoleTitleInput");
+        if (titleInput) {
+          titleInput.value = state.cv.headline.split("·")[0].trim() || "General Manager";
+          titleInput.focus();
+        }
+      }
+    }
+
+    function closeLogExternalAppModal() {
+      const modal = document.getElementById("logExternalAppModal");
+      if (modal) modal.classList.remove("open");
+    }
+
+    function saveExternalApplication() {
+      const role = (document.getElementById("logRoleTitleInput")?.value || "").trim();
+      const company = (document.getElementById("logCompanyInput")?.value || "").trim();
+      const platform = document.getElementById("logPlatformSelect")?.value || "LinkedIn";
+      const location = (document.getElementById("logLocationInput")?.value || "").trim() || "UAE";
+      const to = (document.getElementById("logEmailInput")?.value || "").trim();
+      const stage = document.getElementById("logInitialStageSelect")?.value || "applied";
+      const notes = (document.getElementById("logNotesInput")?.value || "").trim();
+
+      if (!role || !company) {
+        showToast("Please enter both the Target Role Title and Company Name.");
+        return;
+      }
+
+      trackApplication({
+        role,
+        company,
+        platform,
+        location,
+        to,
+        stage,
+        notes
+      }, "external_manual");
+
+      closeLogExternalAppModal();
     }
 
     function handleCvPhotoUpload(event) {
@@ -8341,9 +9235,14 @@ ${state.cv.contact}`;
                 </ul>
               </div>
 
-              <button type="button" class="btn-tailor-job" onclick="event.stopPropagation(); selectAndTailorJob(${i});">
-                Select Role &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)}) &rarr;
-              </button>
+              <div style="display:flex;gap:8px;margin-top:10px;align-items:stretch;flex-wrap:wrap;">
+                <button type="button" class="btn-tailor-job" style="flex:1;min-width:220px;" onclick="event.stopPropagation(); selectAndTailorJob(${i});">
+                  Select Role &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)}) &rarr;
+                </button>
+                <button type="button" class="btn-track-job-card" onclick="event.stopPropagation(); quickTrackJobByIndex(${i});" title="Add this job directly to your Executive Tracker">
+                  📊 Track Job
+                </button>
+              </div>
             </div>
           `;
         })
