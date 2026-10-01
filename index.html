@@ -10374,9 +10374,9 @@ ${state.cv.contact}`;
           recordExecutiveDispatch(job, "EML Package + ATS PDF", to, subject);
 
           if (statusBanner) {
-            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong> is pre-filled, your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.`;
+            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong> is pre-filled, your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
           }
-          showToast(`Email draft ready for ${to} with Cover Letter & attached "${pdfFilename}"`);
+          showToast(`✓ Logged to Tracker & email draft opened for ${to}`);
           return;
         }
       } catch (err) {
@@ -10407,9 +10407,14 @@ ${state.cv.contact}`;
 
       recordExecutiveDispatch(job, "Direct mailto: + ATS PDF", to, subject);
 
+      const statusBanner = document.getElementById("sendAppStatusBanner");
+      if (statusBanner) {
+        statusBanner.innerHTML = `<strong>Mail Client Opened via mailto:!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong>, <strong>Subject</strong>, and <strong>Cover Letter</strong> were sent to your email program.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
+      }
+
       const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBody)}`;
       window.location.href = mailtoUrl;
-      showToast(`Opened email client to ${to} with Subject & Cover Letter + downloaded ATS CV PDF`);
+      showToast(`✓ Logged to Tracker & opened mailto: for ${to}`);
     }
 
     function downloadReadyEmlPackage() {
