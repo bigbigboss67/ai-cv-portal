@@ -132,109 +132,122 @@
     }
 
     /* ---------------------------------------------------- TOP MINIMAL 4-PAGE STEPPER BAR */
+    /* ---------------------------------------------------- TOP EXECUTIVE 4-PAGE NAVIGATION BAR */
     .wizard-header-wrap {
       position: sticky;
       top: 0;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 1000;
       background: var(--bg-glass);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 12px 24px;
+      box-shadow: 0 2px 16px -2px rgba(15, 23, 42, 0.04);
+      padding: 8px 18px;
+      transition: background-color 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
     }
 
     .wizard-bar {
-      max-width: 1320px;
+      max-width: 1440px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 10px;
+      flex-wrap: nowrap;
     }
 
     .brand-cluster {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 9px;
+      flex-shrink: 0;
+      cursor: pointer;
     }
 
     .brand-logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: var(--accent-emerald);
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--font-serif);
       font-weight: 800;
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 0.02em;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.28);
     }
 
     .brand-title {
       font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 15.5px;
+      font-weight: 800;
+      font-size: 14.5px;
       letter-spacing: -0.02em;
       color: var(--text-primary);
+      line-height: 1.2;
     }
 
     .brand-sub {
-      font-size: 11.5px;
+      font-size: 10.5px;
       color: var(--text-muted);
       font-weight: 500;
+      line-height: 1.2;
     }
 
     /* 4-Page Progress Stepper */
     .stepper-nav {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 3px;
       background: var(--bg-elevated);
-      padding: 5px;
+      padding: 3px;
       border-radius: var(--radius-pill);
       border: 1px solid var(--border-subtle);
-      flex: 1;
-      max-width: 680px;
-      justify-content: space-between;
+      flex: 0 1 auto;
+      max-width: 520px;
     }
 
     .step-tab {
-      flex: 1;
       border: 1px solid transparent;
       background: transparent;
       color: var(--text-secondary);
-      padding: 8px 14px;
+      padding: 5px 10px;
       border-radius: var(--radius-pill);
       font-family: var(--font-sans);
-      font-size: 12.5px;
+      font-size: 11.5px;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: all 180ms var(--ease-out);
+      gap: 5px;
+      transition: all 160ms var(--ease-out);
       white-space: nowrap;
     }
 
     .step-tab:hover {
       color: var(--text-primary);
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    [data-theme="dark"] .step-tab:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
 
     .step-tab.active {
-      background: var(--bg-surface);
-      color: var(--text-primary);
-      border-color: var(--border-strong);
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+      background: var(--accent-emerald);
+      color: #ffffff !important;
+      border-color: transparent;
+      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.28);
     }
 
     .step-num {
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
       border-radius: 50%;
       background: var(--border-strong);
       color: var(--text-primary);
@@ -242,27 +255,70 @@
       align-items: center;
       justify-content: center;
       font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 10px;
+      font-weight: 800;
       flex-shrink: 0;
-      transition: all 180ms var(--ease-out);
+      transition: all 160ms var(--ease-out);
     }
 
     .step-tab.active .step-num {
-      background: var(--accent-emerald);
-      color: #ffffff;
+      background: #ffffff;
+      color: var(--accent-emerald);
     }
 
     .step-tab.completed .step-num {
-      background: var(--accent-emerald-soft);
-      color: var(--accent-emerald);
-      border: 1px solid var(--accent-emerald);
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
     }
 
     .wizard-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .hud-readiness-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    [data-theme="light"] .hud-readiness-chip {
+      background: #ECFDF5;
+      color: #065F46;
+      border: 1.5px solid #A7F3D0;
+      box-shadow: 0 1px 2px rgba(6, 95, 70, 0.06);
+    }
+
+    [data-theme="dark"] .hud-readiness-chip {
+      background: rgba(16, 185, 129, 0.16);
+      color: #34D399;
+      border: 1px solid rgba(52, 211, 153, 0.4);
+    }
+
+    .hud-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10B981;
+      display: inline-block;
+      box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.35);
+      animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { transform: scale(1); box-shadow: 0 0 0 5px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
 
     /* Buttons */
@@ -270,16 +326,16 @@
       background: var(--accent-emerald);
       color: #ffffff;
       border: 1px solid transparent;
-      padding: 10px 20px;
+      padding: 7px 15px;
       border-radius: var(--radius-pill);
       font-family: var(--font-sans);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.25);
+      gap: 6px;
+      box-shadow: 0 3px 12px rgba(5, 150, 105, 0.25);
       transition: transform 160ms var(--ease-out), background-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
     }
 
@@ -297,7 +353,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 1;
     }
 
@@ -305,15 +361,15 @@
       background: var(--bg-surface);
       color: var(--text-primary);
       border: 1px solid var(--border-strong);
-      padding: 8px 14px;
+      padding: 6px 12px;
       border-radius: var(--radius-pill);
       font-family: var(--font-sans);
-      font-size: 12.5px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       transition: all 160ms var(--ease-out);
     }
 
@@ -2265,85 +2321,67 @@
        AWARD-WINNING EXECUTIVE FLIGHT DECK & SPATIAL STYLING
        =================================================================== */
 
-    /* 1. Floating Detached Glass Pill HUD Capsule */
-    .wizard-header-wrap.floating-hud {
-      position: sticky;
-      top: 12px;
-      z-index: 100;
-      margin: 0 auto;
-      max-width: 1440px;
-      padding: 0 16px 8px;
-      transition: all 280ms ease;
-    }
-    .wizard-bar.glass-capsule {
-      background: rgba(15, 23, 42, 0.92);
-      backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      border: 1.5px solid rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-      padding: 6px 14px;
-      box-shadow: 0 16px 45px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: nowrap;
-    }
-    .wizard-bar.glass-capsule .brand-cluster {
-      flex-shrink: 0;
-    }
-    .wizard-bar.glass-capsule .stepper-nav {
-      flex: 0 0 auto;
-      padding: 3px;
-      gap: 4px;
-    }
-    .wizard-bar.glass-capsule .step-tab {
-      padding: 5px 10px;
-      font-size: 11.5px;
-      gap: 6px;
-    }
-    .wizard-bar.glass-capsule .step-num {
-      width: 19px;
-      height: 19px;
-      font-size: 10px;
-    }
-    .wizard-bar.glass-capsule .wizard-actions {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: nowrap;
-    }
-    .wizard-bar.glass-capsule .wizard-actions .btn-pill-secondary {
-      padding: 5px 10px;
-      font-size: 11.5px;
-    }
-    .wizard-bar.glass-capsule .wizard-actions .btn-next-glow {
-      padding: 6px 13px;
-      font-size: 11.5px;
-    }
-    @media (max-width: 990px) {
-      .wizard-bar.glass-capsule {
-        border-radius: 18px;
-        flex-wrap: wrap;
-        padding: 10px 14px;
+    /* 1. Header Responsive Layout & Viewport Rules */
+    @media (max-width: 1380px) {
+      .brand-sub {
+        display: none;
+      }
+      .wizard-bar {
+        gap: 8px;
+      }
+      .step-tab {
+        padding: 5px 9px;
+        font-size: 11.5px;
+      }
+      .btn-pill-secondary {
+        padding: 6px 10px;
+        font-size: 11.5px;
+      }
+      .btn-next-glow {
+        padding: 7px 13px;
+        font-size: 11.5px;
       }
     }
-    .hud-readiness-badge, .hud-readiness-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--accent-emerald);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      letter-spacing: 0.05em;
-      white-space: nowrap;
-      flex-shrink: 0;
+
+    @media (max-width: 1260px) {
+      .wizard-header-wrap {
+        padding: 8px 14px;
+      }
+      .stepper-nav .step-tab:not(.active) span:not(.step-num) {
+        display: none;
+      }
+      .stepper-nav .step-tab.active span:not(.step-num) {
+        display: inline;
+      }
+      .hud-readiness-chip {
+        padding: 4px 7px;
+        font-size: 10px;
+      }
+      .wizard-actions {
+        gap: 5px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wizard-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .brand-cluster {
+        order: 1;
+      }
+      .wizard-actions {
+        order: 2;
+      }
+      .stepper-nav {
+        order: 3;
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+      }
+      .stepper-nav .step-tab span:not(.step-num) {
+        display: inline;
+      }
     }
 
     /* 2. ATS Machine X-Ray Viewport & Scanned Highlights */
@@ -3144,13 +3182,13 @@
   <!-- ===================================================================
        TOP STEP-BY-STEP NAVIGATION BAR (4 LOGICAL PAGES)
        =================================================================== -->
-  <header class="wizard-header-wrap floating-hud">
-    <div class="wizard-bar glass-capsule">
-      <div class="brand-cluster">
+  <header class="wizard-header-wrap" id="portalHeader">
+    <div class="wizard-bar">
+      <div class="brand-cluster" onclick="goToStep(1)" title="Return to Step 1">
         <div class="brand-logo">CV</div>
         <div>
           <div class="brand-title">Executive Career Portal</div>
-          <div class="brand-sub">4-Page Guided Flow · One Step Per Page</div>
+          <div class="brand-sub">4-Page Guided Flow &middot; One Step Per Page</div>
         </div>
       </div>
 
@@ -3180,17 +3218,17 @@
         </div>
         <button type="button" class="btn-pill-secondary tracker-nav-btn" onclick="openApplicationTrackerModal()" id="btnOpenTracker" title="Track and follow up on all executive job applications">
           <span style="font-size:13px;">📊</span>
-          <span>Tracker &amp; Follow-Ups</span>
+          <span>Tracker</span>
           <span class="tracker-badge" id="hudTrackerBadge">0</span>
         </button>
-        <button class="btn-pill-secondary" onclick="toggleCvDrawer()" id="btnToggleCvDrawer">
-          Preview Live A4 CV
+        <button class="btn-pill-secondary" onclick="toggleCvDrawer()" id="btnToggleCvDrawer" title="Preview your live A4 CV">
+          Preview CV
         </button>
-        <button class="btn-pill-secondary" onclick="toggleTheme()" id="themeBtn">
+        <button class="btn-pill-secondary" onclick="toggleTheme()" id="themeBtn" title="Toggle dark or light mode">
           Dark Mode
         </button>
         <button class="btn-next-glow" id="globalNextBtn" onclick="advanceNextStep()">
-          <span id="globalNextBtnText">Go to Page 2: Find Jobs</span>
+          <span id="globalNextBtnText">Next: Find Jobs</span>
           <span class="arrow-circle">&rarr;</span>
         </button>
       </div>
@@ -10484,18 +10522,18 @@ ${state.cv.contact}`;
 
       const nextText = document.getElementById("globalNextBtnText");
       if (stepNum === 1) {
-        nextText.textContent = "Go to Page 2: Find Jobs";
+        nextText.textContent = "Next: Find Jobs";
       } else if (stepNum === 2) {
-        nextText.textContent = "Go to Page 3: Tailor & Review";
+        nextText.textContent = "Next: Tailor & Review";
         renderRoleLockChips();
         renderFilteredJobs();
         autoFetchEmailsForTopJobs(6);
       } else if (stepNum === 3) {
-        nextText.textContent = "Go to Page 4: Send Application";
+        nextText.textContent = "Next: Send Application";
         populateStep3And4ForSelectedJob();
         autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
       } else if (stepNum === 4) {
-        nextText.textContent = "Send Application Now";
+        nextText.textContent = "Send Application";
         populateStep3And4ForSelectedJob();
         autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
         if (typeof runPreFlightAudit === "function") {
