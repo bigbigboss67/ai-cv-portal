@@ -123,6 +123,18 @@ export function readSheet(sheet) {
       const lines = [];
       for (const el of sec.children) {
         if (el.tagName === "H5") continue;
+        if (el.classList.contains("edu-container") || el.querySelector(".edu-item")) {
+          const items = el.querySelectorAll(".edu-item");
+          if (items.length) {
+            items.forEach((item, idx) => {
+              const b = item.querySelector("b") || item.querySelector(".edu-item-title");
+              const d = item.querySelector(".edu-item-desc");
+              if (b && clean(b.textContent)) lines.push({ text: clean(b.textContent), bold: true, gap: idx > 0 });
+              if (d && clean(d.textContent)) lines.push({ text: clean(d.textContent) });
+            });
+            continue;
+          }
+        }
         if (el.classList.contains("sum")) {
           String(el.innerText || el.textContent || "").split(/\n+/).map(clean).filter(Boolean)
             .forEach((t, k) => lines.push({ text: t, gap: k > 0 }));
