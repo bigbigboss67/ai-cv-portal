@@ -2641,6 +2641,45 @@
       border-radius: 999px;
     }
 
+    /* Language-Dedicated Role Filter Bar & Badges */
+    .lang-filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 700;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+    .lang-filter-pill:hover {
+      border-color: var(--border-strong);
+      color: var(--text-primary);
+      transform: translateY(-1px);
+    }
+    .lang-filter-pill.active {
+      background: rgba(16, 185, 129, 0.14);
+      border-color: rgba(16, 185, 129, 0.5);
+      color: var(--accent-emerald);
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+    }
+    .lang-req-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+      transition: all 160ms ease;
+    }
+
     /* ------------------------------------------------------------------
        DOCUMENT STYLE CONTROL PANEL & SEGMENTED CONTROLS
        ------------------------------------------------------------------ */
@@ -3617,6 +3656,21 @@
 
             <!-- Live Connected Job Boards Filter Bar -->
             <div class="board-badges-row" id="boardFilterRow"></div>
+
+            <!-- Language-Dedicated Role Filter Bar -->
+            <div class="lang-filter-bar" style="margin-top:14px;padding-top:12px;border-top:1px solid var(--border-subtle);">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:9px;">
+                <div style="font-size:12.5px;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:6px;">
+                  <span>🌍 2. Filter by Language-Dedicated Mandate:</span>
+                  <span style="font-size:10px;font-weight:700;color:var(--accent-emerald);background:var(--accent-emerald-soft);padding:1px 7px;border-radius:999px;">Multilingual Match</span>
+                </div>
+                <label style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text-secondary);cursor:pointer;">
+                  <input type="checkbox" id="chkLanguageDedicatedOnly" onchange="toggleLanguageDedicatedOnly(this.checked)" />
+                  Dedicated Language Mandates Only
+                </label>
+              </div>
+              <div class="lang-pills-row" id="langPillsRow" style="display:flex;gap:7px;flex-wrap:wrap;align-items:center;"></div>
+            </div>
           </div>
 
           <!-- Live Search Status Bar -->
@@ -4482,6 +4536,106 @@
           "Proven UAE executive leadership and P&L management"
         ],
         text: "Charterhouse Middle East is seeking a Director of Operations in Dubai to drive operational excellence, margin improvement, and enterprise transformation."
+      },
+      {
+        id: "ahk-gm-1",
+        title: "General Manager / Geschäftsführer — German Industrial Automation Hub",
+        matchedRole: "General Manager",
+        company: "AHK German Emirati Chamber / DACH Tech Group",
+        location: "Dubai & Abu Dhabi, UAE",
+        source: "departer",
+        url: "https://careers.departer.de/job/gm-german-tech",
+        ref: "AHK-GM-9102",
+        posted: "live",
+        score: 96,
+        to: "info@ahkdubai.com",
+        emailVia: "AHK German Emirati Chamber Desk",
+        requirements: [
+          "German-speaking mandate: Fluent German (Muttersprachler / C2) and English executive communication required",
+          "Full P&L and board reporting to DACH headquarters in Munich / Stuttgart",
+          "Directing precision manufacturing, industrial automation, and regional sales distribution across UAE & KSA"
+        ],
+        text: "Leading German industrial technology conglomerate, represented via AHK Dubai and Departer, is hiring a bilingual German/English General Manager (Geschäftsführer) to oversee their regional operations, client engineering contracts, and P&L across the GCC."
+      },
+      {
+        id: "pe-fr-1",
+        title: "Directeur Général / General Manager — Francophone Infrastructure & Energy",
+        matchedRole: "General Manager",
+        company: "TotalEnergies / French Engineering Consortium (via Page Executive)",
+        location: "Dubai, UAE",
+        source: "pageexecutive",
+        url: "https://www.pageexecutive.com/jobs/directeur-general-french",
+        ref: "PE-FR-8820",
+        posted: "live",
+        score: 95,
+        to: "dubai@pageexecutive.com",
+        emailVia: "Page Executive Francophone MEA Desk",
+        requirements: [
+          "French-speaking mandate: Fluent French and English executive capability for French HQ & Francophone operations",
+          "Directing major EPC, sustainable infrastructure, and energy supply-chain ventures",
+          "Full corporate governance, consortium joint-venture oversight, and €120M+ P&L"
+        ],
+        text: "Page Executive is retained by a premier French industrial & energy group to appoint a bilingual French-speaking Directeur Général / General Manager in Dubai. The role interfaces directly with Paris headquarters while executing regional operations."
+      },
+      {
+        id: "mp-fr-1",
+        title: "Regional Operations Director — French Luxury & Retail Distribution",
+        matchedRole: "Operations Director",
+        company: "LVMH / French Brand Alliance (via Michael Page)",
+        location: "Dubai, UAE",
+        source: "michaelpage",
+        url: "https://www.michaelpage.ae/jobs/operations-director-french",
+        ref: "MP-FR-3304",
+        posted: "live",
+        score: 94,
+        to: "clientservicesdubai@michaelpage.ae",
+        emailVia: "Michael Page French Retail Desk",
+        requirements: [
+          "French-speaking required: Executive coordination with French Maison leadership in Paris",
+          "End-to-end supply chain, boutique logistics, import/export compliance, and multi-market distribution",
+          "Lean inventory management and operational excellence across UAE, Qatar, and KSA"
+        ],
+        text: "Michael Page UAE is recruiting a French-speaking Regional Operations Director for an iconic French luxury conglomerate. This role commands multi-country supply chain architecture and prestige retail operations across the Middle East."
+      },
+      {
+        id: "bayt-ar-1",
+        title: "General Manager — Government & Semi-Government Joint Ventures (Arabic / English)",
+        matchedRole: "General Manager",
+        company: "Dubai Holding / National Enterprise Partners (via Bayt)",
+        location: "Dubai & Abu Dhabi, UAE",
+        source: "bayt",
+        url: "https://www.bayt.com/en/uae/jobs/general-manager-bilingual-arabic/",
+        ref: "BAYT-AR-1142",
+        posted: "live",
+        score: 95,
+        to: "executive.careers@bayt.com",
+        emailVia: "Bayt Executive Talent Desk",
+        requirements: [
+          "Arabic-speaking dedicated role: Native or bilingual Arabic and English executive communication required",
+          "High-level public-private partnership (PPP) governance, regulatory liaison, and board stewardship",
+          "Comprehensive P&L control ($100M+) and multi-divisional operations leadership"
+        ],
+        text: "Bayt Executive is retained to recruit a General Manager for a prominent semi-government joint venture. Must possess executive bilingual fluency in Arabic and English to lead governmental stakeholder coordination, operational strategy, and commercial P&L."
+      },
+      {
+        id: "gt-ar-1",
+        title: "Executive Director of Operations — National Supply Chain & Manufacturing (Arabic Bilingual)",
+        matchedRole: "Operations Director",
+        company: "Al-Futtaim / Emirates Industrial Consortium (via GulfTalent)",
+        location: "Dubai, UAE",
+        source: "gulftalent",
+        url: "https://www.gulftalent.com/uae/jobs/executive-director-operations-arabic",
+        ref: "GT-AR-5520",
+        posted: "live",
+        score: 94,
+        to: "executive.recruitment@gulftalent.com",
+        emailVia: "GulfTalent Executive Applications",
+        requirements: [
+          "Arabic bilingual mandate: Professional Arabic & English fluency for national industrial leadership",
+          "Overseeing 4 manufacturing plants, central warehousing, and automated distribution hubs",
+          "Lean Six Sigma transformation, workforce nationalization programs, and vendor renegotiations"
+        ],
+        text: "GulfTalent is featuring an Executive Director of Operations mandate requiring bilingual Arabic and English executive fluency. Direct large-scale industrial assets, supply chain security, and national operational infrastructure."
       }
     ];
 
@@ -4509,6 +4663,15 @@
       { id: "departer", label: "Departer" }
     ];
 
+    const LANGUAGE_FILTER_OPTIONS = [
+      { id: "all", label: "All Languages", icon: "🌐" },
+      { id: "german", label: "German Speaking (DACH)", icon: "🇩🇪" },
+      { id: "french", label: "French Speaking", icon: "🇫🇷" },
+      { id: "arabic", label: "Arabic / Bilingual", icon: "🇦🇪" },
+      { id: "english", label: "English / Global", icon: "🇬🇧" },
+      { id: "dedicated", label: "Language-Dedicated Only", icon: "⚡" }
+    ];
+
     const state = {
       currentStep: 1,
       cvTheme: (function () {
@@ -4530,6 +4693,8 @@
       upgradedKeys: new Set(),
       selectedRoles: ["General Manager", "Managing Director", "Operations Director", "Chief Operating Officer"],
       activeBoardFilter: "all",
+      activeLanguageFilter: "all",
+      languageDedicatedOnly: false,
       jobs: [...MULTI_BOARD_SEED_JOBS],
       selectedJob: MULTI_BOARD_SEED_JOBS[0],
       coverLetterLang: "en",
@@ -5896,33 +6061,72 @@ ${state.cv.contact}`;
     function extractLinesFromPdfPage(tc) {
       const items = (tc && tc.items) || [];
       if (!items.length) return "";
-      const rows = [];
-      for (const it of items) {
-        const str = String(it.str || "");
-        if (!str.trim() && !it.hasEOL) continue;
-        const tr = it.transform || [1, 0, 0, 1, 0, 0];
-        const x = Number(tr[4] || 0);
-        const y = Number(tr[5] || 0);
-        let row = rows.find((r) => Math.abs(r.y - y) <= 3.5);
-        if (!row) {
-          row = { y, parts: [] };
-          rows.push(row);
+
+      const validItems = items.filter((it) => (it.str && it.str.trim()) || it.hasEOL);
+      if (!validItems.length) return "";
+
+      // Check if page has a 2-column layout (e.g. left sidebar with skills/education, right with career history)
+      const xs = validItems.map((it) => Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0));
+      const minX = Math.min(...xs);
+      const maxX = Math.max(...xs);
+      const width = maxX - minX;
+
+      let isTwoColumn = false;
+      let splitX = 0;
+      if (width > 280) {
+        // Probe potential column gutter points
+        for (let gx = minX + 110; gx <= minX + 280; gx += 10) {
+          const inGutter = validItems.filter((it) => {
+            const x = Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0);
+            return x >= gx - 14 && x <= gx + 14;
+          });
+          const leftCount = validItems.filter((it) => Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0) < gx - 14).length;
+          const rightCount = validItems.filter((it) => Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0) > gx + 14).length;
+          if (inGutter.length === 0 && leftCount >= 4 && rightCount >= 6) {
+            isTwoColumn = true;
+            splitX = gx;
+            break;
+          }
         }
-        row.parts.push({ x, str: str.trim(), hasEOL: !!it.hasEOL });
       }
-      rows.sort((a, b) => b.y - a.y);
-      return rows
-        .map((r) => {
-          r.parts.sort((a, b) => a.x - b.x);
-          return r.parts
-            .map((p) => p.str)
-            .filter(Boolean)
-            .join(" ")
-            .replace(/\s+/g, " ")
-            .trim();
-        })
-        .filter(Boolean)
-        .join("\n");
+
+      const rowsFromItems = (itemList) => {
+        const rows = [];
+        for (const it of itemList) {
+          const str = String(it.str || "");
+          if (!str.trim() && !it.hasEOL) continue;
+          const tr = it.transform || [1, 0, 0, 1, 0, 0];
+          const x = Number(tr[4] || 0);
+          const y = Number(tr[5] || 0);
+          let row = rows.find((r) => Math.abs(r.y - y) <= 4.0);
+          if (!row) {
+            row = { y, parts: [] };
+            rows.push(row);
+          }
+          row.parts.push({ x, str: str.trim(), hasEOL: !!it.hasEOL });
+        }
+        rows.sort((a, b) => b.y - a.y);
+        return rows
+          .map((r) => {
+            r.parts.sort((a, b) => a.x - b.x);
+            return r.parts
+              .map((p) => p.str)
+              .filter(Boolean)
+              .join(" ")
+              .replace(/\s+/g, " ")
+              .trim();
+          })
+          .filter(Boolean)
+          .join("\n");
+      };
+
+      if (isTwoColumn) {
+        const leftItems = validItems.filter((it) => Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0) < splitX);
+        const rightItems = validItems.filter((it) => Number((it.transform || [1, 0, 0, 1, 0, 0])[4] || 0) >= splitX);
+        return rowsFromItems(leftItems) + "\n\n" + rowsFromItems(rightItems);
+      }
+
+      return rowsFromItems(validItems);
     }
 
     async function processUploadedCvFile(file) {
@@ -6805,6 +7009,17 @@ ${state.cv.contact}`;
       let text = String(rawText || "")
         .replace(/\r\n?/g, "\n")
         .replace(/\u00A0/g, " ")
+        // De-space common tracked/spaced headings in PDFs (e.g. C A R E E R)
+        .replace(/\bC\s+A\s+R\s+E\s+E\s+R\b/gi, "CAREER")
+        .replace(/\bC\s+A\s+R\s+R\s+I\s+E\s+R\b/gi, "CARRIER")
+        .replace(/\bE\s+X\s+P\s+E\s+R\s+I\s+E\s+N\s+C\s+E\b/gi, "EXPERIENCE")
+        .replace(/\bE\s+D\s+U\s+C\s+A\s+T\s+I\s+O\s+N\b/gi, "EDUCATION")
+        .replace(/\bS\s+K\s+I\s+L\s+L\s+S\b/gi, "SKILLS")
+        .replace(/\bS\s+U\s+M\s+M\s+A\s+R\s+Y\b/gi, "SUMMARY")
+        .replace(/\bH\s+I\s+S\s+T\s+O\s+R\s+Y\b/gi, "HISTORY")
+        .replace(/\bL\s+A\s+N\s+G\s+U\s+A\s+G\s+E\s+S\b/gi, "LANGUAGES")
+        // Strip markdown bold markers and headers
+        .replace(/^[\s*_#~-]+/gm, (m) => m.includes("#") || m.includes("*") ? "" : m)
         // Split inline bullets onto their own lines so no bullets are merged
         .replace(/([^\n])\s+([•▪▸●◦✦➢\uF0B7\u2022])\s+/g, "$1\n$2 ");
 
@@ -6813,28 +7028,64 @@ ${state.cv.contact}`;
         "EXECUTIVE SUMMARY",
         "PROFESSIONAL SUMMARY",
         "CAREER SUMMARY",
+        "CARRIER SUMMARY",
         "EXECUTIVE PROFILE",
+        "PROFESSIONAL PROFILE",
         "PROFESSIONAL EXPERIENCE",
+        "PROFESSIONAL EXPERIENCES",
         "WORK EXPERIENCE",
+        "WORK EXPERIENCES",
         "LEADERSHIP EXPERIENCE",
         "CAREER HISTORY",
+        "CARRIER HISTORY",
+        "CAREER EXPERIENCE",
+        "CARRIER EXPERIENCE",
+        "CAREER PATH",
+        "CAREER PROGRESSION",
+        "CAREER HIGHLIGHTS",
+        "CAREER OVERVIEW",
+        "PROFESSIONAL CAREER",
+        "CAREER",
+        "CARRIER",
         "EMPLOYMENT HISTORY",
+        "WORK HISTORY",
         "CORE COMPETENCIES",
         "KEY SKILLS",
         "TECHNICAL SKILLS",
         "AREAS OF EXPERTISE",
+        "CORE STRENGTHS",
         "EDUCATION & CREDENTIALS",
         "ACADEMIC BACKGROUND",
         "EDUCATION",
+        "CERTIFICATIONS & LICENSES",
         "CERTIFICATIONS",
+        "CERTIFICATES",
+        "LANGUAGES SPOKEN",
         "LANGUAGES",
+        "KEY ACHIEVEMENTS",
+        "PROJECTS",
         "BERUFSERFAHRUNG",
+        "BERUFLICHER WERDEGANG",
+        "WERDEGANG",
         "AUSBILDUNG",
         "KERNKOMPETENZEN",
-        "SPRACHEN"
+        "SPRACHEN",
+        "EXPÉRIENCE PROFESSIONNELLE",
+        "PARCOURS PROFESSIONNEL",
+        "EXPÉRIENCES",
+        "FORMATION",
+        "COMPÉTENCES",
+        "LANGUES",
+        "الخبرات المهنية",
+        "الخبرات العملية",
+        "التعليم",
+        "المهارات",
+        "اللغات"
       ];
-      for (const h of inlineHeaders) {
-        const re = new RegExp(`([^\\n])\\s+(${h.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\\\$&")})\\s*:?(?=\\s+[A-ZÄÖÜ•▪])`, "gi");
+      const sortedHeaders = [...inlineHeaders].sort((a, b) => b.length - a.length);
+      for (const h of sortedHeaders) {
+        const esc = h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const re = new RegExp(`([^\\n])\\s+(${esc})(?:\\s*[:：]\\s*\\n|\\s+(?=[A-ZÄÖÜ0-9•▪▸]))`, "gi");
         text = text.replace(re, "$1\n$2\n");
       }
 
@@ -6846,46 +7097,95 @@ ${state.cv.contact}`;
 
     function classifyCvSectionHeading(line) {
       const clean = line
-        .replace(/^[0-9IVX]+\.\s*/i, "")
-        .replace(/^[\s•\-–—*▪▸|:/]+|[\s•\-–—*▪▸|:/]+$/g, "")
+        .replace(/^[0-9IVX]+[\.\)]\s*/i, "")
+        .replace(/^section\s+[0-9IVX]+[:\s]*/i, "")
+        .replace(/^[*_#~|•\-–—*▪▸●◦✦➢\s]+|[*_#~|•\-–—*▪▸●◦✦➢\s]+$/g, "")
+        .replace(/[:：\-_]+$/, "")
         .trim();
-      if (!clean || clean.length > 56) return null;
+      if (!clean || clean.length > 65) return null;
+
+      // Experience / Career / Employment Section (Prioritize to ensure Career/Carrier section is always recognized!)
       if (
-        /^(?:executive\s+|professional\s+|career\s+|personal\s+|management\s+)?(?:summary|profile|objective|about\s*me|overview|executive\s*overview|profil|kurzprofil|zusammenfassung)$/i.test(
-          clean
-        )
-      ) {
-        return { type: "summary", title: clean };
-      }
-      if (
-        /^(?:core\s+|key\s+|technical\s+|executive\s+|professional\s+|board\s+|areas\s+of\s+)?(?:skills|competencies|expertise|strengths|capabilities|skills\s*(?:&|and)\s*competencies|competencies\s*(?:&|and)\s*skills|kernkompetenzen|kompetenzen|kenntnisse|fähigkeiten|edv-kenntnisse)$/i.test(
-          clean
-        )
-      ) {
-        return { type: "skills", title: clean };
-      }
-      if (
-        /^(?:professional\s+|work\s+|leadership\s+|executive\s+|career\s+|employment\s+|relevant\s+|selected\s+)?(?:experience|employment|career\s*history|work\s*history|employment\s*history|positions\s*held|assignments|career\s*track|berufserfahrung|beruflicher\s*werdegang|erfahrung|frühere\s*stationen)$/i.test(
+        /^(?:professional\s+|work\s+|leadership\s+|executive\s+|career\s+|carrier\s+|employment\s+|relevant\s+|selected\s+|key\s+)?(?:experience|experiences|employment|career|carrier|career\s*history|carrier\s*history|career\s*experience|carrier\s*experience|career\s*path|career\s*progression|career\s*track|career\s*milestones|career\s*highlights|career\s*overview|career\s*background|professional\s*career|career\s*record|positions\s*held|previous\s*positions|past\s*roles|assignments|berufserfahrung|beruflicher\s*werdegang|werdegang|berufliche\s*stationen|erfahrung|frühere\s*stationen|expérience|expériences|expérience\s*professionnelle|expériences\s*professionnelles|parcours\s*professionnel|historique\s*professionnel|esperienze|esperienze\s*lavorative|experiencia|experiencia\s*laboral|experiencia\s*profesional|trayectoria\s*profesional|الخبرات|الخبرة|الخبرات\s*المهنية|الخبرة\s*المهنية|التاريخ\s*المهني|سيرة\s*مهنية|الخبرات\s*العملية|الخبرة\s*العملية|المسار\s*المهني)(?:\s*(?:&|and|\/|\+)\s*(?:experience|employment|achievements|projects|highlights|history|carrier|career))?$/i.test(
           clean
         )
       ) {
         return { type: "experience", title: clean };
       }
+
+      // Summary / Profile Section
       if (
-        /^(?:academic\s+|educational\s+)?(?:education|qualifications|academic\s*background|degrees|education\s*(?:&|and)\s*(?:credentials|qualifications|training|certifications)|ausbildung|studium|bildungsweg|hochschulabschluss)$/i.test(
+        /^(?:executive\s+|professional\s+|career\s+|carrier\s+|personal\s+|management\s+)?(?:summary|profile|objective|about\s*me|overview|executive\s*overview|bio|biography|profil|kurzprofil|zusammenfassung|über\s*mich|profil\s*professionnel|à\s*propos|resumen|perfil|ملخص|نبذة|نبذة\s*شخصية|الملخص\s*المهني)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "summary", title: clean };
+      }
+
+      // Core Skills / Competencies Section
+      if (
+        /^(?:core\s+|key\s+|technical\s+|executive\s+|professional\s+|board\s+|functional\s+|areas\s+of\s+)?(?:skills|competencies|expertise|strengths|capabilities|proficiencies|qualifications|specialties)[\s/&]*(?:skills|competencies|expertise|strengths|capabilities|proficiencies|kernkompetenzen|kompetenzen|kenntnisse|fähigkeiten|fachliche\s*kompetenzen|compétences|compétences\s*clés|expertises|habilidades|competencias|المهارات|المهارات\s*الأساسية|المهارات\s*التقنية|مجالات\s*الخبرة)*$/i.test(
+          clean
+        ) ||
+        /^(?:technical\s*skills|core\s*competencies|key\s*skills|areas\s*of\s*expertise|technical\s*expertise|core\s*strengths|professional\s*skills|functional\s*skills|kompetenzen|kernkompetenzen|kenntnisse|fähigkeiten|compétences|المهارات)(?:\s*(?:&|and|\/|\+)\s*(?:core\s*competencies|technical\s*skills|key\s*skills|expertise|competencies|strengths))?$/i.test(
+          clean
+        )
+      ) {
+        return { type: "skills", title: clean };
+      }
+
+      // Education & Academic Background Section
+      if (
+        /^(?:academic\s+|educational\s+|higher\s+)?(?:education|qualifications|academic\s*background|academic\s*qualifications|degrees|ausbildung|studium|bildungsweg|hochschulabschluss|akademischer\s*werdegang|formation|formation\s*académique|éducation|diplômes|études|educación|formación|estudios|التعليم|المؤهلات\s*العلمية|الدرجات\s*العلمية|الدراسة)(?:\s*(?:&|and|\/|\+)\s*(?:qualifications|credentials|degrees|training|background))?$/i.test(
           clean
         )
       ) {
         return { type: "education", title: clean };
       }
+
+      // Certifications & Training Section
       if (
-        /^(?:certifications?|licenses?\s*(?:&|and)?\s*certifications?|certificates?|languages?|language\s*skills|courses?\s*(?:&|and)?\s*training|professional\s*development|awards?\s*(?:&|and)?\s*honors?|key\s*achievements?|achievements?|projects?|key\s*projects?|board\s*memberships?|affiliations?|publications?|references?|additional\s*information|personal\s*details|personal\s*information|sprachen|sprachkenntnisse|zertifikate|weiterbildung|projekte|referenzen)$/i.test(
+        /^(?:professional\s+|executive\s+)?(?:certifications?|certificates?|licenses?|credentials|accreditations?|courses?\s*(?:&|and)?\s*training|professional\s*development|zertifikate|zertifizierungen|weiterbildung|schulungen|certificats|certifications\s*professionnelles|certificaciones|الشهادات|الشهادات\s*المهنية|الدورات\s*التدريبية)(?:\s*(?:&|and|\/|\+)\s*(?:credentials|licenses?|certifications?|certificates?|training|accreditations?))?$/i.test(
+          clean
+        )
+      ) {
+        return { type: "certifications", title: clean };
+      }
+
+      // Languages Section
+      if (
+        /^(?:language\s*skills|languages|languages\s*spoken|linguistic\s*skills|language\s*proficiency|sprachen|sprachkenntnisse|fremdsprachen|langues|langues\s*parlées|idiomas|اللغات|إتقان\s*اللغات)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "languages", title: clean };
+      }
+
+      // Key Projects & Achievements Section
+      if (
+        /^(?:key\s+|selected\s+|notable\s+|major\s+)?(?:projects|key\s*projects|achievements|key\s*achievements|awards?\s*(?:&|and)?\s*honors?|milestones|projekte|erfolge|auszeichnungen|réalisations|projets|proyectos|logros|المشاريع|الإنجازات|الجوائز)$/i.test(
+          clean
+        )
+      ) {
+        return { type: "projects", title: clean };
+      }
+
+      // Additional Sections (Board Memberships, Affiliations, Publications, References)
+      if (
+        /^(?:board\s*memberships?|affiliations?|publications?|references?|additional\s*information|personal\s*details|personal\s*information|publikationen|referenzen|références|المراجع|العضويات)$/i.test(
           clean
         )
       ) {
         return { type: "additional", title: clean };
       }
+
       return null;
+    }
+
+    function syncWriterFromStateCv() {
+      if (typeof syncCvWriterInputs === "function") {
+        syncCvWriterInputs();
+      }
     }
 
     function parseRawTextIntoCv(rawText, sourceName) {
@@ -6893,7 +7193,7 @@ ${state.cv.contact}`;
       if (!lines.length) return;
 
       // 1. Identify Candidate Name (skip generic "Curriculum Vitae" / "Resume" labels)
-      const docLabelRe = /^(?:curriculum\s+vitae|resume|cv|lebenslauf|page\s+\d+(?:\s+of\s+\d+)?|confidential)$/i;
+      const docLabelRe = /^(?:curriculum\s+vitae|resume|cv|lebenslauf|carrier\s+profile|career\s+profile|page\s+\d+(?:\s+of\s+\d+)?|confidential)$/i;
       let nameIdx = 0;
       for (let i = 0; i < Math.min(lines.length, 6); i++) {
         const candidate = lines[i].replace(/^[•\-*▪▸]\s*/, "").trim();
@@ -6922,7 +7222,7 @@ ${state.cv.contact}`;
       let detectedHeadlineFromHeader = "";
 
       const dateRangeRe =
-        /\b((?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2}\s*(?:[–—\-~\/]|to|bis|until|till)\s*(?:present|current|now|today|ongoing|heute|aktuell|bis\s*heute|(?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2})|(?:since|seit|ab)\s+(?:19|20)\d{2})\b/i;
+        /\b((?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2}\s*(?:[–—\-~\/]|to|bis|until|till|à)\s*(?:present|current|now|today|ongoing|date|to\s*date|till\s*date|heute|aktuell|bis\s*heute|aujourd'hui|à\s*ce\s*jour|حتى\s*الآن|(?:(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?|mär(?:z)?|mai|okt(?:ober)?|dez(?:ember)?|\d{1,2}[\/.-])\s*)?(?:19|20)\d{2})|(?:since|seit|ab|depuis|منذ)\s+(?:19|20)\d{2}|\b(?:19|20)\d{2}\s*[-–—]\s*(?:19|20)\d{2}\b|\((?:19|20)\d{2}\s*[-–—]\s*(?:present|(?:19|20)\d{2})\))\b/i;
 
       for (let i = nameIdx + 1; i < Math.min(lines.length, nameIdx + 9); i++) {
         const l = lines[i];
@@ -6977,12 +7277,14 @@ ${state.cv.contact}`;
       }
       state.selectedRoles = detectedRoles;
 
-      // 4. Walk All Remaining Lines & Group into Summary, Skills, Experience Roles, Education & Additional Sections
+      // 4. Walk All Remaining Lines & Group into Summary, Skills, Experience Roles, Education, Certifications, Languages & Additional Sections
       let currentSection = "auto";
       let currentAddSection = null;
       const summaryLines = [];
       const skillLines = [];
       const educationLines = [];
+      const certificationsLines = [];
+      const languageLines = [];
       const additionalSections = [];
       const roles = [];
       let currentRole = null;
@@ -7004,7 +7306,7 @@ ${state.cv.contact}`;
         if (sec) {
           flushPendingToRoleOrSummary();
           currentSection = sec.type;
-          if (sec.type === "additional") {
+          if (sec.type === "additional" || sec.type === "projects") {
             currentAddSection = { title: sec.title, lines: [] };
             additionalSections.push(currentAddSection);
           } else {
@@ -7031,73 +7333,71 @@ ${state.cv.contact}`;
           continue;
         }
 
+        if (currentSection === "certifications") {
+          certificationsLines.push(cleanLine);
+          continue;
+        }
+
+        if (currentSection === "languages") {
+          languageLines.push(cleanLine);
+          continue;
+        }
+
         if (currentSection === "additional" && currentAddSection) {
           currentAddSection.lines.push(cleanLine);
           continue;
         }
 
-        // In "experience" or "auto" mode: check if this line contains a date range!
+        const startedWithBullet = /^[•\-*▪▸●◦✦➢\uF0B7\u2022]/.test(rawLine);
         const dm = dateRangeRe.exec(cleanLine);
+
         if (dm) {
-          const datesStr = dm[1].trim();
+          const datesStr = dm[0].trim();
           const remainder = (cleanLine.slice(0, dm.index) + " " + cleanLine.slice(dm.index + dm[0].length))
             .replace(/^[\s·|•,\-–—()[\]]+|[\s·|•,\-–—()[\]]+$/g, "")
             .trim();
 
-          let roleTitle = "";
-          let companyName = "";
-          let locationStr = "";
-
-          // Check if remainder has "Title | Company" or "Title at Company" or "Title — Company"
-          const parts = remainder
-            .split(/\s*(?:\||—|–|\bat\b|,)\s*/i)
-            .map((s) => s.trim())
-            .filter(Boolean);
-
-          if (parts.length >= 2) {
-            roleTitle = parts[0];
-            companyName = parts.slice(1).join(" · ");
-          } else if (parts.length === 1) {
-            roleTitle = parts[0];
+          // Check if previous role exists and lacks dates and bullets -> attach to it!
+          if (currentRole && !currentRole.dates && currentRole.bullets.length === 0) {
+            currentRole.dates = datesStr;
+            if (remainder && !currentRole.location) {
+              currentRole.location = remainder;
+            }
+            continue;
           }
 
-          // If there were 1-2 short non-bullet header lines immediately preceding this date line, use them for Title / Company!
+          // Check if we had pending header lines
+          let title = "";
+          let company = "";
+          let location = "";
+
           if (pendingHeaderLines.length > 0) {
-            if (!roleTitle) {
-              roleTitle = pendingHeaderLines[0];
-              if (pendingHeaderLines.length > 1) {
-                companyName = pendingHeaderLines.slice(1).join(" · ");
-              }
-            } else if (!companyName) {
-              // Preceding line was likely Title or Company
-              const prev = pendingHeaderLines[pendingHeaderLines.length - 1];
-              if (
-                /\b(director|manager|chief|ceo|coo|cfo|vp|president|head|lead|partner|officer|engineer|consultant|executive|geschäftsführer|leiter)\b/i.test(
-                  prev
-                ) &&
-                !/\b(director|manager|chief|ceo|coo|cfo|vp|president|head|lead|partner|officer)\b/i.test(roleTitle)
-              ) {
-                companyName = roleTitle;
-                roleTitle = prev;
-              } else {
-                companyName = prev;
-              }
-              if (pendingHeaderLines.length > 1) {
-                const earlier = pendingHeaderLines.slice(0, -1);
-                if (currentRole) earlier.forEach((el) => currentRole.bullets.push(el));
-                else earlier.forEach((el) => summaryLines.push(el));
-              }
-            } else {
-              flushPendingToRoleOrSummary();
-            }
+            const combinedPending = pendingHeaderLines.join(" | ");
+            const parts = combinedPending.split(/\s*(?:\||—|–|\bat\b)\s*/i).map((s) => s.trim()).filter(Boolean);
+            title = parts[0] || combinedPending;
+            company = parts.slice(1).join(" · ");
+            location = remainder;
             pendingHeaderLines = [];
+          } else if (remainder) {
+            const parts = remainder.split(/\s*(?:\||—|–|\bat\b)\s*/i).map((s) => s.trim()).filter(Boolean);
+            if (parts.length >= 2) {
+              title = parts[0];
+              company = parts[1];
+              location = parts.slice(2).join(" · ");
+            } else if (parts.length === 1) {
+              if (/\b(dubai|abu dhabi|munich|berlin|frankfurt|germany|uae|london|paris|ksa|riyadh|remote|singapore)\b/i.test(parts[0])) {
+                location = parts[0];
+              } else {
+                title = parts[0];
+              }
+            }
           }
 
           currentSection = "experience";
           currentRole = {
-            title: roleTitle || detectedRoles[0] || "Executive Role",
-            company: companyName || "",
-            location: locationStr,
+            title: title || (detectedRoles[0] || "Executive Mandate"),
+            company: company || "",
+            location: location || "",
             dates: datesStr,
             bullets: []
           };
@@ -7105,29 +7405,50 @@ ${state.cv.contact}`;
           continue;
         }
 
-        // Check if this is a short non-bullet line that might be the Title/Company header for a date line on the next line
-        const startedWithBullet = /^[•\-*▪▸●◦✦➢\uF0B7\u2022]/.test(rawLine);
-        const nextLine = lines[i + 1] || "";
-        const nextNextLine = lines[i + 2] || "";
-        if (
-          !startedWithBullet &&
-          cleanLine.length <= 95 &&
-          !/[.!]$/.test(cleanLine) &&
-          (dateRangeRe.test(nextLine) || (!classifyCvSectionHeading(nextLine) && dateRangeRe.test(nextNextLine)))
-        ) {
-          pendingHeaderLines.push(cleanLine);
-          continue;
+        if (!startedWithBullet) {
+          const nextLine = lines[i + 1] || "";
+          const nextNextLine = lines[i + 2] || "";
+          // If next line has dates, buffer this line as title/company!
+          if (
+            cleanLine.length <= 110 &&
+            !/[.!]$/.test(cleanLine) &&
+            (dateRangeRe.test(nextLine) || (!classifyCvSectionHeading(nextLine) && dateRangeRe.test(nextNextLine)))
+          ) {
+            pendingHeaderLines.push(cleanLine);
+            continue;
+          }
+
+          // Or if current role already has bullets and this line looks like a new role title (without dates yet)
+          const looksLikeTitle =
+            cleanLine.length <= 85 &&
+            !/[.!]$/.test(cleanLine) &&
+            /\b(director|manager|chief|ceo|coo|cfo|cio|cto|cmo|vp|president|head|lead|partner|officer|engineer|consultant|executive|geschäftsführer|leiter|directeur|responsable|مدير|رئيس)\b/i.test(
+              cleanLine
+            );
+
+          if (looksLikeTitle && currentRole && currentRole.bullets.length > 0) {
+            const parts = cleanLine.split(/\s*(?:\||—|–|\bat\b)\s*/i).map((s) => s.trim()).filter(Boolean);
+            currentRole = {
+              title: parts[0] || cleanLine,
+              company: parts.slice(1).join(" · "),
+              location: "",
+              dates: "",
+              bullets: []
+            };
+            roles.push(currentRole);
+            continue;
+          }
         }
 
         flushPendingToRoleOrSummary();
 
-        // If we haven't hit any experience role yet and we are still near the top of the CV, put introductory prose in Summary
+        // Introductory prose near the top without roles goes into Summary
         if (currentSection === "auto" && roles.length === 0 && summaryLines.length < 6 && i < headerEndIdx + 8 && !startedWithBullet) {
           summaryLines.push(cleanLine);
           continue;
         }
 
-        // Otherwise, ensure it goes into an Experience Role so ZERO lines are ever dropped!
+        // Ensure we are inside a role container so ZERO lines are dropped
         if (!currentRole) {
           currentRole = {
             title: detectedHeadlineFromHeader || detectedRoles[0] || "Executive Leadership Experience",
@@ -7139,15 +7460,23 @@ ${state.cv.contact}`;
           roles.push(currentRole);
         }
 
-        // If a role currently has no company name and its first line is a short non-bullet company/location line, assign it as company
+        // If role has no company name and first line is a short non-bullet company/location line, assign it
         if (
           !currentRole.company &&
           currentRole.bullets.length === 0 &&
           !startedWithBullet &&
           cleanLine.length <= 85 &&
-          !/[.!]$/.test(cleanLine)
+          !/[.!]$/.test(cleanLine) &&
+          !/\b(managed|directed|spearheaded|oversaw|achieved|delivered|increased|reduced)\b/i.test(cleanLine)
         ) {
           currentRole.company = cleanLine;
+        } else if (
+          !startedWithBullet &&
+          currentRole.bullets.length > 0 &&
+          ((cleanLine.length < 100 && /^[a-z]/.test(cleanLine)) || !/[.!?]$/.test(currentRole.bullets[currentRole.bullets.length - 1]))
+        ) {
+          // Line wrapping continuation of previous bullet
+          currentRole.bullets[currentRole.bullets.length - 1] += " " + cleanLine;
         } else {
           currentRole.bullets.push(cleanLine);
         }
@@ -7155,7 +7484,7 @@ ${state.cv.contact}`;
 
       flushPendingToRoleOrSummary();
 
-      // 5. Build Final Skills List (User's CV Skills Section + Detected Executive Competencies)
+      // 5. Build Final Skills List
       const parsedUserSkills = [];
       skillLines.forEach((sl) => {
         sl.split(/\s*(?:[•·|▪▸,;\/]|\s-\s)\s*/)
@@ -7187,7 +7516,7 @@ ${state.cv.contact}`;
       });
       const finalSkills = parsedUserSkills.length ? parsedUserSkills.slice(0, 40) : DEMO_CV.skills.slice();
 
-      // 6. Fallback if CV had only summary lines and 0 roles (e.g. a 1-paragraph bio or unstructured CV)
+      // 6. Ensure Roles & Career History are 100% Valid
       if (!roles.length && summaryLines.length > 2) {
         roles.push({
           title: detectedHeadlineFromHeader || detectedRoles[0] || "Executive Leadership & Career Highlights",
@@ -7198,7 +7527,6 @@ ${state.cv.contact}`;
         });
       }
 
-      // Filter out any completely empty role shells that have no bullets and no company
       const validRoles = roles.filter((r) => (r.bullets && r.bullets.length > 0) || r.company || r.dates);
       if (validRoles.length === 0) {
         validRoles.push({
@@ -7210,7 +7538,6 @@ ${state.cv.contact}`;
         });
       }
 
-      // Ensure every role has at least 1 bullet line for rendering
       validRoles.forEach((r) => {
         if (!r.bullets || !r.bullets.length) {
           if (r.company) {
@@ -7220,17 +7547,31 @@ ${state.cv.contact}`;
         }
       });
 
-      // 7. Build Education & Additional Credentials
+      // 7. Build Education Credentials
       if (!educationLines.length) {
         lines.slice(headerEndIdx).forEach((l) => {
           if (
-            /\b(mba|bachelor|master|phd|doctorate|university|college|institute|diploma|degree|b\.?sc|m\.?sc|b\.?eng|m\.?eng|b\.?a|m\.?a|ausbildung|hochschule|universität)\b/i.test(
+            /\b(mba|bachelor|master|phd|doctorate|university|college|institute|diploma|degree|b\.?sc|m\.?sc|b\.?eng|m\.?eng|b\.?a|m\.?a|ausbildung|hochschule|universität|ingénieur|formation)\b/i.test(
               l
             ) &&
             l.length <= 180
           ) {
             educationLines.push(l.replace(/^[•\-*▪▸]\s*/, ""));
           }
+        });
+      }
+
+      // 8. Build Languages & Certifications
+      if (languageLines.length) {
+        additionalSections.push({
+          title: "Languages Spoken",
+          lines: languageLines
+        });
+      }
+      if (certificationsLines.length) {
+        additionalSections.push({
+          title: "Certifications & Credentials",
+          lines: certificationsLines
         });
       }
 
@@ -7253,6 +7594,8 @@ ${state.cv.contact}`;
         skills: finalSkills,
         roles: validRoles,
         education: educationLines.length ? educationLines.join("\n") : "Executive Education & Professional Qualifications (See CV Details)",
+        certifications: certificationsLines,
+        languages: languageLines,
         additionalSections: additionalSections.filter((s) => s.lines && s.lines.length),
         rawFullText: lines.join("\n"),
         photoUrl: prevPhotoUrl,
@@ -7527,20 +7870,106 @@ ${state.cv.contact}`;
       return null;
     }
 
+    function detectJobLanguageRequirement(job) {
+      const combined = `${job.title || ""} ${job.company || ""} ${(job.requirements || []).join(" ")} ${job.text || ""} ${job.ref || ""}`.toLowerCase();
+
+      if (/\b(german|deutsch|deutschsprachig|geschäftsführer|departer|ahk|dach|rwth|munich|frankfurt|berlin|stuttgart|germany|austria|switzerland|swiss)\b/i.test(combined)) {
+        return {
+          lang: "german",
+          label: "🇩🇪 German-Speaking Mandate",
+          shortLabel: "🇩🇪 German",
+          badgeColor: "rgba(245, 158, 11, 0.14)",
+          badgeBorder: "rgba(245, 158, 11, 0.45)",
+          badgeText: "#f59e0b"
+        };
+      }
+      if (/\b(french|français|francophone|directeur général|alstom|totalenergies|l'oréal|french speaking|bilingual french|france|paris)\b/i.test(combined)) {
+        return {
+          lang: "french",
+          label: "🇫🇷 French-Speaking Mandate",
+          shortLabel: "🇫🇷 French",
+          badgeColor: "rgba(59, 130, 246, 0.14)",
+          badgeBorder: "rgba(59, 130, 246, 0.45)",
+          badgeText: "#60a5fa"
+        };
+      }
+      if (/\b(arabic|العربية|عربي|bilingual arabic|arabic speaking|arabic-speaking|emirati national|gcc national|uae national)\b/i.test(combined)) {
+        return {
+          lang: "arabic",
+          label: "🇦🇪 Arabic / Bilingual Dedicated",
+          shortLabel: "🇦🇪 Arabic",
+          badgeColor: "rgba(16, 185, 129, 0.14)",
+          badgeBorder: "rgba(16, 185, 129, 0.45)",
+          badgeText: "#34d399"
+        };
+      }
+      if (/\b(spanish|español|italian|italiano|mandarin|chinese)\b/i.test(combined)) {
+        return {
+          lang: "other",
+          label: "🌐 Multilingual Mandate",
+          shortLabel: "🌐 Multilingual",
+          badgeColor: "rgba(168, 85, 247, 0.14)",
+          badgeBorder: "rgba(168, 85, 247, 0.45)",
+          badgeText: "#c084fc"
+        };
+      }
+      return {
+        lang: "english",
+        label: "🇬🇧 English / Global",
+        shortLabel: "🇬🇧 English",
+        badgeColor: "rgba(148, 163, 184, 0.12)",
+        badgeBorder: "rgba(148, 163, 184, 0.3)",
+        badgeText: "#94a3b8"
+      };
+    }
+
     function getFilteredJobs() {
       const strict = document.getElementById("strictRoleToggle") ? document.getElementById("strictRoleToggle").checked : true;
+      const activeLang = state.activeLanguageFilter || "all";
+      const langOnly = state.languageDedicatedOnly;
+
       return state.jobs.filter((j) => {
         const matchedRole = doesJobMatchStrictRoles(j.title, state.selectedRoles);
         if (strict && !matchedRole) return false;
         if (matchedRole) j.matchedRole = matchedRole;
         if (state.activeBoardFilter !== "all" && j.source !== state.activeBoardFilter) return false;
+
+        const langInfo = detectJobLanguageRequirement(j);
+        j.langInfo = langInfo;
+
+        if (activeLang !== "all") {
+          if (activeLang === "dedicated") {
+            if (langInfo.lang === "english") return false;
+          } else if (langInfo.lang !== activeLang) {
+            return false;
+          }
+        } else if (langOnly) {
+          if (langInfo.lang === "english") return false;
+        }
+
         return true;
       });
     }
 
     function renderBoardFilterBar() {
       const strict = document.getElementById("strictRoleToggle") ? document.getElementById("strictRoleToggle").checked : true;
-      const roleFiltered = state.jobs.filter((j) => !strict || doesJobMatchStrictRoles(j.title, state.selectedRoles));
+      const activeLang = state.activeLanguageFilter || "all";
+      const langOnly = state.languageDedicatedOnly;
+
+      const roleFiltered = state.jobs.filter((j) => {
+        if (strict && !doesJobMatchStrictRoles(j.title, state.selectedRoles)) return false;
+        const l = detectJobLanguageRequirement(j);
+        if (activeLang !== "all") {
+          if (activeLang === "dedicated") {
+            if (l.lang === "english") return false;
+          } else if (l.lang !== activeLang) {
+            return false;
+          }
+        } else if (langOnly && l.lang === "english") {
+          return false;
+        }
+        return true;
+      });
 
       const counts = { all: roleFiltered.length };
       roleFiltered.forEach((j) => {
@@ -7548,20 +7977,76 @@ ${state.cv.contact}`;
       });
 
       const row = document.getElementById("boardFilterRow");
-      row.innerHTML = BOARD_SOURCES.map((b) => {
-        const cnt = counts[b.id] || 0;
-        const active = state.activeBoardFilter === b.id;
-        return `
-          <button type="button" class="board-pill ${active ? "active" : ""}" onclick="setBoardFilter('${b.id}')">
-            <span>${escapeHtml(b.label)}</span>
-            <span style="opacity:0.75;">(${cnt})</span>
-          </button>
-        `;
-      }).join("");
+      if (row) {
+        row.innerHTML = BOARD_SOURCES.map((b) => {
+          const cnt = counts[b.id] || 0;
+          const active = state.activeBoardFilter === b.id;
+          return `
+            <button type="button" class="board-pill ${active ? "active" : ""}" onclick="setBoardFilter('${b.id}')">
+              <span>${escapeHtml(b.label)}</span>
+              <span style="opacity:0.75;">(${cnt})</span>
+            </button>
+          `;
+        }).join("");
+      }
     }
 
     function setBoardFilter(boardId) {
       state.activeBoardFilter = boardId;
+      renderFilteredJobs();
+    }
+
+    function renderLanguageFilterBar() {
+      const container = document.getElementById("langPillsRow");
+      if (!container) return;
+
+      const strict = document.getElementById("strictRoleToggle") ? document.getElementById("strictRoleToggle").checked : true;
+      const boardFiltered = state.jobs.filter((j) => {
+        if (strict && !doesJobMatchStrictRoles(j.title, state.selectedRoles)) return false;
+        if (state.activeBoardFilter !== "all" && j.source !== state.activeBoardFilter) return false;
+        return true;
+      });
+
+      const counts = { all: boardFiltered.length, dedicated: 0 };
+      boardFiltered.forEach((j) => {
+        const l = detectJobLanguageRequirement(j);
+        counts[l.lang] = (counts[l.lang] || 0) + 1;
+        if (l.lang !== "english") counts.dedicated = (counts.dedicated || 0) + 1;
+      });
+
+      container.innerHTML = LANGUAGE_FILTER_OPTIONS.map((opt) => {
+        const cnt = counts[opt.id] || 0;
+        const active = state.activeLanguageFilter === opt.id;
+        return `
+          <button type="button" class="lang-filter-pill ${active ? "active" : ""}" onclick="setLanguageFilter('${opt.id}')">
+            <span>${opt.icon}</span>
+            <span>${escapeHtml(opt.label)}</span>
+            <span style="opacity:0.75;font-size:11px;">(${cnt})</span>
+          </button>
+        `;
+      }).join("");
+
+      const chk = document.getElementById("chkLanguageDedicatedOnly");
+      if (chk) chk.checked = !!state.languageDedicatedOnly;
+    }
+
+    function setLanguageFilter(langId) {
+      state.activeLanguageFilter = langId;
+      if (langId === "dedicated") {
+        state.languageDedicatedOnly = true;
+      } else if (langId !== "all") {
+        state.languageDedicatedOnly = false;
+      }
+      renderFilteredJobs();
+    }
+
+    function toggleLanguageDedicatedOnly(enabled) {
+      state.languageDedicatedOnly = !!enabled;
+      if (enabled && state.activeLanguageFilter === "all") {
+        state.activeLanguageFilter = "dedicated";
+      } else if (!enabled && state.activeLanguageFilter === "dedicated") {
+        state.activeLanguageFilter = "all";
+      }
       renderFilteredJobs();
     }
 
@@ -7773,6 +8258,7 @@ ${state.cv.contact}`;
       ensureAllJobsHaveResolvedEmails();
       rescoreAllJobsAgainstCv();
       renderBoardFilterBar();
+      renderLanguageFilterBar();
       const filtered = getFilteredJobs();
       const container = document.getElementById("jobCardsContainer");
       document.getElementById("liveSearchCountBadge").textContent = `${filtered.length} CV & Role Matches`;
@@ -7780,12 +8266,12 @@ ${state.cv.contact}`;
       if (!filtered.length) {
         container.innerHTML = `
           <div style="grid-column:1/-1;text-align:center;padding:36px;background:var(--bg-elevated);border-radius:14px;">
-            <div style="font-weight:700;font-size:15px;margin-bottom:6px;">No listings in this specific board filter yet</div>
+            <div style="font-weight:700;font-size:15px;margin-bottom:6px;">No listings in this specific filter yet</div>
             <div style="font-size:13px;color:var(--text-muted);margin-bottom:14px;">
-              Click "All Sources" above or click "Search All 10 Job Boards Live" to fetch fresh daily listings for ${escapeHtml(state.selectedRoles.join(", "))}.
+              Click "All Languages" or "All Sources" above to broaden your search for ${escapeHtml(state.selectedRoles.join(", "))}.
             </div>
-            <button class="btn-next-glow" onclick="state.activeBoardFilter='all';runLiveInternetRoleSearch();">
-              Search All 10 Job Boards Live
+            <button class="btn-next-glow" onclick="state.activeBoardFilter='all';state.activeLanguageFilter='all';state.languageDedicatedOnly=false;renderFilteredJobs();">
+              Reset Filters &amp; View All Roles
             </button>
           </div>
         `;
@@ -7802,6 +8288,7 @@ ${state.cv.contact}`;
           const cvMatchesText = (j.cvMatchedDetails || ["Executive P&L", "Operations"]).slice(0, 3).join(" · ");
           const resolvedEmail = j.to || resolveJobRecipientEmailClient(j).email;
           const emailViaLabel = j.emailVia || "Auto-Fetched HR Email";
+          const langInfo = j.langInfo || detectJobLanguageRequirement(j);
           return `
             <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
               <div>
@@ -7814,6 +8301,9 @@ ${state.cv.contact}`;
                     <div>
                       <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px;">
                         <span class="source-tag">${escapeHtml((j.source || "LIVE").toUpperCase())}</span>
+                        <span class="lang-req-badge" style="background:${langInfo.badgeColor};color:${langInfo.badgeText};border:1px solid ${langInfo.badgeBorder};" title="Language requirement for this mandate">
+                          ${escapeHtml(langInfo.label)}
+                        </span>
                         <span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">
                           Role Match: ${escapeHtml(j.matchedRole || state.selectedRoles[0])}
                         </span>
@@ -8547,6 +9037,16 @@ ${state.cv.contact}`;
         ? `Throughout my tenure as ${topRole.title} at ${topRole.company}, I have specialized in rapid operational restructuring, aggressive EBITDA expansion, and eliminating supply chain friction across the UAE, GCC, and high-growth markets.`
         : `Throughout my tenure as ${topRole.title} at ${topRole.company}, I have consistently delivered EBITDA expansion, supply chain resilience, and disciplined Board-level governance across the UAE, GCC, and international markets.`;
 
+      const langReq = detectJobLanguageRequirement(job);
+      let languageAlignmentClause = "";
+      if (langReq.lang === "german") {
+        languageAlignmentClause = "\n\nGiven the German-speaking and DACH headquarters alignment required for this mandate, I bring established fluency in German executive technical dialogue and corporate governance standards.";
+      } else if (langReq.lang === "french") {
+        languageAlignmentClause = "\n\nIn alignment with your Francophone mandate requirements, I offer fluent professional French communication for seamless alignment with your Paris executive leadership and regional operations.";
+      } else if (langReq.lang === "arabic") {
+        languageAlignmentClause = "\n\nIn direct alignment with your bilingual mandate requirements, my professional Arabic and English fluency facilitates rapid stakeholder diplomacy, regional regulatory navigation, and executive negotiations.";
+      }
+
       return `Dear Hiring Committee,
 
 ${opening}
@@ -8556,7 +9056,7 @@ ${alignmentClause}
 • ${b1}
 • ${b2}
 
-${governanceClause}${ninetyDayBlock}
+${governanceClause}${ninetyDayBlock}${languageAlignmentClause}
 
 My tailored Executive CV is attached for your review. I welcome the opportunity to discuss how I can immediately accelerate your operational and commercial objectives.
 
