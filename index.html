@@ -1144,8 +1144,11 @@
       transform: translateX(0);
     }
 
+    /* ===================================================================
+       EXECUTIVE CV THEMES & PORTRAIT PHOTO STYLING
+       =================================================================== */
     .cv-sheet {
-      background: #FFFFFF;
+      background: var(--cv-bg, #FFFFFF);
       color: #0F172A;
       border-radius: 12px;
       border: 1px solid #CBD5E1;
@@ -1154,26 +1157,63 @@
       font-size: 12.5px;
       line-height: 1.55;
       position: relative;
+      transition: all 200ms ease;
     }
 
     .cv-header-block {
-      border-bottom: 2px solid #0F172A;
+      border-bottom: 2px solid var(--cv-head-rule, #0F172A);
       padding-bottom: 14px;
       margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cv-header-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cv-photo-frame {
+      flex-shrink: 0;
+      width: 90px;
+      height: 108px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid var(--cv-accent, #059669);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+      background: #F8FAFC;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cv-photo-frame.circle {
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
+    }
+
+    .cv-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .cv-name {
-      font-family: var(--font-serif);
+      font-family: var(--cv-font-serif, var(--font-serif));
       font-size: 24px;
       font-weight: 800;
-      color: #0F172A;
+      color: var(--cv-accent, #0F172A);
       letter-spacing: -0.025em;
     }
 
     .cv-headline {
       font-size: 13.5px;
       font-weight: 700;
-      color: #059669;
+      color: var(--cv-gold, #059669);
       margin-top: 2px;
     }
 
@@ -1189,10 +1229,164 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.10em;
-      color: #0F172A;
+      color: var(--cv-accent, #0F172A);
       border-bottom: 1px solid #E2E8F0;
       padding-bottom: 4px;
       margin: 14px 0 8px;
+    }
+
+    /* 5 CURATED EXECUTIVE CV THEMES */
+    /* 1. Monaco Royal Navy & Gold (Board & C-Suite Classic) */
+    .cv-sheet.cv-theme-monaco {
+      --cv-accent: #0A2540;
+      --cv-gold: #B45309;
+      --cv-head-rule: #0A2540;
+      --cv-font-serif: var(--font-serif);
+      --cv-bg: #FFFFFF;
+      border-top: 4px solid #0A2540;
+    }
+    .cv-sheet.cv-theme-monaco .cv-name {
+      color: #0A2540;
+      font-family: var(--font-serif);
+      letter-spacing: 0.02em;
+    }
+    .cv-sheet.cv-theme-monaco .cv-headline {
+      color: #B45309;
+    }
+    .cv-sheet.cv-theme-monaco .cv-sec-title {
+      color: #0A2540;
+      border-bottom-color: #D4AF37;
+    }
+
+    /* 2. Zurich Carbon & Platinum (Swiss Architectural Precision) */
+    .cv-sheet.cv-theme-zurich {
+      --cv-accent: #18181B;
+      --cv-gold: #52525B;
+      --cv-head-rule: #18181B;
+      --cv-font-serif: var(--font-sans);
+      --cv-bg: #FFFFFF;
+      border-top: 4px solid #18181B;
+    }
+    .cv-sheet.cv-theme-zurich .cv-name {
+      color: #18181B;
+      font-family: var(--font-sans);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .cv-sheet.cv-theme-zurich .cv-headline {
+      color: #52525B;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .cv-sheet.cv-theme-zurich .cv-sec-title {
+      color: #18181B;
+      border-bottom-color: #E4E4E7;
+    }
+
+    /* 3. Executive Emerald & Slate (Turnaround & Operations) */
+    .cv-sheet.cv-theme-emerald {
+      --cv-accent: #064E3B;
+      --cv-gold: #059669;
+      --cv-head-rule: #064E3B;
+      --cv-font-serif: var(--font-serif);
+      --cv-bg: #FFFFFF;
+      border-top: 4px solid #059669;
+    }
+    .cv-sheet.cv-theme-emerald .cv-name {
+      color: #064E3B;
+      font-family: var(--font-serif);
+    }
+    .cv-sheet.cv-theme-emerald .cv-headline {
+      color: #059669;
+    }
+    .cv-sheet.cv-theme-emerald .cv-sec-title {
+      color: #064E3B;
+      border-bottom-color: #10B981;
+    }
+
+    /* 4. Bordeaux Prestige (Imperial Wine & Amber) */
+    .cv-sheet.cv-theme-bordeaux {
+      --cv-accent: #722F37;
+      --cv-gold: #9A3412;
+      --cv-head-rule: #722F37;
+      --cv-font-serif: var(--font-serif);
+      --cv-bg: #FFFFFF;
+      border-top: 4px solid #722F37;
+    }
+    .cv-sheet.cv-theme-bordeaux .cv-name {
+      color: #722F37;
+      font-family: var(--font-serif);
+      letter-spacing: 0.01em;
+    }
+    .cv-sheet.cv-theme-bordeaux .cv-headline {
+      color: #9A3412;
+    }
+    .cv-sheet.cv-theme-bordeaux .cv-sec-title {
+      color: #722F37;
+      border-bottom-color: #FDBA74;
+    }
+
+    /* 5. Nordic Midnight & Ice Cyan (Tech & Modern Operations) */
+    .cv-sheet.cv-theme-nordic {
+      --cv-accent: #0F172A;
+      --cv-gold: #0284C7;
+      --cv-head-rule: #0284C7;
+      --cv-font-serif: var(--font-sans);
+      --cv-bg: #FFFFFF;
+      border-top: 4px solid #0284C7;
+    }
+    .cv-sheet.cv-theme-nordic .cv-name {
+      color: #0F172A;
+      font-family: var(--font-sans);
+      font-weight: 800;
+    }
+    .cv-sheet.cv-theme-nordic .cv-headline {
+      color: #0284C7;
+      font-weight: 700;
+    }
+    .cv-sheet.cv-theme-nordic .cv-sec-title {
+      color: #0F172A;
+      border-bottom-color: #38BDF8;
+    }
+
+    /* THEME SWITCHER CONTROLS */
+    .theme-swatch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 150ms var(--ease-out);
+    }
+    .theme-swatch-btn:hover {
+      border-color: var(--border-focus);
+      color: var(--text-primary);
+    }
+    .theme-swatch-btn.active {
+      border-color: #0A66C2;
+      background: rgba(10, 102, 194, 0.08);
+      color: var(--text-primary);
+      font-weight: 700;
+      box-shadow: 0 0 0 1px #0A66C2;
+    }
+    .swatch-dots {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .swatch-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
     }
 
     .cv-role-item {
@@ -1279,7 +1473,7 @@
     }
 
     @media print {
-      .wizard-header-wrap, .page-hero-card, .page-footer-nav, .step-pane, .cv-drawer-backdrop {
+      .wizard-header-wrap, .page-hero-card, .page-footer-nav, .step-pane, .cv-drawer-backdrop, .cv-theme-photo-toolbar, .ai-laser-scanner {
         display: none !important;
       }
       .cv-drawer-panel {
@@ -1403,6 +1597,9 @@
               <button class="btn-pill-secondary" id="btnToggleLinkedIn" style="border-color:#0A66C2;color:#0A66C2;font-weight:700;display:inline-flex;align-items:center;gap:6px;" onclick="toggleLinkedInBox()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 <span>Connect &amp; Combine LinkedIn</span>
+              </button>
+              <button class="btn-pill-secondary" onclick="document.getElementById('cvPhotoInputPage1').click()" title="Add optional executive portrait photo to CV">
+                Photo (Optional)
               </button>
               <button class="btn-pill-secondary" onclick="resetToDemoCv()">
                 Reset Demo CV
@@ -1651,6 +1848,38 @@
                 <label class="writer-field-lbl">Target Mandate / Executive Focus Banner</label>
                 <input type="text" class="writer-input" id="wrFocusInput" oninput="updateWriterTopFields()" placeholder="Target Mandate: General Manager / Managing Director — Full P&L Ownership" />
               </div>
+
+              <!-- Executive Portrait Photo Upload & Controls inside Writer -->
+              <div style="margin-top:14px;padding:12px;background:var(--bg-elevated);border:1px dashed var(--border-strong);border-radius:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+                <input type="file" id="wrPhotoFileInput" accept="image/png,image/jpeg,image/webp" style="display:none;" onchange="handleCvPhotoUpload(event)" />
+                <div id="wrPhotoThumbWrap" style="width:48px;height:58px;border-radius:8px;overflow:hidden;border:1px solid var(--border-strong);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <img id="wrPhotoThumbImg" src="" alt="Thumbnail" style="width:100%;height:100%;object-fit:cover;display:none;" />
+                  <span id="wrPhotoThumbPlaceholder" style="font-size:22px;color:var(--text-muted);">👤</span>
+                </div>
+                <div style="flex:1;min-width:180px;">
+                  <div style="font-weight:700;font-size:13px;color:var(--text-primary);display:flex;align-items:center;gap:6px;">
+                    <span>Executive Portrait Photo</span>
+                    <span style="font-size:10.5px;padding:1px 6px;border-radius:4px;background:rgba(5,150,105,0.12);color:var(--accent-emerald);font-weight:600;">Optional</span>
+                  </div>
+                  <div style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">
+                    C-Suite executive portrait (PNG/JPG/WEBP). 1-click toggle between executive photo presentation and pure ATS text-only.
+                  </div>
+                </div>
+                <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+                  <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 11px;" onclick="document.getElementById('wrPhotoFileInput').click()">
+                    <span id="wrUploadPhotoLabel">Upload Photo</span>
+                  </button>
+                  <button type="button" class="btn-pill-secondary" id="btnWrPhotoFraming" style="display:none;font-size:11.5px;padding:5px 10px;" onclick="toggleCvPhotoFraming()">
+                    Framing: Squircle
+                  </button>
+                  <button type="button" class="btn-pill-secondary" id="btnWrPhotoToggle" style="display:none;font-size:11.5px;padding:5px 10px;" onclick="togglePhotoDisplay()">
+                    Display: ON
+                  </button>
+                  <button type="button" class="btn-pill-secondary" id="btnWrPhotoRemove" style="display:none;font-size:11.5px;padding:5px 9px;color:var(--accent-rose);" onclick="removeCvPhoto()">
+                    Remove
+                  </button>
+                </div>
+              </div>
             </div>
 
             <!-- Section 2: Summary -->
@@ -1739,6 +1968,64 @@
               <span style="font-size:12px;color:var(--text-muted);">Every single line read from your file</span>
             </div>
             <pre id="page1VerbatimCvPre" style="margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--font-sans);font-size:12.5px;line-height:1.6;color:var(--text-primary);max-height:520px;overflow-y:auto;"></pre>
+          </div>
+
+          <!-- Executive CV Theme & Portrait Styling Toolbar -->
+          <div class="cv-theme-photo-toolbar" style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;padding:12px 16px;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:12px;flex-wrap:wrap;">
+            <!-- Left: Curated Executive Themes -->
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.06em;">
+                Executive Theme:
+              </span>
+              <div style="display:inline-flex;gap:6px;flex-wrap:wrap;" role="group" aria-label="CV Color Themes">
+                <button type="button" class="theme-swatch-btn active" data-theme="monaco" onclick="setExecutiveCvTheme('monaco')" title="Monaco Royal Navy & Gold (Board & C-Suite Classic)">
+                  <span class="swatch-dots"><span style="background:#0A2540;"></span><span style="background:#D4AF37;"></span></span>
+                  <span>Monaco (Navy &amp; Gold)</span>
+                </button>
+                <button type="button" class="theme-swatch-btn" data-theme="zurich" onclick="setExecutiveCvTheme('zurich')" title="Zurich Carbon & Platinum (Swiss Architectural Precision)">
+                  <span class="swatch-dots"><span style="background:#18181B;"></span><span style="background:#71717A;"></span></span>
+                  <span>Zurich (Carbon)</span>
+                </button>
+                <button type="button" class="theme-swatch-btn" data-theme="emerald" onclick="setExecutiveCvTheme('emerald')" title="Executive Emerald & Slate (Operations & Turnaround)">
+                  <span class="swatch-dots"><span style="background:#064E3B;"></span><span style="background:#059669;"></span></span>
+                  <span>Emerald (Board)</span>
+                </button>
+                <button type="button" class="theme-swatch-btn" data-theme="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" title="Bordeaux Prestige (Imperial Wine & Amber)">
+                  <span class="swatch-dots"><span style="background:#722F37;"></span><span style="background:#B45309;"></span></span>
+                  <span>Bordeaux (Prestige)</span>
+                </button>
+                <button type="button" class="theme-swatch-btn" data-theme="nordic" onclick="setExecutiveCvTheme('nordic')" title="Nordic Midnight & Ice Cyan (Tech & Modern Scale)">
+                  <span class="swatch-dots"><span style="background:#0F172A;"></span><span style="background:#0284C7;"></span></span>
+                  <span>Nordic (Midnight)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Executive Portrait Controls -->
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+              <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.06em;">
+                Portrait Photo:
+              </span>
+              <input type="file" id="cvPhotoInputPage1" accept="image/png,image/jpeg,image/webp" style="display:none;" onchange="handleCvPhotoUpload(event)" />
+              <button type="button" class="btn-pill-secondary" id="btnPage1UploadPhoto" style="font-size:11.5px;padding:5px 11px;" onclick="document.getElementById('cvPhotoInputPage1').click()">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                <span id="page1UploadPhotoLabel">Upload Portrait</span>
+              </button>
+              <div id="page1PhotoActiveControls" style="display:none;align-items:center;gap:6px;">
+                <!-- Shape Framing Toggle -->
+                <button type="button" class="btn-pill-secondary" id="btnPage1PhotoShape" style="font-size:11.5px;padding:5px 10px;" onclick="toggleCvPhotoFraming()" title="Switch framing between Squircle and Circle">
+                  Framing: Squircle
+                </button>
+                <!-- On/Off Display Toggle -->
+                <button type="button" class="btn-pill-secondary" id="btnPage1PhotoToggle" style="font-size:11.5px;padding:5px 10px;" onclick="togglePhotoDisplay()" title="Toggle photo display on CV">
+                  Photo: ON
+                </button>
+                <!-- Remove Photo -->
+                <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 9px;color:var(--accent-rose);" onclick="removeCvPhoto()" title="Remove photo from CV">
+                  Remove
+                </button>
+              </div>
+            </div>
           </div>
 
           <!-- Full-Length Synchronized A4 CV Sheet Preview on Page 1 -->
@@ -2105,16 +2392,48 @@
             </div>
           </div>
 
+          <!-- Drawer Compact Executive Theme Switcher -->
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;padding:8px 12px;background:var(--bg-elevated);border-radius:10px;border:1px solid var(--border-strong);flex-wrap:wrap;">
+            <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.05em;">
+              Executive Theme:
+            </span>
+            <div style="display:inline-flex;gap:5px;flex-wrap:wrap;">
+              <button type="button" class="theme-swatch-btn active" data-theme="monaco" onclick="setExecutiveCvTheme('monaco')" style="padding:3px 8px;font-size:11px;">
+                <span class="swatch-dots"><span style="background:#0A2540;"></span><span style="background:#D4AF37;"></span></span>
+                <span>Monaco</span>
+              </button>
+              <button type="button" class="theme-swatch-btn" data-theme="zurich" onclick="setExecutiveCvTheme('zurich')" style="padding:3px 8px;font-size:11px;">
+                <span class="swatch-dots"><span style="background:#18181B;"></span><span style="background:#71717A;"></span></span>
+                <span>Zurich</span>
+              </button>
+              <button type="button" class="theme-swatch-btn" data-theme="emerald" onclick="setExecutiveCvTheme('emerald')" style="padding:3px 8px;font-size:11px;">
+                <span class="swatch-dots"><span style="background:#064E3B;"></span><span style="background:#059669;"></span></span>
+                <span>Emerald</span>
+              </button>
+              <button type="button" class="theme-swatch-btn" data-theme="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" style="padding:3px 8px;font-size:11px;">
+                <span class="swatch-dots"><span style="background:#722F37;"></span><span style="background:#B45309;"></span></span>
+                <span>Bordeaux</span>
+              </button>
+              <button type="button" class="theme-swatch-btn" data-theme="nordic" onclick="setExecutiveCvTheme('nordic')" style="padding:3px 8px;font-size:11px;">
+                <span class="swatch-dots"><span style="background:#0F172A;"></span><span style="background:#0284C7;"></span></span>
+                <span>Nordic</span>
+              </button>
+            </div>
+          </div>
+
           <div class="cv-3d-stage" id="cv3dStageWrap">
             <div class="ai-laser-scanner" id="aiLaserScannerEl"></div>
 
             <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
-            <div class="cv-sheet sheet" id="draftCvSheetEl" style="--accent:#059669;">
-              <div class="cv-header-block hd">
-                <div style="width:100%;">
+            <div class="cv-sheet sheet" id="draftCvSheetEl">
+              <div class="cv-header-block hd" id="cvHeaderBlockEl">
+                <div class="cv-header-text" style="flex:1;min-width:0;">
                   <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
                   <div class="cv-headline role" id="cvHeadlineEl">Chief Operating Officer &middot; General Manager &middot; Managing Director</div>
                   <div class="cv-contact-line meta" id="cvContactEl"></div>
+                </div>
+                <div class="cv-photo-frame" id="cvPhotoFrameEl" style="display:none;">
+                  <img id="cvPhotoImgEl" src="" alt="Executive Portrait" class="cv-photo-img" />
                 </div>
               </div>
 
@@ -2191,6 +2510,9 @@
       name: "AHMED AL-MANSOOR",
       headline: "Chief Operating Officer · General Manager · Managing Director",
       contact: "Dubai, United Arab Emirates · +971 50 482 9104 · ahmed.almansoor.exec@gmail.com · linkedin.com/in/ahmedalmansoor",
+      photoUrl: "",
+      showPhoto: false,
+      photoShape: "squircle",
       summary: "Responsible for managing company operations, factory teams, budgets, and supply chain activities across the UAE and GCC region.",
       focusLine: "Target Mandate: General Manager / Managing Director / Operations Director — Full P&L Ownership, Multi-Site Operations & Turnaround Leadership.",
       skills: [
@@ -2463,6 +2785,13 @@
 
     const state = {
       currentStep: 1,
+      cvTheme: (function () {
+        try {
+          return localStorage.getItem("ai_cv_portal_theme") || "monaco";
+        } catch (e) {
+          return "monaco";
+        }
+      })(),
       cv: JSON.parse(JSON.stringify(DEMO_CV)),
       suggestions: [],
       upgradedKeys: new Set(),
@@ -2474,6 +2803,7 @@
       customCoverLetter: "",
       injectedKeywords: new Set()
     };
+    window.state = state;
 
     /* ------------------------------------------------------------------
        2. HR DIRECTOR CV ANALYZER (GENERATES LOCATION-AWARE 1-CLICK DIFF CARDS)
@@ -2595,6 +2925,20 @@
         .map((part, idx) => `<div style="display:inline">${escapeHtml(part)}${idx < contactParts.length - 1 ? " · " : ""}</div>`)
         .join("");
 
+      // Executive Portrait Photo Frame on Master Sheet
+      const photoFrame = document.getElementById("cvPhotoFrameEl");
+      const photoImg = document.getElementById("cvPhotoImgEl");
+      if (photoFrame && photoImg) {
+        if (cv.photoUrl && cv.showPhoto !== false) {
+          photoImg.src = cv.photoUrl;
+          photoFrame.className = "cv-photo-frame" + (cv.photoShape === "circle" ? " circle" : "");
+          photoFrame.style.display = "flex";
+        } else {
+          photoFrame.style.display = "none";
+          photoImg.src = "";
+        }
+      }
+
       const sumEl = document.getElementById("cvSummaryEl");
       sumEl.textContent = cv.summary || "";
       sumEl.className = "sum" + (state.upgradedKeys.has("sug-summary") ? " upgraded-highlight" : "");
@@ -2667,6 +3011,14 @@
         page1Mirror.innerHTML = masterSheet.innerHTML.replace(/\bid="([^"]+)"/g, 'data-mirror-id="$1"');
       }
 
+      // Synchronize Executive Theme class across all CV sheets (master and mirror)
+      const themeClass = `cv-theme-${state.cvTheme || "monaco"}`;
+      const allThemeClasses = ["cv-theme-monaco", "cv-theme-zurich", "cv-theme-emerald", "cv-theme-bordeaux", "cv-theme-nordic"];
+      document.querySelectorAll(".cv-sheet").forEach((sheet) => {
+        allThemeClasses.forEach((c) => sheet.classList.remove(c));
+        sheet.classList.add(themeClass);
+      });
+
       const totalBullets = (cv.roles || []).reduce((acc, r) => acc + ((r.bullets && r.bullets.length) || 0), 0);
       const extraCount = (cv.additionalSections || []).reduce((acc, s) => acc + ((s.lines && s.lines.length) || 0), 0);
       const compBadge = document.getElementById("page1CvCompletenessBadge");
@@ -2700,6 +3052,8 @@
           ].join("\n");
       }
 
+      updatePhotoToolbarControls();
+
       if (!skipWriterSync) {
         syncCvWriterInputs();
       }
@@ -2713,6 +3067,163 @@
       wrap.style.display = isHidden ? "block" : "none";
       if (btn) {
         btn.textContent = isHidden ? "Hide Verbatim Uploaded Text" : "Show Verbatim Uploaded Text";
+      }
+    }
+
+    /* ------------------------------------------------------------------
+       3A. EXECUTIVE CV THEMES & PORTRAIT PHOTO MANAGEMENT
+       ------------------------------------------------------------------ */
+    function setExecutiveCvTheme(themeId, silent) {
+      if (!themeId) themeId = "monaco";
+      state.cvTheme = themeId;
+      try {
+        localStorage.setItem("ai_cv_portal_theme", themeId);
+      } catch {}
+
+      const allThemes = ["cv-theme-monaco", "cv-theme-zurich", "cv-theme-emerald", "cv-theme-bordeaux", "cv-theme-nordic"];
+      document.querySelectorAll(".cv-sheet").forEach((sheet) => {
+        allThemes.forEach((cls) => sheet.classList.remove(cls));
+        sheet.classList.add(`cv-theme-${themeId}`);
+      });
+
+      document.querySelectorAll(".theme-swatch-btn").forEach((btn) => {
+        const matches = btn.getAttribute("data-theme") === themeId;
+        btn.classList.toggle("active", matches);
+      });
+
+      if (!silent) {
+        const names = {
+          monaco: "Monaco Royal Navy & Gold",
+          zurich: "Zurich Carbon & Platinum",
+          emerald: "Executive Emerald & Slate",
+          bordeaux: "Bordeaux Prestige",
+          nordic: "Nordic Midnight & Cyan"
+        };
+        showToast(`Executive CV Theme switched to ${names[themeId] || themeId}`);
+      }
+    }
+
+    function handleCvPhotoUpload(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      if (!file.type.startsWith("image/")) {
+        showToast("Please select a valid image file (PNG, JPG, or WEBP).");
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        showToast("Photo is too large (max 10MB). Please select a smaller portrait.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        state.cv.photoUrl = e.target.result;
+        state.cv.showPhoto = true;
+        if (!state.cv.photoShape) state.cv.photoShape = "squircle";
+        renderLiveCvSheet();
+        updatePhotoToolbarControls();
+        showToast("Executive portrait photo added to CV");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function togglePhotoDisplay(force) {
+      if (!state.cv.photoUrl) {
+        const inp = document.getElementById("cvPhotoInputPage1") || document.getElementById("wrPhotoFileInput");
+        if (inp) inp.click();
+        return;
+      }
+      if (typeof force === "boolean") {
+        state.cv.showPhoto = force;
+      } else {
+        state.cv.showPhoto = !state.cv.showPhoto;
+      }
+      renderLiveCvSheet();
+      updatePhotoToolbarControls();
+      showToast(state.cv.showPhoto ? "Executive portrait photo visible on CV" : "Switched to ATS Text-Only CV Mode (Photo hidden)");
+    }
+
+    function toggleCvPhotoFraming() {
+      if (!state.cv.photoUrl) return;
+      const current = state.cv.photoShape || "squircle";
+      const next = current === "squircle" ? "circle" : "squircle";
+      state.cv.photoShape = next;
+      renderLiveCvSheet();
+      updatePhotoToolbarControls();
+      showToast(`Photo framing set to ${next === "circle" ? "Circle" : "Squircle"}`);
+    }
+
+    function removeCvPhoto() {
+      state.cv.photoUrl = "";
+      state.cv.showPhoto = false;
+      const inp1 = document.getElementById("cvPhotoInputPage1");
+      const inp2 = document.getElementById("wrPhotoFileInput");
+      if (inp1) inp1.value = "";
+      if (inp2) inp2.value = "";
+      renderLiveCvSheet();
+      updatePhotoToolbarControls();
+      showToast("Portrait photo removed from CV");
+    }
+
+    function updatePhotoToolbarControls() {
+      const cv = state.cv || {};
+      const hasPhoto = !!cv.photoUrl;
+      const isVisible = hasPhoto && cv.showPhoto !== false;
+      const shape = cv.photoShape || "squircle";
+
+      // 1. Page 1 Toolbar Controls
+      const p1Active = document.getElementById("page1PhotoActiveControls");
+      const p1UploadLabel = document.getElementById("page1UploadPhotoLabel");
+      const p1ShapeBtn = document.getElementById("btnPage1PhotoShape");
+      const p1ToggleBtn = document.getElementById("btnPage1PhotoToggle");
+
+      if (p1Active) p1Active.style.display = hasPhoto ? "inline-flex" : "none";
+      if (p1UploadLabel) p1UploadLabel.textContent = hasPhoto ? "Change Photo" : "Upload Portrait";
+      if (p1ShapeBtn) p1ShapeBtn.textContent = `Framing: ${shape === "circle" ? "Circle" : "Squircle"}`;
+      if (p1ToggleBtn) {
+        p1ToggleBtn.textContent = isVisible ? "Photo: ON" : "ATS Text-Only";
+        p1ToggleBtn.style.color = isVisible ? "var(--accent-emerald)" : "var(--text-muted)";
+      }
+
+      // 2. CV Writer Section 1 Controls
+      const wrThumbImg = document.getElementById("wrPhotoThumbImg");
+      const wrThumbPlace = document.getElementById("wrPhotoThumbPlaceholder");
+      const wrThumbWrap = document.getElementById("wrPhotoThumbWrap");
+      const wrUploadLabel = document.getElementById("wrUploadPhotoLabel");
+      const btnWrFraming = document.getElementById("btnWrPhotoFraming");
+      const btnWrToggle = document.getElementById("btnWrPhotoToggle");
+      const btnWrRemove = document.getElementById("btnWrPhotoRemove");
+
+      if (wrThumbImg && wrThumbPlace && wrThumbWrap) {
+        if (hasPhoto && cv.photoUrl) {
+          wrThumbImg.src = cv.photoUrl;
+          wrThumbImg.style.display = "block";
+          wrThumbPlace.style.display = "none";
+          wrThumbWrap.style.borderRadius = shape === "circle" ? "50%" : "8px";
+          wrThumbWrap.style.width = shape === "circle" ? "52px" : "48px";
+          wrThumbWrap.style.height = shape === "circle" ? "52px" : "58px";
+        } else {
+          wrThumbImg.src = "";
+          wrThumbImg.style.display = "none";
+          wrThumbPlace.style.display = "block";
+          wrThumbWrap.style.borderRadius = "8px";
+          wrThumbWrap.style.width = "48px";
+          wrThumbWrap.style.height = "58px";
+        }
+      }
+
+      if (wrUploadLabel) wrUploadLabel.textContent = hasPhoto ? "Change Portrait" : "Upload Photo";
+      if (btnWrFraming) {
+        btnWrFraming.style.display = hasPhoto ? "inline-block" : "none";
+        btnWrFraming.textContent = `Framing: ${shape === "circle" ? "Circle" : "Squircle"}`;
+      }
+      if (btnWrToggle) {
+        btnWrToggle.style.display = hasPhoto ? "inline-block" : "none";
+        btnWrToggle.textContent = isVisible ? "Display: ON" : "Display: Hidden (ATS)";
+        btnWrToggle.style.color = isVisible ? "var(--accent-emerald)" : "var(--text-muted)";
+      }
+      if (btnWrRemove) {
+        btnWrRemove.style.display = hasPhoto ? "inline-block" : "none";
       }
     }
 
@@ -3026,6 +3537,10 @@
     }
 
     function startNewCvPreset(preset) {
+      const prevPhotoUrl = (state.cv && state.cv.photoUrl) || "";
+      const prevShowPhoto = state.cv ? state.cv.showPhoto : false;
+      const prevPhotoShape = (state.cv && state.cv.photoShape) || "squircle";
+
       if (preset === "blank") {
         state.cv = {
           name: "YOUR FULL NAME",
@@ -3054,7 +3569,10 @@
               ]
             }
           ],
-          education: "Executive MBA / Bachelor's Degree · Professional Certifications · Languages: English, Arabic"
+          education: "Executive MBA / Bachelor's Degree · Professional Certifications · Languages: English, Arabic",
+          photoUrl: prevPhotoUrl,
+          showPhoto: prevShowPhoto,
+          photoShape: prevPhotoShape
         };
       } else {
         const titles = {
@@ -3064,6 +3582,9 @@
           coo: "Chief Operating Officer (COO) · Group General Manager · Managing Director"
         };
         state.cv = JSON.parse(JSON.stringify(DEMO_CV));
+        state.cv.photoUrl = prevPhotoUrl;
+        state.cv.showPhoto = prevShowPhoto;
+        state.cv.photoShape = prevPhotoShape;
         state.cv.headline = titles[preset] || DEMO_CV.headline;
         aiWriteSummaryForRole(
           preset === "md"
@@ -4583,6 +5104,9 @@
         "Senior executive leader with extensive operational, commercial, and P&L management experience.";
 
       const finalHeadline = detectedHeadlineFromHeader || detectedRoles.slice(0, 3).join(" · ");
+      const prevPhotoUrl = (state.cv && state.cv.photoUrl) || "";
+      const prevShowPhoto = state.cv ? state.cv.showPhoto : false;
+      const prevPhotoShape = (state.cv && state.cv.photoShape) || "squircle";
 
       state.cv = {
         name,
@@ -4594,7 +5118,10 @@
         roles: validRoles,
         education: educationLines.length ? educationLines.join("\n") : "Executive Education & Professional Qualifications (See CV Details)",
         additionalSections: additionalSections.filter((s) => s.lines && s.lines.length),
-        rawFullText: lines.join("\n")
+        rawFullText: lines.join("\n"),
+        photoUrl: prevPhotoUrl,
+        showPhoto: prevShowPhoto,
+        photoShape: prevPhotoShape
       };
 
       if (state.isCombinedWithLinkedIn && state.linkedInProfile) {
@@ -4644,6 +5171,11 @@
       const activeMergedBar = document.getElementById("liActiveMergedBar");
       if (activeMergedBar) activeMergedBar.style.display = "none";
 
+      const pInp1 = document.getElementById("cvPhotoInputPage1");
+      const pInp2 = document.getElementById("wrPhotoFileInput");
+      if (pInp1) pInp1.value = "";
+      if (pInp2) pInp2.value = "";
+
       document.getElementById("cvUploadStatus").innerHTML =
         `Currently loaded: <strong>Ahmed Al-Mansoor — Chief Operating Officer / General Manager CV</strong>`;
       renderLiveCvSheet();
@@ -4652,6 +5184,7 @@
       rescoreAllJobsAgainstCv();
       renderFilteredJobs();
       syncWriterFromStateCv();
+      updatePhotoToolbarControls();
       updateDailyFetchBannerUI();
       showToast("Reset to Demo Executive CV.");
       if (state.dailyAutoFetchEnabled !== false) {
@@ -6047,11 +6580,15 @@ ${state.cv.contact}`;
       try {
         const savedAuto = localStorage.getItem("ai_cv_portal_daily_autofetch_enabled");
         if (savedAuto === "0") state.dailyAutoFetchEnabled = false;
+        const savedTheme = localStorage.getItem("ai_cv_portal_theme");
+        if (savedTheme) state.cvTheme = savedTheme;
       } catch {}
 
+      setExecutiveCvTheme(state.cvTheme || "monaco", true);
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       rescoreAllJobsAgainstCv();
       renderLiveCvSheet();
+      updatePhotoToolbarControls();
       renderCvSuggestions();
       renderRoleLockChips();
       updateDailyFetchBannerUI();
