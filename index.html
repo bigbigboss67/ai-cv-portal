@@ -1376,26 +1376,33 @@
 
       <div class="bezel-outer">
         <div class="bezel-inner">
-          <!-- Step 1A: Universal CV Upload Dropzone -->
+          <!-- Step 1A: Universal CV Upload & LinkedIn Integration Dropzone -->
           <div class="upload-strip" id="cvDropzone"
                ondragover="event.preventDefault(); this.classList.add('dragover');"
                ondragleave="this.classList.remove('dragover');"
                ondrop="handleCvDrop(event)">
             <div>
-              <div style="font-weight:700;font-size:14px;color:var(--text-primary);">
-                Upload Your CV File (PDF, Word DOCX/DOC, RTF, TXT, HTML, JSON, or Image)
+              <div style="font-weight:700;font-size:14px;color:var(--text-primary);display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span>Upload Your CV &amp; Connect LinkedIn Profile</span>
+                <span id="cvCombineBadge" style="display:none;background:rgba(10,102,194,0.12);color:#0A66C2;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid rgba(10,102,194,0.3);">
+                  ✓ CV + LinkedIn Merged
+                </span>
               </div>
               <div style="font-size:12.5px;color:var(--text-muted);margin-top:2px;" id="cvUploadStatus">
                 Currently loaded: <strong>Ahmed Al-Mansoor &mdash; Chief Operating Officer / General Manager CV</strong>
               </div>
             </div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
               <input type="file" id="cvFileInput" accept=".pdf,.docx,.doc,.rtf,.txt,.html,.json,.png,.jpg,.jpeg" style="display:none" onchange="handleCvFileSelect(event)" />
               <button class="btn-pill-secondary" onclick="document.getElementById('cvFileInput').click()">
                 Upload CV File
               </button>
               <button class="btn-pill-secondary" onclick="togglePasteCvBox()">
                 Paste CV Text
+              </button>
+              <button class="btn-pill-secondary" id="btnToggleLinkedIn" style="border-color:#0A66C2;color:#0A66C2;font-weight:700;display:inline-flex;align-items:center;gap:6px;" onclick="toggleLinkedInBox()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>Connect &amp; Combine LinkedIn</span>
               </button>
               <button class="btn-pill-secondary" onclick="resetToDemoCv()">
                 Reset Demo CV
@@ -1410,6 +1417,85 @@
             <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px;">
               <button class="btn-pill-secondary" onclick="togglePasteCvBox()">Cancel</button>
               <button class="btn-next-glow" style="padding:8px 16px;font-size:12.5px;" onclick="applyPastedCvText()">Analyze &amp; Build CV</button>
+            </div>
+          </div>
+
+          <!-- Interactive LinkedIn Connect & Combine Drawer -->
+          <div id="linkedInDrawer" style="display:none;margin-bottom:20px;background:var(--bg-elevated);padding:18px;border-radius:14px;border:1px solid rgba(10,102,194,0.35);box-shadow:0 8px 24px rgba(10,102,194,0.08);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+              <div style="display:flex;align-items:center;gap:8px;">
+                <div style="background:#0A66C2;color:white;width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;line-height:1;">in</div>
+                <div style="font-weight:700;font-size:14.5px;color:var(--text-primary);">
+                  Connect &amp; Combine LinkedIn Profile with Your CV
+                </div>
+              </div>
+              <span style="font-size:12px;color:var(--accent-emerald);font-weight:600;">
+                ✓ Lossless Merge: Combines roles, endorsed skills, certifications &amp; headline into a unified profile
+              </span>
+            </div>
+
+            <!-- LinkedIn Method Tabs -->
+            <div style="display:flex;gap:8px;margin-bottom:14px;border-bottom:1px solid var(--border-subtle);padding-bottom:10px;flex-wrap:wrap;">
+              <button type="button" class="btn-pill-secondary" id="liTabBtnUrl" style="background:rgba(10,102,194,0.12);color:#0A66C2;font-weight:700;font-size:12px;border-color:#0A66C2;" onclick="switchLinkedInTab('url')">
+                1. Fetch from LinkedIn URL
+              </button>
+              <button type="button" class="btn-pill-secondary" id="liTabBtnFile" style="font-size:12px;" onclick="switchLinkedInTab('file')">
+                2. Upload LinkedIn PDF Export
+              </button>
+              <button type="button" class="btn-pill-secondary" id="liTabBtnPaste" style="font-size:12px;" onclick="switchLinkedInTab('paste')">
+                3. Paste LinkedIn Profile Text
+              </button>
+            </div>
+
+            <!-- Tab 1: Fetch via URL -->
+            <div id="liPaneUrl">
+              <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;">
+                Enter your public LinkedIn profile link or username (e.g. <code>https://www.linkedin.com/in/your-name</code> or <code>your-name</code>):
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                <input type="text" id="linkedInUrlInput" class="writer-input" style="flex:1;min-width:240px;font-size:13px;padding:9px 12px;" placeholder="https://www.linkedin.com/in/username" />
+                <button type="button" class="btn-next-glow" id="btnFetchLinkedInLive" style="padding:9px 20px;font-size:12.5px;background:#0A66C2;" onclick="fetchAndCombineLinkedInLive()">
+                  <span id="btnFetchLinkedInText">Fetch &amp; Combine with CV</span>
+                </button>
+              </div>
+              <div id="liFetchStatusMsg" style="font-size:12px;color:var(--text-muted);margin-top:8px;"></div>
+            </div>
+
+            <!-- Tab 2: Upload LinkedIn PDF File -->
+            <div id="liPaneFile" style="display:none;">
+              <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;">
+                Export your LinkedIn profile to PDF: open your profile on LinkedIn &rarr; click <strong>More</strong> &rarr; <strong>Save to PDF</strong> &rarr; upload the file here:
+              </div>
+              <input type="file" id="liFileInput" accept=".pdf,.docx,.doc,.txt,.json,.html" style="display:none" onchange="handleLinkedInFileSelect(event)" />
+              <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+                <button type="button" class="btn-pill-secondary" style="background:var(--bg-card);border-color:#0A66C2;color:#0A66C2;font-weight:700;padding:8px 16px;" onclick="document.getElementById('liFileInput').click()">
+                  Select LinkedIn PDF File
+                </button>
+                <span id="liFileStatus" style="font-size:12px;color:var(--text-muted);">No file chosen yet</span>
+              </div>
+            </div>
+
+            <!-- Tab 3: Paste LinkedIn Text -->
+            <div id="liPanePaste" style="display:none;">
+              <div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px;">
+                Select all or copy experience, skills, and summary directly from your LinkedIn profile page and paste here:
+              </div>
+              <textarea id="liPasteTextarea" rows="5" class="writer-textarea" style="width:100%;font-size:12.5px;padding:10px;" placeholder="Paste LinkedIn profile text here..."></textarea>
+              <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px;">
+                <button type="button" class="btn-next-glow" style="padding:8px 18px;font-size:12.5px;background:#0A66C2;" onclick="applyPastedLinkedInText()">
+                  Combine LinkedIn Text with CV
+                </button>
+              </div>
+            </div>
+
+            <!-- Active Merged Profile Status Bar inside Drawer (when linked) -->
+            <div id="liActiveMergedBar" style="display:none;margin-top:14px;padding:10px 14px;background:rgba(52,211,153,0.1);border:1px solid #34D399;border-radius:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+              <div style="font-size:12px;color:var(--text-primary);" id="liActiveMergedSummary">
+                ✓ Combined Profile Active: 4 roles &middot; 38 skills &middot; 2 education records merged.
+              </div>
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;color:var(--accent-rose);border-color:var(--accent-rose);padding:4px 10px;" onclick="disconnectLinkedInProfile()">
+                Revert to CV Only (Unlink LinkedIn)
+              </button>
             </div>
           </div>
 
@@ -3285,6 +3371,779 @@
       document.getElementById("pasteCvDrawer").style.display = "none";
     }
 
+    /* ------------------------------------------------------------------
+       LINKEDIN PROFILE SYNC & LOSSLESS CV COMBINER
+       ------------------------------------------------------------------ */
+    state.isCombinedWithLinkedIn = false;
+    state.linkedInProfile = null;
+    state.cvBeforeLinkedIn = null;
+
+    function toggleLinkedInBox() {
+      const el = document.getElementById("linkedInDrawer");
+      if (!el) return;
+      const willOpen = el.style.display === "none";
+      el.style.display = willOpen ? "block" : "none";
+      if (willOpen) {
+        const input = document.getElementById("linkedInUrlInput");
+        if (input && !input.value) input.focus();
+      }
+    }
+
+    function switchLinkedInTab(tab) {
+      const paneUrl = document.getElementById("liPaneUrl");
+      const paneFile = document.getElementById("liPaneFile");
+      const panePaste = document.getElementById("liPanePaste");
+      const btnUrl = document.getElementById("liTabBtnUrl");
+      const btnFile = document.getElementById("liTabBtnFile");
+      const btnPaste = document.getElementById("liTabBtnPaste");
+
+      if (paneUrl) paneUrl.style.display = tab === "url" ? "block" : "none";
+      if (paneFile) paneFile.style.display = tab === "file" ? "block" : "none";
+      if (panePaste) panePaste.style.display = tab === "paste" ? "block" : "none";
+
+      const activeStyle = "background:rgba(10,102,194,0.12);color:#0A66C2;font-weight:700;font-size:12px;border-color:#0A66C2;";
+      const inactiveStyle = "background:transparent;color:var(--text-secondary);font-weight:500;font-size:12px;border-color:var(--border-strong);";
+
+      if (btnUrl) btnUrl.style.cssText = tab === "url" ? activeStyle : inactiveStyle;
+      if (btnFile) btnFile.style.cssText = tab === "file" ? activeStyle : inactiveStyle;
+      if (btnPaste) btnPaste.style.cssText = tab === "paste" ? activeStyle : inactiveStyle;
+    }
+
+    function cleanLinkedInUrl(rawUrl) {
+      if (!rawUrl) return "";
+      let u = String(rawUrl).trim();
+      if (!/^https?:\/\//i.test(u)) {
+        if (/^[a-zA-Z0-9_\-\u0080-\uFFFF%]+$/.test(u)) {
+          u = `https://www.linkedin.com/in/${u}`;
+        } else if (/^(?:www\.)?linkedin\.com/i.test(u)) {
+          u = `https://${u.replace(/^https?:\/\//i, "")}`;
+        } else {
+          u = `https://${u}`;
+        }
+      }
+      try {
+        const parsed = new URL(u);
+        let path = parsed.pathname.replace(/\/+$/, "");
+        if (!path.startsWith("/in/")) {
+          const match = path.match(/\/in\/([a-zA-Z0-9_\-\u0080-\uFFFF%]+)/);
+          if (match) path = `/in/${match[1]}`;
+        }
+        return `https://www.linkedin.com${path}`;
+      } catch {
+        return u;
+      }
+    }
+
+    function parseLinkedInProfileText(text, sourceUrl) {
+      if (!text || typeof text !== "string") return null;
+
+      const rawLines = text
+        .replace(/\r\n?/g, "\n")
+        .replace(/\u00A0/g, " ")
+        .split("\n")
+        .map((l) => l.trim())
+        .filter(Boolean);
+
+      if (!rawLines.length) return null;
+
+      let name = "";
+      let headline = "";
+      let location = "";
+      let summary = "";
+      const roles = [];
+      const education = [];
+      const skills = [];
+      const certifications = [];
+      const languages = [];
+
+      const isMarkdown = rawLines.some((l) => /^#{1,4}\s+/.test(l));
+
+      if (isMarkdown) {
+        // 1. MARKDOWN / WEB READER PARSER
+        for (let i = 0; i < Math.min(rawLines.length, 120); i++) {
+          const l = rawLines[i];
+          const m = l.match(/^#\s+([^#\n]+)$/);
+          if (m) {
+            const c = m[1].replace(/\[.*?\]|\(.*?\)/g, "").trim();
+            if (!/sign in|join|linkedin|skip to|view|activity|articles/i.test(c) && c.length <= 80) {
+              name = c;
+              break;
+            }
+          }
+        }
+
+        if (!name) {
+          const titleMatch = text.match(/Title:\s*([^\n\-|–—]+)/i);
+          if (titleMatch && titleMatch[1]) {
+            const candidate = titleMatch[1].trim();
+            if (!/sign in|join|linkedin/i.test(candidate)) name = candidate;
+          }
+        }
+
+        for (let i = 0; i < Math.min(rawLines.length, 120); i++) {
+          const l = rawLines[i];
+          if (/^##\s+([^#\n]+)$/.test(l)) {
+            const t = l.replace(/^##\s+/, "").trim();
+            if (!headline && !/sign in|join|about|experience|education|activity|articles|skills|licenses|certifications/i.test(t) && t.length <= 160) {
+              headline = t;
+            }
+          } else if (/^###\s+([^#\n]+)$/.test(l)) {
+            const t = l.replace(/^###\s+/, "").replace(/Contact Info/i, "").trim();
+            if (!location && /(?:united arab emirates|uae|dubai|abu dhabi|saudi|riyadh|qatar|kuwait|bahrain|oman|germany|munich|berlin|united states|usa|uk|london|canada|australia|singapore|city|area|region)/i.test(t) && t.length <= 90) {
+              location = t;
+            }
+          }
+        }
+
+        const aboutIdx = rawLines.findIndex((l) => /^##\s*About\b/i.test(l));
+        if (aboutIdx !== -1) {
+          const aboutLines = [];
+          for (let i = aboutIdx + 1; i < rawLines.length; i++) {
+            const l = rawLines[i];
+            if (/^##\s+/i.test(l)) break;
+            if (l && !/^\[|^!\[/i.test(l) && !/sign in|join to view/i.test(l)) {
+              aboutLines.push(l);
+            }
+          }
+          summary = aboutLines.join("\n").trim();
+        }
+
+        const expIdx = rawLines.findIndex((l) => /^##\s*Experience\b/i.test(l));
+        if (expIdx !== -1) {
+          let currentRole = null;
+          for (let i = expIdx + 1; i < rawLines.length; i++) {
+            const l = rawLines[i];
+            if (/^##\s+(?:Education|Licenses|Certifications|Skills|Honors|Languages|Projects|View|Other)/i.test(l)) {
+              if (currentRole && (currentRole.company || currentRole.bullets.length)) roles.push(currentRole);
+              currentRole = null;
+              break;
+            }
+
+            const h3Match = l.match(/(?:^|[^#])###\s+([^\n#]+)/);
+            if (h3Match) {
+              const rawTitle = h3Match[1].replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/[\[\]()]/g, "").trim();
+              if (rawTitle && !/view full profile|sign in/i.test(rawTitle)) {
+                if (currentRole && (currentRole.company || currentRole.bullets.length)) {
+                  roles.push(currentRole);
+                }
+                currentRole = {
+                  title: rawTitle,
+                  company: "",
+                  location: "",
+                  dates: "",
+                  bullets: []
+                };
+                continue;
+              }
+            }
+
+            const h4Match = l.match(/^(?:####|\*?\s*####)\s*(?:\[([^\]]+)\]\([^)]+\)|([^\n]+))/);
+            if (h4Match && currentRole && !currentRole.company) {
+              const comp = (h4Match[1] || h4Match[2] || "").trim();
+              if (comp && comp !== "-") {
+                currentRole.company = comp;
+                continue;
+              }
+            }
+
+            const dateMatch = l.match(/\b((?:(?:19|20)\d{2}\s*[-–—]\s*(?:Present|Current|\d{4}))|(?:(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4}\s*[-–—]\s*(?:Present|Current|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{4})))\b/i);
+            if (dateMatch && currentRole && !currentRole.dates) {
+              currentRole.dates = l.replace(/\s+/g, " ").trim();
+              continue;
+            }
+
+            if (currentRole && !currentRole.location && /(?:dubai|abu dhabi|uae|united arab emirates|saudi|riyadh|london|uk|munich|germany|area|city)/i.test(l) && l.length <= 80 && !/^[\*\-•]/.test(l)) {
+              currentRole.location = l.trim();
+              continue;
+            }
+
+            if (currentRole && l && !l.startsWith("http") && !/^\[.*\]\(.*\)$/.test(l) && !/sign in|join/i.test(l)) {
+              const clean = l.replace(/^[\*\-•▪▸]\s*/, "").trim();
+              if (clean.length > 5 && !clean.startsWith("Company Name") && !clean.startsWith("Dates")) {
+                currentRole.bullets.push(clean);
+              }
+            }
+          }
+          if (currentRole && (currentRole.company || currentRole.bullets.length)) {
+            roles.push(currentRole);
+          }
+        }
+
+        const eduIdx = rawLines.findIndex((l) => /^##\s*Education\b/i.test(l));
+        if (eduIdx !== -1) {
+          for (let i = eduIdx + 1; i < rawLines.length; i++) {
+            const l = rawLines[i];
+            if (/^##\s+(?:Licenses|Certifications|Skills|Honors|Languages|Projects|View|Other)/i.test(l)) break;
+            const h3 = l.match(/(?:^|[^#])###\s+([^\n#]+)/);
+            if (h3) {
+              const school = h3[1].replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").trim();
+              if (school && school !== "-") education.push(school);
+            } else {
+              const h4 = l.match(/^(?:####|\*?\s*####)\s*(?:\[([^\]]+)\]\([^)]+\)|([^\n]+))/);
+              if (h4 && education.length) {
+                const deg = (h4[1] || h4[2] || "").trim();
+                if (deg && deg !== "-") education[education.length - 1] += ` · ${deg}`;
+              }
+            }
+          }
+        }
+
+        const skillsIdx = rawLines.findIndex((l) => /^##\s*(?:Skills|Top Skills)\b/i.test(l));
+        if (skillsIdx !== -1) {
+          for (let i = skillsIdx + 1; i < rawLines.length; i++) {
+            const l = rawLines[i];
+            if (/^##\s+/i.test(l)) break;
+            const clean = l.replace(/^[\*\-•▪▸]\s*/, "").replace(/\[([^\]]+)\]\([^)]+\)/, "$1").trim();
+            if (clean && clean.length >= 2 && clean.length <= 60 && !/sign in|endorse|see all/i.test(clean)) {
+              if (!skills.includes(clean)) skills.push(clean);
+            }
+          }
+        }
+
+        const certIdx = rawLines.findIndex((l) => /^##\s*(?:Licenses & Certifications|Certifications)\b/i.test(l));
+        if (certIdx !== -1) {
+          for (let i = certIdx + 1; i < rawLines.length; i++) {
+            const l = rawLines[i];
+            if (/^##\s+/i.test(l)) break;
+            const clean = l.replace(/^[\*\-•▪▸#]+\s*/, "").replace(/\[([^\]]+)\]\([^)]+\)/, "$1").trim();
+            if (clean && clean.length >= 3 && clean.length <= 90 && !/sign in|show credential/i.test(clean)) {
+              if (!certifications.includes(clean)) certifications.push(clean);
+            }
+          }
+        }
+      } else {
+        // 2. PLAIN TEXT / LINKEDIN PDF EXPORT PARSER
+        let currentSection = "header";
+        let pendingRole = null;
+
+        for (let i = 0; i < rawLines.length; i++) {
+          const l = rawLines[i];
+
+          if (/^contact$/i.test(l)) {
+            currentSection = "contact";
+            continue;
+          }
+          if (/^(?:top\s+)?skills$/i.test(l)) {
+            currentSection = "skills";
+            continue;
+          }
+          if (/^languages$/i.test(l)) {
+            currentSection = "languages";
+            continue;
+          }
+          if (/^(?:licenses\s*&\s*)?certifications$/i.test(l)) {
+            currentSection = "certifications";
+            continue;
+          }
+          if (/^(?:summary|about)$/i.test(l)) {
+            currentSection = "summary";
+            continue;
+          }
+          if (/^(?:experience|work\s+experience)$/i.test(l)) {
+            currentSection = "experience";
+            continue;
+          }
+          if (/^education$/i.test(l)) {
+            if (pendingRole && (pendingRole.company || pendingRole.bullets.length)) {
+              roles.push(pendingRole);
+              pendingRole = null;
+            }
+            currentSection = "education";
+            continue;
+          }
+
+          if (currentSection === "header") {
+            if (!name && l.length <= 70 && !/@|linkedin\.com/i.test(l)) {
+              name = l;
+            } else if (!headline && l.length <= 160 && !/@|linkedin\.com/i.test(l)) {
+              headline = l;
+            } else if (!location && /(?:united arab emirates|uae|dubai|abu dhabi|saudi|riyadh|qatar|kuwait|germany|usa|uk|london|canada|australia|city|area|region)/i.test(l)) {
+              location = l;
+            }
+          } else if (currentSection === "skills") {
+            if (l.length >= 2 && l.length <= 60 && !skills.includes(l)) {
+              skills.push(l);
+            }
+          } else if (currentSection === "languages") {
+            languages.push(l);
+          } else if (currentSection === "certifications") {
+            certifications.push(l);
+          } else if (currentSection === "summary") {
+            summary += (summary ? "\n" : "") + l;
+          } else if (currentSection === "experience") {
+            const isDateLine = /\b(?:(?:19|20)\d{2}\s*[-–—]\s*(?:Present|Current|\d{4})|(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(?:19|20)\d{2}\s*[-–—]\s*(?:Present|Current|\w+\s+(?:19|20)\d{2}))\b/i.test(l);
+
+            if (isDateLine) {
+              const titleLine = rawLines[i - 1] || "";
+              const companyLine = rawLines[i - 2] || "";
+
+              if (pendingRole) {
+                while (pendingRole.bullets.length && (
+                  pendingRole.bullets[pendingRole.bullets.length - 1] === titleLine ||
+                  pendingRole.bullets[pendingRole.bullets.length - 1] === companyLine
+                )) {
+                  pendingRole.bullets.pop();
+                }
+                if (pendingRole.company || pendingRole.bullets.length) {
+                  roles.push(pendingRole);
+                }
+              }
+
+              pendingRole = {
+                title: titleLine.replace(/^[\*\-•▪▸]\s*/, ""),
+                company: companyLine.replace(/^[\*\-•▪▸]\s*/, ""),
+                location: "",
+                dates: l,
+                bullets: []
+              };
+              continue;
+            }
+
+            if (pendingRole) {
+              if (!pendingRole.location && /(?:dubai|abu dhabi|uae|united arab emirates|saudi|riyadh|qatar|london|munich|germany|area|city)/i.test(l) && l.length <= 70) {
+                pendingRole.location = l;
+              } else {
+                const clean = l.replace(/^[\*\-•▪▸]\s*/, "").trim();
+                if (clean.length > 5) pendingRole.bullets.push(clean);
+              }
+            }
+          } else if (currentSection === "education") {
+            education.push(l);
+          }
+        }
+
+        if (pendingRole && (pendingRole.company || pendingRole.bullets.length)) {
+          roles.push(pendingRole);
+        }
+      }
+
+      const cleanEdu = education
+        .filter((e) => e && e !== "-" && e.length > 2)
+        .join(" · ");
+
+      return {
+        sourceUrl: sourceUrl || "",
+        name: name || "",
+        headline: headline || "",
+        location: location || "",
+        summary: summary || "",
+        roles: roles.filter((r) => r.title || r.company || (r.bullets && r.bullets.length)),
+        education: cleanEdu,
+        skills,
+        certifications,
+        languages
+      };
+    }
+
+    function combineCvAndLinkedInProfiles(baseCv, liProfile) {
+      if (!baseCv) {
+        return {
+          name: (liProfile.name || "EXECUTIVE CANDIDATE").toUpperCase(),
+          headline: liProfile.headline || "Executive Leader",
+          contact: `${liProfile.location || "UAE & International"}${liProfile.sourceUrl ? " · " + liProfile.sourceUrl : ""}`,
+          summary: liProfile.summary || "Accomplished executive leader with a strong track record of operational and commercial success.",
+          focusLine: `Target Mandate: ${liProfile.headline || "Executive Management"} — Operational Leadership.`,
+          skills: liProfile.skills && liProfile.skills.length ? liProfile.skills : ["General Management", "Operations Leadership"],
+          roles: liProfile.roles && liProfile.roles.length ? liProfile.roles : [],
+          education: liProfile.education || "Executive Education & Credentials",
+          additionalSections: [],
+          rawFullText: "",
+          isCombinedWithLinkedIn: true,
+          linkedInUrl: liProfile.sourceUrl || "",
+          combineStats: { rolesMerged: 0, newRolesAdded: (liProfile.roles || []).length, skillsAdded: (liProfile.skills || []).length, totalRoles: (liProfile.roles || []).length, totalSkills: (liProfile.skills || []).length }
+        };
+      }
+
+      const combined = JSON.parse(JSON.stringify(baseCv));
+
+      // 1. Name: preserve base CV name if complete, otherwise use LinkedIn
+      if ((!combined.name || combined.name === "EXECUTIVE CANDIDATE") && liProfile.name) {
+        combined.name = liProfile.name.toUpperCase();
+      }
+
+      // 2. Headline: merge distinct executive keywords
+      if (liProfile.headline) {
+        if (!combined.headline) {
+          combined.headline = liProfile.headline;
+        } else {
+          const cvTitles = combined.headline.split(/\s*[·|/]\s*/).map((s) => s.trim().toLowerCase());
+          const liTitles = liProfile.headline.split(/\s*[·|/]\s*/).map((s) => s.trim());
+          const additions = [];
+          for (const t of liTitles) {
+            if (t && !cvTitles.includes(t.toLowerCase()) && !/influencer|speaker|author/i.test(t)) {
+              additions.push(t);
+            }
+          }
+          if (additions.length) {
+            combined.headline = `${combined.headline} · ${additions.slice(0, 2).join(" · ")}`;
+          }
+        }
+      }
+
+      // 3. Contact: ensure LinkedIn URL and location are represented
+      if (liProfile.sourceUrl && !/linkedin\.com/i.test(combined.contact || "")) {
+        const cleanLi = liProfile.sourceUrl.replace(/^https?:\/\/(?:www\.)?/, "");
+        combined.contact = (combined.contact ? combined.contact + " · " : "") + cleanLi;
+      }
+      if (liProfile.location && !/(?:dubai|abu dhabi|uae|saudi|riyadh|germany)/i.test(combined.contact || "")) {
+        combined.contact = liProfile.location + (combined.contact ? " · " + combined.contact : "");
+      }
+
+      // 4. Summary: blend executive value proposition
+      if (liProfile.summary) {
+        if (!combined.summary) {
+          combined.summary = liProfile.summary;
+        } else if (liProfile.summary.length > 40 && !combined.summary.toLowerCase().includes(liProfile.summary.slice(0, 30).toLowerCase())) {
+          const sentences = liProfile.summary
+            .split(/(?<=[.!?])\s+/)
+            .filter((s) => s.length > 20 && !combined.summary.toLowerCase().includes(s.slice(0, 25).toLowerCase()));
+          if (sentences.length) {
+            combined.summary = `${combined.summary}\n\n${sentences.slice(0, 3).join(" ")}`;
+          }
+        }
+      }
+
+      // 5. Roles / Experience: LOSSLESS MERGER
+      let mergedCount = 0;
+      let addedCount = 0;
+      const existingRoles = combined.roles || [];
+      const liRoles = liProfile.roles || [];
+
+      for (const lr of liRoles) {
+        const lrCompNorm = (lr.company || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        const lrTitleNorm = (lr.title || "").toLowerCase();
+
+        let matchedRole = null;
+        for (const er of existingRoles) {
+          const erCompNorm = (er.company || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          const erTitleNorm = (er.title || "").toLowerCase();
+
+          const compMatch = lrCompNorm && erCompNorm && (lrCompNorm.includes(erCompNorm) || erCompNorm.includes(lrCompNorm));
+          const titleMatch = lrTitleNorm && erTitleNorm && (lrTitleNorm.includes(erTitleNorm) || erTitleNorm.includes(lrTitleNorm));
+
+          if (compMatch || (titleMatch && lr.dates && er.dates && lr.dates.slice(0, 4) === er.dates.slice(0, 4))) {
+            matchedRole = er;
+            break;
+          }
+        }
+
+        if (matchedRole) {
+          matchedRole.bullets = matchedRole.bullets || [];
+          for (const lb of lr.bullets || []) {
+            const lbClean = lb.trim();
+            const exists = matchedRole.bullets.some((b) => {
+              const sim = b.toLowerCase();
+              return sim.includes(lbClean.toLowerCase().slice(0, 30)) || lbClean.toLowerCase().includes(sim.slice(0, 30));
+            });
+            if (!exists && lbClean.length > 10) {
+              matchedRole.bullets.push(lbClean);
+              mergedCount++;
+            }
+          }
+          if (!matchedRole.dates && lr.dates) matchedRole.dates = lr.dates;
+          if (!matchedRole.location && lr.location) matchedRole.location = lr.location;
+        } else if (lr.title || lr.company) {
+          existingRoles.push({
+            title: lr.title || "Executive Role",
+            company: lr.company || "",
+            location: lr.location || "",
+            dates: lr.dates || "",
+            bullets: lr.bullets && lr.bullets.length ? lr.bullets : ["Contributed executive leadership, operational management, and strategic initiatives."]
+          });
+          addedCount++;
+        }
+      }
+
+      combined.roles = existingRoles;
+
+      // 6. Skills: Union of CV & LinkedIn skills
+      const skillsSet = new Set((combined.skills || []).map((s) => s.trim()));
+      const initialSkillCount = skillsSet.size;
+
+      for (const s of liProfile.skills || []) {
+        const trimmed = s.trim();
+        if (trimmed && !Array.from(skillsSet).some((x) => x.toLowerCase() === trimmed.toLowerCase())) {
+          skillsSet.add(trimmed);
+        }
+      }
+      for (const c of liProfile.certifications || []) {
+        const trimmed = c.trim();
+        if (trimmed && !Array.from(skillsSet).some((x) => x.toLowerCase() === trimmed.toLowerCase())) {
+          skillsSet.add(trimmed);
+        }
+      }
+      combined.skills = Array.from(skillsSet).slice(0, 45);
+      const skillsAdded = combined.skills.length - initialSkillCount;
+
+      // 7. Education & Certifications
+      if (liProfile.education) {
+        if (!combined.education) {
+          combined.education = liProfile.education;
+        } else if (!combined.education.toLowerCase().includes(liProfile.education.toLowerCase().slice(0, 25))) {
+          combined.education = `${combined.education} · ${liProfile.education}`;
+        }
+      }
+      if (liProfile.certifications && liProfile.certifications.length) {
+        const certStr = liProfile.certifications.join(" · ");
+        if (!combined.education.includes(certStr.slice(0, 20))) {
+          combined.education = `${combined.education} · ${certStr}`;
+        }
+      }
+
+      combined.isCombinedWithLinkedIn = true;
+      combined.linkedInUrl = liProfile.sourceUrl || "";
+      combined.combineStats = {
+        rolesMerged: mergedCount,
+        newRolesAdded: addedCount,
+        skillsAdded: Math.max(0, skillsAdded),
+        totalRoles: combined.roles.length,
+        totalSkills: combined.skills.length
+      };
+
+      return combined;
+    }
+
+    function applyCombinedProfileToState(combined, liData, sourceDesc) {
+      if (!state.cvBeforeLinkedIn) {
+        state.cvBeforeLinkedIn = JSON.parse(JSON.stringify(state.cv));
+      }
+      state.cv = combined;
+      state.isCombinedWithLinkedIn = true;
+      state.linkedInProfile = liData;
+      state.upgradedKeys.clear();
+      state.suggestions = buildHrDirectorSuggestions(state.cv).slice(0, 18);
+
+      const totalBullets = (state.cv.roles || []).reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
+      const stats = state.cv.combineStats || { rolesMerged: 0, newRolesAdded: 0, skillsAdded: 0 };
+
+      const badge = document.getElementById("cvCombineBadge");
+      if (badge) badge.style.display = "inline-flex";
+
+      const btnToggle = document.getElementById("btnToggleLinkedIn");
+      if (btnToggle) {
+        btnToggle.style.background = "rgba(10,102,194,0.12)";
+        btnToggle.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span>LinkedIn Profile Merged ✓</span>`;
+      }
+
+      const statusEl = document.getElementById("cvUploadStatus");
+      if (statusEl) {
+        statusEl.innerHTML = `✓ Combined CV &amp; LinkedIn Profile: <strong>${escapeHtml(state.cv.name)}</strong> (${state.cv.roles.length} roles &middot; ${totalBullets} experience lines &middot; ${state.cv.skills.length} skills &middot; ${stats.newRolesAdded} roles &amp; ${stats.skillsAdded} skills added from LinkedIn)`;
+      }
+
+      const activeMergedBar = document.getElementById("liActiveMergedBar");
+      if (activeMergedBar) {
+        activeMergedBar.style.display = "flex";
+        const sumEl = document.getElementById("liActiveMergedSummary");
+        if (sumEl) {
+          sumEl.innerHTML = `✓ <strong>Combined Profile Active (${escapeHtml(sourceDesc)})</strong>: ${state.cv.roles.length} roles &middot; ${state.cv.skills.length} skills &middot; ${totalBullets} achievements merged losslessly.`;
+        }
+      }
+
+      renderLiveCvSheet();
+      renderCvSuggestions();
+      renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
+      renderFilteredJobs();
+      syncWriterFromStateCv();
+      updateDailyFetchBannerUI();
+
+      showToast(`✨ CV & LinkedIn combined! Added ${stats.newRolesAdded} roles and ${stats.skillsAdded} skills.`);
+      if (state.dailyAutoFetchEnabled !== false) {
+        runLiveInternetRoleSearch({ silent: true, isDailySync: true });
+      }
+    }
+
+    async function fetchAndCombineLinkedInLive() {
+      const input = document.getElementById("linkedInUrlInput");
+      const rawUrl = input ? input.value.trim() : "";
+      const statusMsg = document.getElementById("liFetchStatusMsg");
+      const btn = document.getElementById("btnFetchLinkedInLive");
+      const btnText = document.getElementById("btnFetchLinkedInText");
+
+      if (!rawUrl) {
+        if (statusMsg) statusMsg.innerHTML = `<span style="color:var(--accent-rose);">Please enter your LinkedIn profile link or username.</span>`;
+        return;
+      }
+
+      const cleanUrl = cleanLinkedInUrl(rawUrl);
+      if (btn) btn.disabled = true;
+      if (btnText) btnText.textContent = "Fetching Profile...";
+      if (statusMsg) statusMsg.innerHTML = `<span style="color:var(--text-secondary);">Connecting to LinkedIn profile <code>${escapeHtml(cleanUrl)}</code>...</span>`;
+
+      try {
+        let profileData = null;
+        let fetchErr = null;
+
+        // 1. Try our serverless proxy endpoint /api/linkedin-profile
+        try {
+          const resp = await fetch(`/api/linkedin-profile?url=${encodeURIComponent(cleanUrl)}`, {
+            signal: AbortSignal.timeout(13000)
+          });
+          if (resp.ok) {
+            const json = await resp.json();
+            if (json.ok && json.data && (json.data.name || (json.data.roles && json.data.roles.length))) {
+              profileData = json.data;
+            } else if (json.error === "authwall" || json.fallbackRequired) {
+              fetchErr = json.message || "Sign-in required by LinkedIn";
+            }
+          }
+        } catch (e) {
+          console.warn("Backend /api/linkedin-profile call failed, falling back to direct reader:", e.message);
+        }
+
+        // 2. Direct client-side reader fallback via r.jina.ai
+        if (!profileData && !fetchErr) {
+          try {
+            const jinaResp = await fetch(`https://r.jina.ai/${cleanUrl}`, {
+              headers: { Accept: "text/plain" },
+              signal: AbortSignal.timeout(12000)
+            });
+            if (jinaResp.ok) {
+              const md = await jinaResp.text();
+              const parsed = parseLinkedInProfileText(md, cleanUrl);
+              if (parsed && (parsed.name || (parsed.roles && parsed.roles.length))) {
+                profileData = parsed;
+              }
+            }
+          } catch (jinaErr) {
+            console.warn("Client-side Jina reader error:", jinaErr.message);
+          }
+        }
+
+        if (profileData) {
+          profileData.sourceUrl = cleanUrl;
+          const combined = combineCvAndLinkedInProfiles(state.cv, profileData);
+          applyCombinedProfileToState(combined, profileData, cleanUrl);
+          if (statusMsg) {
+            statusMsg.innerHTML = `<span style="color:var(--accent-emerald);font-weight:600;">✓ Successfully fetched &amp; combined profile from ${escapeHtml(cleanUrl)}!</span>`;
+          }
+        } else {
+          // If profile is gated behind login, guide user with 1-click fallback
+          if (statusMsg) {
+            statusMsg.innerHTML = `
+              <div style="margin-top:4px;padding:8px 12px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:8px;">
+                <div style="color:var(--accent-rose);font-weight:700;margin-bottom:3px;">
+                  LinkedIn Sign-In Wall Encountered
+                </div>
+                <div style="color:var(--text-secondary);font-size:12px;">
+                  This profile requires sign-in to view. You can easily merge your profile:
+                  <br /><strong>1.</strong> In LinkedIn, click <strong>More</strong> &rarr; <strong>Save to PDF</strong>.
+                  <br /><strong>2.</strong> Switch to tab <a href="javascript:void(0)" onclick="switchLinkedInTab('file')" style="color:#0A66C2;font-weight:700;text-decoration:underline;">2. Upload LinkedIn PDF Export</a> above and select the PDF, or copy-paste text in tab 3.
+                </div>
+              </div>
+            `;
+          }
+        }
+      } catch (err) {
+        if (statusMsg) statusMsg.innerHTML = `<span style="color:var(--accent-rose);">${escapeHtml(err.message || "Failed to fetch LinkedIn profile")}</span>`;
+      } finally {
+        if (btn) btn.disabled = false;
+        if (btnText) btnText.textContent = "Fetch & Combine with CV";
+      }
+    }
+
+    async function handleLinkedInFileSelect(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const statusEl = document.getElementById("liFileStatus");
+      if (statusEl) statusEl.textContent = `Reading ${file.name}...`;
+
+      try {
+        const ext = (file.name.split(".").pop() || "").toLowerCase();
+        let rawText = "";
+
+        if (ext === "pdf" && window.pdfjsLib) {
+          const buf = await file.arrayBuffer();
+          const pdf = await window.pdfjsLib.getDocument({ data: buf }).promise;
+          const pages = [];
+          for (let i = 1; i <= pdf.numPages; i++) {
+            const page = await pdf.getPage(i);
+            const tc = await page.getTextContent();
+            const pageText = extractLinesFromPdfPage(tc);
+            if (pageText) pages.push(pageText);
+          }
+          rawText = pages.join("\n\n");
+        } else if ((ext === "docx" || ext === "doc") && window.mammoth) {
+          const buf = await file.arrayBuffer();
+          const res = await window.mammoth.extractRawText({ arrayBuffer: buf });
+          rawText = res.value || "";
+        } else {
+          rawText = await file.text();
+        }
+
+        if (!rawText || rawText.trim().length < 20) {
+          throw new Error("Could not extract readable text from file. Please try pasting profile text.");
+        }
+
+        const liData = parseLinkedInProfileText(rawText, file.name);
+        if (!liData || (!liData.name && !liData.roles.length && !liData.skills.length)) {
+          throw new Error("Could not detect LinkedIn profile sections in this file.");
+        }
+
+        const combined = combineCvAndLinkedInProfiles(state.cv, liData);
+        applyCombinedProfileToState(combined, liData, file.name);
+        if (statusEl) statusEl.innerHTML = `<span style="color:var(--accent-emerald);font-weight:700;">✓ Loaded &amp; Merged: ${escapeHtml(file.name)}</span>`;
+      } catch (err) {
+        if (statusEl) statusEl.innerHTML = `<span style="color:var(--accent-rose);">${escapeHtml(err.message || "File import error")}</span>`;
+      }
+    }
+
+    function applyPastedLinkedInText() {
+      const txt = document.getElementById("liPasteTextarea") ? document.getElementById("liPasteTextarea").value.trim() : "";
+      if (txt.length < 20) {
+        showToast("Please paste your LinkedIn profile text.");
+        return;
+      }
+
+      const liData = parseLinkedInProfileText(txt, "Pasted LinkedIn Text");
+      if (!liData || (!liData.name && !liData.roles.length && !liData.skills.length)) {
+        showToast("Could not recognize LinkedIn profile structure. Please ensure experience or skills are included.");
+        return;
+      }
+
+      const combined = combineCvAndLinkedInProfiles(state.cv, liData);
+      applyCombinedProfileToState(combined, liData, "Pasted LinkedIn Text");
+    }
+
+    function disconnectLinkedInProfile() {
+      if (state.cvBeforeLinkedIn) {
+        state.cv = JSON.parse(JSON.stringify(state.cvBeforeLinkedIn));
+        state.cvBeforeLinkedIn = null;
+      }
+      state.isCombinedWithLinkedIn = false;
+      state.linkedInProfile = null;
+      state.upgradedKeys.clear();
+      state.suggestions = buildHrDirectorSuggestions(state.cv).slice(0, 18);
+
+      const badge = document.getElementById("cvCombineBadge");
+      if (badge) badge.style.display = "none";
+
+      const btnToggle = document.getElementById("btnToggleLinkedIn");
+      if (btnToggle) {
+        btnToggle.style.background = "";
+        btnToggle.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span>Connect &amp; Combine LinkedIn</span>`;
+      }
+
+      const activeMergedBar = document.getElementById("liActiveMergedBar");
+      if (activeMergedBar) activeMergedBar.style.display = "none";
+
+      const totalBullets = (state.cv.roles || []).reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
+      const statusEl = document.getElementById("cvUploadStatus");
+      if (statusEl) {
+        statusEl.innerHTML = `Reverted to Base CV: <strong>${escapeHtml(state.cv.name)}</strong> (${state.cv.roles.length} roles &middot; ${totalBullets} experience lines &middot; ${state.cv.skills.length} skills)`;
+      }
+
+      renderLiveCvSheet();
+      renderCvSuggestions();
+      renderRoleLockChips();
+      rescoreAllJobsAgainstCv();
+      renderFilteredJobs();
+      syncWriterFromStateCv();
+      updateDailyFetchBannerUI();
+
+      showToast("LinkedIn unlinked. Reverted to base CV.");
+    }
+
     function normalizeCvRawLines(rawText) {
       let text = String(rawText || "")
         .replace(/\r\n?/g, "\n")
@@ -3738,12 +4597,16 @@
         rawFullText: lines.join("\n")
       };
 
+      if (state.isCombinedWithLinkedIn && state.linkedInProfile) {
+        state.cv = combineCvAndLinkedInProfiles(state.cv, state.linkedInProfile);
+      }
+
       state.upgradedKeys.clear();
       state.suggestions = buildHrDirectorSuggestions(state.cv).slice(0, 18);
-      const totalExtractedBullets = validRoles.reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
+      const totalExtractedBullets = (state.cv.roles || []).reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
       document.getElementById("cvUploadStatus").innerHTML = `Loaded 100% of <strong>${escapeHtml(
         sourceName
-      )}</strong> (${validRoles.length} roles &middot; ${totalExtractedBullets} experience lines &middot; ${finalSkills.length} skills) — ${
+      )}</strong> (${state.cv.roles.length} roles &middot; ${totalExtractedBullets} experience lines &middot; ${state.cv.skills.length} skills) — ${
         state.suggestions.length
       } 1-click HR Director upgrades ready`;
 
@@ -3752,8 +4615,9 @@
       renderRoleLockChips();
       rescoreAllJobsAgainstCv();
       renderFilteredJobs();
+      syncWriterFromStateCv();
       updateDailyFetchBannerUI();
-      showToast(`Full CV loaded (${validRoles.length} roles, ${totalExtractedBullets} lines) — see Complete Live A4 CV Preview below`);
+      showToast(`Full CV loaded (${state.cv.roles.length} roles, ${totalExtractedBullets} lines) — see Complete Live A4 CV Preview below`);
       if (state.dailyAutoFetchEnabled !== false) {
         runLiveInternetRoleSearch({ silent: true, isDailySync: true });
       }
@@ -3761,9 +4625,25 @@
 
     function resetToDemoCv() {
       state.cv = JSON.parse(JSON.stringify(DEMO_CV));
+      state.cvBeforeLinkedIn = null;
+      state.isCombinedWithLinkedIn = false;
+      state.linkedInProfile = null;
       state.upgradedKeys.clear();
       state.selectedRoles = ["General Manager", "Managing Director", "Operations Director", "Chief Operating Officer"];
       state.suggestions = buildHrDirectorSuggestions(state.cv);
+
+      const badge = document.getElementById("cvCombineBadge");
+      if (badge) badge.style.display = "none";
+
+      const btnToggle = document.getElementById("btnToggleLinkedIn");
+      if (btnToggle) {
+        btnToggle.style.background = "";
+        btnToggle.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> <span>Connect &amp; Combine LinkedIn</span>`;
+      }
+
+      const activeMergedBar = document.getElementById("liActiveMergedBar");
+      if (activeMergedBar) activeMergedBar.style.display = "none";
+
       document.getElementById("cvUploadStatus").innerHTML =
         `Currently loaded: <strong>Ahmed Al-Mansoor — Chief Operating Officer / General Manager CV</strong>`;
       renderLiveCvSheet();
@@ -3771,6 +4651,7 @@
       renderRoleLockChips();
       rescoreAllJobsAgainstCv();
       renderFilteredJobs();
+      syncWriterFromStateCv();
       updateDailyFetchBannerUI();
       showToast("Reset to Demo Executive CV.");
       if (state.dailyAutoFetchEnabled !== false) {
