@@ -4186,7 +4186,7 @@
                 <label class="writer-field-lbl">Recipient HR / Recruiter Email (To:) &mdash; Auto-Fetched from Job Listing</label>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;">
                   <input type="text" id="exportToEmail" placeholder="Auto-fetching recipient email from job listing..."
-                         oninput="if(state.selectedJob){state.selectedJob.to = this.value.trim();} if(typeof runPreFlightAudit==='function') runPreFlightAudit(true);"
+                         oninput="if(state.selectedJob){state.selectedJob.to = this.value.trim(); if(typeof syncTrackerApplicationEmail==='function') syncTrackerApplicationEmail(state.selectedJob, this.value.trim());} if(typeof runPreFlightAudit==='function') runPreFlightAudit(true);"
                          style="flex:1;padding:11px 14px;border-radius:10px;border:1.5px solid var(--accent-emerald);font-family:var(--font-mono);font-weight:700;font-size:13.5px;background:var(--bg-surface);color:var(--text-primary);" />
                   <button class="btn-pill-secondary" id="btnFindHrEmail" onclick="autoFindRecipientEmail({ forceDeep: true })">
                     Re-Verify / Deep-Scan Email
@@ -5704,6 +5704,38 @@
       renderApplicationTracker();
     }
 
+    function syncTrackerApplicationEmail(job, email) {
+      if (!job || !email) return;
+      const cleanEmail = String(email).trim().toLowerCase();
+      if (!/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(cleanEmail)) return;
+
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : (job.title || "");
+      const jobComp = String(job.company || "").trim().toLowerCase();
+      const list = getStoredApplications();
+      let updated = false;
+
+      list.forEach((app) => {
+        const appRole = String(app.role || "").trim().toLowerCase();
+        const appComp = String(app.company || "").trim().toLowerCase();
+        const isSameRole =
+          appRole === cleanRole.toLowerCase() ||
+          (job.title && appRole === String(job.title).trim().toLowerCase());
+        const isSameComp =
+          appComp === jobComp ||
+          (jobComp && appComp.includes(jobComp)) ||
+          (jobComp && jobComp.includes(appComp));
+
+        if (isSameRole && isSameComp && app.to !== cleanEmail) {
+          app.to = cleanEmail;
+          updated = true;
+        }
+      });
+
+      if (updated) {
+        saveStoredApplications(list);
+      }
+    }
+
     function trackApplication(data, source = "portal") {
       if (!data || !data.role) return;
       const list = getStoredApplications();
@@ -5728,13 +5760,24 @@
         lastFollowedUpAt: null
       };
 
-      // Deduplication check
-      const isDuplicate = list.some(
-        (a) => a.role.toLowerCase() === newApp.role.toLowerCase() &&
-               a.company.toLowerCase() === newApp.company.toLowerCase() &&
-               (now - a.appliedAt < 15000)
+      // In-Place Deduplication & Sync Check
+      const existingIdx = list.findIndex(
+        (a) =>
+          a.role.toLowerCase() === newApp.role.toLowerCase() &&
+          (a.company.toLowerCase() === newApp.company.toLowerCase() ||
+           a.company.toLowerCase().includes(newApp.company.toLowerCase()) ||
+           newApp.company.toLowerCase().includes(a.company.toLowerCase()))
       );
-      if (isDuplicate) return;
+      if (existingIdx >= 0) {
+        if (newApp.to) list[existingIdx].to = newApp.to;
+        if (data.subject) list[existingIdx].subject = newApp.subject;
+        if (data.platform) list[existingIdx].platform = newApp.platform;
+        list[existingIdx].appliedAt = now;
+        list[existingIdx].stage = "applied";
+        saveStoredApplications(list);
+        showToast(`Updated tracked application for "${newApp.role}"`);
+        return;
+      }
 
       list.unshift(newApp);
       saveStoredApplications(list);
@@ -5761,6 +5804,7 @@
       const filtered = getFilteredJobs();
       const job = filtered[index] || state.jobs[index];
       if (!job) return;
+      resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       trackApplication({
         role: cleanRole,
@@ -9063,32 +9107,35 @@
     function resolveJobRecipientEmailClient(job) {
       if (!job || typeof job !== "object") return { email: "", via: "" };
 
-      // 1. Keep existing valid email on job.to
+      const rawCompany = String(job.company || "").trim();
+      const isGenericCompany =
+        !rawCompany ||
+        /^(confidential|executive employer|verified employer|live job board|via live board|live board)$/i.test(rawCompany);
+
+      // 1. Keep existing valid email on job.to (if it matches the company or was verified)
       if (job.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim())) {
-        job.to = String(job.to).trim().toLowerCase();
-        if (!job.emailVia) job.emailVia = "Verified Listing Email";
-        return { email: job.to, via: job.emailVia };
-      }
-
-      // 2. Check literal emails printed inside job description or snippet
-      const direct = harvestEmailsFromTextClient(`${job.text || ""} ${job.snippet || ""}`);
-      if (direct.length) {
-        job.to = direct[0];
-        job.emailVia = "Extracted Directly from Job Description";
-        return { email: job.to, via: job.emailVia };
-      }
-
-      // 3. Check Known Executive Search Firms & Regional Employers
-      const corpus = `${job.company || ""} ${job.title || ""} ${job.url || ""} ${job.source || ""} ${job.text || ""}`;
-      for (const item of CLIENT_KNOWN_EMPLOYER_EMAILS) {
-        if (item.re.test(corpus)) {
-          job.to = item.email;
-          job.emailVia = item.via;
+        const existing = String(job.to).trim().toLowerCase();
+        const matchingComp = !isGenericCompany ? CLIENT_KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(rawCompany)) : null;
+        if (!matchingComp || matchingComp.email === existing) {
+          job.to = existing;
+          if (!job.emailVia) job.emailVia = "Verified Listing Email";
           return { email: job.to, via: job.emailVia };
         }
       }
 
-      // 4. Check Employer Website URL (if job.site or job.url is an employer domain, not a job board)
+      // 2. HIGHEST MATCH PRIORITY: Match hiring employer name (job.company) directly against Known Employers
+      // This ensures that competitor mentions or multi-job text inside job.text never hijack the recipient email!
+      if (!isGenericCompany) {
+        for (const item of CLIENT_KNOWN_EMPLOYER_EMAILS) {
+          if (item.re.test(rawCompany)) {
+            job.to = item.email;
+            job.emailVia = item.via;
+            return { email: job.to, via: job.emailVia };
+          }
+        }
+      }
+
+      // 3. Check Employer Website URL (if job.site or job.url is an employer domain, not a job board)
       const genericBoardRe = /(^|\.)(linkedin\.com|indeed\.com|dubizzle\.com|bayt\.com|gulftalent\.com|naukrigulf\.com|glassdoor\.com|monster\.com|stepstone\.de|xing\.com|arbeitnow\.com|remotive\.com)$/i;
       for (const candidateUrl of [job.site, job.url]) {
         if (!candidateUrl || candidateUrl === "#") continue;
@@ -9104,15 +9151,35 @@
         } catch {}
       }
 
-      // 5. Infer Corporate HR Mailbox from Employer Name
-      const inferredDomain = inferClientDomainFromCompany(job.company || "", job.location || "");
-      if (inferredDomain) {
-        job.to = `careers@${inferredDomain}`;
-        job.emailVia = `Corporate HR Mailbox (${inferredDomain})`;
+      // 4. Infer Corporate HR Mailbox from Employer Name
+      if (!isGenericCompany) {
+        const inferredDomain = inferClientDomainFromCompany(rawCompany, job.location || "");
+        if (inferredDomain) {
+          job.to = `careers@${inferredDomain}`;
+          job.emailVia = `Corporate HR Mailbox (${inferredDomain})`;
+          return { email: job.to, via: job.emailVia };
+        }
+      }
+
+      // 5. Check literal emails printed inside job description or snippet
+      const direct = harvestEmailsFromTextClient(`${job.text || ""} ${job.snippet || ""}`);
+      if (direct.length) {
+        job.to = direct[0];
+        job.emailVia = "Extracted Directly from Job Description";
         return { email: job.to, via: job.emailVia };
       }
 
-      // 6. Board-Specific Executive Recruitment Desk Fallback
+      // 6. Fallback match for known employers against Title / Source / Text (ONLY if company was generic or had no match)
+      const fallbackCorpus = `${job.title || ""} ${job.source || ""} ${isGenericCompany ? (job.text || "") : ""}`;
+      for (const item of CLIENT_KNOWN_EMPLOYER_EMAILS) {
+        if (item.re.test(fallbackCorpus)) {
+          job.to = item.email;
+          job.emailVia = item.via;
+          return { email: job.to, via: job.emailVia };
+        }
+      }
+
+      // 7. Board-Specific Executive Recruitment Desk Fallback
       const src = String(job.source || "").toLowerCase();
       const boardDesks = {
         pageexecutive: { email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
@@ -9446,6 +9513,21 @@
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
       resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+
+      // Ensure Page 4 and Tracker Card are 100% in sync: check if an application was already tracked for this role/company
+      const storedApps = typeof getStoredApplications === "function" ? getStoredApplications() : [];
+      const existingApp = storedApps.find((a) => {
+        const appRole = String(a.role || "").trim().toLowerCase();
+        const appComp = String(a.company || "").trim().toLowerCase();
+        const jobComp = String(job.company || "").trim().toLowerCase();
+        const isSameRole =
+          appRole === cleanRole.toLowerCase() ||
+          (job.title && appRole === String(job.title).trim().toLowerCase());
+        return isSameRole && (appComp === jobComp || appComp.includes(jobComp) || jobComp.includes(appComp));
+      });
+      if (existingApp && existingApp.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(existingApp.to)) {
+        job.to = existingApp.to;
+      }
 
       document.getElementById("step3JobHeadline").textContent = `Tailored for: ${cleanRole}`;
       document.getElementById("step3JobSub").textContent = `${job.company || "Verified Employer"} · ${job.location || "UAE"} · Source: ${(job.source || "Live Board").toUpperCase()}`;
@@ -10080,9 +10162,20 @@ ${state.cv.contact}`;
           }
           const bestServerEmail = (d && d.primaryEmail) || (d && d.emails && d.emails[0]) || "";
           if (bestServerEmail) {
-            job.to = bestServerEmail;
-            job.emailVia = (d && d.emailVia) || "Verified Job Posting / Company Domain";
+            // Guard against competitor hijacking: if job.company matches a known employer,
+            // ensure the server email belongs to that known employer!
+            const compMatchesKnown = CLIENT_KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(job.company || ""));
+            if (compMatchesKnown && compMatchesKnown.email !== bestServerEmail) {
+              job.to = compMatchesKnown.email;
+              job.emailVia = compMatchesKnown.via;
+            } else {
+              job.to = bestServerEmail;
+              job.emailVia = (d && d.emailVia) || "Verified Job Posting / Company Domain";
+            }
             syncUiForJob();
+            if (typeof syncTrackerApplicationEmail === "function") {
+              syncTrackerApplicationEmail(job, job.to);
+            }
             if (!silent && isCurrentSelected) {
               showToast(`Auto-filled recipient email: ${job.to}`);
             }
@@ -10113,6 +10206,9 @@ ${state.cv.contact}`;
                 job.to = liPostingEmail;
                 job.emailVia = "Extracted Directly from LinkedIn Job Posting";
                 syncUiForJob();
+                if (typeof syncTrackerApplicationEmail === "function") {
+                  syncTrackerApplicationEmail(job, job.to);
+                }
                 return job.to;
               }
               if (sd && sd.url && !job.site) {
@@ -10124,6 +10220,9 @@ ${state.cv.contact}`;
               if (job.site) {
                 resolveJobRecipientEmailClient(job);
                 syncUiForJob();
+                if (typeof syncTrackerApplicationEmail === "function") {
+                  syncTrackerApplicationEmail(job, job.to);
+                }
               }
             }
           } catch {}
@@ -10144,6 +10243,9 @@ ${state.cv.contact}`;
             job.to = liveAddr;
             job.emailVia = found.from ? `Scraped from ${new URL(found.from).hostname.replace(/^www\./i, "")}` : "Scraped from Employer Website";
             syncUiForJob();
+            if (typeof syncTrackerApplicationEmail === "function") {
+              syncTrackerApplicationEmail(job, job.to);
+            }
             if (!silent && isCurrentSelected) {
               showToast(`Discovered live HR email: ${job.to}`);
             }

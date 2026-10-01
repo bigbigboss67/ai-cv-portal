@@ -60,7 +60,41 @@ function harvestEmails(str) {
   return out;
 }
 
+function isSearchOrCategoryUrl(u) {
+  if (!u) return false;
+  try {
+    const p = (u.pathname || "").toLowerCase();
+    const q = (u.search || "").toLowerCase();
+    return (
+      /\/jobs\/search\b/.test(p) ||
+      /\/jobs\/?$/.test(p) ||
+      /\/search\b/.test(p) ||
+      /\/find-jobs\b/.test(p) ||
+      /\/browse\b/.test(p) ||
+      /\/category\b/.test(p) ||
+      q.includes("keywords=") ||
+      q.includes("q=") ||
+      q.includes("search=")
+    );
+  } catch {
+    return false;
+  }
+}
+
 async function resolveAndEnrichEmails({ rawEmails = [], site = "", company = "", title = "", url = "", location = "", source = "", text = "" }) {
+  // Tier 1: If company matches a known regional employer or executive search firm, prioritize it
+  if (company && Array.isArray(boards.KNOWN_EMPLOYER_EMAILS)) {
+    const known = boards.KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(company));
+    if (known) {
+      return {
+        emails: [known.email],
+        primaryEmail: known.email,
+        site: site || "",
+        emailVia: known.via,
+      };
+    }
+  }
+
   const list = [...new Set((rawEmails || []).filter(Boolean))];
   if (list.length) {
     return {
@@ -130,7 +164,7 @@ async function handler(req, res) {
     parsedUrl = null;
   }
 
-  if (!parsedUrl) {
+  if (!parsedUrl || isSearchOrCategoryUrl(parsedUrl)) {
     const resolved = await resolveAndEnrichEmails({
       company: hintCompany,
       title: hintTitle,

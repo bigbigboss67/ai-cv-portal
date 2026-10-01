@@ -851,35 +851,37 @@ function inferDomainFromCompanyName(rawCompany, rawLocation = "") {
 function resolveJobRecipientEmail(job = {}) {
   if (!job || typeof job !== "object") return { email: "", via: "" };
 
-  // 1. Already populated valid email on job.to
+  const rawCompany = String(job.company || "").trim();
+  const isGenericCompany =
+    !rawCompany ||
+    /^(confidential|executive employer|verified employer|live job board|via live board|live board)$/i.test(rawCompany);
+
+  // 1. Keep already populated valid email on job.to (if it belongs to the company or was verified)
   if (job.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim())) {
-    return {
-      email: String(job.to).trim().toLowerCase(),
-      via: job.emailVia || "Verified Listing Email",
-    };
-  }
-
-  // 2. Harvest directly from job description / snippet / title
-  const direct = harvestAndRankEmails(`${job.text || ""} ${job.snippet || ""}`);
-  if (direct.length) {
-    return {
-      email: direct[0],
-      via: "Extracted Directly from Job Description",
-    };
-  }
-
-  // 3. Known Executive Search Firms & Regional Employers
-  const corpus = `${job.company || ""} ${job.title || ""} ${job.url || ""} ${job.source || ""} ${job.text || ""}`;
-  for (const item of KNOWN_EMPLOYER_EMAILS) {
-    if (item.re.test(corpus)) {
+    const existing = String(job.to).trim().toLowerCase();
+    const matchingComp = !isGenericCompany ? KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(rawCompany)) : null;
+    if (!matchingComp || matchingComp.email === existing) {
       return {
-        email: item.email,
-        via: item.via,
+        email: existing,
+        via: job.emailVia || "Verified Listing Email",
       };
     }
   }
 
-  // 4. Employer Website URL (if job.site or job.url is an employer domain, not a job board)
+  // 2. HIGHEST MATCH PRIORITY: Match hiring employer name (job.company) against Known Employers
+  // This prevents competitor names in job.text (or multi-listing search pages) from hijacking the recipient email!
+  if (!isGenericCompany) {
+    for (const item of KNOWN_EMPLOYER_EMAILS) {
+      if (item.re.test(rawCompany)) {
+        return {
+          email: item.email,
+          via: item.via,
+        };
+      }
+    }
+  }
+
+  // 3. Employer Website URL (if job.site or job.url is an employer domain, not a job board)
   for (const candidateUrl of [job.site, job.url]) {
     if (!candidateUrl) continue;
     try {
@@ -895,16 +897,38 @@ function resolveJobRecipientEmail(job = {}) {
     } catch {}
   }
 
-  // 5. Infer Corporate HR Mailbox from Employer Name
-  const inferredDomain = inferDomainFromCompanyName(job.company || "", job.location || "");
-  if (inferredDomain) {
+  // 4. Infer Corporate HR Mailbox from Employer Name
+  if (!isGenericCompany) {
+    const inferredDomain = inferDomainFromCompanyName(job.company || "", job.location || "");
+    if (inferredDomain) {
+      return {
+        email: `careers@${inferredDomain}`,
+        via: `Corporate HR Mailbox (${inferredDomain})`,
+      };
+    }
+  }
+
+  // 5. Harvest directly from job description / snippet (literal email addresses)
+  const direct = harvestAndRankEmails(`${job.text || ""} ${job.snippet || ""}`);
+  if (direct.length) {
     return {
-      email: `careers@${inferredDomain}`,
-      via: `Corporate HR Mailbox (${inferredDomain})`,
+      email: direct[0],
+      via: "Extracted Directly from Job Description",
     };
   }
 
-  // 6. Board-Specific Executive Desk Fallback so `To:` is never empty
+  // 6. Fallback match for known employers in Title / Source / Text (ONLY if company was generic or had no match)
+  const fallbackCorpus = `${job.title || ""} ${job.source || ""} ${isGenericCompany ? (job.text || "") : ""}`;
+  for (const item of KNOWN_EMPLOYER_EMAILS) {
+    if (item.re.test(fallbackCorpus)) {
+      return {
+        email: item.email,
+        via: item.via,
+      };
+    }
+  }
+
+  // 7. Board-Specific Executive Desk Fallback so `To:` is never empty
   const src = String(job.source || "").toLowerCase();
   const boardDesks = {
     pageexecutive: { email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
@@ -983,6 +1007,7 @@ module.exports = {
   fetchBoardByRoleSearch,
   harvestAndRankEmails,
   resolveJobRecipientEmail,
+  KNOWN_EMPLOYER_EMAILS,
   crawlSiteForEmails,
 };
 
