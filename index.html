@@ -2261,6 +2261,386 @@
       margin: 0;
     }
 
+    /* ===================================================================
+       AWARD-WINNING EXECUTIVE FLIGHT DECK & SPATIAL STYLING
+       =================================================================== */
+
+    /* 1. Floating Detached Glass Pill HUD Capsule */
+    .wizard-header-wrap.floating-hud {
+      position: sticky;
+      top: 12px;
+      z-index: 100;
+      margin: 0 auto;
+      max-width: 1440px;
+      padding: 0 16px 8px;
+      transition: all 280ms ease;
+    }
+    .wizard-bar.glass-capsule {
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1.5px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 6px 14px;
+      box-shadow: 0 16px 45px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: nowrap;
+    }
+    .wizard-bar.glass-capsule .brand-cluster {
+      flex-shrink: 0;
+    }
+    .wizard-bar.glass-capsule .stepper-nav {
+      flex-shrink: 1;
+      padding: 3px;
+      gap: 3px;
+    }
+    .wizard-bar.glass-capsule .step-tab {
+      padding: 5px 11px;
+      font-size: 12px;
+      gap: 6px;
+    }
+    .wizard-bar.glass-capsule .step-num {
+      width: 19px;
+      height: 19px;
+      font-size: 10px;
+    }
+    .wizard-bar.glass-capsule .wizard-actions {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+    .wizard-bar.glass-capsule .wizard-actions .btn-pill-secondary {
+      padding: 5px 10px;
+      font-size: 11.5px;
+    }
+    .wizard-bar.glass-capsule .wizard-actions .btn-next-glow {
+      padding: 6px 13px;
+      font-size: 11.5px;
+    }
+    @media (max-width: 990px) {
+      .wizard-bar.glass-capsule {
+        border-radius: 18px;
+        flex-wrap: wrap;
+        padding: 10px 14px;
+      }
+    }
+    .hud-readiness-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      letter-spacing: 0.05em;
+    }
+
+    /* 2. ATS Machine X-Ray Viewport & Scanned Highlights */
+    .btn-ats-xray {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1.5px solid var(--accent-emerald);
+      color: var(--accent-emerald);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 180ms ease;
+    }
+    .btn-ats-xray:hover {
+      background: rgba(16, 185, 129, 0.22);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+    }
+    .btn-ats-xray.active {
+      background: var(--accent-emerald);
+      color: #0b1630;
+      font-weight: 800;
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.45);
+    }
+    .xray-radar-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+      animation: pulse 1.8s infinite;
+    }
+    .btn-ats-xray.active .xray-radar-pulse {
+      background: #0b1630;
+      box-shadow: 0 0 8px #0b1630;
+    }
+
+    /* CV Sheet in ATS X-Ray Mode */
+    .cv-sheet.ats-xray-active {
+      background-color: #050d1a !important;
+      background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px) !important;
+      background-size: 18px 18px !important;
+      border: 1.5px solid var(--accent-emerald) !important;
+      color: #e2e8f0 !important;
+      box-shadow: 0 0 35px rgba(16, 185, 129, 0.25), inset 0 0 40px rgba(16, 185, 129, 0.05) !important;
+      position: relative;
+    }
+    .cv-sheet.ats-xray-active .cv-name {
+      color: #f8fafc !important;
+      font-family: var(--font-mono) !important;
+      letter-spacing: -0.02em;
+    }
+    .cv-sheet.ats-xray-active .cv-headline {
+      color: #34d399 !important;
+      font-family: var(--font-mono) !important;
+    }
+    .cv-sheet.ats-xray-active .cv-contact-line {
+      color: #94a3b8 !important;
+      font-family: var(--font-mono) !important;
+    }
+    .cv-sheet.ats-xray-active .cv-sec-title {
+      color: #34d399 !important;
+      border-bottom: 1px dashed rgba(16, 185, 129, 0.4) !important;
+      font-family: var(--font-mono) !important;
+    }
+    .cv-sheet.ats-xray-active .sum,
+    .cv-sheet.ats-xray-active .cv-bullet-list li {
+      color: #cbd5e1 !important;
+      font-family: var(--font-mono) !important;
+      font-size: 11.5px !important;
+    }
+    .ats-xray-hud-banner {
+      display: none;
+      background: rgba(5, 13, 26, 0.95);
+      border: 1px solid var(--accent-emerald);
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-bottom: 14px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cv-sheet.ats-xray-active .ats-xray-hud-banner {
+      display: flex;
+    }
+    .xray-tag-keyword {
+      background: rgba(16, 185, 129, 0.22);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .xray-tag-metric {
+      background: rgba(14, 165, 233, 0.22);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.5);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* 3. Executive Tone Calibrator & 90-Day Executive Impact Brief */
+    .tone-calibrator-group {
+      display: inline-flex;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 3px;
+    }
+    .tone-btn {
+      padding: 5px 11px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 140ms ease;
+    }
+    .tone-btn.active {
+      background: var(--accent-emerald);
+      color: #0b1630;
+      font-weight: 800;
+    }
+    .impact-brief-card {
+      background: var(--bg-elevated);
+      border: 1.5px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+    .impact-phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px) {
+      .impact-phase-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .impact-phase-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9px;
+      padding: 10px 12px;
+    }
+    .impact-phase-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-emerald);
+      margin-bottom: 3px;
+    }
+    .impact-phase-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .impact-phase-desc {
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* 4. Circular Animated SVG Radar Readiness Gauge */
+    .radar-gauge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .radar-svg-circle {
+      width: 74px;
+      height: 74px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    .radar-svg-circle svg {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+    }
+    .radar-bg-ring {
+      fill: none;
+      stroke: var(--border-strong);
+      stroke-width: 6;
+    }
+    .radar-progress-ring {
+      fill: none;
+      stroke: var(--accent-emerald);
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-dasharray: 201;
+      stroke-dashoffset: 201;
+      transition: stroke-dashoffset 800ms cubic-bezier(0.34, 1.56, 0.64, 1), stroke 300ms ease;
+    }
+    .radar-gauge-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .radar-gauge-pct {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    /* 5. Private Local "My Executive Dispatches" Timeline Ledger */
+    .dispatches-ledger-wrap {
+      margin-top: 36px;
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-strong);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 16px 45px -12px rgba(0, 0, 0, 0.3);
+    }
+    .dispatches-ledger-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .dispatch-item-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      transition: all 180ms ease;
+    }
+    .dispatch-item-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+    .followup-target-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(14, 165, 233, 0.12);
+      color: #0284c7;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+    .salary-oracle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+
     /* ------------------------------------------------------------------
        DOCUMENT STYLE CONTROL PANEL & SEGMENTED CONTROLS
        ------------------------------------------------------------------ */
@@ -2537,8 +2917,8 @@
   <!-- ===================================================================
        TOP STEP-BY-STEP NAVIGATION BAR (4 LOGICAL PAGES)
        =================================================================== -->
-  <header class="wizard-header-wrap">
-    <div class="wizard-bar">
+  <header class="wizard-header-wrap floating-hud">
+    <div class="wizard-bar glass-capsule">
       <div class="brand-cluster">
         <div class="brand-logo">CV</div>
         <div>
@@ -2567,6 +2947,10 @@
       </nav>
 
       <div class="wizard-actions">
+        <div class="hud-readiness-chip" id="hudReadinessBadge" title="Real-time application pre-flight readiness score">
+          <span class="hud-pulse"></span>
+          <span id="hudReadinessVal">Ready: 98%</span>
+        </div>
         <button class="btn-pill-secondary" onclick="toggleCvDrawer()" id="btnToggleCvDrawer">
           Preview Live A4 CV
         </button>
@@ -3020,6 +3404,12 @@
               </div>
 
               <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                <!-- ATS Machine Vision X-Ray Mode Toggle -->
+                <button type="button" class="btn-ats-xray" id="btnPage1AtsXray" onclick="toggleAtsXrayMode()" title="Toggle ATS Machine Parser Vision X-Ray to inspect keyword density &amp; metric parsing">
+                  <span class="xray-radar-pulse"></span>
+                  <span id="page1AtsXrayLabel">⚡ ATS Machine X-Ray</span>
+                </button>
+
                 <!-- 2-Column Drafting Split vs Classic Full Width Toggle -->
                 <div class="doc-layout-toggle-group" role="group" aria-label="Document Layout">
                   <button type="button" class="doc-layout-btn active" data-layout="two-column" onclick="setExecutiveCvLayout('two-column')" title="2-Column Drafting Split (Profile &amp; Experience on left; Skills, Education &amp; Credentials on right)">
@@ -3311,6 +3701,57 @@
               <div id="step3KeywordPills" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
             </div>
 
+            <!-- EXECUTIVE TONE CALIBRATOR & 90-DAY IMPACT SWITCH -->
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;background:var(--bg-elevated);padding:10px 14px;border-radius:10px;border:1px solid var(--border-subtle);">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span style="font-size:12px;font-weight:700;color:var(--text-primary);">Executive Tone:</span>
+                <div class="tone-calibrator-group" role="group" aria-label="Executive Tone Calibrator">
+                  <button type="button" class="tone-btn active" data-tone="governance" onclick="setExecutiveTone('governance')" title="Boardroom, institutional governance, capital stewardship, compliance">
+                    🏛️ Institutional &amp; Governance
+                  </button>
+                  <button type="button" class="tone-btn" data-tone="velocity" onclick="setExecutiveTone('velocity')" title="Turnaround, rapid growth, aggressive EBITDA expansion, operational sprints">
+                    🚀 High-Velocity &amp; Turnaround
+                  </button>
+                </div>
+              </div>
+              <label style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--text-secondary);cursor:pointer;">
+                <input type="checkbox" id="chkInclude90DayPlan" onchange="toggle90DayPlanInLetter()" style="accent-color:var(--accent-emerald);" />
+                <span>Include 90-Day Executive Hypothesis in Cover Letter</span>
+              </label>
+            </div>
+
+            <!-- 90-DAY EXECUTIVE IMPACT HYPOTHESIS BRIEF -->
+            <div class="impact-brief-card" id="executiveImpactBriefCard">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span style="font-family:var(--font-mono);font-size:11px;font-weight:800;color:var(--accent-emerald);letter-spacing:0.08em;text-transform:uppercase;">
+                    90-Day Executive Impact Hypothesis
+                  </span>
+                  <span style="font-size:11px;color:var(--text-secondary);">&middot; First 90 Days Value Creation Blueprint</span>
+                </div>
+                <span style="font-size:11px;color:var(--accent-emerald);font-weight:700;">
+                  Board &amp; C-Suite Strategic Differentiator
+                </span>
+              </div>
+              <div class="impact-phase-grid">
+                <div class="impact-phase-box">
+                  <div class="impact-phase-num">Days 1 &ndash; 30</div>
+                  <div class="impact-phase-title">Diagnostic &amp; Alignment</div>
+                  <div class="impact-phase-desc">Audit P&amp;L baselines, interview multi-site plant/ops leadership, establish Board KPI cadence, and map critical supply chain vulnerabilities.</div>
+                </div>
+                <div class="impact-phase-box">
+                  <div class="impact-phase-num">Days 31 &ndash; 60</div>
+                  <div class="impact-phase-title">Operational Acceleration</div>
+                  <div class="impact-phase-desc">Capture quick operational margin wins, renegotiate top vendor SLAs, eliminate manufacturing cycle bottlenecks, and streamline OpEx.</div>
+                </div>
+                <div class="impact-phase-box">
+                  <div class="impact-phase-num">Days 61 &ndash; 90</div>
+                  <div class="impact-phase-title">Scalable Value Creation</div>
+                  <div class="impact-phase-desc">Deploy automated executive reporting dashboards, optimize cross-functional talent structure, and present the 3-year strategic growth thesis to the Board.</div>
+                </div>
+              </div>
+            </div>
+
             <!-- Cover Letter Header & Language Selector -->
             <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
               <div style="font-size:14px;font-weight:700;color:var(--text-primary);">Executive Cover Letter (Editable)</div>
@@ -3373,9 +3814,20 @@
                     Scanned against recruiter screening rules &mdash; checks cover letter brevity, quantified metrics, action verbs, and ATS compliance before dispatch.
                   </p>
                 </div>
-                <div class="review-score-gauge" id="reviewScoreGauge">
-                  <div class="review-score-num" id="reviewScoreVal">98%</div>
-                  <div class="review-score-badge" id="reviewScoreBadge">Ready to Send</div>
+                <div class="radar-gauge-wrap" id="reviewScoreGauge">
+                  <div class="radar-svg-circle">
+                    <svg viewBox="0 0 74 74">
+                      <circle class="radar-bg-ring" cx="37" cy="37" r="32"></circle>
+                      <circle class="radar-progress-ring" id="radarMeterCircle" cx="37" cy="37" r="32" stroke-dasharray="201" stroke-dashoffset="4"></circle>
+                    </svg>
+                    <div class="radar-gauge-center">
+                      <div class="radar-gauge-pct" id="reviewScoreVal">98%</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="review-score-badge" id="reviewScoreBadge">Ready to Send</div>
+                    <div style="font-size:11px;color:var(--text-muted);margin-top:3px;font-weight:600;">Pre-Dispatch Radar</div>
+                  </div>
                 </div>
               </div>
 
@@ -3536,6 +3988,29 @@
           </div>
         </div>
 
+        <!-- MY EXECUTIVE DISPATCHES & APPLICATION TIMELINE LEDGER -->
+        <div class="dispatches-ledger-wrap" id="dispatchesLedgerContainer">
+          <div class="dispatches-ledger-header">
+            <div>
+              <div style="font-size:16px;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                <span>My Executive Dispatches &amp; Application Ledger</span>
+                <span class="followup-target-badge" id="dispatchesCountChip">0 Dispatched</span>
+              </div>
+              <div style="font-size:12px;color:var(--text-secondary);margin-top:4px;">
+                Private local ledger &middot; 4-day executive follow-up countdown &middot; 1-click check-in generator
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;" onclick="clearExecutiveDispatches()">
+                Clear Ledger History
+              </button>
+            </div>
+          </div>
+          <div id="dispatchesTimelineList">
+            <!-- Dynamically populated by renderDispatchesLedger() -->
+          </div>
+        </div>
+
         <!-- Page 4 Bottom Navigation Bar -->
         <div class="page-footer-nav">
           <button class="btn-pill-secondary" onclick="goToStep(3)">
@@ -3588,13 +4063,19 @@
                 <span class="doc-style-label" style="font-size:10px;">Document Style</span>
                 <span class="doc-style-sub" style="font-size:10.5px;">&middot; Architecture &amp; C-Suite Dossier</span>
               </div>
-              <div class="doc-layout-toggle-group" role="group" aria-label="Drawer Document Layout">
-                <button type="button" class="doc-layout-btn active" data-layout="two-column" onclick="setExecutiveCvLayout('two-column')" style="padding:3px 7px;font-size:10px;">
-                  <span>2-Col</span>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <button type="button" class="btn-ats-xray" id="btnDrawerAtsXray" onclick="toggleAtsXrayMode()" style="padding:3px 8px;font-size:10px;" title="Toggle ATS Machine Vision X-Ray">
+                  <span class="xray-radar-pulse"></span>
+                  <span id="drawerAtsXrayLabel">⚡ ATS X-Ray</span>
                 </button>
-                <button type="button" class="doc-layout-btn" data-layout="single-column" onclick="setExecutiveCvLayout('single-column')" style="padding:3px 7px;font-size:10px;">
-                  <span>Full</span>
-                </button>
+                <div class="doc-layout-toggle-group" role="group" aria-label="Drawer Document Layout">
+                  <button type="button" class="doc-layout-btn active" data-layout="two-column" onclick="setExecutiveCvLayout('two-column')" style="padding:3px 7px;font-size:10px;">
+                    <span>2-Col</span>
+                  </button>
+                  <button type="button" class="doc-layout-btn" data-layout="single-column" onclick="setExecutiveCvLayout('single-column')" style="padding:3px 7px;font-size:10px;">
+                    <span>Full</span>
+                  </button>
+                </div>
               </div>
             </div>
             <div class="doc-style-seg" role="group" aria-label="Drawer Style Palette" style="gap:4px;padding:3px;">
@@ -3647,6 +4128,17 @@
 
             <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
             <div class="cv-sheet sheet bp layout-two-column" id="draftCvSheetEl" style="--accent:#39a0c9;">
+              <!-- Live ATS Machine Vision X-Ray Parser Radar Banner -->
+              <div class="ats-xray-hud-banner" id="draftCvAtsXrayBanner">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <span class="xray-radar-pulse"></span>
+                  <span style="font-weight:800;letter-spacing:0.06em;">ATS MACHINE VISION ACTIVE // OCR-FREE SEMANTIC TEXT STREAM</span>
+                </div>
+                <div style="font-size:10px;opacity:0.9;">
+                  Green: <span style="color:#34d399;font-weight:700;">[KEYWORD MATCH]</span> &middot; Cyan: <span style="color:#38bdf8;font-weight:700;">[METRIC: MAGNITUDE]</span> &middot; Gold: <span style="color:#eab308;font-weight:700;">[VERIFIED DEGREE]</span>
+                </div>
+              </div>
+
               <div class="cv-header-block hd" id="cvHeaderBlockEl">
                 <div class="cv-header-text" style="flex:1;min-width:0;">
                   <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
@@ -4042,7 +4534,10 @@
       selectedJob: MULTI_BOARD_SEED_JOBS[0],
       coverLetterLang: "en",
       customCoverLetter: "",
-      injectedKeywords: new Set()
+      injectedKeywords: new Set(),
+      atsXrayMode: false,
+      executiveTone: "governance",
+      include90DayPlanInLetter: false
     };
     window.state = state;
 
@@ -4208,7 +4703,8 @@
             .map((b, bIdx) => {
               const key = `sug-r${rIdx}-b${bIdx}`;
               const isUp = state.upgradedKeys.has(key);
-              return `<li id="cv-line-${key}" class="${isUp ? "upgraded-highlight" : ""}">${escapeHtml(b)}</li>`;
+              const renderedText = applyAtsXrayHighlights(b);
+              return `<li id="cv-line-${key}" class="${isUp ? "upgraded-highlight" : ""}">${renderedText}</li>`;
             })
             .join("");
           return `
@@ -4236,6 +4732,8 @@
             .map((s) => s.trim())
             .filter(Boolean);
 
+          const credBadge = state.atsXrayMode ? ' <span class="xray-tag-cred" style="background:rgba(234,179,8,0.18);color:#eab308;font-size:10px;font-family:var(--font-mono);padding:1px 5px;border-radius:4px;border:1px solid rgba(234,179,8,0.4);font-weight:700;">[VERIFIED DEGREE]</span>' : '';
+
           eduEl.innerHTML = items
             .map((item) => {
               const commaIdx = item.indexOf(",");
@@ -4244,14 +4742,14 @@
                 const desc = item.substring(commaIdx + 1).trim();
                 return `
                   <div class="edu-item">
-                    <div class="edu-item-title"><b>${escapeHtml(title)}</b></div>
+                    <div class="edu-item-title"><b>${escapeHtml(title)}</b>${credBadge}</div>
                     <div class="edu-item-desc">${escapeHtml(desc)}</div>
                   </div>
                 `;
               } else {
                 return `
                   <div class="edu-item">
-                    <div class="edu-item-title"><b>${escapeHtml(item)}</b></div>
+                    <div class="edu-item-title"><b>${escapeHtml(item)}</b>${credBadge}</div>
                   </div>
                 `;
               }
@@ -4320,6 +4818,7 @@
         sheet.classList.add(currentTheme);
         sheet.classList.remove("layout-two-column", "layout-single-column");
         sheet.classList.add(`layout-${currentLayout}`);
+        sheet.classList.toggle("ats-xray-active", !!state.atsXrayMode);
       });
 
       // Sync button active/pressed states
@@ -4335,6 +4834,19 @@
         btn.classList.toggle("active", active);
         btn.setAttribute("aria-pressed", active ? "true" : "false");
       });
+
+      // Sync ATS Machine Vision X-Ray button states & labels
+      document.querySelectorAll(".btn-ats-xray").forEach((btn) => {
+        btn.classList.toggle("active", !!state.atsXrayMode);
+      });
+      const p1XrayLabel = document.getElementById("page1AtsXrayLabel");
+      if (p1XrayLabel) {
+        p1XrayLabel.innerHTML = state.atsXrayMode ? "<span>⚡ ATS X-Ray ACTIVE</span>" : "<span>⚡ ATS Machine X-Ray</span>";
+      }
+      const drawerXrayLabel = document.getElementById("drawerAtsXrayLabel");
+      if (drawerXrayLabel) {
+        drawerXrayLabel.innerHTML = state.atsXrayMode ? "<span>⚡ ATS X-Ray ACTIVE</span>" : "<span>⚡ ATS X-Ray</span>";
+      }
 
       // Sync hint text
       const activeHint = DOC_STYLE_HINTS[currentTheme] || DOC_STYLE_HINTS.bp;
@@ -4487,6 +4999,244 @@
         };
         showToast(`Document layout: ${names[layoutId] || layoutId}`);
       }
+    }
+
+    /* ------------------------------------------------------------------
+       ATS MACHINE VISION X-RAY & PARSER RADAR SYSTEM
+       ------------------------------------------------------------------ */
+    function toggleAtsXrayMode() {
+      state.atsXrayMode = !state.atsXrayMode;
+      renderLiveCvSheet(true);
+      showToast(state.atsXrayMode ? "⚡ ATS Machine Vision X-Ray: ACTIVATED (Parsing Entities Highlighted)" : "⚡ ATS Machine Vision: Switched to Executive Dossier Presentation");
+    }
+
+    function applyAtsXrayHighlights(text) {
+      if (!text) return "";
+      if (!state.atsXrayMode) return escapeHtml(text);
+      let safe = escapeHtml(text);
+
+      // 1. Highlight Quantified Metrics & Magnitudes (e.g. $120M+, 22%, 450 staff, 18%, 98.6%, $9.2M, 4 hubs, etc.)
+      const metricRegex = /(?:(?:AED|\$|€|£)\s*\d+(?:[.,]\d+)?(?:\s*(?:M|B|k|K|million|billion))?(?:\+)?|\b\d+(?:[.,]\d+)?\s*%|\b\d+(?:[.,]\d+)?\s*(?:\+|FTEs?|employees?|staff|facilities|sites|hubs|units|teams?|years?|months?)\b|\b\d{3,}\b)/gi;
+      safe = safe.replace(metricRegex, '<span class="xray-tag-metric">$&</span>');
+
+      // 2. Highlight Semantic Target / Job Keywords & Core Competencies
+      const jobKeywords = (state.selectedJob && state.selectedJob.keywords) || [];
+      const coreSkills = (state.cv && state.cv.skills) || [];
+      const domainKeywords = [
+        "P&L", "Supply Chain", "Procurement", "Operations", "Budgeting", "Turnaround",
+        "EBITDA", "Manufacturing", "Distribution", "Governance", "Cross-Functional",
+        "Logistics", "Contract Negotiation", "Quality Assurance", "Cost Reduction",
+        "Operational Excellence", "Key Accounts", "Capital Allocation", "Import/Export",
+        "General Manager", "Managing Director", "Operations Director", "Chief Operating Officer"
+      ];
+
+      const allKeywords = [...new Set([...jobKeywords, ...coreSkills, ...domainKeywords])].filter((k) => k && k.length > 2);
+      allKeywords.sort((a, b) => b.length - a.length);
+
+      allKeywords.forEach((kw) => {
+        const escRaw = escapeHtml(kw).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        // Match keyword when bounded by whitespace, punctuation, or string ends
+        const kwRegex = new RegExp(`(?<=^|[\\s,.;:()/\\[\\]-])${escRaw}(?=$|[\\s,.;:()/\\[\\]-])`, "gi");
+        safe = safe.replace(kwRegex, '<span class="xray-tag-keyword">$&</span>');
+      });
+
+      return safe;
+    }
+
+    /* ------------------------------------------------------------------
+       EXECUTIVE TONE CALIBRATOR & 90-DAY IMPACT HYPOTHESIS
+       ------------------------------------------------------------------ */
+    function setExecutiveTone(tone) {
+      state.executiveTone = tone;
+      document.querySelectorAll(".tone-btn").forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-tone") === tone);
+      });
+      if (state.selectedJob) {
+        document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(state.selectedJob, state.coverLetterLang);
+        if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+      }
+      showToast(`Executive Tone: ${tone === "governance" ? "Institutional Boardroom & Governance" : "High-Velocity Turnaround & Sprints"}`);
+    }
+
+    function toggle90DayPlanInLetter() {
+      const chk = document.getElementById("chkInclude90DayPlan");
+      state.include90DayPlanInLetter = chk ? chk.checked : !state.include90DayPlanInLetter;
+      if (state.selectedJob) {
+        document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(state.selectedJob, state.coverLetterLang);
+        if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+      }
+      showToast(state.include90DayPlanInLetter ? "90-Day Executive Hypothesis included in Cover Letter" : "90-Day Hypothesis removed from Cover Letter");
+    }
+
+    /* ------------------------------------------------------------------
+       BACKCHANNEL RECRUITER INTEL & COMPENSATION ORACLE
+       ------------------------------------------------------------------ */
+    function estimateCompRange(j) {
+      if (j && j.salary) return j.salary;
+      const title = ((j && j.title) || "").toLowerCase();
+      if (/chief|coo|ceo|cfo|cto|c-suite|president/i.test(title)) {
+        return "AED 85k–135k/mo · Exec";
+      }
+      if (/general manager|vice president|vp|director/i.test(title)) {
+        return "AED 65k–95k/mo · Sr Dir";
+      }
+      if (/head of|senior manager|plant manager|operations manager/i.test(title)) {
+        return "AED 45k–65k/mo · Lead";
+      }
+      return "AED 50k–75k/mo · Benchmark";
+    }
+
+    function estimateRecruiterSpeed(j) {
+      const src = String((j && j.source) || "").toLowerCase();
+      const comp = String((j && j.company) || "").toLowerCase();
+      if (/page executive|michael page|charterhouse|departer/i.test(src + " " + comp)) {
+        return "Executive Desk · 24-48h Response";
+      }
+      if (/linkedin|indeed/i.test(src)) {
+        return "Direct HR Inbox · High Priority";
+      }
+      return "Corporate HR · Active";
+    }
+
+    /* ------------------------------------------------------------------
+       PRIVATE LOCAL "MY EXECUTIVE DISPATCHES" APPLICATION TIMELINE LEDGER
+       ------------------------------------------------------------------ */
+    function getStoredDispatches() {
+      try {
+        const raw = localStorage.getItem("ai_cv_portal_dispatches");
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveStoredDispatches(list) {
+      try {
+        localStorage.setItem("ai_cv_portal_dispatches", JSON.stringify(list));
+      } catch (e) {}
+    }
+
+    function recordExecutiveDispatch(job, method, to, subject) {
+      if (!job) return;
+      const list = getStoredDispatches();
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      const newDispatch = {
+        id: "disp_" + Date.now(),
+        role: cleanRole,
+        company: job.company || "Executive Employer",
+        location: job.location || "UAE",
+        to: to || job.to || "",
+        subject: subject || "",
+        dispatchedAt: Date.now(),
+        targetFollowUpAt: Date.now() + (4 * 24 * 60 * 60 * 1000), // 4 calendar days
+        method: method || "1-Click Direct Application",
+        status: "dispatched"
+      };
+      if (list.length && list[0].role === newDispatch.role && (Date.now() - list[0].dispatchedAt < 10000)) {
+        return;
+      }
+      list.unshift(newDispatch);
+      saveStoredDispatches(list.slice(0, 30));
+      renderDispatchesLedger();
+    }
+
+    function renderDispatchesLedger() {
+      const container = document.getElementById("dispatchesTimelineList");
+      const countChip = document.getElementById("dispatchesCountChip");
+      if (!container) return;
+      const list = getStoredDispatches();
+      if (countChip) {
+        countChip.textContent = `${list.length} Dispatched`;
+      }
+      if (!list.length) {
+        container.innerHTML = `
+          <div style="text-align:center;padding:26px 16px;color:var(--text-secondary);font-size:12.5px;background:var(--bg-elevated);border-radius:12px;border:1px dashed var(--border-subtle);">
+            <strong>No applications dispatched yet.</strong><br/>
+            When you click <strong>Send Application Now</strong> or <strong>Open Mail App</strong> on Page 4, your application is logged here locally with a 4-day executive follow-up countdown &amp; 1-click check-in email generator.
+          </div>
+        `;
+        return;
+      }
+
+      const now = Date.now();
+      container.innerHTML = list.map((item) => {
+        const sentDateStr = new Date(item.dispatchedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+        const diffMs = item.targetFollowUpAt - now;
+        const daysLeft = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+        let badgeHtml = "";
+        if (daysLeft > 0) {
+          badgeHtml = `<span class="followup-target-badge"><span class="hud-pulse"></span> Follow-up in ${daysLeft} day${daysLeft > 1 ? "s" : ""}</span>`;
+        } else {
+          badgeHtml = `<span class="followup-target-badge" style="color:var(--accent-rose);border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.1);">&#9888; Follow-up Due Now</span>`;
+        }
+
+        return `
+          <div class="dispatch-item-card">
+            <div style="flex:1;min-width:240px;">
+              <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+                <strong style="font-size:14px;color:var(--text-primary);">${escapeHtml(item.role)}</strong>
+                <span style="font-size:12px;color:var(--text-secondary);">&middot; ${escapeHtml(item.company)}</span>
+                ${badgeHtml}
+              </div>
+              <div style="font-size:11.5px;color:var(--text-muted);display:flex;gap:12px;flex-wrap:wrap;">
+                <span>Sent: ${escapeHtml(sentDateStr)}</span>
+                <span>To: <code style="font-family:var(--font-mono);color:var(--text-secondary);">${escapeHtml(item.to)}</code></span>
+                <span>Via: ${escapeHtml(item.method)}</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;color:var(--accent-emerald);border-color:var(--accent-emerald);" onclick="generateExecutiveFollowUp('${escapeAttr(item.id)}')">
+                Generate 4-Day Follow-Up &rarr;
+              </button>
+              <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 9px;color:var(--text-muted);" onclick="removeExecutiveDispatch('${escapeAttr(item.id)}')">
+                &times;
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function clearExecutiveDispatches() {
+      if (confirm("Clear your executive dispatch ledger history in this browser?")) {
+        localStorage.removeItem("ai_cv_portal_dispatches");
+        renderDispatchesLedger();
+        showToast("Application ledger cleared");
+      }
+    }
+
+    function removeExecutiveDispatch(id) {
+      const list = getStoredDispatches().filter((d) => d.id !== id);
+      saveStoredDispatches(list);
+      renderDispatchesLedger();
+    }
+
+    function generateExecutiveFollowUp(id) {
+      const list = getStoredDispatches();
+      const item = list.find((d) => d.id === id);
+      if (!item) return;
+      const followUpSubject = `Following Up — ${item.role} — ${state.cv.name || "Executive Candidate"}`;
+      const followUpBody = `Dear Hiring Committee,
+
+I am writing to briefly follow up on my executive candidacy submitted on ${new Date(item.dispatchedAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short" })} for the ${item.role} mandate with ${item.company}.
+
+I remain keen to contribute my operational leadership and P&L experience to your organization. Should you require any supplementary case studies, references, or strategic documentation, please do not hesitate to reach out.
+
+Thank you for your consideration, and I look forward to the opportunity to connect.
+
+Sincerely,
+
+${state.cv.name}
+${state.cv.headline}
+${state.cv.contact}`;
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(followUpBody).then(() => {
+          showToast("4-Day executive follow-up copied to clipboard!");
+        });
+      }
+      const mailtoUrl = `mailto:${encodeURIComponent(item.to)}?subject=${encodeURIComponent(followUpSubject)}&body=${encodeURIComponent(followUpBody)}`;
+      window.open(mailtoUrl, "_blank");
     }
 
     function handleCvPhotoUpload(event) {
@@ -7067,6 +7817,13 @@
                         <span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">
                           Role Match: ${escapeHtml(j.matchedRole || state.selectedRoles[0])}
                         </span>
+                        <span class="salary-oracle-pill" title="Executive compensation benchmark for UAE / GCC">
+                          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg>
+                          <span>${escapeHtml(estimateCompRange(j))}</span>
+                        </span>
+                        <span style="background:rgba(59,130,246,0.12);color:#3b82f6;border:1px solid rgba(59,130,246,0.3);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;" title="Direct recruiter screening speed">
+                          ⚡ ${escapeHtml(estimateRecruiterSpeed(j))}
+                        </span>
                         <span style="background:var(--bg-elevated);border:1px solid var(--border-subtle);color:var(--text-secondary);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;">
                           CV Match: ${escapeHtml(cvMatchesText)}
                         </span>
@@ -7470,6 +8227,20 @@
       const scoreBadgeEl = document.getElementById("reviewScoreBadge");
       if (scoreNumEl) scoreNumEl.textContent = `${score}%`;
 
+      // Animate Circular SVG Radar Gauge
+      const radarMeterCircle = document.getElementById("radarMeterCircle");
+      if (radarMeterCircle) {
+        const offset = 201.06 - (201.06 * (score / 100));
+        radarMeterCircle.style.strokeDashoffset = offset;
+        radarMeterCircle.style.stroke = score >= 88 ? "var(--accent-emerald)" : (score >= 70 ? "#f59e0b" : "#ef4444");
+      }
+
+      // Synchronize Floating HUD Pill Readiness Badge
+      const hudVal = document.getElementById("hudReadinessVal");
+      if (hudVal) {
+        hudVal.textContent = `Ready: ${score}%`;
+      }
+
       if (scoreBadgeEl) {
         if (score >= 88) {
           scoreBadgeEl.textContent = "Ready to Send";
@@ -7712,8 +8483,20 @@
       const b1 = (topRole.bullets && topRole.bullets[0]) || "";
       const b2 = (topRole.bullets && topRole.bullets[1]) || "";
       const refNote = job.ref ? ` (Ref: ${job.ref})` : "";
+      const isVelocity = (state.executiveTone === "velocity");
+
+      let ninetyDayBlock = "";
+      if (state.include90DayPlanInLetter) {
+        ninetyDayBlock = `\n\nTo ensure immediate accountability, my proposed 90-Day Executive Impact Hypothesis entails:
+• Days 1–30 (Diagnosis & Alignment): Complete operational audit across P&L, supply chain, and talent baselines while establishing Board KPI cadence.
+• Days 31–60 (Operational Acceleration): Capture quick operational margin wins, renegotiate core vendor SLAs, and eliminate operational bottlenecks.
+• Days 61–90 (Scalable Value Creation): Institute automated operational dashboards, scale regional market share, and finalize the multi-year EBITDA roadmap.`;
+      }
 
       if (lang === "de") {
+        const deToneP1 = isVelocity
+          ? "Mein Führungsschwerpunkt liegt in der agilen Transformation, EBITDA-Beschleunigung und dem Aufbau hochperformanter Teams in dynamischen Märkten."
+          : "Mein Führungsschwerpunkt liegt in der strategischen Governance, nachhaltiger Skalierung und robuster P&L-Steuerung unter Einhaltung höchster Compliance-Standards.";
         return `Sehr geehrte Damen und Herren,
 
 mit großem Interesse bewerbe ich mich auf die ausgeschriebene Position als ${cleanRole}${refNote} (${job.location || "VAE / International"}).
@@ -7721,6 +8504,8 @@ mit großem Interesse bewerbe ich mich auf die ausgeschriebene Position als ${cl
 In meiner aktuellen Funktion als ${topRole.title} bei ${topRole.company} verantworte ich die gesamte operative und kaufmännische Wertschöpfung:
 • ${b1}
 • ${b2}
+
+${deToneP1}${ninetyDayBlock}
 
 Meinen maßgeschneiderten Lebenslauf finden Sie im Anhang. Für ein persönliches Gespräch stehe ich Ihnen jederzeit gerne zur Verfügung.
 
@@ -7730,6 +8515,9 @@ ${state.cv.contact}`;
       }
 
       if (lang === "ar") {
+        const arTone = isVelocity
+          ? "يركز نهجي القيادي على التحول التشغيلي السريع، تعظيم هوامش الأرباح (EBITDA)، وبناء فرق عمل مرنة قادرة على مواكبة النمو المتسارع."
+          : "يركز نهجي القيادي على الحوكمة المؤسسية الرشيدة، إدارة رأس المال بكفاءة، وضمان استدامة العمليات التشغيلية وفق أعلى معايير الامتثال.";
         return `السادة المحترمون،
 
 أتقدم إليكم بطلب الترشح لمنصب ${cleanRole}${refNote} لدى ${job.company || "مجموعتكم الموقرة"} في ${job.location || "دولة الإمارات"}.
@@ -7737,6 +8525,8 @@ ${state.cv.contact}`;
 من خلال خبرتي التنفيذية في منصب ${topRole.title} لدى ${topRole.company}، قدت عمليات التشغيل والربحية وسلاسل الإمداد وحققت النتائج التالية:
 • ${b1}
 • ${b2}
+
+${arTone}${ninetyDayBlock}
 
 مرفق لكم سيرتي الذاتية المفصلة، وأتطلع لمناقشة كيف يمكنني دعم أهدافكم الاستراتيجية والتشغيلية.
 
@@ -7749,16 +8539,24 @@ ${state.cv.contact}`;
         ? `I am writing regarding the ${cleanRole}${refNote} mandate you are leading on behalf of your client in ${job.location || "the UAE"}.`
         : `I am writing to present my executive candidacy for the ${cleanRole}${refNote} mandate with ${job.company || "your organization"} in ${job.location || "the UAE"}.`;
 
+      const alignmentClause = isVelocity
+        ? `As a high-velocity transformation executive with hands-on P&L turnaround and scale-up leadership, my track record aligns directly with your growth and restructuring priorities:`
+        : `As a seasoned ${state.cv.headline.split("·")[0].trim()} with full P&L accountability, institutional governance, and multi-site operational leadership, my track record aligns directly with your mandate's core priorities:`;
+
+      const governanceClause = isVelocity
+        ? `Throughout my tenure as ${topRole.title} at ${topRole.company}, I have specialized in rapid operational restructuring, aggressive EBITDA expansion, and eliminating supply chain friction across the UAE, GCC, and high-growth markets.`
+        : `Throughout my tenure as ${topRole.title} at ${topRole.company}, I have consistently delivered EBITDA expansion, supply chain resilience, and disciplined Board-level governance across the UAE, GCC, and international markets.`;
+
       return `Dear Hiring Committee,
 
 ${opening}
 
-As a seasoned ${state.cv.headline.split("·")[0].trim()} with full P&L accountability and multi-site operational leadership, my track record aligns directly with your mandate's core priorities:
+${alignmentClause}
 
 • ${b1}
 • ${b2}
 
-Throughout my tenure as ${topRole.title} at ${topRole.company}, I have consistently delivered EBITDA expansion, supply chain resilience, and disciplined Board-level governance across the UAE, GCC, and international markets.
+${governanceClause}${ninetyDayBlock}
 
 My tailored Executive CV is attached for your review. I welcome the opportunity to discuss how I can immediately accelerate your operational and commercial objectives.
 
@@ -7966,6 +8764,11 @@ ${state.cv.contact}`;
         typeof window.applicationFilename === "function"
           ? window.applicationFilename("CV", cleanRole)
           : `CV - ${state.cv.name || "Executive"} - ${cleanRole}.pdf`.replace(/[\\/:*?"<>|]+/g, "-");
+      const prevXray = state.atsXrayMode;
+      if (prevXray) {
+        state.atsXrayMode = false;
+        renderLiveCvSheet(true);
+      }
       try {
         if (typeof window.buildCvTextPdf === "function") {
           showToast("Building selectable NotoSans ATS CV PDF...");
@@ -7975,6 +8778,11 @@ ${state.cv.contact}`;
         }
       } catch (err) {
         console.warn("ATS PDF fallback to print:", err);
+      } finally {
+        if (prevXray) {
+          state.atsXrayMode = true;
+          renderLiveCvSheet(true);
+        }
       }
       window.print();
     }
@@ -8027,7 +8835,20 @@ ${state.cv.contact}`;
 
       try {
         if (typeof window.buildCvTextPdfBytes === "function" && typeof window.buildEml === "function") {
-          const r = await window.buildCvTextPdfBytes();
+          const prevXray = state.atsXrayMode;
+          if (prevXray) {
+            state.atsXrayMode = false;
+            renderLiveCvSheet(true);
+          }
+          let r;
+          try {
+            r = await window.buildCvTextPdfBytes();
+          } finally {
+            if (prevXray) {
+              state.atsXrayMode = true;
+              renderLiveCvSheet(true);
+            }
+          }
           const fullHtmlDoc =
             typeof window.letterDocument === "function" ? window.letterDocument(designedHtml) : designedHtml;
 
@@ -8048,6 +8869,8 @@ ${state.cv.contact}`;
             a.click();
             a.remove();
           }
+
+          recordExecutiveDispatch(job, "EML Package + ATS PDF", to, subject);
 
           if (statusBanner) {
             statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong> is pre-filled, your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.`;
@@ -8080,6 +8903,8 @@ ${state.cv.contact}`;
       try {
         await downloadStandaloneAtsPdf();
       } catch {}
+
+      recordExecutiveDispatch(job, "Direct mailto: + ATS PDF", to, subject);
 
       const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBody)}`;
       window.location.href = mailtoUrl;
@@ -8309,6 +9134,7 @@ ${state.cv.contact}`;
       updateDailyFetchBannerUI();
       renderFilteredJobs();
       populateStep3And4ForSelectedJob();
+      renderDispatchesLedger();
       mountCvSheetForStep(1);
 
       // Automatically trigger Daily Live Job Fetch matched to CV details & desired roles
