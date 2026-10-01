@@ -1235,123 +1235,814 @@
       margin: 14px 0 8px;
     }
 
-    /* 5 CURATED EXECUTIVE CV THEMES */
-    /* 1. Monaco Royal Navy & Gold (Board & C-Suite Classic) */
-    .cv-sheet.cv-theme-monaco {
-      --cv-accent: #0A2540;
-      --cv-gold: #B45309;
-      --cv-head-rule: #0A2540;
-      --cv-font-serif: var(--font-serif);
-      --cv-bg: #FFFFFF;
-      border-top: 4px solid #0A2540;
+    /* ===================================================================
+       DOCUMENT STYLES & LAYOUT SYSTEM (AUTHENTIC CAREER-PORTAL SUITE)
+       =================================================================== */
+
+    /* Eyebrow Document Title Banner (.cv-doc-eyebrow / .docname) */
+    .cv-doc-eyebrow, .docname {
+      font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary, #64748B);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
     }
-    .cv-sheet.cv-theme-monaco .cv-name {
-      color: #0A2540;
-      font-family: var(--font-serif);
-      letter-spacing: 0.02em;
-    }
-    .cv-sheet.cv-theme-monaco .cv-headline {
-      color: #B45309;
-    }
-    .cv-sheet.cv-theme-monaco .cv-sec-title {
-      color: #0A2540;
-      border-bottom-color: #D4AF37;
+    .cv-doc-eyebrow .doc-badge {
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: var(--bg-elevated, #1E293B);
+      border: 1px solid var(--border-subtle, #334155);
+      color: var(--accent-emerald, #10B981);
+      letter-spacing: 0.08em;
     }
 
-    /* 2. Zurich Carbon & Platinum (Swiss Architectural Precision) */
-    .cv-sheet.cv-theme-zurich {
-      --cv-accent: #18181B;
-      --cv-gold: #52525B;
-      --cv-head-rule: #18181B;
-      --cv-font-serif: var(--font-sans);
-      --cv-bg: #FFFFFF;
-      border-top: 4px solid #18181B;
+    /* 2-Column Drafting Split vs. Classic Full-Width Layout */
+    .cv-body-wrap {
+      width: 100%;
     }
+    .cv-sheet.layout-two-column .cv-body-wrap {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 26px;
+      align-items: start;
+    }
+    .cv-sheet.layout-single-column .cv-body-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cv-col-main {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+    .cv-col-side {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+    }
+    @media (max-width: 768px) {
+      .cv-sheet.layout-two-column .cv-body-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Title Block Stamp (Lower Right Corner for Blueprint & Technical Dossiers) */
+    .blueprint-stamp {
+      display: none;
+      font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5a7280;
+      border-top: 1px solid #0f3a52;
+      border-left: 1px solid #0f3a52;
+      background: #f7fafb;
+      padding: 5px 12px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-bottom-right-radius: 10px;
+      z-index: 2;
+    }
+    .cv-sheet.bp .blueprint-stamp,
+    .cv-sheet.cv-theme-bp .blueprint-stamp {
+      display: block;
+    }
+
+    /* ------------------------------------------------------------------
+       1. BLUEPRINT (bp) — Drafting-sheet layout (Monospace, Grid Ground, Stamp)
+       ------------------------------------------------------------------ */
+    .cv-sheet.bp,
+    .cv-sheet.cv-theme-bp {
+      background-color: #f7fafb;
+      background-image: linear-gradient(rgba(15, 58, 82, 0.065) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 58, 82, 0.065) 1px, transparent 1px);
+      background-size: 20px 20px;
+      border: 1px solid #0f3a52;
+      box-shadow: 0 20px 45px -20px rgba(15, 58, 82, 0.35);
+      color: #12222c;
+    }
+    .cv-sheet.bp .cv-header-block,
+    .cv-sheet.cv-theme-bp .cv-header-block {
+      border-bottom: 2px solid #0f3a52;
+    }
+    .cv-sheet.bp .cv-name,
+    .cv-sheet.cv-theme-bp .cv-name {
+      font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace) !important;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #0f3a52;
+      text-transform: uppercase;
+    }
+    .cv-sheet.bp .cv-headline,
+    .cv-sheet.cv-theme-bp .cv-headline {
+      font-family: var(--font-mono, monospace) !important;
+      color: #2b7ea3;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .cv-sheet.bp .cv-contact-line,
+    .cv-sheet.cv-theme-bp .cv-contact-line {
+      font-family: var(--font-mono, monospace) !important;
+      font-size: 10px;
+      color: #5a7280;
+      line-height: 1.8;
+    }
+    .cv-sheet.bp .cv-sec-title,
+    .cv-sheet.cv-theme-bp .cv-sec-title {
+      font-family: var(--font-mono, monospace) !important;
+      color: #0f3a52;
+      border-bottom: 1px dashed #b9ccd6;
+      font-size: 10px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+    }
+    .cv-sheet.bp .sum,
+    .cv-sheet.cv-theme-bp .sum {
+      color: #33454f;
+    }
+    .cv-sheet.bp .cv-bullet-list li,
+    .cv-sheet.cv-theme-bp .cv-bullet-list li {
+      color: #33454f;
+      position: relative;
+    }
+    .cv-sheet.bp .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-bp .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 7px;
+      height: 1.5px;
+      background: #39a0c9;
+      border-radius: 0;
+    }
+    .cv-sheet.bp .t,
+    .cv-sheet.cv-theme-bp .t {
+      font-family: var(--font-mono, monospace) !important;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f3a52;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+    .cv-sheet.bp .c,
+    .cv-sheet.cv-theme-bp .c {
+      font-style: normal;
+      font-size: 11.5px;
+      color: #6a8291;
+    }
+    .cv-sheet.bp .d,
+    .cv-sheet.cv-theme-bp .d {
+      font-family: var(--font-mono, monospace) !important;
+      font-size: 10px;
+      color: #2b7ea3;
+    }
+    .cv-sheet.bp .chip,
+    .cv-sheet.cv-theme-bp .chip {
+      border: 1px solid #b9ccd6;
+      color: #33454f;
+      background: #fff;
+      font-family: var(--font-mono, monospace) !important;
+      font-size: 9.5px;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+    }
+    .cv-sheet.bp .chip.injected,
+    .cv-sheet.cv-theme-bp .chip.injected {
+      border-color: #39a0c9;
+      color: #1c6d90;
+      background: rgba(57, 160, 201, 0.09);
+    }
+    .cv-sheet.bp .cv-photo-frame,
+    .cv-sheet.cv-theme-bp .cv-photo-frame {
+      border: 1.5px solid #0f3a52;
+      border-radius: 0;
+    }
+
+    /* ------------------------------------------------------------------
+       2. STONE (stone) — Sand paper, deep green & brass (Institutional)
+       ------------------------------------------------------------------ */
+    .cv-sheet.stone,
+    .cv-sheet.cv-theme-stone {
+      background: #f4f1e7;
+      color: #23241f;
+      border: 1px solid #ded7c4;
+      box-shadow: 0 16px 40px -16px rgba(35, 36, 31, 0.22);
+    }
+    .cv-sheet.stone .cv-header-block,
+    .cv-sheet.cv-theme-stone .cv-header-block {
+      border-bottom: 1px solid #9a7b3f;
+    }
+    .cv-sheet.stone .cv-photo-frame,
+    .cv-sheet.cv-theme-stone .cv-photo-frame {
+      border: 1px solid #9a7b3f;
+      filter: grayscale(1) contrast(1.06);
+      border-radius: 4px;
+    }
+    .cv-sheet.stone .cv-name,
+    .cv-sheet.cv-theme-stone .cv-name {
+      font-family: var(--font-serif) !important;
+      color: #14261c;
+      font-size: 26px;
+      letter-spacing: -0.015em;
+    }
+    .cv-sheet.stone .cv-headline,
+    .cv-sheet.cv-theme-stone .cv-headline {
+      font-family: var(--font-sans) !important;
+      color: #1f5136;
+      letter-spacing: 0.14em;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .cv-sheet.stone .cv-contact-line,
+    .cv-sheet.cv-theme-stone .cv-contact-line {
+      font-family: var(--font-sans) !important;
+      color: #7a7666;
+      font-size: 11px;
+    }
+    .cv-sheet.stone .cv-sec-title,
+    .cv-sheet.cv-theme-stone .cv-sec-title {
+      font-family: var(--font-sans) !important;
+      color: #9a7b3f;
+      border-bottom: 1px solid #ded7c4;
+      letter-spacing: 0.16em;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .cv-sheet.stone .sum,
+    .cv-sheet.cv-theme-stone .sum,
+    .cv-sheet.stone .cv-bullet-list li,
+    .cv-sheet.cv-theme-stone .cv-bullet-list li {
+      color: #3c3e35;
+      font-family: var(--font-serif) !important;
+    }
+    .cv-sheet.stone .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-stone .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 6px;
+      height: 1.5px;
+      background: #1f5136;
+      border-radius: 0;
+    }
+    .cv-sheet.stone .t,
+    .cv-sheet.cv-theme-stone .t {
+      font-family: var(--font-serif) !important;
+      color: #14261c;
+      font-size: 14.5px;
+    }
+    .cv-sheet.stone .c,
+    .cv-sheet.cv-theme-stone .c {
+      font-style: italic;
+      color: #8a8674;
+    }
+    .cv-sheet.stone .d,
+    .cv-sheet.cv-theme-stone .d {
+      font-family: var(--font-sans) !important;
+      color: #8a8674;
+      font-size: 10.5px;
+    }
+    .cv-sheet.stone .chip,
+    .cv-sheet.cv-theme-stone .chip {
+      background: transparent;
+      border-color: #d5cdb8;
+      color: #4b4d43;
+      font-family: var(--font-sans) !important;
+      font-size: 10px;
+      border-radius: 4px;
+    }
+    .cv-sheet.stone .chip.injected,
+    .cv-sheet.cv-theme-stone .chip.injected {
+      border-color: #1f5136;
+      color: #1f5136;
+      background: rgba(31, 81, 54, 0.08);
+    }
+
+    /* ------------------------------------------------------------------
+       3. NAVY & GOLD (lux / monaco) — Midnight navy & champagne gold
+       ------------------------------------------------------------------ */
+    .cv-sheet.lux,
+    .cv-sheet.cv-theme-lux,
+    .cv-sheet.cv-theme-monaco {
+      background: #0b1630;
+      color: #f4f1e8;
+      border: 1px solid #24304f;
+      box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.65);
+    }
+    .cv-sheet.lux .cv-header-block,
+    .cv-sheet.cv-theme-lux .cv-header-block,
+    .cv-sheet.cv-theme-monaco .cv-header-block {
+      border-bottom: 1px solid #c9a24a;
+    }
+    .cv-sheet.lux .cv-photo-frame,
+    .cv-sheet.cv-theme-lux .cv-photo-frame,
+    .cv-sheet.cv-theme-monaco .cv-photo-frame {
+      border: 1.5px solid #c9a24a;
+      border-radius: 4px;
+    }
+    .cv-sheet.lux .cv-name,
+    .cv-sheet.cv-theme-lux .cv-name,
+    .cv-sheet.cv-theme-monaco .cv-name {
+      font-family: var(--font-serif) !important;
+      color: #fbf8f0;
+      font-size: 26px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .cv-sheet.lux .cv-headline,
+    .cv-sheet.cv-theme-lux .cv-headline,
+    .cv-sheet.cv-theme-monaco .cv-headline {
+      color: #e3c987;
+      font-size: 11.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .cv-sheet.lux .cv-contact-line,
+    .cv-sheet.cv-theme-lux .cv-contact-line,
+    .cv-sheet.cv-theme-monaco .cv-contact-line {
+      color: #a9a496;
+      font-size: 11px;
+    }
+    .cv-sheet.lux .cv-sec-title,
+    .cv-sheet.cv-theme-lux .cv-sec-title,
+    .cv-sheet.cv-theme-monaco .cv-sec-title {
+      color: #c9a24a;
+      border-bottom: 1px solid #24304f;
+      letter-spacing: 0.14em;
+    }
+    .cv-sheet.lux .sum,
+    .cv-sheet.cv-theme-lux .sum,
+    .cv-sheet.cv-theme-monaco .sum,
+    .cv-sheet.lux .cv-bullet-list li,
+    .cv-sheet.cv-theme-lux .cv-bullet-list li,
+    .cv-sheet.cv-theme-monaco .cv-bullet-list li {
+      color: #d8d4c6;
+    }
+    .cv-sheet.lux .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-lux .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-monaco .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 5px;
+      height: 1.5px;
+      background: #c9a24a;
+      border-radius: 0;
+    }
+    .cv-sheet.lux .t,
+    .cv-sheet.cv-theme-lux .t,
+    .cv-sheet.cv-theme-monaco .t {
+      color: #fbf8f0 !important;
+      font-size: 14px;
+    }
+    .cv-sheet.lux .c,
+    .cv-sheet.cv-theme-lux .c,
+    .cv-sheet.cv-theme-monaco .c,
+    .cv-sheet.lux .d,
+    .cv-sheet.cv-theme-lux .d,
+    .cv-sheet.cv-theme-monaco .d {
+      color: #9a9686 !important;
+      font-size: 11px;
+    }
+    .cv-sheet.lux .chip,
+    .cv-sheet.cv-theme-lux .chip,
+    .cv-sheet.cv-theme-monaco .chip {
+      background: #13203f;
+      border: 1px solid #2d3a5c;
+      color: #c4c0b2;
+      border-radius: 3px;
+      font-size: 10.5px;
+    }
+    .cv-sheet.lux .chip.injected,
+    .cv-sheet.cv-theme-lux .chip.injected,
+    .cv-sheet.cv-theme-monaco .chip.injected {
+      border-color: #c9a24a;
+      color: #e3c987;
+      background: rgba(201, 162, 74, 0.12);
+    }
+
+    /* ------------------------------------------------------------------
+       4. PLAIN (ivory) — Clean ivory ATS standard (Blind screening safe)
+       ------------------------------------------------------------------ */
+    .cv-sheet.ivory,
+    .cv-sheet.cv-theme-ivory {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 10px 30px -8px rgba(15, 23, 42, 0.12);
+    }
+    .cv-sheet.ivory .cv-header-block,
+    .cv-sheet.cv-theme-ivory .cv-header-block {
+      border-bottom: 2px solid #0f172a;
+    }
+    .cv-sheet.ivory .cv-name,
+    .cv-sheet.cv-theme-ivory .cv-name {
+      font-family: var(--font-serif);
+      color: #0f172a;
+      font-size: 25px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+    .cv-sheet.ivory .cv-headline,
+    .cv-sheet.cv-theme-ivory .cv-headline {
+      color: #475569;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+    .cv-sheet.ivory .cv-contact-line,
+    .cv-sheet.cv-theme-ivory .cv-contact-line {
+      color: #64748b;
+      font-size: 11.5px;
+    }
+    .cv-sheet.ivory .cv-sec-title,
+    .cv-sheet.cv-theme-ivory .cv-sec-title {
+      font-family: var(--font-mono);
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+    }
+    .cv-sheet.ivory .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-ivory .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      width: 4px;
+      height: 4px;
+      background: #0f172a;
+      border-radius: 50%;
+    }
+
+    /* ------------------------------------------------------------------
+       5. BORDEAUX PRESTIGE (bordeaux) — Imperial Wine & Amber
+       ------------------------------------------------------------------ */
+    .cv-sheet.bordeaux,
+    .cv-sheet.cv-theme-bordeaux {
+      background: #faf7f5;
+      color: #261b1e;
+      border: 1px solid #fed7aa;
+      border-top: 4px solid #722f37;
+      box-shadow: 0 16px 40px -16px rgba(114, 47, 55, 0.22);
+    }
+    .cv-sheet.bordeaux .cv-header-block,
+    .cv-sheet.cv-theme-bordeaux .cv-header-block {
+      border-bottom: 2px solid #722f37;
+    }
+    .cv-sheet.bordeaux .cv-photo-frame,
+    .cv-sheet.cv-theme-bordeaux .cv-photo-frame {
+      border: 2px solid #722f37;
+      border-radius: 8px;
+    }
+    .cv-sheet.bordeaux .cv-name,
+    .cv-sheet.cv-theme-bordeaux .cv-name {
+      font-family: var(--font-serif);
+      color: #722f37;
+      font-size: 26px;
+      letter-spacing: 0.01em;
+      font-weight: 800;
+    }
+    .cv-sheet.bordeaux .cv-headline,
+    .cv-sheet.cv-theme-bordeaux .cv-headline {
+      color: #9a3412;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+    .cv-sheet.bordeaux .cv-sec-title,
+    .cv-sheet.cv-theme-bordeaux .cv-sec-title {
+      font-family: var(--font-mono);
+      color: #722f37;
+      border-bottom: 1px solid #fdba74;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+    }
+    .cv-sheet.bordeaux .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-bordeaux .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      background: #b45309;
+      border-radius: 50%;
+    }
+
+    /* ------------------------------------------------------------------
+       6. ZURICH CARBON (zurich) — Swiss Architectural Precision
+       ------------------------------------------------------------------ */
+    .cv-sheet.zurich,
+    .cv-sheet.cv-theme-zurich {
+      background: #ffffff;
+      color: #18181b;
+      border: 1px solid #e4e4e7;
+      border-top: 4px solid #18181b;
+      box-shadow: 0 12px 36px -12px rgba(24, 24, 27, 0.20);
+    }
+    .cv-sheet.zurich .cv-header-block,
+    .cv-sheet.cv-theme-zurich .cv-header-block {
+      border-bottom: 2px solid #18181b;
+    }
+    .cv-sheet.zurich .cv-photo-frame,
+    .cv-sheet.cv-theme-zurich .cv-photo-frame {
+      border: 2px solid #18181b;
+      border-radius: 2px;
+    }
+    .cv-sheet.zurich .cv-name,
     .cv-sheet.cv-theme-zurich .cv-name {
-      color: #18181B;
       font-family: var(--font-sans);
+      color: #18181b;
+      font-size: 26px;
       font-weight: 800;
       letter-spacing: -0.03em;
     }
+    .cv-sheet.zurich .cv-headline,
     .cv-sheet.cv-theme-zurich .cv-headline {
-      color: #52525B;
       font-family: var(--font-mono);
-      font-size: 12px;
+      color: #52525b;
+      font-size: 11.5px;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .cv-sheet.cv-theme-zurich .cv-sec-title {
-      color: #18181B;
-      border-bottom-color: #E4E4E7;
-    }
-
-    /* 3. Executive Emerald & Slate (Turnaround & Operations) */
-    .cv-sheet.cv-theme-emerald {
-      --cv-accent: #064E3B;
-      --cv-gold: #059669;
-      --cv-head-rule: #064E3B;
-      --cv-font-serif: var(--font-serif);
-      --cv-bg: #FFFFFF;
-      border-top: 4px solid #059669;
-    }
-    .cv-sheet.cv-theme-emerald .cv-name {
-      color: #064E3B;
-      font-family: var(--font-serif);
-    }
-    .cv-sheet.cv-theme-emerald .cv-headline {
-      color: #059669;
-    }
-    .cv-sheet.cv-theme-emerald .cv-sec-title {
-      color: #064E3B;
-      border-bottom-color: #10B981;
-    }
-
-    /* 4. Bordeaux Prestige (Imperial Wine & Amber) */
-    .cv-sheet.cv-theme-bordeaux {
-      --cv-accent: #722F37;
-      --cv-gold: #9A3412;
-      --cv-head-rule: #722F37;
-      --cv-font-serif: var(--font-serif);
-      --cv-bg: #FFFFFF;
-      border-top: 4px solid #722F37;
-    }
-    .cv-sheet.cv-theme-bordeaux .cv-name {
-      color: #722F37;
-      font-family: var(--font-serif);
-      letter-spacing: 0.01em;
-    }
-    .cv-sheet.cv-theme-bordeaux .cv-headline {
-      color: #9A3412;
-    }
-    .cv-sheet.cv-theme-bordeaux .cv-sec-title {
-      color: #722F37;
-      border-bottom-color: #FDBA74;
-    }
-
-    /* 5. Nordic Midnight & Ice Cyan (Tech & Modern Operations) */
-    .cv-sheet.cv-theme-nordic {
-      --cv-accent: #0F172A;
-      --cv-gold: #0284C7;
-      --cv-head-rule: #0284C7;
-      --cv-font-serif: var(--font-sans);
-      --cv-bg: #FFFFFF;
-      border-top: 4px solid #0284C7;
-    }
-    .cv-sheet.cv-theme-nordic .cv-name {
-      color: #0F172A;
-      font-family: var(--font-sans);
-      font-weight: 800;
-    }
-    .cv-sheet.cv-theme-nordic .cv-headline {
-      color: #0284C7;
       font-weight: 700;
     }
-    .cv-sheet.cv-theme-nordic .cv-sec-title {
-      color: #0F172A;
-      border-bottom-color: #38BDF8;
+    .cv-sheet.zurich .cv-sec-title,
+    .cv-sheet.cv-theme-zurich .cv-sec-title {
+      font-family: var(--font-mono);
+      color: #18181b;
+      border-bottom: 1px solid #e4e4e7;
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .cv-sheet.zurich .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-zurich .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 8px;
+      width: 4px;
+      height: 4px;
+      background: #18181b;
+      border-radius: 0;
     }
 
-    /* THEME SWITCHER CONTROLS */
+    /* ------------------------------------------------------------------
+       7. NORDIC MIDNIGHT (nordic) — Tech & Modern Operations
+       ------------------------------------------------------------------ */
+    .cv-sheet.nordic,
+    .cv-sheet.cv-theme-nordic {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      border-top: 4px solid #0284c7;
+      box-shadow: 0 16px 40px -16px rgba(2, 132, 199, 0.22);
+    }
+    .cv-sheet.nordic .cv-header-block,
+    .cv-sheet.cv-theme-nordic .cv-header-block {
+      border-bottom: 2px solid #0284c7;
+    }
+    .cv-sheet.nordic .cv-photo-frame,
+    .cv-sheet.cv-theme-nordic .cv-photo-frame {
+      border: 2px solid #0284c7;
+      border-radius: 8px;
+    }
+    .cv-sheet.nordic .cv-name,
+    .cv-sheet.cv-theme-nordic .cv-name {
+      font-family: var(--font-sans);
+      color: #0f172a;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    .cv-sheet.nordic .cv-headline,
+    .cv-sheet.cv-theme-nordic .cv-headline {
+      color: #0284c7;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+    .cv-sheet.nordic .cv-sec-title,
+    .cv-sheet.cv-theme-nordic .cv-sec-title {
+      color: #0f172a;
+      border-bottom: 1px solid #38bdf8;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+    }
+    .cv-sheet.nordic .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-nordic .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      background: #0284c7;
+      border-radius: 50%;
+    }
+
+    /* ------------------------------------------------------------------
+       8. EXECUTIVE EMERALD (emerald) — Operations & Turnaround
+       ------------------------------------------------------------------ */
+    .cv-sheet.emerald,
+    .cv-sheet.cv-theme-emerald {
+      background: #f6f8f6;
+      color: #14261c;
+      border: 1px solid #a7f3d0;
+      border-top: 4px solid #059669;
+      box-shadow: 0 16px 40px -16px rgba(5, 150, 105, 0.22);
+    }
+    .cv-sheet.emerald .cv-header-block,
+    .cv-sheet.cv-theme-emerald .cv-header-block {
+      border-bottom: 2px solid #064e3b;
+    }
+    .cv-sheet.emerald .cv-photo-frame,
+    .cv-sheet.cv-theme-emerald .cv-photo-frame {
+      border: 2px solid #059669;
+      border-radius: 8px;
+    }
+    .cv-sheet.emerald .cv-name,
+    .cv-sheet.cv-theme-emerald .cv-name {
+      font-family: var(--font-serif);
+      color: #064e3b;
+      font-size: 26px;
+      font-weight: 800;
+    }
+    .cv-sheet.emerald .cv-headline,
+    .cv-sheet.cv-theme-emerald .cv-headline {
+      color: #059669;
+      font-size: 12.5px;
+      font-weight: 700;
+    }
+    .cv-sheet.emerald .cv-sec-title,
+    .cv-sheet.cv-theme-emerald .cv-sec-title {
+      color: #064e3b;
+      border-bottom: 1px solid #10b981;
+      font-size: 11px;
+      letter-spacing: 0.10em;
+      font-weight: 700;
+    }
+    .cv-sheet.emerald .cv-bullet-list li::before,
+    .cv-sheet.cv-theme-emerald .cv-bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      background: #059669;
+      border-radius: 50%;
+    }
+
+    /* ------------------------------------------------------------------
+       DOCUMENT STYLE CONTROL PANEL & SEGMENTED CONTROLS
+       ------------------------------------------------------------------ */
+    .doc-style-panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-strong);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .doc-style-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .doc-style-title-group {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .doc-style-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-emerald);
+      letter-spacing: 0.10em;
+    }
+    .doc-style-sub {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+    }
+    .doc-style-seg {
+      display: flex;
+      gap: 5px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      padding: 4px;
+      border-radius: 9px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .doc-style-btn {
+      flex: 1 1 auto;
+      min-width: 80px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 11px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 11.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+    .doc-style-btn:hover {
+      background: var(--bg-hover, rgba(0, 0, 0, 0.04));
+      color: var(--text-primary);
+    }
+    .doc-style-btn.active,
+    .doc-style-btn[aria-pressed="true"] {
+      background: var(--bg-card);
+      border-color: var(--accent-emerald);
+      color: var(--text-primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      font-weight: 700;
+    }
+    .doc-style-btn .style-pip {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .doc-style-hint {
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-emerald);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      transition: all 200ms ease;
+    }
+    .doc-layout-toggle-group {
+      display: inline-flex;
+      gap: 3px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      padding: 3px;
+      border-radius: 8px;
+    }
+    .doc-layout-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .doc-layout-btn:hover {
+      color: var(--text-primary);
+      background: var(--bg-hover, rgba(0, 0, 0, 0.04));
+    }
+    .doc-layout-btn.active,
+    .doc-layout-btn[aria-pressed="true"] {
+      background: var(--bg-card);
+      border-color: var(--accent-emerald);
+      color: var(--text-primary);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+
+    /* THEME SWITCHER COMPATIBILITY */
     .theme-swatch-btn {
       display: inline-flex;
       align-items: center;
@@ -1970,66 +2661,107 @@
             <pre id="page1VerbatimCvPre" style="margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--font-sans);font-size:12.5px;line-height:1.6;color:var(--text-primary);max-height:520px;overflow-y:auto;"></pre>
           </div>
 
-          <!-- Executive CV Theme & Portrait Styling Toolbar -->
-          <div class="cv-theme-photo-toolbar" style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;padding:12px 16px;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:12px;flex-wrap:wrap;">
-            <!-- Left: Curated Executive Themes -->
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.06em;">
-                Executive Theme:
-              </span>
-              <div style="display:inline-flex;gap:6px;flex-wrap:wrap;" role="group" aria-label="CV Color Themes">
-                <button type="button" class="theme-swatch-btn active" data-theme="monaco" onclick="setExecutiveCvTheme('monaco')" title="Monaco Royal Navy & Gold (Board & C-Suite Classic)">
-                  <span class="swatch-dots"><span style="background:#0A2540;"></span><span style="background:#D4AF37;"></span></span>
-                  <span>Monaco (Navy &amp; Gold)</span>
-                </button>
-                <button type="button" class="theme-swatch-btn" data-theme="zurich" onclick="setExecutiveCvTheme('zurich')" title="Zurich Carbon & Platinum (Swiss Architectural Precision)">
-                  <span class="swatch-dots"><span style="background:#18181B;"></span><span style="background:#71717A;"></span></span>
-                  <span>Zurich (Carbon)</span>
-                </button>
-                <button type="button" class="theme-swatch-btn" data-theme="emerald" onclick="setExecutiveCvTheme('emerald')" title="Executive Emerald & Slate (Operations & Turnaround)">
-                  <span class="swatch-dots"><span style="background:#064E3B;"></span><span style="background:#059669;"></span></span>
-                  <span>Emerald (Board)</span>
-                </button>
-                <button type="button" class="theme-swatch-btn" data-theme="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" title="Bordeaux Prestige (Imperial Wine & Amber)">
-                  <span class="swatch-dots"><span style="background:#722F37;"></span><span style="background:#B45309;"></span></span>
-                  <span>Bordeaux (Prestige)</span>
-                </button>
-                <button type="button" class="theme-swatch-btn" data-theme="nordic" onclick="setExecutiveCvTheme('nordic')" title="Nordic Midnight & Ice Cyan (Tech & Modern Scale)">
-                  <span class="swatch-dots"><span style="background:#0F172A;"></span><span style="background:#0284C7;"></span></span>
-                  <span>Nordic (Midnight)</span>
-                </button>
+          <!-- DOCUMENT STYLE & ARCHITECTURAL CONTROLS PANEL -->
+          <div class="doc-style-panel">
+            <div class="doc-style-header-row">
+              <div class="doc-style-title-group">
+                <span class="doc-style-label">Document Style</span>
+                <span class="doc-style-sub">&middot; Drafting Table, Institutional &amp; C-Suite Dossiers</span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                <!-- 2-Column Drafting Split vs Classic Full Width Toggle -->
+                <div class="doc-layout-toggle-group" role="group" aria-label="Document Layout">
+                  <button type="button" class="doc-layout-btn active" data-layout="two-column" onclick="setExecutiveCvLayout('two-column')" title="2-Column Drafting Split (Profile &amp; Experience on left; Skills, Education &amp; Credentials on right)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="18" rx="1"/><rect x="13" y="3" width="8" height="18" rx="1"/></svg>
+                    <span>2-Column Split</span>
+                  </button>
+                  <button type="button" class="doc-layout-btn" data-layout="single-column" onclick="setExecutiveCvLayout('single-column')" title="Classic Full-Width Flow (Sequential standard A4 layout)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+                    <span>Full Width</span>
+                  </button>
+                </div>
+
+                <!-- Executive Portrait Photo Controls -->
+                <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                  <input type="file" id="cvPhotoInputPage1" accept="image/png,image/jpeg,image/webp" style="display:none;" onchange="handleCvPhotoUpload(event)" />
+                  <button type="button" class="btn-pill-secondary" id="btnPage1UploadPhoto" style="font-size:11px;padding:4px 9px;" onclick="document.getElementById('cvPhotoInputPage1').click()">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <span id="page1UploadPhotoLabel">Upload Portrait</span>
+                  </button>
+                  <div id="page1PhotoActiveControls" style="display:none;align-items:center;gap:5px;">
+                    <button type="button" class="btn-pill-secondary" id="btnPage1PhotoShape" style="font-size:11px;padding:4px 8px;" onclick="toggleCvPhotoFraming()" title="Switch framing between Squircle and Circle">
+                      Framing: Squircle
+                    </button>
+                    <button type="button" class="btn-pill-secondary" id="btnPage1PhotoToggle" style="font-size:11px;padding:4px 8px;" onclick="togglePhotoDisplay()" title="Toggle photo display on CV">
+                      Photo: ON
+                    </button>
+                    <button type="button" class="btn-pill-secondary" style="font-size:11px;padding:4px 7px;color:var(--accent-rose);" onclick="removeCvPhoto()" title="Remove photo from CV">
+                      Remove
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Right: Executive Portrait Controls -->
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.06em;">
-                Portrait Photo:
-              </span>
-              <input type="file" id="cvPhotoInputPage1" accept="image/png,image/jpeg,image/webp" style="display:none;" onchange="handleCvPhotoUpload(event)" />
-              <button type="button" class="btn-pill-secondary" id="btnPage1UploadPhoto" style="font-size:11.5px;padding:5px 11px;" onclick="document.getElementById('cvPhotoInputPage1').click()">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                <span id="page1UploadPhotoLabel">Upload Portrait</span>
+            <!-- Authentic 8-Way Document Style Segmented Bar (4 Core Reference + 4 Premium Suggestions) -->
+            <div class="doc-style-seg" role="group" aria-label="Document Style Palette">
+              <!-- 1. Blueprint (Core Reference) -->
+              <button type="button" class="doc-style-btn active" data-style="bp" data-cv="bp" onclick="setExecutiveCvTheme('bp')" title="Drafting-sheet layout — monospace headings, grid ground, title block stamp.">
+                <span class="style-pip" style="background:#39a0c9;box-shadow:0 0 6px #39a0c9;"></span>
+                <span>Blueprint</span>
               </button>
-              <div id="page1PhotoActiveControls" style="display:none;align-items:center;gap:6px;">
-                <!-- Shape Framing Toggle -->
-                <button type="button" class="btn-pill-secondary" id="btnPage1PhotoShape" style="font-size:11.5px;padding:5px 10px;" onclick="toggleCvPhotoFraming()" title="Switch framing between Squircle and Circle">
-                  Framing: Squircle
-                </button>
-                <!-- On/Off Display Toggle -->
-                <button type="button" class="btn-pill-secondary" id="btnPage1PhotoToggle" style="font-size:11.5px;padding:5px 10px;" onclick="togglePhotoDisplay()" title="Toggle photo display on CV">
-                  Photo: ON
-                </button>
-                <!-- Remove Photo -->
-                <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 9px;color:var(--accent-rose);" onclick="removeCvPhoto()" title="Remove photo from CV">
-                  Remove
-                </button>
-              </div>
+              <!-- 2. Stone (Core Reference) -->
+              <button type="button" class="doc-style-btn" data-style="stone" data-cv="stone" onclick="setExecutiveCvTheme('stone')" title="Sand paper, deep green and brass — institutional and quiet.">
+                <span class="style-pip" style="background:#1f5136;"></span>
+                <span>Stone</span>
+              </button>
+              <!-- 3. Navy (Core Reference) -->
+              <button type="button" class="doc-style-btn" data-style="lux" data-cv="lux" onclick="setExecutiveCvTheme('lux')" title="Navy and gold with portrait — the executive dossier look.">
+                <span class="style-pip" style="background:#c9a24a;box-shadow:0 0 6px #c9a24a;"></span>
+                <span>Navy</span>
+              </button>
+              <!-- 4. Plain (Core Reference) -->
+              <button type="button" class="doc-style-btn" data-style="ivory" data-cv="ivory" onclick="setExecutiveCvTheme('ivory')" title="Plain ivory, no portrait — safest for ATS screens.">
+                <span class="style-pip" style="background:#64748b;"></span>
+                <span>Plain</span>
+              </button>
+              <!-- 5. Bordeaux (High Premium Suggestion) -->
+              <button type="button" class="doc-style-btn" data-style="bordeaux" data-cv="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" title="Imperial wine &amp; warm copper on oyster cream — private equity and board governance.">
+                <span class="style-pip" style="background:#722f37;"></span>
+                <span>Bordeaux</span>
+              </button>
+              <!-- 6. Zurich (High Premium Suggestion) -->
+              <button type="button" class="doc-style-btn" data-style="zurich" data-cv="zurich" onclick="setExecutiveCvTheme('zurich')" title="Swiss architectural precision — high-contrast monochrome for fintech &amp; enterprise software.">
+                <span class="style-pip" style="background:#18181b;border:1px solid #71717a;"></span>
+                <span>Zurich</span>
+              </button>
+              <!-- 7. Nordic (High Premium Suggestion) -->
+              <button type="button" class="doc-style-btn" data-style="nordic" data-cv="nordic" onclick="setExecutiveCvTheme('nordic')" title="Midnight slate &amp; electric ice cyan — modern tech operations &amp; AI transformation.">
+                <span class="style-pip" style="background:#0284c7;box-shadow:0 0 6px #0284c7;"></span>
+                <span>Nordic</span>
+              </button>
+              <!-- 8. Emerald (High Premium Suggestion) -->
+              <button type="button" class="doc-style-btn" data-style="emerald" data-cv="emerald" onclick="setExecutiveCvTheme('emerald')" title="Heritage racing emerald &amp; mint slate — industrial operations &amp; turnaround management.">
+                <span class="style-pip" style="background:#059669;"></span>
+                <span>Emerald</span>
+              </button>
+            </div>
+
+            <!-- Dynamic Hint Rationale Box -->
+            <div class="doc-style-hint" id="docStyleHintPage1">
+              Drafting-sheet layout — monospace headings, grid ground, title block. Reads as engineered, not marketed.
             </div>
           </div>
 
+          <!-- Document Eyebrow Banner on Page 1 -->
+          <div class="cv-doc-eyebrow docname" id="page1DocEyebrowEl">
+            <span id="page1DocEyebrowTitle">Curriculum vitae &middot; tailored for Executive Mandate</span>
+            <span class="doc-badge" id="page1DocEyebrowBadge">2-COLUMN DRAFTING &middot; SCALE 1:1</span>
+          </div>
+
           <!-- Full-Length Synchronized A4 CV Sheet Preview on Page 1 -->
-          <div class="cv-sheet" id="page1LiveCvMirror" style="--accent:#059669;"></div>
+          <div class="cv-sheet sheet bp layout-two-column" id="page1LiveCvMirror" style="--accent:#39a0c9;"></div>
         </div>
       </div>
 
@@ -2392,40 +3124,72 @@
             </div>
           </div>
 
-          <!-- Drawer Compact Executive Theme Switcher -->
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;padding:8px 12px;background:var(--bg-elevated);border-radius:10px;border:1px solid var(--border-strong);flex-wrap:wrap;">
-            <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;text-transform:uppercase;color:var(--text-secondary);letter-spacing:0.05em;">
-              Executive Theme:
-            </span>
-            <div style="display:inline-flex;gap:5px;flex-wrap:wrap;">
-              <button type="button" class="theme-swatch-btn active" data-theme="monaco" onclick="setExecutiveCvTheme('monaco')" style="padding:3px 8px;font-size:11px;">
-                <span class="swatch-dots"><span style="background:#0A2540;"></span><span style="background:#D4AF37;"></span></span>
-                <span>Monaco</span>
+          <!-- Drawer Document Style & Layout Switcher -->
+          <div class="doc-style-panel" style="margin-bottom:12px;padding:10px 12px;border-radius:10px;">
+            <div class="doc-style-header-row" style="margin-bottom:6px;">
+              <div class="doc-style-title-group">
+                <span class="doc-style-label" style="font-size:10px;">Document Style</span>
+                <span class="doc-style-sub" style="font-size:10.5px;">&middot; Architecture &amp; C-Suite Dossier</span>
+              </div>
+              <div class="doc-layout-toggle-group" role="group" aria-label="Drawer Document Layout">
+                <button type="button" class="doc-layout-btn active" data-layout="two-column" onclick="setExecutiveCvLayout('two-column')" style="padding:3px 7px;font-size:10px;">
+                  <span>2-Col</span>
+                </button>
+                <button type="button" class="doc-layout-btn" data-layout="single-column" onclick="setExecutiveCvLayout('single-column')" style="padding:3px 7px;font-size:10px;">
+                  <span>Full</span>
+                </button>
+              </div>
+            </div>
+            <div class="doc-style-seg" role="group" aria-label="Drawer Style Palette" style="gap:4px;padding:3px;">
+              <button type="button" class="doc-style-btn active" data-style="bp" data-cv="bp" onclick="setExecutiveCvTheme('bp')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#39a0c9;"></span>
+                <span>Blueprint</span>
               </button>
-              <button type="button" class="theme-swatch-btn" data-theme="zurich" onclick="setExecutiveCvTheme('zurich')" style="padding:3px 8px;font-size:11px;">
-                <span class="swatch-dots"><span style="background:#18181B;"></span><span style="background:#71717A;"></span></span>
-                <span>Zurich</span>
+              <button type="button" class="doc-style-btn" data-style="stone" data-cv="stone" onclick="setExecutiveCvTheme('stone')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#1f5136;"></span>
+                <span>Stone</span>
               </button>
-              <button type="button" class="theme-swatch-btn" data-theme="emerald" onclick="setExecutiveCvTheme('emerald')" style="padding:3px 8px;font-size:11px;">
-                <span class="swatch-dots"><span style="background:#064E3B;"></span><span style="background:#059669;"></span></span>
-                <span>Emerald</span>
+              <button type="button" class="doc-style-btn" data-style="lux" data-cv="lux" onclick="setExecutiveCvTheme('lux')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#c9a24a;"></span>
+                <span>Navy</span>
               </button>
-              <button type="button" class="theme-swatch-btn" data-theme="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" style="padding:3px 8px;font-size:11px;">
-                <span class="swatch-dots"><span style="background:#722F37;"></span><span style="background:#B45309;"></span></span>
+              <button type="button" class="doc-style-btn" data-style="ivory" data-cv="ivory" onclick="setExecutiveCvTheme('ivory')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#64748b;"></span>
+                <span>Plain</span>
+              </button>
+              <button type="button" class="doc-style-btn" data-style="bordeaux" data-cv="bordeaux" onclick="setExecutiveCvTheme('bordeaux')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#722f37;"></span>
                 <span>Bordeaux</span>
               </button>
-              <button type="button" class="theme-swatch-btn" data-theme="nordic" onclick="setExecutiveCvTheme('nordic')" style="padding:3px 8px;font-size:11px;">
-                <span class="swatch-dots"><span style="background:#0F172A;"></span><span style="background:#0284C7;"></span></span>
+              <button type="button" class="doc-style-btn" data-style="zurich" data-cv="zurich" onclick="setExecutiveCvTheme('zurich')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#18181b;border:1px solid #71717a;"></span>
+                <span>Zurich</span>
+              </button>
+              <button type="button" class="doc-style-btn" data-style="nordic" data-cv="nordic" onclick="setExecutiveCvTheme('nordic')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#0284c7;"></span>
                 <span>Nordic</span>
               </button>
+              <button type="button" class="doc-style-btn" data-style="emerald" data-cv="emerald" onclick="setExecutiveCvTheme('emerald')" style="padding:4px 8px;font-size:10.5px;min-width:65px;">
+                <span class="style-pip" style="background:#059669;"></span>
+                <span>Emerald</span>
+              </button>
+            </div>
+            <div class="doc-style-hint" id="docStyleHintDrawer" style="font-size:11px;padding:4px 8px;">
+              Drafting-sheet layout — monospace headings, grid ground, title block. Reads as engineered, not marketed.
             </div>
           </div>
 
           <div class="cv-3d-stage" id="cv3dStageWrap">
             <div class="ai-laser-scanner" id="aiLaserScannerEl"></div>
 
+            <!-- Top Eyebrow Title Banner -->
+            <div class="cv-doc-eyebrow docname" id="draftCvDocEyebrowEl">
+              <span id="draftCvDocEyebrowTitle">Curriculum vitae &middot; tailored for Executive Mandate</span>
+              <span class="doc-badge" id="draftCvDocEyebrowBadge">2-COLUMN DRAFTING &middot; SCALE 1:1</span>
+            </div>
+
             <!-- THE LIVE A4 CV SHEET (Exact DOM schema read by cv-text-pdf.js readSheet()) -->
-            <div class="cv-sheet sheet" id="draftCvSheetEl">
+            <div class="cv-sheet sheet bp layout-two-column" id="draftCvSheetEl" style="--accent:#39a0c9;">
               <div class="cv-header-block hd" id="cvHeaderBlockEl">
                 <div class="cv-header-text" style="flex:1;min-width:0;">
                   <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
@@ -2437,29 +3201,42 @@
                 </div>
               </div>
 
-              <section>
-                <h5 class="cv-sec-title">Executive Summary</h5>
-                <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;white-space:pre-line;"></div>
-                <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#065F46;background:#ECFDF5;padding:6px 10px;border-radius:6px;font-size:12px;"></div>
-              </section>
+              <!-- 2-Column Drafting Split Body Wrap -->
+              <div class="cv-body-wrap two" id="cvBodyWrapEl">
+                <!-- Main Left Column: Profile & Leadership Experience -->
+                <div class="cv-col-main col">
+                  <section id="cvSecSummary">
+                    <h5 class="cv-sec-title">Executive Profile &amp; Summary</h5>
+                    <div class="sum" id="cvSummaryEl" style="margin-bottom:8px;white-space:pre-line;"></div>
+                    <div class="sum" id="cvFocusLineEl" style="font-weight:700;color:#065F46;background:#ECFDF5;padding:6px 10px;border-radius:6px;font-size:12px;"></div>
+                  </section>
 
-              <section>
-                <h5 class="cv-sec-title">Core Executive &amp; Board Competencies</h5>
-                <div id="cvSkillsEl" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
-              </section>
+                  <section id="cvSecExperience">
+                    <h5 class="cv-sec-title">Professional Leadership Experience</h5>
+                    <div id="cvExperienceEl"></div>
+                  </section>
+                </div>
 
-              <section>
-                <h5 class="cv-sec-title">Professional Leadership Experience</h5>
-                <div id="cvExperienceEl"></div>
-              </section>
+                <!-- Side Right Column: Skills, Education & Credentials -->
+                <div class="cv-col-side col">
+                  <section id="cvSecSkills">
+                    <h5 class="cv-sec-title">Core Executive Competencies</h5>
+                    <div id="cvSkillsEl" class="chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;"></div>
+                  </section>
 
-              <section>
-                <h5 class="cv-sec-title">Education &amp; Executive Credentials</h5>
-                <div class="sum mini" id="cvEducationEl" style="font-size:12px;color:#334155;white-space:pre-line;line-height:1.55;"></div>
-              </section>
+                  <section id="cvSecEducation">
+                    <h5 class="cv-sec-title">Education &amp; Executive Credentials</h5>
+                    <div class="sum mini" id="cvEducationEl" style="font-size:12px;color:#334155;white-space:pre-line;line-height:1.55;"></div>
+                  </section>
 
-              <div id="cvAdditionalSectionsEl"></div>
+                  <div id="cvAdditionalSectionsEl"></div>
+                </div>
+              </div>
+
+              <!-- Blueprint Title Block Corner Stamp -->
+              <div class="blueprint-stamp" id="blueprintStampEl">SCALE 1:1 &middot; SHEET 1 OF 1 &middot; CAD VERIFIED</div>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -2787,9 +3564,16 @@
       currentStep: 1,
       cvTheme: (function () {
         try {
-          return localStorage.getItem("ai_cv_portal_theme") || "monaco";
+          return localStorage.getItem("ai_cv_portal_theme") || "bp";
         } catch (e) {
-          return "monaco";
+          return "bp";
+        }
+      })(),
+      cvLayout: (function () {
+        try {
+          return localStorage.getItem("ai_cv_portal_layout") || "two-column";
+        } catch (e) {
+          return "two-column";
         }
       })(),
       cv: JSON.parse(JSON.stringify(DEMO_CV)),
@@ -3004,6 +3788,25 @@
           .join("");
       }
 
+      // Synchronize Document Eyebrow Titles & Badges across Page 1 and Drawer/Step 3
+      const targetCo = (state.selectedJob && state.selectedJob.company) || "Executive Mandate";
+      const eyebrowTitle = `Curriculum vitae · tailored for ${targetCo}`;
+      const eyebrowBadge = (state.cvLayout === "single-column" ? "FULL WIDTH" : "2-COLUMN DRAFTING") + " · SCALE 1:1";
+      const p1EyebrowTitle = document.getElementById("page1DocEyebrowTitle");
+      const p1EyebrowBadge = document.getElementById("page1DocEyebrowBadge");
+      if (p1EyebrowTitle) p1EyebrowTitle.textContent = eyebrowTitle;
+      if (p1EyebrowBadge) p1EyebrowBadge.textContent = eyebrowBadge;
+      const draftEyebrowTitle = document.getElementById("draftCvDocEyebrowTitle");
+      const draftEyebrowBadge = document.getElementById("draftCvDocEyebrowBadge");
+      if (draftEyebrowTitle) draftEyebrowTitle.textContent = eyebrowTitle;
+      if (draftEyebrowBadge) draftEyebrowBadge.textContent = eyebrowBadge;
+
+      // Update Blueprint Title Block Corner Stamp
+      const stampText = `${(cv.name || "AHMED AL-MANSOOR").toUpperCase()} · SHEET 1 OF 1 · SCALE 1:1 · CAD VERIFIED`;
+      document.querySelectorAll(".blueprint-stamp").forEach((el) => {
+        el.textContent = stampText;
+      });
+
       // Synchronize the inline Page 1 Full CV Preview Mirror & Completeness Badge
       const masterSheet = document.getElementById("draftCvSheetEl");
       const page1Mirror = document.getElementById("page1LiveCvMirror");
@@ -3011,12 +3814,41 @@
         page1Mirror.innerHTML = masterSheet.innerHTML.replace(/\bid="([^"]+)"/g, 'data-mirror-id="$1"');
       }
 
-      // Synchronize Executive Theme class across all CV sheets (master and mirror)
-      const themeClass = `cv-theme-${state.cvTheme || "monaco"}`;
-      const allThemeClasses = ["cv-theme-monaco", "cv-theme-zurich", "cv-theme-emerald", "cv-theme-bordeaux", "cv-theme-nordic"];
+      // Synchronize Document Style and Layout classes across all CV sheets (master and mirror)
+      const currentTheme = state.cvTheme || "bp";
+      const currentLayout = state.cvLayout || "two-column";
+      const allThemeClasses = [
+        "cv-theme-bp", "cv-theme-stone", "cv-theme-lux", "cv-theme-ivory",
+        "cv-theme-bordeaux", "cv-theme-zurich", "cv-theme-nordic", "cv-theme-emerald",
+        "bp", "stone", "lux", "ivory", "bordeaux", "zurich", "nordic", "emerald",
+        "cv-theme-monaco"
+      ];
       document.querySelectorAll(".cv-sheet").forEach((sheet) => {
         allThemeClasses.forEach((c) => sheet.classList.remove(c));
-        sheet.classList.add(themeClass);
+        sheet.classList.add(`cv-theme-${currentTheme}`);
+        sheet.classList.add(currentTheme);
+        sheet.classList.remove("layout-two-column", "layout-single-column");
+        sheet.classList.add(`layout-${currentLayout}`);
+      });
+
+      // Sync button active/pressed states
+      document.querySelectorAll(".doc-style-btn, .theme-swatch-btn").forEach((btn) => {
+        const s = btn.getAttribute("data-style") || btn.getAttribute("data-theme") || btn.getAttribute("data-cv");
+        const active = (s === currentTheme) || (currentTheme === "lux" && s === "monaco") || (currentTheme === "monaco" && s === "lux");
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      document.querySelectorAll(".doc-layout-btn").forEach((btn) => {
+        const l = btn.getAttribute("data-layout");
+        const active = (l === currentLayout);
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      // Sync hint text
+      const activeHint = DOC_STYLE_HINTS[currentTheme] || DOC_STYLE_HINTS.bp;
+      document.querySelectorAll(".doc-style-hint").forEach((el) => {
+        el.textContent = activeHint;
       });
 
       const totalBullets = (cv.roles || []).reduce((acc, r) => acc + ((r.bullets && r.bullets.length) || 0), 0);
@@ -3071,35 +3903,98 @@
     }
 
     /* ------------------------------------------------------------------
-       3A. EXECUTIVE CV THEMES & PORTRAIT PHOTO MANAGEMENT
+       3A. DOCUMENT STYLES (BLUEPRINT, STONE, NAVY, PLAIN, BORDEAUX, ZURICH, NORDIC, EMERALD)
        ------------------------------------------------------------------ */
+    const DOC_STYLE_HINTS = {
+      bp: "Drafting-sheet layout — monospace headings, grid ground, title block. Reads as engineered, not marketed.",
+      stone: "Sand paper, deep green and brass — institutional and quiet. Good for chambers, diplomatic missions and government-adjacent targets.",
+      lux: "Navy and gold with portrait — the executive dossier look for private investment, holding boards and C-Suite mandates.",
+      monaco: "Navy and gold with portrait — the executive dossier look for private investment, holding boards and C-Suite mandates.",
+      ivory: "Plain ivory, no portrait — safest for ATS screens.",
+      bordeaux: "Imperial wine & warm copper on oyster cream — tailored for private equity, luxury conglomerates, and board governance.",
+      zurich: "Swiss architectural precision — high-contrast monochrome with clean grotesque typography for fintech & enterprise software.",
+      nordic: "Midnight slate & electric ice cyan — engineered for modern tech operations, AI transformation & venture scale.",
+      emerald: "Heritage racing emerald & mint slate — calibrated for industrial operations, turnaround management & strategic supply chain."
+    };
+
     function setExecutiveCvTheme(themeId, silent) {
-      if (!themeId) themeId = "monaco";
+      if (!themeId) themeId = "bp";
+      if (themeId === "monaco") themeId = "lux";
       state.cvTheme = themeId;
       try {
         localStorage.setItem("ai_cv_portal_theme", themeId);
       } catch {}
 
-      const allThemes = ["cv-theme-monaco", "cv-theme-zurich", "cv-theme-emerald", "cv-theme-bordeaux", "cv-theme-nordic"];
+      const allThemeClasses = [
+        "cv-theme-bp", "cv-theme-stone", "cv-theme-lux", "cv-theme-ivory",
+        "cv-theme-bordeaux", "cv-theme-zurich", "cv-theme-nordic", "cv-theme-emerald",
+        "bp", "stone", "lux", "ivory", "bordeaux", "zurich", "nordic", "emerald",
+        "cv-theme-monaco"
+      ];
       document.querySelectorAll(".cv-sheet").forEach((sheet) => {
-        allThemes.forEach((cls) => sheet.classList.remove(cls));
+        allThemeClasses.forEach((cls) => sheet.classList.remove(cls));
         sheet.classList.add(`cv-theme-${themeId}`);
+        sheet.classList.add(themeId);
       });
 
-      document.querySelectorAll(".theme-swatch-btn").forEach((btn) => {
-        const matches = btn.getAttribute("data-theme") === themeId;
-        btn.classList.toggle("active", matches);
+      document.querySelectorAll(".doc-style-btn, .theme-swatch-btn").forEach((btn) => {
+        const s = btn.getAttribute("data-style") || btn.getAttribute("data-theme") || btn.getAttribute("data-cv");
+        const active = (s === themeId) || (themeId === "lux" && s === "monaco") || (themeId === "monaco" && s === "lux");
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      const hintText = DOC_STYLE_HINTS[themeId] || DOC_STYLE_HINTS.bp;
+      document.querySelectorAll(".doc-style-hint").forEach((el) => {
+        el.textContent = hintText;
       });
 
       if (!silent) {
         const names = {
-          monaco: "Monaco Royal Navy & Gold",
-          zurich: "Zurich Carbon & Platinum",
-          emerald: "Executive Emerald & Slate",
-          bordeaux: "Bordeaux Prestige",
-          nordic: "Nordic Midnight & Cyan"
+          bp: "Blueprint (Drafting Table Aesthetic)",
+          stone: "Stone (Institutional Green & Brass)",
+          lux: "Navy (Executive Dossier & Gold)",
+          monaco: "Navy (Executive Dossier & Gold)",
+          ivory: "Plain (Ivory ATS Screening Standard)",
+          bordeaux: "Bordeaux Prestige (Imperial Wine & Amber)",
+          zurich: "Zurich Carbon (Swiss Precision)",
+          nordic: "Nordic Midnight (Tech & Ice Cyan)",
+          emerald: "Executive Emerald (Operations & Slate)"
         };
-        showToast(`Executive CV Theme switched to ${names[themeId] || themeId}`);
+        showToast(`Document style: ${names[themeId] || themeId}`);
+      }
+    }
+
+    function setExecutiveCvLayout(layoutId, silent) {
+      if (!layoutId) layoutId = "two-column";
+      state.cvLayout = layoutId;
+      try {
+        localStorage.setItem("ai_cv_portal_layout", layoutId);
+      } catch {}
+
+      document.querySelectorAll(".cv-sheet").forEach((sheet) => {
+        sheet.classList.remove("layout-two-column", "layout-single-column");
+        sheet.classList.add(`layout-${layoutId}`);
+      });
+
+      document.querySelectorAll(".doc-layout-btn").forEach((btn) => {
+        const l = btn.getAttribute("data-layout");
+        const active = (l === layoutId);
+        btn.classList.toggle("active", active);
+        btn.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+
+      const badgeText = (layoutId === "single-column" ? "FULL WIDTH" : "2-COLUMN DRAFTING") + " · SCALE 1:1";
+      document.querySelectorAll(".cv-doc-eyebrow .doc-badge").forEach((el) => {
+        el.textContent = badgeText;
+      });
+
+      if (!silent) {
+        const names = {
+          "two-column": "2-Column Drafting Split",
+          "single-column": "Classic Full-Width Flow"
+        };
+        showToast(`Document layout: ${names[layoutId] || layoutId}`);
       }
     }
 
