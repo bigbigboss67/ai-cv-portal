@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-23T08:55:09.264Z",
-  "total": 269,
-  "staleSources": 0,
+  "generatedAt": "2026-10-24T08:28:28.414Z",
+  "total": 289,
+  "staleSources": 1,
   "sources": [
     {
       "id": "indeed",
@@ -11,8 +11,8 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 10,
-      "ms": 1021,
+      "count": 20,
+      "ms": 481,
       "note": null,
       "jobs": [
         {
@@ -23,19 +23,6 @@
           "ref": "INDEED-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "indeed",
           "to": "careers@merriam-webster.com",
@@ -53,6 +40,19 @@
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "INDEED-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -81,19 +81,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "INDEED-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -105,6 +92,19 @@
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "INDEED-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -120,6 +120,19 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "INDEED-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -133,17 +146,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "General Manager",
           "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "INDEED-NA753N",
+          "location": "UAE",
+          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
+          "ref": "INDEED-LYR4F4",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "general manager",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
+          "ref": "INDEED-I3URGK",
+          "posted": "live",
+          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "general manager middle east jobs",
+          "company": "via Indeed UAE",
+          "location": "UAE",
+          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
+          "ref": "INDEED-BLSXVN",
+          "posted": "live",
+          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
+          "ref": "INDEED-675AKH",
+          "posted": "live",
+          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "General manager salary in UAE",
+          "company": "via Indeed UAE",
+          "location": "UAE",
+          "url": "https://ae.indeed.com/career/general-manager/salaries",
+          "ref": "INDEED-83GYPV",
+          "posted": "live",
+          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
+          "ref": "INDEED-QVWUIB",
+          "posted": "live",
+          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
+          "company": "via Indeed UAE",
+          "location": "UAE",
+          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
+          "ref": "INDEED-VRMEZH",
+          "posted": "live",
+          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "general manager food industry",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
+          "ref": "INDEED-1NEA7Z",
+          "posted": "live",
+          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
+          "ref": "INDEED-7REQK",
+          "posted": "live",
+          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
+        },
+        {
+          "title": "general manager building",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
+          "ref": "INDEED-DCZCMX",
+          "posted": "live",
+          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@executive-recruitment-uae.com",
+          "emailVia": "Executive Recruitment Desk"
         }
       ]
     },
@@ -156,7 +286,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 502,
+      "ms": 428,
       "note": null,
       "jobs": [
         {
@@ -167,19 +297,6 @@
           "ref": "DUBIZZLE-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@merriam-webster.com",
@@ -197,6 +314,19 @@
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "DUBIZZLE-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -225,19 +355,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "DUBIZZLE-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -249,6 +366,19 @@
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "DUBIZZLE-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -264,6 +394,19 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "DUBIZZLE-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -275,19 +418,6 @@
           "src": "dubizzle",
           "to": "careers@managementlegend.com",
           "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "DUBIZZLE-NA753N",
-          "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
           "title": "General Manager",
@@ -430,7 +560,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 500,
+      "ms": 433,
       "note": null,
       "jobs": [
         {
@@ -441,19 +571,6 @@
           "ref": "BAYT-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "bayt",
           "to": "careers@merriam-webster.com",
@@ -471,6 +588,19 @@
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "BAYT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -499,19 +629,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "BAYT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -523,6 +640,19 @@
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "BAYT-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -538,6 +668,19 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "BAYT-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -549,19 +692,6 @@
           "src": "bayt",
           "to": "careers@managementlegend.com",
           "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "BAYT-NA753N",
-          "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
           "title": "General Manager",
@@ -704,7 +834,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 539,
+      "ms": 503,
       "note": null,
       "jobs": [
         {
@@ -715,19 +845,6 @@
           "ref": "GULFTALENT-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@merriam-webster.com",
@@ -745,6 +862,19 @@
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "GULFTALENT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -773,19 +903,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "GULFTALENT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -797,6 +914,19 @@
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "GULFTALENT-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -812,6 +942,19 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "GULFTALENT-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -823,19 +966,6 @@
           "src": "gulftalent",
           "to": "careers@managementlegend.com",
           "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "GULFTALENT-NA753N",
-          "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
           "title": "General Manager",
@@ -978,7 +1108,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 309,
+      "ms": 272,
       "note": null,
       "jobs": [
         {
@@ -989,19 +1119,6 @@
           "ref": "NAUKRIGULF-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@merriam-webster.com",
@@ -1019,6 +1136,19 @@
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "NAUKRIGULF-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -1047,19 +1177,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "NAUKRIGULF-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1071,6 +1188,19 @@
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "NAUKRIGULF-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -1086,6 +1216,19 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "NAUKRIGULF-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1097,19 +1240,6 @@
           "src": "naukrigulf",
           "to": "careers@managementlegend.com",
           "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "NAUKRIGULF-NA753N",
-          "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
           "title": "General Manager",
@@ -1253,7 +1383,7 @@
       },
       "ok": true,
       "count": 13,
-      "ms": 1824,
+      "ms": 525,
       "bytes": 216484,
       "note": null,
       "jobs": [
@@ -1386,10 +1516,30 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2028,
-      "bytes": 162713,
+      "ms": 2276,
+      "bytes": 159423,
       "note": null,
       "jobs": [
+        {
+          "title": "Inhouse SAP BI Consultant Datasphere & SAC (m/w/d)",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37779/inhouse-sap-bi-consultant-datasphere-sac-m-w-d/oldenburg-oldb",
+          "ref": "37779",
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
+        },
+        {
+          "title": "Management Trainee - Germany-China Leadership Program (m/f/d)",
+          "company": "via Departer — The German Headhunter",
+          "location": "",
+          "url": "https://careers.departer.de/job/37778/management-trainee-germany-china-leadership-program-m-f-d",
+          "ref": "37778",
+          "kind": "page",
+          "to": "info@departer.com",
+          "emailVia": "Departer German Headhunter MEA Desk"
+        },
         {
           "title": "Regional Sales Manager (m/f/d) Middle East, Interior",
           "company": "via Departer — The German Headhunter",
@@ -1469,26 +1619,6 @@
           "kind": "page",
           "to": "info@departer.com",
           "emailVia": "Departer German Headhunter MEA Desk"
-        },
-        {
-          "title": "Personalreferent/HR Generalist (m/w/d)",
-          "company": "via Departer — The German Headhunter",
-          "location": "",
-          "url": "https://careers.departer.de/job/37512/personalreferent-hr-generalist-m-w-d",
-          "ref": "37512",
-          "kind": "page",
-          "to": "info@departer.com",
-          "emailVia": "Departer German Headhunter MEA Desk"
-        },
-        {
-          "title": "Managing Director (m/f/d) GCC",
-          "company": "via Departer — The German Headhunter",
-          "location": "",
-          "url": "https://careers.departer.de/job/37479/managing-director-m-f-d-gcc",
-          "ref": "37479",
-          "kind": "page",
-          "to": "info@departer.com",
-          "emailVia": "Departer German Headhunter MEA Desk"
         }
       ]
     },
@@ -1501,8 +1631,8 @@
       },
       "ok": true,
       "count": 5,
-      "ms": 1662,
-      "bytes": 812932,
+      "ms": 2569,
+      "bytes": 812926,
       "note": null,
       "jobs": [
         {
@@ -1566,10 +1696,50 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 503,
-      "bytes": 172504,
+      "ms": 236,
+      "bytes": 172957,
       "note": null,
       "jobs": [
+        {
+          "title": "CHRO - Luxury Retail - Hybrid Dubai & Lebanon",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/chro-luxury-retail-hybrid-dubai-lebanon/ref/jn-102026-7128587",
+          "ref": "jn-102026-7128587",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
+        {
+          "title": "Director of Growth & Partnerships (UAE National Role)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/director-growth-partnerships-uae-national-role/ref/jn-102026-7132892",
+          "ref": "jn-102026-7132892",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
+        {
+          "title": "Chief of Staff | High-Profile Founding Organisation (UAE National)",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/chief-staff-high-profile-founding-org-uae-national/ref/jn-102026-7132795",
+          "ref": "jn-102026-7132795",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
+        {
+          "title": "Executive Assistant",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/executive-assistant/ref/jn-102026-7131798",
+          "ref": "jn-102026-7131798",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
         {
           "title": "PR & Communications Director - Investment Holding Group - Qatar",
           "company": "via Michael Page",
@@ -1829,46 +1999,6 @@
           "kind": "page",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Project Director - Highways and Bridges",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/project-director-highways-and-bridges/ref/jn-072026-7072051",
-          "ref": "jn-072026-7072051",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Senior Corporate Governance Manager - Energy",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/senior-corporate-governance-manager/ref/jn-102026-7123363",
-          "ref": "jn-102026-7123363",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Senior Social Media Manager - Global Retail brand",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/senior-social-media-manager/ref/jn-102026-7123310",
-          "ref": "jn-102026-7123310",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Social Media Manager - Wellness brand",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/social-media-manager/ref/jn-102026-7121497",
-          "ref": "jn-102026-7121497",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     },
@@ -1881,8 +2011,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1330,
-      "bytes": 281709,
+      "ms": 619,
+      "bytes": 283188,
       "note": null,
       "jobs": [
         {
@@ -1936,11 +2066,91 @@
           "emailVia": "Page Executive Middle East Desk"
         },
         {
-          "title": "Director People & Culture Austria | Industrie",
+          "title": "Diretor Comercial BtoB",
           "company": "via Page Executive",
           "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-people-culture-austria-industrie/ref/jn-102026-7131828",
-          "ref": "jn-102026-7131828",
+          "url": "https://www.pageexecutive.com/job-detail/diretor-comercial-btob/ref/jn-102026-7131169",
+          "ref": "jn-102026-7131169",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Partner / Partner - Consumer & Retail",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-consumer-retail/ref/jn-092026-7098104",
+          "ref": "jn-092026-7098104",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Partner or Senior Partner - Industrial & Manufacturing",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-partner-partner-industrial-manufacturing/ref/jn-092026-7098273",
+          "ref": "jn-092026-7098273",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Human Resources Manager - Darmann Abrasive Products - Clinton, MA",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/hr-manager-darmann-abrasive-products-clinton-ma/ref/jn-102026-7132660",
+          "ref": "jn-102026-7132660",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "DIRECTEUR GENERAL H/F - Cameroun - Média (F/H)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/directeur-general-hf-cameroun-m%C3%A9dia-fh/ref/jn-102026-7132874",
+          "ref": "jn-102026-7132874",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head of Private Banking Switzerland (Benelux Markets)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-private-banking-switzerland-benelux-markets/ref/jn-102026-7132672",
+          "ref": "jn-102026-7132672",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Directeur de site de production H/F",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/directeur-de-site-de-production-fh/ref/jn-102026-7132540",
+          "ref": "jn-102026-7132540",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Group Chief Information Officer",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/group-chief-information-officer/ref/jn-102026-7128379",
+          "ref": "jn-102026-7128379",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Chief Executive Officer (e-commerce)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/chief-executive-officer-e-commerce/ref/jn-102026-7130593",
+          "ref": "jn-102026-7130593",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -1951,6 +2161,16 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/ceo-private-equity-backed-intralogistic-company-south-italy/ref/jn-102026-7130064",
           "ref": "jn-102026-7130064",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Director People & Culture Austria | Industrie",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-people-culture-austria-industrie/ref/jn-102026-7131828",
+          "ref": "jn-102026-7131828",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2094,96 +2314,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "General Manager Resort hotelero Premium",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/general-manager-resort-premium/ref/jn-022026-6953689",
-          "ref": "jn-022026-6953689",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Dyrektor ds. Finansów Strategicznych i Transformacji",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/dyrektor-ds-finans%C3%B3w-strategicznych-i-transformacji/ref/jn-102026-7125486",
-          "ref": "jn-102026-7125486",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Global Chief Accounting Officer | Multinational Listed Manufacturing & Technology Group",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/cao/ref/jn-102026-7128426",
-          "ref": "jn-102026-7128426",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Chief Financial Officer-Board Partner & Capital Markets head",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/chief-financial-officer-board-partner-capital-markets-head/ref/jn-102026-7121488",
-          "ref": "jn-102026-7121488",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "General Manager - Minerals",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/general-manager-minerals/ref/jn-102026-7125357",
-          "ref": "jn-102026-7125357",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Finance Director - HK$1.2M - 1.8M + Bonus",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/finance-director-hk12m-18m-bonus/ref/jn-102026-7130037",
-          "ref": "jn-102026-7130037",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Program Management Director - BLA",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/program-management-director-bla/ref/jn-102026-7128432",
-          "ref": "jn-102026-7128432",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Diretor(a) Geral de Unidade de Negócios | Brasil",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/diretora-geral-de-unidade-de-neg%C3%B3cios-brasil/ref/jn-102026-7129994",
-          "ref": "jn-102026-7129994",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Senior Sales & Account Manager (m/w/d) - Publicly listed manufacturer premium plastic components",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/senior-sales-account-manager-plastic-components-mwd/ref/jn-102026-7125709",
-          "ref": "jn-102026-7125709",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2191,13 +2321,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "audience": {
-        "market": "gulf"
-      },
-      "ok": true,
+      "ok": false,
       "count": 71,
-      "ms": 13123,
-      "note": null,
+      "ms": 6520,
+      "error": "HTTP 429 from www.linkedin.com",
+      "stale": true,
+      "staleSince": "2026-10-23T08:55:09.264Z",
+      "note": "fetch failed — these 71 listings are carried over from 2026-10-23T08:55:09.264Z, not a fresh read",
       "jobs": [
         {
           "title": "Managing Director",
@@ -3061,8 +3191,8 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 1373,
+      "count": 30,
+      "ms": 509,
       "note": null,
       "jobs": [
         {
@@ -3075,15 +3205,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
@@ -3091,6 +3212,15 @@
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "kind": "page",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -3111,15 +3241,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
-          "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "kind": "page",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
@@ -3127,6 +3248,15 @@
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via thesaurus.com",
+          "location": "UAE",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "kind": "page",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
           "title": "Management - Wikipedia",
@@ -3138,6 +3268,15 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via collinsdictionary.com",
+          "location": "UAE",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+        },
+        {
           "title": "What Is Management? Meaning, Benefits & Best Practices",
           "company": "via managementlegend.com",
           "location": "UAE",
@@ -3147,103 +3286,184 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via coursera.org",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://www.coursera.org/articles/management",
+          "url": "https://www.merriam-webster.com/dictionary/general",
           "kind": "page",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "YouTube TV Help",
-          "company": "via support.google.com",
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://support.google.com/youtubetv/?hl=en",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Blur your videos - YouTube Help - Google Help",
-          "company": "via support.google.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/answer/9057652?hl=en",
+          "url": "https://www.thegeneral.com/",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Displaying YouTube LiveChat Comments on Stream - OBS",
-          "company": "via obsproject.com",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://obsproject.com/forum/threads/displaying-youtube-livechat-comments-on-stream-without-streamyard-free.144897/",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page",
-          "to": "careers@obsproject.com",
-          "emailVia": "Employer Domain HR (obsproject.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "YouTube - Need to setup broadcast before you can stream",
-          "company": "via obsproject.com",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://obsproject.com/forum/threads/youtube-need-to-setup-broadcast-before-you-can-stream.149849/",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
           "kind": "page",
-          "to": "careers@obsproject.com",
-          "emailVia": "Employer Domain HR (obsproject.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Check your recent subscribers - YouTube Help - Google Help",
-          "company": "via support.google.com",
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/answer/7280745?hl=en",
+          "url": "https://www.dollargeneral.com/",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "Set a custom passcode on YouTube Kids - Google Help",
-          "company": "via support.google.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtubekids/answer/6292172?hl=en&co=GENIE.Platform%3DAndroid",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "YouTube Partner Program overview & eligibility",
-          "company": "via support.google.com",
+          "title": "The General Auto Insurance",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/answer/72851?hl=en&co=GENIE.Platform%3DAndroid",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Block channels for supervised kid accounts - YouTube Help",
-          "company": "via support.google.com",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/answer/13887963?hl=en",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "Your AdSense for YouTube account was deactivated",
-          "company": "via support.google.com",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/answer/10801543?hl=en",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "YouTube Súgó - Google Help",
-          "company": "via support.google.com",
+          "title": "Seahawks 2026 Opponents",
+          "company": "via seahawks.com",
           "location": "UAE",
-          "url": "https://support.google.com/youtube/?hl=hu",
+          "url": "https://www.seahawks.com/news/seahawks-2026-opponents-set",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks Home | Seattle Seahawks – seahawks.com",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "A Game-By-Game Look At The Seahawks' 2026 Schedule",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/news/a-game-by-game-look-at-the-seahawks-2026-schedule",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks 2026 Preseason Schedule Announced",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/news/seahawks-2026-preseason-schedule-announced",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks Tickets | Seattle Seahawks – Seahawks.com",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/tickets/",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seattle Seahawks Announce Themes for 2026 Home Games",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/news/seattle-seahawks-announce-themes-for-2026-home-games",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks Kickoff Week | Seattle Seahawks – Seahawks.com",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/game-day/countdown-to-kickoff/kickoff-week/",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks 2026 Schedule | Seattle Seahawks - seahawks.com",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/schedule/",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks Gameday Experiences | Seattle Seahawks – Seahawks.com",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/game-day/experiences/",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
+        },
+        {
+          "title": "Seahawks Celebrate The Season With \"Countdown to Kickoff\"",
+          "company": "via seahawks.com",
+          "location": "UAE",
+          "url": "https://www.seahawks.com/news/seahawks-celebrate-the-season-with-countdown-to-kickoff",
+          "kind": "page",
+          "to": "careers@seahawks.com",
+          "emailVia": "Employer Domain HR (seahawks.com)"
         }
       ]
     }
