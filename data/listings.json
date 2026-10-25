@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-24T08:28:28.414Z",
-  "total": 289,
-  "staleSources": 1,
+  "generatedAt": "2026-10-25T08:48:14.612Z",
+  "total": 287,
+  "staleSources": 0,
   "sources": [
     {
       "id": "indeed",
@@ -12,9 +12,22 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 481,
+      "ms": 550,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "INDEED-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
@@ -40,19 +53,6 @@
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -81,19 +81,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "INDEED-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -105,6 +92,19 @@
           "src": "indeed",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "INDEED-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -146,134 +146,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "General Manager",
-          "company": "via Indeed UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
-          "ref": "INDEED-LYR4F4",
-          "posted": "live",
-          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
-          "ref": "INDEED-I3URGK",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "INDEED-M4XQ1M",
           "posted": "live",
-          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "general manager middle east jobs",
-          "company": "via Indeed UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
-          "ref": "INDEED-BLSXVN",
-          "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
-          "ref": "INDEED-675AKH",
+          "url": "https://www.thegeneral.com/",
+          "ref": "INDEED-TR94BC",
           "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "General manager salary in UAE",
-          "company": "via Indeed UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/career/general-manager/salaries",
-          "ref": "INDEED-83GYPV",
-          "posted": "live",
-          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "title": "General (United States) - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
-          "ref": "INDEED-QVWUIB",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-V7P28E",
           "posted": "live",
-          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
-          "company": "via Indeed UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
-          "ref": "INDEED-VRMEZH",
-          "posted": "live",
-          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager food industry",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
-          "ref": "INDEED-1NEA7Z",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "INDEED-COJQ3S",
           "posted": "live",
-          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
-          "ref": "INDEED-7REQK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "INDEED-MFXMB7",
           "posted": "live",
-          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "general manager building",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
-          "ref": "INDEED-DCZCMX",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "INDEED-6I7BS2",
           "posted": "live",
-          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "The General Auto Insurance",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "INDEED-SALKJO",
+          "posted": "live",
+          "text": "No sign in required. With The General ® App. Download It Today!",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "INDEED-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "INDEED-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "General officer - Wikipedia",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "INDEED-4JF8A7",
+          "posted": "live",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         }
       ]
     },
@@ -286,9 +286,22 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 428,
+      "ms": 513,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "DUBIZZLE-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
@@ -314,19 +327,6 @@
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -355,19 +355,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "DUBIZZLE-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -379,6 +366,19 @@
           "src": "dubizzle",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "DUBIZZLE-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -420,134 +420,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "General Manager",
-          "company": "via Dubizzle Jobs",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
-          "ref": "DUBIZZLE-LYR4F4",
-          "posted": "live",
-          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
-          "ref": "DUBIZZLE-I3URGK",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "DUBIZZLE-M4XQ1M",
           "posted": "live",
-          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "general manager middle east jobs",
-          "company": "via Dubizzle Jobs",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
-          "ref": "DUBIZZLE-BLSXVN",
-          "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
-          "ref": "DUBIZZLE-675AKH",
+          "url": "https://www.thegeneral.com/",
+          "ref": "DUBIZZLE-TR94BC",
           "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "General manager salary in UAE",
-          "company": "via Dubizzle Jobs",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/career/general-manager/salaries",
-          "ref": "DUBIZZLE-83GYPV",
-          "posted": "live",
-          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "title": "General (United States) - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
-          "ref": "DUBIZZLE-QVWUIB",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-V7P28E",
           "posted": "live",
-          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
-          "company": "via Dubizzle Jobs",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
-          "ref": "DUBIZZLE-VRMEZH",
-          "posted": "live",
-          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager food industry",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
-          "ref": "DUBIZZLE-1NEA7Z",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "DUBIZZLE-COJQ3S",
           "posted": "live",
-          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
-          "ref": "DUBIZZLE-7REQK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "DUBIZZLE-MFXMB7",
           "posted": "live",
-          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "general manager building",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
-          "ref": "DUBIZZLE-DCZCMX",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "DUBIZZLE-6I7BS2",
           "posted": "live",
-          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "The General Auto Insurance",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "DUBIZZLE-SALKJO",
+          "posted": "live",
+          "text": "No sign in required. With The General ® App. Download It Today!",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "DUBIZZLE-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "DUBIZZLE-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "General officer - Wikipedia",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "DUBIZZLE-4JF8A7",
+          "posted": "live",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         }
       ]
     },
@@ -560,9 +560,22 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 433,
+      "ms": 406,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "BAYT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
@@ -588,19 +601,6 @@
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -629,19 +629,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "BAYT-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -653,6 +640,19 @@
           "src": "bayt",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "BAYT-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -694,134 +694,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "General Manager",
-          "company": "via Bayt UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
-          "ref": "BAYT-LYR4F4",
-          "posted": "live",
-          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
-          "ref": "BAYT-I3URGK",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "BAYT-M4XQ1M",
           "posted": "live",
-          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "general manager middle east jobs",
-          "company": "via Bayt UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
-          "ref": "BAYT-BLSXVN",
-          "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
-          "ref": "BAYT-675AKH",
+          "url": "https://www.thegeneral.com/",
+          "ref": "BAYT-TR94BC",
           "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "General manager salary in UAE",
-          "company": "via Bayt UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/career/general-manager/salaries",
-          "ref": "BAYT-83GYPV",
-          "posted": "live",
-          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "title": "General (United States) - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
-          "ref": "BAYT-QVWUIB",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-V7P28E",
           "posted": "live",
-          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
-          "company": "via Bayt UAE",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
-          "ref": "BAYT-VRMEZH",
-          "posted": "live",
-          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager food industry",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
-          "ref": "BAYT-1NEA7Z",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "BAYT-COJQ3S",
           "posted": "live",
-          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
-          "ref": "BAYT-7REQK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "BAYT-MFXMB7",
           "posted": "live",
-          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "general manager building",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
-          "ref": "BAYT-DCZCMX",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "BAYT-6I7BS2",
           "posted": "live",
-          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "The General Auto Insurance",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "BAYT-SALKJO",
+          "posted": "live",
+          "text": "No sign in required. With The General ® App. Download It Today!",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "BAYT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "BAYT-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "General officer - Wikipedia",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "BAYT-4JF8A7",
+          "posted": "live",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         }
       ]
     },
@@ -834,9 +834,22 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 503,
+      "ms": 356,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "GULFTALENT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
@@ -862,19 +875,6 @@
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -903,19 +903,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "GULFTALENT-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -927,6 +914,19 @@
           "src": "gulftalent",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "GULFTALENT-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -968,134 +968,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "General Manager",
-          "company": "via GulfTalent",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
-          "ref": "GULFTALENT-LYR4F4",
-          "posted": "live",
-          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
-          "ref": "GULFTALENT-I3URGK",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "GULFTALENT-M4XQ1M",
           "posted": "live",
-          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "general manager middle east jobs",
-          "company": "via GulfTalent",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
-          "ref": "GULFTALENT-BLSXVN",
-          "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
-          "ref": "GULFTALENT-675AKH",
+          "url": "https://www.thegeneral.com/",
+          "ref": "GULFTALENT-TR94BC",
           "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "General manager salary in UAE",
-          "company": "via GulfTalent",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/career/general-manager/salaries",
-          "ref": "GULFTALENT-83GYPV",
-          "posted": "live",
-          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "title": "General (United States) - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
-          "ref": "GULFTALENT-QVWUIB",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-V7P28E",
           "posted": "live",
-          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
-          "company": "via GulfTalent",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
-          "ref": "GULFTALENT-VRMEZH",
-          "posted": "live",
-          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager food industry",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
-          "ref": "GULFTALENT-1NEA7Z",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "GULFTALENT-COJQ3S",
           "posted": "live",
-          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
-          "ref": "GULFTALENT-7REQK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "GULFTALENT-MFXMB7",
           "posted": "live",
-          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "general manager building",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
-          "ref": "GULFTALENT-DCZCMX",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "GULFTALENT-6I7BS2",
           "posted": "live",
-          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "The General Auto Insurance",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "GULFTALENT-SALKJO",
+          "posted": "live",
+          "text": "No sign in required. With The General ® App. Download It Today!",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "GULFTALENT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "GULFTALENT-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "General officer - Wikipedia",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "GULFTALENT-4JF8A7",
+          "posted": "live",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         }
       ]
     },
@@ -1108,9 +1108,22 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 272,
+      "ms": 240,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "NAUKRIGULF-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
@@ -1136,19 +1149,6 @@
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -1177,19 +1177,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "NAUKRIGULF-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1201,6 +1188,19 @@
           "src": "naukrigulf",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "NAUKRIGULF-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -1242,134 +1242,134 @@
           "emailVia": "Employer Domain HR (managementlegend.com)"
         },
         {
-          "title": "General Manager",
-          "company": "via Naukrigulf",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/General-Manager-jobs-in-UAE",
-          "ref": "NAUKRIGULF-LYR4F4",
-          "posted": "live",
-          "text": "Discover 366 General Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-l-dubai-jobs.html?vjk=3a21e62c81e8409c",
-          "ref": "NAUKRIGULF-I3URGK",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "NAUKRIGULF-M4XQ1M",
           "posted": "live",
-          "text": "Discover 223 General Manager job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "general manager middle east jobs",
-          "company": "via Naukrigulf",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/q-general-manager-middle-east-jobs.html?vjk=c220d7e2bf3b1776",
-          "ref": "NAUKRIGULF-BLSXVN",
-          "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "5,000+ Manager Jobs, Employment in Dubai 23 October 2026",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-%22manager%22-l-dubai-jobs.html",
-          "ref": "NAUKRIGULF-675AKH",
+          "url": "https://www.thegeneral.com/",
+          "ref": "NAUKRIGULF-TR94BC",
           "posted": "live",
-          "text": "Experience: Minimum 10 years of professional experience, with at least 4–5 years in a Senior Management or General Manager role within an event fabrication, exhibition contracting, interior fit-out, or commercial joinery company in the UAE.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "General manager salary in UAE",
-          "company": "via Naukrigulf",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/career/general-manager/salaries",
-          "ref": "NAUKRIGULF-83GYPV",
-          "posted": "live",
-          "text": "The average salary for a General Manager is AED 15,330 per month in UAE. Learn about salaries, benefits, salary satisfaction and where you could earn the most.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "General Manager Energy Jobs in Dubai (with Salaries)",
+          "title": "General (United States) - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-energy-l-dubai-jobs.html",
-          "ref": "NAUKRIGULF-QVWUIB",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-V7P28E",
           "posted": "live",
-          "text": "Wood is a global leader in consulting, engineering and operations for the energy and materials sectors. This is a full-time role based in Dubai, UAE with… View all Wood jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Wood Al Majal Joint Venture salaries in Dubai See popular questions & answers about Wood",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "4,000+ Manager Jobs, Employment in UAE 15 September 2026",
-          "company": "via Naukrigulf",
-          "location": "UAE",
-          "url": "https://ae.indeed.com/jobs?q=manager&l=uae",
-          "ref": "NAUKRIGULF-VRMEZH",
-          "posted": "live",
-          "text": "Discover 4,910 Manager job opportunities in UAE on Indeed.com. Apply today to advance your career with top employers.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
-        },
-        {
-          "title": "general manager food industry",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-food-industry-l-dubai-jobs.html?vjk=b569c9666b64689e",
-          "ref": "NAUKRIGULF-1NEA7Z",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "NAUKRIGULF-COJQ3S",
           "posted": "live",
-          "text": "Discover 37 General Manager Food Industry job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "25+ Mall General Manager Jobs, Employment 23 October 2026",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-mall-general-manager-jobs.html?vjk=a2e38f83e9733905",
-          "ref": "NAUKRIGULF-7REQK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "NAUKRIGULF-MFXMB7",
           "posted": "live",
-          "text": "View all Millennium Hotels and Resorts MEA jobs - Dubai jobs - General Manager jobs in Dubai Salary Search: General Manager - Millennium Madinah Airport (KSA) salaries in Dubai",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "general manager building",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ae.indeed.com/q-general-manager-building-l-dubai-jobs.html",
-          "ref": "NAUKRIGULF-DCZCMX",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "NAUKRIGULF-6I7BS2",
           "posted": "live",
-          "text": "Discover 54 General Manager Building job opportunities in Dubai on Indeed.com. Apply today to advance your career with top employers.",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "The General Auto Insurance",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "NAUKRIGULF-SALKJO",
+          "posted": "live",
+          "text": "No sign in required. With The General ® App. Download It Today!",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "NAUKRIGULF-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "NAUKRIGULF-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "General officer - Wikipedia",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "NAUKRIGULF-4JF8A7",
+          "posted": "live",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         }
       ]
     },
@@ -1383,7 +1383,7 @@
       },
       "ok": true,
       "count": 13,
-      "ms": 525,
+      "ms": 2761,
       "bytes": 216484,
       "note": null,
       "jobs": [
@@ -1516,7 +1516,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2276,
+      "ms": 1934,
       "bytes": 159423,
       "note": null,
       "jobs": [
@@ -1630,9 +1630,9 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 5,
-      "ms": 2569,
-      "bytes": 812926,
+      "count": 4,
+      "ms": 1554,
+      "bytes": 811516,
       "note": null,
       "jobs": [
         {
@@ -1674,16 +1674,6 @@
           "kind": "page",
           "to": "info@charterhouse.ae",
           "emailVia": "Charterhouse Middle East Recruitment"
-        },
-        {
-          "title": "Executive Assistant",
-          "company": "via Charterhouse",
-          "location": "",
-          "url": "https://www.charterhouseme.ae/job/executive-assistant-53763",
-          "ref": "53763",
-          "kind": "page",
-          "to": "info@charterhouse.ae",
-          "emailVia": "Charterhouse Middle East Recruitment"
         }
       ]
     },
@@ -1696,7 +1686,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 236,
+      "ms": 240,
       "bytes": 172957,
       "note": null,
       "jobs": [
@@ -2011,8 +2001,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 619,
-      "bytes": 283188,
+      "ms": 1060,
+      "bytes": 281628,
       "note": null,
       "jobs": [
         {
@@ -2046,21 +2036,21 @@
           "emailVia": "Page Executive Middle East Desk"
         },
         {
-          "title": "Director of Financial Services",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-financial-services/ref/jn-072026-7071248",
-          "ref": "jn-072026-7071248",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
           "title": "Director of Finance",
           "company": "via Page Executive",
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance/ref/jn-072026-7074184",
           "ref": "jn-072026-7074184",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Director People & Culture Austria | Industrie",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-people-culture-austria-industrie/ref/jn-102026-7131828",
+          "ref": "jn-102026-7131828",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2161,16 +2151,6 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/ceo-private-equity-backed-intralogistic-company-south-italy/ref/jn-102026-7130064",
           "ref": "jn-102026-7130064",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Director People & Culture Austria | Industrie",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-people-culture-austria-industrie/ref/jn-102026-7131828",
-          "ref": "jn-102026-7131828",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2314,6 +2294,16 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "General Manager Resort hotelero Premium",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/general-manager-resort-premium/ref/jn-022026-6953689",
+          "ref": "jn-022026-6953689",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2321,13 +2311,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "ok": false,
-      "count": 71,
-      "ms": 6520,
-      "error": "HTTP 429 from www.linkedin.com",
-      "stale": true,
-      "staleSince": "2026-10-23T08:55:09.264Z",
-      "note": "fetch failed — these 71 listings are carried over from 2026-10-23T08:55:09.264Z, not a fresh read",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 70,
+      "ms": 13010,
+      "note": null,
       "jobs": [
         {
           "title": "Managing Director",
@@ -2366,10 +2356,10 @@
           "emailVia": "Corporate HR Mailbox (preview.ae)"
         },
         {
-          "title": "Managing Director",
+          "title": "Managing Director- Performance Marketing Agency",
           "company": "Hire Rightt - Executive Search & HR Advisory",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-at-hire-rightt-executive-search-hr-advisory-4479329228",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-performance-marketing-agency-at-hire-rightt-executive-search-hr-advisory-4479329228",
           "ref": "4479329228",
           "posted": "2026-10-16",
           "kind": "page",
@@ -2450,12 +2440,24 @@
           "emailVia": "Corporate HR Mailbox (sandoz.ae)"
         },
         {
+          "title": "General Manager – Industrial Refrigeration - Bilingual",
+          "company": "Genius HRTech Services L.L.C - FZ - Dubai",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-%E2%80%93-industrial-refrigeration-bilingual-at-genius-hrtech-services-l-l-c-fz-dubai-4481688053",
+          "ref": "4481688053",
+          "posted": "2026-10-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@geniushrtech.com",
+          "emailVia": "Corporate HR Mailbox (geniushrtech.com)"
+        },
+        {
           "title": "General Manager–O&M(Wastewater Treatment/Utilities/Environmental Services)- UAE",
           "company": "SEGULA Technologies",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/general-manager%E2%80%93o-m-wastewater-treatment-utilities-environmental-services-uae-at-segula-technologies-4474767535",
           "ref": "4474767535",
-          "posted": "2026-10-02",
+          "posted": "2026-10-24",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@segulatechnologies.com",
@@ -2546,28 +2548,16 @@
           "emailVia": "Corporate HR Mailbox (management.ae)"
         },
         {
-          "title": "General Manager - Substations",
-          "company": "Albatha Group",
-          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-substations-at-albatha-group-4482460014",
-          "ref": "4482460014",
-          "posted": "2026-10-22",
+          "title": "General Manager",
+          "company": "Joint Space Polyclinic LLC",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-joint-space-polyclinic-llc-4476810801",
+          "ref": "4476810801",
+          "posted": "2026-10-09",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@albatha.com",
-          "emailVia": "Albatha Group HR"
-        },
-        {
-          "title": "General Manager – Wellness Clinic",
-          "company": "Talent Capital Infrastructure",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-%E2%80%93-wellness-clinic-at-talent-capital-infrastructure-4475652797",
-          "ref": "4475652797",
-          "posted": "2026-10-11",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@talentcapital.com",
-          "emailVia": "Corporate HR Mailbox (talentcapital.com)"
+          "to": "careers@jointspace.ae",
+          "emailVia": "Corporate HR Mailbox (jointspace.ae)"
         },
         {
           "title": "Director of Operations",
@@ -2616,6 +2606,18 @@
           "src": "linkedin",
           "to": "careers@kerzner.ae",
           "emailVia": "Corporate HR Mailbox (kerzner.ae)"
+        },
+        {
+          "title": "Country Operations Director",
+          "company": "GSM - Green SM",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/country-operations-director-at-gsm-green-sm-4480644321",
+          "ref": "4480644321",
+          "posted": "2026-10-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@gsmgreen.ae",
+          "emailVia": "Corporate HR Mailbox (gsmgreen.ae)"
         },
         {
           "title": "Senior Director of Operations",
@@ -2678,18 +2680,6 @@
           "emailVia": "Corporate HR Mailbox (fairmonthotels.com)"
         },
         {
-          "title": "Director of Operations and Maintenance (High-Speed Rail)",
-          "company": "Parsons Corporation",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-and-maintenance-high-speed-rail-at-parsons-corporation-4459182506",
-          "ref": "4459182506",
-          "posted": "2026-10-21",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@parsons.ae",
-          "emailVia": "Corporate HR Mailbox (parsons.ae)"
-        },
-        {
           "title": "Chief Executive Officer (CEO) – HR & Workforce Solutions",
           "company": "Jobmaze FZ LLC",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2700,18 +2690,6 @@
           "src": "linkedin",
           "to": "careers@jobmazefz.ae",
           "emailVia": "Corporate HR Mailbox (jobmazefz.ae)"
-        },
-        {
-          "title": "Principal/CEO",
-          "company": "GEMS Education",
-          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/principal-ceo-at-gems-education-4481657529",
-          "ref": "4481657529",
-          "posted": "2026-10-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@gemseducation.com",
-          "emailVia": "Corporate HR Mailbox (gemseducation.com)"
         },
         {
           "title": "Chief Executive Officer",
@@ -2738,6 +2716,18 @@
           "emailVia": "Corporate HR Mailbox (blofin.ae)"
         },
         {
+          "title": "Principal/CEO",
+          "company": "GEMS Education",
+          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/principal-ceo-at-gems-education-4481688096",
+          "ref": "4481688096",
+          "posted": "2026-10-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@gemseducation.com",
+          "emailVia": "Corporate HR Mailbox (gemseducation.com)"
+        },
+        {
           "title": "CEO - Construction",
           "company": "Ignite Search and Selection",
           "location": "Dubai, United Arab Emirates",
@@ -2750,16 +2740,28 @@
           "emailVia": "Corporate HR Mailbox (ignitesearch.com)"
         },
         {
-          "title": "Chief Executive Officer",
-          "company": "wowJobs",
+          "title": "Founder",
+          "company": "Hamilton Bradshaw MENA",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-wowjobs-4470139385",
-          "ref": "4470139385",
-          "posted": "2026-09-25",
+          "url": "https://ae.linkedin.com/jobs/view/founder-at-hamilton-bradshaw-mena-4478899861",
+          "ref": "4478899861",
+          "posted": "2026-10-23",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@wowjobs.ae",
-          "emailVia": "Corporate HR Mailbox (wowjobs.ae)"
+          "to": "careers@hamiltonbradshaw.com",
+          "emailVia": "Corporate HR Mailbox (hamiltonbradshaw.com)"
+        },
+        {
+          "title": "Chief Operating Officer",
+          "company": "Confidentiel",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-at-confidentiel-4482852236",
+          "ref": "4482852236",
+          "posted": "2026-10-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@confidentiel.com",
+          "emailVia": "Corporate HR Mailbox (confidentiel.com)"
         },
         {
           "title": "Chief Operating Officer (COO) – Shipping & Logistics",
@@ -2808,18 +2810,6 @@
           "src": "linkedin",
           "to": "careers@gsmgreen.ae",
           "emailVia": "Corporate HR Mailbox (gsmgreen.ae)"
-        },
-        {
-          "title": "Owner",
-          "company": "SH Mobile Zone",
-          "location": "Al Ruways Industrial City, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/owner-at-sh-mobile-zone-4480011582",
-          "ref": "4480011582",
-          "posted": "2026-10-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@shmobile.ae",
-          "emailVia": "Corporate HR Mailbox (shmobile.ae)"
         },
         {
           "title": "General Manager",
@@ -2906,18 +2896,6 @@
           "emailVia": "Corporate HR Mailbox (tlscontact.ae)"
         },
         {
-          "title": "General Manager – Life Sciences & Research Peptides",
-          "company": "Mindfield Resources",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-%E2%80%93-life-sciences-research-peptides-at-mindfield-resources-4477091700",
-          "ref": "4477091700",
-          "posted": "2026-10-15",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@mindfieldresources.com",
-          "emailVia": "Corporate HR Mailbox (mindfieldresources.com)"
-        },
-        {
           "title": "General Manager, UAE",
           "company": "Mackinnon Bruce International",
           "location": "United Arab Emirates",
@@ -2930,16 +2908,16 @@
           "emailVia": "Corporate HR Mailbox (mackinnonbruce.com)"
         },
         {
-          "title": "Country Manager",
-          "company": "CreatorLab",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/country-manager-at-creatorlab-4479834997",
-          "ref": "4479834997",
-          "posted": "2026-10-15",
+          "title": "Head of East Africa",
+          "company": "Taptap Send",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/head-of-east-africa-at-taptap-send-4425543212",
+          "ref": "4425543212",
+          "posted": "2026-10-16",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@creatorlab.ae",
-          "emailVia": "Corporate HR Mailbox (creatorlab.ae)"
+          "to": "careers@taptapsend.ae",
+          "emailVia": "Corporate HR Mailbox (taptapsend.ae)"
         },
         {
           "title": "Commercial Director",
@@ -3026,30 +3004,6 @@
           "emailVia": "Corporate HR Mailbox (fletcherpiccolo.com)"
         },
         {
-          "title": "Commercial Director - Sales & Growth ( GCC)",
-          "company": "Active Fitness Store",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-director-sales-growth-gcc-at-active-fitness-store-4481318751",
-          "ref": "4481318751",
-          "posted": "2026-10-22",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@activefitness.com",
-          "emailVia": "Corporate HR Mailbox (activefitness.com)"
-        },
-        {
-          "title": "Group Commercial Director",
-          "company": "LOBA GROUP",
-          "location": "Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/group-commercial-director-at-loba-group-4475660461",
-          "ref": "4475660461",
-          "posted": "2026-10-11",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@loba.ae",
-          "emailVia": "Corporate HR Mailbox (loba.ae)"
-        },
-        {
           "title": "Commercial Director",
           "company": "Wasael Property Management",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
@@ -3060,6 +3014,30 @@
           "src": "linkedin",
           "to": "careers@wasaelproperty.com",
           "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
+        },
+        {
+          "title": "Director - Commercial Sales, Newton",
+          "company": "Affle",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-commercial-sales-newton-at-affle-4463465031",
+          "ref": "4463465031",
+          "posted": "2026-09-10",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@affle.ae",
+          "emailVia": "Corporate HR Mailbox (affle.ae)"
+        },
+        {
+          "title": "Commercial Director, Agency Sales",
+          "company": "Affle",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/commercial-director-agency-sales-at-affle-4480654668",
+          "ref": "4480654668",
+          "posted": "2026-10-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@affle.ae",
+          "emailVia": "Corporate HR Mailbox (affle.ae)"
         },
         {
           "title": "Area Demand and IBP Director – MEAP, Turkey & CIS",
@@ -3122,18 +3100,6 @@
           "emailVia": "Corporate HR Mailbox (goldapple.ae)"
         },
         {
-          "title": "Director, Technical Operations - Middle East Region",
-          "company": "The Coca-Cola Company",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-technical-operations-middle-east-region-at-the-coca-cola-company-4476267708",
-          "ref": "4476267708",
-          "posted": "2026-10-09",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@thecoca-cola.com",
-          "emailVia": "Corporate HR Mailbox (thecoca-cola.com)"
-        },
-        {
           "title": "Commercial and Vendor Network Director",
           "company": "Muller & Phipps Middle East",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -3180,6 +3146,18 @@
           "src": "linkedin",
           "to": "careers@radissonhotel.com",
           "emailVia": "Corporate HR Mailbox (radissonhotel.com)"
+        },
+        {
+          "title": "Group Procurement Director",
+          "company": "Millennium Hotels and Resorts MEA",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/group-procurement-director-at-millennium-hotels-and-resorts-mea-4475951536",
+          "ref": "4475951536",
+          "posted": "2026-10-08",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@millenniumhotels.com",
+          "emailVia": "Corporate HR Mailbox (millenniumhotels.com)"
         }
       ]
     },
@@ -3192,9 +3170,18 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 509,
+      "ms": 530,
       "note": null,
       "jobs": [
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "kind": "page",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via merriam-webster.com",
@@ -3212,15 +3199,6 @@
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -3241,15 +3219,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via thesaurus.com",
           "location": "UAE",
@@ -3257,6 +3226,15 @@
           "kind": "page",
           "to": "careers@thesaurus.com",
           "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "Management - Wikipedia",
@@ -3295,15 +3273,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via en.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via thegeneral.com",
           "location": "UAE",
@@ -3311,6 +3280,15 @@
           "kind": "page",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.wikipedia.org",
+          "location": "UAE",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "kind": "page",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
@@ -3331,22 +3309,13 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Dollar General",
-          "company": "via dollargeneral.com",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://www.dollargeneral.com/",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
           "kind": "page",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
-          "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
-          "kind": "page",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "The General Auto Insurance",
@@ -3367,103 +3336,112 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "Seahawks 2026 Opponents",
-          "company": "via seahawks.com",
+          "title": "General officer - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://www.seahawks.com/news/seahawks-2026-opponents-set",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Seahawks Home | Seattle Seahawks – seahawks.com",
-          "company": "via seahawks.com",
+          "title": "Cheap Flights, Airline Tickets & Airfares - Find Deals on Flights at ...",
+          "company": "via cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/",
+          "url": "https://www.cheapflights.com/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@cheapflights.com",
+          "emailVia": "Employer Domain HR (cheapflights.com)"
         },
         {
-          "title": "A Game-By-Game Look At The Seahawks' 2026 Schedule",
-          "company": "via seahawks.com",
+          "title": "Cheap Flights, Compare Flights & Airline Deals - ae.Cheapflights.com",
+          "company": "via ae.cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/news/a-game-by-game-look-at-the-seahawks-2026-schedule",
+          "url": "https://www.ae.cheapflights.com/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@ae.cheapflights.com",
+          "emailVia": "Employer Domain HR (ae.cheapflights.com)"
         },
         {
-          "title": "Seahawks 2026 Preseason Schedule Announced",
-          "company": "via seahawks.com",
+          "title": "$59+ Cheap Flights from Albuquerque | Cheapflights",
+          "company": "via cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/news/seahawks-2026-preseason-schedule-announced",
+          "url": "https://www.cheapflights.com/flights-from-albuquerque/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@cheapflights.com",
+          "emailVia": "Employer Domain HR (cheapflights.com)"
         },
         {
-          "title": "Seahawks Tickets | Seattle Seahawks – Seahawks.com",
-          "company": "via seahawks.com",
+          "title": "AED 375+ Cheap Flights to India | Cheapflights",
+          "company": "via ae.cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/tickets/",
+          "url": "https://www.ae.cheapflights.com/flights-to-India/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@ae.cheapflights.com",
+          "emailVia": "Employer Domain HR (ae.cheapflights.com)"
         },
         {
-          "title": "Seattle Seahawks Announce Themes for 2026 Home Games",
-          "company": "via seahawks.com",
+          "title": "7,108+ Cheap Flights from Chennai | Cheapflights",
+          "company": "via in.cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/news/seattle-seahawks-announce-themes-for-2026-home-games",
+          "url": "https://www.in.cheapflights.com/flights-from-Chennai/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@in.cheapflights.com",
+          "emailVia": "Employer Domain HR (in.cheapflights.com)"
         },
         {
-          "title": "Seahawks Kickoff Week | Seattle Seahawks – Seahawks.com",
-          "company": "via seahawks.com",
+          "title": "4,075+ Cheap Flights from Bengaluru | Cheapflights",
+          "company": "via in.cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/game-day/countdown-to-kickoff/kickoff-week/",
+          "url": "https://www.in.cheapflights.com/flights-from-Bangalore/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@in.cheapflights.com",
+          "emailVia": "Employer Domain HR (in.cheapflights.com)"
         },
         {
-          "title": "Seahawks 2026 Schedule | Seattle Seahawks - seahawks.com",
-          "company": "via seahawks.com",
+          "title": "Find Cheap Flights from Bangkok | Cheapflights",
+          "company": "via th.cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/schedule/",
+          "url": "https://www.th.cheapflights.com/flights-from-Bangkok/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@th.cheapflights.com",
+          "emailVia": "Employer Domain HR (th.cheapflights.com)"
         },
         {
-          "title": "Seahawks Gameday Experiences | Seattle Seahawks – Seahawks.com",
-          "company": "via seahawks.com",
+          "title": "$77+ Cheap Flights to Atlanta, Georgia | Cheapflights",
+          "company": "via cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/game-day/experiences/",
+          "url": "https://www.cheapflights.com/flights-to-atlanta/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@cheapflights.com",
+          "emailVia": "Employer Domain HR (cheapflights.com)"
         },
         {
-          "title": "Seahawks Celebrate The Season With \"Countdown to Kickoff\"",
-          "company": "via seahawks.com",
+          "title": "$467+ Cheap Flights to Nepal | Cheapflights",
+          "company": "via cheapflights.com",
           "location": "UAE",
-          "url": "https://www.seahawks.com/news/seahawks-celebrate-the-season-with-countdown-to-kickoff",
+          "url": "https://www.cheapflights.com/flights-to-nepal/",
           "kind": "page",
-          "to": "careers@seahawks.com",
-          "emailVia": "Employer Domain HR (seahawks.com)"
+          "to": "careers@cheapflights.com",
+          "emailVia": "Employer Domain HR (cheapflights.com)"
+        },
+        {
+          "title": "$185+ Cheap Flights to New Jersey | Cheapflights",
+          "company": "via cheapflights.com",
+          "location": "UAE",
+          "url": "https://www.cheapflights.com/flights-to-new-jersey/",
+          "kind": "page",
+          "to": "careers@cheapflights.com",
+          "emailVia": "Employer Domain HR (cheapflights.com)"
         }
       ]
     }
