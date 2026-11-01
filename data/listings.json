@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-31T10:00:44.286Z",
-  "total": 263,
-  "staleSources": 0,
+  "generatedAt": "2026-11-01T10:52:39.384Z",
+  "total": 274,
+  "staleSources": 1,
   "sources": [
     {
       "id": "indeed",
@@ -11,12 +11,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 17,
-      "ms": 312,
+      "count": 20,
+      "ms": 486,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -107,6 +107,45 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "ref": "INDEED-EFM93K",
+          "posted": "live",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "ref": "INDEED-3XC5FG",
+          "posted": "live",
+          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.coursera.org/articles/management",
+          "ref": "INDEED-NA753N",
+          "posted": "live",
+          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -120,19 +159,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "INDEED-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -144,6 +170,19 @@
           "src": "indeed",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-V7P28E",
+          "posted": "live",
+          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -165,37 +204,11 @@
           "url": "https://www.vocabulary.com/dictionary/general",
           "ref": "INDEED-COJQ3S",
           "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
           "kind": "page",
           "src": "indeed",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "INDEED-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "ref": "INDEED-AX8A66",
-          "posted": "live",
-          "text": "Pete Hegseth fired Lt. Gen. Brett Sylvia, the Pentagon’s chief military planner, accusing the officer of leaking classified information to the press.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -217,24 +230,50 @@
           "url": "https://www.thefreedictionary.com/General",
           "ref": "INDEED-NPLFOU",
           "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
           "kind": "page",
           "src": "indeed",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
+          "title": "General officer - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "ref": "INDEED-SALKJO",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "INDEED-4JF8A7",
           "posted": "live",
-          "text": "No sign in required. With The General ® App. Download It Today!",
+          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "INDEED-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "ref": "INDEED-FUTWVG",
+          "posted": "live",
+          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         }
       ]
     },
@@ -246,12 +285,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 17,
-      "ms": 309,
+      "count": 20,
+      "ms": 521,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -342,6 +381,45 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "ref": "DUBIZZLE-EFM93K",
+          "posted": "live",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "ref": "DUBIZZLE-3XC5FG",
+          "posted": "live",
+          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.coursera.org/articles/management",
+          "ref": "DUBIZZLE-NA753N",
+          "posted": "live",
+          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -355,19 +433,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "DUBIZZLE-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -379,6 +444,19 @@
           "src": "dubizzle",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-V7P28E",
+          "posted": "live",
+          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -400,37 +478,11 @@
           "url": "https://www.vocabulary.com/dictionary/general",
           "ref": "DUBIZZLE-COJQ3S",
           "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "DUBIZZLE-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "ref": "DUBIZZLE-AX8A66",
-          "posted": "live",
-          "text": "Pete Hegseth fired Lt. Gen. Brett Sylvia, the Pentagon’s chief military planner, accusing the officer of leaking classified information to the press.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -452,24 +504,50 @@
           "url": "https://www.thefreedictionary.com/General",
           "ref": "DUBIZZLE-NPLFOU",
           "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
+          "title": "General officer - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "ref": "DUBIZZLE-SALKJO",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "DUBIZZLE-4JF8A7",
           "posted": "live",
-          "text": "No sign in required. With The General ® App. Download It Today!",
+          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "DUBIZZLE-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "ref": "DUBIZZLE-FUTWVG",
+          "posted": "live",
+          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         }
       ]
     },
@@ -481,12 +559,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 17,
-      "ms": 354,
+      "count": 20,
+      "ms": 543,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -577,6 +655,45 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "ref": "BAYT-EFM93K",
+          "posted": "live",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "ref": "BAYT-3XC5FG",
+          "posted": "live",
+          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.coursera.org/articles/management",
+          "ref": "BAYT-NA753N",
+          "posted": "live",
+          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -590,19 +707,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "BAYT-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -614,6 +718,19 @@
           "src": "bayt",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-V7P28E",
+          "posted": "live",
+          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -635,37 +752,11 @@
           "url": "https://www.vocabulary.com/dictionary/general",
           "ref": "BAYT-COJQ3S",
           "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
           "kind": "page",
           "src": "bayt",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "BAYT-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "ref": "BAYT-AX8A66",
-          "posted": "live",
-          "text": "Pete Hegseth fired Lt. Gen. Brett Sylvia, the Pentagon’s chief military planner, accusing the officer of leaking classified information to the press.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -687,24 +778,50 @@
           "url": "https://www.thefreedictionary.com/General",
           "ref": "BAYT-NPLFOU",
           "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
           "kind": "page",
           "src": "bayt",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
+          "title": "General officer - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "ref": "BAYT-SALKJO",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "BAYT-4JF8A7",
           "posted": "live",
-          "text": "No sign in required. With The General ® App. Download It Today!",
+          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "BAYT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "ref": "BAYT-FUTWVG",
+          "posted": "live",
+          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         }
       ]
     },
@@ -716,12 +833,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 17,
-      "ms": 410,
+      "count": 20,
+      "ms": 443,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -812,6 +929,45 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "ref": "GULFTALENT-EFM93K",
+          "posted": "live",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "ref": "GULFTALENT-3XC5FG",
+          "posted": "live",
+          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.coursera.org/articles/management",
+          "ref": "GULFTALENT-NA753N",
+          "posted": "live",
+          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -825,19 +981,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "GULFTALENT-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -849,6 +992,19 @@
           "src": "gulftalent",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-V7P28E",
+          "posted": "live",
+          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -870,37 +1026,11 @@
           "url": "https://www.vocabulary.com/dictionary/general",
           "ref": "GULFTALENT-COJQ3S",
           "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "GULFTALENT-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "ref": "GULFTALENT-AX8A66",
-          "posted": "live",
-          "text": "Pete Hegseth fired Lt. Gen. Brett Sylvia, the Pentagon’s chief military planner, accusing the officer of leaking classified information to the press.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -922,24 +1052,50 @@
           "url": "https://www.thefreedictionary.com/General",
           "ref": "GULFTALENT-NPLFOU",
           "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
+          "title": "General officer - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "ref": "GULFTALENT-SALKJO",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "GULFTALENT-4JF8A7",
           "posted": "live",
-          "text": "No sign in required. With The General ® App. Download It Today!",
+          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "GULFTALENT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "ref": "GULFTALENT-FUTWVG",
+          "posted": "live",
+          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         }
       ]
     },
@@ -951,12 +1107,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 17,
-      "ms": 329,
+      "count": 20,
+      "ms": 278,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -1047,6 +1203,45 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "ref": "NAUKRIGULF-EFM93K",
+          "posted": "live",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "ref": "NAUKRIGULF-3XC5FG",
+          "posted": "live",
+          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.coursera.org/articles/management",
+          "ref": "NAUKRIGULF-NA753N",
+          "posted": "live",
+          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1060,19 +1255,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "NAUKRIGULF-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1084,6 +1266,19 @@
           "src": "naukrigulf",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-V7P28E",
+          "posted": "live",
+          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -1105,37 +1300,11 @@
           "url": "https://www.vocabulary.com/dictionary/general",
           "ref": "NAUKRIGULF-COJQ3S",
           "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "NAUKRIGULF-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "ref": "NAUKRIGULF-AX8A66",
-          "posted": "live",
-          "text": "Pete Hegseth fired Lt. Gen. Brett Sylvia, the Pentagon’s chief military planner, accusing the officer of leaking classified information to the press.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -1157,24 +1326,50 @@
           "url": "https://www.thefreedictionary.com/General",
           "ref": "NAUKRIGULF-NPLFOU",
           "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
+          "title": "General officer - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "ref": "NAUKRIGULF-SALKJO",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "NAUKRIGULF-4JF8A7",
           "posted": "live",
-          "text": "No sign in required. With The General ® App. Download It Today!",
+          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "NAUKRIGULF-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
+        },
+        {
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "ref": "NAUKRIGULF-FUTWVG",
+          "posted": "live",
+          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         }
       ]
     },
@@ -1188,7 +1383,7 @@
       },
       "ok": true,
       "count": 11,
-      "ms": 1948,
+      "ms": 1344,
       "bytes": 211626,
       "note": null,
       "jobs": [
@@ -1303,7 +1498,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2003,
+      "ms": 1835,
       "bytes": 157703,
       "note": null,
       "jobs": [
@@ -1418,8 +1613,8 @@
       },
       "ok": true,
       "count": 4,
-      "ms": 1882,
-      "bytes": 811531,
+      "ms": 1475,
+      "bytes": 811535,
       "note": null,
       "jobs": [
         {
@@ -1473,7 +1668,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 340,
+      "ms": 267,
       "bytes": 174569,
       "note": null,
       "jobs": [
@@ -1788,7 +1983,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1399,
+      "ms": 1139,
       "bytes": 281055,
       "note": null,
       "jobs": [
@@ -2098,13 +2293,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "audience": {
-        "market": "gulf"
-      },
-      "ok": true,
+      "ok": false,
       "count": 66,
-      "ms": 13157,
-      "note": null,
+      "ms": 3359,
+      "error": "HTTP 429 from www.linkedin.com",
+      "stale": true,
+      "staleSince": "2026-10-31T10:00:44.286Z",
+      "note": "fetch failed — these 66 listings are carried over from 2026-10-31T10:00:44.286Z, not a fresh read",
       "jobs": [
         {
           "title": "Investment Director / Managing Director",
@@ -2908,12 +3103,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 27,
-      "ms": 331,
+      "count": 23,
+      "ms": 466,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -2976,6 +3171,33 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "Management - Wikipedia",
+          "company": "via en.m.wikipedia.org",
+          "location": "UAE",
+          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "kind": "page",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via managementlegend.com",
+          "location": "UAE",
+          "url": "https://www.managementlegend.com/what-is-management",
+          "kind": "page",
+          "to": "careers@managementlegend.com",
+          "emailVia": "Employer Domain HR (managementlegend.com)"
+        },
+        {
+          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "company": "via coursera.org",
+          "location": "UAE",
+          "url": "https://www.coursera.org/articles/management",
+          "kind": "page",
+          "to": "careers@coursera.org",
+          "emailVia": "Employer Domain HR (coursera.org)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
@@ -2985,15 +3207,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via en.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via thegeneral.com",
           "location": "UAE",
@@ -3001,6 +3214,15 @@
           "kind": "page",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.wikipedia.org",
+          "location": "UAE",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "kind": "page",
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -3021,24 +3243,6 @@
           "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "General officer - Wikipedia",
-          "company": "via en.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "Pentagon refers general fired by Hegseth for criminal prosecution",
-          "company": "via usatoday.com",
-          "location": "UAE",
-          "url": "https://www.usatoday.com/story/news/politics/2026/10/29/pentagon-refers-general-for-criminal-prosecution/92504400007/",
-          "kind": "page",
-          "to": "careers@usatoday.com",
-          "emailVia": "Employer Domain HR (usatoday.com)"
-        },
-        {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
@@ -3057,103 +3261,58 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "The General Auto Insurance",
-          "company": "via thegeneral.com",
-          "location": "UAE",
-          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
-          "kind": "page",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "Shanghai Metro Line 9 （曹路-松江南站） Route Infomation / Stop Station List ...",
-          "company": "via transit.navitime.com",
-          "location": "UAE",
-          "url": "https://transit.navitime.com/en/cn/line/00000008",
-          "kind": "page",
-          "to": "careers@transit.navitime.com",
-          "emailVia": "Employer Domain HR (transit.navitime.com)"
-        },
-        {
-          "title": "Line 9 (Shanghai Metro) - Wikipedia",
+          "title": "General officer - Wikipedia",
           "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/Line_9_(Shanghai_Metro)",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
           "kind": "page",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Shanghai Metro Maps, Printable Subway Maps, PDF Download",
-          "company": "via travelchinaguide.com",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://www.travelchinaguide.com/cityguides/shanghai/transportation/metro-subway-map.htm",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page",
-          "to": "careers@travelchinaguide.com",
-          "emailVia": "Employer Domain HR (travelchinaguide.com)"
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "Line 9 - ExploreShanghai",
-          "company": "via exploreshanghai.com",
+          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "company": "via apnews.com",
           "location": "UAE",
-          "url": "https://exploreshanghai.com/metro/pedia/line/9/",
+          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
           "kind": "page",
-          "to": "careers@exploreshanghai.com",
-          "emailVia": "Employer Domain HR (exploreshanghai.com)"
+          "to": "careers@apnews.com",
+          "emailVia": "Employer Domain HR (apnews.com)"
         },
         {
-          "title": "Shanghai Metro - shmetro.com",
-          "company": "via service.shmetro.com",
+          "title": "Microsoft - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://service.shmetro.com/en/yxxlt/index.htm",
+          "url": "https://en.wikipedia.org/wiki/Microsoft",
           "kind": "page",
-          "to": "careers@service.shmetro.com",
-          "emailVia": "Employer Domain HR (service.shmetro.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Shanghai Metro Line 9: Subway Line Timetable, Transfers",
-          "company": "via travelchinaguide.com",
+          "title": "Outlook",
+          "company": "via outlook.office.com",
           "location": "UAE",
-          "url": "https://www.travelchinaguide.com/cityguides/shanghai/transportation/subway-line9.htm",
+          "url": "https://outlook.office.com/mail/",
           "kind": "page",
-          "to": "careers@travelchinaguide.com",
-          "emailVia": "Employer Domain HR (travelchinaguide.com)"
+          "to": "careers@outlook.office.com",
+          "emailVia": "Employer Domain HR (outlook.office.com)"
         },
         {
-          "title": "Shanghai Metro",
-          "company": "via service.shmetro.com",
+          "title": "Microsoft 365 - Sign into Copilot",
+          "company": "via m365.cloud.microsoft",
           "location": "UAE",
-          "url": "https://service.shmetro.com/en/",
+          "url": "https://m365.cloud.microsoft/?origindomain=Office",
           "kind": "page",
-          "to": "careers@service.shmetro.com",
-          "emailVia": "Employer Domain HR (service.shmetro.com)"
-        },
-        {
-          "title": "song-jiang-ti-yu-zhong-xin-station",
-          "company": "via metrolinehub.com",
-          "location": "UAE",
-          "url": "https://www.metrolinehub.com/en/china/shanghai/song-jiang-ti-yu-zhong-xin-station",
-          "kind": "page",
-          "to": "careers@metrolinehub.com",
-          "emailVia": "Employer Domain HR (metrolinehub.com)"
-        },
-        {
-          "title": "2026-09-28: 1060 ten thousand passengersShang Hai Song Jiang Zhan Metro ...",
-          "company": "via metrolinehub.com",
-          "location": "UAE",
-          "url": "https://www.metrolinehub.com/en/china/shanghai/shang-hai-song-jiang-zhan-station",
-          "kind": "page",
-          "to": "careers@metrolinehub.com",
-          "emailVia": "Employer Domain HR (metrolinehub.com)"
-        },
-        {
-          "title": "Shanghai Metro Station List - MetroMan",
-          "company": "via metroman.cn",
-          "location": "UAE",
-          "url": "https://www.metroman.cn/en/cities/shanghai/stations",
-          "kind": "page",
-          "to": "careers@metroman.cn",
-          "emailVia": "Employer Domain HR (metroman.cn)"
+          "to": "careers@m365.cloud.microsoft",
+          "emailVia": "Employer Domain HR (m365.cloud.microsoft)"
         }
       ]
     }
