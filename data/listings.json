@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T10:52:39.384Z",
-  "total": 274,
+  "generatedAt": "2026-11-02T11:46:32.292Z",
+  "total": 278,
   "staleSources": 1,
   "sources": [
     {
@@ -12,7 +12,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 486,
+      "ms": 426,
       "note": null,
       "jobs": [
         {
@@ -81,19 +81,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "INDEED-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -107,30 +94,43 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "INDEED-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
           "title": "Management - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
-          "ref": "INDEED-EFM93K",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "INDEED-TD928H",
           "posted": "live",
           "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "INDEED-3XC5FG",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "INDEED-LPL7C9",
           "posted": "live",
-          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -146,6 +146,58 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "ref": "INDEED-NHMX7M",
+          "posted": "live",
+          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://generals.io/",
+          "ref": "INDEED-KTMDH8",
+          "posted": "live",
+          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "ref": "INDEED-8KXGPK",
+          "posted": "live",
+          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.iciba.com/word?w=general",
+          "ref": "INDEED-179OVC",
+          "posted": "live",
+          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -157,32 +209,6 @@
           "src": "indeed",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "INDEED-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "INDEED-V7P28E",
-          "posted": "live",
-          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -198,82 +224,56 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General (United States) - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "INDEED-COJQ3S",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-V7P28E",
           "posted": "live",
-          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "INDEED-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "INDEED-NPLFOU",
-          "posted": "live",
-          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "INDEED-4JF8A7",
-          "posted": "live",
-          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "indeed",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "INDEED-JLXGDG",
+          "url": "https://www.thegeneral.com/",
+          "ref": "INDEED-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
-          "ref": "INDEED-FUTWVG",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "ref": "INDEED-KD99MK",
           "posted": "live",
-          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
+        },
+        {
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://ejje.weblio.jp/content/general",
+          "ref": "INDEED-J251VJ",
+          "posted": "live",
+          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         }
       ]
     },
@@ -286,7 +286,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 521,
+      "ms": 273,
       "note": null,
       "jobs": [
         {
@@ -355,19 +355,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "DUBIZZLE-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -381,30 +368,43 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "DUBIZZLE-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
           "title": "Management - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
-          "ref": "DUBIZZLE-EFM93K",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "DUBIZZLE-TD928H",
           "posted": "live",
           "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "DUBIZZLE-3XC5FG",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "DUBIZZLE-LPL7C9",
           "posted": "live",
-          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -420,6 +420,58 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "ref": "DUBIZZLE-NHMX7M",
+          "posted": "live",
+          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://generals.io/",
+          "ref": "DUBIZZLE-KTMDH8",
+          "posted": "live",
+          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "ref": "DUBIZZLE-8KXGPK",
+          "posted": "live",
+          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.iciba.com/word?w=general",
+          "ref": "DUBIZZLE-179OVC",
+          "posted": "live",
+          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -431,32 +483,6 @@
           "src": "dubizzle",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "DUBIZZLE-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "DUBIZZLE-V7P28E",
-          "posted": "live",
-          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -472,82 +498,56 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General (United States) - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "DUBIZZLE-COJQ3S",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-V7P28E",
           "posted": "live",
-          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "DUBIZZLE-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "DUBIZZLE-NPLFOU",
-          "posted": "live",
-          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "DUBIZZLE-4JF8A7",
-          "posted": "live",
-          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "DUBIZZLE-JLXGDG",
+          "url": "https://www.thegeneral.com/",
+          "ref": "DUBIZZLE-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
-          "ref": "DUBIZZLE-FUTWVG",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "ref": "DUBIZZLE-KD99MK",
           "posted": "live",
-          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
+        },
+        {
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://ejje.weblio.jp/content/general",
+          "ref": "DUBIZZLE-J251VJ",
+          "posted": "live",
+          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         }
       ]
     },
@@ -560,7 +560,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 543,
+      "ms": 332,
       "note": null,
       "jobs": [
         {
@@ -629,19 +629,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "BAYT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -655,30 +642,43 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "BAYT-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
           "title": "Management - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
-          "ref": "BAYT-EFM93K",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "BAYT-TD928H",
           "posted": "live",
           "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "BAYT-3XC5FG",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "BAYT-LPL7C9",
           "posted": "live",
-          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -694,6 +694,58 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "ref": "BAYT-NHMX7M",
+          "posted": "live",
+          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://generals.io/",
+          "ref": "BAYT-KTMDH8",
+          "posted": "live",
+          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "ref": "BAYT-8KXGPK",
+          "posted": "live",
+          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.iciba.com/word?w=general",
+          "ref": "BAYT-179OVC",
+          "posted": "live",
+          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -705,32 +757,6 @@
           "src": "bayt",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "BAYT-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "BAYT-V7P28E",
-          "posted": "live",
-          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -746,82 +772,56 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General (United States) - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "BAYT-COJQ3S",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-V7P28E",
           "posted": "live",
-          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "BAYT-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "BAYT-NPLFOU",
-          "posted": "live",
-          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "BAYT-4JF8A7",
-          "posted": "live",
-          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "bayt",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "BAYT-JLXGDG",
+          "url": "https://www.thegeneral.com/",
+          "ref": "BAYT-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
-          "ref": "BAYT-FUTWVG",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "ref": "BAYT-KD99MK",
           "posted": "live",
-          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
+        },
+        {
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://ejje.weblio.jp/content/general",
+          "ref": "BAYT-J251VJ",
+          "posted": "live",
+          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         }
       ]
     },
@@ -834,7 +834,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 443,
+      "ms": 344,
       "note": null,
       "jobs": [
         {
@@ -903,19 +903,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "GULFTALENT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -929,30 +916,43 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "GULFTALENT-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
           "title": "Management - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
-          "ref": "GULFTALENT-EFM93K",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "GULFTALENT-TD928H",
           "posted": "live",
           "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "GULFTALENT-3XC5FG",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "GULFTALENT-LPL7C9",
           "posted": "live",
-          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -968,6 +968,58 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "ref": "GULFTALENT-NHMX7M",
+          "posted": "live",
+          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://generals.io/",
+          "ref": "GULFTALENT-KTMDH8",
+          "posted": "live",
+          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "ref": "GULFTALENT-8KXGPK",
+          "posted": "live",
+          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.iciba.com/word?w=general",
+          "ref": "GULFTALENT-179OVC",
+          "posted": "live",
+          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -979,32 +1031,6 @@
           "src": "gulftalent",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "GULFTALENT-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "GULFTALENT-V7P28E",
-          "posted": "live",
-          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -1020,82 +1046,56 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General (United States) - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "GULFTALENT-COJQ3S",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-V7P28E",
           "posted": "live",
-          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "GULFTALENT-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "GULFTALENT-NPLFOU",
-          "posted": "live",
-          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "GULFTALENT-4JF8A7",
-          "posted": "live",
-          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "GULFTALENT-JLXGDG",
+          "url": "https://www.thegeneral.com/",
+          "ref": "GULFTALENT-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
-          "ref": "GULFTALENT-FUTWVG",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "ref": "GULFTALENT-KD99MK",
           "posted": "live",
-          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
+        },
+        {
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://ejje.weblio.jp/content/general",
+          "ref": "GULFTALENT-J251VJ",
+          "posted": "live",
+          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         }
       ]
     },
@@ -1108,7 +1108,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 278,
+      "ms": 200,
       "note": null,
       "jobs": [
         {
@@ -1177,19 +1177,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "NAUKRIGULF-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1203,30 +1190,43 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "NAUKRIGULF-VWZRX4",
+          "posted": "live",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
+        },
+        {
           "title": "Management - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
-          "ref": "NAUKRIGULF-EFM93K",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "NAUKRIGULF-TD928H",
           "posted": "live",
           "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "NAUKRIGULF-3XC5FG",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "NAUKRIGULF-LPL7C9",
           "posted": "live",
-          "text": "Management is the process of planning, organising, leading, and controlling people and resources to achieve specific goals — effectively and efficiently. It applies whether you run a five-person team or a multinational. Good management turns scattered effort into coordinated outcomes; poor management wastes both time and talent.",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -1242,6 +1242,58 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "ref": "NAUKRIGULF-NHMX7M",
+          "posted": "live",
+          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://generals.io/",
+          "ref": "NAUKRIGULF-KTMDH8",
+          "posted": "live",
+          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "ref": "NAUKRIGULF-8KXGPK",
+          "posted": "live",
+          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.iciba.com/word?w=general",
+          "ref": "NAUKRIGULF-179OVC",
+          "posted": "live",
+          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1253,32 +1305,6 @@
           "src": "naukrigulf",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "NAUKRIGULF-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "NAUKRIGULF-V7P28E",
-          "posted": "live",
-          "text": "In the United States military, a general is the most senior general -grade officer; it is the highest achievable commissioned officer rank (or echelon) that may be attained in the United States Armed Forces, with exception of the Navy and Coast Guard, which have the equivalent rank of admiral instead. The official and formal insignia of \"general\" is defined by its four stars (commonly silver ...",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -1294,82 +1320,56 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General (United States) - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "NAUKRIGULF-COJQ3S",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-V7P28E",
           "posted": "live",
-          "text": "If I ask you to give me a general sense of how a car works, I'm looking for you to describe the two or three main principals in a few minutes, not to open the hood, take apart your engine, and tell me everything you know.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "NAUKRIGULF-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "NAUKRIGULF-NPLFOU",
-          "posted": "live",
-          "text": "Define general. general synonyms, general pronunciation, general translation, English dictionary definition of general. adj. 1. Concerned with, applicable to, or affecting the whole or every member of a class or category: \"subduing all her impressions as a woman, to something...",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "NAUKRIGULF-4JF8A7",
-          "posted": "live",
-          "text": "A general officer is an officer of high rank in the armies, and in some nations' air and space forces, marines or naval infantry. [a] In some usages, the term \"general officer\" refers to a rank above colonel. [1]",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "NAUKRIGULF-JLXGDG",
+          "url": "https://www.thegeneral.com/",
+          "ref": "NAUKRIGULF-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
-          "ref": "NAUKRIGULF-FUTWVG",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "ref": "NAUKRIGULF-KD99MK",
           "posted": "live",
-          "text": "The Pentagon is accusing a general just ousted from a top military planning post of leaking sensitive information to the media.",
+          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
+        },
+        {
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://ejje.weblio.jp/content/general",
+          "ref": "NAUKRIGULF-J251VJ",
+          "posted": "live",
+          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         }
       ]
     },
@@ -1382,9 +1382,9 @@
         "lang": "de"
       },
       "ok": true,
-      "count": 11,
-      "ms": 1344,
-      "bytes": 211626,
+      "count": 12,
+      "ms": 1681,
+      "bytes": 214223,
       "note": null,
       "jobs": [
         {
@@ -1419,6 +1419,15 @@
           "company": "AHK VAE / member company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/content/download/1016280/20587734?version=1",
+          "kind": "document",
+          "to": "info@ahkdubai.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
+        },
+        {
+          "title": "Filetype: pdf Research Manager (Part Time Role) (m/f/d) Filesize: 217.30 kb",
+          "company": "AHK VAE / member company",
+          "location": "UAE",
+          "url": "https://vae.ahk.de/en/content/download/1018902/20640111?version=1",
           "kind": "document",
           "to": "info@ahkdubai.com",
           "emailVia": "AHK German Emirati Chamber Desk"
@@ -1498,7 +1507,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1835,
+      "ms": 2167,
       "bytes": 157703,
       "note": null,
       "jobs": [
@@ -1612,52 +1621,11 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 4,
-      "ms": 1475,
-      "bytes": 811535,
-      "note": null,
-      "jobs": [
-        {
-          "title": "Senior Associate - Investment Placement",
-          "company": "via Charterhouse",
-          "location": "",
-          "url": "https://www.charterhouseme.ae/job/senior-associate-investment-placement-53758",
-          "ref": "53758",
-          "kind": "page",
-          "to": "info@charterhouse.ae",
-          "emailVia": "Charterhouse Middle East Recruitment"
-        },
-        {
-          "title": "Senior Infrastructure and Technology Engineer",
-          "company": "via Charterhouse",
-          "location": "",
-          "url": "https://www.charterhouseme.ae/job/senior-infrastructure-and-technology-engineer-53774",
-          "ref": "53774",
-          "kind": "page",
-          "to": "info@charterhouse.ae",
-          "emailVia": "Charterhouse Middle East Recruitment"
-        },
-        {
-          "title": "Head of HR",
-          "company": "via Charterhouse",
-          "location": "",
-          "url": "https://www.charterhouseme.ae/job/head-of-hr-53773",
-          "ref": "53773",
-          "kind": "page",
-          "to": "info@charterhouse.ae",
-          "emailVia": "Charterhouse Middle East Recruitment"
-        },
-        {
-          "title": "Large Corporate Relationship Manager",
-          "company": "via Charterhouse",
-          "location": "",
-          "url": "https://www.charterhouseme.ae/job/large-corporate-relationship-manager-53776",
-          "ref": "53776",
-          "kind": "page",
-          "to": "info@charterhouse.ae",
-          "emailVia": "Charterhouse Middle East Recruitment"
-        }
-      ]
+      "count": 0,
+      "ms": 1268,
+      "bytes": 805173,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "michaelpage",
@@ -1668,26 +1636,26 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 267,
-      "bytes": 174569,
+      "ms": 298,
+      "bytes": 173703,
       "note": null,
       "jobs": [
+        {
+          "title": "Financial Controller",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/financial-controller/ref/jn-112026-7138332",
+          "ref": "jn-112026-7138332",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
         {
           "title": "Directeur de Projet H/F - Transformation Minière - RCI",
           "company": "via Michael Page",
           "location": "",
           "url": "https://www.michaelpage.ae/job-detail/directeur-de-projet-hf-transformation-mini%C3%A8re-rci/ref/jn-102026-7137923",
           "ref": "jn-102026-7137923",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Marketing Communications Specialist - B2B Industrial/Energy",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/marketing-communications-specialist-b2b-industrialenergy/ref/jn-102026-7131723",
-          "ref": "jn-102026-7131723",
           "kind": "page",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
@@ -1983,8 +1951,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1139,
-      "bytes": 281055,
+      "ms": 1297,
+      "bytes": 279703,
       "note": null,
       "jobs": [
         {
@@ -2043,6 +2011,86 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
           "ref": "jn-082026-7091934",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Group CTO for a local conglomerate - based in Jakarta [Indonesia]",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/group-chief-technolgy-officer-indonesia-based-business/ref/jn-102026-7119253",
+          "ref": "jn-102026-7119253",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "CPO- Product VP - Fintech Company - 金融科技公司（消费金融）",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/cpo-product-vp-fintech-company-%E9%87%91%E8%9E%8D%E7%A7%91%E6%8A%80%E5%85%AC%E5%8F%B8%EF%BC%88%E6%B6%88%E8%B4%B9%E9%87%91%E8%9E%8D%EF%BC%89/ref/jn-112026-7138371",
+          "ref": "jn-112026-7138371",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head of Fashion Business",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-fashion-business/ref/jn-112026-7138330",
+          "ref": "jn-112026-7138330",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Director of eCommerce",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-ecommerce/ref/jn-102026-7129403",
+          "ref": "jn-102026-7129403",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "GM, Korea - Automotive Aftermarket B2C",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/gm-korea-automotive-aftermarket-b2c/ref/jn-082026-7087751",
+          "ref": "jn-082026-7087751",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "COO- 国内物流龙头企业",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/coo-%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E8%B4%9F%E8%B4%A3%E4%BA%BA-%E5%9B%BD%E5%86%85%E7%89%A9%E6%B5%81%E9%BE%99%E5%A4%B4%E4%BC%81%E4%B8%9A/ref/jn-092026-7110098",
+          "ref": "jn-092026-7110098",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Strategy VP 战略副总裁-A股上市公司",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/strategy-vp-%E6%88%98%E7%95%A5%E5%89%AF%E6%80%BB%E8%A3%81-a%E8%82%A1%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/ref/jn-102026-7127320",
+          "ref": "jn-102026-7127320",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "海外合规BP- 国际化生命科学企业",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/%E6%B5%B7%E5%A4%96%E5%90%88%E8%A7%84bp-%E5%9B%BD%E9%99%85%E5%8C%96%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6%E4%BC%81%E4%B8%9A/ref/jn-092026-7107881",
+          "ref": "jn-092026-7107881",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2206,86 +2254,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Immigration Attorney",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/business-immigration-associate/ref/jn-102026-7137261",
-          "ref": "jn-102026-7137261",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Immigration Attorney",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/business-immigration-attorney/ref/jn-092026-7101517",
-          "ref": "jn-092026-7101517",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Associate Director Finance Sales Compensation",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/associate-director-finance-sales-compensation/ref/jn-102026-7137009",
-          "ref": "jn-102026-7137009",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of HR Systems EMEA - SAP SuccessFactors (m/w/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-hr-systems-emea-sap-successfactors-mwd/ref/jn-102026-7137152",
-          "ref": "jn-102026-7137152",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of Corporate Finance",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-corporate-finance/ref/jn-102026-7134707",
-          "ref": "jn-102026-7134707",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "VP Service & Spare Parts (m/w/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/vp-service-spare-parts-mwd/ref/jn-092026-7098884",
-          "ref": "jn-092026-7098884",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of BU Product Management (m/w/d) - Gebäudesicherheit",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-bu-product-management-mwd-geb%C3%A4udesicherheit/ref/jn-102026-7130731",
-          "ref": "jn-102026-7130731",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Finance Director",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/finance-director/ref/jn-102026-7133152",
-          "ref": "jn-102026-7133152",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2295,7 +2263,7 @@
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
       "ok": false,
       "count": 66,
-      "ms": 3359,
+      "ms": 1841,
       "error": "HTTP 429 from www.linkedin.com",
       "stale": true,
       "staleSince": "2026-10-31T10:00:44.286Z",
@@ -3103,8 +3071,8 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 23,
-      "ms": 466,
+      "count": 30,
+      "ms": 272,
       "note": null,
       "jobs": [
         {
@@ -3153,15 +3121,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
-          "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "kind": "page",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
           "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
@@ -3171,22 +3130,31 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
-          "company": "via en.m.wikipedia.org",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via thesaurus.com",
           "location": "UAE",
-          "url": "https://en.m.wikipedia.org/wiki/Management",
+          "url": "https://www.thesaurus.com/browse/managing",
           "kind": "page",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via managementlegend.com",
+          "title": "Management - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://www.managementlegend.com/what-is-management",
+          "url": "https://en.wikipedia.org/wiki/Management",
           "kind": "page",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via collinsdictionary.com",
+          "location": "UAE",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
@@ -3198,6 +3166,42 @@
           "emailVia": "Employer Domain HR (coursera.org)"
         },
         {
+          "title": "general（英语单词）_百度百科",
+          "company": "via baike.baidu.com",
+          "location": "UAE",
+          "url": "https://baike.baidu.com/item/general/10524855",
+          "kind": "page",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "generals.io",
+          "company": "via generals.io",
+          "location": "UAE",
+          "url": "https://generals.io/",
+          "kind": "page",
+          "to": "careers@generals.io",
+          "emailVia": "Employer Domain HR (generals.io)"
+        },
+        {
+          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via iciba.com",
+          "location": "UAE",
+          "url": "https://www.iciba.com/word?w=general",
+          "kind": "page",
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
@@ -3205,24 +3209,6 @@
           "kind": "page",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via thegeneral.com",
-          "location": "UAE",
-          "url": "https://www.thegeneral.com/",
-          "kind": "page",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
-        },
-        {
-          "title": "General (United States) - Wikipedia",
-          "company": "via en.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -3234,85 +3220,130 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via vocabulary.com",
-          "location": "UAE",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "kind": "page",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
-          "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
-          "kind": "page",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "General officer - Wikipedia",
+          "title": "General (United States) - Wikipedia",
           "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
           "kind": "page",
           "to": "careers@en.wikipedia.org",
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/general",
+          "url": "https://www.thegeneral.com/",
           "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Pentagon accuses fired general of sharing info with journalists | AP News",
-          "company": "via apnews.com",
+          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "company": "via frdic.com",
           "location": "UAE",
-          "url": "https://apnews.com/article/general-firing-hegseth-pentagon-leaks-346ce31afab5dfc2cacc5efac502bc6d",
+          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
           "kind": "page",
-          "to": "careers@apnews.com",
-          "emailVia": "Employer Domain HR (apnews.com)"
+          "to": "careers@frdic.com",
+          "emailVia": "Employer Domain HR (frdic.com)"
         },
         {
-          "title": "Microsoft - Wikipedia",
-          "company": "via en.wikipedia.org",
+          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "company": "via ejje.weblio.jp",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/Microsoft",
+          "url": "https://ejje.weblio.jp/content/general",
           "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@ejje.weblio.jp",
+          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
         },
         {
-          "title": "Outlook",
-          "company": "via outlook.office.com",
+          "title": "Google",
+          "company": "via google.com",
           "location": "UAE",
-          "url": "https://outlook.office.com/mail/",
+          "url": "https://www.google.com/",
           "kind": "page",
-          "to": "careers@outlook.office.com",
-          "emailVia": "Employer Domain HR (outlook.office.com)"
+          "to": "careers@viagoogle.ae",
+          "emailVia": "Corporate HR Mailbox (viagoogle.ae)"
         },
         {
-          "title": "Microsoft 365 - Sign into Copilot",
-          "company": "via m365.cloud.microsoft",
+          "title": "Google",
+          "company": "via google.com",
           "location": "UAE",
-          "url": "https://m365.cloud.microsoft/?origindomain=Office",
+          "url": "https://www.google.com/xhtml/search",
           "kind": "page",
-          "to": "careers@m365.cloud.microsoft",
-          "emailVia": "Employer Domain HR (m365.cloud.microsoft)"
+          "to": "careers@viagoogle.ae",
+          "emailVia": "Corporate HR Mailbox (viagoogle.ae)"
+        },
+        {
+          "title": "Google Search - A new kind of help",
+          "company": "via search.google",
+          "location": "UAE",
+          "url": "https://search.google/",
+          "kind": "page",
+          "to": "careers@search.google",
+          "emailVia": "Employer Domain HR (search.google)"
+        },
+        {
+          "title": "Google",
+          "company": "via google.com.nf",
+          "location": "UAE",
+          "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+          "kind": "page",
+          "to": "careers@google.com.nf",
+          "emailVia": "Employer Domain HR (google.com.nf)"
+        },
+        {
+          "title": "Google Search",
+          "company": "via ogs.google.com",
+          "location": "UAE",
+          "url": "https://ogs.google.com/widget/empty",
+          "kind": "page",
+          "to": "careers@viaogs.ae",
+          "emailVia": "Corporate HR Mailbox (viaogs.ae)"
+        },
+        {
+          "title": "Search anything, effortlessly - search.google",
+          "company": "via search.google",
+          "location": "UAE",
+          "url": "https://search.google/intl/en-IN/",
+          "kind": "page",
+          "to": "careers@search.google",
+          "emailVia": "Employer Domain HR (search.google)"
+        },
+        {
+          "title": "Google Search",
+          "company": "via accounts.google.com",
+          "location": "UAE",
+          "url": "https://accounts.google.com/InteractiveLogin?service=safesearchlock",
+          "kind": "page",
+          "to": "careers@viaaccounts.com",
+          "emailVia": "Corporate HR Mailbox (viaaccounts.com)"
+        },
+        {
+          "title": "Make Google your default search engine",
+          "company": "via support.google.com",
+          "location": "UAE",
+          "url": "https://support.google.com/websearch/answer/464?hl=en",
+          "kind": "page",
+          "to": "careers@viasupport.ae",
+          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+        },
+        {
+          "title": "Google Images",
+          "company": "via images.google.com",
+          "location": "UAE",
+          "url": "https://images.google.com/",
+          "kind": "page",
+          "to": "careers@viaimages.ae",
+          "emailVia": "Corporate HR Mailbox (viaimages.ae)"
+        },
+        {
+          "title": "Google Earth",
+          "company": "via earth.google.com",
+          "location": "UAE",
+          "url": "https://earth.google.com/web",
+          "kind": "page",
+          "to": "careers@viaearth.ae",
+          "emailVia": "Corporate HR Mailbox (viaearth.ae)"
         }
       ]
     }
