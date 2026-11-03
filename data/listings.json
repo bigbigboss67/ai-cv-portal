@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T11:46:32.292Z",
+  "generatedAt": "2026-11-03T11:27:12.333Z",
   "total": 278,
   "staleSources": 1,
   "sources": [
@@ -12,7 +12,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 426,
+      "ms": 445,
       "note": null,
       "jobs": [
         {
@@ -81,19 +81,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "INDEED-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -133,6 +120,19 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "INDEED-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -144,58 +144,6 @@
           "src": "indeed",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "ref": "INDEED-NHMX7M",
-          "posted": "live",
-          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://generals.io/",
-          "ref": "INDEED-KTMDH8",
-          "posted": "live",
-          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "ref": "INDEED-8KXGPK",
-          "posted": "live",
-          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.iciba.com/word?w=general",
-          "ref": "INDEED-179OVC",
-          "posted": "live",
-          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -211,17 +159,17 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "INDEED-MFXMB7",
+          "url": "https://www.thegeneral.com/",
+          "ref": "INDEED-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -237,43 +185,95 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "title": "Personas - Banco General Panamá",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "INDEED-TR94BC",
+          "url": "https://www.bgeneral.com/",
+          "ref": "INDEED-HYU20N",
           "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
-          "ref": "INDEED-KD99MK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "INDEED-MFXMB7",
           "posted": "live",
-          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "title": "General officer - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ejje.weblio.jp/content/general",
-          "ref": "INDEED-J251VJ",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "INDEED-4JF8A7",
           "posted": "live",
-          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "INDEED-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "INDEED-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "INDEED-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "INDEED-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -286,7 +286,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 273,
+      "ms": 314,
       "note": null,
       "jobs": [
         {
@@ -355,19 +355,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "DUBIZZLE-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -407,6 +394,19 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "DUBIZZLE-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -418,58 +418,6 @@
           "src": "dubizzle",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "ref": "DUBIZZLE-NHMX7M",
-          "posted": "live",
-          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://generals.io/",
-          "ref": "DUBIZZLE-KTMDH8",
-          "posted": "live",
-          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "ref": "DUBIZZLE-8KXGPK",
-          "posted": "live",
-          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.iciba.com/word?w=general",
-          "ref": "DUBIZZLE-179OVC",
-          "posted": "live",
-          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -485,17 +433,17 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "DUBIZZLE-MFXMB7",
+          "url": "https://www.thegeneral.com/",
+          "ref": "DUBIZZLE-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -511,43 +459,95 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "title": "Personas - Banco General Panamá",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "DUBIZZLE-TR94BC",
+          "url": "https://www.bgeneral.com/",
+          "ref": "DUBIZZLE-HYU20N",
           "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
-          "ref": "DUBIZZLE-KD99MK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "DUBIZZLE-MFXMB7",
           "posted": "live",
-          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "title": "General officer - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ejje.weblio.jp/content/general",
-          "ref": "DUBIZZLE-J251VJ",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "DUBIZZLE-4JF8A7",
           "posted": "live",
-          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "DUBIZZLE-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "DUBIZZLE-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "DUBIZZLE-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "DUBIZZLE-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -560,7 +560,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 332,
+      "ms": 289,
       "note": null,
       "jobs": [
         {
@@ -629,19 +629,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "BAYT-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -681,6 +668,19 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "BAYT-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -692,58 +692,6 @@
           "src": "bayt",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "ref": "BAYT-NHMX7M",
-          "posted": "live",
-          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://generals.io/",
-          "ref": "BAYT-KTMDH8",
-          "posted": "live",
-          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "ref": "BAYT-8KXGPK",
-          "posted": "live",
-          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.iciba.com/word?w=general",
-          "ref": "BAYT-179OVC",
-          "posted": "live",
-          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -759,17 +707,17 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "BAYT-MFXMB7",
+          "url": "https://www.thegeneral.com/",
+          "ref": "BAYT-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -785,43 +733,95 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "title": "Personas - Banco General Panamá",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "BAYT-TR94BC",
+          "url": "https://www.bgeneral.com/",
+          "ref": "BAYT-HYU20N",
           "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
-          "ref": "BAYT-KD99MK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "BAYT-MFXMB7",
           "posted": "live",
-          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "title": "General officer - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ejje.weblio.jp/content/general",
-          "ref": "BAYT-J251VJ",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "BAYT-4JF8A7",
           "posted": "live",
-          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "BAYT-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "BAYT-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "BAYT-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "BAYT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -834,7 +834,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 344,
+      "ms": 374,
       "note": null,
       "jobs": [
         {
@@ -903,19 +903,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "GULFTALENT-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -955,6 +942,19 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "GULFTALENT-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -966,58 +966,6 @@
           "src": "gulftalent",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "ref": "GULFTALENT-NHMX7M",
-          "posted": "live",
-          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://generals.io/",
-          "ref": "GULFTALENT-KTMDH8",
-          "posted": "live",
-          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "ref": "GULFTALENT-8KXGPK",
-          "posted": "live",
-          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.iciba.com/word?w=general",
-          "ref": "GULFTALENT-179OVC",
-          "posted": "live",
-          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1033,17 +981,17 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "GULFTALENT-MFXMB7",
+          "url": "https://www.thegeneral.com/",
+          "ref": "GULFTALENT-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -1059,43 +1007,95 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "title": "Personas - Banco General Panamá",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "GULFTALENT-TR94BC",
+          "url": "https://www.bgeneral.com/",
+          "ref": "GULFTALENT-HYU20N",
           "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
-          "ref": "GULFTALENT-KD99MK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "GULFTALENT-MFXMB7",
           "posted": "live",
-          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "title": "General officer - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ejje.weblio.jp/content/general",
-          "ref": "GULFTALENT-J251VJ",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "GULFTALENT-4JF8A7",
           "posted": "live",
-          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "GULFTALENT-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "GULFTALENT-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "GULFTALENT-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "GULFTALENT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -1108,7 +1108,7 @@
       },
       "ok": true,
       "count": 20,
-      "ms": 200,
+      "ms": 208,
       "note": null,
       "jobs": [
         {
@@ -1177,19 +1177,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "NAUKRIGULF-GHFEVO",
-          "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1229,6 +1216,19 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "ref": "NAUKRIGULF-GHFEVO",
+          "posted": "live",
+          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1240,58 +1240,6 @@
           "src": "naukrigulf",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "ref": "NAUKRIGULF-NHMX7M",
-          "posted": "live",
-          "text": "7.ADJ General is used to describe a person's job, usually as part of their title, to indicate that they have complete responsibility for the administration of an organization or business.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://generals.io/",
-          "ref": "NAUKRIGULF-KTMDH8",
-          "posted": "live",
-          "text": "Protect your general, command your army, take control of land, and capture other generals in this fast-paced multiplayer strategy game.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "ref": "NAUKRIGULF-8KXGPK",
-          "posted": "live",
-          "text": "The general consensus in the office is that he's useless at his job. There was a general air of expectancy in the crowd. These are general criticisms which should not be taken personally. The performance of the car industry is a good pointer to the general economic health of the country.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.iciba.com/word?w=general",
-          "ref": "NAUKRIGULF-179OVC",
-          "posted": "live",
-          "text": "In general, the kind of news which may be expected to give immediate reward are news of crime and corruption, accidents and disasters, sports, social events, and human interest.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1307,17 +1255,17 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "NAUKRIGULF-MFXMB7",
+          "url": "https://www.thegeneral.com/",
+          "ref": "NAUKRIGULF-TR94BC",
           "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -1333,43 +1281,95 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "title": "Personas - Banco General Panamá",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "NAUKRIGULF-TR94BC",
+          "url": "https://www.bgeneral.com/",
+          "ref": "NAUKRIGULF-HYU20N",
           "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
-          "ref": "NAUKRIGULF-KD99MK",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "NAUKRIGULF-MFXMB7",
           "posted": "live",
-          "text": "『法语助手』为您提供général的用法讲解，告诉您准确全面的général的中文意思，général的读音，général的同义词，général的反义词，général的例句。",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
+          "title": "General officer - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ejje.weblio.jp/content/general",
-          "ref": "NAUKRIGULF-J251VJ",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "NAUKRIGULF-4JF8A7",
           "posted": "live",
-          "text": "The rally was organised to protest against the removal of a statue of General Lee, who commanded the pro-slavery Confederate forces during the American Civil War.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "NAUKRIGULF-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "NAUKRIGULF-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.thefreedictionary.com/General",
+          "ref": "NAUKRIGULF-NPLFOU",
+          "posted": "live",
+          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "NAUKRIGULF-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -1383,7 +1383,7 @@
       },
       "ok": true,
       "count": 12,
-      "ms": 1681,
+      "ms": 347,
       "bytes": 214223,
       "note": null,
       "jobs": [
@@ -1507,7 +1507,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2167,
+      "ms": 2306,
       "bytes": 157703,
       "note": null,
       "jobs": [
@@ -1622,8 +1622,8 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 1268,
-      "bytes": 805173,
+      "ms": 1428,
+      "bytes": 805181,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -1636,10 +1636,20 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 298,
-      "bytes": 173703,
+      "ms": 231,
+      "bytes": 173686,
       "note": null,
       "jobs": [
+        {
+          "title": "Development Manager",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/development-manager/ref/jn-112026-7139252",
+          "ref": "jn-112026-7139252",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
         {
           "title": "Financial Controller",
           "company": "via Michael Page",
@@ -1929,16 +1939,6 @@
           "kind": "page",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "IT Site Manager",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/it-site-manager-industrial-operations/ref/jn-102026-7130819",
-          "ref": "jn-102026-7130819",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     },
@@ -1951,8 +1951,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1297,
-      "bytes": 279703,
+      "ms": 1002,
+      "bytes": 276380,
       "note": null,
       "jobs": [
         {
@@ -2011,6 +2011,126 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
           "ref": "jn-082026-7091934",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Vice President, IT (Global Head of IT)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/vice-president-it-global-head-it/ref/jn-092026-7108167",
+          "ref": "jn-092026-7108167",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "首席执行官 CEO- 国内制造业精密加工公司",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/%E9%A6%96%E5%B8%AD%E6%89%A7%E8%A1%8C%E5%AE%98-ceo-%E5%9B%BD%E5%86%85%E5%88%B6%E9%80%A0%E4%B8%9A%E7%B2%BE%E5%AF%86%E5%8A%A0%E5%B7%A5%E5%85%AC%E5%8F%B8/ref/jn-102026-7133324",
+          "ref": "jn-102026-7133324",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "基金财务负责人-双币基金",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/%E5%9F%BA%E9%87%91%E8%B4%A2%E5%8A%A1%E8%B4%9F%E8%B4%A3%E4%BA%BA-%E5%8F%8C%E5%B8%81%E5%9F%BA%E9%87%91/ref/jn-112026-7138386",
+          "ref": "jn-112026-7138386",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "General Counsel",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/general-counsel/ref/jn-082026-7081551",
+          "ref": "jn-082026-7081551",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Trial Attorney",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-trial-attorney/ref/jn-102026-7137055",
+          "ref": "jn-102026-7137055",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Vice President of Supply Chain",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/vice-president-supply-chain/ref/jn-112025-6889060",
+          "ref": "jn-112025-6889060",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Vice President of Operations",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/vice-president-operations/ref/jn-052026-7014687",
+          "ref": "jn-052026-7014687",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "VP Banks and Broker Dealers, Global Bank",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/vp-banks-and-broker-dealers-global-bank/ref/jn-112026-7139154",
+          "ref": "jn-112026-7139154",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "SVP Insurance, Global Bank",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/svp-insurance-global-bank/ref/jn-112026-7139083",
+          "ref": "jn-112026-7139083",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Funding & Liquidity Trader",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-funding-liquidity-trader/ref/jn-112026-7138975",
+          "ref": "jn-112026-7138975",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Finance Manager - Banking",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/finance-accountant-internal-controls-stamford-based/ref/jn-072026-7054445",
+          "ref": "jn-072026-7054445",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head HR",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-hr/ref/jn-112026-7138870",
+          "ref": "jn-112026-7138870",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2134,126 +2254,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "General Manager",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/general-manager-industrial-sector/ref/jn-102026-7137738",
-          "ref": "jn-102026-7137738",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Insurance Strategy Director",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/insurance-strategy-director/ref/jn-102026-7136518",
-          "ref": "jn-102026-7136518",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Director Information Security - Germany (m/f/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-information-security-germany-mfd/ref/jn-102026-7135063",
-          "ref": "jn-102026-7135063",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "VP Strategic Ventures & AI",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/vp-strategic-ventures-ai/ref/jn-102026-7136619",
-          "ref": "jn-102026-7136619",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Directeur Général H/F - Sénégal - Équipements",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/directeur-g%C3%A9n%C3%A9ral-hf-s%C3%A9n%C3%A9gal-%C3%A9quipements/ref/jn-072026-7070964",
-          "ref": "jn-072026-7070964",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "CDMO Manufacturing Site Head - Managing Director - Small Molecules",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/cdmo-site-head-managing-director-small-molecules/ref/jn-102026-7133346",
-          "ref": "jn-102026-7133346",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "AVP Finance - External Financial Reporting and Accounting Policy",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/avp-finance/ref/jn-102026-7137352",
-          "ref": "jn-102026-7137352",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of Spend Operations",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-spend-operations/ref/jn-102026-7137338",
-          "ref": "jn-102026-7137338",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of Supply Chain & Operations",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-supply-chain-operations/ref/jn-102026-7129411",
-          "ref": "jn-102026-7129411",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Associate Director, Finance - Sales Compensation",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/associate-director-finance-sales-compensation/ref/jn-102026-7137327",
-          "ref": "jn-102026-7137327",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Director, Legal Counsel - Equity Finance",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-legal-counsel-equity-finance/ref/jn-052026-7025716",
-          "ref": "jn-052026-7025716",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Contract Business Immigration Attorney",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/contract-business-immigration-attorney/ref/jn-092026-7104641",
-          "ref": "jn-092026-7104641",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2263,7 +2263,7 @@
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
       "ok": false,
       "count": 66,
-      "ms": 1841,
+      "ms": 3489,
       "error": "HTTP 429 from www.linkedin.com",
       "stale": true,
       "staleSince": "2026-10-31T10:00:44.286Z",
@@ -3072,7 +3072,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 272,
+      "ms": 329,
       "note": null,
       "jobs": [
         {
@@ -3121,15 +3121,6 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via thesaurus.com",
           "location": "UAE",
@@ -3157,6 +3148,15 @@
           "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
           "title": "What Is Management? Styles, Functions, Skills, and Careers",
           "company": "via coursera.org",
           "location": "UAE",
@@ -3164,42 +3164,6 @@
           "kind": "page",
           "to": "careers@coursera.org",
           "emailVia": "Employer Domain HR (coursera.org)"
-        },
-        {
-          "title": "general（英语单词）_百度百科",
-          "company": "via baike.baidu.com",
-          "location": "UAE",
-          "url": "https://baike.baidu.com/item/general/10524855",
-          "kind": "page",
-          "to": "careers@baike.baidu.com",
-          "emailVia": "Employer Domain HR (baike.baidu.com)"
-        },
-        {
-          "title": "generals.io",
-          "company": "via generals.io",
-          "location": "UAE",
-          "url": "https://generals.io/",
-          "kind": "page",
-          "to": "careers@generals.io",
-          "emailVia": "Employer Domain HR (generals.io)"
-        },
-        {
-          "title": "GENERAL中文 (简体)翻译：剑桥词典 - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/general",
-          "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "general是什么意思_general的翻译_音标_读音_用法_例句_爱词霸在线词典",
-          "company": "via iciba.com",
-          "location": "UAE",
-          "url": "https://www.iciba.com/word?w=general",
-          "kind": "page",
-          "to": "careers@iciba.com",
-          "emailVia": "Employer Domain HR (iciba.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -3211,13 +3175,13 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "url": "https://www.thegeneral.com/",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "General (United States) - Wikipedia",
@@ -3229,121 +3193,157 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via thegeneral.com",
+          "title": "Personas - Banco General Panamá",
+          "company": "via bgeneral.com",
           "location": "UAE",
-          "url": "https://www.thegeneral.com/",
+          "url": "https://www.bgeneral.com/",
           "kind": "page",
-          "to": "careers@thegeneral.com",
-          "emailVia": "Employer Domain HR (thegeneral.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "法语助手|法汉-汉法词典 général是什么意思_général的中文解释和发音_général的翻译_général怎么读",
-          "company": "via frdic.com",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://www.frdic.com/dicts/fr/g%C3%A9n%C3%A9ral",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
           "kind": "page",
-          "to": "careers@frdic.com",
-          "emailVia": "Employer Domain HR (frdic.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "英語「general」の意味・読み方・表現 | Weblio英和辞書",
-          "company": "via ejje.weblio.jp",
+          "title": "General officer - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://ejje.weblio.jp/content/general",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
           "kind": "page",
-          "to": "careers@ejje.weblio.jp",
-          "emailVia": "Employer Domain HR (ejje.weblio.jp)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Google",
-          "company": "via google.com",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://www.google.com/",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
           "kind": "page",
-          "to": "careers@viagoogle.ae",
-          "emailVia": "Corporate HR Mailbox (viagoogle.ae)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Google",
-          "company": "via google.com",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://www.google.com/xhtml/search",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page",
-          "to": "careers@viagoogle.ae",
-          "emailVia": "Corporate HR Mailbox (viagoogle.ae)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "Google Search - A new kind of help",
-          "company": "via search.google",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://search.google/",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page",
-          "to": "careers@search.google",
-          "emailVia": "Employer Domain HR (search.google)"
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "Google",
-          "company": "via google.com.nf",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://www.google.com.nf/webhp?gl=nf&hl=en&gws_rd=cr&pws=0",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page",
-          "to": "careers@google.com.nf",
-          "emailVia": "Employer Domain HR (google.com.nf)"
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "Google Search",
-          "company": "via ogs.google.com",
+          "title": "Geschäftsführer in English - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://ogs.google.com/widget/empty",
+          "url": "https://dictionary.cambridge.org/dictionary/german-english/geschaftsfuhrer",
           "kind": "page",
-          "to": "careers@viaogs.ae",
-          "emailVia": "Corporate HR Mailbox (viaogs.ae)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Search anything, effortlessly - search.google",
-          "company": "via search.google",
+          "title": "Geschäftsführer - Translation in English - Langenscheidt",
+          "company": "via en.langenscheidt.com",
           "location": "UAE",
-          "url": "https://search.google/intl/en-IN/",
+          "url": "https://en.langenscheidt.com/german-english/geschaeftsfuehrer",
           "kind": "page",
-          "to": "careers@search.google",
-          "emailVia": "Employer Domain HR (search.google)"
+          "to": "careers@en.langenscheidt.com",
+          "emailVia": "Employer Domain HR (en.langenscheidt.com)"
         },
         {
-          "title": "Google Search",
-          "company": "via accounts.google.com",
+          "title": "Geschäftsführung (Deutschland) – Wikipedia",
+          "company": "via de.wikipedia.org",
           "location": "UAE",
-          "url": "https://accounts.google.com/InteractiveLogin?service=safesearchlock",
+          "url": "https://de.wikipedia.org/wiki/Gesch%C3%A4ftsf%C3%BChrung_(Deutschland)",
           "kind": "page",
-          "to": "careers@viaaccounts.com",
-          "emailVia": "Corporate HR Mailbox (viaaccounts.com)"
+          "to": "careers@de.wikipedia.org",
+          "emailVia": "Employer Domain HR (de.wikipedia.org)"
         },
         {
-          "title": "Make Google your default search engine",
-          "company": "via support.google.com",
+          "title": "English Translation of “GESCHÄFTSFÜHRER” | Collins German-English ...",
+          "company": "via collinsdictionary.com",
           "location": "UAE",
-          "url": "https://support.google.com/websearch/answer/464?hl=en",
+          "url": "https://www.collinsdictionary.com/dictionary/german-english/geschaftsfuhrer",
           "kind": "page",
-          "to": "careers@viasupport.ae",
-          "emailVia": "Corporate HR Mailbox (viasupport.ae)"
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
-          "title": "Google Images",
-          "company": "via images.google.com",
+          "title": "Geschaeftsfuehrer - English translation – Linguee",
+          "company": "via linguee.com",
           "location": "UAE",
-          "url": "https://images.google.com/",
+          "url": "https://www.linguee.com/german-english/translation/geschaeftsfuehrer.html",
           "kind": "page",
-          "to": "careers@viaimages.ae",
-          "emailVia": "Corporate HR Mailbox (viaimages.ae)"
+          "to": "careers@linguee.com",
+          "emailVia": "Employer Domain HR (linguee.com)"
         },
         {
-          "title": "Google Earth",
-          "company": "via earth.google.com",
+          "title": "Geschäftsführer - Englisch-Übersetzung – Linguee Wörterbuch",
+          "company": "via linguee.de",
           "location": "UAE",
-          "url": "https://earth.google.com/web",
+          "url": "https://www.linguee.de/deutsch-englisch/uebersetzung/gesch%c3%a4ftsf%c3%bchrer.html",
           "kind": "page",
-          "to": "careers@viaearth.ae",
-          "emailVia": "Corporate HR Mailbox (viaearth.ae)"
+          "to": "careers@linguee.de",
+          "emailVia": "Employer Domain HR (linguee.de)"
+        },
+        {
+          "title": "Geschäftsführer (in) in English - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/dictionary/german-english/geschaftsfuhrer-in",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "Geschäftsführer - Wiktionary, the free dictionary",
+          "company": "via en.wiktionary.org",
+          "location": "UAE",
+          "url": "https://en.wiktionary.org/wiki/Gesch%C3%A4ftsf%C3%BChrer",
+          "kind": "page",
+          "to": "careers@en.wiktionary.org",
+          "emailVia": "Employer Domain HR (en.wiktionary.org)"
+        },
+        {
+          "title": "Geschäftsführer: Definition, Rolle & Aufgaben • 2026 - JuraRat",
+          "company": "via jurarat.de",
+          "location": "UAE",
+          "url": "https://jurarat.de/geschaeftsfuehrer",
+          "kind": "page",
+          "to": "careers@jurarat.de",
+          "emailVia": "Employer Domain HR (jurarat.de)"
+        },
+        {
+          "title": "Der Geschäftsführer: Meaning, Grammar & Usage (German)",
+          "company": "via der-die-das-deutsch.com",
+          "location": "UAE",
+          "url": "https://der-die-das-deutsch.com/en/der-geschaeftsfuehrer",
+          "kind": "page",
+          "to": "careers@der-die-das-deutsch.com",
+          "emailVia": "Employer Domain HR (der-die-das-deutsch.com)"
         }
       ]
     }
