@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-03T11:27:12.333Z",
-  "total": 278,
-  "staleSources": 1,
+  "generatedAt": "2026-11-04T11:42:58.671Z",
+  "total": 291,
+  "staleSources": 0,
   "sources": [
     {
       "id": "indeed",
@@ -11,139 +11,152 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 445,
+      "count": 21,
+      "ms": 305,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
+          "url": "http://www.janrecker.com/",
+          "ref": "INDEED-KR6LCX",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "My current interests include: Managing Artificial Intelligence Digital innovation and transformation in large organizations Digital entrepreneurship Digitalization of products, services, and processes Digital solutions for sustainable development Design of new digital technologies such as AI",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "INDEED-FTAAHZ",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
+          "ref": "INDEED-AY46BM",
           "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "text": "Managing Artificial Intelligence (1 September 2021) Description The new issue of the MIS Quarterly is out and it features a special issue on Managing AI that Nick and Jan have been co-producing with Bin Gu and Radhika Santhanam. Time to discuss what we have done, how it all went, and what we learned.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "INDEED-SJHA7R",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
+          "ref": "INDEED-A46YST",
           "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Description Nick and Jan venture into new publishing territory. We talk with the fabulous D.J. Wu, one of the information systems department editors at Management ...",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
+          "title": "“this IS Research” PODCAST - Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "INDEED-HBU3YW",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
+          "ref": "INDEED-Z44QVE",
           "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
+          "text": "Managing academics is like herding cats (19 November 2025) When you watch Tik Tok, your maturity in the academic enterprise is zero (5 November 2025) Data is the fuel that sets innovation on fire (22 October 2025) If you’re writing a paper about AI you are not allowed to talk about AI (8 October 2025)",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
+          "title": "Research | Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "INDEED-3HQYJY",
+          "url": "https://www.janrecker.com/research/",
+          "ref": "INDEED-B22CD2",
           "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
+          "text": "„Managing AI“: What we can learn from the MISQ Special Issue – a look behind the scenes. Invited seminar for the research group Information Systems and Electronic Services, TU Darmstadt, 15 November 2021. Why Digitalization is a Great Topic to Inspire Inter-Disciplinary Research.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "INDEED-VWZRX4",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
+          "ref": "INDEED-S67N8E",
           "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "text": "Description Some academics go into the office every day; some are rarely ever seen on campus. Is one way better than the other? Who better to ask than the brilliant Ella Hafermalz who spent her career on the topic of remote work and its implications for belonging, community, collaboration, and performance. She points out that academia has always been a distributed and flexible profession ...",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "Professional Services - Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "INDEED-TD928H",
+          "url": "https://www.janrecker.com/professional-services/",
+          "ref": "INDEED-5CPSQZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "Berente, N., Recker, J., Gu, B., Santhanam (2021), R.: Special Issue on “ Managing Artificial Intelligence “. MIS Quarterly, Vol. 48, No. 3, pp. 1433-1450. Mendling, J., Pentland, B., Recker, J. (2020): Special Issue on “ Business Process Management and Digital Innovation “. European Journal of Information Systems, Vol. 29, No3 3, pp ...",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "title": "Publications - Jan Recker",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "INDEED-LPL7C9",
+          "url": "http://www.janrecker.com/publications/",
+          "ref": "INDEED-AAOA7R",
           "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "text": "Mayer, T., Recker, J. (2025): Managing Finances in Scaled Agile Transformations: Insights from A Case Study of a German Automotive Manufacturer. Project Management Journal, Vol. 56, No. 2, pp. 267-283. Lorenz, J., Chandra Kruse, L., Recker, J. (2024): Value Creation and Capture with Physical-Digital Experiential Consumer Offerings.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "INDEED-GHFEVO",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
+          "ref": "INDEED-GXPHR",
           "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Guardrails for Human-AI Ecologies: A Design Theory for Managing Norm-Based Coordination. MIS Quarterly, 45, forthcoming. Davis, J. L. (2020). How Artifacts Afford: The Power and Politics of Everyday Things. MIT Press. Majchrzak, A., & Malhotra, A. (2019). Unleashing the Crowd: Collaborative Solutions to Wicked Business and Societal Problems ...",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "INDEED-NA753N",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
+          "ref": "INDEED-AYTQS7",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI (8 October 2025)",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "ref": "INDEED-L5VAH9",
+          "posted": "live",
+          "text": "Description We all know about the infamous reviewer two. They are late with their reviews, read our paper only halfway, unduly criticize our work, and make us cite their own mediocre work. What if we replaced reviewer two with an AI reviewer? They could be more friendly, developmental, consistent, knowledgeable, timely… and would take an enormous amount of service work off our shoulders. At ...",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -185,19 +198,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.bgeneral.com/",
-          "ref": "INDEED-HYU20N",
-          "posted": "live",
-          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -209,19 +209,6 @@
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "INDEED-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -248,6 +235,32 @@
           "src": "indeed",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "INDEED-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://pcgseattle.org/",
+          "ref": "INDEED-CQY5XT",
+          "posted": "live",
+          "text": "The Philippine Consulate General in Seattle is committed to delivering efficient, accessible, and responsive services to Filipino nationals while advancing the interests of the Philippines.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
         },
         {
           "title": "General - definition of general by The Free Dictionary",
@@ -285,139 +298,152 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 314,
+      "count": 21,
+      "ms": 487,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
+          "url": "http://www.janrecker.com/",
+          "ref": "DUBIZZLE-KR6LCX",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "My current interests include: Managing Artificial Intelligence Digital innovation and transformation in large organizations Digital entrepreneurship Digitalization of products, services, and processes Digital solutions for sustainable development Design of new digital technologies such as AI",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "DUBIZZLE-FTAAHZ",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
+          "ref": "DUBIZZLE-AY46BM",
           "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "text": "Managing Artificial Intelligence (1 September 2021) Description The new issue of the MIS Quarterly is out and it features a special issue on Managing AI that Nick and Jan have been co-producing with Bin Gu and Radhika Santhanam. Time to discuss what we have done, how it all went, and what we learned.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "DUBIZZLE-SJHA7R",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
+          "ref": "DUBIZZLE-A46YST",
           "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Description Nick and Jan venture into new publishing territory. We talk with the fabulous D.J. Wu, one of the information systems department editors at Management ...",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
+          "title": "“this IS Research” PODCAST - Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "DUBIZZLE-HBU3YW",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
+          "ref": "DUBIZZLE-Z44QVE",
           "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
+          "text": "Managing academics is like herding cats (19 November 2025) When you watch Tik Tok, your maturity in the academic enterprise is zero (5 November 2025) Data is the fuel that sets innovation on fire (22 October 2025) If you’re writing a paper about AI you are not allowed to talk about AI (8 October 2025)",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
+          "title": "Research | Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "DUBIZZLE-3HQYJY",
+          "url": "https://www.janrecker.com/research/",
+          "ref": "DUBIZZLE-B22CD2",
           "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
+          "text": "„Managing AI“: What we can learn from the MISQ Special Issue – a look behind the scenes. Invited seminar for the research group Information Systems and Electronic Services, TU Darmstadt, 15 November 2021. Why Digitalization is a Great Topic to Inspire Inter-Disciplinary Research.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "DUBIZZLE-VWZRX4",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
+          "ref": "DUBIZZLE-S67N8E",
           "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "text": "Description Some academics go into the office every day; some are rarely ever seen on campus. Is one way better than the other? Who better to ask than the brilliant Ella Hafermalz who spent her career on the topic of remote work and its implications for belonging, community, collaboration, and performance. She points out that academia has always been a distributed and flexible profession ...",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "Professional Services - Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "DUBIZZLE-TD928H",
+          "url": "https://www.janrecker.com/professional-services/",
+          "ref": "DUBIZZLE-5CPSQZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "Berente, N., Recker, J., Gu, B., Santhanam (2021), R.: Special Issue on “ Managing Artificial Intelligence “. MIS Quarterly, Vol. 48, No. 3, pp. 1433-1450. Mendling, J., Pentland, B., Recker, J. (2020): Special Issue on “ Business Process Management and Digital Innovation “. European Journal of Information Systems, Vol. 29, No3 3, pp ...",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "title": "Publications - Jan Recker",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "DUBIZZLE-LPL7C9",
+          "url": "http://www.janrecker.com/publications/",
+          "ref": "DUBIZZLE-AAOA7R",
           "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "text": "Mayer, T., Recker, J. (2025): Managing Finances in Scaled Agile Transformations: Insights from A Case Study of a German Automotive Manufacturer. Project Management Journal, Vol. 56, No. 2, pp. 267-283. Lorenz, J., Chandra Kruse, L., Recker, J. (2024): Value Creation and Capture with Physical-Digital Experiential Consumer Offerings.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "DUBIZZLE-GHFEVO",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
+          "ref": "DUBIZZLE-GXPHR",
           "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Guardrails for Human-AI Ecologies: A Design Theory for Managing Norm-Based Coordination. MIS Quarterly, 45, forthcoming. Davis, J. L. (2020). How Artifacts Afford: The Power and Politics of Everyday Things. MIT Press. Majchrzak, A., & Malhotra, A. (2019). Unleashing the Crowd: Collaborative Solutions to Wicked Business and Societal Problems ...",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "DUBIZZLE-NA753N",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
+          "ref": "DUBIZZLE-AYTQS7",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI (8 October 2025)",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "ref": "DUBIZZLE-L5VAH9",
+          "posted": "live",
+          "text": "Description We all know about the infamous reviewer two. They are late with their reviews, read our paper only halfway, unduly criticize our work, and make us cite their own mediocre work. What if we replaced reviewer two with an AI reviewer? They could be more friendly, developmental, consistent, knowledgeable, timely… and would take an enormous amount of service work off our shoulders. At ...",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -459,19 +485,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.bgeneral.com/",
-          "ref": "DUBIZZLE-HYU20N",
-          "posted": "live",
-          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -483,19 +496,6 @@
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "DUBIZZLE-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -522,6 +522,32 @@
           "src": "dubizzle",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "DUBIZZLE-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://pcgseattle.org/",
+          "ref": "DUBIZZLE-CQY5XT",
+          "posted": "live",
+          "text": "The Philippine Consulate General in Seattle is committed to delivering efficient, accessible, and responsive services to Filipino nationals while advancing the interests of the Philippines.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
         },
         {
           "title": "General - definition of general by The Free Dictionary",
@@ -559,139 +585,152 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 289,
+      "count": 21,
+      "ms": 347,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
+          "url": "http://www.janrecker.com/",
+          "ref": "BAYT-KR6LCX",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "My current interests include: Managing Artificial Intelligence Digital innovation and transformation in large organizations Digital entrepreneurship Digitalization of products, services, and processes Digital solutions for sustainable development Design of new digital technologies such as AI",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "BAYT-FTAAHZ",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
+          "ref": "BAYT-AY46BM",
           "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "text": "Managing Artificial Intelligence (1 September 2021) Description The new issue of the MIS Quarterly is out and it features a special issue on Managing AI that Nick and Jan have been co-producing with Bin Gu and Radhika Santhanam. Time to discuss what we have done, how it all went, and what we learned.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "BAYT-SJHA7R",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
+          "ref": "BAYT-A46YST",
           "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Description Nick and Jan venture into new publishing territory. We talk with the fabulous D.J. Wu, one of the information systems department editors at Management ...",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
+          "title": "“this IS Research” PODCAST - Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "BAYT-HBU3YW",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
+          "ref": "BAYT-Z44QVE",
           "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
+          "text": "Managing academics is like herding cats (19 November 2025) When you watch Tik Tok, your maturity in the academic enterprise is zero (5 November 2025) Data is the fuel that sets innovation on fire (22 October 2025) If you’re writing a paper about AI you are not allowed to talk about AI (8 October 2025)",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
+          "title": "Research | Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "BAYT-3HQYJY",
+          "url": "https://www.janrecker.com/research/",
+          "ref": "BAYT-B22CD2",
           "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
+          "text": "„Managing AI“: What we can learn from the MISQ Special Issue – a look behind the scenes. Invited seminar for the research group Information Systems and Electronic Services, TU Darmstadt, 15 November 2021. Why Digitalization is a Great Topic to Inspire Inter-Disciplinary Research.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "BAYT-VWZRX4",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
+          "ref": "BAYT-S67N8E",
           "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "text": "Description Some academics go into the office every day; some are rarely ever seen on campus. Is one way better than the other? Who better to ask than the brilliant Ella Hafermalz who spent her career on the topic of remote work and its implications for belonging, community, collaboration, and performance. She points out that academia has always been a distributed and flexible profession ...",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "Professional Services - Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "BAYT-TD928H",
+          "url": "https://www.janrecker.com/professional-services/",
+          "ref": "BAYT-5CPSQZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "Berente, N., Recker, J., Gu, B., Santhanam (2021), R.: Special Issue on “ Managing Artificial Intelligence “. MIS Quarterly, Vol. 48, No. 3, pp. 1433-1450. Mendling, J., Pentland, B., Recker, J. (2020): Special Issue on “ Business Process Management and Digital Innovation “. European Journal of Information Systems, Vol. 29, No3 3, pp ...",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "title": "Publications - Jan Recker",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "BAYT-LPL7C9",
+          "url": "http://www.janrecker.com/publications/",
+          "ref": "BAYT-AAOA7R",
           "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "text": "Mayer, T., Recker, J. (2025): Managing Finances in Scaled Agile Transformations: Insights from A Case Study of a German Automotive Manufacturer. Project Management Journal, Vol. 56, No. 2, pp. 267-283. Lorenz, J., Chandra Kruse, L., Recker, J. (2024): Value Creation and Capture with Physical-Digital Experiential Consumer Offerings.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "BAYT-GHFEVO",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
+          "ref": "BAYT-GXPHR",
           "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Guardrails for Human-AI Ecologies: A Design Theory for Managing Norm-Based Coordination. MIS Quarterly, 45, forthcoming. Davis, J. L. (2020). How Artifacts Afford: The Power and Politics of Everyday Things. MIT Press. Majchrzak, A., & Malhotra, A. (2019). Unleashing the Crowd: Collaborative Solutions to Wicked Business and Societal Problems ...",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "BAYT-NA753N",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
+          "ref": "BAYT-AYTQS7",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI (8 October 2025)",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "ref": "BAYT-L5VAH9",
+          "posted": "live",
+          "text": "Description We all know about the infamous reviewer two. They are late with their reviews, read our paper only halfway, unduly criticize our work, and make us cite their own mediocre work. What if we replaced reviewer two with an AI reviewer? They could be more friendly, developmental, consistent, knowledgeable, timely… and would take an enormous amount of service work off our shoulders. At ...",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -733,19 +772,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.bgeneral.com/",
-          "ref": "BAYT-HYU20N",
-          "posted": "live",
-          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -757,19 +783,6 @@
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "BAYT-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -796,6 +809,32 @@
           "src": "bayt",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "BAYT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://pcgseattle.org/",
+          "ref": "BAYT-CQY5XT",
+          "posted": "live",
+          "text": "The Philippine Consulate General in Seattle is committed to delivering efficient, accessible, and responsive services to Filipino nationals while advancing the interests of the Philippines.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
         },
         {
           "title": "General - definition of general by The Free Dictionary",
@@ -833,139 +872,152 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 374,
+      "count": 21,
+      "ms": 372,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
+          "url": "http://www.janrecker.com/",
+          "ref": "GULFTALENT-KR6LCX",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "My current interests include: Managing Artificial Intelligence Digital innovation and transformation in large organizations Digital entrepreneurship Digitalization of products, services, and processes Digital solutions for sustainable development Design of new digital technologies such as AI",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "GULFTALENT-FTAAHZ",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
+          "ref": "GULFTALENT-AY46BM",
           "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "text": "Managing Artificial Intelligence (1 September 2021) Description The new issue of the MIS Quarterly is out and it features a special issue on Managing AI that Nick and Jan have been co-producing with Bin Gu and Radhika Santhanam. Time to discuss what we have done, how it all went, and what we learned.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "GULFTALENT-SJHA7R",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
+          "ref": "GULFTALENT-A46YST",
           "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Description Nick and Jan venture into new publishing territory. We talk with the fabulous D.J. Wu, one of the information systems department editors at Management ...",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
+          "title": "“this IS Research” PODCAST - Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "GULFTALENT-HBU3YW",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
+          "ref": "GULFTALENT-Z44QVE",
           "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
+          "text": "Managing academics is like herding cats (19 November 2025) When you watch Tik Tok, your maturity in the academic enterprise is zero (5 November 2025) Data is the fuel that sets innovation on fire (22 October 2025) If you’re writing a paper about AI you are not allowed to talk about AI (8 October 2025)",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
+          "title": "Research | Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "GULFTALENT-3HQYJY",
+          "url": "https://www.janrecker.com/research/",
+          "ref": "GULFTALENT-B22CD2",
           "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
+          "text": "„Managing AI“: What we can learn from the MISQ Special Issue – a look behind the scenes. Invited seminar for the research group Information Systems and Electronic Services, TU Darmstadt, 15 November 2021. Why Digitalization is a Great Topic to Inspire Inter-Disciplinary Research.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "GULFTALENT-VWZRX4",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
+          "ref": "GULFTALENT-S67N8E",
           "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "text": "Description Some academics go into the office every day; some are rarely ever seen on campus. Is one way better than the other? Who better to ask than the brilliant Ella Hafermalz who spent her career on the topic of remote work and its implications for belonging, community, collaboration, and performance. She points out that academia has always been a distributed and flexible profession ...",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "Professional Services - Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "GULFTALENT-TD928H",
+          "url": "https://www.janrecker.com/professional-services/",
+          "ref": "GULFTALENT-5CPSQZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "Berente, N., Recker, J., Gu, B., Santhanam (2021), R.: Special Issue on “ Managing Artificial Intelligence “. MIS Quarterly, Vol. 48, No. 3, pp. 1433-1450. Mendling, J., Pentland, B., Recker, J. (2020): Special Issue on “ Business Process Management and Digital Innovation “. European Journal of Information Systems, Vol. 29, No3 3, pp ...",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "title": "Publications - Jan Recker",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "GULFTALENT-LPL7C9",
+          "url": "http://www.janrecker.com/publications/",
+          "ref": "GULFTALENT-AAOA7R",
           "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "text": "Mayer, T., Recker, J. (2025): Managing Finances in Scaled Agile Transformations: Insights from A Case Study of a German Automotive Manufacturer. Project Management Journal, Vol. 56, No. 2, pp. 267-283. Lorenz, J., Chandra Kruse, L., Recker, J. (2024): Value Creation and Capture with Physical-Digital Experiential Consumer Offerings.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "GULFTALENT-GHFEVO",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
+          "ref": "GULFTALENT-GXPHR",
           "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Guardrails for Human-AI Ecologies: A Design Theory for Managing Norm-Based Coordination. MIS Quarterly, 45, forthcoming. Davis, J. L. (2020). How Artifacts Afford: The Power and Politics of Everyday Things. MIT Press. Majchrzak, A., & Malhotra, A. (2019). Unleashing the Crowd: Collaborative Solutions to Wicked Business and Societal Problems ...",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "GULFTALENT-NA753N",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
+          "ref": "GULFTALENT-AYTQS7",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI (8 October 2025)",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "ref": "GULFTALENT-L5VAH9",
+          "posted": "live",
+          "text": "Description We all know about the infamous reviewer two. They are late with their reviews, read our paper only halfway, unduly criticize our work, and make us cite their own mediocre work. What if we replaced reviewer two with an AI reviewer? They could be more friendly, developmental, consistent, knowledgeable, timely… and would take an enormous amount of service work off our shoulders. At ...",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1007,19 +1059,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.bgeneral.com/",
-          "ref": "GULFTALENT-HYU20N",
-          "posted": "live",
-          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -1031,19 +1070,6 @@
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "GULFTALENT-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -1070,6 +1096,32 @@
           "src": "gulftalent",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "GULFTALENT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://pcgseattle.org/",
+          "ref": "GULFTALENT-CQY5XT",
+          "posted": "live",
+          "text": "The Philippine Consulate General in Seattle is committed to delivering efficient, accessible, and responsive services to Filipino nationals while advancing the interests of the Philippines.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
         },
         {
           "title": "General - definition of general by The Free Dictionary",
@@ -1107,139 +1159,152 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 208,
+      "count": 21,
+      "ms": 217,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
+          "url": "http://www.janrecker.com/",
+          "ref": "NAUKRIGULF-KR6LCX",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "My current interests include: Managing Artificial Intelligence Digital innovation and transformation in large organizations Digital entrepreneurship Digitalization of products, services, and processes Digital solutions for sustainable development Design of new digital technologies such as AI",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "NAUKRIGULF-FTAAHZ",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
+          "ref": "NAUKRIGULF-AY46BM",
           "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "text": "Managing Artificial Intelligence (1 September 2021) Description The new issue of the MIS Quarterly is out and it features a special issue on Managing AI that Nick and Jan have been co-producing with Bin Gu and Radhika Santhanam. Time to discuss what we have done, how it all went, and what we learned.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "NAUKRIGULF-SJHA7R",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
+          "ref": "NAUKRIGULF-A46YST",
           "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Description Nick and Jan venture into new publishing territory. We talk with the fabulous D.J. Wu, one of the information systems department editors at Management ...",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
+          "title": "“this IS Research” PODCAST - Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "NAUKRIGULF-HBU3YW",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
+          "ref": "NAUKRIGULF-Z44QVE",
           "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
+          "text": "Managing academics is like herding cats (19 November 2025) When you watch Tik Tok, your maturity in the academic enterprise is zero (5 November 2025) Data is the fuel that sets innovation on fire (22 October 2025) If you’re writing a paper about AI you are not allowed to talk about AI (8 October 2025)",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
+          "title": "Research | Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "NAUKRIGULF-3HQYJY",
+          "url": "https://www.janrecker.com/research/",
+          "ref": "NAUKRIGULF-B22CD2",
           "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
+          "text": "„Managing AI“: What we can learn from the MISQ Special Issue – a look behind the scenes. Invited seminar for the research group Information Systems and Electronic Services, TU Darmstadt, 15 November 2021. Why Digitalization is a Great Topic to Inspire Inter-Disciplinary Research.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "NAUKRIGULF-VWZRX4",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
+          "ref": "NAUKRIGULF-S67N8E",
           "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
+          "text": "Description Some academics go into the office every day; some are rarely ever seen on campus. Is one way better than the other? Who better to ask than the brilliant Ella Hafermalz who spent her career on the topic of remote work and its implications for belonging, community, collaboration, and performance. She points out that academia has always been a distributed and flexible profession ...",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "Professional Services - Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "NAUKRIGULF-TD928H",
+          "url": "https://www.janrecker.com/professional-services/",
+          "ref": "NAUKRIGULF-5CPSQZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "Berente, N., Recker, J., Gu, B., Santhanam (2021), R.: Special Issue on “ Managing Artificial Intelligence “. MIS Quarterly, Vol. 48, No. 3, pp. 1433-1450. Mendling, J., Pentland, B., Recker, J. (2020): Special Issue on “ Business Process Management and Digital Innovation “. European Journal of Information Systems, Vol. 29, No3 3, pp ...",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "title": "Publications - Jan Recker",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "NAUKRIGULF-LPL7C9",
+          "url": "http://www.janrecker.com/publications/",
+          "ref": "NAUKRIGULF-AAOA7R",
           "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "text": "Mayer, T., Recker, J. (2025): Managing Finances in Scaled Agile Transformations: Insights from A Case Study of a German Automotive Manufacturer. Project Management Journal, Vol. 56, No. 2, pp. 267-283. Lorenz, J., Chandra Kruse, L., Recker, J. (2024): Value Creation and Capture with Physical-Digital Experiential Consumer Offerings.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "ref": "NAUKRIGULF-GHFEVO",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
+          "ref": "NAUKRIGULF-GXPHR",
           "posted": "live",
-          "text": "MANAGING meaning: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "text": "Guardrails for Human-AI Ecologies: A Design Theory for Managing Norm-Based Coordination. MIS Quarterly, 45, forthcoming. Davis, J. L. (2020). How Artifacts Afford: The Power and Politics of Everyday Things. MIT Press. Majchrzak, A., & Malhotra, A. (2019). Unleashing the Crowd: Collaborative Solutions to Wicked Business and Societal Problems ...",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management",
-          "ref": "NAUKRIGULF-NA753N",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
+          "ref": "NAUKRIGULF-AYTQS7",
           "posted": "live",
-          "text": "Management is the process of overseeing people, projects, and resources to help a team or organization reach a common goal. The core work of managing a team breaks down into four areas: setting goals, organizing people and resources, motivating staff, and evaluating results.",
+          "text": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI (8 October 2025)",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "ref": "NAUKRIGULF-L5VAH9",
+          "posted": "live",
+          "text": "Description We all know about the infamous reviewer two. They are late with their reviews, read our paper only halfway, unduly criticize our work, and make us cite their own mediocre work. What if we replaced reviewer two with an AI reviewer? They could be more friendly, developmental, consistent, knowledgeable, timely… and would take an enormous amount of service work off our shoulders. At ...",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1281,19 +1346,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.bgeneral.com/",
-          "ref": "NAUKRIGULF-HYU20N",
-          "posted": "live",
-          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Cuidar la reputación de una marca implica muchas manos trabajando juntas: quienes atienden, quienes resuelven, quienes innovan y quienes lideran con el ejemplo.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1305,19 +1357,6 @@
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "ref": "NAUKRIGULF-4JF8A7",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -1344,6 +1383,32 @@
           "src": "naukrigulf",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "NAUKRIGULF-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://pcgseattle.org/",
+          "ref": "NAUKRIGULF-CQY5XT",
+          "posted": "live",
+          "text": "The Philippine Consulate General in Seattle is committed to delivering efficient, accessible, and responsive services to Filipino nationals while advancing the interests of the Philippines.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
         },
         {
           "title": "General - definition of general by The Free Dictionary",
@@ -1382,9 +1447,9 @@
         "lang": "de"
       },
       "ok": true,
-      "count": 12,
-      "ms": 347,
-      "bytes": 214223,
+      "count": 10,
+      "ms": 1517,
+      "bytes": 214316,
       "note": null,
       "jobs": [
         {
@@ -1415,29 +1480,11 @@
           "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
-          "title": "Filetype: pdf Junior Graduate Program– Market Research and Membership Support (UAE National) Filesize: 219.14 kb",
-          "company": "AHK VAE / member company",
-          "location": "UAE",
-          "url": "https://vae.ahk.de/en/content/download/1016280/20587734?version=1",
-          "kind": "document",
-          "to": "info@ahkdubai.com",
-          "emailVia": "AHK German Emirati Chamber Desk"
-        },
-        {
           "title": "Filetype: pdf Research Manager (Part Time Role) (m/f/d) Filesize: 217.30 kb",
           "company": "AHK VAE / member company",
           "location": "UAE",
-          "url": "https://vae.ahk.de/en/content/download/1018902/20640111?version=1",
-          "kind": "document",
-          "to": "info@ahkdubai.com",
-          "emailVia": "AHK German Emirati Chamber Desk"
-        },
-        {
-          "title": "Filetype: pdf Mitarbeiter*in für den Empfang/Telefonzentrale Filesize: 157.91 kb",
-          "company": "AHK VAE / member company",
-          "location": "UAE",
-          "url": "https://vae.ahk.de/en/content/download/973931/19491686?version=1",
-          "kind": "document",
+          "url": "https://vae.ahk.de/en/content/pdf-download/1018902/20640111?inLanguage=eng-GB",
+          "kind": "page",
           "to": "info@ahkdubai.com",
           "emailVia": "AHK German Emirati Chamber Desk"
         },
@@ -1507,7 +1554,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2306,
+      "ms": 1771,
       "bytes": 157703,
       "note": null,
       "jobs": [
@@ -1621,11 +1668,112 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 0,
-      "ms": 1428,
-      "bytes": 805181,
-      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
-      "jobs": []
+      "count": 10,
+      "ms": 1401,
+      "bytes": 821559,
+      "note": null,
+      "jobs": [
+        {
+          "title": "Markets Associate",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/markets-associate-53673",
+          "ref": "53673",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Data Analyst",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/data-analyst-53634",
+          "ref": "53634",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Business Analyst",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/business-analyst-53767",
+          "ref": "53767",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "International Tax Manager",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/group-finance-and-tax-manager-53740",
+          "ref": "53740",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Senior Group Accountant",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/senior-group-accountant-53752",
+          "ref": "53752",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Store Manager",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/store-manager-53772",
+          "ref": "53772",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Executive Assistant",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/executive-assistant-53763",
+          "ref": "53763",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Large Corporate Relationship Manager",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/large-corporate-relationship-manager-53776",
+          "ref": "53776",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Head of HR",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/head-of-hr-53773",
+          "ref": "53773",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        },
+        {
+          "title": "Senior Associate - Investment Placement",
+          "company": "via Charterhouse",
+          "location": "",
+          "url": "https://www.charterhouseme.ae/job/senior-associate-investment-placement-53758",
+          "ref": "53758",
+          "kind": "page",
+          "to": "info@charterhouse.ae",
+          "emailVia": "Charterhouse Middle East Recruitment"
+        }
+      ]
     },
     {
       "id": "michaelpage",
@@ -1636,10 +1784,30 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 231,
-      "bytes": 173686,
+      "ms": 305,
+      "bytes": 173407,
       "note": null,
       "jobs": [
+        {
+          "title": "Director Government Stakeholder management & Strategic Partnerships",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/director-government-stakeholder-management-saudi-nationals/ref/jn-072026-7066007",
+          "ref": "jn-072026-7066007",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
+        {
+          "title": "Finance Director",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/finance-director/ref/jn-082026-7082100",
+          "ref": "jn-082026-7082100",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
         {
           "title": "Development Manager",
           "company": "via Michael Page",
@@ -1811,16 +1979,6 @@
           "emailVia": "Michael Page UAE Executive Desk"
         },
         {
-          "title": "Director Government Stakeholder management & Strategic Partnership,",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/director-government-stakeholder-management/ref/jn-072026-7066007",
-          "ref": "jn-072026-7066007",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
           "title": "Sales Advisor - Multinational Retail Brand",
           "company": "via Michael Page",
           "location": "",
@@ -1929,16 +2087,6 @@
           "kind": "page",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "PR & Communications Director - Investment Holding Group - Qatar",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/pr-communications-director-conglomorate-qatar/ref/jn-102026-7131746",
-          "ref": "jn-102026-7131746",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     },
@@ -1951,8 +2099,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1002,
-      "bytes": 276380,
+      "ms": 1333,
+      "bytes": 276666,
       "note": null,
       "jobs": [
         {
@@ -2011,6 +2159,96 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
           "ref": "jn-082026-7091934",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Healthcare Consulting - APAC Head",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/healthcare-consulting-apac-head/ref/jn-112026-7140338",
+          "ref": "jn-112026-7140338",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Human Resources Manager - Darmann Abrasive Products - Clinton, MA",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/hr-manager-darmann-abrasive-products-clinton-ma/ref/jn-102026-7132660",
+          "ref": "jn-102026-7132660",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "CFO Capital Raising, Energy and Infrastructure",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/cfo-capital-raising-energy-and-infrastructure/ref/jn-112026-7139913",
+          "ref": "jn-112026-7139913",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Commercial Head",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/commercial-head/ref/jn-112026-7139925",
+          "ref": "jn-112026-7139925",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Real Estate Transaction Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/real-estate-transaction-director/ref/jn-072026-7056851",
+          "ref": "jn-072026-7056851",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head of Purchasing (m/w/d)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-purchasing-mwd/ref/jn-102026-7133608",
+          "ref": "jn-102026-7133608",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Deputy Head of Branch Basel",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/deputy-head-branch-basel/ref/jn-112026-7139468",
+          "ref": "jn-112026-7139468",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Sales Compensation MI Finance Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/sales-compensation-director-data-and-architecture/ref/jn-102026-7136240",
+          "ref": "jn-102026-7136240",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Operations & Growth Director",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/operations-growth-director/ref/jn-112026-7139464",
+          "ref": "jn-112026-7139464",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2164,96 +2402,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Director of eCommerce",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-ecommerce/ref/jn-102026-7129403",
-          "ref": "jn-102026-7129403",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "GM, Korea - Automotive Aftermarket B2C",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/gm-korea-automotive-aftermarket-b2c/ref/jn-082026-7087751",
-          "ref": "jn-082026-7087751",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "COO- 国内物流龙头企业",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/coo-%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86%E8%B4%9F%E8%B4%A3%E4%BA%BA-%E5%9B%BD%E5%86%85%E7%89%A9%E6%B5%81%E9%BE%99%E5%A4%B4%E4%BC%81%E4%B8%9A/ref/jn-092026-7110098",
-          "ref": "jn-092026-7110098",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Strategy VP 战略副总裁-A股上市公司",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/strategy-vp-%E6%88%98%E7%95%A5%E5%89%AF%E6%80%BB%E8%A3%81-a%E8%82%A1%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8/ref/jn-102026-7127320",
-          "ref": "jn-102026-7127320",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "海外合规BP- 国际化生命科学企业",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/%E6%B5%B7%E5%A4%96%E5%90%88%E8%A7%84bp-%E5%9B%BD%E9%99%85%E5%8C%96%E7%94%9F%E5%91%BD%E7%A7%91%E5%AD%A6%E4%BC%81%E4%B8%9A/ref/jn-092026-7107881",
-          "ref": "jn-092026-7107881",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "グローバルアカウントマネージャー（ハードウェア・ソフトウェア担当／バイリンガル）",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%EF%BC%88%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E6%8B%85%E5%BD%93%EF%BC%8F%E3%83%90%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%AB%EF%BC%89/ref/jn-102026-7137359",
-          "ref": "jn-102026-7137359",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Senior Manager Energy Economics",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/senior-manager-energy-economics/ref/jn-102026-7135858",
-          "ref": "jn-102026-7135858",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Directeur de Projet H/F - Transformation Minière - RCI",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/directeur-de-projet-hf-transformation-mini%C3%A8re-rci/ref/jn-102026-7137923",
-          "ref": "jn-102026-7137923",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Regional Sales Director",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/regional-sales-director-southeast-asia/ref/jn-102026-7137779",
-          "ref": "jn-102026-7137779",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2261,13 +2409,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "ok": false,
-      "count": 66,
-      "ms": 3489,
-      "error": "HTTP 429 from www.linkedin.com",
-      "stale": true,
-      "staleSince": "2026-10-31T10:00:44.286Z",
-      "note": "fetch failed — these 66 listings are carried over from 2026-10-31T10:00:44.286Z, not a fresh read",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 65,
+      "ms": 13442,
+      "note": null,
       "jobs": [
         {
           "title": "Investment Director / Managing Director",
@@ -2275,7 +2423,7 @@
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/investment-director-managing-director-at-hedge-impact-headhunting-4470580918",
           "ref": "4470580918",
-          "posted": "2026-10-27",
+          "posted": "2026-11-02",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@hedgeimpact.com",
@@ -2294,18 +2442,6 @@
           "emailVia": "Corporate HR Mailbox (progressive.com)"
         },
         {
-          "title": "Managing Director (EMIRATI)",
-          "company": "Salt",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-emirati-at-salt-4481436250",
-          "ref": "4481436250",
-          "posted": "2026-10-26",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@salt.ae",
-          "emailVia": "Corporate HR Mailbox (salt.ae)"
-        },
-        {
           "title": "Chief Executive Officer",
           "company": "preview group",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2316,6 +2452,18 @@
           "src": "linkedin",
           "to": "careers@preview.ae",
           "emailVia": "Corporate HR Mailbox (preview.ae)"
+        },
+        {
+          "title": "Managing Director (EMIRATI)",
+          "company": "Salt",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-emirati-at-salt-4481436250",
+          "ref": "4481436250",
+          "posted": "2026-10-26",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@salt.ae",
+          "emailVia": "Corporate HR Mailbox (salt.ae)"
         },
         {
           "title": "Chief Executive Officer (CEO) – UAE",
@@ -2330,12 +2478,24 @@
           "emailVia": "Corporate HR Mailbox (rightadvisors.com)"
         },
         {
+          "title": "Chief Executive Officer",
+          "company": "Vitatech Group® Middle East",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-vitatech-group%C2%AE-middle-east-4486821948",
+          "ref": "4486821948",
+          "posted": "2026-11-03",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@vitatech.ae",
+          "emailVia": "Corporate HR Mailbox (vitatech.ae)"
+        },
+        {
           "title": "Managing Director- Performance Marketing Agency",
           "company": "Hire Rightt - Executive Search & HR Advisory",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-performance-marketing-agency-at-hire-rightt-executive-search-hr-advisory-4479329228",
-          "ref": "4479329228",
-          "posted": "2026-10-27",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-performance-marketing-agency-at-hire-rightt-executive-search-hr-advisory-4486372464",
+          "ref": "4486372464",
+          "posted": "2026-11-04",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@hirerightt.ae",
@@ -2376,18 +2536,6 @@
           "src": "linkedin",
           "to": "careers@lhh.ae",
           "emailVia": "Corporate HR Mailbox (lhh.ae)"
-        },
-        {
-          "title": "Chief Executive Officer",
-          "company": "Daikan Hospitality Group",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
-          "ref": "4470924431",
-          "posted": "2026-09-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@daikanhospitality.com",
-          "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
         },
         {
           "title": "General Manager – Industrial Refrigeration - Bilingual",
@@ -2450,18 +2598,6 @@
           "emailVia": "Corporate HR Mailbox (algahwa.ae)"
         },
         {
-          "title": "General Manager - Facility Management",
-          "company": "Robert Walters",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-facility-management-at-robert-walters-4482298262",
-          "ref": "4482298262",
-          "posted": "2026-10-28",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@robertwalters.com",
-          "emailVia": "Corporate HR Mailbox (robertwalters.com)"
-        },
-        {
           "title": "Restaurant General Manager - Kissaki - C2i",
           "company": "C2i",
           "location": "Abu Dhabi Emirate, United Arab Emirates",
@@ -2510,6 +2646,18 @@
           "emailVia": "Corporate HR Mailbox (jointspace.ae)"
         },
         {
+          "title": "General Manager - Joinery Business Unit",
+          "company": "Greenbull Group Dubai",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-joinery-business-unit-at-greenbull-group-dubai-4468970729",
+          "ref": "4468970729",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@greenbull.ae",
+          "emailVia": "Corporate HR Mailbox (greenbull.ae)"
+        },
+        {
           "title": "Director of Operations",
           "company": "Confidential",
           "location": "Dubai, United Arab Emirates",
@@ -2520,18 +2668,6 @@
           "src": "linkedin",
           "to": "executive.talent@linkedin-mena.com",
           "emailVia": "Executive Talent Desk"
-        },
-        {
-          "title": "Director of Operations",
-          "company": "Confidential Careers",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-confidential-careers-4481548274",
-          "ref": "4481548274",
-          "posted": "2026-10-20",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@confidentialcareers.com",
-          "emailVia": "Corporate HR Mailbox (confidentialcareers.com)"
         },
         {
           "title": "Director of Operations",
@@ -2551,7 +2687,7 @@
           "location": "Dubai, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/operations-director-at-creation-business-consultants-4461107779",
           "ref": "4461107779",
-          "posted": "2026-10-13",
+          "posted": "2026-11-03",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@creationbusiness.com",
@@ -2585,9 +2721,9 @@
           "title": "Country Operations Director",
           "company": "GSM - Green SM",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/country-operations-director-at-gsm-green-sm-4480644321",
-          "ref": "4480644321",
-          "posted": "2026-10-23",
+          "url": "https://ae.linkedin.com/jobs/view/country-operations-director-at-gsm-green-sm-4485043745",
+          "ref": "4485043745",
+          "posted": "2026-11-04",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@gsmgreen.ae",
@@ -2630,6 +2766,18 @@
           "emailVia": "Corporate HR Mailbox (whitecrowresearch.com)"
         },
         {
+          "title": "Director of Hospitality",
+          "company": "Confidential",
+          "location": "Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-hospitality-at-confidential-4478084067",
+          "ref": "4478084067",
+          "posted": "2026-10-10",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "executive.talent@linkedin-mena.com",
+          "emailVia": "Executive Talent Desk"
+        },
+        {
           "title": "Chief Executive Officer (CEO) – HR & Workforce Solutions",
           "company": "Jobmaze FZ LLC",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2640,6 +2788,18 @@
           "src": "linkedin",
           "to": "careers@jobmazefz.ae",
           "emailVia": "Corporate HR Mailbox (jobmazefz.ae)"
+        },
+        {
+          "title": "Chief Executive Officer",
+          "company": "Daikan Hospitality Group",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
+          "ref": "4470924431",
+          "posted": "2026-09-23",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@daikanhospitality.com",
+          "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
         },
         {
           "title": "Chief Executive Officer",
@@ -2676,18 +2836,6 @@
           "src": "linkedin",
           "to": "careers@gemseducation.com",
           "emailVia": "Corporate HR Mailbox (gemseducation.com)"
-        },
-        {
-          "title": "Propietario de la empresa",
-          "company": "Johnny sSolutions S.A",
-          "location": "Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/propietario-de-la-empresa-4483939106",
-          "ref": "4483939106",
-          "posted": "2026-10-31",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@johnnyssolutions.com",
-          "emailVia": "Corporate HR Mailbox (johnnyssolutions.com)"
         },
         {
           "title": "Chief Operating Officer",
@@ -2798,28 +2946,16 @@
           "emailVia": "Corporate HR Mailbox (coinsph.ae)"
         },
         {
-          "title": "Country Manager",
-          "company": "TLScontact",
+          "title": "MD, Global DTC",
+          "company": "Drayton",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/country-manager-at-tlscontact-4477802765",
-          "ref": "4477802765",
-          "posted": "2026-10-09",
+          "url": "https://ae.linkedin.com/jobs/view/md-global-dtc-at-drayton-4486190170",
+          "ref": "4486190170",
+          "posted": "2026-11-02",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@tlscontact.ae",
-          "emailVia": "Corporate HR Mailbox (tlscontact.ae)"
-        },
-        {
-          "title": "Country Manager",
-          "company": "CreatorLab",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/country-manager-at-creatorlab-4482510977",
-          "ref": "4482510977",
-          "posted": "2026-10-28",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@creatorlab.ae",
-          "emailVia": "Corporate HR Mailbox (creatorlab.ae)"
+          "to": "careers@drayton.ae",
+          "emailVia": "Corporate HR Mailbox (drayton.ae)"
         },
         {
           "title": "Commercial Director",
@@ -2839,11 +2975,23 @@
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/director-of-commercial-at-rosewood-abu-dhabi-4478026537",
           "ref": "4478026537",
-          "posted": "2026-10-10",
+          "posted": "2026-11-04",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@rosewood.ae",
           "emailVia": "Corporate HR Mailbox (rosewood.ae)"
+        },
+        {
+          "title": "Cluster Commercial Director - Hilton Abu Dhabi Yas Island",
+          "company": "Hilton",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/cluster-commercial-director-hilton-abu-dhabi-yas-island-at-hilton-4480505895",
+          "ref": "4480505895",
+          "posted": "2026-10-16",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@hilton.ae",
+          "emailVia": "Corporate HR Mailbox (hilton.ae)"
         },
         {
           "title": "Senior Director - Commercial",
@@ -2871,18 +3019,6 @@
         },
         {
           "title": "Commercial Director",
-          "company": "Fletcher Piccolo Associates (FPA)",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-director-at-fletcher-piccolo-associates-fpa-4476269330",
-          "ref": "4476269330",
-          "posted": "2026-10-09",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@fletcherpiccolo.com",
-          "emailVia": "Corporate HR Mailbox (fletcherpiccolo.com)"
-        },
-        {
-          "title": "Commercial Director",
           "company": "Wasael Property Management",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/commercial-director-at-wasael-property-management-4392893262",
@@ -2904,18 +3040,6 @@
           "src": "linkedin",
           "to": "careers@affle.ae",
           "emailVia": "Corporate HR Mailbox (affle.ae)"
-        },
-        {
-          "title": "Director, Core Payments VAS Commercialization & Planning",
-          "company": "Mastercard",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-core-payments-vas-commercialization-planning-at-mastercard-4480058689",
-          "ref": "4480058689",
-          "posted": "2026-10-22",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@mastercard.ae",
-          "emailVia": "Corporate HR Mailbox (mastercard.ae)"
         },
         {
           "title": "Regional Commercial Director (Luxury Beauty & Fragrance)",
@@ -2940,6 +3064,18 @@
           "src": "linkedin",
           "to": "careers@edwardslifesciences.com",
           "emailVia": "Corporate HR Mailbox (edwardslifesciences.com)"
+        },
+        {
+          "title": "Director, Government Sales Executive, UAE",
+          "company": "Visa",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-government-sales-executive-uae-at-visa-4484445959",
+          "ref": "4484445959",
+          "posted": "2026-10-28",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@visa.ae",
+          "emailVia": "Corporate HR Mailbox (visa.ae)"
         },
         {
           "title": "Area Demand and IBP Director – MEAP, Turkey & CIS",
@@ -2990,40 +3126,28 @@
           "emailVia": "Corporate HR Mailbox (credotalent.com)"
         },
         {
-          "title": "Head of Logistics",
-          "company": "Gold Apple",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/head-of-logistics-at-gold-apple-4477093306",
-          "ref": "4477093306",
-          "posted": "2026-10-15",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@goldapple.ae",
-          "emailVia": "Corporate HR Mailbox (goldapple.ae)"
-        },
-        {
-          "title": "Commercial and Vendor Network Director",
-          "company": "Muller & Phipps Middle East",
+          "title": "Director, Technical Operations - Middle East Region",
+          "company": "The Coca-Cola Company",
           "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-and-vendor-network-director-at-muller-phipps-middle-east-4482417908",
-          "ref": "4482417908",
-          "posted": "2026-10-22",
+          "url": "https://ae.linkedin.com/jobs/view/director-technical-operations-middle-east-region-at-the-coca-cola-company-4476267708",
+          "ref": "4476267708",
+          "posted": "2026-11-03",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@mullerphipps.com",
-          "emailVia": "Corporate HR Mailbox (mullerphipps.com)"
+          "to": "careers@thecoca-cola.com",
+          "emailVia": "Corporate HR Mailbox (thecoca-cola.com)"
         },
         {
-          "title": "Senior Vice President Supply Chain",
-          "company": "Abu Dhabi Airports",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/senior-vice-president-supply-chain-at-abu-dhabi-airports-4485351505",
-          "ref": "4485351505",
-          "posted": "2026-10-30",
+          "title": "VP of Supply Chain",
+          "company": "Polymateria",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/vp-of-supply-chain-at-polymateria-4486154455",
+          "ref": "4486154455",
+          "posted": "2026-11-03",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@airports.ae",
-          "emailVia": "Corporate HR Mailbox (airports.ae)"
+          "to": "careers@polymateria.com",
+          "emailVia": "Corporate HR Mailbox (polymateria.com)"
         },
         {
           "title": "Director of Procurement Transformation & Excellence",
@@ -3038,28 +3162,40 @@
           "emailVia": "Corporate HR Mailbox (miral.ae)"
         },
         {
-          "title": "Manager / Director, Strategic Sourcing, Middle East & Africa",
-          "company": "Radisson Hotel Group",
+          "title": "Procurement Director",
+          "company": "SB Adventures",
           "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/manager-director-strategic-sourcing-middle-east-africa-at-radisson-hotel-group-4443810537",
-          "ref": "4443810537",
-          "posted": "2026-07-23",
+          "url": "https://ae.linkedin.com/jobs/view/procurement-director-at-sb-adventures-4475807773",
+          "ref": "4475807773",
+          "posted": "2026-10-06",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@radissonhotel.com",
-          "emailVia": "Corporate HR Mailbox (radissonhotel.com)"
+          "to": "careers@sbadventures.com",
+          "emailVia": "Corporate HR Mailbox (sbadventures.com)"
         },
         {
-          "title": "Group Procurement Director",
-          "company": "Millennium Hotels and Resorts MEA",
+          "title": "Global Director, Business Process and Partnerships",
+          "company": "Aramex",
           "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/group-procurement-director-at-millennium-hotels-and-resorts-mea-4475951536",
-          "ref": "4475951536",
-          "posted": "2026-10-08",
+          "url": "https://ae.linkedin.com/jobs/view/global-director-business-process-and-partnerships-at-aramex-4486811728",
+          "ref": "4486811728",
+          "posted": "2026-11-03",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@millenniumhotels.com",
-          "emailVia": "Corporate HR Mailbox (millenniumhotels.com)"
+          "to": "careers@aramex.com",
+          "emailVia": "Aramex Global HR Desk"
+        },
+        {
+          "title": "Procurement Director",
+          "company": "Wasael Property Management",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/procurement-director-at-wasael-property-management-4463829148",
+          "ref": "4463829148",
+          "posted": "2026-10-21",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@wasaelproperty.com",
+          "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
         }
       ]
     },
@@ -3071,99 +3207,108 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 30,
-      "ms": 329,
+      "count": 31,
+      "ms": 503,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via merriam-webster.com",
+          "title": "Jan Recker | The Home Page of Professor Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "url": "http://www.janrecker.com/",
           "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via merriam-webster.com",
+          "title": "Managing Artificial Intelligence (1 September 2021) - Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "url": "http://www.janrecker.com/this-is-research-podcast/managing-artificial-intelligence-1-september-2021/",
           "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "WHO WOULD THINK MANAGEMENT SCIENCE IS NOT A TOP INFORMATION SYSTEMS ...",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
+          "url": "https://www.janrecker.com/this-is-research-podcast/who-would-think-management-science-is-not-a-top-information-systems-journal-22-november-2023/",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via thefreedictionary.com",
+          "title": "“this IS Research” PODCAST - Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.thefreedictionary.com/managing",
+          "url": "http://www.janrecker.com/this-is-research-podcast/",
           "kind": "page",
-          "to": "careers@thefreedictionary.com",
-          "emailVia": "Employer Domain HR (thefreedictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "Research | Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/managing",
+          "url": "https://www.janrecker.com/research/",
           "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
+          "title": "MANAGING ACADEMICS IS LIKE HERDING CATS (19 November 2025)",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
+          "url": "https://www.janrecker.com/this-is-research-podcast/managing-academics-is-like-herding-cats-19-november-2025/",
           "kind": "page",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "Management - Wikipedia",
-          "company": "via en.wikipedia.org",
+          "title": "Professional Services - Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/Management",
+          "url": "https://www.janrecker.com/professional-services/",
           "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via collinsdictionary.com",
+          "title": "Publications - Jan Recker",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "url": "http://www.janrecker.com/publications/",
           "kind": "page",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "HOW TO BE AN EDITOR 101, OR: HOW TO GET AWAY WITH BAD PAPER DECISIONS ...",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "url": "https://www.janrecker.com/this-is-research-podcast/how-to-be-an-editor-101-or-how-to-get-away-with-bad-paper-decisions-30-april-2025/",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
-          "title": "What Is Management? Styles, Functions, Skills, and Careers",
-          "company": "via coursera.org",
+          "title": "IF YOU’RE WRITING A PAPER ABOUT AI YOU ARE NOT ALLOWED TO TALK ABOUT AI ...",
+          "company": "via janrecker.com",
           "location": "UAE",
-          "url": "https://www.coursera.org/articles/management",
+          "url": "https://www.janrecker.com/this-is-research-podcast/if-youre-writing-a-paper-about-ai-you-are-not-allowed-to-talk-about-ai-8-october-2025/",
           "kind": "page",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
+        },
+        {
+          "title": "WELCOME, AI REVIEWER TWO (23 September 2026) | Jan Recker",
+          "company": "via janrecker.com",
+          "location": "UAE",
+          "url": "https://www.janrecker.com/this-is-research-podcast/welcome-ai-reviewer-two-23-september-2026/",
+          "kind": "page",
+          "to": "careers@janrecker.com",
+          "emailVia": "Employer Domain HR (janrecker.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -3193,15 +3338,6 @@
           "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "Personas - Banco General Panamá",
-          "company": "via bgeneral.com",
-          "location": "UAE",
-          "url": "https://www.bgeneral.com/",
-          "kind": "page",
-          "to": "careers@bgeneral.com",
-          "emailVia": "Employer Domain HR (bgeneral.com)"
-        },
-        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
@@ -3209,15 +3345,6 @@
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via en.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/General_officer",
-          "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -3238,6 +3365,24 @@
           "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
+          "location": "UAE",
+          "url": "https://www.dollargeneral.com/",
+          "kind": "page",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Home - Philippine Consulate General",
+          "company": "via pcgseattle.org",
+          "location": "UAE",
+          "url": "https://pcgseattle.org/",
+          "kind": "page",
+          "to": "careers@pcgseattle.org",
+          "emailVia": "Employer Domain HR (pcgseattle.org)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via thefreedictionary.com",
           "location": "UAE",
@@ -3256,94 +3401,94 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "Geschäftsführer in English - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/german-english/geschaftsfuhrer",
+          "url": "http://rlrayviolinshop.com/",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführer - Translation in English - Langenscheidt",
-          "company": "via en.langenscheidt.com",
+          "title": "R.L. Ray Line of Violins — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://en.langenscheidt.com/german-english/geschaeftsfuehrer",
+          "url": "http://rlrayviolinshop.com/rlray-instruments",
           "kind": "page",
-          "to": "careers@en.langenscheidt.com",
-          "emailVia": "Employer Domain HR (en.langenscheidt.com)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführung (Deutschland) – Wikipedia",
-          "company": "via de.wikipedia.org",
+          "title": "Inventory Navigation — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://de.wikipedia.org/wiki/Gesch%C3%A4ftsf%C3%BChrung_(Deutschland)",
+          "url": "http://rlrayviolinshop.com/inventory-navigation",
           "kind": "page",
-          "to": "careers@de.wikipedia.org",
-          "emailVia": "Employer Domain HR (de.wikipedia.org)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "English Translation of “GESCHÄFTSFÜHRER” | Collins German-English ...",
-          "company": "via collinsdictionary.com",
+          "title": "Services — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://www.collinsdictionary.com/dictionary/german-english/geschaftsfuhrer",
+          "url": "http://rlrayviolinshop.com/services",
           "kind": "page",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschaeftsfuehrer - English translation – Linguee",
-          "company": "via linguee.com",
+          "title": "About Us — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://www.linguee.com/german-english/translation/geschaeftsfuehrer.html",
+          "url": "http://rlrayviolinshop.com/about-us",
           "kind": "page",
-          "to": "careers@linguee.com",
-          "emailVia": "Employer Domain HR (linguee.com)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführer - Englisch-Übersetzung – Linguee Wörterbuch",
-          "company": "via linguee.de",
+          "title": "Contact — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://www.linguee.de/deutsch-englisch/uebersetzung/gesch%c3%a4ftsf%c3%bchrer.html",
+          "url": "http://rlrayviolinshop.com/contact",
           "kind": "page",
-          "to": "careers@linguee.de",
-          "emailVia": "Employer Domain HR (linguee.de)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführer (in) in English - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "Violas — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/german-english/geschaftsfuhrer-in",
+          "url": "http://rlrayviolinshop.com/violas",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführer - Wiktionary, the free dictionary",
-          "company": "via en.wiktionary.org",
+          "title": "Violin Rental - R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://en.wiktionary.org/wiki/Gesch%C3%A4ftsf%C3%BChrer",
+          "url": "http://rlrayviolinshop.com/violin-rental",
           "kind": "page",
-          "to": "careers@en.wiktionary.org",
-          "emailVia": "Employer Domain HR (en.wiktionary.org)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Geschäftsführer: Definition, Rolle & Aufgaben • 2026 - JuraRat",
-          "company": "via jurarat.de",
+          "title": "Violin Bows — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://jurarat.de/geschaeftsfuehrer",
+          "url": "http://rlrayviolinshop.com/violin-bows/",
           "kind": "page",
-          "to": "careers@jurarat.de",
-          "emailVia": "Employer Domain HR (jurarat.de)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         },
         {
-          "title": "Der Geschäftsführer: Meaning, Grammar & Usage (German)",
-          "company": "via der-die-das-deutsch.com",
+          "title": "Scholarship — R.L. Ray Violin Shop",
+          "company": "via rlrayviolinshop.com",
           "location": "UAE",
-          "url": "https://der-die-das-deutsch.com/en/der-geschaeftsfuehrer",
+          "url": "http://rlrayviolinshop.com/scholarship",
           "kind": "page",
-          "to": "careers@der-die-das-deutsch.com",
-          "emailVia": "Employer Domain HR (der-die-das-deutsch.com)"
+          "to": "careers@rlrayviolinshop.com",
+          "emailVia": "Employer Domain HR (rlrayviolinshop.com)"
         }
       ]
     }
