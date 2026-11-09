@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-08T10:51:16.199Z",
-  "total": 286,
-  "staleSources": 0,
+  "generatedAt": "2026-11-09T12:17:17.183Z",
+  "total": 258,
+  "staleSources": 1,
   "sources": [
     {
       "id": "indeed",
@@ -11,23 +11,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 344,
+      "count": 17,
+      "ms": 341,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
@@ -36,6 +23,19 @@
           "ref": "INDEED-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "INDEED-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "indeed",
           "to": "careers@merriam-webster.com",
@@ -68,19 +68,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "INDEED-CO2WU2",
-          "posted": "live",
-          "text": "Has she had any experience of managing large projects? He's not very good at managing people. His job involved managing large investment funds. When you have a job as well as children to look after, you have to learn how to manage your time.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -107,43 +94,17 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.wordreference.com/definition/managing",
-          "ref": "INDEED-N4SXYU",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "INDEED-CO2WU2",
           "posted": "live",
-          "text": "to bring about or succeed in accomplishing, sometimes despite difficulty or hardship: She managed to see the governor. How does she manage it on such a small income? to take charge or care of: to manage my investments. to dominate or influence (a person) by tact, flattery, or artifice: He manages the child with exemplary skill.",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "INDEED-3XC5FG",
-          "posted": "live",
-          "text": "Quick definition: Management is the structured practice of getting things done through people. The classic definition by Peter Drucker is \"doing the right things efficiently.\" Every manager performs four functions — plan, organise, lead, control — adapted to the team, industry, and moment. What Is Management?",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "ref": "INDEED-S80U11",
-          "posted": "live",
-          "text": "As a manager, it's important to understand management concepts and approaches. Discover management competencies every aspiring manager should have. Management concepts center on five core functions managers use to set goals and lead teams: planning, organizing, staffing, leading, and controlling.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -159,32 +120,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "ref": "INDEED-8Q73E7",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "INDEED-COJQ3S",
-          "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -198,6 +133,45 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "INDEED-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "ref": "INDEED-88TIOU",
+          "posted": "live",
+          "text": "This is the ultimate guide to understanding military ranks highest to lowest, from enlisted to officers! Our in-depth look explores ranks across all branches in 2024, with pay grade info!",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -205,6 +179,19 @@
           "ref": "INDEED-MFXMB7",
           "posted": "live",
           "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "INDEED-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
@@ -224,30 +211,17 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "title": "The General Auto Insurance",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "INDEED-6I7BS2",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "INDEED-SALKJO",
           "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "No sign in required. With The General ® App. Download It Today!",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "ref": "INDEED-X77NF2",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -261,19 +235,6 @@
           "src": "indeed",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "INDEED-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -285,23 +246,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 281,
+      "count": 17,
+      "ms": 716,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
@@ -310,6 +258,19 @@
           "ref": "DUBIZZLE-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "DUBIZZLE-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@merriam-webster.com",
@@ -342,19 +303,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "DUBIZZLE-CO2WU2",
-          "posted": "live",
-          "text": "Has she had any experience of managing large projects? He's not very good at managing people. His job involved managing large investment funds. When you have a job as well as children to look after, you have to learn how to manage your time.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -381,43 +329,17 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.wordreference.com/definition/managing",
-          "ref": "DUBIZZLE-N4SXYU",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "DUBIZZLE-CO2WU2",
           "posted": "live",
-          "text": "to bring about or succeed in accomplishing, sometimes despite difficulty or hardship: She managed to see the governor. How does she manage it on such a small income? to take charge or care of: to manage my investments. to dominate or influence (a person) by tact, flattery, or artifice: He manages the child with exemplary skill.",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "DUBIZZLE-3XC5FG",
-          "posted": "live",
-          "text": "Quick definition: Management is the structured practice of getting things done through people. The classic definition by Peter Drucker is \"doing the right things efficiently.\" Every manager performs four functions — plan, organise, lead, control — adapted to the team, industry, and moment. What Is Management?",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "ref": "DUBIZZLE-S80U11",
-          "posted": "live",
-          "text": "As a manager, it's important to understand management concepts and approaches. Discover management competencies every aspiring manager should have. Management concepts center on five core functions managers use to set goals and lead teams: planning, organizing, staffing, leading, and controlling.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -433,32 +355,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "ref": "DUBIZZLE-8Q73E7",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "DUBIZZLE-COJQ3S",
-          "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -472,6 +368,45 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "DUBIZZLE-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "ref": "DUBIZZLE-88TIOU",
+          "posted": "live",
+          "text": "This is the ultimate guide to understanding military ranks highest to lowest, from enlisted to officers! Our in-depth look explores ranks across all branches in 2024, with pay grade info!",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -479,6 +414,19 @@
           "ref": "DUBIZZLE-MFXMB7",
           "posted": "live",
           "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "DUBIZZLE-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
@@ -498,30 +446,17 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "title": "The General Auto Insurance",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "DUBIZZLE-6I7BS2",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "DUBIZZLE-SALKJO",
           "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "No sign in required. With The General ® App. Download It Today!",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "ref": "DUBIZZLE-X77NF2",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -535,19 +470,6 @@
           "src": "dubizzle",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "DUBIZZLE-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -559,23 +481,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 287,
+      "count": 17,
+      "ms": 429,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
@@ -584,6 +493,19 @@
           "ref": "BAYT-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "BAYT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "bayt",
           "to": "careers@merriam-webster.com",
@@ -616,19 +538,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "BAYT-CO2WU2",
-          "posted": "live",
-          "text": "Has she had any experience of managing large projects? He's not very good at managing people. His job involved managing large investment funds. When you have a job as well as children to look after, you have to learn how to manage your time.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -655,43 +564,17 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.wordreference.com/definition/managing",
-          "ref": "BAYT-N4SXYU",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "BAYT-CO2WU2",
           "posted": "live",
-          "text": "to bring about or succeed in accomplishing, sometimes despite difficulty or hardship: She managed to see the governor. How does she manage it on such a small income? to take charge or care of: to manage my investments. to dominate or influence (a person) by tact, flattery, or artifice: He manages the child with exemplary skill.",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "BAYT-3XC5FG",
-          "posted": "live",
-          "text": "Quick definition: Management is the structured practice of getting things done through people. The classic definition by Peter Drucker is \"doing the right things efficiently.\" Every manager performs four functions — plan, organise, lead, control — adapted to the team, industry, and moment. What Is Management?",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "ref": "BAYT-S80U11",
-          "posted": "live",
-          "text": "As a manager, it's important to understand management concepts and approaches. Discover management competencies every aspiring manager should have. Management concepts center on five core functions managers use to set goals and lead teams: planning, organizing, staffing, leading, and controlling.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -707,32 +590,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "ref": "BAYT-8Q73E7",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "BAYT-COJQ3S",
-          "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -746,6 +603,45 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "BAYT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "ref": "BAYT-88TIOU",
+          "posted": "live",
+          "text": "This is the ultimate guide to understanding military ranks highest to lowest, from enlisted to officers! Our in-depth look explores ranks across all branches in 2024, with pay grade info!",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -753,6 +649,19 @@
           "ref": "BAYT-MFXMB7",
           "posted": "live",
           "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "BAYT-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
@@ -772,30 +681,17 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "title": "The General Auto Insurance",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "BAYT-6I7BS2",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "BAYT-SALKJO",
           "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "No sign in required. With The General ® App. Download It Today!",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "ref": "BAYT-X77NF2",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -809,19 +705,6 @@
           "src": "bayt",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "BAYT-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -833,23 +716,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 384,
+      "count": 17,
+      "ms": 429,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
@@ -858,6 +728,19 @@
           "ref": "GULFTALENT-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "GULFTALENT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@merriam-webster.com",
@@ -890,19 +773,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "GULFTALENT-CO2WU2",
-          "posted": "live",
-          "text": "Has she had any experience of managing large projects? He's not very good at managing people. His job involved managing large investment funds. When you have a job as well as children to look after, you have to learn how to manage your time.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -929,43 +799,17 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.wordreference.com/definition/managing",
-          "ref": "GULFTALENT-N4SXYU",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "GULFTALENT-CO2WU2",
           "posted": "live",
-          "text": "to bring about or succeed in accomplishing, sometimes despite difficulty or hardship: She managed to see the governor. How does she manage it on such a small income? to take charge or care of: to manage my investments. to dominate or influence (a person) by tact, flattery, or artifice: He manages the child with exemplary skill.",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "GULFTALENT-3XC5FG",
-          "posted": "live",
-          "text": "Quick definition: Management is the structured practice of getting things done through people. The classic definition by Peter Drucker is \"doing the right things efficiently.\" Every manager performs four functions — plan, organise, lead, control — adapted to the team, industry, and moment. What Is Management?",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "ref": "GULFTALENT-S80U11",
-          "posted": "live",
-          "text": "As a manager, it's important to understand management concepts and approaches. Discover management competencies every aspiring manager should have. Management concepts center on five core functions managers use to set goals and lead teams: planning, organizing, staffing, leading, and controlling.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -981,32 +825,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "ref": "GULFTALENT-8Q73E7",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "GULFTALENT-COJQ3S",
-          "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -1020,6 +838,45 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "GULFTALENT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "ref": "GULFTALENT-88TIOU",
+          "posted": "live",
+          "text": "This is the ultimate guide to understanding military ranks highest to lowest, from enlisted to officers! Our in-depth look explores ranks across all branches in 2024, with pay grade info!",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -1027,6 +884,19 @@
           "ref": "GULFTALENT-MFXMB7",
           "posted": "live",
           "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "GULFTALENT-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
@@ -1046,30 +916,17 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "title": "The General Auto Insurance",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "GULFTALENT-6I7BS2",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "GULFTALENT-SALKJO",
           "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "No sign in required. With The General ® App. Download It Today!",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "ref": "GULFTALENT-X77NF2",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -1083,19 +940,6 @@
           "src": "gulftalent",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "GULFTALENT-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -1107,23 +951,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 255,
+      "count": 17,
+      "ms": 265,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
@@ -1132,6 +963,19 @@
           "ref": "NAUKRIGULF-FTAAHZ",
           "posted": "live",
           "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "NAUKRIGULF-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@merriam-webster.com",
@@ -1164,19 +1008,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "NAUKRIGULF-CO2WU2",
-          "posted": "live",
-          "text": "Has she had any experience of managing large projects? He's not very good at managing people. His job involved managing large investment funds. When you have a job as well as children to look after, you have to learn how to manage your time.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1203,43 +1034,17 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.wordreference.com/definition/managing",
-          "ref": "NAUKRIGULF-N4SXYU",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "NAUKRIGULF-CO2WU2",
           "posted": "live",
-          "text": "to bring about or succeed in accomplishing, sometimes despite difficulty or hardship: She managed to see the governor. How does she manage it on such a small income? to take charge or care of: to manage my investments. to dominate or influence (a person) by tact, flattery, or artifice: He manages the child with exemplary skill.",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "ref": "NAUKRIGULF-3XC5FG",
-          "posted": "live",
-          "text": "Quick definition: Management is the structured practice of getting things done through people. The classic definition by Peter Drucker is \"doing the right things efficiently.\" Every manager performs four functions — plan, organise, lead, control — adapted to the team, industry, and moment. What Is Management?",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "ref": "NAUKRIGULF-S80U11",
-          "posted": "live",
-          "text": "As a manager, it's important to understand management concepts and approaches. Discover management competencies every aspiring manager should have. Management concepts center on five core functions managers use to set goals and lead teams: planning, organizing, staffing, leading, and controlling.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1255,32 +1060,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "ref": "NAUKRIGULF-8Q73E7",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "ref": "NAUKRIGULF-COJQ3S",
-          "posted": "live",
-          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1294,6 +1073,45 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "NAUKRIGULF-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "ref": "NAUKRIGULF-88TIOU",
+          "posted": "live",
+          "text": "This is the ultimate guide to understanding military ranks highest to lowest, from enlisted to officers! Our in-depth look explores ranks across all branches in 2024, with pay grade info!",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1301,6 +1119,19 @@
           "ref": "NAUKRIGULF-MFXMB7",
           "posted": "live",
           "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "NAUKRIGULF-6I7BS2",
+          "posted": "live",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
@@ -1320,30 +1151,17 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "title": "The General Auto Insurance",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "NAUKRIGULF-6I7BS2",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
+          "ref": "NAUKRIGULF-SALKJO",
           "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
+          "text": "No sign in required. With The General ® App. Download It Today!",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "ref": "NAUKRIGULF-X77NF2",
-          "posted": "live",
-          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -1357,19 +1175,6 @@
           "src": "naukrigulf",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "NAUKRIGULF-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -1383,7 +1188,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2354,
+      "ms": 1602,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -1489,7 +1294,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2946,
+      "ms": 1832,
       "bytes": 150064,
       "note": null,
       "jobs": [
@@ -1604,8 +1409,8 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2936,
-      "bytes": 819926,
+      "ms": 1394,
+      "bytes": 819834,
       "note": null,
       "jobs": [
         {
@@ -1719,7 +1524,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 254,
+      "ms": 350,
       "bytes": 173084,
       "note": null,
       "jobs": [
@@ -2034,10 +1839,20 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 659,
-      "bytes": 274912,
+      "ms": 722,
+      "bytes": 275509,
       "note": null,
       "jobs": [
+        {
+          "title": "Chief Coastguard, Maritime & Coastguard Agency",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/chief-coastguard/ref/jn-112026-7139453",
+          "ref": "jn-112026-7139453",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
         {
           "title": "Chief Property Officer - Housing",
           "company": "via Page Executive",
@@ -2327,16 +2142,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "General Counsel",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/general-counsel/ref/jn-082026-7081551",
-          "ref": "jn-082026-7081551",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2344,13 +2149,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "audience": {
-        "market": "gulf"
-      },
-      "ok": true,
+      "ok": false,
       "count": 66,
-      "ms": 12936,
-      "note": null,
+      "ms": 142,
+      "error": "HTTP 429 from www.linkedin.com",
+      "stale": true,
+      "staleSince": "2026-11-08T10:51:16.199Z",
+      "note": "fetch failed — these 66 listings are carried over from 2026-11-08T10:51:16.199Z, not a fresh read",
       "jobs": [
         {
           "title": "Investment Director / Managing Director",
@@ -3154,24 +2959,24 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 30,
-      "ms": 320,
+      "count": 17,
+      "ms": 1246,
       "note": null,
       "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
         {
           "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/manage",
+          "kind": "page",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
           "kind": "page",
           "to": "careers@merriam-webster.com",
           "emailVia": "Employer Domain HR (merriam-webster.com)"
@@ -3195,15 +3000,6 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
           "title": "Management - Wikipedia",
           "company": "via en.wikipedia.org",
           "location": "UAE",
@@ -3222,31 +3018,13 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "managing - WordReference.com Dictionary of English",
-          "company": "via wordreference.com",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://www.wordreference.com/definition/managing",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
           "kind": "page",
-          "to": "careers@wordreference.com",
-          "emailVia": "Employer Domain HR (wordreference.com)"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via managementlegend.com",
-          "location": "UAE",
-          "url": "https://www.managementlegend.com/what-is-management",
-          "kind": "page",
-          "to": "careers@managementlegend.com",
-          "emailVia": "Employer Domain HR (managementlegend.com)"
-        },
-        {
-          "title": "Management Concepts Every Manager Should Know (2026) - Coursera",
-          "company": "via coursera.org",
-          "location": "UAE",
-          "url": "https://www.coursera.org/articles/management-concepts",
-          "kind": "page",
-          "to": "careers@coursera.org",
-          "emailVia": "Employer Domain HR (coursera.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -3258,24 +3036,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via en.m.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
-          "kind": "page",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
-        },
-        {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via vocabulary.com",
-          "location": "UAE",
-          "url": "https://www.vocabulary.com/dictionary/general",
-          "kind": "page",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via thegeneral.com",
           "location": "UAE",
@@ -3285,10 +3045,46 @@
           "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.m.wikipedia.org",
+          "location": "UAE",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "kind": "page",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
+          "location": "UAE",
+          "url": "https://www.dollargeneral.com/",
+          "kind": "page",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
+        },
+        {
+          "title": "Military Ranks In Order: Highest to Lowest (2026 Guide)",
+          "company": "via usmilitary.org",
+          "location": "UAE",
+          "url": "https://usmilitary.org/military-ranks-highest-to-lowest/",
+          "kind": "page",
+          "to": "careers@usmilitary.org",
+          "emailVia": "Employer Domain HR (usmilitary.org)"
+        },
+        {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
@@ -3303,22 +3099,13 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "The General Auto Insurance",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "url": "https://www.thegeneral.com/mypolicy/welcome.htm",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "General officer - Wikipedia",
-          "company": "via en.m.wikipedia.org",
-          "location": "UAE",
-          "url": "https://en.m.wikipedia.org/wiki/General_officer",
-          "kind": "page",
-          "to": "careers@en.m.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
           "title": "GENERAL Definition & Meaning | Dictionary.com",
@@ -3328,105 +3115,6 @@
           "kind": "page",
           "to": "careers@dictionary.com",
           "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via dollargeneral.com",
-          "location": "UAE",
-          "url": "https://www.dollargeneral.com/",
-          "kind": "page",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "sell4uhomes.com",
-          "company": "via sell4uhomes.com",
-          "location": "UAE",
-          "url": "https://sell4uhomes.com/buyers/MortgageCalc.aspx",
-          "kind": "page",
-          "to": "careers@sell4uhomes.com",
-          "emailVia": "Employer Domain HR (sell4uhomes.com)"
-        },
-        {
-          "title": "How to Sell a House By Owner: 2026 Guide | iBuyer.com",
-          "company": "via ibuyer.com",
-          "location": "UAE",
-          "url": "https://ibuyer.com/blog/how-to-sell-a-house-by-owner/",
-          "kind": "page",
-          "to": "careers@ibuyer.com",
-          "emailVia": "Employer Domain HR (ibuyer.com)"
-        },
-        {
-          "title": "United States Real Estate & Homes For Sale - Zillow",
-          "company": "via zillow.com",
-          "location": "UAE",
-          "url": "https://www.zillow.com/us/",
-          "kind": "page",
-          "to": "careers@zillow.com",
-          "emailVia": "Employer Domain HR (zillow.com)"
-        },
-        {
-          "title": "Real Estate & Homes For Sale - 196 Homes For Sale | Zillow",
-          "company": "via zillow.com",
-          "location": "UAE",
-          "url": "https://www.zillow.com/homes/for_sale/",
-          "kind": "page",
-          "to": "careers@zillow.com",
-          "emailVia": "Employer Domain HR (zillow.com)"
-        },
-        {
-          "title": "Houses for Sale Near Me - Find Nearby Real Estate & Homes | Trulia",
-          "company": "via trulia.com",
-          "location": "UAE",
-          "url": "https://www.trulia.com/houses-for-sale-near-me/",
-          "kind": "page",
-          "to": "careers@trulia.com",
-          "emailVia": "Employer Domain HR (trulia.com)"
-        },
-        {
-          "title": "FSBO Homes for Sale by Owner | Sell or Buy Without an Agent | FSBO.com",
-          "company": "via fsbo.com",
-          "location": "UAE",
-          "url": "https://fsbo.com/",
-          "kind": "page",
-          "to": "careers@fsbo.com",
-          "emailVia": "Employer Domain HR (fsbo.com)"
-        },
-        {
-          "title": "Selling My Home | realtor.com®",
-          "company": "via realtor.com",
-          "location": "UAE",
-          "url": "https://www.realtor.com/sell",
-          "kind": "page",
-          "to": "careers@realtor.com",
-          "emailVia": "Employer Domain HR (realtor.com)"
-        },
-        {
-          "title": "FSBO Real Estate Listings: Buy or Sell a House | ForSaleByOwner",
-          "company": "via forsalebyowner.com",
-          "location": "UAE",
-          "url": "https://www.forsalebyowner.com/",
-          "kind": "page",
-          "to": "careers@forsalebyowner.com",
-          "emailVia": "Employer Domain HR (forsalebyowner.com)"
-        },
-        {
-          "title": "Mobile Homes | MHVillage",
-          "company": "via mhvillage.com",
-          "location": "UAE",
-          "url": "https://www.mhvillage.com/",
-          "kind": "page",
-          "to": "careers@mhvillage.com",
-          "emailVia": "Employer Domain HR (mhvillage.com)"
-        },
-        {
-          "title": "HUD | HUD Homes | HUD.com",
-          "company": "via hud.com",
-          "location": "UAE",
-          "url": "https://www.hud.com/",
-          "kind": "page",
-          "to": "careers@hud.com",
-          "emailVia": "Employer Domain HR (hud.com)"
         }
       ]
     }
