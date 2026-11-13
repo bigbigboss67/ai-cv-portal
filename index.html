@@ -4243,9 +4243,9 @@
             <!-- Primary 1-Click Send Application Button -->
             <button class="btn-autofix-hero" id="btnSendApplicationPrimary" onclick="sendApplicationNow()" style="margin-bottom:16px;">
               <div style="text-align:left;">
-                <div id="btnSendAppTitle" style="font-size:16px;">Send Application Now &mdash; Open Email Program with Cover Letter &amp; Attached CV PDF</div>
+                <div id="btnSendAppTitle" style="font-size:16px;">Send Application Now &mdash; Open Outlook Desktop (rassemkadiri@live.de) with Attached CV PDF</div>
                 <div style="font-size:12px;font-weight:500;opacity:0.92;margin-top:3px;" id="btnSendAppSub">
-                  Generates your selectable ATS CV PDF, embeds the Cover Letter &amp; Subject into an .EML draft, and opens your email client
+                  Generates your selectable ATS CV PDF, embeds From: rassemkadiri@live.de, Cover Letter &amp; Subject into an .EML draft, and downloads the PDF
                 </div>
               </div>
               <span style="background:rgba(255,255,255,0.22);padding:8px 16px;border-radius:999px;font-size:12.5px;white-space:nowrap;">
@@ -4255,7 +4255,7 @@
 
             <!-- Status / Tip Box -->
             <div id="sendAppStatusBanner" style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:18px;">
-              <strong>How 1-Click Email + Attached CV Works:</strong> Clicking <strong>Send Application Now</strong> generates your <code>.eml</code> compose draft with <code>X-Unsent: 1</code> (containing the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF) and copies the Cover Letter to your clipboard.
+              <strong>How 1-Click Email + Attached CV Works:</strong> Clicking <strong>Send Application Now</strong> generates your <code>.eml</code> compose draft with <code>From: rassemkadiri@live.de</code>, <code>X-Unsent: 1</code>, the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF (and also downloads the standalone PDF).
             </div>
 
             <!-- Secondary Export Buttons -->
@@ -10326,6 +10326,39 @@ ${state.cv.contact}`;
       window.print();
     }
 
+    function buildSafeComposeParams(to, subject, fullBody) {
+      const MAX_ENCODED_BODY_LENGTH = 1500;
+      const encodedTo = encodeURIComponent((to || "").trim());
+      const encodedSubject = encodeURIComponent((subject || "").trim());
+      const rawBody = (fullBody || "").trim();
+      let encodedBody = encodeURIComponent(rawBody);
+      let wasTruncated = false;
+
+      if (encodedBody.length > MAX_ENCODED_BODY_LENGTH) {
+        wasTruncated = true;
+        const notice = encodeURIComponent("\n\n[Full Cover Letter copied to clipboard — press Ctrl+V to paste]");
+        const sliceLimit = Math.max(0, MAX_ENCODED_BODY_LENGTH - notice.length);
+        let truncatedRaw = rawBody.slice(0, Math.floor(sliceLimit / 3));
+        while (encodeURIComponent(truncatedRaw).length > sliceLimit && truncatedRaw.length > 0) {
+          truncatedRaw = truncatedRaw.slice(0, -1);
+        }
+        encodedBody = encodeURIComponent(truncatedRaw.trim()) + notice;
+      }
+
+      return { encodedTo, encodedSubject, encodedBody, wasTruncated };
+    }
+
+    function openOutlookLiveCompose(to, subject, plainBody) {
+      const senderEmail = (state.cv && state.cv.email && state.cv.email.trim()) || "rassemkadiri@live.de";
+      const { encodedTo, encodedSubject, encodedBody } = buildSafeComposeParams(to, subject, plainBody);
+      const outlookLiveUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}&login_hint=${encodeURIComponent(senderEmail)}`;
+      const popup = window.open(outlookLiveUrl, "_blank", "noopener,noreferrer");
+      if (!popup) {
+        window.location.href = `mailto:${encodedTo}?subject=${encodedSubject}&body=${encodedBody}`;
+      }
+      return senderEmail;
+    }
+
     async function sendApplicationNow() {
       const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
       resolveJobRecipientEmailClient(job);
@@ -10336,6 +10369,7 @@ ${state.cv.contact}`;
       if (toEl && !toEl.value.trim() && job.to) {
         toEl.value = job.to;
       }
+      const from = (state.cv && state.cv.email && state.cv.email.trim()) || "rassemkadiri@live.de";
       const to = (toEl && toEl.value.trim()) || job.to || "";
       const subject =
         (subjEl && subjEl.value.trim()) ||
@@ -10361,9 +10395,9 @@ ${state.cv.contact}`;
 
       const statusBanner = document.getElementById("sendAppStatusBanner");
       if (statusBanner) {
-        statusBanner.innerHTML = "<strong>Building your selectable ATS CV PDF and packaging your .EML Email Draft with Cover Letter &amp; Subject...</strong>";
+        statusBanner.innerHTML = `<strong>Building your selectable ATS CV PDF and packaging your .EML Email Draft (From: ${escapeHtml(from)})...</strong>`;
       }
-      showToast("Attaching tailored ATS CV PDF & opening email draft...");
+      showToast(`Attaching tailored ATS CV PDF & opening ${from} draft...`);
 
       const pdfFilename =
         typeof window.applicationFilename === "function"
@@ -10392,6 +10426,7 @@ ${state.cv.contact}`;
             typeof window.letterDocument === "function" ? window.letterDocument(designedHtml) : designedHtml;
 
           const emlBlob = window.buildEml({
+            from,
             to,
             subject,
             html: fullHtmlDoc,
@@ -10409,10 +10444,16 @@ ${state.cv.contact}`;
             a.remove();
           }
 
-          recordExecutiveDispatch(job, "EML Package + ATS PDF", to, subject);
+          // Also download the standalone PDF so it is always ready if New Outlook strips .eml attachments
+          const pdfBlob = new Blob([r.bytes], { type: "application/pdf" });
+          if (typeof window.downloadBlob === "function") {
+            window.downloadBlob(pdfBlob, pdfFilename);
+          }
+
+          recordExecutiveDispatch(job, `EML Package (${from}) + ATS PDF`, to, subject);
 
           if (statusBanner) {
-            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong> is pre-filled, your <strong>Cover Letter</strong> is in the email body, your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is attached, and the <strong>Subject ("${escapeHtml(subject)}")</strong> is filled.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
+            statusBanner.innerHTML = `<strong>Email Draft Ready (${escapeHtml(emlFilename)})!</strong><br/><strong>From: ${escapeHtml(from)}</strong> &rarr; <strong>To: ${escapeHtml(to)}</strong>, your <strong>Cover Letter</strong> is in the email body, and your <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)}, ${r.pages} page${r.pages > 1 ? "s" : ""})</strong> is embedded &amp; downloaded.<br/><span style="font-size:12px;opacity:0.9;">Tip: If New Outlook strips the attachment or shows another From address, switch to <strong>Classic Outlook</strong> (toggle New Outlook off) and set <strong>${escapeHtml(from)}</strong> as default.</span><br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
           }
           showToast(`✓ Logged to Tracker & email draft opened for ${to}`);
           return;
@@ -10439,6 +10480,14 @@ ${state.cv.contact}`;
         (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
         generateTailoredCoverLetter(job, state.coverLetterLang);
 
+      if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(plainBody).catch(() => {});
+      }
+
+      const { encodedTo, encodedSubject, encodedBody } = buildSafeComposeParams(to, subject, plainBody);
+      const mailtoUrl = `mailto:${encodedTo}?subject=${encodedSubject}&body=${encodedBody}`;
+      window.location.href = mailtoUrl;
+
       try {
         await downloadStandaloneAtsPdf();
       } catch {}
@@ -10450,8 +10499,6 @@ ${state.cv.contact}`;
         statusBanner.innerHTML = `<strong>Mail Client Opened via mailto:!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong>, <strong>Subject</strong>, and <strong>Cover Letter</strong> were sent to your email program.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
       }
 
-      const mailtoUrl = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(plainBody)}`;
-      window.location.href = mailtoUrl;
       showToast(`✓ Logged to Tracker & opened mailto: for ${to}`);
     }
 

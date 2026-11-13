@@ -35,6 +35,7 @@ function encodeHeader(text) {
 
 /**
  * @param {object} m
+ * @param {string} [m.from]
  * @param {string} m.to
  * @param {string} m.subject
  * @param {string} m.html      the designed letter — goes in the body
@@ -42,11 +43,12 @@ function encodeHeader(text) {
  * @param {string} [m.receiptTo]  ask for a read receipt, sent to this address
  * @returns {Blob}
  */
-export function buildEml({ to, subject, html, attachments = [], receiptTo = "" }) {
+export function buildEml({ from = "", to, subject, html, attachments = [], receiptTo = "" }) {
   const boundary = "----design_cv_" + Math.random().toString(36).slice(2) + Date.now().toString(36);
   const CRLF = "\r\n";
   const L = [];
 
+  if (oneLine(from)) L.push("From: " + oneLine(from));
   L.push("To: " + oneLine(to));
   L.push("Subject: " + encodeHeader(oneLine(subject)));
   /* Asking whether the mail was opened. The reader's own mail program puts the question to
