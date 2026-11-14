@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-13T11:41:47.995Z",
-  "total": 282,
+  "generatedAt": "2026-11-14T11:03:48.282Z",
+  "total": 279,
   "staleSources": 0,
   "sources": [
     {
@@ -11,25 +11,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 19,
-      "ms": 280,
+      "count": 20,
+      "ms": 317,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "INDEED-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -55,17 +42,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "INDEED-TD928H",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "ref": "INDEED-FTAAHZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -81,17 +68,30 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "Management - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "INDEED-CO2WU2",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "INDEED-TD928H",
           "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "INDEED-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -107,160 +107,173 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
-          "ref": "INDEED-FO2D7C",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "INDEED-CO2WU2",
           "posted": "live",
-          "text": "Management is the process of guiding the development, maintenance, and allocation of resources to attain organizational goals. Managers are the people i...",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
-          "ref": "INDEED-J4Y8QF",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "INDEED-VWZRX4",
           "posted": "live",
-          "text": "In this article, we describe the characteristics of an effective manager and provide detailed strategies for managing and leading your team to drive success.",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalgtrust",
-          "ref": "INDEED-PUS6Q6",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
+          "ref": "INDEED-JV5OWU",
           "posted": "live",
-          "text": "generalG (@generalgtrust) on TikTok | 24.4M Likes. 530.1K Followers. Active on Instagram.Watch generalG's popular videos: \"#generalg #hstikkyto...\", \"#generalg #hstikkyto...\". Join 530.1K followers on TikTok for more generalg, trustarmy, twust content",
+          "text": "Managing up is the leadership skill most professionals overlook. Learn how aligning with your boss can determine your success or failure at work.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/tag/general",
-          "ref": "INDEED-LDNIIQ",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "INDEED-M4XQ1M",
           "posted": "live",
-          "text": "Defense Secretary Pete Hegseth has fired Army Chief of Staff Gen. Randy George, removing the Army’s top officer in the latest shake-up of military leadership amid the war in Iran. Hegseth asked George to step down and retire immediately, a Department of Defense official confirmed to MS NOW. Christopher LaNeve, a former Hegseth military aide, is expected to serve as acting chief of staff.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
+          "title": "General (United States) - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
-          "ref": "INDEED-Q3JQ6U",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-V7P28E",
           "posted": "live",
-          "text": "General Submission Guidelines Branded Effects Technical Requirements Effect Detail Requirements Content Requirements Violent Extremism Threats and Incitement to Violence Dangerous Individuals and Groups Illegal Activities and Regulated Goods Drugs, Controlled Substances, Alcohol, and Tobacco Firearms, Firearm Accessories, Ammunition, and ...",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
-          "ref": "INDEED-IHZSLO",
+          "url": "https://www.thegeneral.com/",
+          "ref": "INDEED-TR94BC",
           "posted": "live",
-          "text": "Turn your network into revenue! Join the TikTok Ads Manager Affiliate Program to earn up to 30% base commission and $20 bonuses per referral.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
-          "ref": "INDEED-WV9GAP",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "INDEED-MFXMB7",
           "posted": "live",
-          "text": "AI-Generated Content (AIGC) AI-generated content (AIGC) refers to videos, images, audio, text, or LIVE videos that are fully or partially generated, edited, or synthesized using artificial intelligence technologies. This includes content that simulates, alters, or recreates people, scenes, or events, as well as content that is entirely fictional or presented in a specific artistic style (for ...",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
+          "title": "General officer - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general_ruckus",
-          "ref": "INDEED-R4SJLH",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "INDEED-4JF8A7",
           "posted": "live",
-          "text": "General Ruckus (@general_ruckus) on TikTok | 5.8M Likes. 125.3K Followers. Learn Chemistry Everyday! 🧪🧠.Watch General Ruckus's popular videos: \"General Ruckus Hallo...\", \"A man's injury leave...\". Join 125.3K followers on TikTok for more breakingbad, walterwhite, breakingbadmemes content",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@gm26j",
-          "ref": "INDEED-WMUR4L",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "INDEED-6I7BS2",
           "posted": "live",
-          "text": "GeneralZod (@gm26j) on TikTok | 3.1M Likes. 152.2K Followers. LIVE Here And TTV Mon-Sat 7:00 PM CST.Watch GeneralZod's popular videos: \"Classic Freestyle Fr...\", \"Is it glaze or earne...\". Join 152.2K followers on TikTok for more chesstok, tiktoklive, livehighlights content",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
+          "title": "Dollar General",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalbecasse",
-          "ref": "INDEED-AGVT5Z",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "INDEED-STJM59",
           "posted": "live",
-          "text": "generalbecasse 🦋 (@generalbecasse) sur TikTok |19.1M j'aime.65.7K followers.slay nation creator 💅🏼 pop culture/humour/star ac 💗 fan originel de pierre garnier 🫢 📩 generalbecasse@gmail.com.Regarde les vidéos populaires de generalbecasse 🦋 : « ptdrr! abonne-toi on... », « PIERRE GARNIER EST F... ». Rejoins 65.7K followers sur TikTok pour plus de contenu starac ...",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@thegeneralauto",
-          "ref": "INDEED-98FXYN",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "INDEED-COJQ3S",
           "posted": "live",
-          "text": "thegeneralinsurance (@thegeneralauto) on TikTok | 839.5K Likes. 58K Followers. The insurance company for big breaks and big mustaches 🎤 #TheGeneralSoundStudio.Watch thegeneralinsurance's popular videos: \"Calm dog. Quiet car....\", \"What kind of Walter ...\". Join 58K followers on TikTok for more vmas, thegeneral, thegeneralinsurance content",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
+          "title": "Personas - Banco General Panamá",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general1hospital",
-          "ref": "INDEED-5CK61A",
+          "url": "https://www.bgeneral.com/",
+          "ref": "INDEED-HYU20N",
           "posted": "live",
-          "text": "general hospital (@general1hospital) on TikTok | 354.2K Likes. 18.8K Followers. Watch general hospital on ABC weekly or on Hulu the next day!Watch general hospital's popular videos: \"TODAY ON GH!",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Por quinto año consecutivo, Banco General fue reconocido como “Banco del Año” en Panamá por la revista financiera LatinFinance, en el marco de los premios Bank of the Year 2026.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "INDEED-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -272,25 +285,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 19,
-      "ms": 329,
+      "count": 20,
+      "ms": 404,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "DUBIZZLE-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -316,17 +316,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "DUBIZZLE-TD928H",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "ref": "DUBIZZLE-FTAAHZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -342,17 +342,30 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "Management - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "DUBIZZLE-CO2WU2",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "DUBIZZLE-TD928H",
           "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "DUBIZZLE-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -368,160 +381,173 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
-          "ref": "DUBIZZLE-FO2D7C",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "DUBIZZLE-CO2WU2",
           "posted": "live",
-          "text": "Management is the process of guiding the development, maintenance, and allocation of resources to attain organizational goals. Managers are the people i...",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
-          "ref": "DUBIZZLE-J4Y8QF",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "DUBIZZLE-VWZRX4",
           "posted": "live",
-          "text": "In this article, we describe the characteristics of an effective manager and provide detailed strategies for managing and leading your team to drive success.",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalgtrust",
-          "ref": "DUBIZZLE-PUS6Q6",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
+          "ref": "DUBIZZLE-JV5OWU",
           "posted": "live",
-          "text": "generalG (@generalgtrust) on TikTok | 24.4M Likes. 530.1K Followers. Active on Instagram.Watch generalG's popular videos: \"#generalg #hstikkyto...\", \"#generalg #hstikkyto...\". Join 530.1K followers on TikTok for more generalg, trustarmy, twust content",
+          "text": "Managing up is the leadership skill most professionals overlook. Learn how aligning with your boss can determine your success or failure at work.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/tag/general",
-          "ref": "DUBIZZLE-LDNIIQ",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "DUBIZZLE-M4XQ1M",
           "posted": "live",
-          "text": "Defense Secretary Pete Hegseth has fired Army Chief of Staff Gen. Randy George, removing the Army’s top officer in the latest shake-up of military leadership amid the war in Iran. Hegseth asked George to step down and retire immediately, a Department of Defense official confirmed to MS NOW. Christopher LaNeve, a former Hegseth military aide, is expected to serve as acting chief of staff.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
+          "title": "General (United States) - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
-          "ref": "DUBIZZLE-Q3JQ6U",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-V7P28E",
           "posted": "live",
-          "text": "General Submission Guidelines Branded Effects Technical Requirements Effect Detail Requirements Content Requirements Violent Extremism Threats and Incitement to Violence Dangerous Individuals and Groups Illegal Activities and Regulated Goods Drugs, Controlled Substances, Alcohol, and Tobacco Firearms, Firearm Accessories, Ammunition, and ...",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
-          "ref": "DUBIZZLE-IHZSLO",
+          "url": "https://www.thegeneral.com/",
+          "ref": "DUBIZZLE-TR94BC",
           "posted": "live",
-          "text": "Turn your network into revenue! Join the TikTok Ads Manager Affiliate Program to earn up to 30% base commission and $20 bonuses per referral.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
-          "ref": "DUBIZZLE-WV9GAP",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "DUBIZZLE-MFXMB7",
           "posted": "live",
-          "text": "AI-Generated Content (AIGC) AI-generated content (AIGC) refers to videos, images, audio, text, or LIVE videos that are fully or partially generated, edited, or synthesized using artificial intelligence technologies. This includes content that simulates, alters, or recreates people, scenes, or events, as well as content that is entirely fictional or presented in a specific artistic style (for ...",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
+          "title": "General officer - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general_ruckus",
-          "ref": "DUBIZZLE-R4SJLH",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "DUBIZZLE-4JF8A7",
           "posted": "live",
-          "text": "General Ruckus (@general_ruckus) on TikTok | 5.8M Likes. 125.3K Followers. Learn Chemistry Everyday! 🧪🧠.Watch General Ruckus's popular videos: \"General Ruckus Hallo...\", \"A man's injury leave...\". Join 125.3K followers on TikTok for more breakingbad, walterwhite, breakingbadmemes content",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@gm26j",
-          "ref": "DUBIZZLE-WMUR4L",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "DUBIZZLE-6I7BS2",
           "posted": "live",
-          "text": "GeneralZod (@gm26j) on TikTok | 3.1M Likes. 152.2K Followers. LIVE Here And TTV Mon-Sat 7:00 PM CST.Watch GeneralZod's popular videos: \"Classic Freestyle Fr...\", \"Is it glaze or earne...\". Join 152.2K followers on TikTok for more chesstok, tiktoklive, livehighlights content",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
+          "title": "Dollar General",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalbecasse",
-          "ref": "DUBIZZLE-AGVT5Z",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "DUBIZZLE-STJM59",
           "posted": "live",
-          "text": "generalbecasse 🦋 (@generalbecasse) sur TikTok |19.1M j'aime.65.7K followers.slay nation creator 💅🏼 pop culture/humour/star ac 💗 fan originel de pierre garnier 🫢 📩 generalbecasse@gmail.com.Regarde les vidéos populaires de generalbecasse 🦋 : « ptdrr! abonne-toi on... », « PIERRE GARNIER EST F... ». Rejoins 65.7K followers sur TikTok pour plus de contenu starac ...",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@thegeneralauto",
-          "ref": "DUBIZZLE-98FXYN",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "DUBIZZLE-COJQ3S",
           "posted": "live",
-          "text": "thegeneralinsurance (@thegeneralauto) on TikTok | 839.5K Likes. 58K Followers. The insurance company for big breaks and big mustaches 🎤 #TheGeneralSoundStudio.Watch thegeneralinsurance's popular videos: \"Calm dog. Quiet car....\", \"What kind of Walter ...\". Join 58K followers on TikTok for more vmas, thegeneral, thegeneralinsurance content",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
+          "title": "Personas - Banco General Panamá",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general1hospital",
-          "ref": "DUBIZZLE-5CK61A",
+          "url": "https://www.bgeneral.com/",
+          "ref": "DUBIZZLE-HYU20N",
           "posted": "live",
-          "text": "general hospital (@general1hospital) on TikTok | 354.2K Likes. 18.8K Followers. Watch general hospital on ABC weekly or on Hulu the next day!Watch general hospital's popular videos: \"TODAY ON GH!",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Por quinto año consecutivo, Banco General fue reconocido como “Banco del Año” en Panamá por la revista financiera LatinFinance, en el marco de los premios Bank of the Year 2026.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "DUBIZZLE-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -533,25 +559,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 19,
-      "ms": 452,
+      "count": 20,
+      "ms": 395,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "BAYT-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -577,17 +590,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "BAYT-TD928H",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "ref": "BAYT-FTAAHZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -603,17 +616,30 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "Management - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "BAYT-CO2WU2",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "BAYT-TD928H",
           "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "BAYT-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -629,160 +655,173 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
-          "ref": "BAYT-FO2D7C",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "BAYT-CO2WU2",
           "posted": "live",
-          "text": "Management is the process of guiding the development, maintenance, and allocation of resources to attain organizational goals. Managers are the people i...",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
-          "ref": "BAYT-J4Y8QF",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "BAYT-VWZRX4",
           "posted": "live",
-          "text": "In this article, we describe the characteristics of an effective manager and provide detailed strategies for managing and leading your team to drive success.",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalgtrust",
-          "ref": "BAYT-PUS6Q6",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
+          "ref": "BAYT-JV5OWU",
           "posted": "live",
-          "text": "generalG (@generalgtrust) on TikTok | 24.4M Likes. 530.1K Followers. Active on Instagram.Watch generalG's popular videos: \"#generalg #hstikkyto...\", \"#generalg #hstikkyto...\". Join 530.1K followers on TikTok for more generalg, trustarmy, twust content",
+          "text": "Managing up is the leadership skill most professionals overlook. Learn how aligning with your boss can determine your success or failure at work.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/tag/general",
-          "ref": "BAYT-LDNIIQ",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "BAYT-M4XQ1M",
           "posted": "live",
-          "text": "Defense Secretary Pete Hegseth has fired Army Chief of Staff Gen. Randy George, removing the Army’s top officer in the latest shake-up of military leadership amid the war in Iran. Hegseth asked George to step down and retire immediately, a Department of Defense official confirmed to MS NOW. Christopher LaNeve, a former Hegseth military aide, is expected to serve as acting chief of staff.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
+          "title": "General (United States) - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
-          "ref": "BAYT-Q3JQ6U",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-V7P28E",
           "posted": "live",
-          "text": "General Submission Guidelines Branded Effects Technical Requirements Effect Detail Requirements Content Requirements Violent Extremism Threats and Incitement to Violence Dangerous Individuals and Groups Illegal Activities and Regulated Goods Drugs, Controlled Substances, Alcohol, and Tobacco Firearms, Firearm Accessories, Ammunition, and ...",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
-          "ref": "BAYT-IHZSLO",
+          "url": "https://www.thegeneral.com/",
+          "ref": "BAYT-TR94BC",
           "posted": "live",
-          "text": "Turn your network into revenue! Join the TikTok Ads Manager Affiliate Program to earn up to 30% base commission and $20 bonuses per referral.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
-          "ref": "BAYT-WV9GAP",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "BAYT-MFXMB7",
           "posted": "live",
-          "text": "AI-Generated Content (AIGC) AI-generated content (AIGC) refers to videos, images, audio, text, or LIVE videos that are fully or partially generated, edited, or synthesized using artificial intelligence technologies. This includes content that simulates, alters, or recreates people, scenes, or events, as well as content that is entirely fictional or presented in a specific artistic style (for ...",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
+          "title": "General officer - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general_ruckus",
-          "ref": "BAYT-R4SJLH",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "BAYT-4JF8A7",
           "posted": "live",
-          "text": "General Ruckus (@general_ruckus) on TikTok | 5.8M Likes. 125.3K Followers. Learn Chemistry Everyday! 🧪🧠.Watch General Ruckus's popular videos: \"General Ruckus Hallo...\", \"A man's injury leave...\". Join 125.3K followers on TikTok for more breakingbad, walterwhite, breakingbadmemes content",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@gm26j",
-          "ref": "BAYT-WMUR4L",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "BAYT-6I7BS2",
           "posted": "live",
-          "text": "GeneralZod (@gm26j) on TikTok | 3.1M Likes. 152.2K Followers. LIVE Here And TTV Mon-Sat 7:00 PM CST.Watch GeneralZod's popular videos: \"Classic Freestyle Fr...\", \"Is it glaze or earne...\". Join 152.2K followers on TikTok for more chesstok, tiktoklive, livehighlights content",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
+          "title": "Dollar General",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalbecasse",
-          "ref": "BAYT-AGVT5Z",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "BAYT-STJM59",
           "posted": "live",
-          "text": "generalbecasse 🦋 (@generalbecasse) sur TikTok |19.1M j'aime.65.7K followers.slay nation creator 💅🏼 pop culture/humour/star ac 💗 fan originel de pierre garnier 🫢 📩 generalbecasse@gmail.com.Regarde les vidéos populaires de generalbecasse 🦋 : « ptdrr! abonne-toi on... », « PIERRE GARNIER EST F... ». Rejoins 65.7K followers sur TikTok pour plus de contenu starac ...",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@thegeneralauto",
-          "ref": "BAYT-98FXYN",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "BAYT-COJQ3S",
           "posted": "live",
-          "text": "thegeneralinsurance (@thegeneralauto) on TikTok | 839.5K Likes. 58K Followers. The insurance company for big breaks and big mustaches 🎤 #TheGeneralSoundStudio.Watch thegeneralinsurance's popular videos: \"Calm dog. Quiet car....\", \"What kind of Walter ...\". Join 58K followers on TikTok for more vmas, thegeneral, thegeneralinsurance content",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
+          "title": "Personas - Banco General Panamá",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general1hospital",
-          "ref": "BAYT-5CK61A",
+          "url": "https://www.bgeneral.com/",
+          "ref": "BAYT-HYU20N",
           "posted": "live",
-          "text": "general hospital (@general1hospital) on TikTok | 354.2K Likes. 18.8K Followers. Watch general hospital on ABC weekly or on Hulu the next day!Watch general hospital's popular videos: \"TODAY ON GH!",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Por quinto año consecutivo, Banco General fue reconocido como “Banco del Año” en Panamá por la revista financiera LatinFinance, en el marco de los premios Bank of the Year 2026.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "BAYT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -794,25 +833,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 19,
-      "ms": 543,
+      "count": 20,
+      "ms": 437,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "GULFTALENT-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -838,17 +864,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "GULFTALENT-TD928H",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "ref": "GULFTALENT-FTAAHZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -864,17 +890,30 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "Management - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "GULFTALENT-CO2WU2",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "GULFTALENT-TD928H",
           "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "GULFTALENT-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -890,160 +929,173 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
-          "ref": "GULFTALENT-FO2D7C",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "GULFTALENT-CO2WU2",
           "posted": "live",
-          "text": "Management is the process of guiding the development, maintenance, and allocation of resources to attain organizational goals. Managers are the people i...",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
-          "ref": "GULFTALENT-J4Y8QF",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "GULFTALENT-VWZRX4",
           "posted": "live",
-          "text": "In this article, we describe the characteristics of an effective manager and provide detailed strategies for managing and leading your team to drive success.",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalgtrust",
-          "ref": "GULFTALENT-PUS6Q6",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
+          "ref": "GULFTALENT-JV5OWU",
           "posted": "live",
-          "text": "generalG (@generalgtrust) on TikTok | 24.4M Likes. 530.1K Followers. Active on Instagram.Watch generalG's popular videos: \"#generalg #hstikkyto...\", \"#generalg #hstikkyto...\". Join 530.1K followers on TikTok for more generalg, trustarmy, twust content",
+          "text": "Managing up is the leadership skill most professionals overlook. Learn how aligning with your boss can determine your success or failure at work.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/tag/general",
-          "ref": "GULFTALENT-LDNIIQ",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "GULFTALENT-M4XQ1M",
           "posted": "live",
-          "text": "Defense Secretary Pete Hegseth has fired Army Chief of Staff Gen. Randy George, removing the Army’s top officer in the latest shake-up of military leadership amid the war in Iran. Hegseth asked George to step down and retire immediately, a Department of Defense official confirmed to MS NOW. Christopher LaNeve, a former Hegseth military aide, is expected to serve as acting chief of staff.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
+          "title": "General (United States) - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
-          "ref": "GULFTALENT-Q3JQ6U",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-V7P28E",
           "posted": "live",
-          "text": "General Submission Guidelines Branded Effects Technical Requirements Effect Detail Requirements Content Requirements Violent Extremism Threats and Incitement to Violence Dangerous Individuals and Groups Illegal Activities and Regulated Goods Drugs, Controlled Substances, Alcohol, and Tobacco Firearms, Firearm Accessories, Ammunition, and ...",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
-          "ref": "GULFTALENT-IHZSLO",
+          "url": "https://www.thegeneral.com/",
+          "ref": "GULFTALENT-TR94BC",
           "posted": "live",
-          "text": "Turn your network into revenue! Join the TikTok Ads Manager Affiliate Program to earn up to 30% base commission and $20 bonuses per referral.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
-          "ref": "GULFTALENT-WV9GAP",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "GULFTALENT-MFXMB7",
           "posted": "live",
-          "text": "AI-Generated Content (AIGC) AI-generated content (AIGC) refers to videos, images, audio, text, or LIVE videos that are fully or partially generated, edited, or synthesized using artificial intelligence technologies. This includes content that simulates, alters, or recreates people, scenes, or events, as well as content that is entirely fictional or presented in a specific artistic style (for ...",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
+          "title": "General officer - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general_ruckus",
-          "ref": "GULFTALENT-R4SJLH",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "GULFTALENT-4JF8A7",
           "posted": "live",
-          "text": "General Ruckus (@general_ruckus) on TikTok | 5.8M Likes. 125.3K Followers. Learn Chemistry Everyday! 🧪🧠.Watch General Ruckus's popular videos: \"General Ruckus Hallo...\", \"A man's injury leave...\". Join 125.3K followers on TikTok for more breakingbad, walterwhite, breakingbadmemes content",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@gm26j",
-          "ref": "GULFTALENT-WMUR4L",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "GULFTALENT-6I7BS2",
           "posted": "live",
-          "text": "GeneralZod (@gm26j) on TikTok | 3.1M Likes. 152.2K Followers. LIVE Here And TTV Mon-Sat 7:00 PM CST.Watch GeneralZod's popular videos: \"Classic Freestyle Fr...\", \"Is it glaze or earne...\". Join 152.2K followers on TikTok for more chesstok, tiktoklive, livehighlights content",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
+          "title": "Dollar General",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalbecasse",
-          "ref": "GULFTALENT-AGVT5Z",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "GULFTALENT-STJM59",
           "posted": "live",
-          "text": "generalbecasse 🦋 (@generalbecasse) sur TikTok |19.1M j'aime.65.7K followers.slay nation creator 💅🏼 pop culture/humour/star ac 💗 fan originel de pierre garnier 🫢 📩 generalbecasse@gmail.com.Regarde les vidéos populaires de generalbecasse 🦋 : « ptdrr! abonne-toi on... », « PIERRE GARNIER EST F... ». Rejoins 65.7K followers sur TikTok pour plus de contenu starac ...",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@thegeneralauto",
-          "ref": "GULFTALENT-98FXYN",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "GULFTALENT-COJQ3S",
           "posted": "live",
-          "text": "thegeneralinsurance (@thegeneralauto) on TikTok | 839.5K Likes. 58K Followers. The insurance company for big breaks and big mustaches 🎤 #TheGeneralSoundStudio.Watch thegeneralinsurance's popular videos: \"Calm dog. Quiet car....\", \"What kind of Walter ...\". Join 58K followers on TikTok for more vmas, thegeneral, thegeneralinsurance content",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
+          "title": "Personas - Banco General Panamá",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general1hospital",
-          "ref": "GULFTALENT-5CK61A",
+          "url": "https://www.bgeneral.com/",
+          "ref": "GULFTALENT-HYU20N",
           "posted": "live",
-          "text": "general hospital (@general1hospital) on TikTok | 354.2K Likes. 18.8K Followers. Watch general hospital on ABC weekly or on Hulu the next day!Watch general hospital's popular videos: \"TODAY ON GH!",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Por quinto año consecutivo, Banco General fue reconocido como “Banco del Año” en Panamá por la revista financiera LatinFinance, en el marco de los premios Bank of the Year 2026.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "GULFTALENT-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -1055,25 +1107,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 19,
-      "ms": 250,
+      "count": 20,
+      "ms": 259,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "NAUKRIGULF-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -1099,17 +1138,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "NAUKRIGULF-TD928H",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
+          "ref": "NAUKRIGULF-FTAAHZ",
           "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
+          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -1125,17 +1164,30 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "Management - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "NAUKRIGULF-CO2WU2",
+          "url": "https://en.wikipedia.org/wiki/Management",
+          "ref": "NAUKRIGULF-TD928H",
           "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
+          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "ref": "NAUKRIGULF-LPL7C9",
+          "posted": "live",
+          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -1151,160 +1203,173 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
-          "ref": "NAUKRIGULF-FO2D7C",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "ref": "NAUKRIGULF-CO2WU2",
           "posted": "live",
-          "text": "Management is the process of guiding the development, maintenance, and allocation of resources to attain organizational goals. Managers are the people i...",
+          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
-          "ref": "NAUKRIGULF-J4Y8QF",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "ref": "NAUKRIGULF-VWZRX4",
           "posted": "live",
-          "text": "In this article, we describe the characteristics of an effective manager and provide detailed strategies for managing and leading your team to drive success.",
+          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalgtrust",
-          "ref": "NAUKRIGULF-PUS6Q6",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
+          "ref": "NAUKRIGULF-JV5OWU",
           "posted": "live",
-          "text": "generalG (@generalgtrust) on TikTok | 24.4M Likes. 530.1K Followers. Active on Instagram.Watch generalG's popular videos: \"#generalg #hstikkyto...\", \"#generalg #hstikkyto...\". Join 530.1K followers on TikTok for more generalg, trustarmy, twust content",
+          "text": "Managing up is the leadership skill most professionals overlook. Learn how aligning with your boss can determine your success or failure at work.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/tag/general",
-          "ref": "NAUKRIGULF-LDNIIQ",
+          "url": "https://www.merriam-webster.com/dictionary/general",
+          "ref": "NAUKRIGULF-M4XQ1M",
           "posted": "live",
-          "text": "Defense Secretary Pete Hegseth has fired Army Chief of Staff Gen. Randy George, removing the Army’s top officer in the latest shake-up of military leadership amid the war in Iran. Hegseth asked George to step down and retire immediately, a Department of Defense official confirmed to MS NOW. Christopher LaNeve, a former Hegseth military aide, is expected to serve as acting chief of staff.",
+          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
+          "title": "General (United States) - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
-          "ref": "NAUKRIGULF-Q3JQ6U",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-V7P28E",
           "posted": "live",
-          "text": "General Submission Guidelines Branded Effects Technical Requirements Effect Detail Requirements Content Requirements Violent Extremism Threats and Incitement to Violence Dangerous Individuals and Groups Illegal Activities and Regulated Goods Drugs, Controlled Substances, Alcohol, and Tobacco Firearms, Firearm Accessories, Ammunition, and ...",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
-          "ref": "NAUKRIGULF-IHZSLO",
+          "url": "https://www.thegeneral.com/",
+          "ref": "NAUKRIGULF-TR94BC",
           "posted": "live",
-          "text": "Turn your network into revenue! Join the TikTok Ads Manager Affiliate Program to earn up to 30% base commission and $20 bonuses per referral.",
+          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
-          "ref": "NAUKRIGULF-WV9GAP",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
+          "ref": "NAUKRIGULF-MFXMB7",
           "posted": "live",
-          "text": "AI-Generated Content (AIGC) AI-generated content (AIGC) refers to videos, images, audio, text, or LIVE videos that are fully or partially generated, edited, or synthesized using artificial intelligence technologies. This includes content that simulates, alters, or recreates people, scenes, or events, as well as content that is entirely fictional or presented in a specific artistic style (for ...",
+          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
+          "title": "General officer - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general_ruckus",
-          "ref": "NAUKRIGULF-R4SJLH",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
+          "ref": "NAUKRIGULF-4JF8A7",
           "posted": "live",
-          "text": "General Ruckus (@general_ruckus) on TikTok | 5.8M Likes. 125.3K Followers. Learn Chemistry Everyday! 🧪🧠.Watch General Ruckus's popular videos: \"General Ruckus Hallo...\", \"A man's injury leave...\". Join 125.3K followers on TikTok for more breakingbad, walterwhite, breakingbadmemes content",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@gm26j",
-          "ref": "NAUKRIGULF-WMUR4L",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "ref": "NAUKRIGULF-6I7BS2",
           "posted": "live",
-          "text": "GeneralZod (@gm26j) on TikTok | 3.1M Likes. 152.2K Followers. LIVE Here And TTV Mon-Sat 7:00 PM CST.Watch GeneralZod's popular videos: \"Classic Freestyle Fr...\", \"Is it glaze or earne...\". Join 152.2K followers on TikTok for more chesstok, tiktoklive, livehighlights content",
+          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
+          "title": "Dollar General",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@generalbecasse",
-          "ref": "NAUKRIGULF-AGVT5Z",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "NAUKRIGULF-STJM59",
           "posted": "live",
-          "text": "generalbecasse 🦋 (@generalbecasse) sur TikTok |19.1M j'aime.65.7K followers.slay nation creator 💅🏼 pop culture/humour/star ac 💗 fan originel de pierre garnier 🫢 📩 generalbecasse@gmail.com.Regarde les vidéos populaires de generalbecasse 🦋 : « ptdrr! abonne-toi on... », « PIERRE GARNIER EST F... ». Rejoins 65.7K followers sur TikTok pour plus de contenu starac ...",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@thegeneralauto",
-          "ref": "NAUKRIGULF-98FXYN",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "NAUKRIGULF-COJQ3S",
           "posted": "live",
-          "text": "thegeneralinsurance (@thegeneralauto) on TikTok | 839.5K Likes. 58K Followers. The insurance company for big breaks and big mustaches 🎤 #TheGeneralSoundStudio.Watch thegeneralinsurance's popular videos: \"Calm dog. Quiet car....\", \"What kind of Walter ...\". Join 58K followers on TikTok for more vmas, thegeneral, thegeneralinsurance content",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
+          "title": "Personas - Banco General Panamá",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.tiktok.com/@general1hospital",
-          "ref": "NAUKRIGULF-5CK61A",
+          "url": "https://www.bgeneral.com/",
+          "ref": "NAUKRIGULF-HYU20N",
           "posted": "live",
-          "text": "general hospital (@general1hospital) on TikTok | 354.2K Likes. 18.8K Followers. Watch general hospital on ABC weekly or on Hulu the next day!Watch general hospital's popular videos: \"TODAY ON GH!",
+          "text": "¡Banco General es la empresa con mejor reputación en Panamá! Por quinto año consecutivo, Banco General fue reconocido como “Banco del Año” en Panamá por la revista financiera LatinFinance, en el marco de los premios Bank of the Year 2026.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
+        },
+        {
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dictionary.com/browse/general",
+          "ref": "NAUKRIGULF-JLXGDG",
+          "posted": "live",
+          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     },
@@ -1318,7 +1383,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 3172,
+      "ms": 2644,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -1424,7 +1489,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 4132,
+      "ms": 1770,
       "bytes": 148777,
       "note": null,
       "jobs": [
@@ -1539,8 +1604,8 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2600,
-      "bytes": 819879,
+      "ms": 1372,
+      "bytes": 819869,
       "note": null,
       "jobs": [
         {
@@ -1654,7 +1719,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 213,
+      "ms": 406,
       "bytes": 172998,
       "note": null,
       "jobs": [
@@ -1969,8 +2034,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1026,
-      "bytes": 281934,
+      "ms": 1343,
+      "bytes": 282602,
       "note": null,
       "jobs": [
         {
@@ -2044,11 +2109,141 @@
           "emailVia": "Page Executive Middle East Desk"
         },
         {
-          "title": "Directeur-trice général-e",
+          "title": "Executive Director, Senior Counsel - Digital Assets & Tokenization",
           "company": "via Page Executive",
           "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/directeur-trice-g%C3%A9n%C3%A9ral-e/ref/jn-112026-7142732",
-          "ref": "jn-112026-7142732",
+          "url": "https://www.pageexecutive.com/job-detail/executive-director-senior-counsel-digital-assets/ref/jn-102026-7134305",
+          "ref": "jn-102026-7134305",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Managing Counsel - Clearing & Collateral",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-director-senior-managing-counsel/ref/jn-102026-7134251",
+          "ref": "jn-102026-7134251",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Executive Director, Senior Counsel",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/executive-director-senior-counsel/ref/jn-082026-7082322",
+          "ref": "jn-082026-7082322",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Contract Business Immigration Attorney",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/contract-business-immigration-attorney/ref/jn-092026-7104641",
+          "ref": "jn-092026-7104641",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Employment Counsel",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-employment-counsel/ref/jn-112026-7144862",
+          "ref": "jn-112026-7144862",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Business Immigration Attorney",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/business-immigration-associate/ref/jn-102026-7137261",
+          "ref": "jn-102026-7137261",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Contract Business Immigration Attorney - Multiple Openings",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/contract-business-immigration-attorney/ref/jn-092026-7102460",
+          "ref": "jn-092026-7102460",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Business Immigration Attorney",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/business-immigration-attorney/ref/jn-092026-7101517",
+          "ref": "jn-092026-7101517",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Contract Business Immigration Attorney - Multiple Openings",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/contract-business-immigration-attorney/ref/jn-092026-7104644",
+          "ref": "jn-092026-7104644",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Senior Counsel - Registered Funds",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/senior-counsel-registered-funds/ref/jn-112026-7141799",
+          "ref": "jn-112026-7141799",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Banquier Privé",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/banquier-priv%C3%A9/ref/jn-032026-6981517",
+          "ref": "jn-032026-6981517",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Director Comercial Internacional - Sector Calzado",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/director-comercial-internacional-calzado/ref/jn-112026-7144302",
+          "ref": "jn-112026-7144302",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Werksleiter (m/w/d) Automotive TIER I",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/werksleiter-mwd-automotive-tier-i/ref/jn-112026-7142910",
+          "ref": "jn-112026-7142910",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head Of Finance (m/w/d)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-finance-mwd/ref/jn-112026-7139463",
+          "ref": "jn-112026-7139463",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2089,16 +2284,6 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/business-immigration-associate-atlanta/ref/jn-112026-7144980",
           "ref": "jn-112026-7144980",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Senior Employment Counsel",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/senior-employment-counsel/ref/jn-112026-7144862",
-          "ref": "jn-112026-7144862",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2152,126 +2337,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Chief Financial Officer",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/chief-financial-officer/ref/jn-112026-7143035",
-          "ref": "jn-112026-7143035",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head of Finance / Accounting (m/w/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-finance-accounting-mwd/ref/jn-032026-6961320",
-          "ref": "jn-032026-6961320",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Regulatory Affairs Senior Manager",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/regulatory-affairs-senior-manager/ref/jn-102026-7123147",
-          "ref": "jn-102026-7123147",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "General Manager, Hotel",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/general-manager-hotel/ref/jn-092026-7098675",
-          "ref": "jn-092026-7098675",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Development Director",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/business-development-director/ref/jn-112026-7142179",
-          "ref": "jn-112026-7142179",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "European Supply Chain Director",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/european-supply-chain-director/ref/jn-112026-7143136",
-          "ref": "jn-112026-7143136",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Chief Property & Development Officer",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/chief-property-development-officer/ref/jn-112026-7142836",
-          "ref": "jn-112026-7142836",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Strategic Projects Sales Director (Building & Infrastructure)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/strategic-projects-sales-director-building-infrastructure/ref/jn-112026-7141402",
-          "ref": "jn-112026-7141402",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Global Brand Director - Greater China and North Asia",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/global-brand-director-greater-china-and-north-asia/ref/jn-112026-7139340",
-          "ref": "jn-112026-7139340",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Indipendent Director in leading Rural and Digital Banks",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/indipendent-director-roles-leading-rural-and-digital-banks/ref/jn-092026-7097780",
-          "ref": "jn-092026-7097780",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Global Head of Marketing and Events",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/global-head-marketing-and-events/ref/jn-112026-7142338",
-          "ref": "jn-112026-7142338",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Immigration Associate",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/contract-immigration-attorney-nyc/ref/jn-112026-7143794",
-          "ref": "jn-112026-7143794",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2283,8 +2348,8 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 68,
-      "ms": 13033,
+      "count": 69,
+      "ms": 12350,
       "note": null,
       "jobs": [
         {
@@ -2413,7 +2478,7 @@
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/general-manager%E2%80%93o-m-wastewater-treatment-utilities-environmental-services-uae-at-segula-technologies-4474767535",
           "ref": "4474767535",
-          "posted": "2026-10-24",
+          "posted": "2026-11-14",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@segulatechnologies.com",
@@ -2432,16 +2497,16 @@
           "emailVia": "Corporate HR Mailbox (geniushrtech.com)"
         },
         {
-          "title": "General Manager -Interior Fit-Out & Joinery Works",
-          "company": "Tanseeq Investment Group",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-interior-fit-out-joinery-works-at-tanseeq-investment-group-4488907327",
-          "ref": "4488907327",
+          "title": "General Manager – Commercial Engine Maintenance & Repair Operations",
+          "company": "DTX Aerospace",
+          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-%E2%80%93-commercial-engine-maintenance-repair-operations-at-dtx-aerospace-4490744165",
+          "ref": "4490744165",
           "posted": "2026-11-13",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@tanseeqinvestment.com",
-          "emailVia": "Corporate HR Mailbox (tanseeqinvestment.com)"
+          "to": "careers@dtxaerospace.com",
+          "emailVia": "Corporate HR Mailbox (dtxaerospace.com)"
         },
         {
           "title": "General Manager",
@@ -2636,16 +2701,16 @@
           "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
         },
         {
-          "title": "Event Operations Director",
-          "company": "WUDUH",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/event-operations-director-at-wuduh-4482543740",
-          "ref": "4482543740",
-          "posted": "2026-10-28",
+          "title": "Director of Operations",
+          "company": "Ghobash Group",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-ghobash-group-4490729440",
+          "ref": "4490729440",
+          "posted": "2026-11-13",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@wuduh.ae",
-          "emailVia": "Corporate HR Mailbox (wuduh.ae)"
+          "to": "careers@ghobash.ae",
+          "emailVia": "Corporate HR Mailbox (ghobash.ae)"
         },
         {
           "title": "Chief Executive Officer",
@@ -2684,18 +2749,6 @@
           "emailVia": "Corporate HR Mailbox (blofin.ae)"
         },
         {
-          "title": "Principal/CEO",
-          "company": "GEMS Education",
-          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/principal-ceo-at-gems-education-4481688096",
-          "ref": "4481688096",
-          "posted": "2026-10-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@gemseducation.com",
-          "emailVia": "Corporate HR Mailbox (gemseducation.com)"
-        },
-        {
           "title": "Chancellor",
           "company": "Sharjah Education Academy",
           "location": "Sharjah Emirate, United Arab Emirates",
@@ -2720,16 +2773,28 @@
           "emailVia": "Corporate HR Mailbox (rtc1recruitment.com)"
         },
         {
-          "title": "Chief Operating Officer",
+          "title": "Chief Operating Officer (Retail) - Relocation Considered",
           "company": "ACCEL HUMAN RESOURCE CONSULTANTS",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-at-accel-human-resource-consultants-4490346614",
-          "ref": "4490346614",
-          "posted": "2026-11-12",
+          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-retail-relocation-considered-at-accel-human-resource-consultants-4488929889",
+          "ref": "4488929889",
+          "posted": "2026-11-13",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@accelhuman.ae",
           "emailVia": "Corporate HR Mailbox (accelhuman.ae)"
+        },
+        {
+          "title": "Chief Projects Officer / Chief Operations Officer",
+          "company": "Talents Tide",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-projects-officer-chief-operations-officer-at-talents-tide-4489864429",
+          "ref": "4489864429",
+          "posted": "2026-11-14",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@talentstide.com",
+          "emailVia": "Corporate HR Mailbox (talentstide.com)"
         },
         {
           "title": "Chief Operating Officer – Industrial Division",
@@ -2792,18 +2857,6 @@
           "emailVia": "Corporate HR Mailbox (rtc1recruitment.com)"
         },
         {
-          "title": "General Manager",
-          "company": "Converge",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-converge-4488595969",
-          "ref": "4488595969",
-          "posted": "2026-11-13",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@converge.ae",
-          "emailVia": "Corporate HR Mailbox (converge.ae)"
-        },
-        {
           "title": "General Manager, EOR",
           "company": "Deel",
           "location": "United Arab Emirates",
@@ -2840,6 +2893,18 @@
           "emailVia": "Corporate HR Mailbox (msnlaboratories.com)"
         },
         {
+          "title": "Regional General Manager",
+          "company": "AROMARIA",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/regional-general-manager-at-aromaria-4488714360",
+          "ref": "4488714360",
+          "posted": "2026-11-07",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@aromaria.ae",
+          "emailVia": "Corporate HR Mailbox (aromaria.ae)"
+        },
+        {
           "title": "Managing Director - Projects Division",
           "company": "First Point Group",
           "location": "Dubai, United Arab Emirates",
@@ -2862,6 +2927,18 @@
           "src": "linkedin",
           "to": "careers@zepz.ae",
           "emailVia": "Corporate HR Mailbox (zepz.ae)"
+        },
+        {
+          "title": "GM International Sales",
+          "company": "Converge",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/gm-international-sales-at-converge-4488595969",
+          "ref": "4488595969",
+          "posted": "2026-11-13",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@converge.ae",
+          "emailVia": "Corporate HR Mailbox (converge.ae)"
         },
         {
           "title": "Commercial Director",
@@ -2888,6 +2965,18 @@
           "emailVia": "Corporate HR Mailbox (hilton.ae)"
         },
         {
+          "title": "Senior Director - Commercial",
+          "company": "Confidential",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/senior-director-commercial-at-confidential-4488939307",
+          "ref": "4488939307",
+          "posted": "2026-11-13",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "executive.talent@linkedin-mena.com",
+          "emailVia": "Executive Talent Desk"
+        },
+        {
           "title": "Director, Commercial Payments, Visa Government Solutions - CEMEA",
           "company": "Visa",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2905,7 +2994,7 @@
           "location": "Dubai, Dubai, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/commercial-director-meap-turkey-cis-at-abbott-4487251646",
           "ref": "4487251646",
-          "posted": "2026-11-04",
+          "posted": "2026-11-13",
           "kind": "page",
           "src": "linkedin",
           "to": "careers@abbott.ae",
@@ -2936,6 +3025,30 @@
           "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
         },
         {
+          "title": "CLUSTER DIRECTOR OF COMMERCIAL",
+          "company": "Minor Hotels",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/cluster-director-of-commercial-at-minor-hotels-4490754572",
+          "ref": "4490754572",
+          "posted": "2026-11-13",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@minorhotels.com",
+          "emailVia": "Corporate HR Mailbox (minorhotels.com)"
+        },
+        {
+          "title": "CLUSTER DIRECTOR OF COMMERCIAL",
+          "company": "Anantara Hotels & Resorts",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/cluster-director-of-commercial-at-anantara-hotels-resorts-4490744501",
+          "ref": "4490744501",
+          "posted": "2026-11-13",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@anantarahotels.com",
+          "emailVia": "Corporate HR Mailbox (anantarahotels.com)"
+        },
+        {
           "title": "Commercial Director, Agency Sales",
           "company": "Affle",
           "location": "Dubai, United Arab Emirates",
@@ -2946,42 +3059,6 @@
           "src": "linkedin",
           "to": "careers@affle.ae",
           "emailVia": "Corporate HR Mailbox (affle.ae)"
-        },
-        {
-          "title": "Regional Commercial Director (Luxury Beauty & Fragrance)",
-          "company": "HRsource",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/regional-commercial-director-luxury-beauty-fragrance-at-hrsource-4481885093",
-          "ref": "4481885093",
-          "posted": "2026-10-27",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@hrsource.ae",
-          "emailVia": "Corporate HR Mailbox (hrsource.ae)"
-        },
-        {
-          "title": "Commercial Director for Water EPC development project in UAE",
-          "company": "Procer Worldwide Technical Services",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-director-for-water-epc-development-project-in-uae-at-procer-worldwide-technical-services-4487802139",
-          "ref": "4487802139",
-          "posted": "2026-11-10",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@procerworldwide.com",
-          "emailVia": "Corporate HR Mailbox (procerworldwide.com)"
-        },
-        {
-          "title": "Director, Government Sales Executive, UAE",
-          "company": "Visa",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-government-sales-executive-uae-at-visa-4484445959",
-          "ref": "4484445959",
-          "posted": "2026-10-28",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@visa.ae",
-          "emailVia": "Corporate HR Mailbox (visa.ae)"
         },
         {
           "title": "Supply Chain Director",
@@ -3006,18 +3083,6 @@
           "src": "linkedin",
           "to": "careers@anduril.ae",
           "emailVia": "Corporate HR Mailbox (anduril.ae)"
-        },
-        {
-          "title": "Group Supply Chain & Procurement Director",
-          "company": "ENPI Group",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/group-supply-chain-procurement-director-at-enpi-group-4487449593",
-          "ref": "4487449593",
-          "posted": "2026-11-10",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@enpi.ae",
-          "emailVia": "Corporate HR Mailbox (enpi.ae)"
         },
         {
           "title": "Director Global Logistics",
@@ -3068,18 +3133,6 @@
           "emailVia": "Corporate HR Mailbox (credotalent.com)"
         },
         {
-          "title": "Head of Supply (Couriers)",
-          "company": "inDrive",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/head-of-supply-couriers-at-indrive-4489919429",
-          "ref": "4489919429",
-          "posted": "2026-11-11",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@indrive.ae",
-          "emailVia": "Corporate HR Mailbox (indrive.ae)"
-        },
-        {
           "title": "Director, Procurement",
           "company": "Confidential",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
@@ -3102,6 +3155,30 @@
           "src": "linkedin",
           "to": "careers@aramex.com",
           "emailVia": "Aramex Global HR Desk"
+        },
+        {
+          "title": "Head of Procurement",
+          "company": "Velora Aviation",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/head-of-procurement-at-velora-aviation-4486775228",
+          "ref": "4486775228",
+          "posted": "2026-11-05",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@veloraaviation.com",
+          "emailVia": "Corporate HR Mailbox (veloraaviation.com)"
+        },
+        {
+          "title": "Procurement Director",
+          "company": "Wasael Property Management",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/procurement-director-at-wasael-property-management-4463829148",
+          "ref": "4463829148",
+          "posted": "2026-11-11",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@wasaelproperty.com",
+          "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
         }
       ]
     },
@@ -3113,21 +3190,12 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 29,
-      "ms": 313,
+      "count": 20,
+      "ms": 980,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
-        },
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam-Webster ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
@@ -3145,13 +3213,13 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Management - Wikipedia",
-          "company": "via en.wikipedia.org",
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/Management",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
           "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
           "title": "Managing - definition of managing by The Free Dictionary",
@@ -3163,13 +3231,22 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
+          "title": "Management - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "url": "https://en.wikipedia.org/wiki/Management",
           "kind": "page",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via collinsdictionary.com",
+          "location": "UAE",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@collinsdictionary.com",
+          "emailVia": "Employer Domain HR (collinsdictionary.com)"
         },
         {
           "title": "MANAGING Definition & Meaning | Dictionary.com",
@@ -3181,202 +3258,121 @@
           "emailVia": "Employer Domain HR (dictionary.com)"
         },
         {
-          "title": "6.1 The Role of Management - Introduction to Business 2e | OpenStax",
-          "company": "via openstax.org",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://openstax.org/books/introduction-business-2e/pages/6-1-the-role-of-management",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
           "kind": "page",
-          "to": "careers@openstax.org",
-          "emailVia": "Employer Domain HR (openstax.org)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "14 Strategies for Effectively Managing People at Work",
-          "company": "via indeed.com",
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via thesaurus.com",
           "location": "UAE",
-          "url": "https://www.indeed.com/career-advice/career-development/managing-people",
+          "url": "https://www.thesaurus.com/browse/managing",
           "kind": "page",
-          "to": "careers@executive-recruitment-uae.com",
-          "emailVia": "Executive Recruitment Desk"
+          "to": "careers@thesaurus.com",
+          "emailVia": "Employer Domain HR (thesaurus.com)"
         },
         {
-          "title": "generalG (@generalgtrust) | TikTok",
-          "company": "via tiktok.com",
+          "title": "Managing Up The Leadership Skill That Drives Success - Forbes",
+          "company": "via forbes.com",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@generalgtrust",
+          "url": "https://www.forbes.com/sites/robertamatuson/2026/04/07/managing-up-leadership-skill-career-success/",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@forbes.com",
+          "emailVia": "Employer Domain HR (forbes.com)"
         },
         {
-          "title": "#general | TikTok",
-          "company": "via tiktok.com",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://www.tiktok.com/tag/general",
+          "url": "https://www.merriam-webster.com/dictionary/general",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "Effect Guidelines | Learn | TikTok Effect House",
-          "company": "via effecthouse.tiktok.com",
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://effecthouse.tiktok.com/learn/guides/getting-started/best-practices/effect-guidelines",
+          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
           "kind": "page",
-          "to": "careers@effecthouse.tiktok.com",
-          "emailVia": "Employer Domain HR (effecthouse.tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "TikTok Ads Affiliate Program | Earn Up to 30% Commission",
-          "company": "via ads.tiktok.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://ads.tiktok.com/affiliate/university/pm_category_articles_onboarding_guides_general_onboarding_guide_199815?language=en",
+          "url": "https://www.thegeneral.com/",
           "kind": "page",
-          "to": "careers@ads.tiktok.com",
-          "emailVia": "Employer Domain HR (ads.tiktok.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "AI-Generated Content Restrictions and Requirements",
-          "company": "via seller-us.tiktok.com",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://seller-us.tiktok.com/university/essay?knowledge_id=491489038501663",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
           "kind": "page",
-          "to": "careers@seller-us.tiktok.com",
-          "emailVia": "Employer Domain HR (seller-us.tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "General Ruckus (@general_ruckus) | TikTok",
-          "company": "via tiktok.com",
+          "title": "General officer - Wikipedia",
+          "company": "via en.wikipedia.org",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@general_ruckus",
+          "url": "https://en.wikipedia.org/wiki/General_officer",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@en.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.wikipedia.org)"
         },
         {
-          "title": "GeneralZod (@gm26j) | TikTok",
-          "company": "via tiktok.com",
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@gm26j",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "generalbecasse (@generalbecasse) - TikTok",
-          "company": "via tiktok.com",
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@generalbecasse",
+          "url": "https://www.dollargeneral.com/",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "thegeneralinsurance (@thegeneralauto) | TikTok",
-          "company": "via tiktok.com",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@thegeneralauto",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "general hospital (@general1hospital) | TikTok",
-          "company": "via tiktok.com",
+          "title": "Personas - Banco General Panamá",
+          "company": "via bgeneral.com",
           "location": "UAE",
-          "url": "https://www.tiktok.com/@general1hospital",
+          "url": "https://www.bgeneral.com/",
           "kind": "page",
-          "to": "careers@tiktok.com",
-          "emailVia": "Employer Domain HR (tiktok.com)"
+          "to": "careers@bgeneral.com",
+          "emailVia": "Employer Domain HR (bgeneral.com)"
         },
         {
-          "title": "Sudoku Online - Play Free Sudoku Game Online Today - AARP Games",
-          "company": "via games.aarp.org",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://games.aarp.org/games/sudoku",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page",
-          "to": "careers@games.aarp.org",
-          "emailVia": "Employer Domain HR (games.aarp.org)"
-        },
-        {
-          "title": "Play Your Daily Sudoku from AARP Online Games",
-          "company": "via games.aarp.org",
-          "location": "UAE",
-          "url": "https://games.aarp.org/games/daily-sudoku",
-          "kind": "page",
-          "to": "careers@games.aarp.org",
-          "emailVia": "Employer Domain HR (games.aarp.org)"
-        },
-        {
-          "title": "Free Online Games - Internet Game Sites, Play Puzzles, Cards ... - AARP",
-          "company": "via aarp.org",
-          "location": "UAE",
-          "url": "https://www.aarp.org/games/",
-          "kind": "page",
-          "to": "careers@aarp.org",
-          "emailVia": "Employer Domain HR (aarp.org)"
-        },
-        {
-          "title": "AARP Sudoku",
-          "company": "via aarpsudoku.com",
-          "location": "UAE",
-          "url": "https://aarpsudoku.com/",
-          "kind": "page",
-          "to": "careers@aarpsudoku.com",
-          "emailVia": "Employer Domain HR (aarpsudoku.com)"
-        },
-        {
-          "title": "Play Free Sudoku online - solve web sudoku puzzles",
-          "company": "via sudoku.com",
-          "location": "UAE",
-          "url": "https://sudoku.com/",
-          "kind": "page",
-          "to": "careers@sudoku.com",
-          "emailVia": "Employer Domain HR (sudoku.com)"
-        },
-        {
-          "title": "Puzzles - Free Puzzles and Games for You To Play Today - AARP",
-          "company": "via aarp.org",
-          "location": "UAE",
-          "url": "https://www.aarp.org/games/category/puzzles/",
-          "kind": "page",
-          "to": "careers@aarp.org",
-          "emailVia": "Employer Domain HR (aarp.org)"
-        },
-        {
-          "title": "Recently Played Online Games and Puzzles from AARP",
-          "company": "via games.aarp.org",
-          "location": "UAE",
-          "url": "https://games.aarp.org/category/recently-played",
-          "kind": "page",
-          "to": "careers@games.aarp.org",
-          "emailVia": "Employer Domain HR (games.aarp.org)"
-        },
-        {
-          "title": "MathDoku is a Math Puzzle Similar to Sudoku. Play Now! - AARP Games",
-          "company": "via games.aarp.org",
-          "location": "UAE",
-          "url": "https://games.aarp.org/games/mathdoku",
-          "kind": "page",
-          "to": "careers@games.aarp.org",
-          "emailVia": "Employer Domain HR (games.aarp.org)"
-        },
-        {
-          "title": "Daily Crossword Puzzle to Solve from AARP Games",
-          "company": "via games.aarp.org",
-          "location": "UAE",
-          "url": "https://games.aarp.org/games/daily-crossword",
-          "kind": "page",
-          "to": "careers@games.aarp.org",
-          "emailVia": "Employer Domain HR (games.aarp.org)"
-        },
-        {
-          "title": "Daily Sudoku - Fresh free puzzles 24/7",
-          "company": "via sudoku.com",
-          "location": "UAE",
-          "url": "https://sudoku.com/challenges/daily-sudoku",
-          "kind": "page",
-          "to": "careers@sudoku.com",
-          "emailVia": "Employer Domain HR (sudoku.com)"
+          "to": "careers@dictionary.com",
+          "emailVia": "Employer Domain HR (dictionary.com)"
         }
       ]
     }
