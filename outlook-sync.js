@@ -13,7 +13,8 @@
  */
 import { ingest, confirmItem, ignoreItem, undoItem, CLS_LABEL } from "./tracker-mail.js";
 
-export const HELPER = "http://127.0.0.1:47321";
+// "localhost", not 127.0.0.1: Chrome blocks the bare IP from an https page as mixed content.
+export const HELPER = "http://localhost:47321";
 export const ME = ["rassemkadiri@live.de"];
 export const SYNC_KEY = "ai_cv_portal_mail_sync_v1";
 const DAY = 86400000;
