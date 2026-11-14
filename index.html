@@ -10534,7 +10534,7 @@ ${state.cv.contact}`;
       if (!file) return;
       const reader = new FileReader();
       reader.onload = () => {
-        applyCompanyReplyToTracker(String(reader.result || ""));
+        applyCompanyReplyToTracker(String(reader.result || ""), true);
       };
       reader.readAsText(file);
     }
@@ -10546,17 +10546,18 @@ ${state.cv.contact}`;
         showToast("Paste a reply email or upload an .eml file first.");
         return;
       }
-      applyCompanyReplyToTracker(raw);
+      applyCompanyReplyToTracker(raw, false);
       if (ta) ta.value = "";
     }
 
-    function applyCompanyReplyToTracker(rawText) {
+    function applyCompanyReplyToTracker(rawText, isEml = false) {
       const tm = window.TRACKER_MAIL;
-      if (!tm || !tm.readRawMessage || !tm.classify) {
+      if (!tm || !tm.parseEml || !tm.parsePasted || !tm.classify || !tm.matchApps) {
         showToast("Reply analyzer is still loading — please try again.");
         return;
       }
-      const msg = tm.readRawMessage(rawText);
+      const looksLikeEml = isEml || /\r?\nMIME-Version:/i.test(rawText) || /\r?\nContent-Type:/i.test(rawText);
+      const msg = looksLikeEml ? tm.parseEml(rawText) : tm.parsePasted(rawText);
       const cls = tm.classify(msg);
       const list = getStoredApplications();
       if (!list.length) {
@@ -10568,17 +10569,17 @@ ${state.cv.contact}`;
       list.forEach((a) => {
         appsMap[a.id] = {
           id: a.id,
-          company: a.company,
-          role: a.role,
+          job: { co: a.company, r: a.role },
           to: a.to,
           subject: a.subject,
-          stage: a.stage === "screening" ? "info" : a.stage,
+          stage: a.stage === "screening" ? "info" : (a.stage || "applied"),
           sentAt: a.appliedAt ? new Date(a.appliedAt).toISOString() : undefined,
         };
       });
 
-      const match = tm.matchApplication(msg, appsMap);
-      const target = match ? list.find((a) => a.id === match.id) : list[0];
+      const matches = tm.matchApps(msg, appsMap);
+      const best = matches && matches[0];
+      const target = best ? list.find((a) => a.id === best.id) : list[0];
       if (!target) {
         showToast("Could not match reply to a tracked application.");
         return;
@@ -10596,8 +10597,9 @@ ${state.cv.contact}`;
         target.stage = stageMap[cls.cls];
       }
       const label = (tm.CLS_LABEL && tm.CLS_LABEL[cls.cls]) || "Reply";
+      const fromAddr = (msg.from && msg.from.address) || "";
       const dateStr = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-      const noteLine = `[${dateStr} — ${label}${msg.fromEmail ? " from " + msg.fromEmail : ""}] ${cls.reason || msg.subject || "Reply received"}`;
+      const noteLine = `[${dateStr} — ${label}${fromAddr ? " from " + fromAddr : ""}] ${cls.reason || msg.subject || "Reply received"}`;
       target.notes = target.notes ? `${noteLine}\n${target.notes}` : noteLine;
       saveStoredApplications(list);
       renderApplicationTracker();
