@@ -41,6 +41,19 @@
     window.TRACKER_MAIL = TM;
   </script>
 
+  <!-- Outlook sync: reads Sent Items / Inbox through the local helper (tools/outlook-sync)
+       and keeps the tracker's stages up to date. Own module so a failure here never
+       touches the rest of the portal. -->
+  <script type="module">
+    import { startOutlookSync } from "./outlook-sync.js";
+    startOutlookSync({
+      getApps: () => window.getStoredApplications(),
+      saveApps: (list) => window.saveStoredApplications(list),
+      toast: (msg) => window.showToast(msg),
+      esc: (s) => window.escapeHtml(s),
+    });
+  </script>
+
   <style>
     :root {
       --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -4303,6 +4316,9 @@
             </div>
           </div>
 
+          <!-- Outlook sync status + replies to confirm (filled by outlook-sync.js) -->
+          <div class="outlook-sync-panel" style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:12px;padding:10px 14px;margin-bottom:12px;"></div>
+
           <!-- Application Stage Filter Pills -->
           <div class="tracker-stage-row" id="trackerStageFilterRow">
             <!-- Dynamically populated by renderTrackerFilterPills() -->
@@ -4564,6 +4580,7 @@
       </div>
 
       <!-- Stage Filter Pills in Modal -->
+      <div class="outlook-sync-panel" style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:12px;padding:10px 14px;margin-bottom:12px;"></div>
       <div class="tracker-stage-row" id="modalTrackerStageFilterRow"></div>
 
       <!-- Application List in Modal -->
@@ -5818,6 +5835,8 @@
         followUpsCount: 0,
         lastFollowedUpAt: null
       };
+      // A draft is waiting for its sent copy in Outlook; remember when it was prepared.
+      if (newApp.stage === "draft") newApp.preparedAt = now;
 
       // In-Place Deduplication & Sync Check
       const existingIdx = list.findIndex(
@@ -5832,7 +5851,8 @@
         if (data.subject) list[existingIdx].subject = newApp.subject;
         if (data.platform) list[existingIdx].platform = newApp.platform;
         list[existingIdx].appliedAt = now;
-        list[existingIdx].stage = "applied";
+        list[existingIdx].stage = newApp.stage;
+        if (newApp.preparedAt) list[existingIdx].preparedAt = newApp.preparedAt;
         saveStoredApplications(list);
         showToast(`Updated tracked application for "${newApp.role}"`);
         return;
@@ -5854,7 +5874,9 @@
         to: to || job.to || "",
         platform: method || "1-Click Direct Application",
         subject: subject || `Application — ${cleanRole} — ${state.cv.name || "Executive Candidate"}`,
-        stage: "applied"
+        // With Outlook sync running, a click only prepares the mail; the sent copy in
+        // Outlook is what marks it Applied. Without it, keep the old behaviour.
+        stage: window.OutlookSync && window.OutlookSync.active() ? "draft" : "applied"
       }, "portal");
     }
 
@@ -5913,11 +5935,16 @@
 
     function getStageLabel(stage) {
       const map = {
+        draft: "Draft ready — not sent",
         applied: "Applied",
+        acknowledged: "Acknowledged",
+        info: "Info requested",
         screening: "Screening / HR Call",
         interview: "Executive Interview",
         offer: "Offer Received",
         followed_up: "Followed Up",
+        rejected: "Rejected",
+        bounced: "Address bounced",
         archived: "Archived"
       };
       return map[stage] || stage;
@@ -6029,14 +6056,18 @@
       let screenCount = 0;
       let offerCount = 0;
       let archCount = 0;
+      let draftCount = 0;
+      let rejectedCount = 0;
 
       list.forEach((a) => {
         if (a.stage === "applied") appliedCount++;
+        else if (a.stage === "draft") draftCount++;
         else if (a.stage === "screening" || a.stage === "interview") screenCount++;
         else if (a.stage === "offer") offerCount++;
+        else if (a.stage === "rejected") rejectedCount++;
         else if (a.stage === "archived") archCount++;
 
-        const isClosed = ["offer", "archived"].includes(a.stage);
+        const isClosed = ["offer", "archived", "rejected", "draft"].includes(a.stage);
         if (!isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up") {
           dueCount++;
         }
@@ -6045,9 +6076,11 @@
       const filters = [
         { id: "all", label: `All (${list.length})` },
         { id: "due", label: `⚡ Follow-Up Due (${dueCount})`, isAlert: dueCount > 0 },
+        ...(draftCount ? [{ id: "draft", label: `📝 Draft ready (${draftCount})` }] : []),
         { id: "applied", label: `📤 Applied (${appliedCount})` },
         { id: "screening", label: `🗓️ Interviewing (${screenCount})` },
         { id: "offer", label: `🏆 Offers (${offerCount})` },
+        ...(rejectedCount ? [{ id: "rejected", label: `✕ Rejected (${rejectedCount})` }] : []),
         { id: "archived", label: `📁 Archived (${archCount})` }
       ];
 
@@ -6094,7 +6127,7 @@
         const diffMs = app.targetFollowUpAt - now;
         const daysLeft = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
         const daysElapsed = Math.max(1, Math.round((now - app.appliedAt) / (1000 * 60 * 60 * 24)));
-        const isClosed = ["offer", "archived"].includes(app.stage);
+        const isClosed = ["offer", "archived", "rejected", "draft"].includes(app.stage);
 
         let countdownBadge = "";
         let isDue = false;
@@ -6112,13 +6145,22 @@
         }
 
         const stages = [
+          { val: "draft", label: "📝 Draft ready — not sent" },
           { val: "applied", label: "📤 Applied" },
+          { val: "acknowledged", label: "📨 Acknowledged" },
+          { val: "info", label: "❓ Info requested" },
           { val: "screening", label: "🗓️ Screening Call" },
           { val: "interview", label: "🎯 Executive Interview" },
           { val: "offer", label: "🏆 Offer Received" },
           { val: "followed_up", label: "✓ Followed Up" },
+          { val: "rejected", label: "✕ Rejected" },
+          { val: "bounced", label: "⚠️ Address bounced" },
           { val: "archived", label: "📁 Archived / Closed" }
         ];
+        // Last few things Outlook sync saw for this application (sent copy, replies).
+        const mailLogHtml = (app.mailLog || []).slice(-3).reverse().map((e) =>
+          `<div style="font-size:11.5px;color:var(--text-secondary);line-height:1.5;">📬 <span style="color:var(--text-muted);">${escapeHtml(e.at || "")}</span> ${escapeHtml(e.text || "")}</div>`
+        ).join("");
 
         const optionsHtml = stages.map(s => `<option value="${s.val}" ${app.stage === s.val ? "selected" : ""}>${s.label}</option>`).join("");
 
@@ -6135,10 +6177,12 @@
                   ${escapeHtml(app.company)} &middot; <span style="font-weight:400;color:var(--text-muted);">${escapeHtml(app.location)}</span>
                 </div>
                 <div style="font-size:11.5px;color:var(--text-muted);display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
-                  <span>Applied: <strong>${sentDateStr}</strong></span>
+                  <span>${app.stage === "draft" ? "Prepared" : "Applied"}: <strong>${sentDateStr}</strong></span>
+                  ${app.lastReplyAt ? `<span>Last reply: <strong>${escapeHtml(app.lastReplyAt)}</strong></span>` : ""}
                   ${app.to ? `<span>To: <code style="font-family:var(--font-mono);color:var(--text-secondary);">${escapeHtml(app.to)}</code></span>` : ""}
                   ${app.salary ? `<span style="color:var(--accent-amber);font-weight:600;">💰 ${escapeHtml(app.salary)}</span>` : ""}
                 </div>
+                ${mailLogHtml ? `<div style="margin-top:6px;">${mailLogHtml}</div>` : ""}
               </div>
 
               <!-- Stage Selector & Quick Actions -->
@@ -6181,7 +6225,7 @@
       // Calculate follow-up due count
       let dueCount = 0;
       list.forEach((a) => {
-        const isClosed = ["offer", "archived"].includes(a.stage);
+        const isClosed = ["offer", "archived", "rejected", "draft"].includes(a.stage);
         if (!isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up") {
           dueCount++;
         }
@@ -6209,7 +6253,7 @@
       const filtered = list.filter((a) => {
         if (state.trackerFilter === "all") return true;
         if (state.trackerFilter === "due") {
-          const isClosed = ["offer", "archived"].includes(a.stage);
+          const isClosed = ["offer", "archived", "rejected", "draft"].includes(a.stage);
           return !isClosed && (a.targetFollowUpAt - now <= 0) && a.stage !== "followed_up";
         }
         return a.stage === state.trackerFilter;
