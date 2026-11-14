@@ -23,19 +23,21 @@
   const MARKETING_PHONE_TEXT =
     "I also agree to receive these by SMS or WhatsApp at the phone number I provide.";
 
+  // Only what the account needs is required (data minimisation). Everything else is
+  // voluntary and says what it is for. Nationality is deliberately not collected.
   const FIELDS = [
     { id: "firstName", label: "First name", required: true, auto: "given-name" },
     { id: "lastName", label: "Last name", required: true, auto: "family-name" },
-    { id: "phone", label: "Phone (with country code)", required: true, type: "tel", auto: "tel" },
     { id: "country", label: "Country of residence", required: true, auto: "country-name" },
-    { id: "city", label: "City", required: true, auto: "address-level2" },
-    { id: "nationality", label: "Nationality", required: true },
-    { id: "currentTitle", label: "Current job title", required: true, auto: "organization-title" },
-    { id: "targetRoles", label: "Target roles (e.g. General Manager, COO)", required: true },
-    { id: "yearsExperience", label: "Years of experience", required: true, type: "number" },
+    { id: "city", label: "City (optional — for local job alerts)", required: false, auto: "address-level2" },
+    { id: "phone", label: "Phone with country code (optional — used only if you tick SMS/WhatsApp below)", required: false, type: "tel", auto: "tel" },
+    { id: "currentTitle", label: "Current job title (optional — to tailor suggestions)", required: false, auto: "organization-title" },
+    { id: "targetRoles", label: "Target roles (optional — to tailor job alerts)", required: false },
+    { id: "yearsExperience", label: "Years of experience (optional)", required: false, type: "number" },
     { id: "salaryExpectation", label: "Salary expectation (optional)", required: false },
     { id: "linkedin", label: "LinkedIn profile URL (optional)", required: false, type: "url" },
   ];
+
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -123,6 +125,7 @@
         if (f.required && !next[f.id]) { err.textContent = `Please fill in: ${f.label}.`; return; }
       }
       if (next.linkedin && !/^https?:\/\/([\w-]+\.)?linkedin\.com\//i.test(next.linkedin)) { err.textContent = "The LinkedIn URL should start with https://www.linkedin.com/"; return; }
+      if (data.get("marketingPhone") && !next.phone) { err.textContent = "Add a phone number, or untick SMS/WhatsApp."; return; }
       if (!alreadyAccepted && !data.get("terms")) { err.textContent = "Please accept the Terms of Use to continue."; return; }
       const now = new Date().toISOString();
       // Every grant and withdrawal is appended to a history, never overwritten, so the
