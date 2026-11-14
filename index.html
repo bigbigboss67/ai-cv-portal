@@ -22,6 +22,7 @@
     import { fetchAddresses, findApplicationAddress, siteFromLinkedInCompany, mailboxKind } from "./fetch-address.js";
     import * as RT from "./role-title.js";
     import * as PK from "./posting-keywords.js";
+    import * as TM from "./tracker-mail.js";
     window.buildEml = buildEml;
     window.downloadBlob = downloadBlob;
     window.letterDocument = letterDocument;
@@ -37,6 +38,7 @@
     window.ROLE_TITLE = RT;
     window.RoleTitle = RT;
     window.POSTING_KW = PK;
+    window.TRACKER_MAIL = TM;
   </script>
 
   <style>
@@ -4533,12 +4535,31 @@
           </div>
         </div>
         <div style="display:flex;gap:8px;align-items:center;">
+          <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;border-color:var(--accent-blue,#2563eb);color:var(--accent-blue,#2563eb);font-weight:700;" onclick="toggleReplyImportBox()">
+            📩 Log Company Reply
+          </button>
           <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;border-color:var(--accent-emerald);color:var(--accent-emerald);font-weight:700;" onclick="openLogExternalAppModal()">
             + Log External Application
           </button>
           <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 10px;" onclick="closeApplicationTrackerModal()">
             Close
           </button>
+        </div>
+      </div>
+
+      <!-- Auto-Match Company Reply Panel (.eml drop or paste) -->
+      <div id="replyImportBox" style="display:none;background:var(--bg-elevated);border:1px solid var(--border-strong);border-radius:12px;padding:12px 14px;margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+          <strong style="font-size:12.5px;">Auto-Match &amp; Note Company Reply</strong>
+          <label style="font-size:11.5px;cursor:pointer;color:var(--accent-emerald);font-weight:700;">
+            Upload .eml / .txt
+            <input type="file" accept=".eml,.txt" style="display:none;" onchange="handleReplyFileUpload(this.files[0]);this.value='';" />
+          </label>
+        </div>
+        <textarea id="replyPasteInput" rows="3" placeholder="Paste the company's reply email here (or upload the .eml file) — it will automatically match the company, classify the reply (Interview / Acknowledged / Offer / Rejected), and update the application." style="width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--border-subtle);background:var(--bg-surface);color:var(--text-primary);font-size:12px;margin-bottom:8px;"></textarea>
+        <div style="display:flex;justify-content:flex-end;gap:8px;">
+          <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 10px;" onclick="toggleReplyImportBox()">Cancel</button>
+          <button type="button" class="btn-pill-secondary" style="font-size:11.5px;padding:5px 12px;background:var(--accent-emerald);color:#fff;border-color:var(--accent-emerald);font-weight:700;" onclick="processPastedCompanyReply()">Match &amp; Update Application</button>
         </div>
       </div>
 
@@ -10425,6 +10446,41 @@ ${state.cv.contact}`;
           const fullHtmlDoc =
             typeof window.letterDocument === "function" ? window.letterDocument(designedHtml) : designedHtml;
 
+          // 1. Try 1-click direct send via /api/send (when RESEND_API_KEY is configured in Vercel)
+          if (to) {
+            try {
+              let bin = "";
+              for (let i = 0; i < r.bytes.length; i += 0x8000) {
+                bin += String.fromCharCode.apply(null, r.bytes.subarray(i, i + 0x8000));
+              }
+              const pdfBase64 = btoa(bin);
+              const sendRes = await fetch("/api/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  to,
+                  replyTo: from,
+                  subject,
+                  html: fullHtmlDoc,
+                  text: plainBody,
+                  pdfBase64,
+                  pdfFilename
+                })
+              });
+              const sendJson = await sendRes.json().catch(() => ({}));
+              if (sendRes.ok && sendJson.ok) {
+                recordExecutiveDispatch(job, `Direct Send + PDF (Reply-To: ${from})`, to, subject);
+                if (statusBanner) {
+                  statusBanner.innerHTML = `<strong>✓ Application Sent Directly to ${escapeHtml(to)}!</strong><br/>Your <strong>Cover Letter</strong> and <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)})</strong> were delivered with <strong>Reply-To: ${escapeHtml(from)}</strong>.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically marked as Sent in your Executive Tracker with a 4-day follow-up countdown!</div>`;
+                }
+                showToast(`✓ Email sent to ${to} with PDF attached & marked Sent!`);
+                return;
+              }
+            } catch (apiErr) {
+              console.warn("/api/send unavailable, falling back to .eml:", apiErr);
+            }
+          }
+
           const emlBlob = window.buildEml({
             from,
             to,
@@ -10466,6 +10522,89 @@ ${state.cv.contact}`;
       }
 
       openMailtoAndDownloadPdf();
+    }
+
+    function toggleReplyImportBox() {
+      const box = document.getElementById("replyImportBox");
+      if (!box) return;
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+
+    function handleReplyFileUpload(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        applyCompanyReplyToTracker(String(reader.result || ""));
+      };
+      reader.readAsText(file);
+    }
+
+    function processPastedCompanyReply() {
+      const ta = document.getElementById("replyPasteInput");
+      const raw = ta ? ta.value.trim() : "";
+      if (!raw) {
+        showToast("Paste a reply email or upload an .eml file first.");
+        return;
+      }
+      applyCompanyReplyToTracker(raw);
+      if (ta) ta.value = "";
+    }
+
+    function applyCompanyReplyToTracker(rawText) {
+      const tm = window.TRACKER_MAIL;
+      if (!tm || !tm.readRawMessage || !tm.classify) {
+        showToast("Reply analyzer is still loading — please try again.");
+        return;
+      }
+      const msg = tm.readRawMessage(rawText);
+      const cls = tm.classify(msg);
+      const list = getStoredApplications();
+      if (!list.length) {
+        showToast("No tracked applications yet.");
+        return;
+      }
+
+      const appsMap = {};
+      list.forEach((a) => {
+        appsMap[a.id] = {
+          id: a.id,
+          company: a.company,
+          role: a.role,
+          to: a.to,
+          subject: a.subject,
+          stage: a.stage === "screening" ? "info" : a.stage,
+          sentAt: a.appliedAt ? new Date(a.appliedAt).toISOString() : undefined,
+        };
+      });
+
+      const match = tm.matchApplication(msg, appsMap);
+      const target = match ? list.find((a) => a.id === match.id) : list[0];
+      if (!target) {
+        showToast("Could not match reply to a tracked application.");
+        return;
+      }
+
+      const stageMap = {
+        interview: "interview",
+        offer: "offer",
+        info: "screening",
+        ack: "screening",
+        rejection: "archived",
+        bounce: "archived",
+      };
+      if (stageMap[cls.cls]) {
+        target.stage = stageMap[cls.cls];
+      }
+      const label = (tm.CLS_LABEL && tm.CLS_LABEL[cls.cls]) || "Reply";
+      const dateStr = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      const noteLine = `[${dateStr} — ${label}${msg.fromEmail ? " from " + msg.fromEmail : ""}] ${cls.reason || msg.subject || "Reply received"}`;
+      target.notes = target.notes ? `${noteLine}\n${target.notes}` : noteLine;
+      saveStoredApplications(list);
+      renderApplicationTracker();
+
+      const box = document.getElementById("replyImportBox");
+      if (box) box.style.display = "none";
+      showToast(`✓ Matched "${target.company}" — marked as ${getStageLabel(target.stage)} (${label})`);
     }
 
     async function openMailtoAndDownloadPdf() {
