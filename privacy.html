@@ -12,12 +12,12 @@
 </style>
 </head>
 <body>
-<p class="draft"><strong>DRAFT — not yet in force.</strong> Items in [square brackets] must be completed, and the text reviewed by a qualified lawyer, before publication.</p>
+<p class="draft"><strong>DRAFT.</strong> The operator’s details have not been published yet, and items in [square brackets] are still open. This text is not final.</p>
 <h1>Privacy Policy</h1>
-<p class="meta">Version 2026-11-14 · Executive Career Portal (ai-cv-portal.vercel.app)</p>
+<p class="meta">Version <span data-legal="version">2026-11-14</span> · Executive Career Portal (ai-cv-portal.vercel.app)</p>
 
 <h2>1. Who we are</h2>
-<p>The Executive Career Portal (the “Portal”) is operated by <strong>[OPERATOR LEGAL NAME]</strong>, [OPERATOR ADDRESS] (“we”, “us”). We are the controller of your personal data. Contact for all privacy matters: <strong>[PRIVACY CONTACT EMAIL]</strong>.</p>
+<p>The Executive Career Portal (the “Portal”) is operated by <strong><span data-legal="name">the operator of the Executive Career Portal (details to be published here)</span></strong>, <span data-legal="address" data-optional></span> (“we”, “us”). We are the controller of your personal data. Contact for all privacy matters: <strong><span data-legal="email">the contact address to be published here</span></strong>.</p>
 <p>[If required: EU representative under Art. 27 GDPR — name and address.]</p>
 
 <h2>2. What data we collect</h2>
@@ -45,7 +45,7 @@
 <h2>4. Marketing and your consent</h2>
 <p>We send marketing only if you tick the separate marketing boxes — one for email, one for SMS/WhatsApp. They are unticked by default, and <strong>your account does not depend on it</strong>. Marketing means messages from us, on the channels you chose, about career-related content, job alerts, product news and offers. [We do not share your details with third parties for their own marketing.] [OR describe exactly who receives the data and why.]</p>
 <p>[If double opt-in is used: after you tick the email box we send a confirmation email, and send marketing only once you click the link in it.]</p>
-<p>You can withdraw consent at any time, free of charge: untick the box under <strong>My details</strong> in the Portal, use the unsubscribe link in any message, or email [PRIVACY CONTACT EMAIL]. Withdrawal does not affect processing carried out before it.</p>
+<p>You can withdraw consent at any time, free of charge: untick the box under <strong>My details</strong> in the Portal, use the unsubscribe link in any message, or email <span data-legal="email">the contact address to be published here</span>. Withdrawal does not affect processing carried out before it.</p>
 
 <h2>5. Who receives your data</h2>
 <table>
@@ -72,7 +72,7 @@
 
 <h2>8. Your rights</h2>
 <p>Depending on where you live, you have the right to: access your data and receive a copy; have it corrected; have it deleted; restrict or object to processing (including an unconditional right to object to direct marketing); receive your data in a portable format; withdraw consent at any time; and not be subject to decisions based solely on automated processing that significantly affect you. The Portal’s AI features produce suggestions for you; we do not make such decisions about you.</p>
-<p>To use your rights, email [PRIVACY CONTACT EMAIL]. We reply within one month. You can correct your profile yourself under <strong>My details</strong>, and delete your account from the account menu.</p>
+<p>To use your rights, email <span data-legal="email">the contact address to be published here</span>. We reply within one month. You can correct your profile yourself under <strong>My details</strong>, and delete your account from the account menu.</p>
 <p>You may complain to a supervisory authority: in the EU, the authority of your country of residence (in Germany, your state’s data protection authority); in the UAE, the UAE Data Office.</p>
 
 <h2>9. Cookies and local storage</h2>
@@ -86,5 +86,21 @@
 
 <h2>12. Changes</h2>
 <p>We will post changes here and change the version date. If a change is significant, we will tell you in the Portal or by email before it takes effect, and ask for your consent again where the law requires it.</p>
+<script src="legal-config.js"></script>
+<script>
+  // Fills the operator details from legal-config.js; the DRAFT banner goes once name and email are set.
+  (function () {
+    var c = window.LEGAL || {};
+    var ready = !!(c.operatorName && c.privacyEmail);
+    var val = { name: c.operatorName, address: c.operatorAddress, email: c.privacyEmail, licence: c.licenceNumber, version: c.version };
+    document.querySelectorAll("[data-legal]").forEach(function (el) {
+      var v = String(val[el.getAttribute("data-legal")] || "").trim();
+      if (v) el.textContent = v;
+      else if (el.hasAttribute("data-optional")) el.remove();
+    });
+    var d = document.querySelector(".draft");
+    if (d && ready) d.remove();
+  })();
+</script>
 </body>
 </html>

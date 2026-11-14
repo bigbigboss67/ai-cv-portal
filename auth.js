@@ -14,9 +14,12 @@
 (function () {
   // Bump when terms.html / privacy.html or the consent wording change, so the record shows
   // which version each user accepted.
-  const LEGAL_VERSION = "2026-11-14";
+  const CFG = window.LEGAL || {};
+  const LEGAL_VERSION = CFG.version || "2026-11-14";
   // Must be the operator's real legal name before launch: consent to an unnamed sender is not valid.
-  const OPERATOR = "[OPERATOR LEGAL NAME]";
+  const OPERATOR = String(CFG.operatorName || "").trim();
+  // No named operator and contact yet = no marketing consent is asked for (see legal-config.js).
+  const MARKETING_ON = !!OPERATOR && !!String(CFG.privacyEmail || "").trim();
   // One box per channel: German case law wants the sender and the channel named.
   const MARKETING_TEXT =
     `I agree that ${OPERATOR} may email me job alerts, career content, and news and offers about the Executive Career Portal. I can withdraw at any time under “My details” or via the unsubscribe link.`;
@@ -136,10 +139,10 @@
         </div>
         <label class="ag-check"><input type="checkbox" name="terms" ${alreadyAccepted ? "checked disabled" : ""} />
           <span>I have read and accept the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. <em>(required)</em></span></label>
-        <label class="ag-check"><input type="checkbox" name="marketing" ${consents.marketing && consents.marketing.granted ? "checked" : ""} />
+        ${MARKETING_ON ? `        <label class="ag-check"><input type="checkbox" name="marketing" ${consents.marketing && consents.marketing.granted ? "checked" : ""} />
           <span>${esc(MARKETING_TEXT)} <em>(optional)</em></span></label>
         <label class="ag-check"><input type="checkbox" name="marketingPhone" ${consents.marketingPhone && consents.marketingPhone.granted ? "checked" : ""} />
-          <span>${esc(MARKETING_PHONE_TEXT)} <em>(optional)</em></span></label>
+          <span>${esc(MARKETING_PHONE_TEXT)} <em>(optional)</em></span></label>` : ""}
         <div class="ag-err" id="agErr" role="alert"></div>
         <div class="ag-actions">
           ${editing ? '<button type="button" class="ag-ghost" id="agCancel">Cancel</button>' : '<button type="button" class="ag-ghost" id="agSignOut">Sign out</button>'}
@@ -175,8 +178,9 @@
       // record still shows what was agreed to and when after a later withdrawal.
       const history = [...(consents.history || [])];
       const choice = (key, box, text) => {
-        const wants = !!data.get(box);
         const had = consents[key] || {};
+        if (!MARKETING_ON) return had;
+        const wants = !!data.get(box);
         if (wants === !!had.granted && had.at) return had;   // unchanged: keep the original record
         const rec = { granted: wants, at: now, version: LEGAL_VERSION, text };
         if (wants || had.at) history.push({ type: key, ...rec });

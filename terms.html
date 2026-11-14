@@ -11,12 +11,12 @@
 </style>
 </head>
 <body>
-<p class="draft"><strong>DRAFT — not yet in force.</strong> Items in [square brackets] must be completed, and the text reviewed by a qualified lawyer, before publication.</p>
+<p class="draft"><strong>DRAFT.</strong> The operator’s details have not been published yet, and items in [square brackets] are still open. This text is not final.</p>
 <h1>Terms of Use</h1>
-<p class="meta">Version 2026-11-14 · Executive Career Portal (ai-cv-portal.vercel.app)</p>
+<p class="meta">Version <span data-legal="version">2026-11-14</span> · Executive Career Portal (ai-cv-portal.vercel.app)</p>
 
 <h2>1. Who we are and what these Terms cover</h2>
-<p>The Executive Career Portal (the “Portal”) is operated by <strong>[OPERATOR LEGAL NAME]</strong>, [OPERATOR ADDRESS], [REGISTRATION / LICENCE NUMBER if any], contact: [CONTACT EMAIL] (“we”, “us”). These Terms are the agreement between you and us for your use of the Portal. By creating an account and ticking the acceptance box you agree to them.</p>
+<p>The Executive Career Portal (the “Portal”) is operated by <strong><span data-legal="name">the operator of the Executive Career Portal (details to be published here)</span></strong>, <span data-legal="address" data-optional></span>, <span data-legal="licence" data-optional></span>, contact: <span data-legal="email">the contact address to be published here</span> (“we”, “us”). These Terms are the agreement between you and us for your use of the Portal. By creating an account and ticking the acceptance box you agree to them.</p>
 
 <h2>2. The service</h2>
 <p>The Portal helps you prepare a CV and cover letters, find job listings, prepare application emails and track your applications. The Portal is currently provided <strong>free of charge</strong>. We are not a recruitment agency or employer, we do not submit applications on your behalf without your action, and we do not guarantee interviews, offers or employment.</p>
@@ -60,5 +60,21 @@
 
 <h2>14. General</h2>
 <p>If a provision is invalid, the rest remains in force. These Terms are written in English; [translations are for convenience only].</p>
+<script src="legal-config.js"></script>
+<script>
+  // Fills the operator details from legal-config.js; the DRAFT banner goes once name and email are set.
+  (function () {
+    var c = window.LEGAL || {};
+    var ready = !!(c.operatorName && c.privacyEmail);
+    var val = { name: c.operatorName, address: c.operatorAddress, email: c.privacyEmail, licence: c.licenceNumber, version: c.version };
+    document.querySelectorAll("[data-legal]").forEach(function (el) {
+      var v = String(val[el.getAttribute("data-legal")] || "").trim();
+      if (v) el.textContent = v;
+      else if (el.hasAttribute("data-optional")) el.remove();
+    });
+    var d = document.querySelector(".draft");
+    if (d && ready) d.remove();
+  })();
+</script>
 </body>
 </html>
