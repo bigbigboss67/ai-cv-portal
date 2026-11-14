@@ -5864,7 +5864,7 @@
     }
 
     // Called when user clicks "Send Application Now" or "Open Mail App" on Page 4
-    function recordExecutiveDispatch(job, method, to, subject) {
+    function recordExecutiveDispatch(job, method, to, subject, sentNow = false) {
       if (!job) return;
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       trackApplication({
@@ -5875,8 +5875,9 @@
         platform: method || "1-Click Direct Application",
         subject: subject || `Application — ${cleanRole} — ${state.cv.name || "Executive Candidate"}`,
         // With Outlook sync running, a click only prepares the mail; the sent copy in
-        // Outlook is what marks it Applied. Without it, keep the old behaviour.
-        stage: window.OutlookSync && window.OutlookSync.active() ? "draft" : "applied"
+        // Outlook is what marks it Applied. Mail sent by /api/send never reaches Outlook's
+        // Sent Items, so it is Applied at once. Without the sync, keep the old behaviour.
+        stage: !sentNow && window.OutlookSync && window.OutlookSync.active() ? "draft" : "applied"
       }, "portal");
     }
 
@@ -10513,7 +10514,7 @@ ${state.cv.contact}`;
               });
               const sendJson = await sendRes.json().catch(() => ({}));
               if (sendRes.ok && sendJson.ok) {
-                recordExecutiveDispatch(job, `Direct Send + PDF (Reply-To: ${from})`, to, subject);
+                recordExecutiveDispatch(job, `Direct Send + PDF (Reply-To: ${from})`, to, subject, true);
                 if (statusBanner) {
                   statusBanner.innerHTML = `<strong>✓ Application Sent Directly to ${escapeHtml(to)}!</strong><br/>Your <strong>Cover Letter</strong> and <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)})</strong> were delivered with <strong>Reply-To: ${escapeHtml(from)}</strong>.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically marked as Sent in your Executive Tracker with a 4-day follow-up countdown!</div>`;
                 }
