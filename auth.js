@@ -25,18 +25,31 @@
 
   // Only what the account needs is required (data minimisation). Everything else is
   // voluntary and says what it is for. Nationality is deliberately not collected.
+  // Dropdown choices. Countries come from the browser's own region names (ISO 3166 codes).
+  const ISO = "AE SA QA KW BH OM EG JO LB MA TN DZ IQ SY YE LY SD PS TR DE AT CH FR GB IE NL BE LU ES PT IT GR SE NO DK FI IS PL CZ SK HU RO BG HR SI RS BA ME MK AL EE LV LT UA MD BY RU GE AM AZ KZ UZ CY MT US CA MX BR AR CL CO PE VE UY EC BO PY CR PA DO CU JM IN PK BD LK NP AF IR CN JP KR TW HK SG MY ID TH VN PH KH MM AU NZ ZA NG KE GH ET TZ UG RW SN CI CM AO MZ ZW ZM MU".split(" ");
+  const regionName = (() => { try { const d = new Intl.DisplayNames(["en"], { type: "region" }); return (c) => d.of(c) || c; } catch { return (c) => c; } })();
+  const COUNTRIES = ISO.map(regionName).sort((x, y) => x.localeCompare(y));
+  const DIAL = ["+971 UAE", "+966 Saudi Arabia", "+974 Qatar", "+965 Kuwait", "+973 Bahrain", "+968 Oman", "+20 Egypt", "+962 Jordan", "+961 Lebanon", "+212 Morocco", "+216 Tunisia", "+213 Algeria", "+964 Iraq", "+90 Turkey", "+49 Germany", "+43 Austria", "+41 Switzerland", "+33 France", "+44 UK", "+353 Ireland", "+31 Netherlands", "+32 Belgium", "+34 Spain", "+351 Portugal", "+39 Italy", "+30 Greece", "+46 Sweden", "+47 Norway", "+45 Denmark", "+358 Finland", "+48 Poland", "+420 Czechia", "+40 Romania", "+995 Georgia", "+7 Russia / Kazakhstan", "+1 USA / Canada", "+52 Mexico", "+55 Brazil", "+91 India", "+92 Pakistan", "+880 Bangladesh", "+94 Sri Lanka", "+86 China", "+81 Japan", "+82 South Korea", "+65 Singapore", "+60 Malaysia", "+62 Indonesia", "+63 Philippines", "+61 Australia", "+64 New Zealand", "+27 South Africa", "+234 Nigeria", "+254 Kenya"];
+  const ROLES = ["Chief Executive Officer (CEO)", "Chief Operating Officer (COO)", "Chief Financial Officer (CFO)", "Chief Commercial Officer (CCO)", "Managing Director", "General Manager", "Country Manager", "Operations Director", "Commercial Director", "Sales Director", "Finance Director", "HR Director", "Project Director", "Supply Chain Director", "Senior Manager", "Manager", "Other"];
+  const YEARS = ["0–2", "3–5", "6–10", "11–15", "16–20", "More than 20"];
+  const SALARY = ["Below AED 20,000 / month", "AED 20,000 – 35,000 / month", "AED 35,000 – 50,000 / month", "AED 50,000 – 75,000 / month", "AED 75,000 – 100,000 / month", "Above AED 100,000 / month", "Prefer not to say"];
+
+  // Only what the account needs is required (data minimisation). Everything else is
+  // voluntary and says what it is for. Nationality is deliberately not collected.
+  // `options` renders a dropdown; `dial` adds a country-code dropdown in front.
   const FIELDS = [
     { id: "firstName", label: "First name", required: true, auto: "given-name" },
     { id: "lastName", label: "Last name", required: true, auto: "family-name" },
-    { id: "country", label: "Country of residence", required: true, auto: "country-name" },
+    { id: "country", label: "Country of residence", required: true, options: COUNTRIES },
     { id: "city", label: "City (optional — for local job alerts)", required: false, auto: "address-level2" },
-    { id: "phone", label: "Phone with country code (optional — used only if you tick SMS/WhatsApp below)", required: false, type: "tel", auto: "tel" },
-    { id: "currentTitle", label: "Current job title (optional — to tailor suggestions)", required: false, auto: "organization-title" },
-    { id: "targetRoles", label: "Target roles (optional — to tailor job alerts)", required: false },
-    { id: "yearsExperience", label: "Years of experience (optional)", required: false, type: "number" },
-    { id: "salaryExpectation", label: "Salary expectation (optional)", required: false },
+    { id: "phone", label: "Phone (optional — used only if you tick SMS/WhatsApp below)", required: false, type: "tel", dial: true, wide: true },
+    { id: "currentTitle", label: "Current job level (optional — to tailor suggestions)", required: false, options: ROLES },
+    { id: "targetRoles", label: "Target role (optional — to tailor job alerts)", required: false, options: ROLES },
+    { id: "yearsExperience", label: "Years of experience (optional)", required: false, options: YEARS },
+    { id: "salaryExpectation", label: "Salary expectation (optional)", required: false, options: SALARY },
     { id: "linkedin", label: "LinkedIn profile URL (optional)", required: false, type: "url" },
   ];
+
 
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -48,7 +61,8 @@
     #authGate h2{margin:0 0 6px;font-size:20px;} #authGate p{margin:0 0 14px;font-size:13.5px;line-height:1.55;color:var(--text-secondary,#334155);}
     #authGate .ag-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;} @media(max-width:560px){#authGate .ag-grid{grid-template-columns:1fr;}}
     #authGate label.ag-f{display:flex;flex-direction:column;gap:4px;font-size:12px;font-weight:600;color:var(--text-secondary,#334155);}
-    #authGate input[type=text],#authGate input[type=tel],#authGate input[type=url],#authGate input[type=number]{padding:9px 10px;border-radius:8px;border:1px solid var(--border-strong,#CBD5E1);background:var(--bg-surface,#fff);color:var(--text-primary,#0F172A);font-size:14px;}
+    #authGate .ag-f.wide{grid-column:1/-1;} #authGate .ag-dial{display:flex;gap:8px;} #authGate .ag-dial select{flex:0 0 46%;min-width:0;} #authGate .ag-dial input{flex:1;min-width:0;}
+    #authGate select,#authGate input[type=text],#authGate input[type=tel],#authGate input[type=url],#authGate input[type=number]{padding:9px 10px;border-radius:8px;border:1px solid var(--border-strong,#CBD5E1);background:var(--bg-surface,#fff);color:var(--text-primary,#0F172A);font-size:14px;}
     #authGate .ag-check{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.5;margin-top:12px;color:var(--text-primary,#0F172A);}
     #authGate .ag-check input{margin-top:3px;flex-shrink:0;width:16px;height:16px;}
     #authGate .ag-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px;flex-wrap:wrap;}
@@ -86,6 +100,29 @@
     clerk.mountSignIn(document.getElementById("agSignIn"), { signUpForceRedirectUrl: location.href, forceRedirectUrl: location.href });
   }
 
+  const optionsHtml = (list, cur, placeholder) =>
+    `<option value="">${placeholder}</option>` +
+    // A value saved earlier that is no longer in the list is kept, not silently dropped.
+    (cur && !list.includes(cur) ? [cur, ...list] : list).map((o) => `<option value="${esc(o)}" ${o === cur ? "selected" : ""}>${esc(o)}</option>`).join("");
+
+  function fieldHtml(f, value) {
+    const v = String(value == null ? "" : value);
+    const req = f.required ? "required" : "";
+    let control;
+    if (f.options) {
+      control = `<select name="${f.id}" ${req}>${optionsHtml(f.options, v, "Select…")}</select>`;
+    } else if (f.dial) {
+      // Stored as "+971 501234567": split it back into code and number.
+      const code = (v.match(/^\+\d+/) || [""])[0];
+      const cur = DIAL.find((d) => d.split(" ")[0] === code) || "";
+      control = `<span class="ag-dial"><select name="${f.id}Code" aria-label="Country code">${optionsHtml(DIAL, cur, "Code…")}</select>
+        <input type="tel" name="${f.id}Number" value="${esc(v.replace(/^\+\d+\s*/, ""))}" inputmode="tel" autocomplete="tel-national" maxlength="20" placeholder="Number" /></span>`;
+    } else {
+      control = `<input type="${f.type || "text"}" name="${f.id}" value="${esc(v)}" ${req} ${f.auto ? `autocomplete="${f.auto}"` : ""} maxlength="200" />`;
+    }
+    return `<label class="ag-f${f.wide ? " wide" : ""}">${esc(f.label)}${control}</label>`;
+  }
+
   function renderProfile(clerk, { editing = false } = {}) {
     const user = clerk.user;
     const { profile, consents } = profileOf(user);
@@ -95,8 +132,7 @@
       <p>${editing ? "Update your details or change your marketing choice." : "We need a few details to set up your account."} Signed in as <strong>${esc(user.primaryEmailAddress ? user.primaryEmailAddress.emailAddress : "")}</strong>.</p>
       <form id="agForm" novalidate>
         <div class="ag-grid">
-          ${FIELDS.map((f) => `<label class="ag-f">${esc(f.label)}
-            <input type="${f.type || "text"}" name="${f.id}" value="${esc(pre[f.id])}" ${f.required ? "required" : ""} ${f.auto ? `autocomplete="${f.auto}"` : ""} ${f.type === "number" ? 'min="0" max="60"' : ""} maxlength="200" /></label>`).join("")}
+          ${FIELDS.map((f) => fieldHtml(f, pre[f.id])).join("")}
         </div>
         <label class="ag-check"><input type="checkbox" name="terms" ${alreadyAccepted ? "checked disabled" : ""} />
           <span>I have read and accept the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. <em>(required)</em></span></label>
@@ -121,7 +157,14 @@
       const data = new FormData(form);
       const next = {};
       for (const f of FIELDS) {
-        next[f.id] = String(data.get(f.id) || "").trim().slice(0, 200);
+        if (f.dial) {
+          const num = String(data.get(f.id + "Number") || "").replace(/[^\d]/g, "").replace(/^0+/, "");
+          const code = String(data.get(f.id + "Code") || "").split(" ")[0];
+          if (num && !code) { err.textContent = "Choose the country code for your phone number."; return; }
+          next[f.id] = num ? `${code} ${num}` : "";
+        } else {
+          next[f.id] = String(data.get(f.id) || "").trim().slice(0, 200);
+        }
         if (f.required && !next[f.id]) { err.textContent = `Please fill in: ${f.label}.`; return; }
       }
       if (next.linkedin && !/^https?:\/\/([\w-]+\.)?linkedin\.com\//i.test(next.linkedin)) { err.textContent = "The LinkedIn URL should start with https://www.linkedin.com/"; return; }
