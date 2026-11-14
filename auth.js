@@ -15,8 +15,13 @@
   // Bump when terms.html / privacy.html or the consent wording change, so the record shows
   // which version each user accepted.
   const LEGAL_VERSION = "2026-11-14";
+  // Must be the operator's real legal name before launch: consent to an unnamed sender is not valid.
+  const OPERATOR = "[OPERATOR LEGAL NAME]";
+  // One box per channel: German case law wants the sender and the channel named.
   const MARKETING_TEXT =
-    "I agree to receive career-related marketing emails and messages from the portal operator (job alerts, product news and offers). I can withdraw this consent at any time under “My details” or via the unsubscribe link.";
+    `I agree that ${OPERATOR} may email me job alerts, career content, and news and offers about the Executive Career Portal. I can withdraw at any time under “My details” or via the unsubscribe link.`;
+  const MARKETING_PHONE_TEXT =
+    "I also agree to receive these by SMS or WhatsApp at the phone number I provide.";
 
   const FIELDS = [
     { id: "firstName", label: "First name", required: true, auto: "given-name" },
@@ -68,7 +73,8 @@
   }
   const isComplete = (user) => {
     const { profile, consents } = profileOf(user);
-    return !!(consents.terms && consents.terms.at) && FIELDS.every((f) => !f.required || String(profile[f.id] || "").trim());
+    // A new LEGAL_VERSION asks for express re-acceptance; silence is not agreement.
+    return !!(consents.terms && consents.terms.at && consents.terms.version === LEGAL_VERSION) && FIELDS.every((f) => !f.required || String(profile[f.id] || "").trim());
   };
 
   function renderSignIn(clerk) {
@@ -82,7 +88,7 @@
     const user = clerk.user;
     const { profile, consents } = profileOf(user);
     const pre = { firstName: user.firstName || "", lastName: user.lastName || "", ...profile };
-    const alreadyAccepted = !!(consents.terms && consents.terms.at);
+    const alreadyAccepted = !!(consents.terms && consents.terms.at && consents.terms.version === LEGAL_VERSION);
     card().innerHTML = `<h2>${editing ? "My details" : "Complete your profile"}</h2>
       <p>${editing ? "Update your details or change your marketing choice." : "We need a few details to set up your account."} Signed in as <strong>${esc(user.primaryEmailAddress ? user.primaryEmailAddress.emailAddress : "")}</strong>.</p>
       <form id="agForm" novalidate>
@@ -94,6 +100,8 @@
           <span>I have read and accept the <a href="terms.html" target="_blank" rel="noopener">Terms of Use</a> and have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. <em>(required)</em></span></label>
         <label class="ag-check"><input type="checkbox" name="marketing" ${consents.marketing && consents.marketing.granted ? "checked" : ""} />
           <span>${esc(MARKETING_TEXT)} <em>(optional)</em></span></label>
+        <label class="ag-check"><input type="checkbox" name="marketingPhone" ${consents.marketingPhone && consents.marketingPhone.granted ? "checked" : ""} />
+          <span>${esc(MARKETING_PHONE_TEXT)} <em>(optional)</em></span></label>
         <div class="ag-err" id="agErr" role="alert"></div>
         <div class="ag-actions">
           ${editing ? '<button type="button" class="ag-ghost" id="agCancel">Cancel</button>' : '<button type="button" class="ag-ghost" id="agSignOut">Sign out</button>'}
@@ -117,18 +125,28 @@
       if (next.linkedin && !/^https?:\/\/([\w-]+\.)?linkedin\.com\//i.test(next.linkedin)) { err.textContent = "The LinkedIn URL should start with https://www.linkedin.com/"; return; }
       if (!alreadyAccepted && !data.get("terms")) { err.textContent = "Please accept the Terms of Use to continue."; return; }
       const now = new Date().toISOString();
-      const wantsMarketing = !!data.get("marketing");
-      const had = consents.marketing || {};
-      const marketing = wantsMarketing === !!had.granted && had.at
-        ? had   // unchanged: keep the original timestamp and wording version
-        : { granted: wantsMarketing, at: now, version: LEGAL_VERSION, text: wantsMarketing ? MARKETING_TEXT : "" };
+      // Every grant and withdrawal is appended to a history, never overwritten, so the
+      // record still shows what was agreed to and when after a later withdrawal.
+      const history = [...(consents.history || [])];
+      const choice = (key, box, text) => {
+        const wants = !!data.get(box);
+        const had = consents[key] || {};
+        if (wants === !!had.granted && had.at) return had;   // unchanged: keep the original record
+        const rec = { granted: wants, at: now, version: LEGAL_VERSION, text };
+        if (wants || had.at) history.push({ type: key, ...rec });
+        return rec;
+      };
+      const marketing = choice("marketing", "marketing", MARKETING_TEXT);
+      const marketingPhone = choice("marketingPhone", "marketingPhone", MARKETING_PHONE_TEXT);
+      const terms = alreadyAccepted ? consents.terms : { at: now, version: LEGAL_VERSION };
+      if (!alreadyAccepted) history.push({ type: "terms", granted: true, at: now, version: LEGAL_VERSION });
       err.textContent = "Saving…";
       try {
         await user.update({
           unsafeMetadata: {
             ...(user.unsafeMetadata || {}),
             profile: next,
-            consents: { terms: alreadyAccepted ? consents.terms : { at: now, version: LEGAL_VERSION }, marketing },
+            consents: { terms, marketing, marketingPhone, history: history.slice(-30) },
           },
         });
         showGate(false);
