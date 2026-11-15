@@ -4141,7 +4141,10 @@
                 <div class="review-kpi-box" id="kpiBoxQuantified">
                   <div class="kpi-label">Quantified Bullets</div>
                   <div class="kpi-value" id="kpiValQuantified">83%</div>
-                  <div class="kpi-hint">Metrics &amp; numbers verified</div>
+                  <div class="kpi-hint" id="kpiHintQuantified">Metrics &amp; numbers verified</div>
+                  <button type="button" id="btnFixQuantified" onclick="fixQuantifiedBullets()" style="display:none;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid #f59e0b;background:rgba(245,158,11,0.12);color:#d97706;font-size:11px;font-weight:700;cursor:pointer;">
+                    How to Fix: Add Metrics &rarr;
+                  </button>
                 </div>
                 <div class="review-kpi-box" id="kpiBoxViolations">
                   <div class="kpi-label">Text Violations</div>
@@ -9788,7 +9791,7 @@
 
       // 6. Audit Language Consistency (e.g. DE posting vs letter)
       const isGermanPosting = job.lang === "DE" || /german|deutsch/i.test(job.title + " " + (job.requirements || []).join(" "));
-      const languageSyncValid = !isGermanPosting || (state.coverLetterLang === "DE");
+      const languageSyncValid = !isGermanPosting || (String(state.coverLetterLang || "").toUpperCase() === "DE");
 
       // Calculate Dynamic Readiness Score
       let score = 100;
@@ -9845,9 +9848,19 @@
 
       // Update KPI Cards
       const kpiQuant = document.getElementById("kpiValQuantified");
+      const kpiHintQuant = document.getElementById("kpiHintQuantified");
+      const btnFixQuant = document.getElementById("btnFixQuantified");
       if (kpiQuant) {
         kpiQuant.textContent = `${quantPct}%`;
         kpiQuant.style.color = quantPct >= 60 ? "var(--text-primary)" : "#f59e0b";
+      }
+      if (kpiHintQuant) {
+        kpiHintQuant.textContent = quantPct >= 60
+          ? "Metrics & numbers verified"
+          : "Add %, AED/EUR, or team-size numbers to bullets (target 60%+)";
+      }
+      if (btnFixQuant) {
+        btnFixQuant.style.display = quantPct < 60 ? "inline-block" : "none";
       }
 
       const totalViolations = passiveViolations.length + fillerViolations.length;
@@ -9869,46 +9882,66 @@
         kpiLetterLength.style.color = letterLengthValid ? "var(--text-primary)" : "#f59e0b";
       }
 
-      // Update Real-Time Violation Alert Box
+      // Update Real-Time Violation / Action Alert Box (shows for ANY warning or failure)
       const alertBox = document.getElementById("reviewViolationAlert");
       const alertTitle = document.getElementById("violationAlertTitle");
       const alertDesc = document.getElementById("violationAlertDesc");
+      const alertBtn = alertBox ? alertBox.querySelector("button") : null;
+      const radarFixSteps = [];
+      if (!emailValid) radarFixSteps.push("Enter or scan a valid HR recipient email");
+      if (!employerNamed) radarFixSteps.push(`Reference "${job.company || "the target employer"}" in your cover letter`);
+      if (!languageSyncValid) radarFixSteps.push("Switch cover letter language to Deutsch (DE)");
+      if (quantPct < 60) radarFixSteps.push(`Quantify more CV bullets with numbers/%, AED, or team sizes (currently ${quantPct}%, target 60%+)`);
+      if (passiveViolations.length) radarFixSteps.push(`Replace ${passiveViolations.length} passive phrase(s) (e.g. "${passiveViolations[0].phrase}")`);
+      if (fillerViolations.length) radarFixSteps.push(`Remove filler buzzwords ("${fillerViolations.join('", "')}")`);
+
       if (alertBox && alertTitle && alertDesc) {
-        if (totalViolations > 0) {
+        if (radarFixSteps.length > 0) {
           alertBox.style.display = "block";
-          const issues = [];
-          if (passiveViolations.length) {
-            issues.push(`${passiveViolations.length} passive duty phrase${passiveViolations.length > 1 ? "s" : ""} ("${passiveViolations[0].phrase}") in experience bullets`);
+          const hasHardFail = totalViolations > 0 || !emailValid;
+          alertBox.style.borderColor = hasHardFail ? "#ef4444" : "#f59e0b";
+          alertBox.style.background = hasHardFail ? "rgba(239,68,68,0.08)" : "rgba(245,158,11,0.08)";
+          alertTitle.style.color = hasHardFail ? "#ef4444" : "#d97706";
+          alertTitle.textContent = `${radarFixSteps.length} Action${radarFixSteps.length > 1 ? "s" : ""} Needed Before Dispatch`;
+          alertDesc.innerHTML = `<strong>How to fix:</strong> ${radarFixSteps.map((s) => escapeHtml(s)).join(" &bull; ")}`;
+          if (alertBtn) {
+            alertBtn.textContent = "Auto-Fix All Issues →";
+            alertBtn.setAttribute("onclick", "fixAllPreDispatchIssues()");
+            alertBtn.style.background = hasHardFail ? "#ef4444" : "#d97706";
+            alertBtn.style.borderColor = hasHardFail ? "#ef4444" : "#d97706";
           }
-          if (fillerViolations.length) {
-            issues.push(`filler language ("${fillerViolations.join('", "')}")`);
-          }
-          alertTitle.textContent = `${totalViolations} Text Violation${totalViolations > 1 ? "s" : ""} Detected`;
-          alertDesc.innerHTML = `${issues.join(" and ")}. Executive applications require active outcome verbs and substantiated evidence. Click <strong>Auto-Fix Text Violations</strong> to transform them in 1 click.`;
         } else {
           alertBox.style.display = "none";
         }
       }
 
-      // Helper to update check items
-      function updateCheck(itemId, iconId, descId, isPass, passDesc, failDesc, isWarn = false) {
+      // Helper to update check items + inject per-card clickable Fix button when needed
+      function updateCheck(itemId, iconId, descId, isPass, passDesc, failDesc, isWarn = false, fixLabel = "", fixFn = "") {
         const itemEl = document.getElementById(itemId);
         const iconEl = document.getElementById(iconId);
         const descEl = document.getElementById(descId);
         if (!itemEl || !iconEl || !descEl) return;
         itemEl.classList.remove("pass", "warn", "fail");
+        const existingBtn = itemEl.querySelector(".check-fix-btn");
+        if (existingBtn) existingBtn.remove();
+
         if (isPass) {
           itemEl.classList.add("pass");
           iconEl.innerHTML = "&#10003;";
           descEl.textContent = passDesc;
-        } else if (isWarn) {
-          itemEl.classList.add("warn");
-          iconEl.innerHTML = "&#9888;";
-          descEl.textContent = failDesc;
         } else {
-          itemEl.classList.add("fail");
-          iconEl.innerHTML = "&#10005;";
+          itemEl.classList.add(isWarn ? "warn" : "fail");
+          iconEl.innerHTML = isWarn ? "&#9888;" : "&#10005;";
           descEl.textContent = failDesc;
+          if (fixLabel && fixFn) {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "check-fix-btn";
+            btn.textContent = fixLabel;
+            btn.setAttribute("onclick", fixFn);
+            btn.style.cssText = `margin-top:7px;padding:4px 11px;border-radius:999px;border:1px solid ${isWarn ? "#d97706" : "#ef4444"};background:${isWarn ? "rgba(245,158,11,0.14)" : "rgba(239,68,68,0.12)"};color:${isWarn ? "#b45309" : "#dc2626"};font-size:11px;font-weight:700;cursor:pointer;display:inline-block;`;
+            descEl.parentElement.appendChild(btn);
+          }
         }
       }
 
@@ -9917,40 +9950,50 @@
         "chkRecipientEmail", "chkRecipientIcon", "chkRecipientDesc",
         emailValid,
         `Recipient email locked: ${recipientEmail || "HR Desk"}`,
-        "Missing or invalid recipient HR email address.",
-        false
+        "How to fix: Enter a valid HR email or click Auto-Scan below.",
+        false,
+        "Fix: Focus / Scan HR Email →",
+        "fixRecipientEmail()"
       );
 
       updateCheck(
         "chkEmployerLock", "chkEmployerIcon", "chkEmployerDesc",
         employerNamed,
         `Target employer "${job.company || "Executive Group"}" referenced in application.`,
-        `Consider referencing "${job.company || "the target employer"}" directly in your letter or summary.`,
-        true
+        `How to fix: Reference "${job.company || "the target employer"}" in your cover letter.`,
+        true,
+        `Fix: Add "${(job.company || "Employer").slice(0, 22)}" to Letter →`,
+        "fixEmployerAlignment()"
       );
 
       updateCheck(
         "chkLanguageSync", "chkLanguageIcon", "chkLanguageDesc",
         languageSyncValid,
         `Language aligned (${(state.coverLetterLang || "EN").toUpperCase()}) with job posting requirements.`,
-        "Posting appears to be in German; switch cover letter to Deutsch before dispatch.",
-        true
+        "How to fix: Posting is in German — switch your cover letter to Deutsch (DE).",
+        true,
+        "Fix: Switch Letter to Deutsch (DE) →",
+        "fixLanguageSync()"
       );
 
       updateCheck(
         "chkActionVerbs", "chkActionIcon", "chkActionDesc",
         passiveViolations.length === 0,
         "100% active executive phrasing (0 passive duty statements).",
-        `${passiveViolations.length} passive phrase${passiveViolations.length > 1 ? "s" : ""} found (e.g. "${passiveViolations[0]?.phrase}").`,
-        false
+        `How to fix: Replace ${passiveViolations.length} passive phrase(s) (e.g. "${passiveViolations[0]?.phrase}").`,
+        false,
+        "Fix: Upgrade Passive Verbs →",
+        "autoResolveTextViolations()"
       );
 
       updateCheck(
         "chkZeroFiller", "chkFillerIcon", "chkFillerDesc",
         fillerViolations.length === 0,
         "Zero filler buzzwords detected (clean executive tone).",
-        `Filler word${fillerViolations.length > 1 ? "s" : ""} detected: "${fillerViolations.join('", "')}".`,
-        true
+        `How to fix: Remove filler word(s): "${fillerViolations.join('", "')}".`,
+        true,
+        "Fix: Remove Filler Words →",
+        "autoResolveTextViolations()"
       );
 
       updateCheck(
@@ -9962,6 +10005,79 @@
       );
 
       return { score, totalViolations, quantPct, letterWords, passiveViolations, fillerViolations };
+    }
+
+    function fixLanguageSync() {
+      if (typeof setCoverLetterLang === "function") {
+        setCoverLetterLang("de");
+      } else {
+        state.coverLetterLang = "de";
+      }
+      runPreFlightAudit(true);
+      showToast("✓ Switched cover letter to Deutsch (DE) & re-audited.");
+    }
+
+    function fixEmployerAlignment() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const company = (job && job.company) || "";
+      const ta = document.getElementById("coverLetterTextarea");
+      if (!ta || !company) {
+        showToast("No target employer found on this job.");
+        return;
+      }
+      const cur = ta.value.trim();
+      const firstWord = company.split(/\s+/)[0].replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+      if (!firstWord || !cur.toLowerCase().includes(firstWord)) {
+        const isDe = String(state.coverLetterLang || "").toUpperCase() === "DE";
+        const line = isDe
+          ? `Besonders reizt mich die Möglichkeit, meine Führungserfahrung gezielt bei ${company} einzubringen.`
+          : `I am particularly excited to bring this executive track record directly to ${company}.`;
+        ta.value = cur ? `${line}\n\n${cur}` : line;
+      }
+      runPreFlightAudit(true);
+      showToast(`✓ Added "${company}" to your cover letter.`);
+    }
+
+    function fixRecipientEmail() {
+      const toEl = document.getElementById("exportToEmail");
+      if (toEl) {
+        toEl.focus();
+        toEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      if (typeof reVerifyRecipientEmail === "function") {
+        reVerifyRecipientEmail();
+      } else {
+        showToast("Enter the HR recipient email address in the To: field.");
+      }
+    }
+
+    function fixQuantifiedBullets() {
+      // First apply any automatic upgrades; if still < 60%, take user to Step 3 CV editor
+      autoResolveTextViolations();
+      const audit = runPreFlightAudit(true);
+      if (audit && audit.quantPct < 60) {
+        if (typeof goToStep === "function") goToStep(3);
+        showToast("Add %, AED/EUR, or team-size numbers to your CV bullets in Step 3.");
+      } else {
+        showToast("✓ Quantified bullets updated.");
+      }
+    }
+
+    function fixAllPreDispatchIssues() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const isGermanPosting = job && (job.lang === "DE" || /german|deutsch/i.test((job.title || "") + " " + (job.requirements || []).join(" ")));
+      if (isGermanPosting && String(state.coverLetterLang || "").toUpperCase() !== "DE") {
+        if (typeof setCoverLetterLang === "function") setCoverLetterLang("de");
+        else state.coverLetterLang = "de";
+      }
+      fixEmployerAlignment();
+      autoResolveTextViolations();
+      const audit = runPreFlightAudit(true);
+      if (audit && audit.quantPct < 60) {
+        showToast(`Fixed auto-resolvable items! Score: ${audit.score}% — add metrics to CV bullets in Step 3 for 100%.`);
+      } else {
+        showToast(`✓ All Pre-Dispatch issues resolved! Readiness: ${audit ? audit.score : 100}%`);
+      }
     }
 
     function autoResolveTextViolations() {
