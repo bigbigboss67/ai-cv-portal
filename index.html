@@ -5303,6 +5303,9 @@
        3. RENDERING THE LIVE CV SHEET (100% COMPATIBLE WITH cv-text-pdf.js readSheet())
        ------------------------------------------------------------------ */
     function renderLiveCvSheet(skipWriterSync) {
+      if (!window._restoringCvState && window._portalBooted) {
+        persistCurrentCvState();
+      }
       const cv = state.cv;
       document.getElementById("cvNameEl").textContent = cv.name || "EXECUTIVE CANDIDATE";
       const hlEl = document.getElementById("cvHeadlineEl");
@@ -11055,6 +11058,12 @@ ${state.cv.contact}`;
       populateStep3And4ForSelectedJob();
       renderDispatchesLedger();
       mountCvSheetForStep(1);
+      window._portalBooted = true;
+      if (window.Clerk && window.Clerk.user) {
+        restoreSavedCvForUser(window.Clerk.user);
+      } else {
+        restoreSavedCvForUser(null);
+      }
 
       // Automatically trigger Daily Live Job Fetch matched to CV details & desired roles
       if (state.dailyAutoFetchEnabled !== false) {
@@ -11070,6 +11079,100 @@ ${state.cv.contact}`;
           runLiveInternetRoleSearch({ silent: true, isDailySync: true });
         }
       }, 30 * 60 * 1000);
+    });
+
+    let _clerkCvSyncTimer = null;
+
+    function persistCurrentCvState() {
+      if (!state || !state.cv) return;
+      const payload = {
+        cv: state.cv,
+        coverLetterLang: state.coverLetterLang || "en",
+        upgradedKeys: Array.from(state.upgradedKeys || []),
+        updatedAt: Date.now()
+      };
+      const uid = window.Clerk && window.Clerk.user ? window.Clerk.user.id : "";
+      try {
+        const json = JSON.stringify(payload);
+        localStorage.setItem("ai_cv_portal_cv_last", json);
+        if (uid) {
+          localStorage.setItem("ai_cv_portal_cv_user_" + uid, json);
+        }
+      } catch (e) {
+        console.warn("CV localStorage save skipped:", e);
+      }
+
+      // Also sync a compact copy (no large base64 photo) to Clerk user.unsafeMetadata so it survives across devices/browsers
+      if (uid && window.Clerk && window.Clerk.user && typeof window.Clerk.user.update === "function") {
+        clearTimeout(_clerkCvSyncTimer);
+        _clerkCvSyncTimer = setTimeout(() => {
+          try {
+            const compactCv = Object.assign({}, state.cv);
+            if (compactCv.photoUrl && compactCv.photoUrl.length > 512) {
+              compactCv.photoUrl = "";
+            }
+            const compactPayload = {
+              cv: compactCv,
+              coverLetterLang: state.coverLetterLang || "en",
+              updatedAt: payload.updatedAt
+            };
+            if (JSON.stringify(compactPayload).length <= 6200) {
+              const curMeta = Object.assign({}, window.Clerk.user.unsafeMetadata || {});
+              curMeta.savedCv = compactPayload;
+              window.Clerk.user.update({ unsafeMetadata: curMeta }).catch(() => {});
+            }
+          } catch {}
+        }, 1200);
+      }
+    }
+
+    function restoreSavedCvForUser(user) {
+      let saved = null;
+      const uid = user && user.id ? user.id : "";
+      try {
+        const raw = (uid && localStorage.getItem("ai_cv_portal_cv_user_" + uid)) || localStorage.getItem("ai_cv_portal_cv_last");
+        if (raw) saved = JSON.parse(raw);
+      } catch {}
+
+      if ((!saved || !saved.cv) && user && user.unsafeMetadata && user.unsafeMetadata.savedCv) {
+        saved = user.unsafeMetadata.savedCv;
+      }
+
+      if (!saved || !saved.cv || typeof saved.cv !== "object") return false;
+
+      window._restoringCvState = true;
+      try {
+        state.cv = saved.cv;
+        if (saved.coverLetterLang) state.coverLetterLang = saved.coverLetterLang;
+        if (Array.isArray(saved.upgradedKeys)) state.upgradedKeys = new Set(saved.upgradedKeys);
+
+        const statusEl = document.getElementById("cvUploadStatus");
+        if (statusEl && state.cv.name) {
+          const roleHint = (state.cv.headline || "Executive CV").split("·")[0].trim();
+          statusEl.innerHTML = `Currently loaded: <strong>${escapeHtml(state.cv.name)} &mdash; ${escapeHtml(roleHint)}</strong>`;
+        }
+
+        renderLiveCvSheet(false);
+        if (typeof renderCvSuggestions === "function") renderCvSuggestions();
+        if (typeof renderRoleLockChips === "function") renderRoleLockChips();
+        if (typeof populateStep3And4ForSelectedJob === "function") populateStep3And4ForSelectedJob();
+        if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+      } finally {
+        window._restoringCvState = false;
+      }
+      return true;
+    }
+
+    window.addEventListener("portal:auth-user", (ev) => {
+      const user = ev && ev.detail ? ev.detail.user : null;
+      if (user) {
+        const restored = restoreSavedCvForUser(user);
+        if (restored && typeof showToast === "function") {
+          showToast("✓ Restored your saved CV from your last session");
+        }
+      }
+      // Note: On sign-out (user === null), we intentionally keep saved CV in localStorage
+      // so the next sign-in immediately restores the CV you were working on.
     });
   </script>
 </body>

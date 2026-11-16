@@ -222,10 +222,14 @@
   }
 
   function route(clerk) {
-    if (!clerk.user) { renderSignIn(clerk); showGate(true); return; }
+    if (!clerk.user) {
+      window.dispatchEvent(new CustomEvent("portal:auth-user", { detail: { user: null } }));
+      renderSignIn(clerk); showGate(true); return;
+    }
     if (!isComplete(clerk.user)) { renderProfile(clerk); showGate(true); return; }
     showGate(false);
     renderHeader(clerk);
+    window.dispatchEvent(new CustomEvent("portal:auth-user", { detail: { user: clerk.user } }));
   }
 
   async function start() {
