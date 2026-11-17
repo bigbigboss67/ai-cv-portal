@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-16T12:11:19.126Z",
-  "total": 291,
+  "generatedAt": "2026-11-17T12:36:58.287Z",
+  "total": 282,
   "staleSources": 0,
   "sources": [
     {
@@ -11,22 +11,35 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 454,
+      "count": 19,
+      "ms": 259,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
+          "url": "https://www.iciba.com/word?w=managing",
+          "ref": "INDEED-9CVZC2",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "爱词霸权威在线词典,为您提供managing的中文意思,managing的用法讲解,managing的读音,managing的同义词,managing的反义词,managing的例句等英语服务。",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "ref": "INDEED-8XJWDV",
+          "posted": "live",
+          "text": "\"Managing\"是英语中的高频词汇，兼具动词和形容词双重词性，英式与美式发音均为 [ˈmænɪdʒɪŋ]。 其动词形式派生自\"manage\"，核心语义为管理资源、处理事务或通过努力达成目标；形容词则用于描述行政职能（如\"managing director\"常务董事）或节约特性。",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
@@ -36,6 +49,19 @@
           "ref": "INDEED-SJHA7R",
           "posted": "live",
           "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
+          "ref": "INDEED-NOF69H",
+          "posted": "live",
+          "text": "This mousse says it's designed to make hair glossy and easier to manage. This is my first experience of managing other people, but I need to appear confident. Derek manages our Agricultural Division. There must be a better way to manage our household finances than this!",
           "kind": "page",
           "src": "indeed",
           "to": "careers@dictionary.cambridge.org",
@@ -55,6 +81,45 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "ref": "INDEED-XNRZY9",
+          "posted": "live",
+          "text": "manage是英语单词，兼具及物动词和不及物动词词性，英式与美式发音均为 [1]。 其核心含义指通过系统性规划达成目标，既包含“管理公司”“经营业务”等直接管理场景，也延伸至“处理问题”“控制风险”等抽象场景 [2-3]。 作及物动词时意为管理、控制或负责，作不及物动词时侧重应对与处理能力 [1] [3]。 该词使用场景涵盖企业管理（如manage the team）、项目负责（如manage the project）、资源控制（如manage money）等具体领域。 常见专业搭配包括Manage Servers（管理服务器）、risk management（风险管理）、cost management（成本管理）等 [1-2]。",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "INDEED-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "ref": "INDEED-CF87C3",
+          "posted": "live",
+          "text": "大量翻译例句关于\"managing\" – 英中词典以及8百万条中文译文例句搜索。",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -66,84 +131,6 @@
           "src": "indeed",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "INDEED-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "INDEED-LPL7C9",
-          "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
-        },
-        {
-          "title": "Management - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "INDEED-TD928H",
-          "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "INDEED-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "INDEED-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/manage",
-          "ref": "INDEED-2DCA45",
-          "posted": "live",
-          "text": "To manage is to skillfully handle something. If you can barely manage to keep your goldfish alive, you should probably think twice about adopting those Golden Retriever puppies. The verb manage also means to supervise or oversee either things or people at work.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -159,19 +146,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "INDEED-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -183,6 +157,19 @@
           "src": "indeed",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "INDEED-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -198,56 +185,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Home | General Dynamics",
+          "title": "General officer - Wikipedia",
           "company": "via Indeed UAE",
           "location": "Dubai",
-          "url": "https://www.gd.com/",
-          "ref": "INDEED-HOK7DE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "ref": "INDEED-X77NF2",
           "posted": "live",
-          "text": "For nearly 75 years, General Dynamics has delivered the innovations that help define America's technological and defense leadership, from nuclear submarines and combat vehicles to advanced aerospace and cyber capabilities.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "indeed",
-          "to": "careers@gd.com",
-          "emailVia": "Employer Domain HR (gd.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "INDEED-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "Général - Wikipedia",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/G%C3%A9n%C3%A9ral",
-          "ref": "INDEED-91UUYG",
-          "posted": "live",
-          "text": "Général is the French word for general.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "General RV | The Nation's Largest RV Dealer",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.generalrv.com/",
-          "ref": "INDEED-XN1XB1",
-          "posted": "live",
-          "text": "Shop new & used RVs at the nation's largest family-owned RV dealer. Motorhomes, travel trailers, fifth wheels, toy haulers, camper vans & more.",
-          "kind": "page",
-          "src": "indeed",
-          "to": "careers@generalrv.com",
-          "emailVia": "Employer Domain HR (generalrv.com)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -263,6 +211,19 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "INDEED-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via Indeed UAE",
           "location": "Dubai",
@@ -274,6 +235,32 @@
           "src": "indeed",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.generalww.com/",
+          "ref": "INDEED-YK554V",
+          "posted": "live",
+          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Indeed UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "INDEED-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "indeed",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -285,22 +272,35 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 378,
+      "count": 19,
+      "ms": 300,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
+          "url": "https://www.iciba.com/word?w=managing",
+          "ref": "DUBIZZLE-9CVZC2",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "爱词霸权威在线词典,为您提供managing的中文意思,managing的用法讲解,managing的读音,managing的同义词,managing的反义词,managing的例句等英语服务。",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "ref": "DUBIZZLE-8XJWDV",
+          "posted": "live",
+          "text": "\"Managing\"是英语中的高频词汇，兼具动词和形容词双重词性，英式与美式发音均为 [ˈmænɪdʒɪŋ]。 其动词形式派生自\"manage\"，核心语义为管理资源、处理事务或通过努力达成目标；形容词则用于描述行政职能（如\"managing director\"常务董事）或节约特性。",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
@@ -310,6 +310,19 @@
           "ref": "DUBIZZLE-SJHA7R",
           "posted": "live",
           "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
+          "ref": "DUBIZZLE-NOF69H",
+          "posted": "live",
+          "text": "This mousse says it's designed to make hair glossy and easier to manage. This is my first experience of managing other people, but I need to appear confident. Derek manages our Agricultural Division. There must be a better way to manage our household finances than this!",
           "kind": "page",
           "src": "dubizzle",
           "to": "careers@dictionary.cambridge.org",
@@ -329,6 +342,45 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "ref": "DUBIZZLE-XNRZY9",
+          "posted": "live",
+          "text": "manage是英语单词，兼具及物动词和不及物动词词性，英式与美式发音均为 [1]。 其核心含义指通过系统性规划达成目标，既包含“管理公司”“经营业务”等直接管理场景，也延伸至“处理问题”“控制风险”等抽象场景 [2-3]。 作及物动词时意为管理、控制或负责，作不及物动词时侧重应对与处理能力 [1] [3]。 该词使用场景涵盖企业管理（如manage the team）、项目负责（如manage the project）、资源控制（如manage money）等具体领域。 常见专业搭配包括Manage Servers（管理服务器）、risk management（风险管理）、cost management（成本管理）等 [1-2]。",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "DUBIZZLE-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "ref": "DUBIZZLE-CF87C3",
+          "posted": "live",
+          "text": "大量翻译例句关于\"managing\" – 英中词典以及8百万条中文译文例句搜索。",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -340,84 +392,6 @@
           "src": "dubizzle",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "DUBIZZLE-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "DUBIZZLE-LPL7C9",
-          "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
-        },
-        {
-          "title": "Management - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "DUBIZZLE-TD928H",
-          "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "DUBIZZLE-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "DUBIZZLE-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/manage",
-          "ref": "DUBIZZLE-2DCA45",
-          "posted": "live",
-          "text": "To manage is to skillfully handle something. If you can barely manage to keep your goldfish alive, you should probably think twice about adopting those Golden Retriever puppies. The verb manage also means to supervise or oversee either things or people at work.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -433,19 +407,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "DUBIZZLE-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -457,6 +418,19 @@
           "src": "dubizzle",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "DUBIZZLE-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -472,56 +446,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Home | General Dynamics",
+          "title": "General officer - Wikipedia",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
-          "url": "https://www.gd.com/",
-          "ref": "DUBIZZLE-HOK7DE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "ref": "DUBIZZLE-X77NF2",
           "posted": "live",
-          "text": "For nearly 75 years, General Dynamics has delivered the innovations that help define America's technological and defense leadership, from nuclear submarines and combat vehicles to advanced aerospace and cyber capabilities.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "dubizzle",
-          "to": "careers@gd.com",
-          "emailVia": "Employer Domain HR (gd.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "DUBIZZLE-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "Général - Wikipedia",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/G%C3%A9n%C3%A9ral",
-          "ref": "DUBIZZLE-91UUYG",
-          "posted": "live",
-          "text": "Général is the French word for general.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "General RV | The Nation's Largest RV Dealer",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.generalrv.com/",
-          "ref": "DUBIZZLE-XN1XB1",
-          "posted": "live",
-          "text": "Shop new & used RVs at the nation's largest family-owned RV dealer. Motorhomes, travel trailers, fifth wheels, toy haulers, camper vans & more.",
-          "kind": "page",
-          "src": "dubizzle",
-          "to": "careers@generalrv.com",
-          "emailVia": "Employer Domain HR (generalrv.com)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -537,6 +472,19 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "DUBIZZLE-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via Dubizzle Jobs",
           "location": "Dubai",
@@ -548,6 +496,32 @@
           "src": "dubizzle",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.generalww.com/",
+          "ref": "DUBIZZLE-YK554V",
+          "posted": "live",
+          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Dubizzle Jobs",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "DUBIZZLE-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "dubizzle",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -559,22 +533,35 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 384,
+      "count": 19,
+      "ms": 283,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
+          "url": "https://www.iciba.com/word?w=managing",
+          "ref": "BAYT-9CVZC2",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "爱词霸权威在线词典,为您提供managing的中文意思,managing的用法讲解,managing的读音,managing的同义词,managing的反义词,managing的例句等英语服务。",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "ref": "BAYT-8XJWDV",
+          "posted": "live",
+          "text": "\"Managing\"是英语中的高频词汇，兼具动词和形容词双重词性，英式与美式发音均为 [ˈmænɪdʒɪŋ]。 其动词形式派生自\"manage\"，核心语义为管理资源、处理事务或通过努力达成目标；形容词则用于描述行政职能（如\"managing director\"常务董事）或节约特性。",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
@@ -584,6 +571,19 @@
           "ref": "BAYT-SJHA7R",
           "posted": "live",
           "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
+          "ref": "BAYT-NOF69H",
+          "posted": "live",
+          "text": "This mousse says it's designed to make hair glossy and easier to manage. This is my first experience of managing other people, but I need to appear confident. Derek manages our Agricultural Division. There must be a better way to manage our household finances than this!",
           "kind": "page",
           "src": "bayt",
           "to": "careers@dictionary.cambridge.org",
@@ -603,6 +603,45 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "ref": "BAYT-XNRZY9",
+          "posted": "live",
+          "text": "manage是英语单词，兼具及物动词和不及物动词词性，英式与美式发音均为 [1]。 其核心含义指通过系统性规划达成目标，既包含“管理公司”“经营业务”等直接管理场景，也延伸至“处理问题”“控制风险”等抽象场景 [2-3]。 作及物动词时意为管理、控制或负责，作不及物动词时侧重应对与处理能力 [1] [3]。 该词使用场景涵盖企业管理（如manage the team）、项目负责（如manage the project）、资源控制（如manage money）等具体领域。 常见专业搭配包括Manage Servers（管理服务器）、risk management（风险管理）、cost management（成本管理）等 [1-2]。",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "BAYT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "ref": "BAYT-CF87C3",
+          "posted": "live",
+          "text": "大量翻译例句关于\"managing\" – 英中词典以及8百万条中文译文例句搜索。",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -614,84 +653,6 @@
           "src": "bayt",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "BAYT-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "BAYT-LPL7C9",
-          "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
-        },
-        {
-          "title": "Management - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "BAYT-TD928H",
-          "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "BAYT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "BAYT-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/manage",
-          "ref": "BAYT-2DCA45",
-          "posted": "live",
-          "text": "To manage is to skillfully handle something. If you can barely manage to keep your goldfish alive, you should probably think twice about adopting those Golden Retriever puppies. The verb manage also means to supervise or oversee either things or people at work.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -707,19 +668,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "BAYT-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -731,6 +679,19 @@
           "src": "bayt",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "BAYT-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -746,56 +707,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Home | General Dynamics",
+          "title": "General officer - Wikipedia",
           "company": "via Bayt UAE",
           "location": "Dubai",
-          "url": "https://www.gd.com/",
-          "ref": "BAYT-HOK7DE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "ref": "BAYT-X77NF2",
           "posted": "live",
-          "text": "For nearly 75 years, General Dynamics has delivered the innovations that help define America's technological and defense leadership, from nuclear submarines and combat vehicles to advanced aerospace and cyber capabilities.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "bayt",
-          "to": "careers@gd.com",
-          "emailVia": "Employer Domain HR (gd.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "BAYT-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "Général - Wikipedia",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/G%C3%A9n%C3%A9ral",
-          "ref": "BAYT-91UUYG",
-          "posted": "live",
-          "text": "Général is the French word for general.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "General RV | The Nation's Largest RV Dealer",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.generalrv.com/",
-          "ref": "BAYT-XN1XB1",
-          "posted": "live",
-          "text": "Shop new & used RVs at the nation's largest family-owned RV dealer. Motorhomes, travel trailers, fifth wheels, toy haulers, camper vans & more.",
-          "kind": "page",
-          "src": "bayt",
-          "to": "careers@generalrv.com",
-          "emailVia": "Employer Domain HR (generalrv.com)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -811,6 +733,19 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "BAYT-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via Bayt UAE",
           "location": "Dubai",
@@ -822,6 +757,32 @@
           "src": "bayt",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.generalww.com/",
+          "ref": "BAYT-YK554V",
+          "posted": "live",
+          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Bayt UAE",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "BAYT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "bayt",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -833,22 +794,35 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 347,
+      "count": 19,
+      "ms": 354,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
+          "url": "https://www.iciba.com/word?w=managing",
+          "ref": "GULFTALENT-9CVZC2",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "爱词霸权威在线词典,为您提供managing的中文意思,managing的用法讲解,managing的读音,managing的同义词,managing的反义词,managing的例句等英语服务。",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "ref": "GULFTALENT-8XJWDV",
+          "posted": "live",
+          "text": "\"Managing\"是英语中的高频词汇，兼具动词和形容词双重词性，英式与美式发音均为 [ˈmænɪdʒɪŋ]。 其动词形式派生自\"manage\"，核心语义为管理资源、处理事务或通过努力达成目标；形容词则用于描述行政职能（如\"managing director\"常务董事）或节约特性。",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
@@ -858,6 +832,19 @@
           "ref": "GULFTALENT-SJHA7R",
           "posted": "live",
           "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
+          "ref": "GULFTALENT-NOF69H",
+          "posted": "live",
+          "text": "This mousse says it's designed to make hair glossy and easier to manage. This is my first experience of managing other people, but I need to appear confident. Derek manages our Agricultural Division. There must be a better way to manage our household finances than this!",
           "kind": "page",
           "src": "gulftalent",
           "to": "careers@dictionary.cambridge.org",
@@ -877,6 +864,45 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "ref": "GULFTALENT-XNRZY9",
+          "posted": "live",
+          "text": "manage是英语单词，兼具及物动词和不及物动词词性，英式与美式发音均为 [1]。 其核心含义指通过系统性规划达成目标，既包含“管理公司”“经营业务”等直接管理场景，也延伸至“处理问题”“控制风险”等抽象场景 [2-3]。 作及物动词时意为管理、控制或负责，作不及物动词时侧重应对与处理能力 [1] [3]。 该词使用场景涵盖企业管理（如manage the team）、项目负责（如manage the project）、资源控制（如manage money）等具体领域。 常见专业搭配包括Manage Servers（管理服务器）、risk management（风险管理）、cost management（成本管理）等 [1-2]。",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "GULFTALENT-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "ref": "GULFTALENT-CF87C3",
+          "posted": "live",
+          "text": "大量翻译例句关于\"managing\" – 英中词典以及8百万条中文译文例句搜索。",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -888,84 +914,6 @@
           "src": "gulftalent",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "GULFTALENT-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "GULFTALENT-LPL7C9",
-          "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
-        },
-        {
-          "title": "Management - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "GULFTALENT-TD928H",
-          "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "GULFTALENT-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "GULFTALENT-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/manage",
-          "ref": "GULFTALENT-2DCA45",
-          "posted": "live",
-          "text": "To manage is to skillfully handle something. If you can barely manage to keep your goldfish alive, you should probably think twice about adopting those Golden Retriever puppies. The verb manage also means to supervise or oversee either things or people at work.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -981,19 +929,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "GULFTALENT-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -1005,6 +940,19 @@
           "src": "gulftalent",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "GULFTALENT-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -1020,56 +968,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Home | General Dynamics",
+          "title": "General officer - Wikipedia",
           "company": "via GulfTalent",
           "location": "Dubai",
-          "url": "https://www.gd.com/",
-          "ref": "GULFTALENT-HOK7DE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "ref": "GULFTALENT-X77NF2",
           "posted": "live",
-          "text": "For nearly 75 years, General Dynamics has delivered the innovations that help define America's technological and defense leadership, from nuclear submarines and combat vehicles to advanced aerospace and cyber capabilities.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "gulftalent",
-          "to": "careers@gd.com",
-          "emailVia": "Employer Domain HR (gd.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "GULFTALENT-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "Général - Wikipedia",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/G%C3%A9n%C3%A9ral",
-          "ref": "GULFTALENT-91UUYG",
-          "posted": "live",
-          "text": "Général is the French word for general.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "General RV | The Nation's Largest RV Dealer",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.generalrv.com/",
-          "ref": "GULFTALENT-XN1XB1",
-          "posted": "live",
-          "text": "Shop new & used RVs at the nation's largest family-owned RV dealer. Motorhomes, travel trailers, fifth wheels, toy haulers, camper vans & more.",
-          "kind": "page",
-          "src": "gulftalent",
-          "to": "careers@generalrv.com",
-          "emailVia": "Employer Domain HR (generalrv.com)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -1085,6 +994,19 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "GULFTALENT-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via GulfTalent",
           "location": "Dubai",
@@ -1096,6 +1018,32 @@
           "src": "gulftalent",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.generalww.com/",
+          "ref": "GULFTALENT-YK554V",
+          "posted": "live",
+          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via GulfTalent",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "GULFTALENT-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "gulftalent",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -1107,22 +1055,35 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 20,
-      "ms": 278,
+      "count": 19,
+      "ms": 164,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
+          "url": "https://www.iciba.com/word?w=managing",
+          "ref": "NAUKRIGULF-9CVZC2",
           "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "text": "爱词霸权威在线词典,为您提供managing的中文意思,managing的用法讲解,managing的读音,managing的同义词,managing的反义词,managing的例句等英语服务。",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "ref": "NAUKRIGULF-8XJWDV",
+          "posted": "live",
+          "text": "\"Managing\"是英语中的高频词汇，兼具动词和形容词双重词性，英式与美式发音均为 [ˈmænɪdʒɪŋ]。 其动词形式派生自\"manage\"，核心语义为管理资源、处理事务或通过努力达成目标；形容词则用于描述行政职能（如\"managing director\"常务董事）或节约特性。",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
@@ -1132,6 +1093,19 @@
           "ref": "NAUKRIGULF-SJHA7R",
           "posted": "live",
           "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
+          "ref": "NAUKRIGULF-NOF69H",
+          "posted": "live",
+          "text": "This mousse says it's designed to make hair glossy and easier to manage. This is my first experience of managing other people, but I need to appear confident. Derek manages our Agricultural Division. There must be a better way to manage our household finances than this!",
           "kind": "page",
           "src": "naukrigulf",
           "to": "careers@dictionary.cambridge.org",
@@ -1151,6 +1125,45 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "ref": "NAUKRIGULF-XNRZY9",
+          "posted": "live",
+          "text": "manage是英语单词，兼具及物动词和不及物动词词性，英式与美式发音均为 [1]。 其核心含义指通过系统性规划达成目标，既包含“管理公司”“经营业务”等直接管理场景，也延伸至“处理问题”“控制风险”等抽象场景 [2-3]。 作及物动词时意为管理、控制或负责，作不及物动词时侧重应对与处理能力 [1] [3]。 该词使用场景涵盖企业管理（如manage the team）、项目负责（如manage the project）、资源控制（如manage money）等具体领域。 常见专业搭配包括Manage Servers（管理服务器）、risk management（风险管理）、cost management（成本管理）等 [1-2]。",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "ref": "NAUKRIGULF-U90QMM",
+          "posted": "live",
+          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "ref": "NAUKRIGULF-CF87C3",
+          "posted": "live",
+          "text": "大量翻译例句关于\"managing\" – 英中词典以及8百万条中文译文例句搜索。",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1162,84 +1175,6 @@
           "src": "naukrigulf",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "NAUKRIGULF-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "ref": "NAUKRIGULF-LPL7C9",
-          "posted": "live",
-          "text": "Definition of 'managing' managing in British English (ˈmænɪdʒɪŋ ) adjective having administrative control or authority",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
-        },
-        {
-          "title": "Management - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/Management",
-          "ref": "NAUKRIGULF-TD928H",
-          "posted": "live",
-          "text": "Management (or managing) is the administration of organizations, whether businesses, nonprofit organizations, or government bodies through business administration, nonprofit management, or the political science sub-field of public administration respectively.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "ref": "NAUKRIGULF-VWZRX4",
-          "posted": "live",
-          "text": "Find 24 different ways to say MANAGING, along with antonyms, related words, and example sentences at Thesaurus.com.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "NAUKRIGULF-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dictionary.cambridge.org",
-          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
-        },
-        {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.vocabulary.com/dictionary/manage",
-          "ref": "NAUKRIGULF-2DCA45",
-          "posted": "live",
-          "text": "To manage is to skillfully handle something. If you can barely manage to keep your goldfish alive, you should probably think twice about adopting those Golden Retriever puppies. The verb manage also means to supervise or oversee either things or people at work.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@vocabulary.com",
-          "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
           "title": "GENERAL Definition & Meaning - Merriam-Webster",
@@ -1255,19 +1190,6 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "General (United States) - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/General_(United_States)",
-          "ref": "NAUKRIGULF-V7P28E",
-          "posted": "live",
-          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
           "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1279,6 +1201,19 @@
           "src": "naukrigulf",
           "to": "careers@thegeneral.com",
           "emailVia": "Employer Domain HR (thegeneral.com)"
+        },
+        {
+          "title": "General (United States) - Wikipedia",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
+          "ref": "NAUKRIGULF-8Q73E7",
+          "posted": "live",
+          "text": "Since the higher ranks of General of the Army and General of the Air Force have been reserved for significant wartime use only (in modern times were recreated for World War II), the rank of general is usually the highest general officer rank in the modern forces.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | English meaning - Cambridge Dictionary",
@@ -1294,56 +1229,17 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Home | General Dynamics",
+          "title": "General officer - Wikipedia",
           "company": "via Naukrigulf",
           "location": "Dubai",
-          "url": "https://www.gd.com/",
-          "ref": "NAUKRIGULF-HOK7DE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "ref": "NAUKRIGULF-X77NF2",
           "posted": "live",
-          "text": "For nearly 75 years, General Dynamics has delivered the innovations that help define America's technological and defense leadership, from nuclear submarines and combat vehicles to advanced aerospace and cyber capabilities.",
+          "text": "The rank of general came about as a \"captain-general\", the captain of an army in general (i.e., the whole army). The rank of captain-general began appearing around the time of the organisation of professional armies in the 17th century.",
           "kind": "page",
           "src": "naukrigulf",
-          "to": "careers@gd.com",
-          "emailVia": "Employer Domain HR (gd.com)"
-        },
-        {
-          "title": "Dollar General",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.dollargeneral.com/",
-          "ref": "NAUKRIGULF-STJM59",
-          "posted": "live",
-          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@dollargeneral.com",
-          "emailVia": "Employer Domain HR (dollargeneral.com)"
-        },
-        {
-          "title": "Général - Wikipedia",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://en.wikipedia.org/wiki/G%C3%A9n%C3%A9ral",
-          "ref": "NAUKRIGULF-91UUYG",
-          "posted": "live",
-          "text": "Général is the French word for general.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
-        },
-        {
-          "title": "General RV | The Nation's Largest RV Dealer",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.generalrv.com/",
-          "ref": "NAUKRIGULF-XN1XB1",
-          "posted": "live",
-          "text": "Shop new & used RVs at the nation's largest family-owned RV dealer. Motorhomes, travel trailers, fifth wheels, toy haulers, camper vans & more.",
-          "kind": "page",
-          "src": "naukrigulf",
-          "to": "careers@generalrv.com",
-          "emailVia": "Employer Domain HR (generalrv.com)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
           "title": "GENERAL | definition in the Cambridge English Dictionary",
@@ -1359,6 +1255,19 @@
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.vocabulary.com/dictionary/general",
+          "ref": "NAUKRIGULF-COJQ3S",
+          "posted": "live",
+          "text": "General comes from the French word générale, which means \"common to all people,\" but we use it for more than just people. You might inquire about the general habits of schoolchildren, or the general temperature at night in the desert.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@vocabulary.com",
+          "emailVia": "Employer Domain HR (vocabulary.com)"
+        },
+        {
           "title": "General - definition of general by The Free Dictionary",
           "company": "via Naukrigulf",
           "location": "Dubai",
@@ -1370,6 +1279,32 @@
           "src": "naukrigulf",
           "to": "careers@thefreedictionary.com",
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
+        },
+        {
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.generalww.com/",
+          "ref": "NAUKRIGULF-YK554V",
+          "posted": "live",
+          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
+        },
+        {
+          "title": "Dollar General",
+          "company": "via Naukrigulf",
+          "location": "Dubai",
+          "url": "https://www.dollargeneral.com/",
+          "ref": "NAUKRIGULF-STJM59",
+          "posted": "live",
+          "text": "Dollar General makes it easier to shop for everyday needs by offering the most popular brands at low everyday prices in convenient locations and online.",
+          "kind": "page",
+          "src": "naukrigulf",
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         }
       ]
     },
@@ -1383,7 +1318,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 458,
+      "ms": 2229,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -1489,7 +1424,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1558,
+      "ms": 2339,
       "bytes": 148733,
       "note": null,
       "jobs": [
@@ -1604,8 +1539,8 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2739,
-      "bytes": 819899,
+      "ms": 2356,
+      "bytes": 819889,
       "note": null,
       "jobs": [
         {
@@ -1719,10 +1654,20 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 241,
-      "bytes": 173181,
+      "ms": 296,
+      "bytes": 173397,
       "note": null,
       "jobs": [
+        {
+          "title": "Senior Backend Engineer - Financial Services",
+          "company": "via Michael Page",
+          "location": "",
+          "url": "https://www.michaelpage.ae/job-detail/senior-backend-engineer/ref/jn-112026-7146415",
+          "ref": "jn-112026-7146415",
+          "kind": "page",
+          "to": "clientservicesdubai@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
+        },
         {
           "title": "Head of Cyber Governance & Assurance - Industrial entity",
           "company": "via Michael Page",
@@ -2012,16 +1957,6 @@
           "kind": "page",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Construction Manager",
-          "company": "via Michael Page",
-          "location": "",
-          "url": "https://www.michaelpage.ae/job-detail/construction-manager/ref/jn-102026-7135444",
-          "ref": "jn-102026-7135444",
-          "kind": "page",
-          "to": "clientservicesdubai@michaelpage.ae",
-          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     },
@@ -2034,8 +1969,8 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 966,
-      "bytes": 281720,
+      "ms": 1251,
+      "bytes": 283702,
       "note": null,
       "jobs": [
         {
@@ -2104,6 +2039,106 @@
           "location": "",
           "url": "https://www.pageexecutive.com/job-detail/director-finance-customer/ref/jn-082026-7091934",
           "ref": "jn-082026-7091934",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Standortleitung Industrieanlagenbau",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/standortleitung-industrieanlagenbau/ref/jn-112026-7145122",
+          "ref": "jn-112026-7145122",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Diretor Comercial (CCO)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/diretor-comercial-brasil/ref/jn-112026-7140952",
+          "ref": "jn-112026-7140952",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head of CMO Business Development",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-cmo-business-development/ref/jn-112026-7146315",
+          "ref": "jn-112026-7146315",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Chief Technology Officer (CTO)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/chief-technology-officer-cto/ref/jn-112026-7147077",
+          "ref": "jn-112026-7147077",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Commercial Retail Director, Fashion & Lifestyle",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/commercial-retail-director-fashion-lifestyle/ref/jn-042026-7001915",
+          "ref": "jn-042026-7001915",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Head of Engineering (Director Level)",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/head-engineering-director-level/ref/jn-092026-7113516",
+          "ref": "jn-092026-7113516",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Strategic Sales Director - Global premium consumer brand",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/strategic-sales-director/ref/jn-082026-7086359",
+          "ref": "jn-082026-7086359",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Directeur-trice général-e",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/directeur-trice-g%C3%A9n%C3%A9ral-e/ref/jn-112026-7142732",
+          "ref": "jn-112026-7142732",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Company Secretary - Deputy Director/ Director - HK Listco",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/company-secretary-deputy-director-director-hk-listco/ref/jn-092026-7108947",
+          "ref": "jn-092026-7108947",
+          "kind": "page",
+          "to": "dubai@pageexecutive.com",
+          "emailVia": "Page Executive Middle East Desk"
+        },
+        {
+          "title": "Directeur Général - Bénin - H/F",
+          "company": "via Page Executive",
+          "location": "",
+          "url": "https://www.pageexecutive.com/job-detail/directeur-g%C3%A9n%C3%A9ral-b%C3%A9nin-hf/ref/jn-112026-7145272",
+          "ref": "jn-112026-7145272",
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
@@ -2237,106 +2272,6 @@
           "kind": "page",
           "to": "dubai@pageexecutive.com",
           "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Contract Business Immigration Attorney - Multiple Openings",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/contract-business-immigration-attorney/ref/jn-092026-7104644",
-          "ref": "jn-092026-7104644",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Senior Counsel - Registered Funds",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/senior-counsel-registered-funds/ref/jn-112026-7141799",
-          "ref": "jn-112026-7141799",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Banquier Privé",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/banquier-priv%C3%A9/ref/jn-032026-6981517",
-          "ref": "jn-032026-6981517",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Director Comercial Internacional - Sector Calzado",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/director-comercial-internacional-calzado/ref/jn-112026-7144302",
-          "ref": "jn-112026-7144302",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Werksleiter (m/w/d) Automotive TIER I",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/werksleiter-mwd-automotive-tier-i/ref/jn-112026-7142910",
-          "ref": "jn-112026-7142910",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Head Of Finance (m/w/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/head-finance-mwd/ref/jn-112026-7139463",
-          "ref": "jn-112026-7139463",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Development Director - EMEA",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/business-development-director-emea/ref/jn-112026-7145212",
-          "ref": "jn-112026-7145212",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Tribe Lead Germany (m/w/d)",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/tribe-lead-germany-mwd/ref/jn-102026-7137483",
-          "ref": "jn-102026-7137483",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "グローバルアカウントマネージャー（ハードウェア・ソフトウェア担当／バイリンガル）",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%EF%BC%88%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%BB%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E6%8B%85%E5%BD%93%EF%BC%8F%E3%83%90%E3%82%A4%E3%83%AA%E3%83%B3%E3%82%AC%E3%83%AB%EF%BC%89/ref/jn-102026-7137359",
-          "ref": "jn-102026-7137359",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
-        },
-        {
-          "title": "Business Immigration Associate/ Attorney",
-          "company": "via Page Executive",
-          "location": "",
-          "url": "https://www.pageexecutive.com/job-detail/business-immigration-associate-atlanta/ref/jn-112026-7144980",
-          "ref": "jn-112026-7144980",
-          "kind": "page",
-          "to": "dubai@pageexecutive.com",
-          "emailVia": "Page Executive Middle East Desk"
         }
       ]
     },
@@ -2348,8 +2283,8 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 71,
-      "ms": 13483,
+      "count": 68,
+      "ms": 13924,
       "note": null,
       "jobs": [
         {
@@ -2389,16 +2324,16 @@
           "emailVia": "Corporate HR Mailbox (salt.ae)"
         },
         {
-          "title": "Chief Executive Officer",
-          "company": "Business Umbrella - Recruitment, Training, Consulting, Licensing Healthcare Education Real estate",
-          "location": "Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-business-umbrella-recruitment-training-consulting-licensing-healthcare-education-real-estate-4489703295",
-          "ref": "4489703295",
-          "posted": "2026-11-15",
+          "title": "Branch Senior Executive Officer / Managing Director",
+          "company": "MultiPass",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/branch-senior-executive-officer-managing-director-at-multipass-4491153198",
+          "ref": "4491153198",
+          "posted": "2026-11-17",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@businessumbrella.com",
-          "emailVia": "Corporate HR Mailbox (businessumbrella.com)"
+          "to": "careers@multipass.ae",
+          "emailVia": "Corporate HR Mailbox (multipass.ae)"
         },
         {
           "title": "Chief Executive Officer",
@@ -2437,18 +2372,6 @@
           "emailVia": "Corporate HR Mailbox (mercans.ae)"
         },
         {
-          "title": "Managing Director - Glass & Aluminium Business Unit",
-          "company": "Greenbull Group Dubai",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-glass-aluminium-business-unit-at-greenbull-group-dubai-4468528895",
-          "ref": "4468528895",
-          "posted": "2026-09-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@greenbull.ae",
-          "emailVia": "Corporate HR Mailbox (greenbull.ae)"
-        },
-        {
           "title": "Chief Executive Officer",
           "company": "LI Architects",
           "location": "Abu Dhabi Emirate, United Arab Emirates",
@@ -2461,16 +2384,28 @@
           "emailVia": "Corporate HR Mailbox (liarchitects.com)"
         },
         {
-          "title": "Chief Executive Officer (CEO)",
-          "company": "INVISIBLE HAND",
+          "title": "Chief Executive Officer",
+          "company": "Daikan Hospitality Group",
           "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-ceo-at-invisible-hand-4490288606",
-          "ref": "4490288606",
-          "posted": "2026-11-16",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
+          "ref": "4470924431",
+          "posted": "2026-09-23",
           "kind": "page",
           "src": "linkedin",
-          "to": "careers@invisiblehand.com",
-          "emailVia": "Corporate HR Mailbox (invisiblehand.com)"
+          "to": "careers@daikanhospitality.com",
+          "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
+        },
+        {
+          "title": "Head of India",
+          "company": "Taptap Send",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/head-of-india-at-taptap-send-4483864744",
+          "ref": "4483864744",
+          "posted": "2026-10-28",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@taptapsend.ae",
+          "emailVia": "Corporate HR Mailbox (taptapsend.ae)"
         },
         {
           "title": "General Manager–O&M(Wastewater Treatment/Utilities/Environmental Services)- UAE",
@@ -2533,6 +2468,18 @@
           "emailVia": "Corporate HR Mailbox (algahwa.ae)"
         },
         {
+          "title": "General Manager",
+          "company": "Mackenzie Jones Middle East",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-mackenzie-jones-middle-east-4490424287",
+          "ref": "4490424287",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@mackenziejones.com",
+          "emailVia": "Corporate HR Mailbox (mackenziejones.com)"
+        },
+        {
           "title": "General Manager – Lebanese Restaurant",
           "company": "Addmind Hospitality",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2545,6 +2492,30 @@
           "emailVia": "Corporate HR Mailbox (addmindhospitality.com)"
         },
         {
+          "title": "Global General Manager - CCC",
+          "company": "Honeywell Technologies",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/global-general-manager-ccc-at-honeywell-technologies-4491123983",
+          "ref": "4491123983",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@honeywelltechnologies.com",
+          "emailVia": "Corporate HR Mailbox (honeywelltechnologies.com)"
+        },
+        {
+          "title": "General Manager - BeatBAB",
+          "company": "7 Management",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-beatbab-at-7-management-4489018145",
+          "ref": "4489018145",
+          "posted": "2026-11-11",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@management.ae",
+          "emailVia": "Corporate HR Mailbox (management.ae)"
+        },
+        {
           "title": "General Manager",
           "company": "Pearl Frame™",
           "location": "Dubai, United Arab Emirates",
@@ -2555,54 +2526,6 @@
           "src": "linkedin",
           "to": "careers@pearlframe.ae",
           "emailVia": "Corporate HR Mailbox (pearlframe.ae)"
-        },
-        {
-          "title": "Store Director - Dubai Mall",
-          "company": "Hermès",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/store-director-dubai-mall-at-herm%C3%A8s-4474293511",
-          "ref": "4474293511",
-          "posted": "2026-10-27",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@herm.ae",
-          "emailVia": "Corporate HR Mailbox (herm.ae)"
-        },
-        {
-          "title": "General Manager Operations",
-          "company": "Galaxy Interior Design",
-          "location": "United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-operations-at-galaxy-interior-design-4489724181",
-          "ref": "4489724181",
-          "posted": "2026-11-16",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@galaxyinterior.com",
-          "emailVia": "Corporate HR Mailbox (galaxyinterior.com)"
-        },
-        {
-          "title": "General Manager",
-          "company": "Roasters Specialty Coffee House",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-roasters-specialty-coffee-house-4490709111",
-          "ref": "4490709111",
-          "posted": "2026-11-13",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@roastersspecialty.com",
-          "emailVia": "Corporate HR Mailbox (roastersspecialty.com)"
-        },
-        {
-          "title": "Director of Operations",
-          "company": "PROPUP Property Management",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-of-operations-at-propup-property-management-4487159140",
-          "ref": "4487159140",
-          "posted": "2026-11-09",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@propupproperty.com",
-          "emailVia": "Corporate HR Mailbox (propupproperty.com)"
         },
         {
           "title": "Director of Operations",
@@ -2689,18 +2612,6 @@
           "emailVia": "Corporate HR Mailbox (ghobash.ae)"
         },
         {
-          "title": "Event Operations Director",
-          "company": "WUDUH",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/event-operations-director-at-wuduh-4482543740",
-          "ref": "4482543740",
-          "posted": "2026-10-28",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@wuduh.ae",
-          "emailVia": "Corporate HR Mailbox (wuduh.ae)"
-        },
-        {
           "title": "Operations Director - Gulf Region",
           "company": "ProPosition Management Search",
           "location": "Abu Dhabi Emirate, United Arab Emirates",
@@ -2711,6 +2622,30 @@
           "src": "linkedin",
           "to": "careers@propositionmanagement.com",
           "emailVia": "Corporate HR Mailbox (propositionmanagement.com)"
+        },
+        {
+          "title": "Director — BAU (Business-As-Usual), Payroll & SaaS Operations",
+          "company": "Mercans",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-%E2%80%94-bau-business-as-usual-payroll-saas-operations-at-mercans-4480708737",
+          "ref": "4480708737",
+          "posted": "2026-10-20",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@mercans.ae",
+          "emailVia": "Corporate HR Mailbox (mercans.ae)"
+        },
+        {
+          "title": "Director of Palace Operations",
+          "company": "Mandarin Oriental",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-palace-operations-at-mandarin-oriental-4473267958",
+          "ref": "4473267958",
+          "posted": "2026-11-12",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@mandarinoriental.com",
+          "emailVia": "Corporate HR Mailbox (mandarinoriental.com)"
         },
         {
           "title": "Chief Executive Officer",
@@ -2738,18 +2673,6 @@
         },
         {
           "title": "Chief Executive Officer",
-          "company": "Daikan Hospitality Group",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
-          "ref": "4470924431",
-          "posted": "2026-09-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@daikanhospitality.com",
-          "emailVia": "Corporate HR Mailbox (daikanhospitality.com)"
-        },
-        {
-          "title": "Chief Executive Officer",
           "company": "Confidential Careers",
           "location": "Dubai, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-confidential-careers-4490584769",
@@ -2771,6 +2694,18 @@
           "src": "linkedin",
           "to": "careers@blofin.ae",
           "emailVia": "Corporate HR Mailbox (blofin.ae)"
+        },
+        {
+          "title": "Artificial Intelligence Co-Founder / CFO (100 % remote) (m/f/d)",
+          "company": "EWOR",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/artificial-intelligence-co-founder-cfo-100-%25-remote-m-f-d-at-ewor-4490186273",
+          "ref": "4490186273",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@ewor.ae",
+          "emailVia": "Corporate HR Mailbox (ewor.ae)"
         },
         {
           "title": "Chief Operating Officer",
@@ -2821,18 +2756,6 @@
           "emailVia": "Corporate HR Mailbox (propositionmanagement.com)"
         },
         {
-          "title": "Chief Operating Officer - eCommerce",
-          "company": "Salt",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-ecommerce-at-salt-4488913515",
-          "ref": "4488913515",
-          "posted": "2026-11-13",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@salt.ae",
-          "emailVia": "Corporate HR Mailbox (salt.ae)"
-        },
-        {
           "title": "Chief Operating Officer",
           "company": "BloFin",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2857,18 +2780,6 @@
           "emailVia": "Corporate HR Mailbox (zelonabrands.com)"
         },
         {
-          "title": "Managing Director",
-          "company": "RTC1 Recruitment Services",
-          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-at-rtc1-recruitment-services-4488210994",
-          "ref": "4488210994",
-          "posted": "2026-11-11",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@rtc1recruitment.com",
-          "emailVia": "Corporate HR Mailbox (rtc1recruitment.com)"
-        },
-        {
           "title": "MEA Business Execution Head, Managing Director",
           "company": "Citi",
           "location": "Dubai, Dubai, United Arab Emirates",
@@ -2891,18 +2802,6 @@
           "src": "linkedin",
           "to": "careers@deel.ae",
           "emailVia": "Corporate HR Mailbox (deel.ae)"
-        },
-        {
-          "title": "Head of India",
-          "company": "Taptap Send",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/head-of-india-at-taptap-send-4483864744",
-          "ref": "4483864744",
-          "posted": "2026-10-28",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@taptapsend.ae",
-          "emailVia": "Corporate HR Mailbox (taptapsend.ae)"
         },
         {
           "title": "Country Manager (UAE)",
@@ -2975,18 +2874,6 @@
           "src": "linkedin",
           "to": "careers@theglobal.ae",
           "emailVia": "Corporate HR Mailbox (theglobal.ae)"
-        },
-        {
-          "title": "Commercial Director - Canopy by Hilton Dubai The Greens",
-          "company": "Hilton",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-director-canopy-by-hilton-dubai-the-greens-at-hilton-4489106681",
-          "ref": "4489106681",
-          "posted": "2026-11-09",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@hilton.ae",
-          "emailVia": "Corporate HR Mailbox (hilton.ae)"
         },
         {
           "title": "Senior Director - Commercial",
@@ -3085,6 +2972,18 @@
           "emailVia": "Corporate HR Mailbox (affle.ae)"
         },
         {
+          "title": "Regional Commercial Director (Luxury Beauty & Fragrance)",
+          "company": "HRsource",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/regional-commercial-director-luxury-beauty-fragrance-at-hrsource-4481885093",
+          "ref": "4481885093",
+          "posted": "2026-10-27",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@hrsource.ae",
+          "emailVia": "Corporate HR Mailbox (hrsource.ae)"
+        },
+        {
           "title": "Supply Chain Director",
           "company": "Independent Food Company",
           "location": "Dubai, United Arab Emirates",
@@ -3109,30 +3008,6 @@
           "emailVia": "Corporate HR Mailbox (anduril.ae)"
         },
         {
-          "title": "Director Global Logistics",
-          "company": "SUMWON STUDIOS",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-global-logistics-at-sumwon-studios-4485813774",
-          "ref": "4485813774",
-          "posted": "2026-11-05",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@sumwonstudios.com",
-          "emailVia": "Corporate HR Mailbox (sumwonstudios.com)"
-        },
-        {
-          "title": "Head of Spare Parts Supply",
-          "company": "Hilti Emirates",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/head-of-spare-parts-supply-at-hilti-emirates-4477088512",
-          "ref": "4477088512",
-          "posted": "2026-10-15",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "careers@hiltiemirates.com",
-          "emailVia": "Corporate HR Mailbox (hiltiemirates.com)"
-        },
-        {
           "title": "Regional Head of Supply Chain (APAC) – Global Speciality Chemicals Manufacturer",
           "company": "Bramwith Consulting",
           "location": "Dubai, United Arab Emirates",
@@ -3145,6 +3020,18 @@
           "emailVia": "Corporate HR Mailbox (bramwithconsulting.com)"
         },
         {
+          "title": "Managing Director, Global Sourcing-Dubai",
+          "company": "SanMar",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-global-sourcing-dubai-at-sanmar-4490978201",
+          "ref": "4490978201",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@sanmar.ae",
+          "emailVia": "Corporate HR Mailbox (sanmar.ae)"
+        },
+        {
           "title": "Emirati Principal Lead- Supply Chain",
           "company": "Michael Page",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
@@ -3155,18 +3042,6 @@
           "src": "linkedin",
           "to": "clientservicesdubai@michaelpage.ae",
           "emailVia": "Michael Page UAE Executive Desk"
-        },
-        {
-          "title": "Director, Procurement",
-          "company": "Confidential",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-procurement-at-confidential-4488912418",
-          "ref": "4488912418",
-          "posted": "2026-11-13",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "executive.talent@linkedin-mena.com",
-          "emailVia": "Executive Talent Desk"
         },
         {
           "title": "Global Director, Business Process and Partnerships",
@@ -3193,6 +3068,18 @@
           "emailVia": "Corporate HR Mailbox (veloraaviation.com)"
         },
         {
+          "title": "Senior Procurement Leadership",
+          "company": "DowMartin Ltd",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/senior-procurement-leadership-at-dowmartin-ltd-4491173219",
+          "ref": "4491173219",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@dowmartin.ae",
+          "emailVia": "Corporate HR Mailbox (dowmartin.ae)"
+        },
+        {
           "title": "Procurement Director",
           "company": "Wasael Property Management",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
@@ -3203,6 +3090,18 @@
           "src": "linkedin",
           "to": "careers@wasaelproperty.com",
           "emailVia": "Corporate HR Mailbox (wasaelproperty.com)"
+        },
+        {
+          "title": "City Cluster Director of Procurement",
+          "company": "Le Méridien Hotels & Resorts",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/city-cluster-director-of-procurement-at-le-m%C3%A9ridien-hotels-resorts-4488384649",
+          "ref": "4488384649",
+          "posted": "2026-11-10",
+          "kind": "page",
+          "src": "linkedin",
+          "to": "careers@leridien.ae",
+          "emailVia": "Corporate HR Mailbox (leridien.ae)"
         }
       ]
     },
@@ -3214,24 +3113,42 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 30,
-      "ms": 585,
+      "count": 29,
+      "ms": 345,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
-          "company": "via merriam-webster.com",
+          "title": "managing是什么意思_managing的翻译_音标_读音_用法_例句_爱词霸在线词典",
+          "company": "via iciba.com",
           "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "url": "https://www.iciba.com/word?w=managing",
           "kind": "page",
-          "to": "careers@merriam-webster.com",
-          "emailVia": "Employer Domain HR (merriam-webster.com)"
+          "to": "careers@iciba.com",
+          "emailVia": "Employer Domain HR (iciba.com)"
+        },
+        {
+          "title": "managing_百度百科",
+          "company": "via baike.baidu.com",
+          "location": "UAE",
+          "url": "https://baike.baidu.com/item/managing/53060195",
+          "kind": "page",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
         },
         {
           "title": "MANAGING | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/dictionary/english/managing",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "MANAGE中文 (简体)翻译：剑桥词典",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/zhs/%E8%AF%8D%E5%85%B8/%E8%8B%B1%E8%AF%AD-%E6%B1%89%E8%AF%AD-%E7%AE%80%E4%BD%93/manage",
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
@@ -3246,6 +3163,33 @@
           "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
+          "title": "manage_百度百科",
+          "company": "via baike.baidu.com",
+          "location": "UAE",
+          "url": "https://baike.baidu.com/item/manage/5725146",
+          "kind": "page",
+          "to": "careers@baike.baidu.com",
+          "emailVia": "Employer Domain HR (baike.baidu.com)"
+        },
+        {
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/thesaurus/managing",
+          "kind": "page",
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
+        },
+        {
+          "title": "managing - 英中 – Linguee词典",
+          "company": "via cn.linguee.com",
+          "location": "UAE",
+          "url": "https://cn.linguee.com/%E8%8B%B1%E8%AF%AD-%E4%B8%AD%E6%96%87/%E7%BF%BB%E8%AD%AF/managing.html",
+          "kind": "page",
+          "to": "careers@cn.linguee.com",
+          "emailVia": "Employer Domain HR (cn.linguee.com)"
+        },
+        {
           "title": "Managing - definition of managing by The Free Dictionary",
           "company": "via thefreedictionary.com",
           "location": "UAE",
@@ -3255,238 +3199,184 @@
           "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "GENERAL Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/managing",
+          "url": "https://www.merriam-webster.com/dictionary/general",
           "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@merriam-webster.com",
+          "emailVia": "Employer Domain HR (merriam-webster.com)"
         },
         {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via collinsdictionary.com",
+          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
+          "company": "via thegeneral.com",
           "location": "UAE",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "url": "https://www.thegeneral.com/",
           "kind": "page",
-          "to": "careers@collinsdictionary.com",
-          "emailVia": "Employer Domain HR (collinsdictionary.com)"
+          "to": "careers@thegeneral.com",
+          "emailVia": "Employer Domain HR (thegeneral.com)"
         },
         {
-          "title": "Management - Wikipedia",
-          "company": "via en.wikipedia.org",
+          "title": "General (United States) - Wikipedia",
+          "company": "via en.m.wikipedia.org",
           "location": "UAE",
-          "url": "https://en.wikipedia.org/wiki/Management",
+          "url": "https://en.m.wikipedia.org/wiki/General_(United_States)",
           "kind": "page",
-          "to": "careers@en.wikipedia.org",
-          "emailVia": "Employer Domain HR (en.wikipedia.org)"
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
         },
         {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
-          "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "kind": "page",
-          "to": "careers@thesaurus.com",
-          "emailVia": "Employer Domain HR (thesaurus.com)"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "GENERAL | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "url": "https://dictionary.cambridge.org/dictionary/english/general",
           "kind": "page",
           "to": "careers@dictionary.cambridge.org",
           "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
         },
         {
-          "title": "Manage - Definition, Meaning & Synonyms | Vocabulary.com",
+          "title": "General officer - Wikipedia",
+          "company": "via en.m.wikipedia.org",
+          "location": "UAE",
+          "url": "https://en.m.wikipedia.org/wiki/General_officer",
+          "kind": "page",
+          "to": "careers@en.m.wikipedia.org",
+          "emailVia": "Employer Domain HR (en.m.wikipedia.org)"
+        },
+        {
+          "title": "GENERAL | definition in the Cambridge English Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
+          "kind": "page",
+          "to": "careers@dictionary.cambridge.org",
+          "emailVia": "Employer Domain HR (dictionary.cambridge.org)"
+        },
+        {
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
           "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://www.vocabulary.com/dictionary/manage",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page",
           "to": "careers@vocabulary.com",
           "emailVia": "Employer Domain HR (vocabulary.com)"
         },
         {
-          "title": "Wells Fargo Bank | Financial Services & Online Banking",
-          "company": "via wellsfargo.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://www.wellsfargo.com/",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page",
-          "to": "careers@wellsfargo.com",
-          "emailVia": "Employer Domain HR (wellsfargo.com)"
+          "to": "careers@thefreedictionary.com",
+          "emailVia": "Employer Domain HR (thefreedictionary.com)"
         },
         {
-          "title": "Online Banking Help - Wells Fargo",
-          "company": "via wellsfargo.com",
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via generalww.com",
           "location": "UAE",
-          "url": "https://www.wellsfargo.com/help/online-banking/",
+          "url": "https://www.generalww.com/",
           "kind": "page",
-          "to": "careers@wellsfargo.com",
-          "emailVia": "Employer Domain HR (wellsfargo.com)"
+          "to": "careers@generalww.com",
+          "emailVia": "Employer Domain HR (generalww.com)"
         },
         {
-          "title": "Make an Appointment - Wells Fargo",
-          "company": "via appointments.wellsfargo.com",
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
           "location": "UAE",
-          "url": "https://appointments.wellsfargo.com/maa/appointment/",
+          "url": "https://www.dollargeneral.com/",
           "kind": "page",
-          "to": "careers@appointments.wellsfargo.com",
-          "emailVia": "Employer Domain HR (appointments.wellsfargo.com)"
+          "to": "careers@dollargeneral.com",
+          "emailVia": "Employer Domain HR (dollargeneral.com)"
         },
         {
-          "title": "My Accounts - Wells Fargo",
-          "company": "via myaccounts.sec.wellsfargo.com",
+          "title": "Home - Beaver Lake Middle School",
+          "company": "via beaverlake.isd411.org",
           "location": "UAE",
-          "url": "https://myaccounts.sec.wellsfargo.com/servicing_ui/",
+          "url": "https://beaverlake.isd411.org/",
           "kind": "page",
-          "to": "careers@myaccounts.sec.wellsfargo.com",
-          "emailVia": "Employer Domain HR (myaccounts.sec.wellsfargo.com)"
+          "to": "careers@beaverlake.isd411.org",
+          "emailVia": "Employer Domain HR (beaverlake.isd411.org)"
         },
         {
-          "title": "Cash Back Credit Card - Active Cash Visa® Card Wells Fargo",
-          "company": "via creditcards.wellsfargo.com",
+          "title": "Staff - Beaver Lake Middle School",
+          "company": "via beaverlake.isd411.org",
           "location": "UAE",
-          "url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+          "url": "https://beaverlake.isd411.org/staff",
           "kind": "page",
-          "to": "careers@creditcards.wellsfargo.com",
-          "emailVia": "Employer Domain HR (creditcards.wellsfargo.com)"
+          "to": "careers@beaverlake.isd411.org",
+          "emailVia": "Employer Domain HR (beaverlake.isd411.org)"
         },
         {
-          "title": "Wells Fargo - My Accounts",
-          "company": "via myaccounts.sec.wellsfargo.com",
+          "title": "Beaver Lake Middle School in Sammamish, WA - Superpages",
+          "company": "via superpages.com",
           "location": "UAE",
-          "url": "https://myaccounts.sec.wellsfargo.com/",
+          "url": "https://www.superpages.com/sammamish-wa/bpp/beaver-lake-middle-school-4582145",
           "kind": "page",
-          "to": "careers@myaccounts.sec.wellsfargo.com",
-          "emailVia": "Employer Domain HR (myaccounts.sec.wellsfargo.com)"
+          "to": "careers@superpages.com",
+          "emailVia": "Employer Domain HR (superpages.com)"
         },
         {
-          "title": "Points Earning Mastercard | Wells Fargo Choice Privileges®",
-          "company": "via creditcards.wellsfargo.com",
+          "title": "Beaver Lake Middle School in Issaquah, WA 98029 - 425-837...",
+          "company": "via chamberofcommerce.com",
           "location": "UAE",
-          "url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards/",
+          "url": "https://www.chamberofcommerce.com/business-directory/washington/issaquah/middle-school/2014914000-beaver-lake-middle-school",
           "kind": "page",
-          "to": "careers@creditcards.wellsfargo.com",
-          "emailVia": "Employer Domain HR (creditcards.wellsfargo.com)"
+          "to": "careers@chamberofcommerce.com",
+          "emailVia": "Employer Domain HR (chamberofcommerce.com)"
         },
         {
-          "title": "Let’s confirm your new card | Wells Fargo",
-          "company": "via confirmcard.wellsfargo.com",
+          "title": "Beaver Lake Middle School - Sammamish, WA 98029",
+          "company": "via yellowpages.com",
           "location": "UAE",
-          "url": "https://confirmcard.wellsfargo.com/?language=en",
+          "url": "https://www.yellowpages.com/sammamish-wa/mip/beaver-lake-middle-school-4582145",
           "kind": "page",
-          "to": "careers@confirmcard.wellsfargo.com",
-          "emailVia": "Employer Domain HR (confirmcard.wellsfargo.com)"
+          "to": "careers@yellowpages.com",
+          "emailVia": "Employer Domain HR (yellowpages.com)"
         },
         {
-          "title": "Find Wells Fargo bank and ATM locations near you | Wells Fargo",
-          "company": "via locations.wellsfargo.com",
+          "title": "Beaver Lake Middle School on 32nd St in Issaquah, WA - 425-837-4150 ...",
+          "company": "via schools.cmac.ws",
           "location": "UAE",
-          "url": "https://locations.wellsfargo.com/search",
+          "url": "https://schools.cmac.ws/beaver-lake-middle-school/209326/",
           "kind": "page",
-          "to": "careers@locations.wellsfargo.com",
-          "emailVia": "Employer Domain HR (locations.wellsfargo.com)"
+          "to": "careers@schools.cmac.ws",
+          "emailVia": "Employer Domain HR (schools.cmac.ws)"
         },
         {
-          "title": "Find Wells Fargo bank and ATM locations in San Francisco,CA | Wells Fargo",
-          "company": "via locations.wellsfargo.com",
+          "title": "Beaver Lake Middle School in Issaquah, Washington - U.S. News Education",
+          "company": "via usnews.com",
           "location": "UAE",
-          "url": "https://locations.wellsfargo.com/ca/san-francisco",
+          "url": "https://www.usnews.com/education/k12/washington/beaver-lake-middle-school-260450",
           "kind": "page",
-          "to": "careers@locations.wellsfargo.com",
-          "emailVia": "Employer Domain HR (locations.wellsfargo.com)"
+          "to": "careers@usnews.com",
+          "emailVia": "Employer Domain HR (usnews.com)"
         },
         {
-          "title": "DICTIONARY OF NAMES Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "Beaver Lake Middle School in Sammamish, WA - The Real Yellow Pages",
+          "company": "via yellowpages.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/dictionary-of-names",
+          "url": "https://www.yellowpages.com/sammamish-wa/beaver-lake-middle-school",
           "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@yellowpages.com",
+          "emailVia": "Employer Domain HR (yellowpages.com)"
         },
         {
-          "title": "Meanings & Definitions of English Words | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "Beaver Lake Middle School – Issaquah, WA | School Info & Menus",
+          "company": "via schoolmenu.us",
           "location": "UAE",
-          "url": "https://www.dictionary.com/",
+          "url": "https://schoolmenu.us/schools/WA/issaquah/beaver-lake-middle-school-530375001495",
           "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@schoolmenu.us",
+          "emailVia": "Employer Domain HR (schoolmenu.us)"
         },
         {
-          "title": "Mini Crossword - Free Online Game | Dictionary.com",
-          "company": "via play.dictionary.com",
+          "title": "Beaver Lake Middle School - Sammamish, WA",
+          "company": "via yelp.com",
           "location": "UAE",
-          "url": "https://play.dictionary.com/games/daily-crossword-mini",
+          "url": "https://www.yelp.com/biz/beaver-lake-middle-school-sammamish",
           "kind": "page",
-          "to": "careers@play.dictionary.com",
-          "emailVia": "Employer Domain HR (play.dictionary.com)"
-        },
-        {
-          "title": "Easy Crossword - Free Online Game | Dictionary.com",
-          "company": "via play.dictionary.com",
-          "location": "UAE",
-          "url": "https://play.dictionary.com/games/easy-crossword",
-          "kind": "page",
-          "to": "careers@play.dictionary.com",
-          "emailVia": "Employer Domain HR (play.dictionary.com)"
-        },
-        {
-          "title": "How New Words Get Added To Dictionary.com—And How The Dictionary Works",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/articles/getting-words-into-dictionaries",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "FOB Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/browse/fob",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "New Words | Dictionary.com",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/articles/new-words",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "ANTONYMS Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/browse/antonyms",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "THESAURUS Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/browse/thesaurus",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
-        },
-        {
-          "title": "CF Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
-          "location": "UAE",
-          "url": "https://www.dictionary.com/browse/cf",
-          "kind": "page",
-          "to": "careers@dictionary.com",
-          "emailVia": "Employer Domain HR (dictionary.com)"
+          "to": "careers@yelp.com",
+          "emailVia": "Employer Domain HR (yelp.com)"
         }
       ]
     }
