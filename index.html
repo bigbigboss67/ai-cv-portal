@@ -68,6 +68,7 @@
       /* Calm Editorial Precision Light Palette (Default for Effortless Reading) */
       --bg-canvas: #F8FAFC;
       --bg-surface: #FFFFFF;
+      --bg-card: #FFFFFF;
       --bg-elevated: #F1F5F9;
       --bg-glass: rgba(255, 255, 255, 0.92);
       --text-primary: #0F172A;
@@ -108,6 +109,7 @@
     [data-theme="dark"] {
       --bg-canvas: #090D16;
       --bg-surface: #111827;
+      --bg-card: #111827;
       --bg-elevated: #1E293B;
       --bg-glass: rgba(17, 24, 39, 0.90);
       --text-primary: #F8FAFC;
@@ -140,6 +142,11 @@
       padding: 0;
     }
 
+    html {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
     body {
       font-family: var(--font-sans);
       background: var(--bg-canvas);
@@ -149,6 +156,16 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       transition: background-color 220ms var(--ease-out), color 220ms var(--ease-out);
+    }
+
+    @media (max-width: 600px) {
+      .workspace-shell, .page-card, .hero-banner {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      .stepper-nav {
+        overflow-x: auto;
+      }
     }
 
     /* ---------------------------------------------------- TOP MINIMAL 4-PAGE STEPPER BAR */
@@ -3422,7 +3439,7 @@
             </div>
 
             <!-- Active Merged Profile Status Bar inside Drawer (when linked) -->
-            <div id="liActiveMergedBar" style="display:none;margin-top:14px;padding:10px 14px;background:rgba(52,211,153,0.1);border:1px solid #34D399;border-radius:8px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+            <div id="liActiveMergedBar" style="display:none;margin-top:14px;padding:10px 14px;background:rgba(52,211,153,0.1);border:1px solid #34D399;border-radius:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
               <div style="font-size:12px;color:var(--text-primary);" id="liActiveMergedSummary">
                 ✓ Combined Profile Active: 4 roles &middot; 38 skills &middot; 2 education records merged.
               </div>
@@ -10260,6 +10277,48 @@ ${state.cv.name}
 ${state.cv.contact}`;
       }
 
+      if (lang === "fr") {
+        const frTone = isVelocity
+          ? "Mon leadership s'articule autour de la transformation agile, de l'accélération de l'EBITDA et de la structuration d'équipes à haute performance."
+          : "Mon leadership s'appuie sur la gouvernance stratégique, la maîtrise du P&L et l'excellence opérationnelle dans des environnements exigeants.";
+        return `Madame, Monsieur,
+
+Je vous soumets avec grand intérêt ma candidature au poste de ${cleanRole}${refNote} au sein de ${job.company || "votre groupe"} (${job.location || "Émirats Arabes Unis / International"}).
+
+En qualité de ${topRole.title} chez ${topRole.company}, j'ai piloté la performance opérationnelle et financière avec des résultats mesurables :
+• ${b1}
+• ${b2}
+
+${frTone}${ninetyDayBlock}
+
+Vous trouverez ci-joint mon curriculum vitae détaillé. Je me tiens à votre entière disposition pour un entretien confidentiel.
+
+Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+${state.cv.name}
+${state.cv.contact}`;
+      }
+
+      if (lang === "es") {
+        const esTone = isVelocity
+          ? "Mi enfoque directivo combina transformación ágil, crecimiento acelerado del EBITDA y construcción de equipos de alto rendimiento."
+          : "Mi enfoque directivo se centra en la gobernanza corporativa, el control integral de P&L y la excelencia operativa sostenible.";
+        return `Estimados señores:
+
+Me dirijo a ustedes para presentar mi candidatura al puesto de ${cleanRole}${refNote} en ${job.company || "su organización"} (${job.location || "EAU / Internacional"}).
+
+Como ${topRole.title} en ${topRole.company}, lideré la estrategia operativa y comercial logrando resultados verificables:
+• ${b1}
+• ${b2}
+
+${esTone}${ninetyDayBlock}
+
+Adjunto mi currículum vitae actualizado y quedo a su disposición para mantener una entrevista ejecutiva.
+
+Atentamente,
+${state.cv.name}
+${state.cv.contact}`;
+      }
+
       const opening = isAgency
         ? `I am writing regarding the ${cleanRole}${refNote} mandate you are leading on behalf of your client in ${job.location || "the UAE"}.`
         : `I am writing to present my executive candidacy for the ${cleanRole}${refNote} mandate with ${job.company || "your organization"} in ${job.location || "the UAE"}.`;
@@ -10585,7 +10644,8 @@ ${state.cv.contact}`;
       if (toEl && !toEl.value.trim() && job.to) {
         toEl.value = job.to;
       }
-      const from = "rassemkadiri@live.de";
+      const clerkEmail = window.Clerk && window.Clerk.user && window.Clerk.user.primaryEmailAddress ? window.Clerk.user.primaryEmailAddress.emailAddress : "";
+      const from = clerkEmail || (state.cv && state.cv.email && state.cv.email.trim()) || "";
       const to = (toEl && toEl.value.trim()) || job.to || "";
       const subject =
         (subjEl && subjEl.value.trim()) ||
@@ -10649,9 +10709,12 @@ ${state.cv.contact}`;
                 bin += String.fromCharCode.apply(null, r.bytes.subarray(i, i + 0x8000));
               }
               const pdfBase64 = btoa(bin);
+              const clerkToken = window.Clerk && window.Clerk.session ? await window.Clerk.session.getToken().catch(() => "") : "";
+              const sendHeaders = { "Content-Type": "application/json" };
+              if (clerkToken) sendHeaders["Authorization"] = `Bearer ${clerkToken}`;
               const sendRes = await fetch("/api/send", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: sendHeaders,
                 body: JSON.stringify({
                   to,
                   replyTo: from,
@@ -10774,9 +10837,9 @@ ${state.cv.contact}`;
 
       const matches = tm.matchApps(msg, appsMap);
       const best = matches && matches[0];
-      const target = best ? list.find((a) => a.id === best.id) : list[0];
+      const target = best ? list.find((a) => a.id === best.id) : null;
       if (!target) {
-        showToast("Could not match reply to a tracked application.");
+        showToast("No matching tracked application found for this reply.");
         return;
       }
 
@@ -10794,7 +10857,7 @@ ${state.cv.contact}`;
       const label = (tm.CLS_LABEL && tm.CLS_LABEL[cls.cls]) || "Reply";
       const fromAddr = (msg.from && msg.from.address) || "";
       const dateStr = new Date().toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-      const noteLine = `[${dateStr} — ${label}${fromAddr ? " from " + fromAddr : ""}] ${cls.reason || msg.subject || "Reply received"}`;
+      const noteLine = `[${dateStr} — ${label}${fromAddr ? " from " + fromAddr : ""}] ${msg.subject || "Reply received"}`;
       target.notes = target.notes ? `${noteLine}\n${target.notes}` : noteLine;
       saveStoredApplications(list);
       renderApplicationTracker();
@@ -11135,7 +11198,8 @@ ${state.cv.contact}`;
       let saved = null;
       const uid = user && user.id ? user.id : "";
       try {
-        const raw = (uid && localStorage.getItem("ai_cv_portal_cv_user_" + uid)) || localStorage.getItem("ai_cv_portal_cv_last");
+        // Signed-in users only read their own namespaced key (never inherit another user's localStorage CV)
+        const raw = uid ? localStorage.getItem("ai_cv_portal_cv_user_" + uid) : localStorage.getItem("ai_cv_portal_cv_last");
         if (raw) saved = JSON.parse(raw);
       } catch {}
 

@@ -15,6 +15,7 @@
  */
 
 const boards = require("./_boards.js");
+const sec = require("./_security.js");
 
 function extractJsonLdJob(html) {
   const scripts = [...String(html || "").matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -164,6 +165,13 @@ async function handler(req, res) {
     parsedUrl = null;
   }
 
+  if (parsedUrl && !(await sec.isSafePublicUrl(parsedUrl.href))) {
+    return res.status(400).json({
+      ok: false,
+      error: "Blocked unsafe or private network URL.",
+    });
+  }
+
   if (!parsedUrl || isSearchOrCategoryUrl(parsedUrl)) {
     const resolved = await resolveAndEnrichEmails({
       company: hintCompany,
@@ -290,23 +298,16 @@ async function handler(req, res) {
       text: bodyText,
     });
   } catch (err) {
-    const fallback = await resolveAndEnrichEmails({
-      company: hintCompany,
-      title: hintTitle,
-      url: parsedUrl.href,
-      location: hintLocation,
-      source: hintSource,
-    });
-    res.status(200).json({
-      ok: true,
-      source: "fallback-resolver",
-      url: parsedUrl.href,
+    res.status(502).json({
+      ok: false,
+      source: "fetch-error",
+      url: parsedUrl ? parsedUrl.href : rawUrl,
       title: hintTitle,
       company: hintCompany,
       city: hintLocation,
-      emails: fallback.emails,
-      primaryEmail: fallback.primaryEmail,
-      emailVia: fallback.emailVia,
+      emails: [],
+      primaryEmail: "",
+      emailVia: "",
       error: String((err && err.message) || err),
     });
   }

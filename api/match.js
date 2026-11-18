@@ -269,6 +269,7 @@ function rankDaily(listings, sig, prefs, step = []) {
   const where = String(prefs.location || sig.places[0] || "").trim().toLowerCase();
   const gulfWanted = !where || GULF.test(where) || PLACES.some((p) => p.toLowerCase() === where);
   const out = [];
+  const seenKeys = new Set();
   for (const src of (listings && listings.sources) || []) {
     if (src.ok === false && !(src.jobs && src.jobs.length)) continue;
     for (const j of src.jobs || []) {
@@ -321,6 +322,11 @@ function rankDaily(listings, sig, prefs, step = []) {
               to: j.to || "",
             })
           : { email: j.to || "", via: "" };
+
+      const dedupKey = (url || "").split("?")[0].replace(/\/+$/, "").toLowerCase() + "::" + (j.ref || "").toLowerCase();
+      if (seenKeys.has(dedupKey) || (j.ref && seenKeys.has("ref:" + j.ref.toLowerCase()))) continue;
+      seenKeys.add(dedupKey);
+      if (j.ref) seenKeys.add("ref:" + j.ref.toLowerCase());
 
       out.push({
         title,

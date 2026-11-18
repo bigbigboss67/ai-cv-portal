@@ -502,7 +502,7 @@ async function fetchBingRssJobs(query, timeoutMs = 8500) {
     const link = text(first(/<link>([\s\S]*?)<\/link>/i, item));
     const desc = text(first(/<description>([\s\S]*?)<\/description>/i, item));
     if (!link || !/^https?:\/\//i.test(link) || !title) continue;
-    if (/bing\.com|microsoft\.com/i.test(link)) continue;
+    if (/bing\.com|microsoft\.com|iciba\.com|baidu\.com|wikipedia\.org|youdao\.com|dict\./i.test(link)) continue;
     out.push({ title, url: link, content: desc });
   }
   return out;

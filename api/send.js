@@ -2,17 +2,39 @@
  * POST /api/send
  *
  * Sends an application email directly with the generated ATS CV PDF attached
- * using Resend (process.env.RESEND_API_KEY). Sets Reply-To to the candidate's
- * email (rassemkadiri@live.de) so all company replies arrive in their inbox.
+ * using Resend (process.env.RESEND_API_KEY).
  *
- * If RESEND_API_KEY is not configured, returns 501 { ok: false, unconfigured: true }
- * so the frontend falls back seamlessly to .eml + .pdf download.
+ * Security:
+ *  - Requires a valid Clerk Bearer JWT (verified via JWKS)
+ *  - Enforces allowed origin & per-user rate limit (10 sends/min)
+ *  - Derives Reply-To from the authenticated user or explicit validated replyTo (no hardcoded personal email)
  */
+const sec = require("./_security.js");
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 module.exports = async (req, res) => {
   res.setHeader("Content-Type", "application/json; charset=utf-8");
 
   if (req.method !== "POST") {
     return res.status(405).json({ ok: false, error: "Method not allowed" });
+  }
+
+  if (!sec.isAllowedOrigin(req)) {
+    return res.status(403).json({ ok: false, error: "Forbidden origin" });
+  }
+
+  const user = await sec.verifyClerkBearer(req);
+  if (!user || !user.sub) {
+    return res.status(401).json({
+      ok: false,
+      error: "Authentication required. Please sign in to send applications directly.",
+    });
+  }
+
+  const rlKey = `send:${user.sub}:${sec.getClientIp(req)}`;
+  if (!sec.checkRateLimit(rlKey, 10, 60000)) {
+    return res.status(429).json({ ok: false, error: "Rate limit exceeded. Please wait a minute." });
   }
 
   const apiKey = (process.env.RESEND_API_KEY || "").trim();
@@ -34,24 +56,32 @@ module.exports = async (req, res) => {
   }
 
   const { to, replyTo, subject, html, text, pdfBase64, pdfFilename } = body || {};
-  if (!to || !subject || (!html && !text)) {
-    return res.status(400).json({ ok: false, error: "Missing required fields: to, subject, html/text" });
+  const cleanTo = String(to || "").trim();
+  const cleanReplyTo = String(replyTo || user.email || "").trim();
+
+  if (!EMAIL_RE.test(cleanTo) || !subject || (!html && !text)) {
+    return res.status(400).json({
+      ok: false,
+      error: "Missing or invalid required fields: to, subject, html/text",
+    });
   }
 
   const fromAddress = (process.env.RESEND_FROM || "").trim() || "Executive Career Portal <onboarding@resend.dev>";
   const payload = {
     from: fromAddress,
-    to: [String(to).trim()],
-    reply_to: String(replyTo || "rassemkadiri@live.de").trim(),
-    subject: String(subject).trim(),
+    to: [cleanTo],
+    subject: String(subject).trim().slice(0, 300),
     html: html ? String(html) : undefined,
     text: text ? String(text) : undefined,
   };
+  if (EMAIL_RE.test(cleanReplyTo)) {
+    payload.reply_to = cleanReplyTo;
+  }
 
   if (pdfBase64 && pdfFilename) {
     payload.attachments = [
       {
-        filename: String(pdfFilename),
+        filename: String(pdfFilename).replace(/[\\/:*?"<>|]+/g, "-"),
         content: String(pdfBase64),
       },
     ];
