@@ -638,12 +638,67 @@ async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE
     } catch {}
   }
 
+  if (boardId === "jobsae") {
+    for (const r of activeRoles.slice(0, 2)) {
+      try {
+        const html = await fetchText(`https://www.jobs.ae/jobs/${slug(r)}/`, timeoutMs);
+        for (const a of anchors(html, "https://www.jobs.ae")) {
+          if (!/jobs\.ae\/(?:job|jobs)\//i.test(a.href)) continue;
+          const t = cleanJobTitleForMatch(a.text);
+          if (t && t.length >= 4 && t.length <= 120) {
+            addJob({
+              title: t,
+              company: "via Jobs.ae",
+              location: location || "Dubai, UAE",
+              url: a.href,
+              ref: "JOBSAE-" + Math.abs(Array.from(a.href).reduce((acc, c) => (acc * 31 + c.charCodeAt(0)) | 0, 7)).toString(36).slice(0, 6).toUpperCase(),
+              posted: "live",
+              text: t,
+              kind: "page",
+              src: "jobsae",
+            });
+          }
+        }
+      } catch {}
+    }
+  }
+
+  if (boardId === "jobsch") {
+    for (const r of activeRoles.slice(0, 2)) {
+      try {
+        const html = await fetchText(`https://www.jobs.ch/en/vacancies/?term=${encodeURIComponent(r)}`, timeoutMs);
+        for (const a of anchors(html, "https://www.jobs.ch")) {
+          if (!/jobs\.ch\/(?:en|de|fr)\/vacancies\/detail\//i.test(a.href)) continue;
+          const t = cleanJobTitleForMatch(a.text);
+          if (t && t.length >= 4 && t.length <= 120) {
+            addJob({
+              title: t,
+              company: "via Jobs.ch",
+              location: "Switzerland / DACH",
+              url: a.href,
+              ref: "JOBSCH-" + Math.abs(Array.from(a.href).reduce((acc, c) => (acc * 31 + c.charCodeAt(0)) | 0, 7)).toString(36).slice(0, 6).toUpperCase(),
+              posted: "live",
+              text: t,
+              kind: "page",
+              src: "jobsch",
+            });
+          }
+        }
+      } catch {}
+    }
+  }
+
   const siteHostMap = {
     indeed: { host: "ae.indeed.com", src: "indeed", label: "Indeed UAE" },
     dubizzle: { host: "dubizzle.com/jobs", src: "dubizzle", label: "Dubizzle Jobs" },
     bayt: { host: "bayt.com/en/uae/jobs", src: "bayt", label: "Bayt UAE" },
     naukrigulf: { host: "naukrigulf.com", src: "naukrigulf", label: "Naukrigulf" },
     gulftalent: { host: "gulftalent.com/uae/jobs", src: "gulftalent", label: "GulfTalent" },
+    jobsae: { host: "jobs.ae", src: "jobsae", label: "Jobs.ae" },
+    jobsch: { host: "jobs.ch/en/vacancies", src: "jobsch", label: "Jobs.ch" },
+    laimoon: { host: "jobs.laimoon.com", src: "laimoon", label: "Laimoon Jobs" },
+    founditgulf: { host: "founditgulf.com", src: "founditgulf", label: "Foundit Gulf" },
+    stepstone: { host: "stepstone.de/stellenangebote", src: "stepstone", label: "StepStone DE" },
   };
 
   const cfg = siteHostMap[boardId];

@@ -387,8 +387,8 @@ async function liveBoards(sig, prefs, step = []) {
     });
   }
 
-  // 2. Indeed, Dubizzle, Bayt, Naukrigulf, GulfTalent Live Role Search
-  for (const boardId of ["indeed", "dubizzle", "bayt", "naukrigulf", "gulftalent"]) {
+  // 2. Indeed, Dubizzle, Bayt, Naukrigulf, GulfTalent, Jobs.ae, Jobs.ch, Laimoon, Foundit Gulf & StepStone Live Role Search
+  for (const boardId of ["indeed", "dubizzle", "bayt", "naukrigulf", "gulftalent", "jobsae", "jobsch", "laimoon", "founditgulf", "stepstone"]) {
     tasks.push({
       id: boardId,
       label: `${boardId.toUpperCase()} Live Search: ${roles.join(", ")} in ${where}`,

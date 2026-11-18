@@ -42,7 +42,7 @@ async function collectFreshDailyFeed(roles, location) {
       id: "linkedin",
       run: () => boards.fetchText(boards.linkedInUrl(r, location), 8500).then(boards.parseLinkedIn),
     })),
-    ...["indeed", "dubizzle", "bayt", "gulftalent", "naukrigulf"].map((boardId) => ({
+    ...["indeed", "dubizzle", "bayt", "gulftalent", "naukrigulf", "jobsae", "jobsch", "laimoon", "founditgulf", "stepstone"].map((boardId) => ({
       id: boardId,
       run: () => boards.fetchBoardByRoleSearch(boardId, roles.slice(0, 3), location, 8500),
     })),
