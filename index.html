@@ -10014,19 +10014,31 @@
       const btnGroup = document.createElement("div");
       btnGroup.style.cssText = "display:flex;align-items:center;gap:6px;";
 
+      // The proposed text is an editable box: change, delete or add words before applying.
+      let proposedInput = null;
+      const applyProposed = () => {
+        const val = proposedInput ? proposedInput.value : newText;
+        el.value = val;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+        clearYellowSpotHighlights();
+        if (typeof renderLiveCvSheet === "function") renderLiveCvSheet();
+        if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+        showToast(
+          !val.trim()
+            ? "Field cleared."
+            : /\[[^\]\n]{1,80}\]/.test(val)
+              ? "Field updated. Replace the [bracket] with your own figure before sending."
+              : "✓ Field updated with your text."
+        );
+      };
+
       if (hasDiff) {
         const updateBtn = document.createElement("button");
         updateBtn.type = "button";
         updateBtn.className = "spot-update-btn";
         updateBtn.textContent = "Update Field →";
-        updateBtn.onclick = () => {
-          el.value = newText;
-          el.dispatchEvent(new Event("input", { bubbles: true }));
-          clearYellowSpotHighlights();
-          if (typeof renderLiveCvSheet === "function") renderLiveCvSheet();
-          if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
-          showToast("✓ Field updated with the new text!");
-        };
+        updateBtn.title = "Apply the text in the NEW box (Ctrl+Enter)";
+        updateBtn.onclick = applyProposed;
         btnGroup.appendChild(updateBtn);
       }
 
@@ -10044,9 +10056,27 @@
         diffGrid.className = "spot-diff-grid";
         diffGrid.innerHTML = `
           <div class="spot-diff-old"><strong>OLD (Current):</strong><br/>${escapeHtml(oldText)}</div>
-          <div class="spot-diff-new"><strong>NEW (Proposed):</strong><br/>${escapeHtml(newText)}</div>
+          <div class="spot-diff-new"><label><strong>NEW (Proposed) &middot; editable:</strong></label></div>
         `;
+        proposedInput = document.createElement("textarea");
+        proposedInput.className = "spot-diff-new-input";
+        proposedInput.value = newText;
+        proposedInput.setAttribute("aria-label", "Proposed text, editable before applying");
+        proposedInput.style.cssText =
+          "display:block;width:100%;box-sizing:border-box;margin-top:6px;padding:8px 10px;border:1px solid rgba(16,185,129,0.45);" +
+          "border-radius:8px;background:rgba(255,255,255,0.75);color:inherit;font:inherit;line-height:1.5;resize:vertical;min-height:72px;";
+        const fit = () => {
+          proposedInput.style.height = "auto";
+          proposedInput.style.height = Math.min(proposedInput.scrollHeight + 2, 420) + "px";
+        };
+        proposedInput.addEventListener("input", fit);
+        proposedInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); applyProposed(); }
+          else if (e.key === "Escape") { e.preventDefault(); clearYellowSpotHighlights(); }
+        });
+        diffGrid.querySelector(".spot-diff-new").appendChild(proposedInput);
         callout.appendChild(diffGrid);
+        requestAnimationFrame(fit);
       }
 
       // Place full-width above .writer-bullet-row if inside a bullet row, otherwise directly above el
@@ -10092,7 +10122,9 @@
         .replace(/^Worked on\b/i, "Delivered")
         .replace(/\bworked on\b/gi, "executed");
       if (!/\d|%|aed|eur|usd/i.test(improved)) {
-        improved = `${improved.replace(/\.$/, "")}, delivering +18% EBITDA margin expansion, 98.5% SLA compliance, and measurable operational scale.`;
+        // A gap for the candidate's own figure, never an invented one. The pre-flight
+        // check blocks sending while any [bracket] is left in the CV.
+        improved = `${improved.replace(/\.$/, "")}, delivering [your measurable result: %, AED or team size].`;
       }
       return improved;
     }
