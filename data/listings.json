@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T12:18:31.286Z",
-  "total": 252,
+  "generatedAt": "2026-11-19T13:33:57.059Z",
+  "total": 183,
   "staleSources": 1,
   "sources": [
     {
@@ -11,165 +11,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 313,
-      "note": null,
-      "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "INDEED-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "INDEED-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "INDEED-SJHA7R",
-          "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "INDEED-HBU3YW",
-          "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "INDEED-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "INDEED-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL Definition & Meaning - Merriam-Webster",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/general",
-          "ref": "INDEED-M4XQ1M",
-          "posted": "live",
-          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "INDEED-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "INDEED-MFXMB7",
-          "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "INDEED-NPLFOU",
-          "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "INDEED-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "INDEED-JLXGDG",
-          "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
-          "ref": "INDEED-TDDQIK",
-          "posted": "live",
-          "text": "Synonyms for GENERAL: overall, generic, common, universal, broad, blanket, global, wide; Antonyms of GENERAL: particular, individual, local, component, partial, regional, divisional, fragmentary",
-          "kind": "page",
-          "src": "indeed"
-        },
-        {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via Indeed UAE",
-          "location": "Dubai",
-          "url": "https://www.generalww.com/",
-          "ref": "INDEED-YK554V",
-          "posted": "live",
-          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
-          "kind": "page",
-          "src": "indeed"
-        }
-      ]
+      "count": 0,
+      "ms": 494,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "dubizzle",
@@ -179,165 +24,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 302,
-      "note": null,
-      "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "DUBIZZLE-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "DUBIZZLE-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "DUBIZZLE-SJHA7R",
-          "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "DUBIZZLE-HBU3YW",
-          "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "DUBIZZLE-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "DUBIZZLE-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL Definition & Meaning - Merriam-Webster",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/general",
-          "ref": "DUBIZZLE-M4XQ1M",
-          "posted": "live",
-          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "DUBIZZLE-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "DUBIZZLE-MFXMB7",
-          "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "DUBIZZLE-NPLFOU",
-          "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "DUBIZZLE-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "DUBIZZLE-JLXGDG",
-          "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
-          "ref": "DUBIZZLE-TDDQIK",
-          "posted": "live",
-          "text": "Synonyms for GENERAL: overall, generic, common, universal, broad, blanket, global, wide; Antonyms of GENERAL: particular, individual, local, component, partial, regional, divisional, fragmentary",
-          "kind": "page",
-          "src": "dubizzle"
-        },
-        {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via Dubizzle Jobs",
-          "location": "Dubai",
-          "url": "https://www.generalww.com/",
-          "ref": "DUBIZZLE-YK554V",
-          "posted": "live",
-          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
-          "kind": "page",
-          "src": "dubizzle"
-        }
-      ]
+      "count": 0,
+      "ms": 290,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "bayt",
@@ -347,165 +37,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 354,
-      "note": null,
-      "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "BAYT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "BAYT-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "BAYT-SJHA7R",
-          "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "BAYT-HBU3YW",
-          "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "BAYT-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "BAYT-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL Definition & Meaning - Merriam-Webster",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/general",
-          "ref": "BAYT-M4XQ1M",
-          "posted": "live",
-          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "BAYT-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "BAYT-MFXMB7",
-          "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "BAYT-NPLFOU",
-          "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "BAYT-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "BAYT-JLXGDG",
-          "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
-          "ref": "BAYT-TDDQIK",
-          "posted": "live",
-          "text": "Synonyms for GENERAL: overall, generic, common, universal, broad, blanket, global, wide; Antonyms of GENERAL: particular, individual, local, component, partial, regional, divisional, fragmentary",
-          "kind": "page",
-          "src": "bayt"
-        },
-        {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via Bayt UAE",
-          "location": "Dubai",
-          "url": "https://www.generalww.com/",
-          "ref": "BAYT-YK554V",
-          "posted": "live",
-          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
-          "kind": "page",
-          "src": "bayt"
-        }
-      ]
+      "count": 0,
+      "ms": 319,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "gulftalent",
@@ -515,165 +50,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 403,
-      "note": null,
-      "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "GULFTALENT-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "GULFTALENT-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "GULFTALENT-SJHA7R",
-          "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "GULFTALENT-HBU3YW",
-          "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "GULFTALENT-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "GULFTALENT-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL Definition & Meaning - Merriam-Webster",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/general",
-          "ref": "GULFTALENT-M4XQ1M",
-          "posted": "live",
-          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "GULFTALENT-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "GULFTALENT-MFXMB7",
-          "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "GULFTALENT-NPLFOU",
-          "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "GULFTALENT-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "GULFTALENT-JLXGDG",
-          "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
-          "ref": "GULFTALENT-TDDQIK",
-          "posted": "live",
-          "text": "Synonyms for GENERAL: overall, generic, common, universal, broad, blanket, global, wide; Antonyms of GENERAL: particular, individual, local, component, partial, regional, divisional, fragmentary",
-          "kind": "page",
-          "src": "gulftalent"
-        },
-        {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via GulfTalent",
-          "location": "Dubai",
-          "url": "https://www.generalww.com/",
-          "ref": "GULFTALENT-YK554V",
-          "posted": "live",
-          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
-          "kind": "page",
-          "src": "gulftalent"
-        }
-      ]
+      "count": 0,
+      "ms": 369,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "naukrigulf",
@@ -683,165 +63,10 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 253,
-      "note": null,
-      "jobs": [
-        {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "ref": "NAUKRIGULF-U90QMM",
-          "posted": "live",
-          "text": "Synonyms for MANAGING: overseeing, controlling, supervisory, directing, senior, reigning, high-level, main; Antonyms of MANAGING: less, second, lower, last, subordinate, secondary, lesser, ancillary",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
-          "ref": "NAUKRIGULF-FTAAHZ",
-          "posted": "live",
-          "text": "The meaning of MANAGE is to handle or direct with a degree of skill. How to use manage in a sentence. Synonym Discussion of Manage.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
-          "ref": "NAUKRIGULF-SJHA7R",
-          "posted": "live",
-          "text": "MANAGING definition: 1. present participle of manage 2. to succeed in doing or dealing with something, especially…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "Managing - definition of managing by The Free Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/managing",
-          "ref": "NAUKRIGULF-HBU3YW",
-          "posted": "live",
-          "text": "Define managing. managing synonyms, managing pronunciation, managing translation, English dictionary definition of managing. v. man·aged , man·ag·ing , man·ag·es v. tr. 1. a. To have charge of; direct or administer: manage a company; manage a portfolio of assets. See Synonyms at...",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "MANAGING Definition & Meaning | Dictionary.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/managing",
-          "ref": "NAUKRIGULF-3HQYJY",
-          "posted": "live",
-          "text": "MANAGING definition: having administrative control or authority See examples of managing used in a sentence.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
-          "ref": "NAUKRIGULF-CO2WU2",
-          "posted": "live",
-          "text": "When you have a job as well as children to look after, you have to learn how to manage your time. I saw a harried-looking mother at the checkout trying to manage two small children and a mountain of shopping. This mousse says it's designed to make hair glossy and easier to manage.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL Definition & Meaning - Merriam-Webster",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/dictionary/general",
-          "ref": "NAUKRIGULF-M4XQ1M",
-          "posted": "live",
-          "text": "The meaning of GENERAL is involving, applicable to, or affecting the whole. How to use general in a sentence.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "The General® Car Insurance | Get a Quote to Insure Your Car",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thegeneral.com/",
-          "ref": "NAUKRIGULF-TR94BC",
-          "posted": "live",
-          "text": "Shop The General® car insurance and get a free quote today. Explore our auto insurance options to find the coverage you need at affordable rates.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL | English meaning - Cambridge Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/dictionary/english/general",
-          "ref": "NAUKRIGULF-MFXMB7",
-          "posted": "live",
-          "text": "GENERAL definition: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.thefreedictionary.com/General",
-          "ref": "NAUKRIGULF-NPLFOU",
-          "posted": "live",
-          "text": "1. of, pertaining to, or affecting all persons or things belonging to a group, category, or system: a general meeting of members; a general amnesty. 2. of, pertaining to, or true of such persons or things in the main; common to most; usual: the general mood of the people.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL | definition in the Cambridge English Dictionary",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/general",
-          "ref": "NAUKRIGULF-6I7BS2",
-          "posted": "live",
-          "text": "GENERAL meaning: 1. involving or relating to most or all people, things, or places, especially when these are…. Learn more.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.dictionary.com/browse/general",
-          "ref": "NAUKRIGULF-JLXGDG",
-          "posted": "live",
-          "text": "GENERAL definition: of or relating to all persons or things belonging to a group or category. See examples of general used in a sentence.",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
-          "ref": "NAUKRIGULF-TDDQIK",
-          "posted": "live",
-          "text": "Synonyms for GENERAL: overall, generic, common, universal, broad, blanket, global, wide; Antonyms of GENERAL: particular, individual, local, component, partial, regional, divisional, fragmentary",
-          "kind": "page",
-          "src": "naukrigulf"
-        },
-        {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via Naukrigulf",
-          "location": "Dubai",
-          "url": "https://www.generalww.com/",
-          "ref": "NAUKRIGULF-YK554V",
-          "posted": "live",
-          "text": "Official website of GENERAL (GENERAL Inc.), featuring air conditioning products, tech solutions, company information, and news.",
-          "kind": "page",
-          "src": "naukrigulf"
-        }
-      ]
+      "count": 0,
+      "ms": 244,
+      "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+      "jobs": []
     },
     {
       "id": "ahk",
@@ -852,41 +77,14 @@
         "lang": "de"
       },
       "ok": true,
-      "count": 10,
-      "ms": 1507,
+      "count": 8,
+      "ms": 54,
       "bytes": 214316,
       "note": null,
       "jobs": [
         {
-          "title": "Member Directory",
-          "company": "AHK VAE / member company",
-          "location": "UAE",
-          "url": "https://vae.ahk.de/en/members/member-directory",
-          "kind": "page",
-          "to": "info@ahkuae.com",
-          "emailVia": "AHK German Emirati Chamber Desk"
-        },
-        {
-          "title": "Board of Directors & Honorary Advisory Board",
-          "company": "AHK VAE / member company",
-          "location": "UAE",
-          "url": "https://vae.ahk.de/en/members/board-of-directors-honorary-advisory-board",
-          "kind": "page",
-          "to": "info@ahkuae.com",
-          "emailVia": "AHK German Emirati Chamber Desk"
-        },
-        {
-          "title": "Your Partner for International Trade Fair Participation",
-          "company": "AHK VAE / member company",
-          "location": "UAE",
-          "url": "https://vae.ahk.de/en/trade-fairs/your-partner-for-international-trade-fair-participation",
-          "kind": "page",
-          "to": "info@ahkuae.com",
-          "emailVia": "AHK German Emirati Chamber Desk"
-        },
-        {
-          "title": "Filetype: pdf Research Manager (Part Time Role) (m/f/d) Filesize: 217.30 kb",
-          "company": "AHK VAE / member company",
+          "title": "Research Manager (Part Time Role) (m/f/d)",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/content/pdf-download/1018902/20640111?inLanguage=eng-GB",
           "kind": "page",
@@ -894,8 +92,17 @@
           "emailVia": "AHK German Emirati Chamber Desk"
         },
         {
+          "title": "CEO (m/f/d) Pakistan",
+          "company": "AHK VAE / Member Company",
+          "location": "UAE",
+          "url": "https://careers.departer.de/job/37645/ceo-m-f-d-pakistan",
+          "kind": "page",
+          "to": "info@ahkuae.com",
+          "emailVia": "AHK German Emirati Chamber Desk"
+        },
+        {
           "title": "Interim General Manager (m/f/d) Middle East",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/37612/interim-general-manager-m-f-d-middle-east",
           "kind": "page",
@@ -904,7 +111,7 @@
         },
         {
           "title": "Managing Director (m/f/d) GCC",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/37479/managing-director-m-f-d-gcc",
           "kind": "page",
@@ -913,7 +120,7 @@
         },
         {
           "title": "Receptionist and Telephone Operator (f/m/d) - The Embassy of the Federal Republic of Germany in Abu Dhabi",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://workdrive.zohoexternal.com/file/w51976dc660526f9d45d698d266a9f3ceb9d0",
           "kind": "document",
@@ -922,7 +129,7 @@
         },
         {
           "title": "Treasury and Investment Manager (m/f/d) - Departer",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/36254/treasury-amd-investment-manager-m-f-d",
           "kind": "page",
@@ -931,7 +138,7 @@
         },
         {
           "title": "Regional Sales Manager (m/f/d) Extrusion Technology, GCC - Departer",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://careers.departer.de/job/36119/regional-sales-manager-m-f-d-extrusion-technology-gcc",
           "kind": "page",
@@ -940,7 +147,7 @@
         },
         {
           "title": "Internship at the AHK",
-          "company": "AHK VAE / member company",
+          "company": "AHK VAE / Member Company",
           "location": "UAE",
           "url": "https://vae.ahk.de/en/services/career-in-the-uae/internship-at-the-ahk",
           "kind": "page",
@@ -959,7 +166,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 3857,
+      "ms": 1377,
       "bytes": 148733,
       "note": null,
       "jobs": [
@@ -1074,8 +281,8 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 2581,
-      "bytes": 819859,
+      "ms": 468,
+      "bytes": 819899,
       "note": null,
       "jobs": [
         {
@@ -1189,7 +396,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 289,
+      "ms": 60,
       "bytes": 174385,
       "note": null,
       "jobs": [
@@ -1504,7 +711,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1276,
+      "ms": 387,
       "bytes": 285784,
       "note": null,
       "jobs": [
@@ -1816,7 +1023,7 @@
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
       "ok": false,
       "count": 68,
-      "ms": 6274,
+      "ms": 1531,
       "error": "HTTP 429 from www.linkedin.com",
       "stale": true,
       "staleSince": "2026-11-17T12:36:58.287Z",
@@ -2648,22 +1855,15 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 24,
-      "ms": 368,
+      "count": 27,
+      "ms": 336,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
           "kind": "page"
         },
         {
@@ -2671,6 +1871,13 @@
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
           "kind": "page"
         },
         {
@@ -2688,10 +1895,31 @@
           "kind": "page"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via thesaurus.com",
+          "location": "UAE",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via collinsdictionary.com",
+          "location": "UAE",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via managementlegend.com",
+          "location": "UAE",
+          "url": "https://www.managementlegend.com/what-is-management",
           "kind": "page"
         },
         {
@@ -2699,6 +1927,13 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/general",
+          "kind": "page"
+        },
+        {
+          "title": "Personas - Banco General Panamá",
+          "company": "via bgeneral.com",
+          "location": "UAE",
+          "url": "https://www.bgeneral.com/",
           "kind": "page"
         },
         {
@@ -2716,10 +1951,10 @@
           "kind": "page"
         },
         {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page"
         },
         {
@@ -2730,94 +1965,87 @@
           "kind": "page"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/general",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page"
         },
         {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via merriam-webster.com",
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
           "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
+          "url": "https://www.dollargeneral.com/",
           "kind": "page"
         },
         {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via generalww.com",
+          "title": "H5533-017-1: UPMC for Life Essential Rx (PPO) | Medicare.org",
+          "company": "via medicare.org",
           "location": "UAE",
-          "url": "https://www.generalww.com/",
+          "url": "https://www.medicare.org/medicare-advantage-plans/plan/H5533-017-1/",
           "kind": "page"
         },
         {
-          "title": "Used 2005 Toyota Camry Specs & Features | Edmunds",
-          "company": "via edmunds.com",
+          "title": "UPMC for Life Essential Rx (PPO) - MedicarePlans.com",
+          "company": "via medicareplans.com",
           "location": "UAE",
-          "url": "https://www.edmunds.com/toyota/camry/2005/features-specs/",
+          "url": "https://www.medicareplans.com/medicare-advantage/plan/H5533-017-1/",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota Camry Dimensions, Sizes & Specifications · Spec Sizes",
-          "company": "via specsizes.com",
+          "title": "H5533-017-2: UPMC for Life Essential Rx (PPO) | Medicare.org",
+          "company": "via medicare.org",
           "location": "UAE",
-          "url": "https://specsizes.com/toyota/camry/2005",
+          "url": "https://www.medicare.org/medicare-advantage-plans/plan/H5533-017-2/",
           "kind": "page"
         },
         {
-          "title": "Used 2005 Toyota Camry Standard Specs & Features | Edmunds",
-          "company": "via edmunds.com",
+          "title": "UPMC for Life Essential Rx (PPO) - MedicarePlans.com",
+          "company": "via medicareplans.com",
           "location": "UAE",
-          "url": "https://www.edmunds.com/toyota/camry/2005/st-100395306/features-specs/",
+          "url": "https://www.medicareplans.com/medicare-advantage/plan/H5533-017-2/",
           "kind": "page"
         },
         {
-          "title": "Toyota Camry Dimensions 2005 - Length, Width, Height ... - CarsGuide",
-          "company": "via carsguide.com.au",
+          "title": "UPMC for Life Essential Rx (PPO): 2027 benefits and costs",
+          "company": "via factsonmedicare.com",
           "location": "UAE",
-          "url": "https://www.carsguide.com.au/toyota/camry/car-dimensions/2005",
+          "url": "https://www.factsonmedicare.com/medicare-advantage/upmc-for-life-essential-rx-ppo-2027-h5533-017-1/",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota Camry Specifications & Dimensions - Conceptcarz.com",
-          "company": "via conceptcarz.com",
+          "title": "2026 UPMC for Life Plans - UPMC Health Plan",
+          "company": "via upmchealthplan.com",
           "location": "UAE",
-          "url": "https://www.conceptcarz.com/s8379/toyota-camry.aspx",
+          "url": "https://www.upmchealthplan.com/medicare-brokers/medicare/2026-upmc-for-life-plans",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota Camry Dimensions - iSeeCars.com",
-          "company": "via iseecars.com",
+          "title": "Understanding Your Cost of Care | UPMC Health Plan",
+          "company": "via upmchealthplan.com",
           "location": "UAE",
-          "url": "https://www.iseecars.com/car/2005-toyota-camry-dimensions",
+          "url": "https://www.upmchealthplan.com/members/health-plan-basics/cost-of-care",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota Camry Dimensions - carclubsusa.com",
-          "company": "via carclubsusa.com",
+          "title": "Estimate Your Out-of-Pocket Costs for UPMC East | UPMC",
+          "company": "via upmc.com",
           "location": "UAE",
-          "url": "https://carclubsusa.com/toyota/camry/specs/dimensions/2005/",
+          "url": "https://www.upmc.com/locations/hospitals/east/patients-and-visitors/patient-information/price-estimates",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota Camry Specs, Dimensions & Colors | Cars.com",
-          "company": "via cars.com",
+          "title": "Price Estimates FAQs | UPMC",
+          "company": "via upmc.com",
           "location": "UAE",
-          "url": "https://www.cars.com/research/toyota-camry-2005/specs/",
+          "url": "https://www.upmc.com/patients-visitors/paying-bill/no-surprises-act/price-estimate-faqs",
           "kind": "page"
         },
         {
-          "title": "2005 Toyota camry 2.4L Specifications| Toyota Specs",
-          "company": "via toyota-specs.com",
+          "title": "2026 UPMC for Life PPO Essential Care Rx (PPO) in PA Plan Benefits Details",
+          "company": "via q1medicare.com",
           "location": "UAE",
-          "url": "https://toyota-specs.com/cars/2005/camry2.4/specs.php",
-          "kind": "page"
-        },
-        {
-          "title": "2005 Toyota Camry Specifications - The Car Connection",
-          "company": "via thecarconnection.com",
-          "location": "UAE",
-          "url": "https://www.thecarconnection.com/specifications/toyota_camry_2005",
+          "url": "https://q1medicare.com/maplandetails/2025/?countyCode=42001&state=PA&contractId=H5533&planId=017&segmentId=1&plan=UPMC%20for%20Life%20PPO%20Essential%20Care%20Rx%20(PPO)",
           "kind": "page"
         }
       ]
