@@ -53,6 +53,7 @@ function titles(text) {
 
 const PLACES = require("../data/places.json");
 const boards = require("./_boards.js");
+const sec = require("./_security.js");
 
 function places(text) {
   return PLACES.filter((p) => new RegExp(`\\b${p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(text));
@@ -495,12 +496,12 @@ async function hydrateTopLinkedInMatches(matches, maxHydrate = 5) {
 
 async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
-  res.setHeader("Access-Control-Allow-Origin", "*");
 
   if (req.method === "OPTIONS") {
     res.status(200).end();
     return;
   }
+  if (!sec.guardPublic(req, res, "match", 10)) return;
 
   if (req.method !== "POST") {
     res.status(405).json({ error: "POST only" });

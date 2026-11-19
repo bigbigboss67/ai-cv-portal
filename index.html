@@ -3339,7 +3339,7 @@
                 </span>
               </div>
               <div style="font-size:12.5px;color:var(--text-muted);margin-top:2px;" id="cvUploadStatus">
-                Currently loaded: <strong>Ahmed Al-Mansoor &mdash; Chief Operating Officer / General Manager CV</strong>
+                Currently loaded: <strong>Sample CV (not a real person) &mdash; upload yours to replace it</strong>
               </div>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
@@ -3455,7 +3455,7 @@
           <!-- Step 1B: Clear 2-Tab Mode Switcher -->
           <div class="mode-switch-bar" role="tablist">
             <button type="button" class="mode-switch-btn active" id="modeBtnAnalyzer" onclick="switchStep1Mode('analyzer')">
-              <span>Option A: 1-Click HR Director Analyzer</span>
+              <span>Option A: CV Wording Check</span>
               <span style="font-size:11px;background:var(--accent-emerald-soft);color:var(--accent-emerald);padding:2px 8px;border-radius:999px;">Recommended</span>
             </button>
             <button type="button" class="mode-switch-btn" id="modeBtnWriter" onclick="switchStep1Mode('writer')">
@@ -3469,15 +3469,15 @@
             <div class="hr-score-banner">
               <div class="score-ring-box">
                 <div class="score-circle" id="hrScoreCircle">
-                  <div id="hrScoreNum">76%</div>
-                  <span>Readiness</span>
+                  <div id="hrScoreNum">--%</div>
+                  <span>Quantified</span>
                 </div>
                 <div>
                   <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#34D399;font-weight:700;">
-                    HR Director Executive Audit
+                    CV Wording Check (rule-based)
                   </div>
                   <div style="font-size:17px;font-weight:700;margin-top:2px;" id="hrAuditHeadline">
-                    6 Wording Upgrades Ready to Boost Shortlist Rate to 98%
+                    Checking your CV&hellip;
                   </div>
                   <div style="font-size:12.5px;color:#CBD5E1;margin-top:2px;" id="hrAuditSub">
                     Target Mandate: <strong>General Manager &middot; Managing Director &middot; Operations Director &middot; COO</strong>
@@ -3487,20 +3487,20 @@
 
               <div class="score-pillars">
                 <div class="pillar-mini">
-                  <span>Executive Verbs</span>
-                  <strong id="pilVerbs">74% &rarr; 98%</strong>
+                  <span>Bullets with action verbs</span>
+                  <strong id="pilVerbs">--</strong>
                 </div>
                 <div class="pillar-mini">
-                  <span>P&amp;L &amp; KPIs</span>
-                  <strong id="pilKpis">78% &rarr; 99%</strong>
+                  <span>Bullets with a number</span>
+                  <strong id="pilKpis">--</strong>
                 </div>
                 <div class="pillar-mini">
-                  <span>Board Authority</span>
-                  <strong id="pilBoard">72% &rarr; 96%</strong>
+                  <span>Passive phrases</span>
+                  <strong id="pilBoard">--</strong>
                 </div>
                 <div class="pillar-mini">
-                  <span>ATS Keywords</span>
-                  <strong id="pilAts">80% &rarr; 98%</strong>
+                  <span>Skills listed</span>
+                  <strong id="pilAts">--</strong>
                 </div>
               </div>
             </div>
@@ -3547,12 +3547,12 @@
                   Modify Your Current CV or Start Writing a Brand-New Executive CV
                 </div>
                 <div style="font-size:12.5px;color:#CBD5E1;margin-top:2px;">
-                  Use the 1-Click AI Ghostwriter buttons below or type directly into any section.
+                  Use the template buttons below (they insert wording and [bracket] gaps, never invented numbers) or type directly into any section.
                 </div>
               </div>
               <div style="display:flex;gap:8px;flex-wrap:wrap;">
                 <button type="button" class="btn-ai-magic" onclick="aiPolishEntireCvInWriter()">
-                  1-Click AI Polish Entire CV
+                  Strengthen Opening Verbs in Entire CV
                 </button>
                 <button type="button" class="btn-pill-secondary" style="background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.25);" onclick="toggleCvDrawer()">
                   Preview Live A4 CV
@@ -3583,13 +3583,13 @@
               <div class="writer-section-head">
                 <div class="writer-section-title">1. Candidate Identity, Target Role Headline &amp; Contact</div>
                 <button type="button" class="btn-ai-magic" onclick="aiGenerateHeadlineAndFocus()">
-                  1-Click AI Write Executive Headline
+                  Use Target Roles as Headline
                 </button>
               </div>
               <div class="writer-grid-2" style="margin-bottom:10px;">
                 <div>
                   <label class="writer-field-lbl">Full Name</label>
-                  <input type="text" class="writer-input" id="wrNameInput" oninput="updateWriterTopFields()" placeholder="e.g. AHMED AL-MANSOOR" />
+                  <input type="text" class="writer-input" id="wrNameInput" oninput="updateWriterTopFields()" placeholder="Your full name" />
                 </div>
                 <div>
                   <label class="writer-field-lbl">Executive Target Role Headline</label>
@@ -3643,13 +3643,13 @@
               <div class="writer-section-head">
                 <div class="writer-section-title">2. Executive Summary &amp; Board Pitch</div>
                 <div style="display:flex;gap:6px;flex-wrap:wrap;">
-                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('General Manager')">AI Write GM Summary</button>
-                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Managing Director')">AI Write MD Summary</button>
-                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Operations Director')">AI Write Operations Director Summary</button>
-                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('COO & Turnaround')">AI Write COO P&amp;L Summary</button>
+                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('General Manager')">GM Summary Template</button>
+                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Managing Director')">MD Summary Template</button>
+                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('Operations Director')">Operations Director Summary Template</button>
+                  <button type="button" class="btn-ai-magic" onclick="aiWriteSummaryForRole('COO & Turnaround')">COO Summary Template</button>
                 </div>
               </div>
-              <textarea class="writer-textarea" rows="4" id="wrSummaryInput" oninput="updateWriterTopFields()" placeholder="Write your executive summary or click any AI button above..."></textarea>
+              <textarea class="writer-textarea" rows="4" id="wrSummaryInput" oninput="updateWriterTopFields()" placeholder="Write your executive summary or insert a template above and fill the [brackets]..."></textarea>
             </div>
 
             <!-- Section 3: Experience -->
@@ -3860,7 +3860,7 @@
       <div class="page-hero-card">
         <div>
           <div class="section-eyebrow">Page 2 of 4 &middot; Strict Role-Locked Live Search</div>
-          <h2 class="section-h1">Find Live Roles Across 15 Job Boards</h2>
+          <h2 class="section-h1">Find Live Roles Across Job Boards</h2>
           <p class="section-lead">
             Choose the exact roles you are targeting below (such as <strong>General Manager</strong>, <strong>Managing Director</strong>, or <strong>Operations Director</strong>). Click any job card to automatically tailor your CV and Cover Letter on Page 3.
           </p>
@@ -3891,7 +3891,7 @@
                     Daily New Job Fetcher: <span style="color:var(--accent-emerald);">ACTIVE</span>
                   </span>
                   <span id="dailyLastSyncBadge" style="font-family:var(--font-mono);font-size:11px;font-weight:600;background:var(--accent-emerald-soft);color:var(--accent-emerald);padding:2px 8px;border-radius:6px;">
-                    Synced Today &middot; Auto-Schedule: 08:00 GST Daily
+                    Not synced yet &middot; Auto-Schedule: 08:00 GST Daily
                   </span>
                 </div>
                 <div id="dailyCvMatchSummaryText" style="font-size:12.5px;color:var(--text-secondary);margin-top:4px;line-height:1.45;">
@@ -3942,7 +3942,7 @@
               </select>
 
               <button class="btn-next-glow" id="btnLiveInternetSearch" onclick="runLiveInternetRoleSearch()">
-                Search All 15 Job Boards Live
+                Search Job Boards Live
               </button>
             </div>
 
@@ -4033,10 +4033,10 @@
               <!-- Auto-Fetched Recipient Email Preview on Page 3 -->
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;padding:8px 12px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);border-radius:8px;margin-bottom:12px;font-size:12px;">
                 <div>
-                  <span style="font-weight:700;color:var(--accent-emerald);">Auto-Fetched Recipient Email (To:):</span>
-                  <strong id="step3AutoEmailBadge" style="font-family:var(--font-mono);color:var(--text-primary);margin-left:6px;">careers@enic-uae.ae</strong>
+                  <span style="font-weight:700;color:var(--accent-emerald);">Recipient Email (To:):</span>
+                  <strong id="step3AutoEmailBadge" style="font-family:var(--font-mono);color:var(--text-primary);margin-left:6px;"></strong>
                 </div>
-                <span id="step3AutoEmailVia" style="font-size:11px;color:var(--text-secondary);font-weight:600;">Pre-filled on Page 4 &middot; Ready to Send Directly</span>
+                <span id="step3AutoEmailVia" style="font-size:11px;color:var(--text-secondary);font-weight:600;">Select a job on Page 2</span>
               </div>
 
               <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
@@ -4202,7 +4202,7 @@
                 </div>
                 <div class="review-kpi-box clickable-spot" id="kpiBoxViolations" onclick="jumpToTextViolationSpot()" title="Click to jump directly to the flagged text">
                   <div class="kpi-label">Text Violations</div>
-                  <div class="kpi-value" id="kpiValViolations">0 Detected</div>
+                  <div class="kpi-value" id="kpiValViolations">--</div>
                   <div class="kpi-hint" id="kpiHintViolations">Passive phrases audited</div>
                   <button type="button" id="btnFixViolationsSpot" onclick="event.stopPropagation(); jumpToTextViolationSpot();" style="display:none;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid #ef4444;background:rgba(239,68,68,0.12);color:#dc2626;font-size:11px;font-weight:700;cursor:pointer;">
                     Go to Flagged Text &rarr;
@@ -4210,13 +4210,13 @@
                 </div>
                 <div class="review-kpi-box clickable-spot" id="kpiBoxLetterLength" onclick="jumpToCoverLetterSpot()" title="Click to jump to the Cover Letter editor on Page 3">
                   <div class="kpi-label">Cover Letter Length</div>
-                  <div class="kpi-value" id="kpiValLetterLength">240 Words</div>
+                  <div class="kpi-value" id="kpiValLetterLength">--</div>
                   <div class="kpi-hint">Target: 150&ndash;320 words &middot; Click to edit</div>
                 </div>
                 <div class="review-kpi-box" id="kpiBoxAtsPdf">
-                  <div class="kpi-label">ATS Vector PDF</div>
-                  <div class="kpi-value" id="kpiValAtsPdf" style="color:var(--accent-emerald);">Verified 100%</div>
-                  <div class="kpi-hint">Selectable NotoSans text</div>
+                  <div class="kpi-label">CV PDF Format</div>
+                  <div class="kpi-value" id="kpiValAtsPdf">Text PDF</div>
+                  <div class="kpi-hint">Built as selectable text (NotoSans), not an image</div>
                 </div>
               </div>
 
@@ -4239,11 +4239,11 @@
 
               <!-- 6-Point Verification Checklist Grid -->
               <div class="review-checklist-grid" id="reviewChecklistGrid">
-                <div class="review-check-item pass" id="chkRecipientEmail">
-                  <span class="check-icon" id="chkRecipientIcon">&#10003;</span>
+                <div class="review-check-item" id="chkRecipientEmail">
+                  <span class="check-icon" id="chkRecipientIcon">&ndash;</span>
                   <div>
-                    <strong>Recipient HR Email Locked</strong>
-                    <p class="check-desc" id="chkRecipientDesc">Recipient address verified from job posting.</p>
+                    <strong>Recipient Address</strong>
+                    <p class="check-desc" id="chkRecipientDesc">Not checked yet.</p>
                   </div>
                 </div>
                 <div class="review-check-item pass" id="chkEmployerLock">
@@ -4288,7 +4288,7 @@
             <div class="dispatch-summary-grid">
               <div class="dispatch-meta-box">
                 <div class="dispatch-meta-lbl">Attached ATS CV PDF</div>
-                <div class="dispatch-meta-val" id="step4PdfBadgeText">CV - AHMED AL-MANSOOR - General Manager.pdf</div>
+                <div class="dispatch-meta-val" id="step4PdfBadgeText">CV - Your Name - Role.pdf</div>
                 <div style="font-size:11.5px;color:var(--text-muted);margin-top:2px;">Selectable NotoSans Text PDF &middot; ATS Verified</div>
               </div>
               <div class="dispatch-meta-box">
@@ -4301,10 +4301,10 @@
             <!-- Recipient & Subject Inputs -->
             <div style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:14px;padding:20px;margin-bottom:22px;">
               <div style="margin-bottom:14px;">
-                <label class="writer-field-lbl">Recipient HR / Recruiter Email (To:) &mdash; Auto-Fetched from Job Listing</label>
+                <label class="writer-field-lbl" for="exportToEmail">Recipient Email (To:) &mdash; only addresses published by the employer, or one you type</label>
                 <div style="display:flex;gap:8px;flex-wrap:wrap;">
-                  <input type="text" id="exportToEmail" placeholder="Auto-fetching recipient email from job listing..."
-                         oninput="if(state.selectedJob){state.selectedJob.to = this.value.trim(); if(typeof syncTrackerApplicationEmail==='function') syncTrackerApplicationEmail(state.selectedJob, this.value.trim());} if(typeof runPreFlightAudit==='function') runPreFlightAudit(true);"
+                  <input type="text" id="exportToEmail" placeholder="No address published yet: type one you have verified"
+                         oninput="if(state.selectedJob){state.selectedJob.to = this.value.trim(); state.selectedJob.emailVia = this.value.trim() ? 'Entered by you' : ''; if(typeof syncTrackerApplicationEmail==='function') syncTrackerApplicationEmail(state.selectedJob, this.value.trim());} if(typeof runPreFlightAudit==='function') runPreFlightAudit(true);"
                          style="flex:1;padding:11px 14px;border-radius:10px;border:1.5px solid var(--accent-emerald);font-family:var(--font-mono);font-weight:700;font-size:13.5px;background:var(--bg-surface);color:var(--text-primary);" />
                   <button class="btn-pill-secondary" id="btnFindHrEmail" onclick="autoFindRecipientEmail({ forceDeep: true })">
                     Re-Verify / Deep-Scan Email
@@ -4528,7 +4528,7 @@
 
               <div class="cv-header-block hd" id="cvHeaderBlockEl">
                 <div class="cv-header-text" style="flex:1;min-width:0;">
-                  <h1 class="cv-name" id="cvNameEl" style="margin:0;">AHMED AL-MANSOOR</h1>
+                  <h1 class="cv-name" id="cvNameEl" style="margin:0;">SAMPLE CANDIDATE</h1>
                   <div class="cv-headline role" id="cvHeadlineEl">Chief Operating Officer &middot; General Manager &middot; Managing Director</div>
                   <div class="cv-contact-line meta" id="cvContactEl"></div>
                 </div>
@@ -4820,9 +4820,9 @@
        1. INITIAL CANDIDATE CV PROFILE & HR DIRECTOR SUGGESTION ENGINE
        ------------------------------------------------------------------ */
     const DEMO_CV = {
-      name: "AHMED AL-MANSOOR",
+      name: "SAMPLE CANDIDATE",
       headline: "Chief Operating Officer · General Manager · Managing Director",
-      contact: "Dubai, United Arab Emirates · +971 50 482 9104 · ahmed.almansoor.exec@gmail.com · linkedin.com/in/ahmedalmansoor",
+      contact: "Dubai, United Arab Emirates · +971 50 000 0000 · name@example.com · linkedin.com/in/your-profile",
       photoUrl: "",
       showPhoto: false,
       photoShape: "squircle",
@@ -4874,303 +4874,25 @@
     };
 
     /* Curated Multi-Board Executive Listings (Guaranteed Instant Availability across ALL Boards + Live API Hydration) */
-    const MULTI_BOARD_SEED_JOBS = [
-      {
-        id: "ind-gm-1",
-        title: "General Manager — Multi-Site Industrial & Distribution Operations",
-        matchedRole: "General Manager",
-        company: "Emirates National Industrial Corp (via Indeed UAE)",
-        location: "Dubai, UAE",
-        source: "indeed",
-        url: "https://ae.indeed.com/jobs?q=General+Manager&l=Dubai",
-        ref: "IND-GM-8841",
-        posted: "live",
-        score: 97,
-        to: "careers@enic-uae.ae",
-        emailVia: "Emirates National Industrial Corp HR",
-        requirements: [
-          "Full P&L ownership ($80M–$150M) across UAE and GCC manufacturing & distribution operations",
-          "Proven track record as General Manager or Managing Director leading 300+ multi-disciplinary staff",
-          "Board reporting, EBITDA margin expansion, Lean Six Sigma, and supply chain modernization"
-        ],
-        text: "We are seeking an experienced General Manager in Dubai, UAE to assume full P&L responsibility for our regional industrial and logistics operations. Key responsibilities include directing multi-site manufacturing, optimizing end-to-end supply chain and procurement, presenting quarterly strategy to the Board, and driving EBITDA growth across the UAE and KSA."
-      },
-      {
-        id: "dbz-md-1",
-        title: "Managing Director — Commercial & Trading Group",
-        matchedRole: "Managing Director",
-        company: "Al Khaleej Holding Group (Dubizzle Verified)",
-        location: "Dubai, UAE",
-        source: "dubizzle",
-        url: "https://dubai.dubizzle.com/jobs/",
-        ref: "DBZ-MD-4092",
-        posted: "live",
-        score: 96,
-        to: "careers@alkhaleejholding.ae",
-        emailVia: "Al Khaleej Holding Group HR",
-        requirements: [
-          "Managing Director / General Manager mandate overseeing commercial strategy, wholesale distribution & operations",
-          "Strong GCC market network, stakeholder governance, and working-capital optimization",
-          "12+ years senior executive leadership in the UAE / Middle East"
-        ],
-        text: "Managing Director required in Dubai for a diversified commercial, logistics, and building materials group. You will report directly to the Chairman, lead 5 division heads, own the consolidated group P&L, and spearhead regional expansion across Dubai, Abu Dhabi, and Riyadh."
-      },
-      {
-        id: "li-od-1",
-        title: "Operations Director — MENA Supply Chain & Manufacturing",
-        matchedRole: "Operations Director",
-        company: "OMNIYAT / Regional Industrial Holdings",
-        location: "Dubai, UAE",
-        source: "linkedin",
-        url: "https://www.linkedin.com/jobs/search/?keywords=Operations%20Director&location=United%20Arab%20Emirates",
-        ref: "LI-OD-9210",
-        posted: "live",
-        score: 95,
-        to: "careers@omniyat.com",
-        emailVia: "OMNIYAT Executive Talent Acquisition",
-        requirements: [
-          "Operations Director / VP Operations experience across multi-site industrial, logistics, or real-estate operations",
-          "Operational turnaround, KPI governance, CAPEX/OPEX control, and ERP/SAP transformation",
-          "Cross-functional leadership of plant managers, procurement, and QHSE teams"
-        ],
-        text: "Operations Director based in Dubai, UAE. Lead end-to-end operational execution, supply chain resilience, procurement cost reduction, and multi-site SLA compliance across our UAE and GCC portfolio."
-      },
-      {
-        id: "bayt-gm-1",
-        title: "General Manager — Logistics, Fleet & Supply Chain",
-        matchedRole: "General Manager",
-        company: "Gulf Horizon Logistics & Mobility (via Bayt)",
-        location: "Abu Dhabi, UAE",
-        source: "bayt",
-        url: "https://www.bayt.com/en/uae/jobs/general-manager-jobs/",
-        ref: "BAYT-GM-5531",
-        posted: "live",
-        score: 94,
-        to: "careers@gulfhorizonlogistics.ae",
-        emailVia: "Gulf Horizon Logistics HR",
-        requirements: [
-          "General Manager with deep expertise in logistics, fleet operations, import/export, and 3PL distribution",
-          "Full P&L accountability, contract negotiation, and government stakeholder relations in Abu Dhabi & Dubai",
-          "Demonstrated success scaling revenue and operational efficiency"
-        ],
-        text: "General Manager sought in Abu Dhabi, UAE to lead our 3PL logistics, warehousing, and fleet operations. The ideal candidate brings strong P&L governance, procurement leadership, and enterprise client management."
-      },
-      {
-        id: "gt-md-1",
-        title: "Managing Director — GCC Industrial & Engineering",
-        matchedRole: "Managing Director",
-        company: "Middle East Engineering Consortium (GulfTalent)",
-        location: "Dubai, UAE",
-        source: "gulftalent",
-        url: "https://www.gulftalent.com/uae/jobs/title/managing-director",
-        ref: "GT-MD-7120",
-        posted: "live",
-        score: 94,
-        to: "careers@meec-engineering.ae",
-        emailVia: "Middle East Engineering Consortium HR",
-        requirements: [
-          "Managing Director or Chief Operating Officer background in industrial, engineering, or B2B manufacturing",
-          "Turnaround leadership, joint-venture governance, and strategic commercial growth across UAE & Saudi Arabia",
-          "Bilingual English/Arabic or English/German highly valued"
-        ],
-        text: "Managing Director mandate in Dubai overseeing GCC engineering, manufacturing, and project delivery operations. Full board-reporting autonomy and P&L accountability."
-      },
-      {
-        id: "nk-od-1",
-        title: "Operations Director — Regional Manufacturing & Plant Operations",
-        matchedRole: "Operations Director",
-        company: "Arabian Manufacturing Industries (via Naukrigulf)",
-        location: "Sharjah / Dubai, UAE",
-        source: "naukrigulf",
-        url: "https://www.naukrigulf.com/operations-director-jobs-in-uae",
-        ref: "NK-OD-3389",
-        posted: "live",
-        score: 92,
-        to: "careers@arabianmanufacturing.ae",
-        emailVia: "Arabian Manufacturing Industries HR",
-        requirements: [
-          "Operations Director / Plant Director with Lean Six Sigma, OEE improvement, and multi-plant leadership",
-          "Cost optimization, inventory turnaround, and ISO/HSE compliance across GCC facilities"
-        ],
-        text: "Seeking an Operations Director in the UAE to direct multi-plant manufacturing, Lean Six Sigma continuous improvement, procurement, and regional distribution."
-      },
-      {
-        id: "pe-coo-1",
-        title: "Chief Operating Officer (COO) — Diversified Family Conglomerate",
-        matchedRole: "Chief Operating Officer",
-        company: "via Page Executive Middle East",
-        location: "Dubai, UAE",
-        source: "pageexecutive",
-        url: "https://www.pageexecutive.com/jobs/",
-        ref: "PE-COO-6014",
-        posted: "live",
-        score: 95,
-        to: "dubai@pageexecutive.com",
-        emailVia: "Page Executive Middle East Desk",
-        requirements: [
-          "Chief Operating Officer / Group GM mandate overseeing 4 operating subsidiaries in retail, industrial & real estate",
-          "Board advisory, capital allocation, post-merger integration, and digital/ERP transformation"
-        ],
-        text: "Page Executive is retained by a premier UAE family conglomerate to appoint a Chief Operating Officer (COO) in Dubai with proven General Management and P&L turnaround credentials."
-      },
-      {
-        id: "mp-gm-1",
-        title: "General Manager — UAE & KSA Operations",
-        matchedRole: "General Manager",
-        company: "via Michael Page UAE",
-        location: "Dubai, UAE",
-        source: "michaelpage",
-        url: "https://www.michaelpage.ae/jobs",
-        ref: "MP-GM-4419",
-        posted: "live",
-        score: 93,
-        to: "clientservicesdubai@michaelpage.ae",
-        emailVia: "Michael Page UAE Executive Desk",
-        requirements: [
-          "General Manager with full commercial and operational P&L responsibility across UAE and Saudi Arabia",
-          "Supply chain, distributor management, and executive team leadership"
-        ],
-        text: "Michael Page UAE is recruiting a General Manager based in Dubai to lead regional operations, commercial growth, and P&L performance across the Gulf."
-      },
-      {
-        id: "dep-md-1",
-        title: "Managing Director (Geschäftsführer) — Middle East Subsidiary",
-        matchedRole: "Managing Director",
-        company: "via Departer — The German Headhunter",
-        location: "Dubai, UAE",
-        source: "departer",
-        url: "https://careers.departer.de/",
-        ref: "DEP-MD-2088",
-        posted: "live",
-        score: 93,
-        to: "info@departer.com",
-        emailVia: "Departer German Headhunter MEA Desk",
-        requirements: [
-          "Managing Director / General Manager to lead the Dubai hub of a German Mittelstand industrial leader",
-          "Direct reporting to German HQ Board; full MENA P&L, sales, and service operations responsibility"
-        ],
-        text: "Our client, a leading German industrial manufacturer, is appointing a Managing Director in Dubai, UAE through Departer to scale its Middle East & Africa operations."
-      },
-      {
-        id: "ch-od-1",
-        title: "Director of Operations — Corporate & Industrial Services",
-        matchedRole: "Operations Director",
-        company: "via Charterhouse Middle East",
-        location: "Dubai, UAE",
-        source: "charterhouse",
-        url: "https://www.charterhouseme.ae/jobs/",
-        ref: "CH-OD-5190",
-        posted: "live",
-        score: 91,
-        to: "info@charterhouse.ae",
-        emailVia: "Charterhouse Middle East Recruitment",
-        requirements: [
-          "Director of Operations overseeing service delivery, SLA governance, procurement, and 250+ staff",
-          "Proven UAE executive leadership and P&L management"
-        ],
-        text: "Charterhouse Middle East is seeking a Director of Operations in Dubai to drive operational excellence, margin improvement, and enterprise transformation."
-      },
-      {
-        id: "ahk-gm-1",
-        title: "General Manager / Geschäftsführer — German Industrial Automation Hub",
-        matchedRole: "General Manager",
-        company: "AHK German Emirati Chamber / DACH Tech Group",
-        location: "Dubai & Abu Dhabi, UAE",
-        source: "departer",
-        url: "https://careers.departer.de/job/gm-german-tech",
-        ref: "AHK-GM-9102",
-        posted: "live",
-        score: 96,
-        to: "info@ahkdubai.com",
-        emailVia: "AHK German Emirati Chamber Desk",
-        requirements: [
-          "German-speaking mandate: Fluent German (Muttersprachler / C2) and English executive communication required",
-          "Full P&L and board reporting to DACH headquarters in Munich / Stuttgart",
-          "Directing precision manufacturing, industrial automation, and regional sales distribution across UAE & KSA"
-        ],
-        text: "Leading German industrial technology conglomerate, represented via AHK Dubai and Departer, is hiring a bilingual German/English General Manager (Geschäftsführer) to oversee their regional operations, client engineering contracts, and P&L across the GCC."
-      },
-      {
-        id: "pe-fr-1",
-        title: "Directeur Général / General Manager — Francophone Infrastructure & Energy",
-        matchedRole: "General Manager",
-        company: "TotalEnergies / French Engineering Consortium (via Page Executive)",
-        location: "Dubai, UAE",
-        source: "pageexecutive",
-        url: "https://www.pageexecutive.com/jobs/directeur-general-french",
-        ref: "PE-FR-8820",
-        posted: "live",
-        score: 95,
-        to: "dubai@pageexecutive.com",
-        emailVia: "Page Executive Francophone MEA Desk",
-        requirements: [
-          "French-speaking mandate: Fluent French and English executive capability for French HQ & Francophone operations",
-          "Directing major EPC, sustainable infrastructure, and energy supply-chain ventures",
-          "Full corporate governance, consortium joint-venture oversight, and €120M+ P&L"
-        ],
-        text: "Page Executive is retained by a premier French industrial & energy group to appoint a bilingual French-speaking Directeur Général / General Manager in Dubai. The role interfaces directly with Paris headquarters while executing regional operations."
-      },
-      {
-        id: "mp-fr-1",
-        title: "Regional Operations Director — French Luxury & Retail Distribution",
-        matchedRole: "Operations Director",
-        company: "LVMH / French Brand Alliance (via Michael Page)",
-        location: "Dubai, UAE",
-        source: "michaelpage",
-        url: "https://www.michaelpage.ae/jobs/operations-director-french",
-        ref: "MP-FR-3304",
-        posted: "live",
-        score: 94,
-        to: "clientservicesdubai@michaelpage.ae",
-        emailVia: "Michael Page French Retail Desk",
-        requirements: [
-          "French-speaking required: Executive coordination with French Maison leadership in Paris",
-          "End-to-end supply chain, boutique logistics, import/export compliance, and multi-market distribution",
-          "Lean inventory management and operational excellence across UAE, Qatar, and KSA"
-        ],
-        text: "Michael Page UAE is recruiting a French-speaking Regional Operations Director for an iconic French luxury conglomerate. This role commands multi-country supply chain architecture and prestige retail operations across the Middle East."
-      },
-      {
-        id: "bayt-ar-1",
-        title: "General Manager — Government & Semi-Government Joint Ventures (Arabic / English)",
-        matchedRole: "General Manager",
-        company: "Dubai Holding / National Enterprise Partners (via Bayt)",
-        location: "Dubai & Abu Dhabi, UAE",
-        source: "bayt",
-        url: "https://www.bayt.com/en/uae/jobs/general-manager-bilingual-arabic/",
-        ref: "BAYT-AR-1142",
-        posted: "live",
-        score: 95,
-        to: "executive.careers@bayt.com",
-        emailVia: "Bayt Executive Talent Desk",
-        requirements: [
-          "Arabic-speaking dedicated role: Native or bilingual Arabic and English executive communication required",
-          "High-level public-private partnership (PPP) governance, regulatory liaison, and board stewardship",
-          "Comprehensive P&L control ($100M+) and multi-divisional operations leadership"
-        ],
-        text: "Bayt Executive is retained to recruit a General Manager for a prominent semi-government joint venture. Must possess executive bilingual fluency in Arabic and English to lead governmental stakeholder coordination, operational strategy, and commercial P&L."
-      },
-      {
-        id: "gt-ar-1",
-        title: "Executive Director of Operations — National Supply Chain & Manufacturing (Arabic Bilingual)",
-        matchedRole: "Operations Director",
-        company: "Al-Futtaim / Emirates Industrial Consortium (via GulfTalent)",
-        location: "Dubai, UAE",
-        source: "gulftalent",
-        url: "https://www.gulftalent.com/uae/jobs/executive-director-operations-arabic",
-        ref: "GT-AR-5520",
-        posted: "live",
-        score: 94,
-        to: "executive.recruitment@gulftalent.com",
-        emailVia: "GulfTalent Executive Applications",
-        requirements: [
-          "Arabic bilingual mandate: Professional Arabic & English fluency for national industrial leadership",
-          "Overseeing 4 manufacturing plants, central warehousing, and automated distribution hubs",
-          "Lean Six Sigma transformation, workforce nationalization programs, and vendor renegotiations"
-        ],
-        text: "GulfTalent is featuring an Executive Director of Operations mandate requiring bilingual Arabic and English executive fluency. Direct large-scale industrial assets, supply chain security, and national operational infrastructure."
-      }
-    ];
+    /* No invented postings. The job list starts empty and fills only from live sources.
+       NO_JOB_SELECTED keeps Pages 3-4 rendering (and sending blocked) until a real job is chosen. */
+    const NO_JOB_SELECTED = {
+      id: "none",
+      title: "No job selected",
+      matchedRole: "",
+      company: "",
+      location: "",
+      source: "",
+      url: "",
+      ref: "",
+      posted: "",
+      score: 0,
+      to: "",
+      emailVia: "",
+      requirements: [],
+      text: ""
+    };
+    const MULTI_BOARD_SEED_JOBS = [];
 
     const ALL_ROLE_OPTIONS = [
       "General Manager",
@@ -5241,7 +4963,7 @@
       activeLanguageFilter: "all",
       languageDedicatedOnly: false,
       jobs: [...MULTI_BOARD_SEED_JOBS],
-      selectedJob: MULTI_BOARD_SEED_JOBS[0],
+      selectedJob: null,
       coverLetterLang: "en",
       customCoverLetter: "",
       injectedKeywords: new Set(),
@@ -5257,21 +4979,9 @@
     function buildHrDirectorSuggestions(cvObj) {
       const list = [];
 
-      // 1. Executive Summary Analysis
-      const curSum = String(cvObj.summary || "").trim();
-      const isWeakSum = /responsible for|managed|helped|worked on|handled/i.test(curSum) || curSum.length < 180;
-      const suggestedSummary =
-        "Board-level Chief Operating Officer, General Manager, and Managing Director with 15+ years of full P&L ownership ($120M+), multi-site industrial & commercial operations leadership, and end-to-end supply chain transformation across the UAE, Saudi Arabia, and DACH.";
-
-      list.push({
-        id: "sug-summary",
-        locationLabel: "Executive Summary · Opening Pitch",
-        targetType: "summary",
-        reason: "Replaces passive duty wording with C-Suite P&L authority & board positioning",
-        oldText: curSum,
-        newText: isWeakSum && curSum !== suggestedSummary ? suggestedSummary : curSum,
-        applied: false
-      });
+      // 1. Executive Summary: no canned replacement. A template summary would put claims
+      //    (years, P&L size, staff counts) into a CV the candidate never made. The
+      //    pre-flight audit flags passive phrasing in the summary instead.
 
       // 2. Role-by-Role Experience Bullet Analysis
       (cvObj.roles || []).forEach((role, rIdx) => {
@@ -5310,46 +5020,58 @@
     }
 
     function getBulletHrReason(b) {
-      if (/^managed\b/i.test(b)) return "Upgrades 'Managed' to quantified multi-site P&L & operational impact";
-      if (/^worked on\b/i.test(b)) return "Replaces weak 'Worked on' with quantified supply chain & OTIF metrics";
-      if (/^handled\b/i.test(b)) return "Elevates 'Handled budgeting' to Board-level EBITDA & capital governance";
-      if (/^helped\b/i.test(b)) return "Replaces 'Helped reorganize' with decisive turnaround & margin expansion";
-      if (/^responsible for\b/i.test(b)) return "Transforms passive 'Responsible for' into commercial & logistics growth results";
-      return "Strengthens executive action verb, scope, and measurable business outcome";
+      return "Replaces a passive opener with an action verb. Add a real, measurable result (%, AED, team size) yourself.";
     }
 
+    /* Wording-only upgrade: swaps a passive opener for an action verb and never adds
+       outcomes, numbers or claims the candidate did not write. When the rewrite would not
+       be grammatical (e.g. "Helped the team ..."), it suggests nothing. */
+    const VERB_PAST = {
+      manage: "managed", lead: "led", oversee: "oversaw", run: "ran", build: "built", drive: "drove",
+      develop: "developed", reduce: "reduced", improve: "improved", grow: "grew", launch: "launched",
+      expand: "expanded", deliver: "delivered", implement: "implemented", restructure: "restructured",
+      reorganize: "reorganized", reorganise: "reorganised", streamline: "streamlined", negotiate: "negotiated",
+      establish: "established", create: "created", design: "designed", coordinate: "coordinated",
+      handle: "handled", plan: "planned", prepare: "prepared", report: "reported", set: "set",
+      cut: "cut", increase: "increased", optimize: "optimized", optimise: "optimised", direct: "directed",
+      supervise: "supervised", control: "controlled", support: "supported", turn: "turned"
+    };
+    const GERUND_BASE = Object.fromEntries(
+      Object.keys(VERB_PAST).map((v) => [
+        /ie$/.test(v) ? v.slice(0, -2) + "ying"
+          : /[^aeiou]e$/.test(v) && v !== "oversee" ? v.slice(0, -1) + "ing"
+          : /^(run|plan|set|cut|control)$/.test(v) ? v + v.slice(-1) + "ing"
+          : v + "ing",
+        v
+      ])
+    );
     function upgradeBulletAsHrDirector(bullet, roleTitle, rIdx, bIdx) {
       const b = String(bullet || "").trim();
-      if (/Managed 450 staff and oversaw daily operations/i.test(b)) {
-        return "Directed full $120M+ P&L and 450+ cross-functional staff across 4 manufacturing and distribution hubs in the UAE and KSA, expanding EBITDA by 22% YoY.";
+      const m = b.match(/^(responsible for|duties included|tasked with|managed|handled|worked on|helped(?: to)?|assisted with|involved in)\s+(\S+)/i);
+      if (!m) return b;
+      const opener = m[1].toLowerCase();
+      const first = m[2].toLowerCase().replace(/[^a-z]/g, "");
+      const rest = b.slice(m[0].length);
+      const cap = (w) => w.charAt(0).toUpperCase() + w.slice(1);
+      const past = (base) => VERB_PAST[base];
+
+      // "... managing X" / "worked on reducing X" -> "Managed X" / "Reduced X"
+      // (a parallel "... and improving Y" becomes "... and improved Y")
+      if (GERUND_BASE[first]) {
+        return cap(past(GERUND_BASE[first])) + rest.replace(/\band ([a-z]+ing)\b/g, (all, g) => (GERUND_BASE[g] ? "and " + past(GERUND_BASE[g]) : all));
       }
-      if (/Worked on reducing supply chain and procurement costs/i.test(b)) {
-        return "Spearheaded end-to-end supply chain & strategic procurement restructuring, cutting landed operating costs by 18% ($14.5M saved) and lifting OTIF delivery to 98.6%.";
-      }
-      if (/Handled annual budgeting and reported monthly financial results/i.test(b)) {
-        return "Steered corporate capital allocation, rolling P&L forecasts, and monthly Board of Directors governance, unlocking $9.2M in free working capital.";
-      }
-      if (/Led regional operations and project delivery teams/i.test(b)) {
-        return "Orchestrated $85M+ in regional industrial automation and infrastructure operations across GCC & DACH, delivering 100% of turnkey mandates on budget.";
-      }
-      if (/Helped reorganize underperforming business units/i.test(b)) {
-        return "Executed rapid operational turnaround of 3 underperforming business units, restoring +14% operating margin and accelerating delivery velocity by 31%.";
-      }
-      if (/Responsible for sales, wholesale distribution, import\/export/i.test(b)) {
-        return "Scaled regional commercial operations, wholesale distribution, and MENA import/export logistics by 44%, securing 18 tier-1 enterprise key accounts.";
-      }
-      if (/^(responsible for|managed|handled|worked on|helped|assisted with|duties included)\b/i.test(b)) {
-        const core = b
-          .replace(/^(responsible for|managed|handled|worked on|helped|assisted with|duties included)\s+/i, "")
-          .replace(/\.$/, "");
-        const cap = core.charAt(0).toLowerCase() + core.slice(1);
-        return `Directed and optimized ${cap}, driving measurable operational efficiency, strict KPI governance, and cross-functional execution.`;
-      }
-      if (b.length > 15 && !/\d+%|\$\d+|p&l|ebitda|kpi|board|governance|turnaround/i.test(b)) {
-        const clean = b.replace(/\.$/, "");
-        return `${clean} — achieving top-quartile KPI performance, cost governance, and executive stakeholder alignment.`;
-      }
-      return b;
+      // "helped reorganize X" -> "Reorganized X"
+      if (/^helped/.test(opener) && VERB_PAST[first]) return cap(past(first)) + rest;
+      // A gerund or bare verb we cannot conjugate safely: suggest nothing.
+      if (/ing$/.test(first) || /^helped|^assisted/.test(opener)) return b;
+
+      // Opener followed by a noun phrase: swap the opener only.
+      const swap = {
+        "responsible for": "Led", "duties included": "Led", "tasked with": "Led",
+        managed: "Directed", handled: "Owned", "worked on": "Delivered", "involved in": "Contributed to"
+      };
+      const core = b.slice(m[1].length).trimStart();
+      return swap[opener] ? swap[opener] + " " + core : b;
     }
 
     /* ------------------------------------------------------------------
@@ -5540,7 +5262,7 @@
       if (draftEyebrowBadge) draftEyebrowBadge.textContent = eyebrowBadge;
 
       // Update Blueprint Title Block Corner Stamp
-      const stampText = `${(cv.name || "AHMED AL-MANSOOR").toUpperCase()} · SHEET 1 OF 1 · SCALE 1:1 · CAD VERIFIED`;
+      const stampText = `${(cv.name || "YOUR NAME").toUpperCase()} · SHEET 1 OF 1`;
       document.querySelectorAll(".blueprint-stamp").forEach((el) => {
         el.textContent = stampText;
       });
@@ -5818,33 +5540,10 @@
     }
 
     /* ------------------------------------------------------------------
-       BACKCHANNEL RECRUITER INTEL & COMPENSATION ORACLE
+       SALARY: shown only when the posting itself states one. No title-based guesses.
        ------------------------------------------------------------------ */
     function estimateCompRange(j) {
-      if (j && j.salary) return j.salary;
-      const title = ((j && j.title) || "").toLowerCase();
-      if (/chief|coo|ceo|cfo|cto|c-suite|president/i.test(title)) {
-        return "AED 85k–135k/mo · Exec";
-      }
-      if (/general manager|vice president|vp|director/i.test(title)) {
-        return "AED 65k–95k/mo · Sr Dir";
-      }
-      if (/head of|senior manager|plant manager|operations manager/i.test(title)) {
-        return "AED 45k–65k/mo · Lead";
-      }
-      return "AED 50k–75k/mo · Benchmark";
-    }
-
-    function estimateRecruiterSpeed(j) {
-      const src = String((j && j.source) || "").toLowerCase();
-      const comp = String((j && j.company) || "").toLowerCase();
-      if (/page executive|michael page|charterhouse|departer/i.test(src + " " + comp)) {
-        return "Executive Desk · 24-48h Response";
-      }
-      if (/linkedin|indeed/i.test(src)) {
-        return "Direct HR Inbox · High Priority";
-      }
-      return "Corporate HR · Active";
+      return (j && j.salary) ? String(j.salary) : "";
     }
 
     /* ------------------------------------------------------------------
@@ -6760,10 +6459,10 @@
                 <span style="font-weight:800;color:var(--accent-emerald);padding-top:7px;">&bull;</span>
                 <textarea class="writer-textarea" rows="2"
                           oninput="updateWriterBullet(${rIdx}, ${bIdx}, this.value)"
-                          placeholder="Describe your achievement or type a rough note and click 'AI Executive Upgrade'...">${escapeHtml(b)}</textarea>
+                          placeholder="Describe your achievement or then click 'Verb Upgrade' to strengthen the opening verb...">${escapeHtml(b)}</textarea>
                 <div style="display:flex;flex-direction:column;gap:4px;">
-                  <button type="button" class="btn-ai-magic" onclick="aiUpgradeSingleWriterBullet(${rIdx}, ${bIdx})" title="1-Click AI Rewrite as Quantified C-Suite Achievement">
-                    AI Upgrade
+                  <button type="button" class="btn-ai-magic" onclick="aiUpgradeSingleWriterBullet(${rIdx}, ${bIdx})" title="Swap a passive opener for an action verb (adds no numbers)">
+                    Verb Upgrade
                   </button>
                   <button type="button" class="btn-pill-secondary" style="padding:5px 8px;font-size:11px;color:var(--accent-rose);" onclick="removeWriterBullet(${rIdx}, ${bIdx})" title="Delete Bullet">
                     Remove
@@ -6895,7 +6594,7 @@
     function addWriterBullet(rIdx) {
       if (!state.cv.roles[rIdx]) return;
       state.cv.roles[rIdx].bullets.push(
-        "Spearheaded operational excellence, commercial growth, and strict KPI governance across multi-site business units."
+        "[Action verb] [what you did] — [measurable result: %, AED, team size]"
       );
       renderLiveCvSheet();
     }
@@ -6911,25 +6610,26 @@
       const oldB = state.cv.roles[rIdx].bullets[bIdx] || "";
       let improved = upgradeBulletAsHrDirector(oldB, state.cv.roles[rIdx].title, rIdx, bIdx);
       if (improved === oldB) {
-        improved = `Architected and executed ${oldB.replace(/\.$/, "")}, delivering +18% EBITDA margin expansion, 98.5% SLA compliance, and sustainable operational scale.`;
+        showToast(/\d/.test(oldB) ? "This bullet already opens with an action and has a number. Nothing to change." : "Add a real measurable result to this bullet (%, AED, team size). No numbers are made up for you.");
+        return;
       }
       state.cv.roles[rIdx].bullets[bIdx] = improved;
       state.upgradedKeys.add(`sug-r${rIdx}-b${bIdx}`);
       renderLiveCvSheet();
-      showToast("Bullet upgraded with quantified executive impact");
+      showToast("Opening verb strengthened. Add a measurable result if the bullet has none.");
     }
 
     function insertAwardWinningBulletTemplate(rIdx, type) {
       if (!state.cv.roles[rIdx]) return;
       const templates = {
-        pnl: "Owned full $110M+ consolidated P&L, capital allocation, and Board governance across regional business units, expanding EBITDA margin by +21% YoY.",
-        ops: "Directed 400+ multi-disciplinary staff across manufacturing, logistics, and commercial operations, achieving 99.1% OTIF delivery and zero lost-time HSE incidents.",
-        supply: "Led end-to-end supply chain, strategic procurement, and Lean Six Sigma turnaround, reducing landed operating costs by 17% ($12.4M savings) and unlocking $8.5M in working capital."
+        pnl: "Owned [AED / USD amount] P&L across [units / countries], [result: e.g. EBITDA margin from X% to Y%] in [period].",
+        ops: "Directed [number] staff across [functions / sites], improving [metric] from [X] to [Y] in [period].",
+        supply: "Led [supply chain / procurement] restructuring that cut [cost line] by [X% / amount] and released [amount] of working capital."
       };
       state.cv.roles[rIdx].bullets.push(templates[type] || templates.pnl);
       state.upgradedKeys.add(`sug-r${rIdx}-b${state.cv.roles[rIdx].bullets.length - 1}`);
       renderLiveCvSheet();
-      showToast("Inserted executive achievement bullet into your CV");
+      showToast("Inserted a bullet template. Replace every [bracket] with your own facts.");
     }
 
     function addWriterSkill() {
@@ -6952,7 +6652,7 @@
 
     function aiPopulateExecutiveSkills() {
       const execSkills = [
-        "Full P&L Ownership ($120M+)",
+        "Full P&L Ownership",
         "General Management & MD Mandate",
         "Multi-Site Industrial & Commercial Operations",
         "EBITDA Turnaround & Margin Expansion",
@@ -6969,7 +6669,7 @@
         }
       });
       renderLiveCvSheet();
-      showToast("Auto-populated C-Suite & ATS Executive Skills");
+      showToast("Added suggested executive skills. Delete any you cannot back up with experience.");
     }
 
     function aiGenerateHeadlineAndFocus() {
@@ -6977,27 +6677,29 @@
         ? state.selectedRoles.slice(0, 4).join(" · ")
         : "General Manager · Managing Director · Operations Director · Chief Operating Officer";
       state.cv.headline = roles;
-      state.cv.focusLine = `Target Mandate: ${roles.replace(/·/g, "/")} — Full P&L Ownership, Multi-Site Operations & Strategic Turnaround.`;
+      state.cv.focusLine = `Target roles: ${roles.replace(/·/g, "/")}`;
       state.upgradedKeys.add("sug-headline");
       renderLiveCvSheet();
-      showToast("Generated Executive Headline & Target Mandate Banner");
+      showToast("Headline set to your target roles.");
     }
 
+    /* Summary skeletons with [bracketed] gaps the candidate fills from their own record.
+       The pre-flight audit blocks sending while any [bracket] remains. No invented numbers. */
     function aiWriteSummaryForRole(roleLabel) {
       const map = {
         "General Manager":
-          "Award-winning General Manager and C-Suite Operations Executive with 15+ years of full P&L ownership ($120M+), multi-site industrial & commercial leadership, and high-growth market expansion across the UAE, Saudi Arabia, and Europe. Proven track record scaling revenue, leading 450+ staff, and delivering double-digit EBITDA growth.",
+          "General Manager with [N] years of P&L leadership in [sectors] across [countries]. Known for [one concrete result, e.g. revenue or margin change]. Led teams of [size] through [growth, turnaround or market entry].",
         "Managing Director":
-          "Board-level Managing Director (Geschäftsführer) with 15+ years steering diversified commercial, industrial, and distribution enterprises across the GCC and DACH regions. Expert in corporate governance, joint-venture leadership, M&A integration, working-capital optimization, and sustainable enterprise value creation.",
+          "Managing Director (Geschäftsführer) with [N] years leading [type of business] in [regions]. Responsible for [scope: revenue, entities, headcount]. Track record: [one concrete result].",
         "Operations Director":
-          "Results-driven Regional Operations Director with deep mastery in multi-plant manufacturing, end-to-end supply chain resilience, strategic procurement, and Lean Six Sigma transformation. Consistently delivers 15–25% OPEX reduction, 98.5%+ OTIF performance, and world-class QHSE/ISO governance.",
+          "Operations Director with [N] years running [sites / plants / networks] in [regions]. Delivered [one measurable operational result] and [second result].",
         "COO & Turnaround":
-          "Transformational Chief Operating Officer (COO) and Turnaround Leader specializing in rapid P&L restructuring, multi-subsidiary operational alignment, ERP modernization, and cash-flow acceleration across family conglomerates and multinational groups in the Middle East."
+          "Chief Operating Officer with [N] years in [sectors]. Led [number] turnarounds or restructurings, including [one concrete example and result]."
       };
       state.cv.summary = map[roleLabel] || map["General Manager"];
       state.upgradedKeys.add("sug-summary");
       renderLiveCvSheet();
-      showToast(`Crafted board-ready ${roleLabel} Executive Summary`);
+      showToast(`Inserted a ${roleLabel} summary skeleton. Replace every [bracket] with your own facts.`);
     }
 
     function startNewCvPreset(preset) {
@@ -7066,27 +6768,31 @@
       showToast("Loaded CV blueprint in the Built-In CV Writer");
     }
 
+    /* Verb upgrades only. It no longer replaces the summary, headline or skills: those
+       held the user's own words and were being overwritten with templates. */
     function aiPolishEntireCvInWriter() {
-      aiGenerateHeadlineAndFocus();
-      aiWriteSummaryForRole("General Manager");
+      let changed = 0;
       (state.cv.roles || []).forEach((r, rIdx) => {
         (r.bullets || []).forEach((b, bIdx) => {
-          state.cv.roles[rIdx].bullets[bIdx] = upgradeBulletAsHrDirector(b, r.title, rIdx, bIdx);
-          state.upgradedKeys.add(`sug-r${rIdx}-b${bIdx}`);
+          const up = upgradeBulletAsHrDirector(b, r.title, rIdx, bIdx);
+          if (up !== b) {
+            state.cv.roles[rIdx].bullets[bIdx] = up;
+            state.upgradedKeys.add(`sug-r${rIdx}-b${bIdx}`);
+            changed++;
+          }
         });
       });
-      aiPopulateExecutiveSkills();
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       renderLiveCvSheet();
       renderCvSuggestions();
-      showToast("Entire CV polished with C-Suite Executive Wording, P&L KPIs & ATS Keywords");
+      showToast(changed ? `Strengthened the opening verb in ${changed} bullet${changed === 1 ? "" : "s"}. No numbers were added.` : "No passive openers found.");
     }
 
     function rerunAnalyzerFromWriter() {
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       renderCvSuggestions();
       switchStep1Mode("analyzer");
-      showToast(`HR Director Audit complete — ${state.suggestions.length} optimization cards ready`);
+      showToast(`Wording check complete: ${state.suggestions.length} suggestion${state.suggestions.length === 1 ? "" : "s"}`);
     }
 
     function renderCvSuggestions() {
@@ -7095,32 +6801,37 @@
       const appliedCount = state.suggestions.filter((s) => s.applied).length;
       const remaining = total - appliedCount;
 
-      const baseScore = 76;
-      const currentScore = total ? Math.round(baseScore + (appliedCount / total) * 22) : 96;
-      document.getElementById("hrScoreNum").textContent = currentScore + "%";
-
-      document.getElementById("pilVerbs").textContent = appliedCount === total ? "98% Ready" : `${74 + appliedCount * 4}% -> 98%`;
-      document.getElementById("pilKpis").textContent = appliedCount === total ? "99% Ready" : `${78 + appliedCount * 3}% -> 99%`;
-      document.getElementById("pilBoard").textContent = appliedCount === total ? "96% Ready" : `${72 + appliedCount * 4}% -> 96%`;
-      document.getElementById("pilAts").textContent = appliedCount === total ? "98% Ready" : `${80 + appliedCount * 3}% -> 98%`;
+      // Every number below is counted from the CV on screen. Nothing is preset.
+      const bullets = (state.cv.roles || []).flatMap((r) => r.bullets || []).map((b) => String(b || "").trim()).filter(Boolean);
+      const passiveRe = /\b(responsible for|involved in|helped|worked on|tasked with|duties included|assisted with|participated in)\b/i;
+      const passiveCount = bullets.filter((b) => passiveRe.test(b)).length + (passiveRe.test(state.cv.summary || "") ? 1 : 0);
+      const actionPct = bullets.length ? Math.round((bullets.filter((b) => !passiveRe.test(b)).length / bullets.length) * 100) : 0;
+      const quantPct = bullets.length ? Math.round((bullets.filter((b) => /[\d%]|(?:AED|USD|EUR|GBP|\$|€|£)/i.test(b)).length / bullets.length) * 100) : 0;
+      document.getElementById("hrScoreNum").textContent = bullets.length ? quantPct + "%" : "--";
+      document.getElementById("pilVerbs").textContent = bullets.length ? `${actionPct}%` : "no bullets";
+      document.getElementById("pilKpis").textContent = bullets.length ? `${quantPct}%` : "no bullets";
+      document.getElementById("pilBoard").textContent = String(passiveCount);
+      document.getElementById("pilAts").textContent = String((state.cv.skills || []).length);
 
       const heroBtn = document.getElementById("btnAutoFixAll");
       const undoBtn = document.getElementById("btnUndoAll");
       if (remaining === 0 && total > 0) {
         heroBtn.classList.add("all-done");
-        document.getElementById("btnAutoFixTitle").textContent = `All ${total} HR Director CV Upgrades Applied Automatically`;
+        document.getElementById("btnAutoFixTitle").textContent = `All ${total} wording suggestion${total === 1 ? "" : "s"} applied`;
         document.getElementById("btnAutoFixSub").textContent =
-          "Your CV now has C-Suite action verbs, P&L metrics, and ATS keywords. Click to proceed to Page 2.";
+          "Opening verbs are stronger. Add real numbers to bullets that have none, then continue to Page 2.";
         document.getElementById("btnAutoFixBadge").textContent = "Go to Page 2: Find Jobs ->";
-        document.getElementById("hrAuditHeadline").textContent = "Executive CV Readiness: 98% (Board & ATS Ready)";
+        document.getElementById("hrAuditHeadline").textContent = `Wording suggestions applied · ${quantPct}% of bullets have a number`;
         undoBtn.style.display = "inline-flex";
       } else {
         heroBtn.classList.remove("all-done");
-        document.getElementById("btnAutoFixTitle").textContent = `Auto-Fix All ${remaining} CV Improvements in 1 Click`;
+        document.getElementById("btnAutoFixTitle").textContent = remaining ? `Apply ${remaining} Wording Suggestion${remaining === 1 ? "" : "s"}` : "No wording suggestions";
         document.getElementById("btnAutoFixSub").textContent =
-          "Takes the old wording and puts the new HR Director suggestion in place automatically — zero typing.";
-        document.getElementById("btnAutoFixBadge").textContent = "Apply All in 1 Click ->";
-        document.getElementById("hrAuditHeadline").textContent = `${remaining} Wording Upgrade${remaining === 1 ? "" : "s"} Ready to Boost Shortlist Rate to 98%`;
+          "Swaps passive openers (e.g. \"Responsible for\") for action verbs. It never adds numbers or claims: review each change.";
+        document.getElementById("btnAutoFixBadge").textContent = remaining ? "Apply all ->" : "Go to Page 2 ->";
+        document.getElementById("hrAuditHeadline").textContent = remaining
+          ? `${remaining} wording suggestion${remaining === 1 ? "" : "s"} · ${quantPct}% of bullets have a number`
+          : `No passive openers found · ${quantPct}% of bullets have a number`;
         undoBtn.style.display = appliedCount > 0 ? "inline-flex" : "none";
       }
 
@@ -7139,7 +6850,7 @@
                 <div style="${s.applied ? "text-decoration:line-through;opacity:0.65;" : ""}">${escapeHtml(s.oldText)}</div>
               </div>
               <div class="new-wording-box">
-                <span class="box-lbl">HR Director Suggested Wording</span>
+                <span class="box-lbl">Suggested Wording</span>
                 <div>${escapeHtml(s.newText)}</div>
               </div>
             </div>
@@ -7157,27 +6868,50 @@
         .join("");
     }
 
+    /* Returns false (and changes nothing) when the CV no longer holds the text this
+       suggestion was built from. Suggestions are matched on text, never on position
+       alone, so a suggestion built from another CV (e.g. the demo) can never overwrite
+       the user's own wording. */
     function applySuggestionToCvState(s, useNew) {
       const val = useNew ? s.newText : s.oldText;
+      const expected = useNew ? s.oldText : s.newText;
+      const same = (a) => String(a == null ? "" : a).trim() === String(expected == null ? "" : expected).trim();
       if (s.targetType === "summary") {
+        if (!same(state.cv.summary)) return false;
         state.cv.summary = val;
       } else if (s.targetType === "headline") {
+        if (!same(state.cv.headline)) return false;
         state.cv.headline = val;
       } else if (s.targetType === "bullet") {
-        if (state.cv.roles[s.roleIdx] && state.cv.roles[s.roleIdx].bullets) {
-          state.cv.roles[s.roleIdx].bullets[s.bulletIdx] = val;
-        }
+        const role = state.cv.roles && state.cv.roles[s.roleIdx];
+        if (!role || !role.bullets || !same(role.bullets[s.bulletIdx])) return false;
+        role.bullets[s.bulletIdx] = val;
+      } else {
+        return false;
       }
       s.applied = useNew;
       if (useNew) state.upgradedKeys.add(s.id);
       else state.upgradedKeys.delete(s.id);
+      return true;
+    }
+
+    /* Suggestions that no longer match the CV are dropped and rebuilt from the current CV. */
+    function rebuildStaleSuggestions(skipped) {
+      if (!skipped) return;
+      state.suggestions = buildHrDirectorSuggestions(state.cv);
+      showToast(`${skipped} suggestion${skipped === 1 ? " was" : "s were"} out of date and skipped. Suggestions were rebuilt from your current CV.`);
     }
 
     function toggleSingleSuggestion(idx) {
       const s = state.suggestions[idx];
       if (!s) return;
       const nextState = !s.applied;
-      applySuggestionToCvState(s, nextState);
+      if (!applySuggestionToCvState(s, nextState)) {
+        rebuildStaleSuggestions(1);
+        renderLiveCvSheet();
+        renderCvSuggestions();
+        return;
+      }
       renderLiveCvSheet();
       renderCvSuggestions();
       showToast(
@@ -7193,14 +6927,19 @@
         goToStep(2);
         return;
       }
-      state.suggestions.forEach((s) => applySuggestionToCvState(s, true));
+      let applied = 0;
+      let skipped = 0;
+      remaining.forEach((s) => (applySuggestionToCvState(s, true) ? applied++ : skipped++));
+      rebuildStaleSuggestions(skipped);
       renderLiveCvSheet();
       renderCvSuggestions();
-      showToast(`All ${state.suggestions.length} HR Director CV improvements applied automatically`);
+      if (applied) showToast(`${applied} wording suggestion${applied === 1 ? "" : "s"} applied. Review each one before you send.`);
     }
 
     function undoAllCvSuggestions() {
-      state.suggestions.forEach((s) => applySuggestionToCvState(s, false));
+      let skipped = 0;
+      state.suggestions.filter((s) => s.applied).forEach((s) => { if (!applySuggestionToCvState(s, false)) skipped++; });
+      rebuildStaleSuggestions(skipped);
       renderLiveCvSheet();
       renderCvSuggestions();
       showToast("Restored original CV wording.");
@@ -8012,26 +7751,7 @@
             }
           }
         } catch (e) {
-          console.warn("Backend /api/linkedin-profile call failed, falling back to direct reader:", e.message);
-        }
-
-        // 2. Direct client-side reader fallback via r.jina.ai
-        if (!profileData && !fetchErr) {
-          try {
-            const jinaResp = await fetch(`https://r.jina.ai/${cleanUrl}`, {
-              headers: { Accept: "text/plain" },
-              signal: AbortSignal.timeout(12000)
-            });
-            if (jinaResp.ok) {
-              const md = await jinaResp.text();
-              const parsed = parseLinkedInProfileText(md, cleanUrl);
-              if (parsed && (parsed.name || (parsed.roles && parsed.roles.length))) {
-                profileData = parsed;
-              }
-            }
-          } catch (jinaErr) {
-            console.warn("Client-side Jina reader error:", jinaErr.message);
-          }
+          console.warn("Backend /api/linkedin-profile call failed:", e.message);
         }
 
         if (profileData) {
@@ -8773,11 +8493,11 @@
       state.upgradedKeys.clear();
       state.suggestions = buildHrDirectorSuggestions(state.cv).slice(0, 18);
       const totalExtractedBullets = (state.cv.roles || []).reduce((acc, r) => acc + (r.bullets ? r.bullets.length : 0), 0);
-      document.getElementById("cvUploadStatus").innerHTML = `Loaded 100% of <strong>${escapeHtml(
+      document.getElementById("cvUploadStatus").innerHTML = `Loaded <strong>${escapeHtml(
         sourceName
       )}</strong> (${state.cv.roles.length} roles &middot; ${totalExtractedBullets} experience lines &middot; ${state.cv.skills.length} skills) — ${
         state.suggestions.length
-      } 1-click HR Director upgrades ready`;
+      } wording suggestion(s)`;
 
       renderLiveCvSheet();
       renderCvSuggestions();
@@ -8819,7 +8539,7 @@
       if (pInp2) pInp2.value = "";
 
       document.getElementById("cvUploadStatus").innerHTML =
-        `Currently loaded: <strong>Ahmed Al-Mansoor — Chief Operating Officer / General Manager CV</strong>`;
+        `Currently loaded: <strong>Sample CV (not a real person) — upload yours to replace it</strong>`;
       renderLiveCvSheet();
       renderCvSuggestions();
       renderRoleLockChips();
@@ -8864,11 +8584,14 @@
         dot.style.background = state.dailyAutoFetchEnabled !== false ? "var(--accent-emerald)" : "var(--text-muted)";
       }
       if (badge) {
-        const dt = state.lastDailySyncIso ? state.lastDailySyncIso.slice(0, 10) : new Date().toISOString().slice(0, 10);
-        const tm = state.lastDailySyncIso ? state.lastDailySyncIso.slice(11, 16) + " UTC" : "Live";
-        badge.textContent =
-          state.dailyAutoFetchEnabled !== false
-            ? `Synced Today (${dt} ${tm}) · Daily Schedule: 08:00 GST`
+        const last = state.lastDailySyncIso || "";
+        const dt = last.slice(0, 10);
+        const tm = last ? last.slice(11, 16) + " UTC" : "";
+        const isToday = dt && dt === new Date().toISOString().slice(0, 10);
+        badge.textContent = !last
+          ? "Not synced yet · Daily Schedule: 08:00 GST"
+          : state.dailyAutoFetchEnabled !== false
+            ? `${isToday ? "Synced today" : "Last synced"} (${dt} ${tm}) · Daily Schedule: 08:00 GST`
             : `Auto-Fetch Paused · Last Sync: ${dt}`;
       }
       if (summaryEl) {
@@ -8938,9 +8661,10 @@
       job.matchedRole = matchedRole || job.matchedRole || state.selectedRoles[0] || "Executive Role";
       job.cvMatchedDetails = [...new Set(cvMatchedDetails)].slice(0, 4);
       if (!job.cvMatchedDetails.length) {
-        job.cvMatchedDetails = ["Executive P&L", "Operational Leadership"];
+        job.cvMatchedDetails = [];
       }
-      job.score = Math.min(99, Math.max(72, score));
+      // No floor: a weak match must be able to look weak.
+      job.score = Math.min(99, Math.max(0, score));
       return job;
     }
 
@@ -9216,80 +8940,14 @@
     /* ------------------------------------------------------------------
        5B. AUTOMATIC MULTI-TIER JOB EMAIL RESOLVER & BACKGROUND DEEP FETCHER
        ------------------------------------------------------------------ */
+    /* Only these five headhunter / chamber inboxes are used (see the resolver below).
+       The guessed employer careers@ mailboxes that used to follow were removed. */
     const CLIENT_KNOWN_EMPLOYER_EMAILS = [
       { re: /\bpage\s*executive\b|pageexecutive/i, email: "clientmiddleeast@michaelpage.ae", via: "Page Executive / Michael Page Dubai Desk" },
       { re: /\bmichael\s*page\b|michaelpage/i, email: "clientmiddleeast@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
       { re: /\bcharterhouse\b/i, email: "info@charterhouse.ae", via: "Charterhouse Middle East Recruitment" },
       { re: /\bdeparter\b/i, email: "info@departer.com", via: "Departer German Headhunter MEA Desk" },
-      { re: /\bahk\b|german\s*emirati/i, email: "info@ahkuae.com", via: "AHK German Emirati Chamber Desk" },
-      { re: /\brobert\s*half\b/i, email: "dubai@roberthalf.ae", via: "Robert Half UAE Executive Search" },
-      { re: /\bkorn\s*ferry\b/i, email: "info.dubai@kornferry.com", via: "Korn Ferry Middle East Desk" },
-      { re: /\bhays\b/i, email: "dubai@hays.com", via: "Hays Middle East Recruitment" },
-      { re: /\bcooper\s*fitch\b/i, email: "info@cooperfitch.ae", via: "Cooper Fitch UAE Advisory Desk" },
-      { re: /\bboyden\b/i, email: "dubai@boyden.com", via: "Boyden Middle East Executive Search" },
-      { re: /\bal[- ]?futtaim\b/i, email: "careers@alfuttaim.com", via: "Al-Futtaim Group Executive Careers" },
-      { re: /\bmajid\s*al\s*futtaim\b/i, email: "careers@maf.ae", via: "Majid Al Futtaim Executive Talent" },
-      { re: /\bomniyat\b/i, email: "careers@omniyat.com", via: "OMNIYAT Executive Talent Acquisition" },
-      { re: /\bemaar\b/i, email: "careers@emaar.ae", via: "Emaar Properties HR & Talent" },
-      { re: /\bdp\s*world\b/i, email: "careers@dpworld.com", via: "DP World Global Careers" },
-      { re: /\bchalhoub\b/i, email: "careers@chalhoub.com", via: "Chalhoub Group People & Culture" },
-      { re: /\balshaya\b/i, email: "careers@alshaya.com", via: "Alshaya Group Executive Recruitment" },
-      { re: /\bal\s*ghurair\b/i, email: "careers@al-ghurair.com", via: "Al Ghurair HR & Talent Acquisition" },
-      { re: /\bal\s*habtoor\b/i, email: "careers@habtoor.com", via: "Al Habtoor Group HR Department" },
-      { re: /\badnoc\b/i, email: "careers@adnoc.ae", via: "ADNOC Executive Recruitment" },
-      { re: /\bmubadala\b/i, email: "careers@mubadala.ae", via: "Mubadala Talent Acquisition" },
-      { re: /\baldar\b/i, email: "careers@aldar.com", via: "Aldar Properties People & Culture" },
-      { re: /\baramex\b/i, email: "careers@aramex.com", via: "Aramex Global HR Desk" },
-      { re: /\bagility\b/i, email: "careers@agility.com", via: "Agility Logistics HR" },
-      { re: /\bgargash\b/i, email: "careers@gargash.ae", via: "Gargash Group HR Department" },
-      { re: /\bostamani\b/i, email: "careers@awrostamani.com", via: "AW Rostamani Group Careers" },
-      { re: /\bsiemens\b/i, email: "careers.ae@siemens.com", via: "Siemens Middle East Talent Acquisition" },
-      { re: /\bbosch\b/i, email: "careers.me@bosch.com", via: "Bosch Middle East HR" },
-      { re: /\bdhl\b/i, email: "careers.mena@dhl.com", via: "DHL MENA Executive Recruitment" },
-      { re: /\bkuehne\b/i, email: "careers.uae@kuehne-nagel.com", via: "Kuehne+Nagel Middle East HR" },
-      { re: /\bdamac\b/i, email: "careers@damacgroup.com", via: "DAMAC Group Talent Acquisition" },
-      { re: /\bsobha\b/i, email: "careers@sobharealty.com", via: "Sobha Realty Executive Recruitment" },
-      { re: /\bnakheel\b/i, email: "careers@nakheel.com", via: "Nakheel Properties HR" },
-      { re: /\blulu\b/i, email: "careers@ae.lulumea.com", via: "LuLu Group International HR" },
-      { re: /\blandmark\b/i, email: "careers@landmarkgroup.com", via: "Landmark Group Executive Careers" },
-      { re: /\bgmg\b/i, email: "careers@gmg.com", via: "GMG Executive Talent Acquisition" },
-      { re: /\bamericana\b/i, email: "careers@americanarestaurants.com", via: "Americana Group HR" },
-      { re: /\bapparel\s*group\b/i, email: "careers@apparelglobal.com", via: "Apparel Group HR" },
-      { re: /\bgaladari\b/i, email: "careers@galadarigroup.com", via: "Galadari Brothers Group HR" },
-      { re: /\bnaboodah\b/i, email: "careers@alnaboodah.com", via: "Al Naboodah Group Enterprises HR" },
-      { re: /\bal\s*tayer\b/i, email: "careers@altayer.com", via: "Al Tayer Group People & Culture" },
-      { re: /\bpure\s*health\b/i, email: "careers@purehealth.ae", via: "PureHealth Talent Acquisition" },
-      { re: /\bg42\b/i, email: "careers@g42.ai", via: "G42 Executive Talent" },
-      { re: /\benoc\b/i, email: "careers@enoc.com", via: "ENOC Group HR" },
-      { re: /\btaqa\b/i, email: "careers@taqa.com", via: "TAQA Group Careers" },
-      { re: /\bmasdar\b/i, email: "careers@masdar.ae", via: "Masdar Executive Recruitment" },
-      { re: /\bacwa\s*power\b/i, email: "careers@acwapower.com", via: "ACWA Power Talent Acquisition" },
-      { re: /\bsabic\b/i, email: "careers@sabic.com", via: "SABIC Global Careers" },
-      { re: /\baramco\b/i, email: "careers@aramco.com", via: "Aramco Executive Recruitment" },
-      { re: /\bneom\b/i, email: "careers@neom.com", via: "NEOM Executive Talent Acquisition" },
-      { re: /\bred\s*sea\b/i, email: "careers@redseaglobal.com", via: "Red Sea Global Careers" },
-      { re: /\bolayan\b/i, email: "careers@olayan.com", via: "Olayan Financing Company HR" },
-      { re: /\bzamil\b/i, email: "careers@zamil.com", via: "Zamil Group Holding HR" },
-      { re: /\balfanar\b/i, email: "careers@alfanar.com", via: "Alfanar Executive Recruitment" },
-      { re: /\balbatha\b/i, email: "careers@albatha.com", via: "Albatha Group HR" },
-      { re: /\bducab\b/i, email: "careers@ducab.com", via: "Ducab Talent Acquisition" },
-      { re: /\bnmdc\b/i, email: "careers@nmdc.ae", via: "NMDC Group HR" },
-      { re: /\balec\b/i, email: "careers@alec.ae", via: "ALEC Engineering & Contracting HR" },
-      { re: /\basgc\b/i, email: "careers@asgcgroup.com", via: "ASGC Group Careers" },
-      { re: /\bbesix\b/i, email: "careers.me@besix.com", via: "BESIX Middle East HR" },
-      { re: /\bkhansaheb\b/i, email: "careers@khansaheb.ae", via: "Khansaheb Civil Engineering HR" },
-      { re: /\bdutco\b/i, email: "careers@dutco.com", via: "Dutco Group HR" },
-      { re: /\balmarai\b/i, email: "careers@almarai.com", via: "Almarai Talent Acquisition" },
-      { re: /\bagthia\b/i, email: "careers@agthia.com", via: "Agthia Group People & Culture" },
-      { re: /\biffco\b/i, email: "careers@iffco.com", via: "IFFCO Group Executive Careers" },
-      { re: /\bgulftainer\b/i, email: "careers@gulftainer.com", via: "Gulftainer HR Department" },
-      { re: /\btristar\b/i, email: "careers@tristar-group.co", via: "Tristar Group HR" },
-      { re: /\bbahri\b/i, email: "careers@bahri.sa", via: "Bahri Logistics & Maritime HR" },
-      { re: /\bemirates\s*national\s*industrial\b/i, email: "careers@enic-uae.ae", via: "Emirates National Industrial Corp HR" },
-      { re: /\bal\s*khaleej\s*holding\b/i, email: "careers@alkhaleejholding.ae", via: "Al Khaleej Holding Group HR" },
-      { re: /\bgulf\s*horizon\s*logistics\b/i, email: "careers@gulfhorizonlogistics.ae", via: "Gulf Horizon Logistics HR" },
-      { re: /\bmiddle\s*east\s*engineering\s*consortium\b/i, email: "careers@meec-engineering.ae", via: "Middle East Engineering Consortium HR" },
-      { re: /\barabian\s*manufacturing\s*industries\b/i, email: "careers@arabianmanufacturing.ae", via: "Arabian Manufacturing Industries HR" }
+      { re: /\bahk\b|german\s*emirati/i, email: "info@ahkuae.com", via: "AHK German Emirati Chamber Desk" }
     ];
 
     function harvestEmailsFromTextClient(str) {
@@ -9434,9 +9092,9 @@
             .slice(0, 3)
             .map((r) => `<li>${escapeHtml(r)}</li>`)
             .join("");
-          const cvMatchesText = (j.cvMatchedDetails || ["Executive P&L", "Operations"]).slice(0, 3).join(" · ");
+          const cvMatchesText = (j.cvMatchedDetails || []).slice(0, 3).join(" · ") || "no CV keywords matched";
           const resolvedEmail = j.to || resolveJobRecipientEmailClient(j).email;
-          const emailViaLabel = j.emailVia || "Auto-Fetched HR Email";
+          const emailViaLabel = resolvedEmail ? (j.emailVia || "published address") : "Not published: apply on employer site";
           const langInfo = j.langInfo || detectJobLanguageRequirement(j);
           return `
             <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
@@ -9444,7 +9102,7 @@
                 <div class="job-card-top">
                   <div style="display:flex;gap:14px;align-items:flex-start;">
                     <div class="match-ring-mini">
-                      ${j.score || 94}%
+                      ${Number.isFinite(j.score) ? j.score : "--"}%
                       <small>CV Fit</small>
                     </div>
                     <div>
@@ -9456,13 +9114,10 @@
                         <span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">
                           Role Match: ${escapeHtml(j.matchedRole || state.selectedRoles[0])}
                         </span>
-                        <span class="salary-oracle-pill" title="Executive compensation benchmark for UAE / GCC">
+                        ${estimateCompRange(j) ? `<span class="salary-oracle-pill" title="Salary as stated in the posting">
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg>
                           <span>${escapeHtml(estimateCompRange(j))}</span>
-                        </span>
-                        <span style="background:rgba(59,130,246,0.12);color:#3b82f6;border:1px solid rgba(59,130,246,0.3);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:999px;" title="Direct recruiter screening speed">
-                          ⚡ ${escapeHtml(estimateRecruiterSpeed(j))}
-                        </span>
+                        </span>` : ""}
                         <span style="background:var(--bg-elevated);border:1px solid var(--border-subtle);color:var(--text-secondary);font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;">
                           CV Match: ${escapeHtml(cvMatchesText)}
                         </span>
@@ -9479,8 +9134,8 @@
                 <!-- Auto-Fetched Recipient Email Badge on Every Job Card -->
                 <div style="margin-top:10px;padding:7px 11px;border-radius:8px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:11.5px;">
                   <span>
-                    <strong style="color:var(--accent-emerald);">Auto-Fetched Email (To:):</strong>
-                    <code style="font-family:var(--font-mono);font-weight:700;color:var(--text-primary);margin-left:4px;">${escapeHtml(resolvedEmail)}</code>
+                    <strong style="color:var(--accent-emerald);">Recipient (To:):</strong>
+                    <code style="font-family:var(--font-mono);font-weight:700;color:var(--text-primary);margin-left:4px;">${escapeHtml(resolvedEmail || "none")}</code>
                   </span>
                   <span style="color:var(--text-secondary);font-size:10.5px;font-weight:600;">${escapeHtml(emailViaLabel)}</span>
                 </div>
@@ -9492,7 +9147,7 @@
 
               <div style="display:flex;gap:8px;margin-top:10px;align-items:stretch;flex-wrap:wrap;">
                 <button type="button" class="btn-tailor-job" style="flex:1;min-width:220px;" onclick="event.stopPropagation(); selectAndTailorJob(${i});">
-                  Select Role &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)}) &rarr;
+                  Select Role${resolvedEmail ? ` &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)})` : ""} &rarr;
                 </button>
                 <button type="button" class="btn-track-job-card" onclick="event.stopPropagation(); quickTrackJobByIndex(${i});" title="Add this job directly to your Executive Tracker">
                   📊 Track Job
@@ -9581,7 +9236,7 @@
             url: row.url || "#",
             ref: row.ref || "",
             posted: row.posted || "today",
-            score: row.score || 92,
+            score: 0,
             to: row.to || "",
             emailVia: row.emailVia || "",
             text: row.text || row.snippet || "",
@@ -9630,23 +9285,23 @@
 
         const shown = getFilteredJobs().length;
         if (statusText) {
-          statusText.textContent = `Daily Auto-Fetch Active: Found ${shown} live roles matched to your CV details (${(state.cv.skills || []).length} competencies) & desired roles [${state.selectedRoles.join(", ")}] — all with auto-fetched recipient emails.`;
+          statusText.textContent = `Daily Auto-Fetch Active: Found ${shown} live roles matched to your CV details (${(state.cv.skills || []).length} competencies) & desired roles [${state.selectedRoles.join(", ")}] — ${state.jobs.filter((j) => j.to).length} with a published recipient address.`;
         }
         if (!silent) {
           showToast(
             isDailySync
-              ? `Synced today's ${shown} live jobs & recipient emails matched to your CV`
-              : `Found ${shown} live roles with auto-fetched recipient emails`
+              ? `Synced today's ${shown} live jobs matched to your CV`
+              : `Found ${shown} live roles`
           );
         }
       } catch (err) {
         if (statusText) {
-          statusText.textContent = "Showing verified multi-board matches & auto-fetched recipient emails for your CV details & selected roles.";
+          statusText.textContent = "Live search failed. Showing the last saved results, if any.";
         }
       } finally {
         if (btn) {
           btn.disabled = false;
-          btn.textContent = "Search All 15 Job Boards Live";
+          btn.textContent = "Search Job Boards Live";
         }
       }
     }
@@ -9664,12 +9319,12 @@
       resolveJobRecipientEmailClient(job);
 
       const cleanRoleTitle = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
-      state.cv.focusLine = `Tailored Mandate for ${job.company || "Target Employer"}: ${cleanRoleTitle} (${job.location || "UAE"}) — Full P&L Governance, Operational Turnaround & Strategic Execution.`;
+      state.cv.focusLine = `Application: ${cleanRoleTitle}${job.company ? ` — ${job.company}` : ""}${job.location ? ` (${job.location})` : ""}`;
 
       populateStep3And4ForSelectedJob();
       renderLiveCvSheet();
       goToStep(3);
-      showToast(`Tailored CV & pre-filled recipient email (${job.to}) for "${cleanRoleTitle}"`);
+      showToast(job.to ? `Selected "${cleanRoleTitle}" · recipient ${job.to}` : `Selected "${cleanRoleTitle}" · no published recipient address`);
 
       // Automatically run deep live email + full job description fetch in the background
       autoFindRecipientEmail({ jobTarget: job, silent: true }).catch(() => {});
@@ -9699,7 +9354,7 @@
     }
 
     function populateStep3And4ForSelectedJob() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
@@ -9716,6 +9371,7 @@
       });
       if (existingApp && existingApp.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(existingApp.to)) {
         job.to = existingApp.to;
+        job.emailVia = "From your tracker (entered by you) - check it";
       }
 
       document.getElementById("step3JobHeadline").textContent = `Tailored for: ${cleanRole}`;
@@ -9728,7 +9384,7 @@
       const step3EmailVia = document.getElementById("step3AutoEmailVia");
       if (step3EmailBadge) step3EmailBadge.textContent = job.to || "";
       if (step3EmailVia) {
-        step3EmailVia.textContent = `${job.emailVia || "Auto-Fetched HR Email"} · Pre-filled on Page 4`;
+        step3EmailVia.textContent = job.to ? `${job.emailVia || "published address"} · Pre-filled on Page 4` : "No address published: apply on the employer's site or type one on Page 4";
       }
 
       const kws = extractJobKeywords(job);
@@ -9762,7 +9418,9 @@
       }
       const statusEl = document.getElementById("emailLookupStatus");
       if (statusEl && job.to) {
-        statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Auto-fetched recipient email from listing: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "Verified HR / Recruiter Desk")}) &mdash; Ready to send directly!</span>`;
+        statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Recipient found: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "published address")}). Check it before sending.</span>`;
+      } else if (statusEl) {
+        statusEl.textContent = "No recipient address is published for this job. Apply on the employer's site, or type an address you have verified.";
       }
 
       document.getElementById("exportSubjectLine").value = `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
@@ -9787,7 +9445,7 @@
     }
 
     function injectAllJobKeywords() {
-      const kws = extractJobKeywords(state.selectedJob || MULTI_BOARD_SEED_JOBS[0]);
+      const kws = extractJobKeywords(state.selectedJob || NO_JOB_SELECTED);
       kws.forEach((kw) => {
         if (!state.cv.skills.some((s) => s.toLowerCase() === kw.toLowerCase())) {
           state.cv.skills.unshift(kw);
@@ -9903,7 +9561,7 @@
 
     function runPreFlightAudit(silent = false) {
       const cv = state.cv || DEMO_CV;
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       const letter = (document.getElementById("coverLetterTextarea")?.value || "").trim();
       const exportToInput = document.getElementById("exportToEmail");
       const recipientEmail = (exportToInput ? exportToInput.value.trim() : (job.to || ""));
@@ -9956,8 +9614,16 @@
       const isGermanPosting = job.lang === "DE" || /german|deutsch/i.test(job.title + " " + (job.requirements || []).join(" "));
       const languageSyncValid = !isGermanPosting || (String(state.coverLetterLang || "").toUpperCase() === "DE");
 
+      // 7. Unfilled [bracket] placeholders from the summary / bullet skeletons
+      const placeholderRe = /\[[^\]\n]{1,80}\]/;
+      const placeholderCorpus = [cv.summary || "", ...allBullets, letter].join("\n");
+      const placeholderMatch = placeholderCorpus.match(placeholderRe);
+      const noJobSelected = !state.selectedJob;
+
       // Calculate Dynamic Readiness Score
       let score = 100;
+      if (noJobSelected) score -= 30;
+      if (placeholderMatch) score -= 30;
       if (!emailValid) score -= 15;
       if (passiveViolations.length > 0) score -= Math.min(24, passiveViolations.length * 8);
       if (fillerViolations.length > 0) score -= Math.min(15, fillerViolations.length * 5);
@@ -9966,7 +9632,7 @@
       if (!letterLengthValid && letterWords > 0) score -= 8;
       if (!employerNamed) score -= 6;
       if (!languageSyncValid) score -= 15;
-      score = Math.max(35, Math.min(100, score));
+      score = Math.max(0, Math.min(100, score));
 
       // Update Score Badge & Gauge
       const scoreNumEl = document.getElementById("reviewScoreVal");
@@ -10055,8 +9721,14 @@
       const alertDesc = document.getElementById("violationAlertDesc");
       const alertBtn = alertBox ? alertBox.querySelector("button") : null;
       const radarFixSteps = [];
+      if (noJobSelected) {
+        radarFixSteps.push({ label: "Select a job on Page 2", fn: "goToStep(2)" });
+      }
+      if (placeholderMatch) {
+        radarFixSteps.push({ label: `Replace the placeholder ${placeholderMatch[0]} (and any other [brackets]) with your own facts`, fn: "jumpToCvBulletsSpot()" });
+      }
       if (!emailValid) {
-        radarFixSteps.push({ label: "Enter or scan a valid HR recipient email", fn: "fixRecipientEmail()" });
+        radarFixSteps.push({ label: "Add a recipient address the employer published, or apply on the employer's site", fn: "fixRecipientEmail()" });
       }
       if (!employerNamed) {
         radarFixSteps.push({ label: `Reference "${job.company || "the target employer"}" in your cover letter`, fn: "jumpToCoverLetterSpot()" });
@@ -10087,7 +9759,7 @@
       if (alertBox && alertTitle && alertDesc) {
         if (radarFixSteps.length > 0) {
           alertBox.style.display = "block";
-          const hasHardFail = totalViolations > 0 || !emailValid;
+          const hasHardFail = totalViolations > 0 || !emailValid || !!placeholderMatch || noJobSelected;
           alertBox.style.borderColor = hasHardFail ? "#ef4444" : "#f59e0b";
           alertBox.style.background = hasHardFail ? "rgba(239,68,68,0.08)" : "rgba(245,158,11,0.08)";
           alertTitle.style.color = hasHardFail ? "#ef4444" : "#d97706";
@@ -10140,8 +9812,8 @@
       updateCheck(
         "chkRecipientEmail", "chkRecipientIcon", "chkRecipientDesc",
         emailValid,
-        `Recipient email locked: ${recipientEmail || "HR Desk"}`,
-        "How to fix: Enter a valid HR email or click Auto-Scan below.",
+        `Recipient: ${recipientEmail} (${(job && job.emailVia) || "check the source"}). Format checked only, not deliverability.`,
+        "No recipient address. Type one the employer published, or apply on the employer's site.",
         false,
         "Fix: Focus / Scan HR Email →",
         "fixRecipientEmail()"
@@ -10195,7 +9867,7 @@
         false
       );
 
-      return { score, totalViolations, quantPct, letterWords, passiveViolations, fillerViolations };
+      return { score, totalViolations, quantPct, letterWords, passiveViolations, fillerViolations, placeholder: placeholderMatch ? placeholderMatch[0] : "" };
     }
 
     function fixLanguageSync() {
@@ -10209,7 +9881,7 @@
     }
 
     function fixEmployerAlignment() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       const company = (job && job.company) || "";
       const ta = document.getElementById("coverLetterTextarea");
       if (!ta || !company) {
@@ -10363,7 +10035,7 @@
             highlightTerm
           );
         } else {
-          const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0] || {};
+          const job = state.selectedJob || NO_JOB_SELECTED;
           const fresh = typeof generateTailoredCoverLetter === "function" ? generateTailoredCoverLetter(job, state.coverLetterLang) : oldVal;
           highlightSpotInYellow(
             ta,
@@ -10448,7 +10120,7 @@
     }
 
     function fixAllPreDispatchIssues() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       const isGermanPosting = job && (job.lang === "DE" || /german|deutsch/i.test((job.title || "") + " " + (job.requirements || []).join(" ")));
       if (isGermanPosting && String(state.coverLetterLang || "").toUpperCase() !== "DE") {
         if (typeof setCoverLetterLang === "function") setCoverLetterLang("de");
@@ -10707,7 +10379,7 @@ ${state.cv.contact}`;
           (buildCvTextPdfBytes + letterEmailHtml + letterDocument + buildEml)
        ------------------------------------------------------------------ */
     function buildOldPortalLetterEmailHtml() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const bodyText =
         (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
@@ -10762,14 +10434,14 @@ ${state.cv.contact}`;
     }
 
     async function autoFindRecipientEmail(opts = {}) {
-      const job = opts.jobTarget || state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = opts.jobTarget || state.selectedJob || NO_JOB_SELECTED;
       const silent = !!opts.silent;
       if (!job) return "";
 
       // Ensure synchronous baseline email is always populated immediately
       resolveJobRecipientEmailClient(job);
 
-      const isCurrentSelected = (state.selectedJob || MULTI_BOARD_SEED_JOBS[0]) === job;
+      const isCurrentSelected = (state.selectedJob || NO_JOB_SELECTED) === job;
       const statusEl = document.getElementById("emailLookupStatus");
       const inputEl = document.getElementById("exportToEmail");
       const step3Badge = document.getElementById("step3AutoEmailBadge");
@@ -10779,9 +10451,11 @@ ${state.cv.contact}`;
         if (isCurrentSelected) {
           if (inputEl) inputEl.value = job.to || "";
           if (step3Badge) step3Badge.textContent = job.to || "";
-          if (step3Via) step3Via.textContent = `${job.emailVia || "Auto-Fetched HR Email"} · Pre-filled on Page 4`;
+          if (step3Via) step3Via.textContent = job.to ? `${job.emailVia || "published address"} · Pre-filled on Page 4` : "No address published: apply on the employer's site or type one on Page 4";
           if (statusEl && job.to) {
-            statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Auto-fetched recipient email from listing: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "Verified HR / Recruiter Desk")}) &mdash; Ready to send directly!</span>`;
+            statusEl.innerHTML = `<span style="color:var(--accent-emerald);">&#10003; Recipient found: <strong>${escapeHtml(job.to)}</strong> (${escapeHtml(job.emailVia || "published address")}). Check it before sending.</span>`;
+          } else if (statusEl) {
+            statusEl.textContent = "No recipient address is published for this job. Apply on the employer's site, or type an address you have verified.";
           }
         }
         if (state.currentStep === 2) {
@@ -10816,16 +10490,8 @@ ${state.cv.contact}`;
           }
           const bestServerEmail = (d && d.primaryEmail) || (d && d.emails && d.emails[0]) || "";
           if (bestServerEmail) {
-            // Guard against competitor hijacking: if job.company matches a known employer,
-            // ensure the server email belongs to that known employer!
-            const compMatchesKnown = CLIENT_KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(job.company || ""));
-            if (compMatchesKnown && compMatchesKnown.email !== bestServerEmail) {
-              job.to = compMatchesKnown.email;
-              job.emailVia = compMatchesKnown.via;
-            } else {
-              job.to = bestServerEmail;
-              job.emailVia = (d && d.emailVia) || "Verified Job Posting / Company Domain";
-            }
+            job.to = bestServerEmail;
+            job.emailVia = (d && d.emailVia) || "Extracted from Job Posting";
             syncUiForJob();
             if (typeof syncTrackerApplicationEmail === "function") {
               syncTrackerApplicationEmail(job, job.to);
@@ -10913,7 +10579,7 @@ ${state.cv.contact}`;
     }
 
     async function downloadStandaloneAtsPdf() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      const job = state.selectedJob || NO_JOB_SELECTED;
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const fn =
         typeof window.applicationFilename === "function"
@@ -10977,7 +10643,17 @@ ${state.cv.contact}`;
     }
 
     async function sendApplicationNow() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      if (!state.selectedJob) {
+        showToast("Select a job on Page 2 first.");
+        if (typeof goToStep === "function") goToStep(2);
+        return;
+      }
+      const preflight = typeof runPreFlightAudit === "function" ? runPreFlightAudit(true) : null;
+      if (preflight && preflight.placeholder) {
+        showToast(`Replace ${preflight.placeholder} in your CV or letter with your own facts before sending.`);
+        return;
+      }
+      const job = state.selectedJob || NO_JOB_SELECTED;
       resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
 
@@ -11074,6 +10750,13 @@ ${state.cv.contact}`;
                   statusBanner.innerHTML = `<strong>✓ Application Sent Directly to ${escapeHtml(to)}!</strong><br/>Your <strong>Cover Letter</strong> and <strong>Tailored ATS CV PDF (${escapeHtml(pdfFilename)})</strong> were delivered with <strong>Reply-To: ${escapeHtml(from)}</strong>.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically marked as Sent in your Executive Tracker with a 4-day follow-up countdown!</div>`;
                 }
                 showToast(`✓ Email sent to ${to} with PDF attached & marked Sent!`);
+                return;
+              }
+              if (sendRes.status === 422) {
+                // The server refused the address (its domain has no mail servers): stop here
+                // rather than building a draft to an address that cannot receive mail.
+                if (statusBanner) statusBanner.innerHTML = `<strong>Not sent.</strong> ${escapeHtml(sendJson.error || "The recipient address cannot receive email.")}`;
+                showToast("Not sent: the recipient domain does not accept email. Check the address.");
                 return;
               }
             } catch (apiErr) {
@@ -11210,7 +10893,17 @@ ${state.cv.contact}`;
     }
 
     async function openMailtoAndDownloadPdf() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      if (!state.selectedJob) {
+        showToast("Select a job on Page 2 first.");
+        if (typeof goToStep === "function") goToStep(2);
+        return;
+      }
+      const preflight = typeof runPreFlightAudit === "function" ? runPreFlightAudit(true) : null;
+      if (preflight && preflight.placeholder) {
+        showToast(`Replace ${preflight.placeholder} in your CV or letter with your own facts before sending.`);
+        return;
+      }
+      const job = state.selectedJob || NO_JOB_SELECTED;
       resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const to = (document.getElementById("exportToEmail") && document.getElementById("exportToEmail").value.trim()) || job.to || "";
@@ -11238,7 +10931,17 @@ ${state.cv.contact}`;
     }
 
     async function openOutlookWebAndDownloadPdf() {
-      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      if (!state.selectedJob) {
+        showToast("Select a job on Page 2 first.");
+        if (typeof goToStep === "function") goToStep(2);
+        return;
+      }
+      const preflight = typeof runPreFlightAudit === "function" ? runPreFlightAudit(true) : null;
+      if (preflight && preflight.placeholder) {
+        showToast(`Replace ${preflight.placeholder} in your CV or letter with your own facts before sending.`);
+        return;
+      }
+      const job = state.selectedJob || NO_JOB_SELECTED;
       resolveJobRecipientEmailClient(job);
       const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
       const to = (document.getElementById("exportToEmail") && document.getElementById("exportToEmail").value.trim()) || job.to || "";
@@ -11336,11 +11039,11 @@ ${state.cv.contact}`;
       } else if (stepNum === 3) {
         nextText.textContent = "Next: Send Application";
         populateStep3And4ForSelectedJob();
-        autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
+        autoFindRecipientEmail({ jobTarget: state.selectedJob || NO_JOB_SELECTED, silent: true }).catch(() => {});
       } else if (stepNum === 4) {
         nextText.textContent = "Send Application";
         populateStep3And4ForSelectedJob();
-        autoFindRecipientEmail({ jobTarget: state.selectedJob || MULTI_BOARD_SEED_JOBS[0], silent: true }).catch(() => {});
+        autoFindRecipientEmail({ jobTarget: state.selectedJob || NO_JOB_SELECTED, silent: true }).catch(() => {});
         if (typeof runPreFlightAudit === "function") {
           runPreFlightAudit();
         }
@@ -11582,6 +11285,8 @@ ${state.cv.contact}`;
         }
 
         renderLiveCvSheet(false);
+        // Rebuild from the restored CV: suggestions built at boot belong to the demo CV.
+        state.suggestions = buildHrDirectorSuggestions(state.cv);
         if (typeof renderCvSuggestions === "function") renderCvSuggestions();
         if (typeof renderRoleLockChips === "function") renderRoleLockChips();
         if (typeof populateStep3And4ForSelectedJob === "function") populateStep3And4ForSelectedJob();

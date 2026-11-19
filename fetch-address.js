@@ -2,10 +2,9 @@
  * Pull the application address off a live job posting.
  *
  * A static page cannot read a third-party site directly — the browser's
- * same-origin policy forbids it — so this goes through a public read proxy that
- * returns the page as text with permissive CORS headers. That means the posting
- * URL is handed to that service. It is a public job ad, so the exposure is the
- * URL itself and nothing of his, but the UI says so rather than doing it quietly.
+ * same-origin policy forbids it — so this goes through the portal's own reader
+ * (/api/read), which fetches the page server-side with SSRF checks. Posting URLs
+ * are no longer handed to public third-party proxies from the browser.
  *
  * Nothing here guesses. If the posting does not print an address, the answer is
  * "none found" — a plausible invented address looks valid, passes every check,
@@ -17,8 +16,7 @@ import { mailboxKind, cleanAddress } from "./mailbox-kind.js";
 export { mailboxKind };
 
 export const READERS = [
-  { name: "r.jina.ai", build: (u) => "https://r.jina.ai/" + u },
-  { name: "allorigins", build: (u) => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u) },
+  { name: "portal reader", build: (u) => "/api/read?url=" + encodeURIComponent(u) },
 ];
 
 export const MAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;

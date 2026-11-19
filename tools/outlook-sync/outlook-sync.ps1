@@ -19,7 +19,7 @@
   Test: powershell -ExecutionPolicy Bypass -File outlook-sync.ps1 -SelfTest
 #>
 param(
-  [string]$Account = "rassemkadiri@live.de",
+  [Parameter(Mandatory = $true)][string]$Account,
   [int]$Port = 47321,
   [int]$MaxPerFolder = 300,
   [switch]$SelfTest

@@ -11,6 +11,8 @@ const crypto = require("crypto");
 const CLERK_JWKS_URL =
   process.env.CLERK_JWKS_URL ||
   "https://alive-orca-3295.clerk.accounts.dev/.well-known/jwks.json";
+/* Clerk session tokens carry the instance URL as `iss`. Defaults to the JWKS origin. */
+const CLERK_ISSUER = (process.env.CLERK_ISSUER || new URL(CLERK_JWKS_URL).origin).replace(/\/$/, "");
 
 let jwksCache = { keys: [], fetchedAt: 0 };
 const rateBuckets = new Map();
@@ -74,9 +76,11 @@ function isAllowedOrigin(req) {
   if (!val) return true; // allow server-to-server / curl with explicit auth
   try {
     const host = new URL(val).hostname.toLowerCase();
+    // Production, this project's own preview deployments, and local development only.
+    // (Previously any *.vercel.app site was accepted.)
     return (
       host === "ai-cv-portal.vercel.app" ||
-      host.endsWith(".vercel.app") ||
+      /^ai-cv-portal-[a-z0-9-]+\.vercel\.app$/.test(host) ||
       host === "localhost" ||
       host === "127.0.0.1"
     );
@@ -136,11 +140,18 @@ async function verifyClerkBearer(req) {
     const header = JSON.parse(b64UrlToBuf(parts[0]).toString("utf8"));
     const payload = JSON.parse(b64UrlToBuf(parts[1]).toString("utf8"));
     const nowSec = Math.floor(Date.now() / 1000);
-    if (payload.exp && payload.exp < nowSec - 30) return null;
+    if (header.alg !== "RS256") return null;
+    // exp is mandatory; nbf honoured when present; 30 s clock skew.
+    if (!payload.exp || payload.exp < nowSec - 30) return null;
     if (payload.nbf && payload.nbf > nowSec + 30) return null;
+    // Token must come from this Clerk instance.
+    if (String(payload.iss || "").replace(/\/$/, "") !== CLERK_ISSUER) return null;
+    // `azp` (authorized party) is the origin the token was minted for: must be ours.
+    if (payload.azp && !isAllowedOrigin({ headers: { origin: payload.azp } })) return null;
 
+    // The signing key must match by kid. No fallback to an arbitrary key.
     const keys = await getJwks();
-    const jwk = keys.find((k) => k.kid === header.kid) || keys[0];
+    const jwk = keys.find((k) => k.kid === header.kid);
     if (!jwk) return null;
     const pubKey = crypto.createPublicKey({ key: jwk, format: "jwk" });
     const sigOk = crypto.verify(
@@ -159,7 +170,25 @@ async function verifyClerkBearer(req) {
   }
 }
 
+/**
+ * Shared guard for the public read-only endpoints: own origin only, plus a per-IP
+ * rate limit. Returns false (response already sent) when the request is refused.
+ * Note: the limiter is per function instance (in memory); a durable store comes later.
+ */
+function guardPublic(req, res, name, maxPerMinute = 20) {
+  if (!isAllowedOrigin(req)) {
+    res.status(403).json({ ok: false, error: "Forbidden origin" });
+    return false;
+  }
+  if (!checkRateLimit(`${name}:${getClientIp(req)}`, maxPerMinute, 60000)) {
+    res.status(429).json({ ok: false, error: "Rate limit exceeded. Please wait a minute." });
+    return false;
+  }
+  return true;
+}
+
 module.exports = {
+  guardPublic,
   isSafePublicUrl,
   isAllowedOrigin,
   checkRateLimit,

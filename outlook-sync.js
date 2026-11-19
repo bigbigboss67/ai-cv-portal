@@ -15,7 +15,9 @@ import { ingest, confirmItem, ignoreItem, undoItem, CLS_LABEL } from "./tracker-
 
 // "localhost", not 127.0.0.1: Chrome blocks the bare IP from an https page as mixed content.
 export const HELPER = "http://localhost:47321";
-export const ME = ["rassemkadiri@live.de"];
+/* The signed-in mailbox. It is no longer hardcoded: the local helper reports which
+   Outlook account it reads (/health -> account), and runSync passes that in. */
+export const ME = [];
 export const SYNC_KEY = "ai_cv_portal_mail_sync_v1";
 const DAY = 86400000;
 const FOLLOW_UP_MS = 4 * DAY;
@@ -150,12 +152,15 @@ export function startOutlookSync(env) {
   let status = { state: "idle", msg: "" };
   let inflight = null;
 
+  /** The helper's account address when it is up, "" when it is down. */
   async function helperUp() {
     try {
       const r = await fetch(HELPER + "/health", { cache: "no-store" });
-      return r.ok;
+      if (!r.ok) return "";
+      const h = await r.json().catch(() => ({}));
+      return String((h && h.account) || "").trim().toLowerCase() || "unknown";
     } catch {
-      return false;
+      return "";
     }
   }
 
@@ -178,7 +183,8 @@ export function startOutlookSync(env) {
     status = { state: "syncing", msg: "Reading Outlook…" };
     render();
     try {
-      if (!(await helperUp())) {
+      const account = await helperUp();
+      if (!account) {
         status = { state: "off", msg: "Outlook sync is off — start the helper on this PC." };
         return;
       }
@@ -188,7 +194,8 @@ export function startOutlookSync(env) {
       if (!res.ok) throw new Error(data.message || data.error || res.status);
       const prev = load();
       const before = new Set((prev.inbox || []).map((x) => x.id));
-      const { apps, sync } = ingestAll(prev, toMailApps(list), [...data.sent, ...data.inbox]);
+      const me = account.includes("@") ? [account] : [];
+      const { apps, sync } = ingestAll(prev, toMailApps(list), [...data.sent, ...data.inbox], { me });
       const merged = mergeBack(getApps(), apps);
       const fresh = sync.inbox.filter((x) => !before.has(x.id));
       save({ ...sync, lastSync: new Date().toISOString(), helperSeenAt: Date.now() });

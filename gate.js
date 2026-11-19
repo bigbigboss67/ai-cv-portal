@@ -48,7 +48,7 @@ function paint() {
       #cvGate .fine{margin-top:22px;font-size:10.5px;color:#5d5a52;line-height:1.6}
     </style>
     <div class="box">
-      <h1>Rassem Kadiri</h1>
+      <h1>Executive Career Portal</h1>
       <div class="rule"></div>
       <p>Private career portal.</p>
       <input id="cvGatePass" type="password" placeholder="password" autocomplete="current-password" autofocus>

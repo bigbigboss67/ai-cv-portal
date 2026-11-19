@@ -88,7 +88,7 @@ function context() {
   /* The letter's own heading ("Application — General Manager"), as the .eml draft uses it.
      The line under the name on the CV is the candidate's headline, not the role. */
   const head = $$("#pane .sheet.letter .role")?.textContent?.trim() || "";
-  const name = $$("#pane .sheet h1")?.textContent?.trim() || "Rassem Kadiri";
+  const name = $$("#pane .sheet h1")?.textContent?.trim() || "Candidate";
   const letter = $$("#pane .sheet.letter");
   const html = letter ? letter.innerHTML : "<p>Please find my application attached.</p>";
   return { to, head, name, html };
