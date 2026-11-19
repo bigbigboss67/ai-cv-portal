@@ -3219,7 +3219,24 @@
       max-width: 460px;
     }
 
+    /* Editable competency chips on the CV sheet. The text stays in .chip (what the ATS
+       PDF reads); the remove button is a sibling, ignored by html2canvas and print. */
+    .chip-wrap { display: inline-flex; align-items: center; position: relative; }
+    .chip-wrap .chip { cursor: text; }
+    .chip-wrap .chip:focus-visible { outline: 2px solid #10B981; outline-offset: 1px; }
+    .chip-wrap .chip[contenteditable="true"] { outline: 2px solid #10B981; outline-offset: 1px; cursor: text; }
+    .chip-x {
+      position: absolute; top: -7px; right: -7px; width: 18px; height: 18px; padding: 0;
+      border-radius: 50%; border: 1px solid #CBD5E1; background: #0F172A; color: #fff;
+      font-size: 12px; line-height: 16px; text-align: center; cursor: pointer;
+      opacity: 0; transition: opacity 0.12s ease;
+    }
+    .chip-wrap:hover .chip-x, .chip-wrap:focus-within .chip-x { opacity: 1; }
+    .chip-x:hover { background: #DC2626; border-color: #DC2626; }
+    @media (hover: none) { .chip-x { opacity: 1; } }
+
     @media print {
+      .chip-x { display: none !important; }
       .wizard-header-wrap, .page-hero-card, .page-footer-nav, .step-pane, .cv-drawer-backdrop, .cv-theme-photo-toolbar, .ai-laser-scanner {
         display: none !important;
       }
@@ -5153,14 +5170,14 @@
       const skillsEl = document.getElementById("cvSkillsEl");
       skillsEl.innerHTML = (cv.skills || [])
         .map(
-          (s) =>
-            `<span class="chip" style="background:${
+          (s, i) =>
+            `<span class="chip-wrap"><span class="chip" tabindex="0" role="button" title="Click to edit · Enter to save · Esc to cancel" aria-label="Edit competency: ${escapeAttr(s)}" onclick="editCvSkillChip(${i}, this)" onkeydown="if(event.key==='Enter'&&!this.isContentEditable){event.preventDefault();editCvSkillChip(${i}, this)}" style="background:${
               state.injectedKeywords.has(s) ? "#ECFDF5" : "#F1F5F9"
             };color:${
               state.injectedKeywords.has(s) ? "#065F46" : "#1E293B"
             };border:1px solid ${
               state.injectedKeywords.has(s) ? "#10B981" : "#CBD5E1"
-            };padding:3px 9px;border-radius:6px;font-size:11.5px;font-weight:700;">${escapeHtml(s)}</span>`
+            };padding:3px 9px;border-radius:6px;font-size:11.5px;font-weight:700;">${escapeHtml(s)}</span><button type="button" class="chip-x" data-html2canvas-ignore="true" aria-label="Remove competency: ${escapeAttr(s)}" title="Remove" onclick="removeCvSkillChip(${i})">&times;</button></span>`
         )
         .join("");
 
@@ -6648,6 +6665,68 @@
     function removeWriterSkill(idx) {
       state.cv.skills.splice(idx, 1);
       renderLiveCvSheet();
+    }
+
+    /* Remove a competency straight from the CV sheet. */
+    function removeCvSkillChip(idx) {
+      const skills = state.cv.skills || [];
+      if (idx < 0 || idx >= skills.length) return;
+      const [gone] = skills.splice(idx, 1);
+      state.injectedKeywords.delete(gone);
+      renderLiveCvSheet();
+      if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+      showToast(`Removed "${gone}"`);
+    }
+
+    /* Edit a competency in place: Enter or clicking away saves, Esc cancels,
+       emptying the text removes it, and a duplicate of another chip is merged away. */
+    function editCvSkillChip(idx, el) {
+      const skills = state.cv.skills || [];
+      if (!el || el.isContentEditable || idx < 0 || idx >= skills.length) return;
+      const original = skills[idx];
+      el.contentEditable = "true";
+      el.focus();
+      const range = document.createRange();
+      range.selectNodeContents(el);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+
+      let finished = false;
+      const finish = (save) => {
+        if (finished) return;
+        finished = true;
+        el.removeEventListener("keydown", onKey);
+        el.removeEventListener("blur", onBlur);
+        el.contentEditable = "false";
+        const val = save ? el.textContent.replace(/\s+/g, " ").trim() : original;
+        if (!save || val === original) {
+          el.textContent = original;
+          return;
+        }
+        if (!val) {
+          removeCvSkillChip(idx);
+          return;
+        }
+        const dup = skills.findIndex((x, j) => j !== idx && x.toLowerCase() === val.toLowerCase());
+        if (dup >= 0) {
+          skills.splice(idx, 1);
+          showToast(`"${val}" is already listed, so the duplicate was removed`);
+        } else {
+          skills[idx] = val;
+          if (state.injectedKeywords.delete(original)) state.injectedKeywords.add(val);
+          showToast(`Updated to "${val}"`);
+        }
+        renderLiveCvSheet();
+        if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+      };
+      const onKey = (e) => {
+        if (e.key === "Enter") { e.preventDefault(); finish(true); }
+        else if (e.key === "Escape") { e.preventDefault(); finish(false); }
+      };
+      const onBlur = () => finish(true);
+      el.addEventListener("keydown", onKey);
+      el.addEventListener("blur", onBlur);
     }
 
     function aiPopulateExecutiveSkills() {

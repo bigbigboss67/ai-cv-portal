@@ -46,6 +46,10 @@ module.exports = async function handler(req, res) {
   } catch (err) {
     if (err && err.code === "EBLOCKED") return res.status(400).json({ ok: false, error: "Blocked unsafe or private network URL." });
     if (err && err.code === "EHOPS") return res.status(508).json({ ok: false, error: "Too many redirects" });
-    return res.status(502).json({ ok: false, error: String((err && err.message) || err) });
+    if (err && err.code === "ETIMEOUT") return res.status(504).json({ ok: false, error: "Upstream timeout" });
+    if (err && err.code === "ETYPE") return res.status(415).json({ ok: false, error: "Unsupported content type" });
+    // Fixed message to the client; the detail (DNS / TLS / socket errors) stays in server logs.
+    console.error("/api/read upstream error:", (err && err.message) || err);
+    return res.status(502).json({ ok: false, error: "Upstream fetch failed" });
   }
 };
