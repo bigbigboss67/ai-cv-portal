@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T13:33:57.059Z",
-  "total": 183,
-  "staleSources": 1,
+  "generatedAt": "2026-11-19T13:34:41.329Z",
+  "total": 169,
+  "staleSources": 0,
   "sources": [
     {
       "id": "indeed",
@@ -12,7 +12,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 494,
+      "ms": 337,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -25,7 +25,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 290,
+      "ms": 454,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -38,7 +38,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 319,
+      "ms": 367,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -51,7 +51,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 369,
+      "ms": 447,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -64,7 +64,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 244,
+      "ms": 215,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -78,7 +78,7 @@
       },
       "ok": true,
       "count": 8,
-      "ms": 54,
+      "ms": 523,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -166,7 +166,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1377,
+      "ms": 1754,
       "bytes": 148733,
       "note": null,
       "jobs": [
@@ -281,7 +281,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 468,
+      "ms": 1351,
       "bytes": 819899,
       "note": null,
       "jobs": [
@@ -396,7 +396,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 60,
+      "ms": 327,
       "bytes": 174385,
       "note": null,
       "jobs": [
@@ -711,7 +711,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 387,
+      "ms": 1303,
       "bytes": 285784,
       "note": null,
       "jobs": [
@@ -1021,13 +1021,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "ok": false,
-      "count": 68,
-      "ms": 1531,
-      "error": "HTTP 429 from www.linkedin.com",
-      "stale": true,
-      "staleSince": "2026-11-17T12:36:58.287Z",
-      "note": "fetch failed — these 68 listings are carried over from 2026-11-17T12:36:58.287Z, not a fresh read",
+      "audience": {
+        "market": "gulf"
+      },
+      "ok": true,
+      "count": 67,
+      "ms": 12641,
+      "note": null,
       "jobs": [
         {
           "title": "Investment Director / Managing Director",
@@ -1037,9 +1037,7 @@
           "ref": "4470580918",
           "posted": "2026-11-06",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
@@ -1049,9 +1047,7 @@
           "ref": "4465957889",
           "posted": "2026-09-16",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Managing Director - Media",
@@ -1061,9 +1057,7 @@
           "ref": "4487159227",
           "posted": "2026-11-09",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Branch Senior Executive Officer / Managing Director",
@@ -1073,9 +1067,7 @@
           "ref": "4491153198",
           "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
@@ -1085,33 +1077,27 @@
           "ref": "4487261889",
           "posted": "2026-11-04",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Managing Director",
+          "company": "The Global Search Company",
+          "location": "United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/managing-director-at-the-global-search-company-4492000375",
+          "ref": "4492000375",
+          "posted": "2026-11-18",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
-          "company": "Vitatech Group® Middle East",
+          "company": "FCSearch",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-vitatech-group%C2%AE-middle-east-4486821948",
-          "ref": "4486821948",
-          "posted": "2026-11-03",
+          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-fcsearch-4492403101",
+          "ref": "4492403101",
+          "posted": "2026-11-19",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Managing Director — Employer of Record (EOR) Business Unit",
-          "company": "Mercans",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/managing-director-%E2%80%94-employer-of-record-eor-business-unit-at-mercans-4480712635",
-          "ref": "4480712635",
-          "posted": "2026-10-20",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
@@ -1121,21 +1107,7 @@
           "ref": "4488297819",
           "posted": "2026-11-12",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Chief Executive Officer",
-          "company": "Daikan Hospitality Group",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-daikan-hospitality-group-4470924431",
-          "ref": "4470924431",
-          "posted": "2026-09-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Head of India",
@@ -1143,11 +1115,19 @@
           "location": "Dubai, Dubai, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/head-of-india-at-taptap-send-4483864744",
           "ref": "4483864744",
-          "posted": "2026-10-28",
+          "posted": "2026-11-18",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Senior Executive Officer - Wealth Management firm",
+          "company": "Confidential Company",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/senior-executive-officer-wealth-management-firm-at-confidential-company-4491600768",
+          "ref": "4491600768",
+          "posted": "2026-11-19",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "General Manager–O&M(Wastewater Treatment/Utilities/Environmental Services)- UAE",
@@ -1157,9 +1137,7 @@
           "ref": "4474767535",
           "posted": "2026-11-14",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Industrial Refrigeration - General Manager",
@@ -1169,9 +1147,7 @@
           "ref": "4486384314",
           "posted": "2026-11-04",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "General Manager – Commercial Engine Maintenance & Repair Operations",
@@ -1181,9 +1157,7 @@
           "ref": "4490744165",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "General Manager",
@@ -1193,21 +1167,7 @@
           "ref": "4482839535",
           "posted": "2026-10-23",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "General Manager",
-          "company": "AL Gahwa AL Arabiya | القهوة العربية",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-al-gahwa-al-arabiya-%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-4464098707",
-          "ref": "4464098707",
-          "posted": "2026-09-07",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "General Manager",
@@ -1217,9 +1177,17 @@
           "ref": "4490424287",
           "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "General Manager",
+          "company": "AL Gahwa AL Arabiya | القهوة العربية",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-at-al-gahwa-al-arabiya-%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-4464098707",
+          "ref": "4464098707",
+          "posted": "2026-09-07",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "General Manager – Lebanese Restaurant",
@@ -1229,9 +1197,7 @@
           "ref": "4473338500",
           "posted": "2026-10-02",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Global General Manager - CCC",
@@ -1241,9 +1207,7 @@
           "ref": "4491123983",
           "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "General Manager - BeatBAB",
@@ -1253,9 +1217,7 @@
           "ref": "4489018145",
           "posted": "2026-11-11",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "General Manager",
@@ -1265,9 +1227,7 @@
           "ref": "4487482288",
           "posted": "2026-11-10",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director of Operations",
@@ -1277,9 +1237,7 @@
           "ref": "4471423282",
           "posted": "2026-09-24",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Operations Director",
@@ -1289,9 +1247,7 @@
           "ref": "4481446655",
           "posted": "2026-10-26",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director of Operations",
@@ -1301,9 +1257,7 @@
           "ref": "4489565386",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Dir-Operations-A",
@@ -1313,9 +1267,7 @@
           "ref": "4489567307",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director of Operations",
@@ -1325,9 +1277,7 @@
           "ref": "4490338756",
           "posted": "2026-11-12",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director of Operations",
@@ -1337,9 +1287,17 @@
           "ref": "4472709688",
           "posted": "2026-09-28",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Director Operations (Hospital)",
+          "company": "Converge",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-operations-hospital-at-converge-4491381034",
+          "ref": "4491381034",
+          "posted": "2026-11-19",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Director of Operations",
@@ -1349,21 +1307,17 @@
           "ref": "4490729440",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Operations Director - Gulf Region",
-          "company": "ProPosition Management Search",
-          "location": "Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/operations-director-gulf-region-at-proposition-management-search-4483489146",
-          "ref": "4483489146",
-          "posted": "2026-10-30",
+          "title": "Director of Revenue Management/ Director of Hospitality Operations",
+          "company": "Hotel Jobs in Dubai",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-of-revenue-management-director-of-hospitality-operations-at-hotel-jobs-in-dubai-4491399979",
+          "ref": "4491399979",
+          "posted": "2026-11-19",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director — BAU (Business-As-Usual), Payroll & SaaS Operations",
@@ -1371,23 +1325,9 @@
           "location": "Dubai, United Arab Emirates",
           "url": "https://ae.linkedin.com/jobs/view/director-%E2%80%94-bau-business-as-usual-payroll-saas-operations-at-mercans-4480708737",
           "ref": "4480708737",
-          "posted": "2026-10-20",
+          "posted": "2026-11-18",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Director of Palace Operations",
-          "company": "Mandarin Oriental",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-of-palace-operations-at-mandarin-oriental-4473267958",
-          "ref": "4473267958",
-          "posted": "2026-11-12",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
@@ -1397,9 +1337,7 @@
           "ref": "4489407087",
           "posted": "2026-11-10",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer (CEO) – HR & Workforce Solutions",
@@ -1409,9 +1347,7 @@
           "ref": "4477576656",
           "posted": "2026-10-12",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Executive Officer",
@@ -1421,21 +1357,7 @@
           "ref": "4490584769",
           "posted": "2026-11-15",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Chief Executive Officer",
-          "company": "BloFin",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-executive-officer-at-blofin-4480986598",
-          "ref": "4480986598",
-          "posted": "2026-10-19",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Artificial Intelligence Co-Founder / CFO (100 % remote) (m/f/d)",
@@ -1445,9 +1367,17 @@
           "ref": "4490186273",
           "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Chancellor",
+          "company": "Sharjah Education Academy",
+          "location": "Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chancellor-at-sharjah-education-academy-4487140750",
+          "ref": "4487140750",
+          "posted": "2026-11-09",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Chief Operating Officer",
@@ -1457,21 +1387,17 @@
           "ref": "4488297029",
           "posted": "2026-11-12",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Chief Operating Officer - International Advisory Venture",
-          "company": "Aventus",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-international-advisory-venture-at-aventus-4489727048",
-          "ref": "4489727048",
-          "posted": "2026-11-16",
+          "title": "Group Chief Operating Officer (Group COO) | Dubai, UAE | Enterprise Transformation | UAE & MENA",
+          "company": "MMD",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/group-chief-operating-officer-group-coo-dubai-uae-enterprise-transformation-uae-mena-at-mmd-4491386369",
+          "ref": "4491386369",
+          "posted": "2026-11-19",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Chief Projects Officer / Chief Operations Officer",
@@ -1481,45 +1407,17 @@
           "ref": "4489864429",
           "posted": "2026-11-14",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Chief Operating Officer – Industrial Division",
-          "company": "ProPosition Management Search",
-          "location": "Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-%E2%80%93-industrial-division-at-proposition-management-search-4486250306",
-          "ref": "4486250306",
-          "posted": "2026-11-06",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Chief Operating Officer",
-          "company": "BloFin",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/chief-operating-officer-at-blofin-4480978819",
-          "ref": "4480978819",
-          "posted": "2026-10-19",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Integrator (COO)",
-          "company": "Zelona Brands Trading FZE",
+          "title": "General Manager - Automotive",
+          "company": "Confidential",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/integrator-coo-at-zelona-brands-trading-fze-4490288398",
-          "ref": "4490288398",
-          "posted": "2026-11-16",
+          "url": "https://ae.linkedin.com/jobs/view/general-manager-automotive-at-confidential-4491567709",
+          "ref": "4491567709",
+          "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "MEA Business Execution Head, Managing Director",
@@ -1529,9 +1427,17 @@
           "ref": "4487308718",
           "posted": "2026-11-06",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Chief AI Officer",
+          "company": "Confidential Company",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/chief-ai-officer-at-confidential-company-4488136817",
+          "ref": "4488136817",
+          "posted": "2026-11-06",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "General Manager, EOR",
@@ -1541,9 +1447,7 @@
           "ref": "4456502399",
           "posted": "2026-10-28",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Country Manager (UAE)",
@@ -1553,9 +1457,7 @@
           "ref": "4480878110",
           "posted": "2026-10-23",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Country Manager – UAE",
@@ -1565,9 +1467,17 @@
           "ref": "4486701312",
           "posted": "2026-11-05",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "UAE Country Manager – Emirati National",
+          "company": "eyouth",
+          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/uae-country-manager-%E2%80%93-emirati-national-at-eyouth-4464295202",
+          "ref": "4464295202",
+          "posted": "2026-09-12",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Managing Director - Projects Division",
@@ -1577,9 +1487,7 @@
           "ref": "4487491322",
           "posted": "2026-11-10",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Head of APAC",
@@ -1589,21 +1497,7 @@
           "ref": "4488230653",
           "posted": "2026-11-11",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "GM International Sales",
-          "company": "Converge",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/gm-international-sales-at-converge-4488595969",
-          "ref": "4488595969",
-          "posted": "2026-11-13",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Commercial Director",
@@ -1613,9 +1507,17 @@
           "ref": "4487754557",
           "posted": "2026-11-05",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Commercial Director",
+          "company": "RTC1 Recruitment Services",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/commercial-director-at-rtc1-recruitment-services-4490887884",
+          "ref": "4490887884",
+          "posted": "2026-11-18",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Senior Director - Commercial",
@@ -1625,9 +1527,7 @@
           "ref": "4488939307",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director, Commercial Payments, Visa Government Solutions - CEMEA",
@@ -1637,9 +1537,7 @@
           "ref": "4440652041",
           "posted": "2026-08-27",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Commercial Director MEAP & Turkey CIS",
@@ -1649,9 +1547,7 @@
           "ref": "4487251646",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Director - Business",
@@ -1661,9 +1557,7 @@
           "ref": "4489424179",
           "posted": "2026-10-16",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Commercial Director",
@@ -1673,9 +1567,17 @@
           "ref": "4392893262",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Commercial Director",
+          "company": "ESAW Premium Student Living",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/commercial-director-at-esaw-premium-student-living-4492430002",
+          "ref": "4492430002",
+          "posted": "2026-11-19",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "CLUSTER DIRECTOR OF COMMERCIAL",
@@ -1685,9 +1587,7 @@
           "ref": "4490744501",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "CLUSTER DIRECTOR OF COMMERCIAL",
@@ -1697,33 +1597,7 @@
           "ref": "4490754572",
           "posted": "2026-11-13",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Commercial Director, Agency Sales",
-          "company": "Affle",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/commercial-director-agency-sales-at-affle-4480654668",
-          "ref": "4480654668",
-          "posted": "2026-10-23",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Regional Commercial Director (Luxury Beauty & Fragrance)",
-          "company": "HRsource",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/regional-commercial-director-luxury-beauty-fragrance-at-hrsource-4481885093",
-          "ref": "4481885093",
-          "posted": "2026-10-27",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Supply Chain Director",
@@ -1733,33 +1607,47 @@
           "ref": "4487157330",
           "posted": "2026-11-09",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Director of Global Supply Chain Integration, Middle East",
+          "title": "Director Supply Chain, tMart UAE",
+          "company": "talabat",
+          "location": "Dubai, Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-supply-chain-tmart-uae-at-talabat-4491163600",
+          "ref": "4491163600",
+          "posted": "2026-11-17",
+          "kind": "page",
+          "src": "linkedin"
+        },
+        {
+          "title": "Head of Supply Chain, Middle East",
           "company": "Anduril Industries",
           "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/director-of-global-supply-chain-integration-middle-east-at-anduril-industries-4482038418",
+          "url": "https://ae.linkedin.com/jobs/view/head-of-supply-chain-middle-east-at-anduril-industries-4482038418",
           "ref": "4482038418",
           "posted": "2026-11-11",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Regional Head of Supply Chain (APAC) – Global Speciality Chemicals Manufacturer",
-          "company": "Bramwith Consulting",
+          "title": "Head Procurement & Materials (Hospital)",
+          "company": "Converge",
           "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/regional-head-of-supply-chain-apac-%E2%80%93-global-speciality-chemicals-manufacturer-at-bramwith-consulting-4488230199",
-          "ref": "4488230199",
-          "posted": "2026-11-11",
+          "url": "https://ae.linkedin.com/jobs/view/head-procurement-materials-hospital-at-converge-4491360725",
+          "ref": "4491360725",
+          "posted": "2026-11-19",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
+        },
+        {
+          "title": "Director – Source to Pay Excellence - Dubai Holding Group Services",
+          "company": "Dubai Holding",
+          "location": "Dubai, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/director-%E2%80%93-source-to-pay-excellence-dubai-holding-group-services-at-dubai-holding-4491802632",
+          "ref": "4491802632",
+          "posted": "2026-11-18",
+          "kind": "page",
+          "src": "linkedin"
         },
         {
           "title": "Managing Director, Global Sourcing-Dubai",
@@ -1769,9 +1657,7 @@
           "ref": "4490978201",
           "posted": "2026-11-17",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
           "title": "Emirati Principal Lead- Supply Chain",
@@ -1793,9 +1679,7 @@
           "ref": "4488127333",
           "posted": "2026-11-06",
           "kind": "page",
-          "src": "linkedin",
-          "to": "careers@aramex.com",
-          "emailVia": "Aramex Global HR Desk"
+          "src": "linkedin"
         },
         {
           "title": "Head of Procurement",
@@ -1805,45 +1689,17 @@
           "ref": "4486775228",
           "posted": "2026-11-05",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         },
         {
-          "title": "Senior Procurement Leadership",
-          "company": "DowMartin Ltd",
-          "location": "Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/senior-procurement-leadership-at-dowmartin-ltd-4491173219",
-          "ref": "4491173219",
-          "posted": "2026-11-17",
+          "title": "SCM - Sharjah",
+          "company": "Larsen & Toubro",
+          "location": "Sharjah, Sharjah Emirate, United Arab Emirates",
+          "url": "https://ae.linkedin.com/jobs/view/scm-sharjah-at-larsen-toubro-4492050113",
+          "ref": "4492050113",
+          "posted": "2026-11-18",
           "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "Procurement Director",
-          "company": "Wasael Property Management",
-          "location": "Abu Dhabi, Abu Dhabi Emirate, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/procurement-director-at-wasael-property-management-4463829148",
-          "ref": "4463829148",
-          "posted": "2026-11-11",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
-        },
-        {
-          "title": "City Cluster Director of Procurement",
-          "company": "Le Méridien Hotels & Resorts",
-          "location": "Dubai, Dubai, United Arab Emirates",
-          "url": "https://ae.linkedin.com/jobs/view/city-cluster-director-of-procurement-at-le-m%C3%A9ridien-hotels-resorts-4488384649",
-          "ref": "4488384649",
-          "posted": "2026-11-10",
-          "kind": "page",
-          "src": "linkedin",
-          "to": "",
-          "emailVia": "Apply via Employer Portal / ATS"
+          "src": "linkedin"
         }
       ]
     },
@@ -1855,22 +1711,15 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 27,
-      "ms": 336,
+      "count": 14,
+      "ms": 1109,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
           "kind": "page"
         },
         {
@@ -1878,6 +1727,13 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/manage",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
           "kind": "page"
         },
         {
@@ -1895,31 +1751,10 @@
           "kind": "page"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
-          "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via collinsdictionary.com",
-          "location": "UAE",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "kind": "page"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via managementlegend.com",
-          "location": "UAE",
-          "url": "https://www.managementlegend.com/what-is-management",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
           "kind": "page"
         },
         {
@@ -1927,13 +1762,6 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/general",
-          "kind": "page"
-        },
-        {
-          "title": "Personas - Banco General Panamá",
-          "company": "via bgeneral.com",
-          "location": "UAE",
-          "url": "https://www.bgeneral.com/",
           "kind": "page"
         },
         {
@@ -1951,10 +1779,10 @@
           "kind": "page"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via vocabulary.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://www.vocabulary.com/dictionary/general",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page"
         },
         {
@@ -1965,87 +1793,24 @@
           "kind": "page"
         },
         {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page"
         },
         {
-          "title": "Dollar General",
-          "company": "via dollargeneral.com",
+          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://www.dollargeneral.com/",
+          "url": "https://www.merriam-webster.com/thesaurus/general",
           "kind": "page"
         },
         {
-          "title": "H5533-017-1: UPMC for Life Essential Rx (PPO) | Medicare.org",
-          "company": "via medicare.org",
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via generalww.com",
           "location": "UAE",
-          "url": "https://www.medicare.org/medicare-advantage-plans/plan/H5533-017-1/",
-          "kind": "page"
-        },
-        {
-          "title": "UPMC for Life Essential Rx (PPO) - MedicarePlans.com",
-          "company": "via medicareplans.com",
-          "location": "UAE",
-          "url": "https://www.medicareplans.com/medicare-advantage/plan/H5533-017-1/",
-          "kind": "page"
-        },
-        {
-          "title": "H5533-017-2: UPMC for Life Essential Rx (PPO) | Medicare.org",
-          "company": "via medicare.org",
-          "location": "UAE",
-          "url": "https://www.medicare.org/medicare-advantage-plans/plan/H5533-017-2/",
-          "kind": "page"
-        },
-        {
-          "title": "UPMC for Life Essential Rx (PPO) - MedicarePlans.com",
-          "company": "via medicareplans.com",
-          "location": "UAE",
-          "url": "https://www.medicareplans.com/medicare-advantage/plan/H5533-017-2/",
-          "kind": "page"
-        },
-        {
-          "title": "UPMC for Life Essential Rx (PPO): 2027 benefits and costs",
-          "company": "via factsonmedicare.com",
-          "location": "UAE",
-          "url": "https://www.factsonmedicare.com/medicare-advantage/upmc-for-life-essential-rx-ppo-2027-h5533-017-1/",
-          "kind": "page"
-        },
-        {
-          "title": "2026 UPMC for Life Plans - UPMC Health Plan",
-          "company": "via upmchealthplan.com",
-          "location": "UAE",
-          "url": "https://www.upmchealthplan.com/medicare-brokers/medicare/2026-upmc-for-life-plans",
-          "kind": "page"
-        },
-        {
-          "title": "Understanding Your Cost of Care | UPMC Health Plan",
-          "company": "via upmchealthplan.com",
-          "location": "UAE",
-          "url": "https://www.upmchealthplan.com/members/health-plan-basics/cost-of-care",
-          "kind": "page"
-        },
-        {
-          "title": "Estimate Your Out-of-Pocket Costs for UPMC East | UPMC",
-          "company": "via upmc.com",
-          "location": "UAE",
-          "url": "https://www.upmc.com/locations/hospitals/east/patients-and-visitors/patient-information/price-estimates",
-          "kind": "page"
-        },
-        {
-          "title": "Price Estimates FAQs | UPMC",
-          "company": "via upmc.com",
-          "location": "UAE",
-          "url": "https://www.upmc.com/patients-visitors/paying-bill/no-surprises-act/price-estimate-faqs",
-          "kind": "page"
-        },
-        {
-          "title": "2026 UPMC for Life PPO Essential Care Rx (PPO) in PA Plan Benefits Details",
-          "company": "via q1medicare.com",
-          "location": "UAE",
-          "url": "https://q1medicare.com/maplandetails/2025/?countyCode=42001&state=PA&contractId=H5533&planId=017&segmentId=1&plan=UPMC%20for%20Life%20PPO%20Essential%20Care%20Rx%20(PPO)",
+          "url": "https://www.generalww.com/",
           "kind": "page"
         }
       ]
