@@ -8483,24 +8483,9 @@
           });
       });
 
-      const skillCatalog = [
-        { label: "Full P&L Ownership", re: /\b(p&l|profit\s*&?\s*loss|ebitda|revenue|margin)\b/i },
-        { label: "Multi-Site Operations", re: /\b(multi-site|operations|operational|plant|facility|manufacturing)\b/i },
-        { label: "Supply Chain & Logistics", re: /\b(supply chain|logistics|warehouse|distribution|fleet|otif)\b/i },
-        { label: "Strategic Procurement", re: /\b(procurement|sourcing|vendor|supplier|purchasing)\b/i },
-        { label: "Turnaround & Restructuring", re: /\b(turnaround|restructuring|transformation|change management)\b/i },
-        { label: "Board Governance & Strategy", re: /\b(board|governance|joint venture|stakeholder|c-suite|strategic)\b/i },
-        { label: "CAPEX / OPEX & Budgeting", re: /\b(capex|opex|budget|forecast|working capital|cost reduction)\b/i },
-        { label: "Lean Six Sigma & Quality", re: /\b(lean|six sigma|kaizen|iso|quality|hse)\b/i },
-        { label: "ERP / SAP & Digital Transformation", re: /\b(erp|sap|digital|crm|automation|ai)\b/i },
-        { label: "Commercial & Market Expansion", re: /\b(commercial|business development|sales|market entry|gcc|mena|uae)\b/i }
-      ];
-      skillCatalog.forEach((item) => {
-        if (item.re.test(rawText) && !parsedUserSkills.some((x) => x.toLowerCase() === item.label.toLowerCase())) {
-          parsedUserSkills.push(item.label);
-        }
-      });
-      const finalSkills = parsedUserSkills.length ? parsedUserSkills.slice(0, 40) : DEMO_CV.skills.slice();
+      // Only skills the CV itself lists. No generic labels added because a keyword like
+      // "revenue" appears somewhere, and no demo skills when the CV has no Skills section.
+      const finalSkills = parsedUserSkills.slice(0, 40);
 
       // 6. Ensure Roles & Career History are 100% Valid
       if (!roles.length && summaryLines.length > 2) {
@@ -8708,66 +8693,83 @@
      * Scores a job listing against BOTH the candidate's CV details (skills, summary,
      * experience bullets, location) AND desired job roles (state.selectedRoles).
      */
+    /* CV Fit score, 100 points, every part explainable (shown in the job details panel):
+         Role      40  the job title matches one of your target roles
+         Skills    40  5 per CV skill whose distinctive words appear in the posting
+         Areas     12  3 per experience area found in both your CV and the posting
+         Location   8  the posting mentions the region you searched
+       Words like "skills", "management" or "strong" do not count as a skill match: they
+       appear in almost every posting and made every job look like a 99% fit. */
+    const SKILL_GENERIC_WORDS = new Set([
+      "and", "the", "for", "with", "full", "skill", "skills", "ability", "abilities", "strong", "advanced",
+      "exceptional", "excellent", "proven", "expertise", "experience", "experienced", "management", "development",
+      "based", "new", "high", "level", "senior", "team", "teams", "work", "working", "good", "great", "knowledge",
+      "proficiency", "proficiencies", "proficient", "including", "across", "within", "various", "multiple", "other",
+      "und", "mit", "der", "die", "das", "von", "für", "sehr", "gute", "kenntnisse", "erfahrung"
+    ]);
+    const JOB_AREA_SIGNALS = [
+      { tag: "P&L / financial results", re: /\b(p&l|profit|ebitda|margin|revenue)\b/i },
+      { tag: "Operations", re: /\b(operations|operational|multi-site|plant|manufacturing)\b/i },
+      { tag: "Supply chain", re: /\b(supply chain|logistics|procurement|sourcing|distribution)\b/i },
+      { tag: "Strategy & governance", re: /\b(board|governance|strategic|turnaround|restructuring|transformation)\b/i }
+    ];
+    const wordIn = (hay, word) => {
+      const esc = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return new RegExp(`(?:^|[^\\p{L}\\p{N}])${esc}(?:[^\\p{L}\\p{N}]|$)`, "iu").test(hay);
+    };
+
     function scoreJobAgainstCvAndRoles(job) {
       const hay = `${job.title || ""} ${job.text || ""} ${job.snippet || ""} ${(job.requirements || []).join(" ")} ${job.location || ""}`.toLowerCase();
       const matchedRole = doesJobMatchStrictRoles(job.title, state.selectedRoles);
-      let score = matchedRole ? 76 : 54;
-      const cvMatchedDetails = [];
 
-      // 1. Match against candidate's actual CV skills
-      const cvSkills = state.cv.skills || [];
-      for (const sk of cvSkills) {
-        const cleanSk = String(sk || "").trim();
-        if (!cleanSk) continue;
-        const tokens = cleanSk
-          .toLowerCase()
-          .replace(/[^\p{L}\p{N}&]+/gu, " ")
-          .split(/\s+/)
-          .filter((w) => w.length >= 3 && !["and", "the", "for", "with", "full"].includes(w));
-        const hit =
-          hay.includes(cleanSk.toLowerCase()) ||
-          (tokens.length > 0 && tokens.some((tk) => hay.includes(tk)));
-        if (hit) {
-          score += 4;
-          cvMatchedDetails.push(cleanSk.replace(/\s*\(.*?\)\s*/g, "").trim());
-        }
+      // 1. Role (40)
+      const role = { matched: matchedRole || "", points: matchedRole ? 40 : 0, targets: [...(state.selectedRoles || [])] };
+
+      // 2. Skills (5 each, max 40): a skill matches when its whole phrase appears, or
+      //    enough of its distinctive words do (all of them for 1-2 words, 60% otherwise).
+      const hits = [];
+      const misses = [];
+      for (const sk of state.cv.skills || []) {
+        const label = String(sk || "").trim();
+        if (!label) continue;
+        const words = [...new Set(label.toLowerCase().replace(/[^\p{L}\p{N}&]+/gu, " ").split(/\s+/))]
+          .filter((w) => w.length >= 3 && !SKILL_GENERIC_WORDS.has(w));
+        if (!words.length) continue; // nothing distinctive to look for
+        const found = words.filter((w) => wordIn(hay, w));
+        const need = words.length <= 2 ? words.length : Math.ceil(words.length * 0.6);
+        if (wordIn(hay, label.toLowerCase()) || found.length >= need) hits.push({ skill: label, words: found.length ? found : [label] });
+        else misses.push({ skill: label, words, found });
       }
+      const skills = { points: Math.min(40, hits.length * 5), hits, misses, considered: hits.length + misses.length };
 
-      // 2. Match against candidate's CV summary & experience domain keywords
+      // 3. Experience areas (3 each, max 12): in the posting AND in your CV text.
       const cvCorpus = `${state.cv.headline || ""} ${state.cv.summary || ""} ${(state.cv.roles || [])
         .map((r) => `${r.title} ${(r.bullets || []).join(" ")}`)
         .join(" ")}`.toLowerCase();
-      const execSignals = [
-        { tag: "Full P&L", re: /\b(p&l|profit|ebitda|margin|revenue)\b/i },
-        { tag: "Multi-Site Ops", re: /\b(operations|operational|multi-site|plant|manufacturing)\b/i },
-        { tag: "Supply Chain", re: /\b(supply chain|logistics|procurement|sourcing|distribution)\b/i },
-        { tag: "Board & Strategy", re: /\b(board|governance|strategic|turnaround|restructuring|transformation)\b/i }
-      ];
-      for (const sig of execSignals) {
-        if (sig.re.test(hay) && sig.re.test(cvCorpus)) {
-          score += 3;
-          if (!cvMatchedDetails.some((d) => d.toLowerCase().includes(sig.tag.toLowerCase().split(" ")[0]))) {
-            cvMatchedDetails.push(sig.tag);
-          }
-        }
-      }
+      const areaHits = JOB_AREA_SIGNALS.filter((sig) => sig.re.test(hay) && sig.re.test(cvCorpus)).map((sig) => sig.tag);
+      const areas = { points: areaHits.length * 3, hits: areaHits };
 
-      // 3. Location / Region match between CV / filter and job
-      const selectedLoc = (document.getElementById("searchLocationSelect") && document.getElementById("searchLocationSelect").value) || "United Arab Emirates";
-      if (
-        (selectedLoc && hay.includes(selectedLoc.toLowerCase())) ||
-        /\b(dubai|abu dhabi|uae|emirates|riyadh|gcc)\b/i.test(hay)
-      ) {
-        score += 4;
-      }
+      // 4. Location (8): the posting's location or title names a place in the region you
+      //    searched. "All Regions" has no preference, so every job gets the points.
+      const selectedLoc = (document.getElementById("searchLocationSelect") && document.getElementById("searchLocationSelect").value) || "";
+      const REGION_PLACES = {
+        "United Arab Emirates": ["united arab emirates", "uae", "emirates", "dubai", "abu dhabi", "sharjah", "ajman", "ras al khaimah"],
+        "Saudi Arabia": ["saudi arabia", "saudi", "ksa", "riyadh", "jeddah", "dammam", "khobar", "neom"],
+        GCC: ["uae", "united arab emirates", "dubai", "abu dhabi", "sharjah", "saudi", "ksa", "riyadh", "jeddah", "qatar", "doha", "kuwait", "oman", "muscat", "bahrain", "manama", "gcc"],
+        Germany: ["germany", "deutschland", "dach", "austria", "österreich", "switzerland", "schweiz", "berlin", "munich", "münchen", "frankfurt", "hamburg", "düsseldorf", "cologne", "köln", "stuttgart", "süddeutschland", "norddeutschland", "zürich", "wien", "vienna"]
+      };
+      const places = REGION_PLACES[selectedLoc] || (selectedLoc ? [selectedLoc.toLowerCase()] : []);
+      const where = `${job.location || ""} ${job.title || ""}`.toLowerCase();
+      const locHit = places.find((p) => wordIn(where, p)) || "";
+      const location = !selectedLoc
+        ? { points: 8, searched: "All regions", matchedOn: "no region preference" }
+        : { points: locHit ? 8 : 0, searched: selectedLoc, matchedOn: locHit };
 
-      job.matchedRole = matchedRole || job.matchedRole || state.selectedRoles[0] || "Executive Role";
-      job.cvMatchedDetails = [...new Set(cvMatchedDetails)].slice(0, 4);
-      if (!job.cvMatchedDetails.length) {
-        job.cvMatchedDetails = [];
-      }
-      // No floor: a weak match must be able to look weak.
-      job.score = Math.min(99, Math.max(0, score));
+      const total = role.points + skills.points + areas.points + location.points;
+      job.match = { role, skills, areas, location, total };
+      job.matchedRole = role.matched;
+      job.cvMatchedDetails = hits.map((h) => h.skill).slice(0, 4);
+      job.score = Math.max(0, Math.min(100, total));
       return job;
     }
 
@@ -9200,7 +9202,7 @@
           const emailViaLabel = resolvedEmail ? (j.emailVia || "published address") : "Not published: apply on employer site";
           const langInfo = j.langInfo || detectJobLanguageRequirement(j);
           return `
-            <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="selectAndTailorJob(${i})">
+            <div class="exec-job-card ${isSel ? "selected" : ""}" onclick="openJobDetails(${i})" title="Click for full details and how the CV Fit score was worked out">
               <div>
                 <div class="job-card-top">
                   <div style="display:flex;gap:14px;align-items:flex-start;">
@@ -9214,9 +9216,9 @@
                         <span class="lang-req-badge" style="background:${langInfo.badgeColor};color:${langInfo.badgeText};border:1px solid ${langInfo.badgeBorder};" title="Language requirement for this mandate">
                           ${escapeHtml(langInfo.label)}
                         </span>
-                        <span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">
-                          Role Match: ${escapeHtml(j.matchedRole || state.selectedRoles[0])}
-                        </span>
+                        ${j.matchedRole
+                          ? `<span style="background:var(--accent-emerald-soft);color:var(--accent-emerald);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">Role Match: ${escapeHtml(j.matchedRole)}</span>`
+                          : `<span style="background:var(--bg-elevated);border:1px solid var(--border-subtle);color:var(--text-muted);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;">No target-role match</span>`}
                         ${estimateCompRange(j) ? `<span class="salary-oracle-pill" title="Salary as stated in the posting">
                           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 100 4h4a2 2 0 110 4H8"/><path d="M12 18V6"/></svg>
                           <span>${escapeHtml(estimateCompRange(j))}</span>
@@ -9228,7 +9230,10 @@
                       </div>
                       <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);line-height:1.3;">${escapeHtml(j.title)}</h3>
                       <div style="font-size:13px;color:var(--text-secondary);font-weight:600;margin-top:3px;">
-                        ${escapeHtml(j.company || "Verified Executive Employer")} &middot; ${escapeHtml(j.location || "UAE")}
+                        ${escapeHtml(j.company || "Employer not stated")} &middot; ${escapeHtml(j.location || "Location not stated")}
+                      </div>
+                      <div style="font-size:11.5px;color:var(--text-muted);margin-top:3px;" title="${escapeAttr(jobDateLine(j).title)}">
+                        &#128197; ${escapeHtml(jobDateLine(j).text)}
                       </div>
                     </div>
                   </div>
@@ -9252,6 +9257,9 @@
                 <button type="button" class="btn-tailor-job" style="flex:1;min-width:220px;" onclick="event.stopPropagation(); selectAndTailorJob(${i});">
                   Select Role${resolvedEmail ? ` &amp; Pre-Fill Email (${escapeHtml(resolvedEmail)})` : ""} &rarr;
                 </button>
+                <button type="button" class="btn-track-job-card" onclick="event.stopPropagation(); openJobDetails(${i});" title="Full posting and how the CV Fit score was worked out">
+                  Details
+                </button>
                 <button type="button" class="btn-track-job-card" onclick="event.stopPropagation(); quickTrackJobByIndex(${i});" title="Add this job directly to your Executive Tracker">
                   📊 Track Job
                 </button>
@@ -9262,14 +9270,170 @@
         .join("");
     }
 
+    /* The listing's date as honestly as the source allows: the board's own posting date
+       when it gives one, otherwise when the portal found it. */
+    function jobDateLine(j) {
+      const fmt = (d) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      const daysAgo = (d) => Math.round((Date.now() - d.getTime()) / 86400000);
+      const ago = (d) => { const n = daysAgo(d); return n <= 0 ? "today" : n === 1 ? "yesterday" : `${n} days ago`; };
+      const p = String((j && j.posted) || "").trim();
+      const found = j && j.foundAt ? new Date(j.foundAt) : null;
+      const foundTxt = found && !isNaN(found) ? `found by the portal ${fmt(found)}` : "";
+      if (/^\d{4}-\d{2}-\d{2}/.test(p)) {
+        const d = new Date(p.slice(0, 10) + "T00:00:00Z");
+        if (!isNaN(d)) return { text: `Posted ${fmt(d)} (${ago(d)})`, title: `Posting date from ${j.source || "the board"}${foundTxt ? "; " + foundTxt : ""}` };
+      }
+      if (p && !/^(live|today|recent)$/i.test(p)) {
+        return { text: `Posted: ${p} (as shown on the board)`, title: foundTxt || "Date text as shown on the board" };
+      }
+      return {
+        text: foundTxt ? `Posting date not given · ${foundTxt}` : "Posting date not given",
+        title: `${j && j.source ? j.source : "This board"} does not publish a posting date for this listing`
+      };
+    }
+
+    /* ---------- Job details panel (opens when a listing is clicked) ---------- */
+    let _jobDetailsJob = null;
+    let _jobDetailsKeyHandler = null;
+
+    function closeJobDetails() {
+      const m = document.getElementById("jobDetailsModal");
+      if (m) m.remove();
+      if (_jobDetailsKeyHandler) document.removeEventListener("keydown", _jobDetailsKeyHandler);
+      _jobDetailsKeyHandler = null;
+      _jobDetailsJob = null;
+    }
+
+    async function openJobDetails(filteredIndex) {
+      const job = getFilteredJobs()[filteredIndex];
+      if (!job) return;
+      _jobDetailsJob = job;
+      job._detailsIndex = filteredIndex;
+      scoreJobAgainstCvAndRoles(job);
+      renderJobDetails(job, { loading: (job.text || "").length < 400 && /^https?:\/\//i.test(job.url || "") });
+      // Short card text: fetch the full posting, then re-score on it.
+      if ((job.text || "").length < 400 && /^https?:\/\//i.test(job.url || "") && typeof autoFindRecipientEmail === "function") {
+        const before = (job.text || "").length;
+        try { await autoFindRecipientEmail({ jobTarget: job, silent: true }); } catch {}
+        if (_jobDetailsJob !== job) return;
+        job.requirements = extractQuickRequirements(job.text || "");
+        scoreJobAgainstCvAndRoles(job);
+        renderJobDetails(job, { loading: false, fetched: (job.text || "").length > before, fetchFailed: (job.text || "").length <= before });
+      }
+    }
+
+    function renderJobDetails(job, { loading = false, fetched = false, fetchFailed = false } = {}) {
+      const m = job.match || scoreJobAgainstCvAndRoles(job).match;
+      const date = jobDateLine(job);
+      const langInfo = job.langInfo || detectJobLanguageRequirement(job);
+      const salary = estimateCompRange(job);
+      const textLines = String(job.text || "")
+        .split(/\r?\n+/)
+        .map((l) => l.trim())
+        .filter((l) => l && !PAGE_CHROME.test(l));
+      const row = (label, pts, max, body) => `
+        <tr>
+          <td style="padding:10px 12px;vertical-align:top;font-weight:700;white-space:nowrap;">${label}</td>
+          <td style="padding:10px 12px;vertical-align:top;font-family:var(--font-mono);font-weight:800;white-space:nowrap;color:${pts ? "var(--accent-emerald)" : "var(--text-muted)"};">${pts} / ${max}</td>
+          <td style="padding:10px 12px;vertical-align:top;color:var(--text-secondary);line-height:1.5;">${body}</td>
+        </tr>`;
+      const chip = (txt, sub, ok = true) =>
+        `<span style="display:inline-block;margin:2px 4px 2px 0;padding:3px 8px;border-radius:6px;font-size:11.5px;font-weight:700;border:1px solid ${ok ? "#10B981" : "var(--border-subtle)"};background:${ok ? "#ECFDF5" : "var(--bg-elevated)"};color:${ok ? "#065F46" : "var(--text-secondary)"};">${escapeHtml(txt)}${sub ? `<span style="font-weight:500;opacity:0.75;"> &middot; ${escapeHtml(sub)}</span>` : ""}</span>`;
+
+      const roleBody = m.role.matched
+        ? `Job title matches your target role <strong>${escapeHtml(m.role.matched)}</strong>.`
+        : `Job title doesn't match any of your target roles${m.role.targets.length ? ` (${escapeHtml(m.role.targets.join(", "))})` : ""}.`;
+      const skillsBody = m.skills.considered
+        ? `${m.skills.hits.length} of your ${m.skills.considered} CV skills found in the posting, 5 points each (max 40)${m.skills.hits.length > 8 ? ", so capped at 40" : ""}.
+           <div style="margin-top:6px;">${m.skills.hits.map((h) => chip(h.skill, "matched: " + h.words.join(", "))).join("") || "<em>None found.</em>"}</div>
+           ${m.skills.misses.length ? `<details style="margin-top:6px;"><summary style="cursor:pointer;font-weight:600;">Not found in this posting (${m.skills.misses.length})</summary><div style="margin-top:6px;">${m.skills.misses.map((x) => chip(x.skill, x.found.length ? "only: " + x.found.join(", ") : "", false)).join("")}</div></details>` : ""}`
+        : "Your CV has no skills listed yet, so nothing could be matched.";
+      const areasBody = m.areas.hits.length
+        ? `Found in both the posting and your CV: ${m.areas.hits.map((t) => chip(t)).join("")}<div style="font-size:11.5px;margin-top:4px;">3 points per area, max 12.</div>`
+        : "None of P&amp;L, operations, supply chain or strategy &amp; governance appears in both the posting and your CV.";
+      const locBody = m.location.searched === "All regions"
+        ? "You searched all regions, so location is not held against any job."
+        : m.location.points
+          ? `Location names <strong>${escapeHtml(m.location.matchedOn)}</strong>, which is in the region you searched (${escapeHtml(m.location.searched)}).`
+          : `No place in the region you searched (${escapeHtml(m.location.searched)}) appears in this job's location${job.location ? ` ("${escapeHtml(job.location)}")` : " (not stated)"}.`;
+
+      const html = `
+        <div id="jobDetailsBackdrop" style="position:fixed;inset:0;background:rgba(15,23,42,0.55);z-index:9990;display:flex;justify-content:center;align-items:flex-start;padding:4vh 16px;overflow:auto;">
+          <div role="dialog" aria-modal="true" aria-labelledby="jobDetailsTitle" style="width:100%;max-width:860px;background:var(--bg-surface, #fff);color:var(--text-primary);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.3);padding:22px 24px;">
+            <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;">
+              <div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px;">
+                  <span class="source-tag">${escapeHtml((job.source || "LIVE").toUpperCase())}</span>
+                  <span class="lang-req-badge" style="background:${langInfo.badgeColor};color:${langInfo.badgeText};border:1px solid ${langInfo.badgeBorder};">${escapeHtml(langInfo.label)}</span>
+                  ${job.ref ? `<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">Ref: ${escapeHtml(job.ref)}</span>` : ""}
+                </div>
+                <h2 id="jobDetailsTitle" style="font-size:20px;font-weight:800;line-height:1.3;margin:0;">${escapeHtml(job.title)}</h2>
+                <div style="font-size:13.5px;color:var(--text-secondary);font-weight:600;margin-top:4px;">${escapeHtml(job.company || "Employer not stated")} &middot; ${escapeHtml(job.location || "Location not stated")}</div>
+                <div style="font-size:12px;color:var(--text-muted);margin-top:4px;" title="${escapeAttr(date.title)}">&#128197; ${escapeHtml(date.text)}</div>
+              </div>
+              <button type="button" id="jobDetailsClose" aria-label="Close details" onclick="closeJobDetails()" style="border:none;background:var(--bg-elevated);border-radius:8px;width:34px;height:34px;font-size:18px;cursor:pointer;flex:none;">&times;</button>
+            </div>
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+              <button type="button" class="btn-tailor-job" onclick="const i=_jobDetailsJob&&_jobDetailsJob._detailsIndex; closeJobDetails(); selectAndTailorJob(i);">Select Role &amp; Tailor CV &rarr;</button>
+              ${/^https?:\/\//i.test(job.url || "") ? `<a class="btn-track-job-card" href="${escapeAttr(job.url)}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:inline-flex;align-items:center;">Open original posting &#8599;</a>` : ""}
+              <button type="button" class="btn-track-job-card" onclick="quickTrackJobByIndex(_jobDetailsJob._detailsIndex)">📊 Track Job</button>
+            </div>
+
+            <h3 style="font-size:15px;font-weight:800;margin:20px 0 6px;">Why ${m.total}% CV Fit</h3>
+            <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">
+              Based on the job title, location and the posting text available (${(job.text || "").length.toLocaleString()} characters${loading ? ", loading the full posting&hellip;" : fetched ? ", full posting loaded" : fetchFailed ? ", the full posting could not be loaded" : ""}), compared with the skills and experience in your CV.
+            </div>
+            <table style="width:100%;border-collapse:collapse;font-size:13px;border:1px solid var(--border-subtle);border-radius:10px;overflow:hidden;">
+              ${row("Role title", m.role.points, 40, roleBody)}
+              ${row("Your CV skills", m.skills.points, 40, skillsBody)}
+              ${row("Experience areas", m.areas.points, 12, areasBody)}
+              ${row("Location", m.location.points, 8, locBody)}
+              <tr style="border-top:2px solid var(--border-subtle);">
+                <td style="padding:10px 12px;font-weight:800;">Total</td>
+                <td style="padding:10px 12px;font-family:var(--font-mono);font-weight:800;">${m.total} / 100</td>
+                <td style="padding:10px 12px;color:var(--text-muted);font-size:12px;">Words like "skills", "management" or "strong" are ignored when matching: they appear in almost every posting.</td>
+              </tr>
+            </table>
+
+            <h3 style="font-size:15px;font-weight:800;margin:20px 0 6px;">Listing details</h3>
+            <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px;">
+              <div style="color:var(--text-muted);">Recipient</div><div>${job.to ? `<code>${escapeHtml(job.to)}</code> <span style="color:var(--text-muted);">(${escapeHtml(job.emailVia || "published address")})</span>` : "Not published: apply on the employer's site"}</div>
+              <div style="color:var(--text-muted);">Salary</div><div>${salary ? escapeHtml(salary) : "Not stated in the posting"}</div>
+              <div style="color:var(--text-muted);">Language</div><div>${escapeHtml(langInfo.label)}</div>
+              <div style="color:var(--text-muted);">Source</div><div>${escapeHtml(job.source || "unknown")}${job.ref ? ` &middot; Ref ${escapeHtml(job.ref)}` : ""}</div>
+            </div>
+            <div style="margin-top:12px;padding:12px 14px;background:var(--bg-elevated);border-radius:10px;font-size:13px;line-height:1.6;max-height:340px;overflow:auto;white-space:pre-wrap;">${
+              textLines.length ? escapeHtml(textLines.join("\n")) : loading ? "Loading the full posting&hellip;" : "The board did not provide the posting text. Use “Open original posting” to read it."
+            }</div>
+          </div>
+        </div>`;
+
+      const existing = document.getElementById("jobDetailsModal");
+      const wrap = existing || document.createElement("div");
+      wrap.id = "jobDetailsModal";
+      wrap.innerHTML = html;
+      if (!existing) document.body.appendChild(wrap);
+      const backdrop = wrap.querySelector("#jobDetailsBackdrop");
+      backdrop.addEventListener("click", (e) => { if (e.target === backdrop) closeJobDetails(); });
+      if (!_jobDetailsKeyHandler) {
+        _jobDetailsKeyHandler = (e) => { if (e.key === "Escape") closeJobDetails(); };
+        document.addEventListener("keydown", _jobDetailsKeyHandler);
+      }
+      if (!existing) wrap.querySelector("#jobDetailsClose").focus();
+    }
+
+    /* Up to 3 lines from the posting for the card. Website chrome ("Skip to main
+       navigation", "Saved jobs") is dropped, and nothing is invented when the text is empty. */
+    const PAGE_CHROME = /skip to (main|content)|saved jobs?|currently saved|cookie|sign in|log ?in|register|newsletter|privacy policy|terms of use|share this job|apply now|explore our|looking for your next|back to (search|results)|similar jobs|all rights reserved/i;
     function extractQuickRequirements(textStr) {
       const clean = String(textStr || "").trim();
-      if (!clean) return ["Full P&L and executive operational leadership required."];
+      if (!clean) return [];
       const parts = clean
         .split(/(?:\r?\n|[•▪]|(?<=\.)\s+)/)
         .map((s) => s.trim())
-        .filter((s) => s.length >= 25 && s.length <= 210);
-      return parts.length ? parts.slice(0, 3) : [clean.slice(0, 180)];
+        .filter((s) => s.length >= 25 && s.length <= 210 && !PAGE_CHROME.test(s));
+      return parts.slice(0, 3);
     }
 
     async function runLiveInternetRoleSearch(opts = {}) {
@@ -9322,7 +9486,10 @@
         const merged = [...MULTI_BOARD_SEED_JOBS];
         const seen = new Set(merged.map((m) => m.url + "|" + m.title));
 
-        const addRow = (row, fallbackSrc) => {
+        const searchedAt = new Date().toISOString();
+        // foundAt: when the portal found the listing (the daily snapshot's time for
+        // data/listings.json, this search for live results). posted: only what the board says.
+        const addRow = (row, fallbackSrc, foundAt = searchedAt) => {
           if (!row || !row.title) return;
           const matchedRole = doesJobMatchStrictRoles(row.title, state.selectedRoles);
           if (strict && !matchedRole) return;
@@ -9332,13 +9499,14 @@
           const item = {
             id: "live-" + merged.length,
             title: row.title,
-            matchedRole: matchedRole || row.matchedRole || state.selectedRoles[0],
+            matchedRole: matchedRole || "",
             company: row.company || `via ${(row.source || fallbackSrc || "Live Board").toUpperCase()}`,
-            location: row.location || loc || "UAE",
+            location: row.location || "",
             source: String(row.source || row.src || fallbackSrc || "linkedin").toLowerCase(),
             url: row.url || "#",
             ref: row.ref || "",
-            posted: row.posted || "today",
+            posted: row.posted || "",
+            foundAt,
             score: 0,
             to: row.to || "",
             emailVia: row.emailVia || "",
@@ -9360,8 +9528,9 @@
         }
 
         if (staticRes.status === "fulfilled" && staticRes.value && Array.isArray(staticRes.value.sources)) {
+          const snapshotAt = staticRes.value.generatedAt || searchedAt;
           staticRes.value.sources.forEach((src) => {
-            (src.jobs || []).forEach((j) => addRow(j, src.id));
+            (src.jobs || []).forEach((j) => addRow(j, src.id, snapshotAt));
           });
         }
 
@@ -11251,18 +11420,22 @@ ${state.cv.contact}`;
       const newJob = {
         id: "custom-" + Date.now(),
         title,
-        matchedRole: doesJobMatchStrictRoles(title, state.selectedRoles) || state.selectedRoles[0] || "Executive Role",
-        company: (lines.find((l) => /^Company:/i.test(l)) || "Direct Employer").replace(/^Company:\s*/i, ""),
-        location: (lines.find((l) => /^Location:/i.test(l)) || "UAE / International").replace(/^Location:\s*/i, ""),
-        source: "indeed",
+        matchedRole: "",
+        company: (lines.find((l) => /^Company:/i.test(l)) || "").replace(/^Company:\s*/i, ""),
+        location: (lines.find((l) => /^Location:/i.test(l)) || "").replace(/^Location:\s*/i, ""),
+        source: "pasted",
         url: url || "#",
-        ref: "DIRECT-" + Math.floor(1000 + Math.random() * 9000),
-        score: 96,
+        ref: "",
+        posted: "",
+        foundAt: new Date().toISOString(),
+        score: 0,
         to: emailLine || "",
+        emailVia: emailLine ? "Entered by you" : "",
         text: raw,
         requirements: extractQuickRequirements(raw)
       };
       resolveJobRecipientEmailClient(newJob);
+      scoreJobAgainstCvAndRoles(newJob); // same transparent score as every other listing
       state.jobs.unshift(newJob);
       state.selectedJob = newJob;
       closeAddJobModal();
