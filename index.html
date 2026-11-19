@@ -4173,7 +4173,7 @@
                     Scanned against recruiter screening rules &mdash; checks cover letter brevity, quantified metrics, action verbs, and ATS compliance before dispatch.
                   </p>
                 </div>
-                <div class="radar-gauge-wrap" id="reviewScoreGauge">
+                <div class="radar-gauge-wrap clickable-spot" id="reviewScoreGauge" onclick="jumpToFirstAuditSpot()" title="Click to jump to the first item needing attention">
                   <div class="radar-svg-circle">
                     <svg viewBox="0 0 74 74">
                       <circle class="radar-bg-ring" cx="37" cy="37" r="32"></circle>
@@ -4192,23 +4192,26 @@
 
               <!-- KPI Metric Strip -->
               <div class="review-kpi-grid">
-                <div class="review-kpi-box" id="kpiBoxQuantified">
+                <div class="review-kpi-box clickable-spot" id="kpiBoxQuantified" onclick="jumpToCvBulletsSpot()" title="Click to jump to your CV experience bullets to add metrics">
                   <div class="kpi-label">Quantified Bullets</div>
                   <div class="kpi-value" id="kpiValQuantified">83%</div>
                   <div class="kpi-hint" id="kpiHintQuantified">Metrics &amp; numbers verified</div>
-                  <button type="button" id="btnFixQuantified" onclick="fixQuantifiedBullets()" style="display:none;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid #f59e0b;background:rgba(245,158,11,0.12);color:#d97706;font-size:11px;font-weight:700;cursor:pointer;">
-                    How to Fix: Add Metrics &rarr;
+                  <button type="button" id="btnFixQuantified" onclick="event.stopPropagation(); jumpToCvBulletsSpot();" style="display:none;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid #f59e0b;background:rgba(245,158,11,0.12);color:#d97706;font-size:11px;font-weight:700;cursor:pointer;">
+                    Go to CV Bullets &rarr;
                   </button>
                 </div>
-                <div class="review-kpi-box" id="kpiBoxViolations">
+                <div class="review-kpi-box clickable-spot" id="kpiBoxViolations" onclick="jumpToTextViolationSpot()" title="Click to jump directly to the flagged text">
                   <div class="kpi-label">Text Violations</div>
                   <div class="kpi-value" id="kpiValViolations">0 Detected</div>
                   <div class="kpi-hint" id="kpiHintViolations">Passive phrases audited</div>
+                  <button type="button" id="btnFixViolationsSpot" onclick="event.stopPropagation(); jumpToTextViolationSpot();" style="display:none;margin-top:6px;padding:4px 10px;border-radius:999px;border:1px solid #ef4444;background:rgba(239,68,68,0.12);color:#dc2626;font-size:11px;font-weight:700;cursor:pointer;">
+                    Go to Flagged Text &rarr;
+                  </button>
                 </div>
-                <div class="review-kpi-box" id="kpiBoxLetterLength">
+                <div class="review-kpi-box clickable-spot" id="kpiBoxLetterLength" onclick="jumpToCoverLetterSpot()" title="Click to jump to the Cover Letter editor on Page 3">
                   <div class="kpi-label">Cover Letter Length</div>
                   <div class="kpi-value" id="kpiValLetterLength">240 Words</div>
-                  <div class="kpi-hint">Target: 150&ndash;320 words</div>
+                  <div class="kpi-hint">Target: 150&ndash;320 words &middot; Click to edit</div>
                 </div>
                 <div class="review-kpi-box" id="kpiBoxAtsPdf">
                   <div class="kpi-label">ATS Vector PDF</div>
@@ -10035,6 +10038,10 @@
           ? "Passive duty phrases audited"
           : `${passiveViolations.length} passive, ${fillerViolations.length} filler`;
       }
+      const btnFixViolationsSpot = document.getElementById("btnFixViolationsSpot");
+      if (btnFixViolationsSpot) {
+        btnFixViolationsSpot.style.display = totalViolations > 0 ? "inline-block" : "none";
+      }
 
       const kpiLetterLength = document.getElementById("kpiValLetterLength");
       if (kpiLetterLength) {
@@ -10048,12 +10055,34 @@
       const alertDesc = document.getElementById("violationAlertDesc");
       const alertBtn = alertBox ? alertBox.querySelector("button") : null;
       const radarFixSteps = [];
-      if (!emailValid) radarFixSteps.push("Enter or scan a valid HR recipient email");
-      if (!employerNamed) radarFixSteps.push(`Reference "${job.company || "the target employer"}" in your cover letter`);
-      if (!languageSyncValid) radarFixSteps.push("Switch cover letter language to Deutsch (DE)");
-      if (quantPct < 60) radarFixSteps.push(`Quantify more CV bullets with numbers/%, AED, or team sizes (currently ${quantPct}%, target 60%+)`);
-      if (passiveViolations.length) radarFixSteps.push(`Replace ${passiveViolations.length} passive phrase(s) (e.g. "${passiveViolations[0].phrase}")`);
-      if (fillerViolations.length) radarFixSteps.push(`Remove filler buzzwords ("${fillerViolations.join('", "')}")`);
+      if (!emailValid) {
+        radarFixSteps.push({ label: "Enter or scan a valid HR recipient email", fn: "fixRecipientEmail()" });
+      }
+      if (!employerNamed) {
+        radarFixSteps.push({ label: `Reference "${job.company || "the target employer"}" in your cover letter`, fn: "jumpToCoverLetterSpot()" });
+      }
+      if (!languageSyncValid) {
+        radarFixSteps.push({ label: "Switch cover letter language to Deutsch (DE)", fn: "jumpToCoverLetterSpot()" });
+      }
+      if (quantPct < 60) {
+        radarFixSteps.push({ label: `Quantify more CV bullets (${quantPct}%, target 60%+)`, fn: "jumpToCvBulletsSpot()" });
+      }
+      if (passiveViolations.length) {
+        radarFixSteps.push({ label: `Replace ${passiveViolations.length} passive phrase(s) (e.g. "${passiveViolations[0].phrase}")`, fn: "jumpToTextViolationSpot()" });
+      }
+      if (fillerViolations.length) {
+        radarFixSteps.push({ label: `Remove filler buzzwords ("${fillerViolations.join('", "')}")`, fn: "jumpToTextViolationSpot()" });
+      }
+
+      window._lastAuditSpot = {
+        emailValid,
+        employerNamed,
+        languageSyncValid,
+        quantPct,
+        passiveViolations,
+        fillerViolations,
+        firstActionFn: radarFixSteps[0] ? radarFixSteps[0].fn : ""
+      };
 
       if (alertBox && alertTitle && alertDesc) {
         if (radarFixSteps.length > 0) {
@@ -10063,7 +10092,9 @@
           alertBox.style.background = hasHardFail ? "rgba(239,68,68,0.08)" : "rgba(245,158,11,0.08)";
           alertTitle.style.color = hasHardFail ? "#ef4444" : "#d97706";
           alertTitle.textContent = `${radarFixSteps.length} Action${radarFixSteps.length > 1 ? "s" : ""} Needed Before Dispatch`;
-          alertDesc.innerHTML = `<strong>How to fix:</strong> ${radarFixSteps.map((s) => escapeHtml(s)).join(" &bull; ")}`;
+          alertDesc.innerHTML = `<div style="margin-bottom:4px;"><strong>Click any item to jump straight to the spot to edit:</strong></div><div>${radarFixSteps
+            .map((s) => `<button type="button" class="spot-action-link" onclick="${s.fn}">${escapeHtml(s.label)} &rarr;</button>`)
+            .join("")}</div>`;
           if (alertBtn) {
             alertBtn.textContent = "Auto-Fix All Issues →";
             alertBtn.setAttribute("onclick", "fixAllPreDispatchIssues()");
@@ -10211,16 +10242,88 @@
       }
     }
 
-    function fixQuantifiedBullets() {
-      // First apply any automatic upgrades; if still < 60%, take user to Step 3 CV editor
-      autoResolveTextViolations();
-      const audit = runPreFlightAudit(true);
-      if (audit && audit.quantPct < 60) {
-        if (typeof goToStep === "function") goToStep(3);
-        showToast("Add %, AED/EUR, or team-size numbers to your CV bullets in Step 3.");
-      } else {
-        showToast("✓ Quantified bullets updated.");
+    function pulseElementSpot(el) {
+      if (!el) return;
+      el.classList.add("spot-focus-pulse");
+      setTimeout(() => el.classList.remove("spot-focus-pulse"), 2400);
+    }
+
+    function jumpToCoverLetterSpot(highlightTerm) {
+      if (typeof goToStep === "function") goToStep(3);
+      setTimeout(() => {
+        const ta = document.getElementById("coverLetterTextarea");
+        if (!ta) return;
+        ta.scrollIntoView({ behavior: "smooth", block: "center" });
+        ta.focus();
+        pulseElementSpot(ta);
+        if (highlightTerm) {
+          const idx = ta.value.toLowerCase().indexOf(String(highlightTerm).toLowerCase());
+          if (idx >= 0 && typeof ta.setSelectionRange === "function") {
+            ta.setSelectionRange(idx, idx + highlightTerm.length);
+          }
+        }
+      }, 120);
+      showToast(highlightTerm ? `Jumped to "${highlightTerm}" in Cover Letter` : "Jumped to Cover Letter editor on Page 3");
+    }
+
+    function jumpToCvBulletsSpot(highlightPhrase) {
+      if (typeof openBuiltInCvWriter === "function") {
+        openBuiltInCvWriter();
+      } else if (typeof goToStep === "function") {
+        goToStep(1);
       }
+      setTimeout(() => {
+        const container = document.getElementById("writerRolesContainer");
+        if (!container) return;
+        const textareas = Array.from(container.querySelectorAll("textarea"));
+        let target = textareas[0] || container;
+        if (highlightPhrase) {
+          const match = textareas.find((t) => t.value.toLowerCase().includes(String(highlightPhrase).toLowerCase()));
+          if (match) target = match;
+        } else {
+          const unquant = textareas.find((t) => !/\d|%|aed|eur|usd/i.test(t.value));
+          if (unquant) target = unquant;
+        }
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        if (typeof target.focus === "function") target.focus();
+        pulseElementSpot(target);
+      }, 140);
+      showToast(highlightPhrase ? `Jumped to "${highlightPhrase}" in CV Bullets` : "Jumped to CV Experience Bullets — add numbers, %, AED/EUR, or team sizes");
+    }
+
+    function jumpToTextViolationSpot() {
+      const spot = window._lastAuditSpot || {};
+      const letterTa = document.getElementById("coverLetterTextarea");
+      const letterText = (letterTa && letterTa.value) || "";
+      const filler = (spot.fillerViolations && spot.fillerViolations[0]) || "";
+      if (filler && letterText.toLowerCase().includes(filler.toLowerCase())) {
+        jumpToCoverLetterSpot(filler);
+        return;
+      }
+      const passive = spot.passiveViolations && spot.passiveViolations[0];
+      if (passive && passive.phrase) {
+        jumpToCvBulletsSpot(passive.phrase);
+        return;
+      }
+      jumpToCvBulletsSpot();
+    }
+
+    function jumpToFirstAuditSpot() {
+      const spot = window._lastAuditSpot || {};
+      if (spot.firstActionFn === "fixRecipientEmail()") { fixRecipientEmail(); return; }
+      if (spot.firstActionFn === "jumpToCoverLetterSpot()") { jumpToCoverLetterSpot(); return; }
+      if (spot.firstActionFn === "jumpToCvBulletsSpot()") { jumpToCvBulletsSpot(); return; }
+      if (spot.firstActionFn === "jumpToTextViolationSpot()") { jumpToTextViolationSpot(); return; }
+      const alertEl = document.getElementById("reviewViolationAlert");
+      if (alertEl && alertEl.style.display !== "none") {
+        alertEl.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        showToast("All Pre-Dispatch checks passed!");
+      }
+    }
+
+    function fixQuantifiedBullets() {
+      jumpToCvBulletsSpot();
     }
 
     function fixAllPreDispatchIssues() {
