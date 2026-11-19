@@ -8,7 +8,7 @@ Keeps the portal's application tracker up to date from classic Outlook on this P
   wait under "To confirm" in the tracker. Every automatic change has an Undo.
 
 It is **read-only** (never sends, moves or deletes mail), reads **one account only**
-(`rassemkadiri@live.de` by default), listens on `127.0.0.1` only, and answers only the
+(the one you pass with `-Account`), listens on `127.0.0.1` only, and answers only the
 portal's own pages. No Azure, no passwords.
 
 ## Install (once)
@@ -16,14 +16,14 @@ portal's own pages. No Azure, no passwords.
 Needs classic Outlook (`Outlook (classic)` in the Start menu) with the account added.
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File tools\outlook-sync\install.ps1
+powershell -ExecutionPolicy Bypass -File tools\outlook-sync\install.ps1 -Account you@example.com
 ```
 
 It copies itself to `%LOCALAPPDATA%\AI-CV-Portal-Outlook-Sync`, starts now, and starts
 hidden at every log-in. The first time the portal contacts it, Chrome may ask to allow
 access to devices on your local network — allow it.
 
-Other account: `install.ps1 -Account you@example.com`.
+`-Account` is required: use the mailbox name exactly as classic Outlook shows it.
 
 ## Check / remove
 

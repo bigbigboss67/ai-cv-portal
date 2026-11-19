@@ -6,6 +6,8 @@
  * and parses it into structured candidate data (name, headline, location, about, experience, education, skills, certifications).
  */
 
+const sec = require("./_security.js");
+
 const TIMEOUT_MS = 14000;
 
 function cleanLinkedInUrl(rawUrl) {
@@ -335,14 +337,11 @@ function parseLinkedInProfileText(text, sourceUrl = "") {
 }
 
 module.exports = async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-
   if (req.method === "OPTIONS") {
     res.status(204).end();
     return;
   }
+  if (!sec.guardPublic(req, res, "linkedin-profile", 10)) return;
 
   try {
     let targetUrl = "";

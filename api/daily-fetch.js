@@ -14,6 +14,7 @@
  */
 
 const boards = require("./_boards.js");
+const sec = require("./_security.js");
 const matchEngine = require("./match.js");
 
 const DEFAULT_ROLES = [
@@ -102,12 +103,12 @@ async function collectFreshDailyFeed(roles, location) {
 
 module.exports = async function handler(req, res) {
   res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate=86400");
-  res.setHeader("Access-Control-Allow-Origin", "*");
 
   if (req.method === "OPTIONS") {
     res.status(200).end();
     return;
   }
+  if (!sec.guardPublic(req, res, "daily-fetch", 10)) return;
 
   let body = {};
   if (req.method === "POST" && req.body) {

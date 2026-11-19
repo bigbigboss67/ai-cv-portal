@@ -9,9 +9,24 @@
  *  - Enforces allowed origin & per-user rate limit (10 sends/min)
  *  - Derives Reply-To from the authenticated user or explicit validated replyTo (no hardcoded personal email)
  */
+const dns = require("dns").promises;
 const sec = require("./_security.js");
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_HTML_CHARS = 200000; // a designed cover letter is ~10-30 KB
+const MAX_PDF_BASE64_CHARS = 4000000; // stays under Vercel's 4.5 MB request body limit
+
+/** The recipient's domain must publish mail servers (MX). Unregistered or mail-less
+ *  domains are refused, so a CV is never sent to an address nobody controls yet. */
+async function domainAcceptsMail(address) {
+  const domain = String(address).split("@")[1] || "";
+  try {
+    const mx = await dns.resolveMx(domain);
+    return Array.isArray(mx) && mx.length > 0;
+  } catch {
+    return false;
+  }
+}
 
 module.exports = async (req, res) => {
   res.setHeader("Content-Type", "application/json; charset=utf-8");
@@ -35,6 +50,10 @@ module.exports = async (req, res) => {
   const rlKey = `send:${user.sub}:${sec.getClientIp(req)}`;
   if (!sec.checkRateLimit(rlKey, 10, 60000)) {
     return res.status(429).json({ ok: false, error: "Rate limit exceeded. Please wait a minute." });
+  }
+  // Daily cap per user. In-memory (per instance) until a durable store is added.
+  if (!sec.checkRateLimit(`send-day:${user.sub}`, 40, 86400000)) {
+    return res.status(429).json({ ok: false, error: "Daily sending limit reached." });
   }
 
   const apiKey = (process.env.RESEND_API_KEY || "").trim();
@@ -63,6 +82,18 @@ module.exports = async (req, res) => {
     return res.status(400).json({
       ok: false,
       error: "Missing or invalid required fields: to, subject, html/text",
+    });
+  }
+  if (String(html || "").length > MAX_HTML_CHARS || String(text || "").length > MAX_HTML_CHARS) {
+    return res.status(413).json({ ok: false, error: "Message body too large." });
+  }
+  if (pdfBase64 && String(pdfBase64).length > MAX_PDF_BASE64_CHARS) {
+    return res.status(413).json({ ok: false, error: "Attachment too large." });
+  }
+  if (!(await domainAcceptsMail(cleanTo))) {
+    return res.status(422).json({
+      ok: false,
+      error: `The domain of ${cleanTo} does not accept email (no MX record). Check the address.`,
     });
   }
 

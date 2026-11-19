@@ -8,7 +8,7 @@
  * handed to the page reader.
  */
 import { parseDocument } from "./docparse.js";
-import { READERS } from "./fetch-address.js";
+import { READERS, readerHeaders } from "./fetch-address.js";
 
 export const MAX_PDF_PAGES = 10;
 export const MAX_EDGE = 2400;
@@ -46,7 +46,7 @@ async function viaReaders(url, step) {
   for (const r of READERS) {
     step(`reading ${hostOf(url)} via ${r.name}`);
     try {
-      const res = await fetch(r.build(url), { redirect: "follow" });
+      const res = await fetch(r.build(url), { redirect: "follow", headers: await readerHeaders() });
       if (!res.ok) { last = `${r.name} returned ${res.status}`; continue; }
       const t = await res.text();
       if (t && t.trim().length >= 40) return t;

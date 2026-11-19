@@ -1,7 +1,10 @@
 // node --test tests/
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { toMailApps, mergeBack, ingestAll, sinceDay, dropLog, ME } from "../outlook-sync.js";
+import { toMailApps, mergeBack, ingestAll, sinceDay, dropLog } from "../outlook-sync.js";
+
+// Test mailbox (the module no longer ships a hardcoded owner address).
+const ME = ["candidate@example.com"];
 import { confirmItem, undoItem } from "../tracker-mail.js";
 
 const DAY = 86400000;
@@ -19,13 +22,13 @@ const mail = (o = {}) => ({
 });
 
 const sentCopy = mail({
-  msgId: "<sent-1@live.de>", from: { name: "Rassem", address: ME[0] }, to: ["careers@gulfhorizonlogistics.ae"],
+  msgId: "<sent-1@example.com>", from: { name: "Candidate", address: ME[0] }, to: ["careers@gulfhorizonlogistics.ae"],
   date: "2026-11-11T08:00:00Z", subject: "Application — General Manager (Ref. GH-77) — AHMED AL-MANSOOR",
   text: "Dear Hiring Team, please find my CV attached.",
 });
 
 const interviewReply = mail({
-  msgId: "<r-1@gulfhorizonlogistics.ae>", inReplyTo: ["<sent-1@live.de>"], references: ["<sent-1@live.de>"],
+  msgId: "<r-1@gulfhorizonlogistics.ae>", inReplyTo: ["<sent-1@example.com>"], references: ["<sent-1@example.com>"],
   from: { name: "Sara HR", address: "sara@gulfhorizonlogistics.ae" }, to: [ME[0]], date: "2026-11-13T10:00:00Z",
   subject: "RE: Application — General Manager (Ref. GH-77) — AHMED AL-MANSOOR",
   text: "Dear Ahmed,\nWe would like to invite you to an interview next Tuesday at 10am.\nBest regards, Sara",
@@ -36,7 +39,7 @@ const politeInterview = mail({ ...interviewReply, msgId: "<r-1b@gulfhorizonlogis
   text: "Dear Ahmed,\nThank you for your application. We would like to invite you to an interview next Tuesday.\nBest regards, Sara" });
 
 const rejection = mail({
-  msgId: "<r-2@gulfhorizonlogistics.ae>", inReplyTo: ["<sent-1@live.de>"],
+  msgId: "<r-2@gulfhorizonlogistics.ae>", inReplyTo: ["<sent-1@example.com>"],
   from: { name: "Sara HR", address: "sara@gulfhorizonlogistics.ae" }, to: [ME[0]], date: "2026-11-14T10:00:00Z",
   subject: "RE: Application — General Manager (Ref. GH-77) — AHMED AL-MANSOOR",
   text: "Dear Ahmed,\nUnfortunately we have decided not to proceed with your application.\nKind regards",
@@ -48,7 +51,7 @@ const newsletter = mail({
 });
 
 function run(list, mails, sync = {}) {
-  const { apps, sync: next } = ingestAll(sync, toMailApps(list), mails);
+  const { apps, sync: next } = ingestAll(sync, toMailApps(list), mails, { me: ME });
   return { ...mergeBack(list, apps), sync: next };
 }
 
@@ -67,7 +70,7 @@ test("the sent copy turns a draft into Applied with the real send date", () => {
   assert.equal(a.sentAt, "2026-11-11");
   assert.equal(a.appliedAt, Date.parse("2026-11-11"));
   assert.equal(a.targetFollowUpAt, Date.parse("2026-11-11") + 4 * DAY);
-  assert.ok(a.msgIds.includes("<sent-1@live.de>"));
+  assert.ok(a.msgIds.includes("<sent-1@example.com>"));
   assert.ok(a.mailLog.some((e) => e.kind === "sent" && /^Sent/.test(e.text)));
 });
 

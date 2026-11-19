@@ -3,7 +3,7 @@
   %LOCALAPPDATA%\AI-CV-Portal-Outlook-Sync and starts it hidden at every log-in through a
   Startup-folder shortcut. No admin rights needed. Run uninstall.ps1 to remove it.
 #>
-param([string]$Account = "rassemkadiri@live.de")
+param([Parameter(Mandatory = $true)][string]$Account)
 $ErrorActionPreference = "Stop"
 
 $dest = Join-Path $env:LOCALAPPDATA "AI-CV-Portal-Outlook-Sync"

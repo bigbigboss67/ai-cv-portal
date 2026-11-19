@@ -10,6 +10,7 @@
 const AISA = "https://api.aisa.one/apis/v1";
 const TIMEOUT_MS = 12000;
 const boards = require("./_boards.js");
+const sec = require("./_security.js");
 const { UA } = boards;
 
 const NOT_A_SITE =
@@ -101,7 +102,7 @@ async function fromLinkedIn(ref) {
 
 async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  if (!sec.guardPublic(req, res, "site", 30)) return;
 
   const q = req.query || {};
   const name = String(q.name || "").trim().slice(0, 120);
