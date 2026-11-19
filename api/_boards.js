@@ -426,18 +426,27 @@ function parseAhk(html) {
   const base = "https://vae.ahk.de/en/services/career-in-the-uae/current-job-posting";
   const jobWords =
     /(manager|director|officer|coordinator|assistant|consultant|intern|specialist|head of|executive|advisor|clerk|sachbearbeiter|referent|ceo|cfo|coo)/i;
+  // Site menu links that contain a job word ("Board of Directors", "Member Directory").
+  const NAV = /^(home|contact|imprint|privacy|back|more)$|member directory|board of directors|advisory board|trade fair|your partner|about us|events?$|newsletter|membership|services$|career in the uae$/i;
+  // A posting title usually carries a gender tag: "(m/f/d)", "(m/w/d)".
+  const GENDER_TAG = /\((?:m|f|w|d|x)\s*\/\s*(?:m|f|w|d|x)(?:\s*\/\s*(?:m|f|w|d|x))?\)/i;
   const seen = new Set();
   const jobs = [];
   for (const a of anchors(html, base)) {
     const isDoc = /\.(pdf|docx?)($|\?)|\/download\/|workdrive/i.test(a.href);
-    const looksLikeJob = jobWords.test(a.text) && a.text.length > 8 && a.text.length < 160;
-    if (!isDoc && !looksLikeJob) continue;
-    if (!a.text || /^(home|contact|imprint|privacy|back|more)$/i.test(a.text)) continue;
-    const key = a.href + "|" + a.text;
+    // PDF links read "Filetype: pdf <title> Filesize: 217.30 kb": keep only the title.
+    const title = String(a.text || "")
+      .replace(/^\s*Filetype:\s*\w+\s*/i, "")
+      .replace(/\s*Filesize:\s*[\d.,]+\s*[kmg]?b\s*$/i, "")
+      .trim();
+    if (!title || NAV.test(title)) continue;
+    const looksLikeJob = (GENDER_TAG.test(title) || jobWords.test(title)) && title.length > 8 && title.length < 160;
+    if (!(isDoc && title.length > 8) && !looksLikeJob) continue;
+    const key = a.href + "|" + title;
     if (seen.has(key)) continue;
     seen.add(key);
     jobs.push({
-      title: a.text,
+      title,
       company: "AHK VAE / Member Company",
       location: "UAE",
       url: a.href,
@@ -595,6 +604,28 @@ function parseDubizzleHtml(html) {
   return jobs;
 }
 
+/* A jobs.ch result card is one run of text:
+   "<age> <title> Place of work : <city> Workload : <x> Contract type : <type> <employer> [Promoted] [Easy apply] Is this job relevant to you?"
+   Split it so the title stays a title (whole cards ran past 120 characters and were dropped). */
+function parseJobsChCard(raw) {
+  let s = String(raw || "").replace(/\s+/g, " ").trim().replace(/\s*Is this job relevant to you\?\s*$/i, "");
+  const ageM = s.match(/^(Today|Yesterday|New|Last week|Last month|\d+\s+(?:days?|weeks?|months?)\s+ago)\s+/i);
+  const age = ageM ? ageM[1] : "";
+  if (ageM) s = s.slice(ageM[0].length);
+  const field = (label, next) => {
+    const m = s.match(new RegExp(`${label}\\s*:\\s*(.+?)\\s*(?=${next}|$)`, "i"));
+    return m ? m[1].trim() : "";
+  };
+  const title = s.split(/\s+Place of work\s*:/i)[0].trim();
+  const place = field("Place of work", "Workload\\s*:|Contract type\\s*:");
+  const workload = field("Workload", "Contract type\\s*:");
+  const tail = (s.match(/Contract type\s*:\s*(.+)$/i) || [])[1] || "";
+  const ct = tail.match(/^(Permanent position|Temporary position|Temporary employment|Fixed-term(?: contract)?|Freelance|Internship|Apprenticeship|Side job|Unlimited employment)\s*(.*)$/i);
+  const contract = ct ? ct[1] : "";
+  const company = (ct ? ct[2] : "").replace(/\s*(?:Promoted|Easy apply|Top job)\b/gi, "").trim();
+  return { age, title, place, workload, contract, company };
+}
+
 /**
  * Fetches live board jobs from Indeed, Dubizzle, Bayt, Naukrigulf, and GulfTalent
  * for the user's specific roles and location using a dual-path strategy:
@@ -669,16 +700,17 @@ async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE
         const html = await fetchText(`https://www.jobs.ch/en/vacancies/?term=${encodeURIComponent(r)}`, timeoutMs);
         for (const a of anchors(html, "https://www.jobs.ch")) {
           if (!/jobs\.ch\/(?:en|de|fr)\/vacancies\/detail\//i.test(a.href)) continue;
-          const t = cleanJobTitleForMatch(a.text);
+          const card = parseJobsChCard(a.text);
+          const t = cleanJobTitleForMatch(card.title);
           if (t && t.length >= 4 && t.length <= 120) {
             addJob({
               title: t,
-              company: "via Jobs.ch",
-              location: "Switzerland / DACH",
+              company: card.company || "via Jobs.ch",
+              location: card.place ? `${card.place}, Switzerland` : "Switzerland",
               url: a.href,
               ref: "JOBSCH-" + Math.abs(Array.from(a.href).reduce((acc, c) => (acc * 31 + c.charCodeAt(0)) | 0, 7)).toString(36).slice(0, 6).toUpperCase(),
-              posted: "live",
-              text: t,
+              posted: card.age || "",
+              text: [t, card.place && `Place of work: ${card.place}`, card.workload && `Workload: ${card.workload}`, card.contract && `Contract type: ${card.contract}`, card.company && `Employer: ${card.company}`].filter(Boolean).join("\n"),
               kind: "page",
               src: "jobsch",
             });
@@ -702,12 +734,30 @@ async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE
   };
 
   const cfg = siteHostMap[boardId];
+  // A web-search hit counts for this board only if it really is on the board's site.
+  // The search engines often ignore "site:" and return dictionary pages or shops, which
+  // were being credited to every board (the same 17 hits under ten board names).
+  const onBoardSite = (rawUrl) => {
+    if (!cfg) return false;
+    try {
+      const u = new URL(rawUrl);
+      const [wantHost, ...pathParts] = cfg.host.split("/");
+      const host = u.hostname.replace(/^www\./i, "").toLowerCase();
+      const want = wantHost.replace(/^www\./i, "").toLowerCase();
+      if (host !== want && !host.endsWith("." + want)) return false;
+      const prefix = pathParts.length ? "/" + pathParts.join("/") : "";
+      return !prefix || u.pathname.toLowerCase().startsWith(prefix.toLowerCase());
+    } catch {
+      return false;
+    }
+  };
   if (cfg && jobs.length < 4) {
     for (const r of activeRoles.slice(0, 2)) {
       try {
         const q = `site:${cfg.host} "${r}" ${loc}`;
         const hits = await fetchDuckDuckGoJobs(q, timeoutMs);
         for (const h of hits) {
+          if (!onBoardSite(h.url)) continue;
           const cleanedTitle = cleanJobTitleForMatch(h.title);
           if (!cleanedTitle || cleanedTitle.length < 4) continue;
           const place = MPAGE_PLACE.exec(`${h.title} ${h.content} ${loc}`);
@@ -947,6 +997,7 @@ module.exports = {
   parseCharterhouse,
   parseDeparter,
   parseAhk,
+  parseJobsChCard,
   fetchArbeitnow,
   fetchRemotive,
   fetchDuckDuckGoJobs,

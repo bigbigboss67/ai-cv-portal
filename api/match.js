@@ -424,6 +424,14 @@ async function liveBoards(sig, prefs, step = []) {
     label: "Departer German Headhunter Live Board",
     run: () => boards.fetchText("https://careers.departer.de/", BOARD_TIMEOUT_MS).then(boards.parseDeparter),
   });
+  tasks.push({
+    id: "ahk",
+    label: "AHK UAE (German Emirati Joint Council) Current Job Postings",
+    run: () =>
+      boards
+        .fetchText("https://vae.ahk.de/en/services/career-in-the-uae/current-job-posting", BOARD_TIMEOUT_MS)
+        .then(boards.parseAhk),
+  });
 
   const settled = await Promise.allSettled(tasks.map((t) => t.run()));
   const jobsBySource = {};
