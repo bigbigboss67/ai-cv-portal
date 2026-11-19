@@ -4933,6 +4933,7 @@
       { id: "michaelpage", label: "Michael Page" },
       { id: "charterhouse", label: "Charterhouse" },
       { id: "departer", label: "Departer" },
+      { id: "ahk", label: "AHK UAE" },
       { id: "jobsae", label: "Jobs.ae" },
       { id: "jobsch", label: "Jobs.ch" },
       { id: "laimoon", label: "Laimoon Jobs" },
@@ -8311,8 +8312,20 @@
         }
 
         if (currentSection === "skills") {
-          skillLines.push(cleanLine);
-          continue;
+          // A Skills section often runs straight into the work history when its heading
+          // is not one we recognise. A line with a date range ("UAE & International
+          // (2012 – Present)") or a short line right before one ("Business Advisor &
+          // Consultant") starts a role: leave skills mode and let the role handling below
+          // take it, so the role and its bullets do not become skill chips.
+          const nextLine = lines[i + 1] || "";
+          const startsRole =
+            dateRangeRe.test(cleanLine) ||
+            (cleanLine.length <= 110 && !/[.!]$/.test(cleanLine) && dateRangeRe.test(nextLine));
+          if (!startsRole) {
+            skillLines.push(cleanLine);
+            continue;
+          }
+          currentSection = "auto";
         }
 
         if (currentSection === "education") {
@@ -9524,7 +9537,7 @@
 
         if (apiRes.status === "fulfilled" && apiRes.value && Array.isArray(apiRes.value.matches)) {
           apiRes.value.matches.forEach((m) => addRow(m, m.source));
-          renderLiveBoardStatusStrip(apiRes.value.boardStatus || []);
+          state.lastBoardStatus = apiRes.value.boardStatus || [];
         }
 
         if (staticRes.status === "fulfilled" && staticRes.value && Array.isArray(staticRes.value.sources)) {
@@ -9537,6 +9550,8 @@
         state.jobs = merged;
         ensureAllJobsHaveResolvedEmails();
         rescoreAllJobsAgainstCv();
+        // After the list is final, so each board shows what it found AND what is shown.
+        renderLiveBoardStatusStrip(state.lastBoardStatus || []);
         state.lastDailySyncIso = new Date().toISOString();
         try {
           localStorage.setItem(
@@ -9769,15 +9784,31 @@
         return;
       }
       strip.style.display = "flex";
-      strip.innerHTML = boardStatus
-        .map((b) => {
-          const ok = b.status === "ok";
-          const cls = ok ? "ok" : b.status === "error" ? "warn" : "";
-          const icon = ok ? "✓" : b.status === "error" ? "⚠" : "·";
-          const detail = ok ? `(${b.count})` : b.status === "error" ? "Rate-limited / timeout" : "(0)";
-          return `<span class="board-status-chip ${cls}" title="${escapeAttr(b.error || b.id)}">${icon} ${escapeHtml(b.id)} ${escapeHtml(detail)}</span>`;
-        })
-        .join("");
+      // "found" = what the board returned to the live search; "shown" = listings left
+      // after the role filter and de-duplication (the numbers on the source chips).
+      const shownBy = {};
+      (state.jobs || []).forEach((j) => { shownBy[j.source] = (shownBy[j.source] || 0) + 1; });
+      strip.innerHTML =
+        `<span style="font-size:11.5px;font-weight:700;color:var(--text-muted);margin-right:4px;">Live search, per board:</span>` +
+        boardStatus
+          .map((b) => {
+            const shown = shownBy[b.id] || 0;
+            const ok = b.status === "ok" && b.count > 0;
+            const cls = ok ? "ok" : b.status === "error" ? "warn" : "";
+            const icon = ok ? "✓" : b.status === "error" ? "⚠" : "·";
+            const detail = b.status === "error"
+              ? "error / timeout"
+              : ok
+                ? `${b.count} found · ${shown} shown`
+                : "no listings returned";
+            const tip = b.status === "error"
+              ? `${b.id}: ${b.error || "request failed"}`
+              : ok
+                ? `${b.id} returned ${b.count}; ${shown} match your roles and are not duplicates`
+                : `${b.id} returned no listings. Many boards block automated searches; open the board directly to check.`;
+            return `<span class="board-status-chip ${cls}" title="${escapeAttr(tip)}">${icon} ${escapeHtml(b.id)}: ${escapeHtml(detail)}</span>`;
+          })
+          .join("");
     }
 
     function renderStep3PkBreakdown(job) {

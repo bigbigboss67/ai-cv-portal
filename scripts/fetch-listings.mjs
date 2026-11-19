@@ -56,28 +56,10 @@ function anchors(html, base) {
    URL: the German page drops the member-company section entirely.        */
 const AHK_URL = "https://vae.ahk.de/en/services/career-in-the-uae/current-job-posting";
 
+/* One AHK reader for the daily snapshot and the live search (api/_boards.js), so both
+   skip the site menu ("Member Directory", "Board of Directors") and PDF labels. */
 function parseAhk(html) {
-  const base = AHK_URL;
-  const jobWords = /(manager|director|officer|coordinator|assistant|consultant|intern|specialist|head of|executive|advisor|clerk|sachbearbeiter|referent)/i;
-  const seen = new Set();
-  const jobs = [];
-  for (const a of anchors(html, base)) {
-    const isDoc = /\.(pdf|docx?)($|\?)|\/download\/|workdrive/i.test(a.href);
-    const looksLikeJob = jobWords.test(a.text) && a.text.length > 8 && a.text.length < 160;
-    if (!isDoc && !looksLikeJob) continue;
-    if (!a.text || /^(home|contact|imprint|privacy|back|more)$/i.test(a.text)) continue;
-    const key = a.href + "|" + a.text;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    jobs.push({
-      title: a.text,
-      company: "AHK VAE / member company",
-      location: "UAE",
-      url: a.href,
-      kind: isDoc ? "document" : "page",
-    });
-  }
-  return jobs;
+  return boards.parseAhk(html).map(({ src, ...job }) => job);
 }
 
 /* ── Departer ─────────────────────────────────────────────────────
