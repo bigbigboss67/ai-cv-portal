@@ -10242,10 +10242,45 @@
       }
     }
 
-    function pulseElementSpot(el) {
+    function clearYellowSpotHighlights() {
+      document.querySelectorAll(".spot-yellow-target").forEach((el) => el.classList.remove("spot-yellow-target"));
+      document.querySelectorAll(".spot-yellow-callout").forEach((el) => el.remove());
+    }
+
+    function highlightSpotInYellow(el, titleHtml, detailHtml, selectPhrase) {
       if (!el) return;
-      el.classList.add("spot-focus-pulse");
-      setTimeout(() => el.classList.remove("spot-focus-pulse"), 2400);
+      clearYellowSpotHighlights();
+      el.classList.add("spot-yellow-target");
+
+      const callout = document.createElement("div");
+      callout.className = "spot-yellow-callout";
+      callout.innerHTML = `
+        <div>
+          <div style="font-weight:800;margin-bottom:2px;">&#9998; ${titleHtml}</div>
+          <div style="font-weight:600;line-height:1.45;">${detailHtml}</div>
+        </div>
+        <button type="button" onclick="this.parentElement.remove()" style="border:none;background:rgba(113,63,18,0.14);color:#713f12;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:800;cursor:pointer;">Dismiss</button>
+      `;
+      if (el.parentElement) {
+        el.parentElement.insertBefore(callout, el);
+      }
+
+      const onEdit = () => {
+        el.classList.remove("spot-yellow-target");
+        callout.remove();
+        el.removeEventListener("input", onEdit);
+      };
+      el.addEventListener("input", onEdit);
+
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (typeof el.focus === "function") el.focus();
+
+      if (selectPhrase && typeof el.value === "string" && typeof el.setSelectionRange === "function") {
+        const idx = el.value.toLowerCase().indexOf(String(selectPhrase).toLowerCase());
+        if (idx >= 0) {
+          el.setSelectionRange(idx, idx + selectPhrase.length);
+        }
+      }
     }
 
     function jumpToCoverLetterSpot(highlightTerm) {
@@ -10253,17 +10288,28 @@
       setTimeout(() => {
         const ta = document.getElementById("coverLetterTextarea");
         if (!ta) return;
-        ta.scrollIntoView({ behavior: "smooth", block: "center" });
-        ta.focus();
-        pulseElementSpot(ta);
+        const spot = window._lastAuditSpot || {};
         if (highlightTerm) {
-          const idx = ta.value.toLowerCase().indexOf(String(highlightTerm).toLowerCase());
-          if (idx >= 0 && typeof ta.setSelectionRange === "function") {
-            ta.setSelectionRange(idx, idx + highlightTerm.length);
-          }
+          highlightSpotInYellow(
+            ta,
+            "Change this flagged phrase in your Cover Letter:",
+            `Remove or replace <mark>${escapeHtml(highlightTerm)}</mark> (highlighted in the editor below).`,
+            highlightTerm
+          );
+        } else {
+          const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0] || {};
+          const hints = [];
+          if (!spot.employerNamed && job.company) hints.push(`Mention <mark>${escapeHtml(job.company)}</mark>`);
+          if (!spot.languageSyncValid) hints.push(`Switch language to <mark>DE (Deutsch)</mark>`);
+          const words = (ta.value || "").trim().split(/\s+/).filter(Boolean).length;
+          if (words < 150 || words > 320) hints.push(`Adjust length (currently <mark>${words} words</mark>, target 150–320)`);
+          highlightSpotInYellow(
+            ta,
+            "Edit Cover Letter here:",
+            hints.length ? hints.join(" &bull; ") : "Review and refine your cover letter text below."
+          );
         }
-      }, 120);
-      showToast(highlightTerm ? `Jumped to "${highlightTerm}" in Cover Letter` : "Jumped to Cover Letter editor on Page 3");
+      }, 150);
     }
 
     function jumpToCvBulletsSpot(highlightPhrase) {
@@ -10277,18 +10323,41 @@
         if (!container) return;
         const textareas = Array.from(container.querySelectorAll("textarea"));
         let target = textareas[0] || container;
+        let lineToSelect = highlightPhrase || "";
+
         if (highlightPhrase) {
           const match = textareas.find((t) => t.value.toLowerCase().includes(String(highlightPhrase).toLowerCase()));
           if (match) target = match;
         } else {
-          const unquant = textareas.find((t) => !/\d|%|aed|eur|usd/i.test(t.value));
-          if (unquant) target = unquant;
+          for (const t of textareas) {
+            const lines = String(t.value || "").split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+            const unquantLine = lines.find((l) => !/\d|%|aed|eur|usd/i.test(l));
+            if (unquantLine) {
+              target = t;
+              lineToSelect = unquantLine;
+              break;
+            }
+          }
         }
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
-        if (typeof target.focus === "function") target.focus();
-        pulseElementSpot(target);
-      }, 140);
-      showToast(highlightPhrase ? `Jumped to "${highlightPhrase}" in CV Bullets` : "Jumped to CV Experience Bullets — add numbers, %, AED/EUR, or team sizes");
+
+        if (highlightPhrase) {
+          highlightSpotInYellow(
+            target,
+            "Replace passive/flagged phrasing in this CV bullet:",
+            `Rewrite <mark>${escapeHtml(highlightPhrase)}</mark> using an active executive verb + measurable outcome.`,
+            lineToSelect
+          );
+        } else {
+          highlightSpotInYellow(
+            target,
+            "Add numbers / metrics to this unquantified CV bullet:",
+            lineToSelect
+              ? `Highlighted line: <mark>${escapeHtml(lineToSelect.slice(0, 120))}${lineToSelect.length > 120 ? "..." : ""}</mark><br/>Add <mark>%</mark>, <mark>AED/EUR</mark>, or <mark>team size</mark> to raise your score.`
+              : `Add <mark>%</mark>, <mark>AED/EUR</mark>, or <mark>team size</mark> to your experience bullets below.`,
+            lineToSelect
+          );
+        }
+      }, 160);
     }
 
     function jumpToTextViolationSpot() {
