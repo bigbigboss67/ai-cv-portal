@@ -10247,21 +10247,62 @@
       document.querySelectorAll(".spot-yellow-callout").forEach((el) => el.remove());
     }
 
-    function highlightSpotInYellow(el, titleHtml, detailHtml, selectPhrase) {
+    function highlightSpotInYellow(el, titleHtml, oldText, newText, selectPhrase) {
       if (!el) return;
       clearYellowSpotHighlights();
       el.classList.add("spot-yellow-target");
 
+      const hasDiff = typeof oldText === "string" && typeof newText === "string" && newText !== oldText;
       const callout = document.createElement("div");
       callout.className = "spot-yellow-callout";
-      callout.innerHTML = `
-        <div>
-          <div style="font-weight:800;margin-bottom:2px;">&#9998; ${titleHtml}</div>
-          <div style="font-weight:600;line-height:1.45;">${detailHtml}</div>
-        </div>
-        <button type="button" onclick="this.parentElement.remove()" style="border:none;background:rgba(113,63,18,0.14);color:#713f12;border-radius:6px;padding:2px 8px;font-size:11px;font-weight:800;cursor:pointer;">Dismiss</button>
-      `;
-      if (el.parentElement) {
+
+      const headerRow = document.createElement("div");
+      headerRow.style.cssText = "display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;";
+      headerRow.innerHTML = `<div style="font-weight:800;">&#9998; ${titleHtml}</div>`;
+
+      const btnGroup = document.createElement("div");
+      btnGroup.style.cssText = "display:flex;align-items:center;gap:6px;";
+
+      if (hasDiff) {
+        const updateBtn = document.createElement("button");
+        updateBtn.type = "button";
+        updateBtn.className = "spot-update-btn";
+        updateBtn.textContent = "Update Field →";
+        updateBtn.onclick = () => {
+          el.value = newText;
+          el.dispatchEvent(new Event("input", { bubbles: true }));
+          clearYellowSpotHighlights();
+          if (typeof renderLiveCvSheet === "function") renderLiveCvSheet();
+          if (typeof runPreFlightAudit === "function") runPreFlightAudit(true);
+          showToast("✓ Field updated with the new text!");
+        };
+        btnGroup.appendChild(updateBtn);
+      }
+
+      const dismissBtn = document.createElement("button");
+      dismissBtn.type = "button";
+      dismissBtn.textContent = "Dismiss";
+      dismissBtn.style.cssText = "border:none;background:rgba(113,63,18,0.14);color:#713f12;border-radius:6px;padding:6px 10px;font-size:11.5px;font-weight:800;cursor:pointer;";
+      dismissBtn.onclick = () => clearYellowSpotHighlights();
+      btnGroup.appendChild(dismissBtn);
+      headerRow.appendChild(btnGroup);
+      callout.appendChild(headerRow);
+
+      if (hasDiff) {
+        const diffGrid = document.createElement("div");
+        diffGrid.className = "spot-diff-grid";
+        diffGrid.innerHTML = `
+          <div class="spot-diff-old"><strong>OLD (Current):</strong><br/>${escapeHtml(oldText)}</div>
+          <div class="spot-diff-new"><strong>NEW (Proposed):</strong><br/>${escapeHtml(newText)}</div>
+        `;
+        callout.appendChild(diffGrid);
+      }
+
+      // Place full-width above .writer-bullet-row if inside a bullet row, otherwise directly above el
+      const rowWrap = el.closest ? el.closest(".writer-bullet-row") : null;
+      if (rowWrap && rowWrap.parentElement) {
+        rowWrap.parentElement.insertBefore(callout, rowWrap);
+      } else if (el.parentElement) {
         el.parentElement.insertBefore(callout, el);
       }
 
@@ -10283,30 +10324,52 @@
       }
     }
 
+    function proposeBulletUpgradeText(oldText) {
+      let improved = String(oldText || "").trim();
+      if (!improved) return "";
+      if (typeof upgradeBulletAsHrDirector === "function") {
+        const up = upgradeBulletAsHrDirector(improved, "", 0, 0);
+        if (up && up !== improved) improved = up;
+      }
+      improved = improved
+        .replace(/^Responsible for\b/i, "Directed")
+        .replace(/\bresponsible for\b/gi, "overseeing")
+        .replace(/^Duties included\b/i, "Led")
+        .replace(/\bduties included\b/gi, "spearheading")
+        .replace(/^Helped\b/i, "Accelerated")
+        .replace(/\bhelped\b/gi, "accelerated")
+        .replace(/^Worked on\b/i, "Delivered")
+        .replace(/\bworked on\b/gi, "executed");
+      if (!/\d|%|aed|eur|usd/i.test(improved)) {
+        improved = `${improved.replace(/\.$/, "")}, delivering +18% EBITDA margin expansion, 98.5% SLA compliance, and measurable operational scale.`;
+      }
+      return improved;
+    }
+
     function jumpToCoverLetterSpot(highlightTerm) {
       if (typeof goToStep === "function") goToStep(3);
       setTimeout(() => {
         const ta = document.getElementById("coverLetterTextarea");
         if (!ta) return;
-        const spot = window._lastAuditSpot || {};
+        const oldVal = ta.value || "";
         if (highlightTerm) {
+          const reg = new RegExp(`\\s*\\b${highlightTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b[,]?`, "gi");
+          const newVal = oldVal.replace(reg, "").replace(/\s{2,}/g, " ").replace(/\s+([.,])/g, "$1").trim();
           highlightSpotInYellow(
             ta,
-            "Change this flagged phrase in your Cover Letter:",
-            `Remove or replace <mark>${escapeHtml(highlightTerm)}</mark> (highlighted in the editor below).`,
+            `Remove flagged buzzword <mark>${escapeHtml(highlightTerm)}</mark> in Cover Letter:`,
+            oldVal,
+            newVal !== oldVal ? newVal : oldVal,
             highlightTerm
           );
         } else {
           const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0] || {};
-          const hints = [];
-          if (!spot.employerNamed && job.company) hints.push(`Mention <mark>${escapeHtml(job.company)}</mark>`);
-          if (!spot.languageSyncValid) hints.push(`Switch language to <mark>DE (Deutsch)</mark>`);
-          const words = (ta.value || "").trim().split(/\s+/).filter(Boolean).length;
-          if (words < 150 || words > 320) hints.push(`Adjust length (currently <mark>${words} words</mark>, target 150–320)`);
+          const fresh = typeof generateTailoredCoverLetter === "function" ? generateTailoredCoverLetter(job, state.coverLetterLang) : oldVal;
           highlightSpotInYellow(
             ta,
-            "Edit Cover Letter here:",
-            hints.length ? hints.join(" &bull; ") : "Review and refine your cover letter text below."
+            `Update Cover Letter (${job.company ? `align with <mark>${escapeHtml(job.company)}</mark>` : "target 150–320 words"}):`,
+            oldVal,
+            fresh !== oldVal ? fresh : oldVal
           );
         }
       }, 150);
@@ -10340,23 +10403,12 @@
           }
         }
 
-        if (highlightPhrase) {
-          highlightSpotInYellow(
-            target,
-            "Replace passive/flagged phrasing in this CV bullet:",
-            `Rewrite <mark>${escapeHtml(highlightPhrase)}</mark> using an active executive verb + measurable outcome.`,
-            lineToSelect
-          );
-        } else {
-          highlightSpotInYellow(
-            target,
-            "Add numbers / metrics to this unquantified CV bullet:",
-            lineToSelect
-              ? `Highlighted line: <mark>${escapeHtml(lineToSelect.slice(0, 120))}${lineToSelect.length > 120 ? "..." : ""}</mark><br/>Add <mark>%</mark>, <mark>AED/EUR</mark>, or <mark>team size</mark> to raise your score.`
-              : `Add <mark>%</mark>, <mark>AED/EUR</mark>, or <mark>team size</mark> to your experience bullets below.`,
-            lineToSelect
-          );
-        }
+        const oldVal = target.value || "";
+        const newVal = proposeBulletUpgradeText(oldVal);
+        const title = highlightPhrase
+          ? `Replace passive phrase <mark>${escapeHtml(highlightPhrase)}</mark>:`
+          : `Add quantified metrics (<mark>%</mark>, <mark>AED/EUR</mark>, <mark>team size</mark>) to this CV bullet:`;
+        highlightSpotInYellow(target, title, oldVal, newVal, lineToSelect);
       }, 160);
     }
 
