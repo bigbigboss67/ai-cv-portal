@@ -8150,6 +8150,31 @@
       }
     }
 
+    /* One line from a CV's Skills section -> skill entries.
+       Bullets, pipes, middots and semicolons always separate skills. A comma separates
+       skills only when the line is a plain list of short items ("Negotiation, Budgeting,
+       Team leadership"). When any comma part joins words with "and"/"or"/"&"/"with" or
+       starts with one, the commas belong to a phrase ("Market intelligence, analysis and
+       penetration") and the line stays whole. Slashes never split ("ERP/SAP"). */
+    function splitSkillLine(line) {
+      const tidy = (s) => s.replace(/^[\s,.;:–—-]+|[\s,.;:–—-]+$/g, "").replace(/\s+/g, " ").trim();
+      const chunks = String(line || "")
+        .split(/\s*(?:[•·|▪▸;]|\s-\s)\s*/)
+        .map(tidy)
+        .filter(Boolean);
+      const joiner = /(?:^|\s)(?:and|or|&|with|including|such as|und|oder|sowie|mit)(?:\s|$)/i;
+      const out = [];
+      for (const chunk of chunks) {
+        const parts = chunk.split(/\s*,\s*/).map(tidy).filter(Boolean);
+        const isPlainList =
+          parts.length > 1 &&
+          parts.every((p) => p.split(/\s+/).length <= 4 && !joiner.test(p));
+        if (isPlainList) out.push(...parts);
+        else out.push(chunk);
+      }
+      return out;
+    }
+
     function parseRawTextIntoCv(rawText, sourceName) {
       const lines = normalizeCvRawLines(rawText);
       if (!lines.length) return;
@@ -8449,9 +8474,8 @@
       // 5. Build Final Skills List
       const parsedUserSkills = [];
       skillLines.forEach((sl) => {
-        sl.split(/\s*(?:[•·|▪▸,;\/]|\s-\s)\s*/)
-          .map((s) => s.trim())
-          .filter((s) => s.length >= 2 && s.length <= 75)
+        splitSkillLine(sl)
+          .filter((s) => s.length >= 2 && s.length <= 120)
           .forEach((s) => {
             if (!parsedUserSkills.some((x) => x.toLowerCase() === s.toLowerCase())) {
               parsedUserSkills.push(s);
