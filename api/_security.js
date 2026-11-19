@@ -29,11 +29,12 @@ const BLOCKED_V6 = new net.BlockList(); // separate: a v6 list also matches IPv4
 for (const [addr, len] of [
   ["0.0.0.0", 8], ["10.0.0.0", 8], ["100.64.0.0", 10], ["127.0.0.0", 8], ["169.254.0.0", 16],
   ["172.16.0.0", 12], ["192.0.0.0", 24], ["192.0.2.0", 24], ["192.168.0.0", 16], ["198.18.0.0", 15],
-  ["198.51.100.0", 24], ["203.0.113.0", 24], ["224.0.0.0", 4], ["240.0.0.0", 4],
+  ["198.51.100.0", 24], ["203.0.113.0", 24], ["192.88.99.0", 24], ["224.0.0.0", 4], ["240.0.0.0", 4],
 ]) BLOCKED_V4.addSubnet(addr, len, "ipv4");
 for (const [addr, len] of [
-  ["::", 128], ["::1", 128], ["::ffff:0:0", 96], ["64:ff9b::", 96], ["64:ff9b:1::", 48], ["100::", 64],
-  ["2001::", 32], ["2001:db8::", 32], ["2002::", 16], ["fc00::", 7], ["fe80::", 10], ["ff00::", 8],
+  // ::/96 covers :: and ::1 plus the deprecated IPv4-compatible range (::a.b.c.d).
+  ["::", 96], ["::ffff:0:0", 96], ["64:ff9b::", 96], ["64:ff9b:1::", 48], ["100::", 64],
+  ["2001::", 32], ["2001:db8::", 32], ["2002::", 16], ["fc00::", 7], ["fec0::", 10], ["fe80::", 10], ["ff00::", 8],
 ]) BLOCKED_V6.addSubnet(addr, len, "ipv6");
 
 /** True when `ip` is an IP literal in non-public space. Hostnames return false
@@ -55,6 +56,9 @@ async function isSafePublicUrl(rawUrl) {
     return false;
   }
   if (u.protocol !== "http:" && u.protocol !== "https:") return false;
+  // Standard web ports only: no reaching other services (SMTP, Redis, admin ports) on
+  // a public host. URL drops the default port, so "" means 80/443.
+  if (u.port && u.port !== "80" && u.port !== "443") return false;
   const host = u.hostname.toLowerCase();
   if (
     !host ||
@@ -198,15 +202,23 @@ function pinnedLookup(hostname, options, callback) {
   });
 }
 
-function requestOnce(u, { timeoutMs, maxBytes, accept, userAgent }) {
+function requestOnce(u, { timeoutMs, deadline, maxBytes, accept, userAgent }) {
   return new Promise((resolve, reject) => {
     const mod = u.protocol === "https:" ? https : http;
-    const req = mod.request(
+    let req = null;
+    // Absolute deadline for this hop (headers + body), on top of the socket idle timeout:
+    // a server that trickles bytes cannot keep the request open past the total budget.
+    const remaining = Math.max(1, deadline - Date.now());
+    const hard = setTimeout(() => req && req.destroy(timeoutError()), remaining);
+    const settle = (fn) => (v) => { clearTimeout(hard); fn(v); };
+    resolve = settle(resolve);
+    reject = settle(reject);
+    req = mod.request(
       u,
       {
         method: "GET",
         lookup: pinnedLookup,
-        timeout: timeoutMs,
+        timeout: Math.min(timeoutMs, remaining),
         headers: { "user-agent": userAgent || "Mozilla/5.0", accept: accept || "text/html,text/plain;q=0.9", "accept-encoding": "identity" },
       },
       (res) => {
@@ -218,7 +230,9 @@ function requestOnce(u, { timeoutMs, maxBytes, accept, userAgent }) {
         const type = String(res.headers["content-type"] || "");
         if (type && !/text\/|html|xml|json/i.test(type)) {
           res.destroy();
-          return reject(new Error("Unsupported content type: " + type.split(";")[0]));
+          const e = new Error("Unsupported content type: " + type.split(";")[0]);
+          e.code = "ETYPE";
+          return reject(e);
         }
         // Read at most maxBytes, then stop: nothing beyond the cap is buffered.
         const chunks = [];
@@ -246,10 +260,16 @@ function requestOnce(u, { timeoutMs, maxBytes, accept, userAgent }) {
         res.on("error", (e) => (done ? null : reject(e)));
       }
     );
-    req.on("timeout", () => req.destroy(new Error("Upstream timeout")));
+    req.on("timeout", () => req.destroy(timeoutError()));
     req.on("error", reject);
     req.end();
   });
+}
+
+function timeoutError() {
+  const e = new Error("Upstream timeout");
+  e.code = "ETIMEOUT";
+  return e;
 }
 
 /**
@@ -258,14 +278,17 @@ function requestOnce(u, { timeoutMs, maxBytes, accept, userAgent }) {
  */
 async function safeFetchText(rawUrl, { maxBytes = 1500000, timeoutMs = 10000, maxHops = 4, accept, userAgent } = {}) {
   let target = String(rawUrl || "").trim();
+  // One budget for the whole call: all redirect hops share it.
+  const deadline = Date.now() + timeoutMs;
   for (let hop = 0; hop <= maxHops; hop++) {
+    if (Date.now() >= deadline) throw timeoutError();
     if (!(await isSafePublicUrl(target))) {
       const e = new Error("Blocked unsafe or private network URL.");
       e.code = "EBLOCKED";
       throw e;
     }
     const u = new URL(target);
-    const r = await requestOnce(u, { timeoutMs, maxBytes, accept, userAgent });
+    const r = await requestOnce(u, { timeoutMs, deadline, maxBytes, accept, userAgent });
     if (r.location) {
       target = new URL(r.location, u).href;
       continue;
@@ -296,6 +319,7 @@ function guardPublic(req, res, name, maxPerMinute = 20) {
 
 module.exports = {
   safeFetchText,
+  _requestOnce: requestOnce, // tests only: exercises the per-hop deadline without the address checks
   isPrivateIp,
   guardPublic,
   isSafePublicUrl,

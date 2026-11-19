@@ -125,3 +125,33 @@ test("/api/read refuses requests without a signed-in session", async () => {
   });
   assert.equal(result.code, 401);
 });
+
+/* ---- Second review follow-ups: ports, extra reserved ranges, total deadline ---- */
+import http from "node:http";
+
+test("non-web ports and extra reserved ranges are refused", async () => {
+  for (const u of ["http://example.com:25/", "https://example.com:6379/", "http://example.com:8080/"]) {
+    assert.equal(await sec.isSafePublicUrl(u), false, u);
+  }
+  assert.equal(await sec.isSafePublicUrl("https://example.com:443/"), true);
+  for (const ip of ["192.88.99.1", "::7f00:1", "fec0::1"]) assert.equal(sec.isPrivateIp(ip), true, ip);
+});
+
+test("per-hop deadline cuts off a server that trickles bytes", async (tt) => {
+  // One byte every 100 ms keeps a socket idle timeout from ever firing.
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { "content-type": "text/plain" });
+    const iv = setInterval(() => res.write("x"), 100);
+    req.on("close", () => clearInterval(iv));
+  });
+  await new Promise((r) => server.listen(0, "127.0.0.1", r));
+  tt.after(() => server.close());
+  const u = new URL(`http://127.0.0.1:${server.address().port}/`);
+  const started = Date.now();
+  await assert.rejects(
+    sec._requestOnce(u, { timeoutMs: 5000, deadline: Date.now() + 700, maxBytes: 1e6 }),
+    (e) => e.code === "ETIMEOUT"
+  );
+  const took = Date.now() - started;
+  assert.ok(took >= 600 && took < 2000, `cut off after ${took} ms (deadline 700 ms)`);
+});
