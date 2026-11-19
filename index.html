@@ -3272,7 +3272,7 @@
       <div class="wizard-actions">
         <div class="hud-readiness-chip" id="hudReadinessBadge" title="Real-time application pre-flight readiness score">
           <span class="hud-pulse"></span>
-          <span id="hudReadinessVal">Ready: 98%</span>
+          <span id="hudReadinessVal">Ready: --%</span>
         </div>
         <button type="button" class="btn-pill-secondary tracker-nav-btn" onclick="openApplicationTrackerModal()" id="btnOpenTracker" title="Track and follow up on all executive job applications">
           <span style="font-size:13px;">📊</span>
@@ -3380,7 +3380,7 @@
                 </div>
               </div>
               <span style="font-size:12px;color:var(--accent-emerald);font-weight:600;">
-                ✓ Lossless Merge: Combines roles, endorsed skills, certifications &amp; headline into a unified profile
+                ✓ Profile Merge: Combines roles, endorsed skills, certifications &amp; headline into a unified profile
               </span>
             </div>
 
@@ -3857,7 +3857,7 @@
       <div class="page-hero-card">
         <div>
           <div class="section-eyebrow">Page 2 of 4 &middot; Strict Role-Locked Live Search</div>
-          <h2 class="section-h1">Find Live Roles Across 10 Job Boards</h2>
+          <h2 class="section-h1">Find Live Roles Across 15 Job Boards</h2>
           <p class="section-lead">
             Choose the exact roles you are targeting below (such as <strong>General Manager</strong>, <strong>Managing Director</strong>, or <strong>Operations Director</strong>). Click any job card to automatically tailor your CV and Cover Letter on Page 3.
           </p>
@@ -3939,7 +3939,7 @@
               </select>
 
               <button class="btn-next-glow" id="btnLiveInternetSearch" onclick="runLiveInternetRoleSearch()">
-                Search All 10 Job Boards Live
+                Search All 15 Job Boards Live
               </button>
             </div>
 
@@ -4164,7 +4164,7 @@
                       <circle class="radar-progress-ring" id="radarMeterCircle" cx="37" cy="37" r="32" stroke-dasharray="201" stroke-dashoffset="4"></circle>
                     </svg>
                     <div class="radar-gauge-center">
-                      <div class="radar-gauge-pct" id="reviewScoreVal">98%</div>
+                      <div class="radar-gauge-pct" id="reviewScoreVal">--%</div>
                     </div>
                   </div>
                   <div>
@@ -4206,7 +4206,7 @@
                 <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
                   <div>
                     <div style="font-weight:700;color:#ef4444;font-size:13.5px;display:flex;align-items:center;gap:6px;">
-                      <span>&#9888;</span> <span id="violationAlertTitle">1 Text Violation Detected in Experience Bullets</span>
+                      <span>&#9888;</span> <span id="violationAlertTitle">Action Required Before Dispatch</span>
                     </div>
                     <div id="violationAlertDesc" style="font-size:12px;color:var(--text-secondary);margin-top:4px;">
                       Passive phrasing detected. Executive recruiters look for active outcome verbs rather than passive task descriptions.
@@ -4259,7 +4259,7 @@
                   <span class="check-icon" id="chkDocStyleIcon">&#10003;</span>
                   <div>
                     <strong>ATS Typography &amp; Scale 1:1</strong>
-                    <p class="check-desc" id="chkDocStyleDesc">High-contrast credentials, WCAG AAA compliant.</p>
+                    <p class="check-desc" id="chkDocStyleDesc">Typography &amp; A4 print contrast checked.</p>
                   </div>
                 </div>
               </div>
@@ -4304,9 +4304,9 @@
             <!-- Primary 1-Click Send Application Button -->
             <button class="btn-autofix-hero" id="btnSendApplicationPrimary" onclick="sendApplicationNow()" style="margin-bottom:16px;">
               <div style="text-align:left;">
-                <div id="btnSendAppTitle" style="font-size:16px;">Send Application Now &mdash; Open Outlook Desktop (rassemkadiri@live.de) with Attached CV PDF</div>
+                <div id="btnSendAppTitle" style="font-size:16px;">Send Application Now &mdash; Open Outlook Desktop with Attached CV PDF</div>
                 <div style="font-size:12px;font-weight:500;opacity:0.92;margin-top:3px;" id="btnSendAppSub">
-                  Generates your selectable ATS CV PDF, embeds From: rassemkadiri@live.de, Cover Letter &amp; Subject into an .EML draft, and downloads the PDF
+                  Generates your selectable ATS CV PDF, embeds your configured sender email, Cover Letter &amp; Subject into an .EML draft, and downloads the PDF
                 </div>
               </div>
               <span style="background:rgba(255,255,255,0.22);padding:8px 16px;border-radius:999px;font-size:12.5px;white-space:nowrap;">
@@ -4316,7 +4316,7 @@
 
             <!-- Status / Tip Box -->
             <div id="sendAppStatusBanner" style="background:var(--bg-elevated);border:1px solid var(--border-subtle);border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--text-secondary);line-height:1.55;margin-bottom:18px;">
-              <strong>How 1-Click Email + Attached CV Works:</strong> Clicking <strong>Send Application Now</strong> generates your <code>.eml</code> compose draft with <code>From: rassemkadiri@live.de</code>, <code>X-Unsent: 1</code>, the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF (and also downloads the standalone PDF).
+              <strong>How 1-Click Email + Attached CV Works:</strong> Clicking <strong>Send Application Now</strong> generates your <code>.eml</code> compose draft with your configured <code>From:</code> address, <code>X-Unsent: 1</code>, the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF (and also downloads the standalone PDF).
             </div>
 
             <!-- Secondary Export Buttons -->
@@ -7892,7 +7892,7 @@
         activeMergedBar.style.display = "flex";
         const sumEl = document.getElementById("liActiveMergedSummary");
         if (sumEl) {
-          sumEl.innerHTML = `✓ <strong>Combined Profile Active (${escapeHtml(sourceDesc)})</strong>: ${state.cv.roles.length} roles &middot; ${state.cv.skills.length} skills &middot; ${totalBullets} achievements merged losslessly.`;
+          sumEl.innerHTML = `✓ <strong>Combined Profile Active (${escapeHtml(sourceDesc)})</strong>: ${state.cv.roles.length} roles &middot; ${state.cv.skills.length} skills &middot; ${totalBullets} achievements merged into your profile.`;
         }
       }
 
@@ -9615,7 +9615,7 @@
       } finally {
         if (btn) {
           btn.disabled = false;
-          btn.textContent = "Search All 10 Job Boards Live";
+          btn.textContent = "Search All 15 Job Boards Live";
         }
       }
     }
@@ -10229,10 +10229,32 @@
 
       let ninetyDayBlock = "";
       if (state.include90DayPlanInLetter) {
-        ninetyDayBlock = `\n\nTo ensure immediate accountability, my proposed 90-Day Executive Impact Hypothesis entails:
+        if (lang === "de") {
+          ninetyDayBlock = `\n\nUm vom ersten Tag an messbare Ergebnisse zu sichern, umfasst mein 90-Tage-Executive-Impact-Plan:
+• Tage 1–30 (Diagnose & Ausrichtung): Vollständige Analyse von GuV, Lieferkette und Führungsteam sowie Etablierung einer klaren Board-KPI-Kadenz.
+• Tage 31–60 (Operative Beschleunigung): Realisierung schneller Margenpotenziale, Neuverhandlung zentraler Lieferanten-SLAs und Beseitigung operativer Engpässe.
+• Tage 61–90 (Skalierbare Wertschöpfung): Einführung automatisierter Steuerungs-Dashboards, Ausbau regionaler Marktanteile und Finalisierung der mehrjährigen EBITDA-Roadmap.`;
+        } else if (lang === "ar") {
+          ninetyDayBlock = `\n\nولضمان تحقيق نتائج فورية وقابلة للقياس منذ اليوم الأول، ترتكز خطتي التنفيذية لأول 90 يوماً على:
+• الأيام 1–30 (التشخيص والمواءمة): إجراء مراجعة شاملة للأرباح والخسائر وسلسلة الإمداد والكفاءات القيادية، مع ترسيخ إيقاع واضح لمؤشرات الأداء أمام مجلس الإدارة.
+• الأيام 31–60 (التسريع التشغيلي): تحقيق مكاسب سريعة في هوامش الربح، وإعادة التفاوض على اتفاقيات مستوى الخدمة مع الموردين الرئيسيين، وإزالة الاختناقات التشغيلية.
+• الأيام 61–90 (تعظيم القيمة القابلة للتوسع): إطلاق لوحات متابعة تشغيلية مؤتمتة، وتوسيع الحصة السوقية الإقليمية، واعتماد خارطة طريق الأرباح قبل الفوائد والضرائب والإهلاك (EBITDA) متعددة السنوات.`;
+        } else if (lang === "fr") {
+          ninetyDayBlock = `\n\nPour garantir un impact mesurable dès la prise de poste, ma feuille de route exécutive à 90 jours s'articule autour de trois phases :
+• Jours 1–30 (Diagnostic & Alignement) : Audit complet du P&L, de la chaîne d'approvisionnement et des équipes clés, avec mise en place d'une cadence claire de KPIs pour le Conseil.
+• Jours 31–60 (Accélération Opérationnelle) : Capture de gains rapides de marge, renégociation des SLAs fournisseurs critiques et élimination des goulots d'étranglement.
+• Jours 61–90 (Création de Valeur Durable) : Déploiement de tableaux de bord automatisés, expansion des parts de marché régionales et finalisation de la feuille de route EBITDA pluriannuelle.`;
+        } else if (lang === "es") {
+          ninetyDayBlock = `\n\nPara garantizar resultados medibles desde el primer día, mi plan ejecutivo de impacto a 90 días contempla:
+• Días 1–30 (Diagnóstico y Alineación): Auditoría integral de P&L, cadena de suministro y talento clave, estableciendo una cadencia clara de KPIs para el Consejo.
+• Días 31–60 (Aceleración Operativa): Captura de mejoras rápidas de margen, renegociación de SLAs con proveedores estratégicos y eliminación de cuellos de botella.
+• Días 61–90 (Creación de Valor Escalable): Implementación de cuadros de mando automatizados, expansión de cuota de mercado regional y cierre de la hoja de ruta EBITDA plurianual.`;
+        } else {
+          ninetyDayBlock = `\n\nTo ensure immediate accountability, my proposed 90-Day Executive Impact Hypothesis entails:
 • Days 1–30 (Diagnosis & Alignment): Complete operational audit across P&L, supply chain, and talent baselines while establishing Board KPI cadence.
 • Days 31–60 (Operational Acceleration): Capture quick operational margin wins, renegotiate core vendor SLAs, and eliminate operational bottlenecks.
 • Days 61–90 (Scalable Value Creation): Institute automated operational dashboards, scale regional market share, and finalize the multi-year EBITDA roadmap.`;
+        }
       }
 
       if (lang === "de") {
@@ -10624,9 +10646,10 @@ ${state.cv.contact}`;
     }
 
     function openOutlookLiveCompose(to, subject, plainBody) {
-      const senderEmail = (state.cv && state.cv.email && state.cv.email.trim()) || "rassemkadiri@live.de";
+      const senderEmail = (state.cv && state.cv.email && state.cv.email.trim()) || "";
       const { encodedTo, encodedSubject, encodedBody } = buildSafeComposeParams(to, subject, plainBody);
-      const outlookLiveUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}&login_hint=${encodeURIComponent(senderEmail)}`;
+      const loginHintParam = senderEmail ? `&login_hint=${encodeURIComponent(senderEmail)}` : "";
+      const outlookLiveUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodedTo}&subject=${encodedSubject}&body=${encodedBody}${loginHintParam}`;
       const popup = window.open(outlookLiveUrl, "_blank", "noopener,noreferrer");
       if (!popup) {
         window.location.href = `mailto:${encodedTo}?subject=${encodedSubject}&body=${encodedBody}`;
