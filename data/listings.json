@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T13:35:18.019Z",
-  "total": 182,
-  "staleSources": 0,
+  "generatedAt": "2026-11-19T13:35:51.209Z",
+  "total": 179,
+  "staleSources": 1,
   "sources": [
     {
       "id": "indeed",
@@ -12,7 +12,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 607,
+      "ms": 378,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -25,7 +25,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 433,
+      "ms": 642,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -38,7 +38,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 365,
+      "ms": 464,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -51,7 +51,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 421,
+      "ms": 583,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -64,7 +64,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 223,
+      "ms": 224,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -78,7 +78,7 @@
       },
       "ok": true,
       "count": 8,
-      "ms": 238,
+      "ms": 224,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -166,7 +166,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1605,
+      "ms": 1694,
       "bytes": 148733,
       "note": null,
       "jobs": [
@@ -281,8 +281,8 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 598,
-      "bytes": 819899,
+      "ms": 1357,
+      "bytes": 819909,
       "note": null,
       "jobs": [
         {
@@ -396,7 +396,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 93,
+      "ms": 147,
       "bytes": 174385,
       "note": null,
       "jobs": [
@@ -711,7 +711,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 940,
+      "ms": 1254,
       "bytes": 285784,
       "note": null,
       "jobs": [
@@ -1021,13 +1021,13 @@
       "id": "linkedin",
       "name": "LinkedIn — public job search, senior UAE roles",
       "url": "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates",
-      "audience": {
-        "market": "gulf"
-      },
-      "ok": true,
+      "ok": false,
       "count": 67,
-      "ms": 12026,
-      "note": null,
+      "ms": 10913,
+      "error": "HTTP 429 from www.linkedin.com",
+      "stale": true,
+      "staleSince": "2026-11-19T13:35:18.019Z",
+      "note": "fetch failed — these 67 listings are carried over from 2026-11-19T13:35:18.019Z, not a fresh read",
       "jobs": [
         {
           "title": "Investment Director / Managing Director",
@@ -1711,22 +1711,15 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 27,
-      "ms": 393,
+      "count": 24,
+      "ms": 333,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING | English meaning - Cambridge Dictionary",
-          "company": "via dictionary.cambridge.org",
-          "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
           "kind": "page"
         },
         {
@@ -1734,6 +1727,13 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/manage",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING | English meaning - Cambridge Dictionary",
+          "company": "via dictionary.cambridge.org",
+          "location": "UAE",
+          "url": "https://dictionary.cambridge.org/dictionary/english/managing",
           "kind": "page"
         },
         {
@@ -1751,31 +1751,10 @@
           "kind": "page"
         },
         {
-          "title": "MANAGING | definition in the Cambridge English Dictionary",
+          "title": "MANAGE | English meaning - Cambridge Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
-          "company": "via thesaurus.com",
-          "location": "UAE",
-          "url": "https://www.thesaurus.com/browse/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGING definition and meaning | Collins English Dictionary",
-          "company": "via collinsdictionary.com",
-          "location": "UAE",
-          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
-          "kind": "page"
-        },
-        {
-          "title": "What Is Management? Meaning, Benefits & Best Practices",
-          "company": "via managementlegend.com",
-          "location": "UAE",
-          "url": "https://www.managementlegend.com/what-is-management",
+          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
           "kind": "page"
         },
         {
@@ -1783,13 +1762,6 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/general",
-          "kind": "page"
-        },
-        {
-          "title": "Personas - Banco General Panamá",
-          "company": "via bgeneral.com",
-          "location": "UAE",
-          "url": "https://www.bgeneral.com/",
           "kind": "page"
         },
         {
@@ -1807,10 +1779,10 @@
           "kind": "page"
         },
         {
-          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
-          "company": "via vocabulary.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://www.vocabulary.com/dictionary/general",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page"
         },
         {
@@ -1821,88 +1793,97 @@
           "kind": "page"
         },
         {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
+          "title": "GENERAL Definition & Meaning | Dictionary.com",
+          "company": "via dictionary.com",
           "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
+          "url": "https://www.dictionary.com/browse/general",
           "kind": "page"
         },
         {
-          "title": "Dollar General",
-          "company": "via dollargeneral.com",
+          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
+          "company": "via merriam-webster.com",
           "location": "UAE",
-          "url": "https://www.dollargeneral.com/",
+          "url": "https://www.merriam-webster.com/thesaurus/general",
           "kind": "page"
         },
         {
-          "title": "Ollie: Fresh & Healthy, Human-Grade Dog Food Delivery",
-          "company": "via ollie.com",
+          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
+          "company": "via generalww.com",
           "location": "UAE",
-          "url": "https://www.ollie.com/",
+          "url": "https://www.generalww.com/",
           "kind": "page"
         },
         {
-          "title": "Fresh Dog Food - Human-Grade Food For Dogs | Ollie",
-          "company": "via ollie.com",
+          "title": "Dringend! Gmbh-Geschäftsführer Jobs in Vereinigte Arabische Emirate ...",
+          "company": "via de.jooble.org",
           "location": "UAE",
-          "url": "https://www.ollie.com/fresh-dog-food/",
+          "url": "https://de.jooble.org/stellenangebote-gmbh+gesch%C3%A4ftsf%C3%BChrer/Vereinigte-Arabische-Emirate",
           "kind": "page"
         },
         {
-          "title": "Ollie Dog Food Official Website",
-          "company": "via ollie-dog-food.com",
+          "title": "Geschäftsführer-Mittelstand Stellenangebote Vereinigte Arabische Emirate",
+          "company": "via de.jooble.org",
           "location": "UAE",
-          "url": "https://ollie-dog-food.com/",
+          "url": "https://de.jooble.org/stellenangebote-gesch%C3%A4ftsf%C3%BChrer+mittelstand/Vereinigte-Arabische-Emirate",
           "kind": "page"
         },
         {
-          "title": "Ollie Dog Food - Petco",
-          "company": "via petco.com",
+          "title": "35 Jobs als Ceo and founder in: Vereinigte Arabische Emirate",
+          "company": "via glassdoor.at",
           "location": "UAE",
-          "url": "https://www.petco.com/brand/ollie/dog/dog-food",
+          "url": "https://www.glassdoor.at/Job/vereinigte-arabische-emirate-ceo-and-founder-jobs-SRCH_IL.0,28_IN6_KO29,44.htm",
           "kind": "page"
         },
         {
-          "title": "Ollie Fresh Dog Food & Treats | Petco",
-          "company": "via petco.com",
+          "title": "100+ CEO Jobs, Employment in UAE 19 November 2026| Indeed",
+          "company": "via ae.indeed.com",
           "location": "UAE",
-          "url": "https://www.petco.com/brand/ollie",
+          "url": "https://ae.indeed.com/CEO-jobs-in-UAE",
           "kind": "page"
         },
         {
-          "title": "Ollie Fresh Dog Food Review 2026: Pros, Cons & Final Verdict",
-          "company": "via dogster.com",
+          "title": "وظائف ‏Geschäftsführer‏ في ‏الإمارات العربية المتحدة‏ (‏1,000+‏ من ...",
+          "company": "via ae.linkedin.com",
           "location": "UAE",
-          "url": "https://www.dogster.com/dog-nutrition/ollie-fresh-dog-food-review/",
+          "url": "https://ae.linkedin.com/jobs/gesch%C3%A4ftsf%C3%BChrer-jobs",
           "kind": "page"
         },
         {
-          "title": "Amazon.com: Ollie Dog Food",
-          "company": "via amazon.com",
+          "title": "230 Ceo jobs in United Arab Emirates - Glassdoor",
+          "company": "via glassdoor.com",
           "location": "UAE",
-          "url": "https://www.amazon.com/ollie-dog-food/s?k=ollie+dog+food",
+          "url": "https://www.glassdoor.com/Job/united-arab-emirates-ceo-jobs-SRCH_IL.0,20_IN6_KO21,24.htm",
           "kind": "page"
         },
         {
-          "title": "What Ingredients Are In Fresh Dog Food? - Ollie Blog",
-          "company": "via blog.ollie.com",
+          "title": "2133 Vorstand & Geschäftsführer Jobs | Finde Deinen CEO Job",
+          "company": "via jobs-geschaeftsfuehrer.de",
           "location": "UAE",
-          "url": "https://blog.ollie.com/what-ingredients-are-in-fresh-dog-food/",
+          "url": "https://www.jobs-geschaeftsfuehrer.de/",
           "kind": "page"
         },
         {
-          "title": "Ollie Baked Turkey & Butternut Squash Dry Dog Food, Human ... - Amazon",
-          "company": "via amazon.com",
+          "title": "CEO Jobs in UAE - 188 Vacancies Nov 2026 - Naukrigulf.com",
+          "company": "via naukrigulf.com",
           "location": "UAE",
-          "url": "https://www.amazon.com/Ollie-Baked-Turkey-Butternut-Squash/dp/B0GMTKZWY1",
+          "url": "https://www.naukrigulf.com/ceo-jobs-in-uae",
           "kind": "page"
         },
         {
-          "title": "Ollie Dog Food Review - Must Read This Before Buying",
-          "company": "via honestbrandreviews.com",
+          "title": "91 Jobs als Chief manager in: Vereinigte Arabische Emirate",
+          "company": "via de.glassdoor.ch",
           "location": "UAE",
-          "url": "https://www.honestbrandreviews.com/reviews/ollie-dog-food-review/",
+          "url": "https://de.glassdoor.ch/Job/vereinigte-arabische-emirate-chief-manager-jobs-SRCH_IL.0,28_IN6_KO29,42.htm",
           "kind": "page"
+        },
+        {
+          "title": "Ceo jobs - Michael Page",
+          "company": "via michaelpage.ae",
+          "location": "UAE",
+          "url": "https://www.michaelpage.ae/jobs/ceo",
+          "kind": "page",
+          "to": "clientmiddleeast@michaelpage.ae",
+          "emailVia": "Michael Page UAE Executive Desk"
         }
       ]
     }
