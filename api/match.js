@@ -426,24 +426,38 @@ async function liveBoards(sig, prefs, step = []) {
 
   const settled = await Promise.allSettled(tasks.map((t) => t.run()));
   const jobsBySource = {};
+  const boardCounts = {};
+  const boardErrors = {};
   const failures = [];
   let totalFound = 0;
 
   settled.forEach((s, i) => {
     const t = tasks[i];
     if (!jobsBySource[t.id]) jobsBySource[t.id] = [];
+    if (!(t.id in boardCounts)) boardCounts[t.id] = 0;
     if (s.status === "fulfilled" && Array.isArray(s.value)) {
       jobsBySource[t.id].push(...s.value);
+      boardCounts[t.id] += s.value.length;
       totalFound += s.value.length;
     } else if (s.status === "rejected") {
-      failures.push(`${t.label}: ${String((s.reason && s.reason.message) || s.reason)}`);
+      const msg = String((s.reason && s.reason.message) || s.reason);
+      boardErrors[t.id] = msg;
+      failures.push(`${t.label}: ${msg}`);
     }
   });
+
+  const boardStatus = Object.keys(jobsBySource).map((id) => ({
+    id,
+    count: boardCounts[id] || 0,
+    status: boardCounts[id] > 0 ? "ok" : boardErrors[id] ? "error" : "empty",
+    error: boardErrors[id] || undefined,
+  }));
 
   return {
     listings: {
       sources: Object.entries(jobsBySource).map(([id, list]) => ({ id, ok: true, jobs: list })),
     },
+    boardStatus,
     searches: tasks.map((t) => t.label),
     found: totalFound,
     failures,
@@ -618,6 +632,7 @@ async function handler(req, res) {
     },
     stepRoles: step,
     tracks: countTracks(ranked),
+    boardStatus: board.boardStatus || [],
     failures: failures.length ? failures : undefined,
     matches: ranked,
   });

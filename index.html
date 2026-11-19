@@ -6,6 +6,7 @@
   <title>Executive Career Portal — 4-Page Guided CV & Live Role Application System</title>
   <!-- Fonts are served from this site (fonts.css + /fonts), not Google Fonts: no visitor IPs go to Google. -->
   <link href="fonts.css" rel="stylesheet" />
+  <link href="portal-upgrades.css" rel="stylesheet" />
 
   <!-- GSAP Motion Engine + Client-Side Multi-Format Document Parsers -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -22,6 +23,7 @@
     import * as RT from "./role-title.js";
     import * as PK from "./posting-keywords.js";
     import * as TM from "./tracker-mail.js";
+    import * as CL_MOD from "./cover-letter.js";
     window.buildEml = buildEml;
     window.downloadBlob = downloadBlob;
     window.letterDocument = letterDocument;
@@ -38,6 +40,7 @@
     window.RoleTitle = RT;
     window.POSTING_KW = PK;
     window.TRACKER_MAIL = TM;
+    window.COVER_LETTER_MOD = CL_MOD;
   </script>
 
   <!-- Outlook sync: reads Sent Items / Inbox through the local helper (tools/outlook-sync)
@@ -3962,6 +3965,9 @@
             </div>
           </div>
 
+          <!-- Live Board Status Strip (populated from /api/match boardStatus) -->
+          <div id="liveBoardStatusStrip" class="board-status-strip" style="display:none;margin-bottom:12px;"></div>
+
           <!-- Live Search Status Bar -->
           <div id="liveSearchStatusBanner" style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;background:var(--accent-emerald-soft);border:1px solid var(--accent-emerald-border);border-radius:10px;margin-bottom:18px;font-size:13px;font-weight:600;color:var(--text-primary);flex-wrap:wrap;">
             <span id="liveSearchStatusText">Showing verified matches for your CV details &amp; desired roles across Indeed, Dubizzle, LinkedIn, Bayt, GulfTalent &amp; Executive Headhunters.</span>
@@ -4042,6 +4048,7 @@
                 </button>
               </div>
               <div id="step3KeywordPills" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+              <div id="step3PkBreakdown" class="pk-breakdown-box" style="display:none;"></div>
             </div>
 
             <!-- EXECUTIVE TONE CALIBRATOR & 90-DAY IMPACT SWITCH -->
@@ -4111,8 +4118,17 @@
           </div>
         </div>
 
-        <!-- Right Half of Page 3: Docked Live A4 CV Preview -->
-        <div id="step3CvMount"></div>
+        <!-- Right Half of Page 3: Regional Format Toggle + Docked Live A4 CV Preview -->
+        <div>
+          <div class="regional-format-bar">
+            <span style="font-size:12px;font-weight:700;color:var(--text-primary);">Regional CV Format:</span>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button type="button" class="regional-fmt-btn active" data-fmt="gcc" onclick="setRegionalCvFormat('gcc')">GCC Executive</button>
+              <button type="button" class="regional-fmt-btn" data-fmt="dach" onclick="setRegionalCvFormat('dach')">DACH Lebenslauf</button>
+            </div>
+          </div>
+          <div id="step3CvMount"></div>
+        </div>
       </div>
 
       <!-- Page 3 Bottom Navigation Bar -->
@@ -4319,10 +4335,13 @@
               <strong>How 1-Click Email + Attached CV Works:</strong> Clicking <strong>Send Application Now</strong> generates your <code>.eml</code> compose draft with your configured <code>From:</code> address, <code>X-Unsent: 1</code>, the styled Cover Letter, Subject, Recipient, and attached ATS CV PDF (and also downloads the standalone PDF).
             </div>
 
-            <!-- Secondary Export Buttons -->
+            <!-- Secondary Export Buttons (Browser/Webmail require manual PDF attach) -->
             <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;">
-              <button class="btn-replace-one" onclick="openMailtoAndDownloadPdf()">
-                Open Default Mail App (mailto:) + Download CV PDF
+              <button class="btn-replace-one" onclick="openMailtoAndDownloadPdf()" title="Opens your default mail app and downloads the PDF so you can attach it manually">
+                Default Mail App (mailto:) — Attach Downloaded PDF
+              </button>
+              <button class="btn-replace-one" onclick="openOutlookWebAndDownloadPdf()" title="Opens Outlook Web compose and downloads the PDF so you can attach it manually">
+                Outlook Web — Attach Downloaded PDF
               </button>
               <button class="btn-replace-one" onclick="downloadStandaloneAtsPdf()">
                 Download Tailored ATS Text PDF Only
@@ -4514,6 +4533,8 @@
                   <img id="cvPhotoImgEl" src="" alt="Executive Portrait" class="cv-photo-img" />
                 </div>
               </div>
+
+              <div class="dach-meta-strip" id="dachMetaStripEl"></div>
 
               <!-- 2-Column Drafting Split Body Wrap -->
               <div class="cv-body-wrap two" id="cvBodyWrapEl">
@@ -5202,6 +5223,13 @@
           return "two-column";
         }
       })(),
+      cvFormat: (function () {
+        try {
+          return localStorage.getItem("ai_cv_portal_format") || "gcc";
+        } catch (e) {
+          return "gcc";
+        }
+      })(),
       cv: JSON.parse(JSON.stringify(DEMO_CV)),
       suggestions: [],
       upgradedKeys: new Set(),
@@ -5358,11 +5386,44 @@
       }
 
       const sumEl = document.getElementById("cvSummaryEl");
-      sumEl.textContent = cv.summary || "";
+      sumEl.textContent = (cv.summary || "").trim() || "Executive summary not yet provided.";
       sumEl.className = "sum" + (state.upgradedKeys.has("sug-summary") ? " upgraded-highlight" : "");
 
       const focusEl = document.getElementById("cvFocusLineEl");
       focusEl.textContent = cv.focusLine || "";
+      focusEl.style.display = (cv.focusLine || "").trim() ? "block" : "none";
+
+      // Regional format (GCC Executive vs DACH Lebenslauf)
+      const isDach = state.cvFormat === "dach";
+      document.querySelectorAll(".cv-sheet").forEach((sheet) => {
+        sheet.classList.toggle("cv-format-dach", isDach);
+      });
+      const dachStrip = document.getElementById("dachMetaStripEl");
+      if (dachStrip) {
+        if (isDach) {
+          const langsText = (cv.languages || "").trim() || "English (C2), German / Arabic (see profile)";
+          const locText = (cv.location || "").trim() || contactParts[0] || "DACH / GCC";
+          const focusText = (cv.focusLine || "").trim() || (cv.headline || "Executive Leadership");
+          dachStrip.innerHTML = `
+            <div><strong>Sprachen / Languages:</strong> ${escapeHtml(langsText)}</div>
+            <div><strong>Standort / Location:</strong> ${escapeHtml(locText)}</div>
+            <div><strong>Verfügbarkeit / Availability:</strong> Nach Vereinbarung</div>
+            <div><strong>Fokus:</strong> ${escapeHtml(focusText)}</div>
+          `;
+        } else {
+          dachStrip.innerHTML = "";
+        }
+      }
+      const secTitles = [
+        ["#cvSecSummary .cv-sec-title", isDach ? "Kurzprofil & Executive Summary" : "Executive Profile & Summary"],
+        ["#cvSecExperience .cv-sec-title", isDach ? "Berufserfahrung" : "Professional Leadership Experience"],
+        ["#cvSecSkills .cv-sec-title", isDach ? "Kernkompetenzen" : "Core Executive Competencies"],
+        ["#cvSecEducation .cv-sec-title", isDach ? "Ausbildung & Qualifikationen" : "Education & Executive Credentials"]
+      ];
+      secTitles.forEach(([sel, txt]) => {
+        const el = document.querySelector(sel);
+        if (el) el.textContent = txt;
+      });
 
       const skillsEl = document.getElementById("cvSkillsEl");
       skillsEl.innerHTML = (cv.skills || [])
@@ -5379,28 +5440,31 @@
         .join("");
 
       const expEl = document.getElementById("cvExperienceEl");
-      expEl.innerHTML = (cv.roles || [])
-        .map((r, rIdx) => {
-          const bulletsHtml = (r.bullets || [])
-            .map((b, bIdx) => {
-              const key = `sug-r${rIdx}-b${bIdx}`;
-              const isUp = state.upgradedKeys.has(key);
-              const renderedText = applyAtsXrayHighlights(b);
-              return `<li id="cv-line-${key}" class="${isUp ? "upgraded-highlight" : ""}">${renderedText}</li>`;
+      const rolesList = cv.roles || [];
+      expEl.innerHTML = rolesList.length
+        ? rolesList
+            .map((r, rIdx) => {
+              const bulletsHtml = (r.bullets || [])
+                .map((b, bIdx) => {
+                  const key = `sug-r${rIdx}-b${bIdx}`;
+                  const isUp = state.upgradedKeys.has(key);
+                  const renderedText = applyAtsXrayHighlights(b);
+                  return `<li id="cv-line-${key}" class="${isUp ? "upgraded-highlight" : ""}">${renderedText}</li>`;
+                })
+                .join("");
+              return `
+                <div class="cv-role-item j">
+                  <div class="cv-role-head">
+                    <span class="t">${escapeHtml(r.title || "")}</span>
+                    <span class="d" style="font-size:11.5px;color:#475569;font-weight:700;">${escapeHtml(r.dates || "")}</span>
+                  </div>
+                  <div class="cv-role-org c">${escapeHtml(r.company || "")}${r.location ? " · " + escapeHtml(r.location) : ""}</div>
+                  <ul class="cv-bullet-list">${bulletsHtml}</ul>
+                </div>
+              `;
             })
-            .join("");
-          return `
-            <div class="cv-role-item j">
-              <div class="cv-role-head">
-                <span class="t">${escapeHtml(r.title || "")}</span>
-                <span class="d" style="font-size:11.5px;color:#475569;font-weight:700;">${escapeHtml(r.dates || "")}</span>
-              </div>
-              <div class="cv-role-org c">${escapeHtml(r.company || "")}${r.location ? " · " + escapeHtml(r.location) : ""}</div>
-              <ul class="cv-bullet-list">${bulletsHtml}</ul>
-            </div>
-          `;
-        })
-        .join("");
+            .join("")
+        : '<div style="font-size:12px;color:#64748b;padding:6px 0;">No leadership experience entries yet — upload a CV or add roles in Built-In CV Writer.</div>';
 
       const eduEl = document.getElementById("cvEducationEl");
       if (eduEl) {
@@ -9568,6 +9632,7 @@
 
         if (apiRes.status === "fulfilled" && apiRes.value && Array.isArray(apiRes.value.matches)) {
           apiRes.value.matches.forEach((m) => addRow(m, m.source));
+          renderLiveBoardStatusStrip(apiRes.value.boardStatus || []);
         }
 
         if (staticRes.status === "fulfilled" && staticRes.value && Array.isArray(staticRes.value.sources)) {
@@ -9715,7 +9780,14 @@
         })
         .join("");
 
-      document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(job, state.coverLetterLang);
+      const clTa = document.getElementById("coverLetterTextarea");
+      if (clTa) {
+        clTa.value = generateTailoredCoverLetter(job, state.coverLetterLang);
+        if (window.COVER_LETTER_MOD && window.COVER_LETTER_MOD.applyCoverLetterDirection) {
+          window.COVER_LETTER_MOD.applyCoverLetterDirection(clTa, state.coverLetterLang);
+        }
+      }
+      renderStep3PkBreakdown(job);
 
       // Automatically pre-fill Page 4 Recipient Email (To:) & Subject Line
       const exportToEl = document.getElementById("exportToEmail");
@@ -9766,9 +9838,88 @@
       document.querySelectorAll(".cl-lang-btn").forEach((b) => {
         b.classList.toggle("active", b.textContent.toLowerCase().includes(lang));
       });
-      document.getElementById("coverLetterTextarea").value = generateTailoredCoverLetter(state.selectedJob, lang);
+      const clTa = document.getElementById("coverLetterTextarea");
+      if (clTa) {
+        clTa.value = generateTailoredCoverLetter(state.selectedJob, lang);
+        if (window.COVER_LETTER_MOD && window.COVER_LETTER_MOD.applyCoverLetterDirection) {
+          window.COVER_LETTER_MOD.applyCoverLetterDirection(clTa, lang);
+        }
+      }
       if (typeof runPreFlightAudit === "function") {
         runPreFlightAudit(true);
+      }
+    }
+
+    function setRegionalCvFormat(fmt, silent) {
+      state.cvFormat = fmt === "dach" ? "dach" : "gcc";
+      try {
+        localStorage.setItem("ai_cv_portal_format", state.cvFormat);
+      } catch {}
+      document.querySelectorAll(".regional-fmt-btn").forEach((b) => {
+        b.classList.toggle("active", b.getAttribute("data-fmt") === state.cvFormat);
+      });
+      renderLiveCvSheet(true);
+      if (!silent) {
+        showToast(state.cvFormat === "dach" ? "Switched CV layout to DACH Lebenslauf" : "Switched CV layout to GCC Executive");
+      }
+    }
+
+    function renderLiveBoardStatusStrip(boardStatus) {
+      const strip = document.getElementById("liveBoardStatusStrip");
+      if (!strip) return;
+      if (!Array.isArray(boardStatus) || !boardStatus.length) {
+        strip.style.display = "none";
+        strip.innerHTML = "";
+        return;
+      }
+      strip.style.display = "flex";
+      strip.innerHTML = boardStatus
+        .map((b) => {
+          const ok = b.status === "ok";
+          const cls = ok ? "ok" : b.status === "error" ? "warn" : "";
+          const icon = ok ? "✓" : b.status === "error" ? "⚠" : "·";
+          const detail = ok ? `(${b.count})` : b.status === "error" ? "Rate-limited / timeout" : "(0)";
+          return `<span class="board-status-chip ${cls}" title="${escapeAttr(b.error || b.id)}">${icon} ${escapeHtml(b.id)} ${escapeHtml(detail)}</span>`;
+        })
+        .join("");
+    }
+
+    function renderStep3PkBreakdown(job) {
+      const box = document.getElementById("step3PkBreakdown");
+      if (!box) return;
+      if (!window.POSTING_KW || typeof window.POSTING_KW.keywordReport !== "function" || !job) {
+        box.style.display = "none";
+        return;
+      }
+      const cv = state.cv || DEMO_CV;
+      const posting = { title: job.title || "", text: job.text || job.snippet || "", snippet: !job.text };
+      const vocab = { VOCAB: Array.isArray(window.VOCAB) ? window.VOCAB : [], SYN: window.SYN || {} };
+      const cvIn = {
+        headline: cv.headline || "",
+        summary: cv.summary || "",
+        langs: cv.languages || "",
+        skills: cv.skills || [],
+        roles: (cv.roles || []).map((r) => ({ t: r.title, c: r.company, d: r.dates, bullets: (r.bullets || []).map((x) => ({ x })) }))
+      };
+      try {
+        const res = window.POSTING_KW.keywordReport(posting, cvIn, vocab);
+        const items = (res && res.must) || [];
+        if (!items.length) {
+          box.style.display = "none";
+          return;
+        }
+        const matched = items.filter((i) => i.state === "in-cv" || i.state === "other-words");
+        const swaps = items.filter((i) => i.state === "swap");
+        const gaps = items.filter((i) => i.state === "gap");
+        box.style.display = "block";
+        box.innerHTML = `
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;">ATS Keyword Match Breakdown (posting-keywords.js)</div>
+          <div class="pk-row"><span style="font-weight:700;color:#047857;">Matched (${matched.length}):</span> ${matched.map((i) => `<span class="pk-badge match">${escapeHtml(i.term)}</span>`).join("") || '<span style="color:var(--text-muted);">None yet</span>'}</div>
+          ${swaps.length ? `<div class="pk-row"><span style="font-weight:700;color:#1d4ed8;">Swap Ready (${swaps.length}):</span> ${swaps.map((i) => `<span class="pk-badge swap">${escapeHtml(i.term)}</span>`).join("")}</div>` : ""}
+          <div class="pk-row"><span style="font-weight:700;color:#b91c1c;">Gaps (${gaps.length}):</span> ${gaps.map((i) => `<span class="pk-badge gap">${escapeHtml(i.term)}</span>`).join("") || '<span style="color:var(--text-muted);">None</span>'}</div>
+        `;
+      } catch {
+        box.style.display = "none";
       }
     }
 
@@ -10229,32 +10380,13 @@
 
       let ninetyDayBlock = "";
       if (state.include90DayPlanInLetter) {
-        if (lang === "de") {
-          ninetyDayBlock = `\n\nUm vom ersten Tag an messbare Ergebnisse zu sichern, umfasst mein 90-Tage-Executive-Impact-Plan:
-• Tage 1–30 (Diagnose & Ausrichtung): Vollständige Analyse von GuV, Lieferkette und Führungsteam sowie Etablierung einer klaren Board-KPI-Kadenz.
-• Tage 31–60 (Operative Beschleunigung): Realisierung schneller Margenpotenziale, Neuverhandlung zentraler Lieferanten-SLAs und Beseitigung operativer Engpässe.
-• Tage 61–90 (Skalierbare Wertschöpfung): Einführung automatisierter Steuerungs-Dashboards, Ausbau regionaler Marktanteile und Finalisierung der mehrjährigen EBITDA-Roadmap.`;
-        } else if (lang === "ar") {
-          ninetyDayBlock = `\n\nولضمان تحقيق نتائج فورية وقابلة للقياس منذ اليوم الأول، ترتكز خطتي التنفيذية لأول 90 يوماً على:
-• الأيام 1–30 (التشخيص والمواءمة): إجراء مراجعة شاملة للأرباح والخسائر وسلسلة الإمداد والكفاءات القيادية، مع ترسيخ إيقاع واضح لمؤشرات الأداء أمام مجلس الإدارة.
-• الأيام 31–60 (التسريع التشغيلي): تحقيق مكاسب سريعة في هوامش الربح، وإعادة التفاوض على اتفاقيات مستوى الخدمة مع الموردين الرئيسيين، وإزالة الاختناقات التشغيلية.
-• الأيام 61–90 (تعظيم القيمة القابلة للتوسع): إطلاق لوحات متابعة تشغيلية مؤتمتة، وتوسيع الحصة السوقية الإقليمية، واعتماد خارطة طريق الأرباح قبل الفوائد والضرائب والإهلاك (EBITDA) متعددة السنوات.`;
-        } else if (lang === "fr") {
-          ninetyDayBlock = `\n\nPour garantir un impact mesurable dès la prise de poste, ma feuille de route exécutive à 90 jours s'articule autour de trois phases :
-• Jours 1–30 (Diagnostic & Alignement) : Audit complet du P&L, de la chaîne d'approvisionnement et des équipes clés, avec mise en place d'une cadence claire de KPIs pour le Conseil.
-• Jours 31–60 (Accélération Opérationnelle) : Capture de gains rapides de marge, renégociation des SLAs fournisseurs critiques et élimination des goulots d'étranglement.
-• Jours 61–90 (Création de Valeur Durable) : Déploiement de tableaux de bord automatisés, expansion des parts de marché régionales et finalisation de la feuille de route EBITDA pluriannuelle.`;
-        } else if (lang === "es") {
-          ninetyDayBlock = `\n\nPara garantizar resultados medibles desde el primer día, mi plan ejecutivo de impacto a 90 días contempla:
-• Días 1–30 (Diagnóstico y Alineación): Auditoría integral de P&L, cadena de suministro y talento clave, estableciendo una cadencia clara de KPIs para el Consejo.
-• Días 31–60 (Aceleración Operativa): Captura de mejoras rápidas de margen, renegociación de SLAs con proveedores estratégicos y eliminación de cuellos de botella.
-• Días 61–90 (Creación de Valor Escalable): Implementación de cuadros de mando automatizados, expansión de cuota de mercado regional y cierre de la hoja de ruta EBITDA plurianual.`;
-        } else {
-          ninetyDayBlock = `\n\nTo ensure immediate accountability, my proposed 90-Day Executive Impact Hypothesis entails:
+        ninetyDayBlock =
+          window.COVER_LETTER_MOD && window.COVER_LETTER_MOD.buildLocalizedNinetyDayBlock
+            ? window.COVER_LETTER_MOD.buildLocalizedNinetyDayBlock(lang)
+            : `\n\nTo ensure immediate accountability, my proposed 90-Day Executive Impact Hypothesis entails:
 • Days 1–30 (Diagnosis & Alignment): Complete operational audit across P&L, supply chain, and talent baselines while establishing Board KPI cadence.
 • Days 31–60 (Operational Acceleration): Capture quick operational margin wins, renegotiate core vendor SLAs, and eliminate operational bottlenecks.
 • Days 61–90 (Scalable Value Creation): Institute automated operational dashboards, scale regional market share, and finalize the multi-year EBITDA roadmap.`;
-        }
       }
 
       if (lang === "de") {
@@ -10915,13 +11047,30 @@ ${state.cv.contact}`;
       } catch {}
 
       recordExecutiveDispatch(job, "Direct mailto: + ATS PDF", to, subject);
+      showToast("Mail app opened and CV PDF downloaded — please attach the PDF manually before sending.");
+    }
 
+    async function openOutlookWebAndDownloadPdf() {
+      const job = state.selectedJob || MULTI_BOARD_SEED_JOBS[0];
+      resolveJobRecipientEmailClient(job);
+      const cleanRole = window.ROLE_TITLE && window.ROLE_TITLE.cleanRoleTitle ? window.ROLE_TITLE.cleanRoleTitle(job.title) : job.title;
+      const to = (document.getElementById("exportToEmail") && document.getElementById("exportToEmail").value.trim()) || job.to || "";
+      const subject =
+        (document.getElementById("exportSubjectLine") && document.getElementById("exportSubjectLine").value.trim()) ||
+        `Application — ${cleanRole}${job.ref ? " (Ref. " + job.ref + ")" : ""} — ${state.cv.name}`;
+      const plainBody =
+        (document.getElementById("coverLetterTextarea") && document.getElementById("coverLetterTextarea").value.trim()) ||
+        generateTailoredCoverLetter(job, state.coverLetterLang);
+      openOutlookLiveCompose(to, subject, plainBody);
+      try {
+        await downloadStandaloneAtsPdf();
+      } catch {}
+      recordExecutiveDispatch(job, "Outlook Web + ATS PDF", to, subject);
       const statusBanner = document.getElementById("sendAppStatusBanner");
       if (statusBanner) {
-        statusBanner.innerHTML = `<strong>Mail Client Opened via mailto:!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong>, <strong>Subject</strong>, and <strong>Cover Letter</strong> were sent to your email program.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
+        statusBanner.innerHTML = `<strong>Outlook Web Opened + CV PDF Downloaded!</strong><br/>Recipient <strong>To: ${escapeHtml(to)}</strong>, <strong>Subject</strong>, and <strong>Cover Letter</strong> were pre-filled. Please attach the downloaded CV PDF manually in Outlook Web.<br/><div style="margin-top:8px;padding-top:8px;border-top:1px dashed var(--border-subtle);color:var(--accent-emerald);font-weight:700;">✓ Automatically logged &amp; tracked in your Executive Tracker with a 4-day follow-up countdown!</div>`;
       }
-
-      showToast(`✓ Logged to Tracker & opened mailto: for ${to}`);
+      showToast("Outlook Web opened and CV PDF downloaded — please attach the PDF manually.");
     }
 
     function downloadReadyEmlPackage() {
@@ -11138,6 +11287,7 @@ ${state.cv.contact}`;
       } catch {}
 
       setExecutiveCvTheme(state.cvTheme || "monaco", true);
+      setRegionalCvFormat(state.cvFormat || "gcc", true);
       state.suggestions = buildHrDirectorSuggestions(state.cv);
       rescoreAllJobsAgainstCv();
       renderLiveCvSheet();
