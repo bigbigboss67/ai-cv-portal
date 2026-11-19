@@ -803,11 +803,11 @@ function harvestAndRankEmails(str, preferredHost = "") {
 }
 
 const KNOWN_EMPLOYER_EMAILS = [
-  { re: /\bpage\s*executive\b|pageexecutive/i, email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
-  { re: /\bmichael\s*page\b|michaelpage/i, email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+  { re: /\bpage\s*executive\b|pageexecutive/i, email: "clientmiddleeast@michaelpage.ae", via: "Page Executive / Michael Page Dubai Desk" },
+  { re: /\bmichael\s*page\b|michaelpage/i, email: "clientmiddleeast@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
   { re: /\bcharterhouse\b/i, email: "info@charterhouse.ae", via: "Charterhouse Middle East Recruitment" },
   { re: /\bdeparter\b/i, email: "info@departer.com", via: "Departer German Headhunter MEA Desk" },
-  { re: /\bahk\b|german\s*emirati/i, email: "info@ahkdubai.com", via: "AHK German Emirati Chamber Desk" },
+  { re: /\bahk\b|german\s*emirati/i, email: "info@ahkuae.com", via: "AHK German Emirati Chamber Desk" },
   { re: /\brobert\s*half\b/i, email: "dubai@roberthalf.ae", via: "Robert Half UAE Executive Search" },
   { re: /\bkorn\s*ferry\b/i, email: "info.dubai@kornferry.com", via: "Korn Ferry Middle East Desk" },
   { re: /\bhays\b/i, email: "dubai@hays.com", via: "Hays Middle East Recruitment" },
@@ -903,6 +903,9 @@ function inferDomainFromCompanyName(rawCompany, rawLocation = "") {
   return `${slugPart}.${tld}`;
 }
 
+const FABRICATED_EMAIL_RE =
+  /(@baytemployer\.com|@linkedin-mena\.com|@indeed-uae\.com|@executive-recruitment-uae\.com|@ahkdubai\.com|^clientservicesdubai@michaelpage\.ae$|^dubai@pageexecutive\.com$|^executive\.recruitment@gulftalent\.com$|^executive\.careers@bayt\.com$|^jobs\.dubai@dubizzle\.com$|^executive\.desk@naukrigulf\.com$)/i;
+
 function resolveJobRecipientEmail(job = {}) {
   if (!job || typeof job !== "object") return { email: "", via: "" };
 
@@ -911,59 +914,7 @@ function resolveJobRecipientEmail(job = {}) {
     !rawCompany ||
     /^(confidential|executive employer|verified employer|live job board|via live board|live board)$/i.test(rawCompany);
 
-  // 1. Keep already populated valid email on job.to (if it belongs to the company or was verified)
-  if (job.to && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim())) {
-    const existing = String(job.to).trim().toLowerCase();
-    const matchingComp = !isGenericCompany ? KNOWN_EMPLOYER_EMAILS.find((item) => item.re.test(rawCompany)) : null;
-    if (!matchingComp || matchingComp.email === existing) {
-      return {
-        email: existing,
-        via: job.emailVia || "Verified Listing Email",
-      };
-    }
-  }
-
-  // 2. HIGHEST MATCH PRIORITY: Match hiring employer name (job.company) against Known Employers
-  // This prevents competitor names in job.text (or multi-listing search pages) from hijacking the recipient email!
-  if (!isGenericCompany) {
-    for (const item of KNOWN_EMPLOYER_EMAILS) {
-      if (item.re.test(rawCompany)) {
-        return {
-          email: item.email,
-          via: item.via,
-        };
-      }
-    }
-  }
-
-  // 3. Employer Website URL (if job.site or job.url is an employer domain, not a job board)
-  for (const candidateUrl of [job.site, job.url]) {
-    if (!candidateUrl) continue;
-    try {
-      const u = new URL(candidateUrl);
-      const host = u.hostname.replace(/^www\./i, "").toLowerCase();
-      if (host && !GENERIC_JOB_BOARD_HOST.test(host) && host.includes(".")) {
-        const rootDomain = host.replace(/^(careers?|jobs?|karriere|apply|talent)\./i, "");
-        return {
-          email: `careers@${rootDomain}`,
-          via: `Employer Domain HR (${rootDomain})`,
-        };
-      }
-    } catch {}
-  }
-
-  // 4. Infer Corporate HR Mailbox from Employer Name
-  if (!isGenericCompany) {
-    const inferredDomain = inferDomainFromCompanyName(job.company || "", job.location || "");
-    if (inferredDomain) {
-      return {
-        email: `careers@${inferredDomain}`,
-        via: `Corporate HR Mailbox (${inferredDomain})`,
-      };
-    }
-  }
-
-  // 5. Harvest directly from job description / snippet (literal email addresses)
+  // 1. Highest trust: literal email addresses printed in job description / snippet
   const direct = harvestAndRankEmails(`${job.text || ""} ${job.snippet || ""}`);
   if (direct.length) {
     return {
@@ -972,40 +923,46 @@ function resolveJobRecipientEmail(job = {}) {
     };
   }
 
-  // 6. Fallback match for known employers in Title / Source / Text (ONLY if company was generic or had no match)
-  const fallbackCorpus = `${job.title || ""} ${job.source || ""} ${isGenericCompany ? (job.text || "") : ""}`;
-  for (const item of KNOWN_EMPLOYER_EMAILS) {
-    if (item.re.test(fallbackCorpus)) {
-      return {
-        email: item.email,
-        via: item.via,
-      };
-    }
+  // 2. Keep already populated genuine email on job.to (reject previously guessed/fabricated emails)
+  const prevVia = String(job.emailVia || "");
+  const wasGuessed = /^(Corporate HR Mailbox|Employer Domain HR)\b/i.test(prevVia);
+  if (
+    !wasGuessed &&
+    job.to &&
+    /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(job.to).trim()) &&
+    !FABRICATED_EMAIL_RE.test(String(job.to).trim())
+  ) {
+    const existing = String(job.to).trim().toLowerCase();
+    return {
+      email: existing,
+      via: prevVia || "Verified Listing Email",
+    };
   }
 
-  // 7. Board-Specific Executive Desk Fallback so `To:` is never empty
-  const src = String(job.source || "").toLowerCase();
-  const boardDesks = {
-    pageexecutive: { email: "dubai@pageexecutive.com", via: "Page Executive Middle East Desk" },
-    michaelpage: { email: "clientservicesdubai@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
+  // 3. Verified Executive Headhunter / Chamber Desks only (when company/source is a real headhunter)
+  const verifiedDesks = {
+    pageexecutive: { email: "clientmiddleeast@michaelpage.ae", via: "Page Executive / Michael Page Dubai Desk" },
+    michaelpage: { email: "clientmiddleeast@michaelpage.ae", via: "Michael Page UAE Executive Desk" },
     charterhouse: { email: "info@charterhouse.ae", via: "Charterhouse Middle East Desk" },
     departer: { email: "info@departer.com", via: "Departer German Headhunter Desk" },
-    ahk: { email: "info@ahkdubai.com", via: "AHK UAE Executive Desk" },
-    gulftalent: { email: "executive.recruitment@gulftalent.com", via: "GulfTalent Executive Applications" },
-    bayt: { email: "executive.careers@bayt.com", via: "Bayt Executive Talent Desk" },
-    dubizzle: { email: "jobs.dubai@dubizzle.com", via: "Dubizzle UAE Executive Jobs Desk" },
-    naukrigulf: { email: "executive.desk@naukrigulf.com", via: "Naukrigulf Executive Desk" },
-    linkedin: { email: "executive.talent@linkedin-mena.com", via: "Executive Talent Desk" },
-    indeed: { email: "executive.apply@indeed-uae.com", via: "Indeed UAE Executive Desk" },
+    ahk: { email: "info@ahkuae.com", via: "AHK UAE Official Desk" },
   };
 
-  if (boardDesks[src]) {
-    return boardDesks[src];
+  const headhunterCorpus = `${rawCompany} ${job.source || ""}`;
+  for (const item of KNOWN_EMPLOYER_EMAILS.slice(0, 5)) {
+    if (item.re.test(headhunterCorpus)) {
+      return { email: item.email, via: item.via };
+    }
+  }
+  const src = String(job.source || "").toLowerCase();
+  if (verifiedDesks[src]) {
+    return verifiedDesks[src];
   }
 
+  // 4. Never fabricate or guess careers@domain.com when no real email exists
   return {
-    email: "careers@executive-recruitment-uae.com",
-    via: "Executive Recruitment Desk",
+    email: "",
+    via: "Apply via Employer Portal / ATS",
   };
 }
 
