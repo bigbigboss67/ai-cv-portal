@@ -628,6 +628,28 @@ async function handler(req, res) {
 
   await hydrateTopLinkedInMatches(ranked, 5);
 
+  // Build honest boardStatus reflecting matched/valid listings per board
+  const matchedByBoard = new Map();
+  for (const r of ranked) {
+    const id = String(r.source || "other").toLowerCase();
+    matchedByBoard.set(id, (matchedByBoard.get(id) || 0) + 1);
+  }
+  const boardStatusMap = new Map();
+  for (const b of board.boardStatus || []) {
+    const matchedCount = matchedByBoard.get(b.id) || 0;
+    boardStatusMap.set(b.id, {
+      id: b.id,
+      count: matchedCount,
+      status: matchedCount > 0 ? "ok" : b.status === "error" ? "error" : "empty",
+      error: b.error,
+    });
+  }
+  for (const [id, count] of matchedByBoard.entries()) {
+    if (!boardStatusMap.has(id)) {
+      boardStatusMap.set(id, { id, count, status: "ok" });
+    }
+  }
+
   res.status(200).json({
     ok: true,
     profile: sig,
@@ -641,7 +663,7 @@ async function handler(req, res) {
     },
     stepRoles: step,
     tracks: countTracks(ranked),
-    boardStatus: board.boardStatus || [],
+    boardStatus: [...boardStatusMap.values()],
     failures: failures.length ? failures : undefined,
     matches: ranked,
   });

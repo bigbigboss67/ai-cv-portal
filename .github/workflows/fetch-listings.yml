@@ -26,7 +26,7 @@ jobs:
         # source throws "AISA_API_KEY not set" even though the secret exists.
         env:
           AISA_API_KEY: ${{ secrets.AISA_API_KEY }}
-        run: node scripts/fetch-listings.mjs
+        run: node scripts/job-fetching-agent.mjs
 
       - name: Show what changed
         run: |
