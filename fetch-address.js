@@ -19,6 +19,17 @@ export const READERS = [
   { name: "portal reader", build: (u) => "/api/read?url=" + encodeURIComponent(u) },
 ];
 
+/** /api/read requires the signed-in session: attach the Clerk token when there is one. */
+export async function readerHeaders() {
+  try {
+    const c = typeof window !== "undefined" && window.Clerk;
+    const t = c && c.session ? await c.session.getToken() : "";
+    return t ? { Authorization: "Bearer " + t } : {};
+  } catch {
+    return {};
+  }
+}
+
 export const MAIL = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/g;
 
 /* Addresses that are never a recruiter: asset filenames, tracking and CDN hosts,
@@ -140,7 +151,7 @@ async function readPage(url) {
   let lastErr = "";
   for (const r of READERS) {
     try {
-      const res = await fetch(r.build(url), { redirect: "follow" });
+      const res = await fetch(r.build(url), { redirect: "follow", headers: await readerHeaders() });
       if (!res.ok) { lastErr = r.name + " returned " + res.status; continue; }
       const text = await res.text();
       if (!text || text.length < 40) { lastErr = r.name + " returned an empty page"; continue; }

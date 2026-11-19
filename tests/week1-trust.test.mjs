@@ -80,3 +80,48 @@ test("JWT: valid token passes; bad iss, missing exp, unknown kid, foreign azp fa
   assert.equal(await sec.verifyClerkBearer(req(sign({ ...base, azp: "https://evil.example" }))), null);
   assert.equal(await sec.verifyClerkBearer(req(sign(base, { alg: "none", kid: "test-kid" }))), null);
 });
+
+/* ---- Security-review follow-ups: IP parsing, DNS pinning, byte cap, auth on /api/read ---- */
+import dns from "node:dns";
+
+test("isPrivateIp: alternate spellings of private addresses are caught; public ones pass", () => {
+  for (const ip of ["127.0.0.1", "0:0:0:0:0:0:0:1", "[::1]", "::ffff:7f00:1", "::ffff:127.0.0.1", "10.0.0.1",
+    "169.254.169.254", "100.64.0.1", "172.16.5.4", "192.168.1.1", "fd00::1", "fe80::1", "0.0.0.0", ""]) {
+    assert.equal(sec.isPrivateIp(ip), true, ip);
+  }
+  for (const ip of ["8.8.8.8", "1.1.1.1", "172.32.0.1", "2606:4700::1111", "example.com"]) {
+    assert.equal(sec.isPrivateIp(ip), false, ip);
+  }
+});
+
+test("isSafePublicUrl rejects numeric / bracketed loopback spellings", async () => {
+  for (const u of ["http://2130706433/", "http://0x7f.1/", "http://127.1/", "http://[::1]/", "http://[::ffff:7f00:1]/",
+    "http://[0:0:0:0:0:0:0:1]/", "http://169.254.169.254/latest/meta-data/", "file:///etc/passwd"]) {
+    assert.equal(await sec.isSafePublicUrl(u), false, u);
+  }
+});
+
+test("safeFetchText: DNS rebinding between check and connect is blocked", async (t) => {
+  const realLookup = dns.lookup;
+  const realPromLookup = dns.promises.lookup;
+  // The validation lookup sees a public address; the connection lookup gets loopback.
+  dns.promises.lookup = async () => [{ address: "93.184.215.14", family: 4 }];
+  dns.lookup = (host, opts, cb) => (typeof opts === "function" ? opts : cb)(null, [{ address: "127.0.0.1", family: 4 }]);
+  t.after(() => { dns.lookup = realLookup; dns.promises.lookup = realPromLookup; });
+  await assert.rejects(sec.safeFetchText("http://rebind.example/"), (e) => e.code === "EBLOCKED");
+});
+
+test("safeFetchText: body is capped while streaming", { skip: !!process.env.OFFLINE }, async () => {
+  const r = await sec.safeFetchText("https://example.com/", { maxBytes: 200, timeoutMs: 10000 });
+  assert.ok(r.body.length <= 200, `got ${r.body.length}`);
+  assert.equal(r.truncated, true);
+});
+
+test("/api/read refuses requests without a signed-in session", async () => {
+  const handler = require("../api/read.js");
+  const result = await new Promise((resolve) => {
+    const res = { code: 200, setHeader() {}, status(c) { this.code = c; return this; }, json(o) { resolve({ code: this.code, body: o }); }, send() { resolve({ code: this.code }); } };
+    handler({ method: "GET", query: { url: "https://example.com/" }, headers: { origin: "https://ai-cv-portal.vercel.app" }, socket: {} }, res);
+  });
+  assert.equal(result.code, 401);
+});
