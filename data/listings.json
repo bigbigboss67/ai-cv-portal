@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-19T13:34:41.329Z",
-  "total": 169,
+  "generatedAt": "2026-11-19T13:35:18.019Z",
+  "total": 182,
   "staleSources": 0,
   "sources": [
     {
@@ -12,7 +12,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 337,
+      "ms": 607,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -25,7 +25,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 454,
+      "ms": 433,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -38,7 +38,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 367,
+      "ms": 365,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -51,7 +51,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 447,
+      "ms": 421,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -64,7 +64,7 @@
       },
       "ok": true,
       "count": 0,
-      "ms": 215,
+      "ms": 223,
       "note": "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
       "jobs": []
     },
@@ -78,7 +78,7 @@
       },
       "ok": true,
       "count": 8,
-      "ms": 523,
+      "ms": 238,
       "bytes": 214316,
       "note": null,
       "jobs": [
@@ -166,7 +166,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1754,
+      "ms": 1605,
       "bytes": 148733,
       "note": null,
       "jobs": [
@@ -281,7 +281,7 @@
       },
       "ok": true,
       "count": 10,
-      "ms": 1351,
+      "ms": 598,
       "bytes": 819899,
       "note": null,
       "jobs": [
@@ -396,7 +396,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 327,
+      "ms": 93,
       "bytes": 174385,
       "note": null,
       "jobs": [
@@ -711,7 +711,7 @@
       },
       "ok": true,
       "count": 30,
-      "ms": 1303,
+      "ms": 940,
       "bytes": 285784,
       "note": null,
       "jobs": [
@@ -1026,7 +1026,7 @@
       },
       "ok": true,
       "count": 67,
-      "ms": 12641,
+      "ms": 12026,
       "note": null,
       "jobs": [
         {
@@ -1711,22 +1711,15 @@
         "market": "gulf"
       },
       "ok": true,
-      "count": 14,
-      "ms": 1109,
+      "count": 27,
+      "ms": 393,
       "note": null,
       "jobs": [
         {
-          "title": "MANAGING Synonyms: 200 Similar and Opposite Words | Merriam ...",
+          "title": "MANAGING Synonyms: 200 Similar and Opposite Words - Merriam-Webster",
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/thesaurus/managing",
-          "kind": "page"
-        },
-        {
-          "title": "MANAGE Definition & Meaning - Merriam-Webster",
-          "company": "via merriam-webster.com",
-          "location": "UAE",
-          "url": "https://www.merriam-webster.com/dictionary/manage",
           "kind": "page"
         },
         {
@@ -1734,6 +1727,13 @@
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
           "url": "https://dictionary.cambridge.org/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGE Definition & Meaning - Merriam-Webster",
+          "company": "via merriam-webster.com",
+          "location": "UAE",
+          "url": "https://www.merriam-webster.com/dictionary/manage",
           "kind": "page"
         },
         {
@@ -1751,10 +1751,31 @@
           "kind": "page"
         },
         {
-          "title": "MANAGE | English meaning - Cambridge Dictionary",
+          "title": "MANAGING | definition in the Cambridge English Dictionary",
           "company": "via dictionary.cambridge.org",
           "location": "UAE",
-          "url": "https://dictionary.cambridge.org/dictionary/english/manage",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING Synonyms & Antonyms - 24 words | Thesaurus.com",
+          "company": "via thesaurus.com",
+          "location": "UAE",
+          "url": "https://www.thesaurus.com/browse/managing",
+          "kind": "page"
+        },
+        {
+          "title": "MANAGING definition and meaning | Collins English Dictionary",
+          "company": "via collinsdictionary.com",
+          "location": "UAE",
+          "url": "https://www.collinsdictionary.com/dictionary/english/managing",
+          "kind": "page"
+        },
+        {
+          "title": "What Is Management? Meaning, Benefits & Best Practices",
+          "company": "via managementlegend.com",
+          "location": "UAE",
+          "url": "https://www.managementlegend.com/what-is-management",
           "kind": "page"
         },
         {
@@ -1762,6 +1783,13 @@
           "company": "via merriam-webster.com",
           "location": "UAE",
           "url": "https://www.merriam-webster.com/dictionary/general",
+          "kind": "page"
+        },
+        {
+          "title": "Personas - Banco General Panamá",
+          "company": "via bgeneral.com",
+          "location": "UAE",
+          "url": "https://www.bgeneral.com/",
           "kind": "page"
         },
         {
@@ -1779,10 +1807,10 @@
           "kind": "page"
         },
         {
-          "title": "General - definition of general by The Free Dictionary",
-          "company": "via thefreedictionary.com",
+          "title": "General - Definition, Meaning & Synonyms | Vocabulary.com",
+          "company": "via vocabulary.com",
           "location": "UAE",
-          "url": "https://www.thefreedictionary.com/General",
+          "url": "https://www.vocabulary.com/dictionary/general",
           "kind": "page"
         },
         {
@@ -1793,24 +1821,87 @@
           "kind": "page"
         },
         {
-          "title": "GENERAL Definition & Meaning | Dictionary.com",
-          "company": "via dictionary.com",
+          "title": "General - definition of general by The Free Dictionary",
+          "company": "via thefreedictionary.com",
           "location": "UAE",
-          "url": "https://www.dictionary.com/browse/general",
+          "url": "https://www.thefreedictionary.com/General",
           "kind": "page"
         },
         {
-          "title": "GENERAL Synonyms: 208 Similar and Opposite Words | Merriam ...",
-          "company": "via merriam-webster.com",
+          "title": "Dollar General",
+          "company": "via dollargeneral.com",
           "location": "UAE",
-          "url": "https://www.merriam-webster.com/thesaurus/general",
+          "url": "https://www.dollargeneral.com/",
           "kind": "page"
         },
         {
-          "title": "GENERAL | GENERAL Inc. - Creating a Life Conditioner",
-          "company": "via generalww.com",
+          "title": "Ollie: Fresh & Healthy, Human-Grade Dog Food Delivery",
+          "company": "via ollie.com",
           "location": "UAE",
-          "url": "https://www.generalww.com/",
+          "url": "https://www.ollie.com/",
+          "kind": "page"
+        },
+        {
+          "title": "Fresh Dog Food - Human-Grade Food For Dogs | Ollie",
+          "company": "via ollie.com",
+          "location": "UAE",
+          "url": "https://www.ollie.com/fresh-dog-food/",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Dog Food Official Website",
+          "company": "via ollie-dog-food.com",
+          "location": "UAE",
+          "url": "https://ollie-dog-food.com/",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Dog Food - Petco",
+          "company": "via petco.com",
+          "location": "UAE",
+          "url": "https://www.petco.com/brand/ollie/dog/dog-food",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Fresh Dog Food & Treats | Petco",
+          "company": "via petco.com",
+          "location": "UAE",
+          "url": "https://www.petco.com/brand/ollie",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Fresh Dog Food Review 2026: Pros, Cons & Final Verdict",
+          "company": "via dogster.com",
+          "location": "UAE",
+          "url": "https://www.dogster.com/dog-nutrition/ollie-fresh-dog-food-review/",
+          "kind": "page"
+        },
+        {
+          "title": "Amazon.com: Ollie Dog Food",
+          "company": "via amazon.com",
+          "location": "UAE",
+          "url": "https://www.amazon.com/ollie-dog-food/s?k=ollie+dog+food",
+          "kind": "page"
+        },
+        {
+          "title": "What Ingredients Are In Fresh Dog Food? - Ollie Blog",
+          "company": "via blog.ollie.com",
+          "location": "UAE",
+          "url": "https://blog.ollie.com/what-ingredients-are-in-fresh-dog-food/",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Baked Turkey & Butternut Squash Dry Dog Food, Human ... - Amazon",
+          "company": "via amazon.com",
+          "location": "UAE",
+          "url": "https://www.amazon.com/Ollie-Baked-Turkey-Butternut-Squash/dp/B0GMTKZWY1",
+          "kind": "page"
+        },
+        {
+          "title": "Ollie Dog Food Review - Must Read This Before Buying",
+          "company": "via honestbrandreviews.com",
+          "location": "UAE",
+          "url": "https://www.honestbrandreviews.com/reviews/ollie-dog-food-review/",
           "kind": "page"
         }
       ]
