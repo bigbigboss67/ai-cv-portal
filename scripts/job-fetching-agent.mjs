@@ -14,7 +14,7 @@
  *   node scripts/job-fetching-agent.mjs
  */
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
@@ -658,6 +658,41 @@ async function runAgent() {
     }
   });
 
+  /* Carry-forward guard. A source that comes back empty (network blip, site down,
+     rate limit) keeps its last good listings, flagged stale with the date they are
+     from, for up to CARRY_MAX_DAYS, instead of the portal showing "0 jobs". Skipped
+     sources (no key) are never carried. If nothing at all was fetched, the previous
+     file is left untouched and the run fails, so a dead agent shows as a red run. */
+  const CARRY_MAX_DAYS = 7;
+  let prev = { at: null, byId: new Map() };
+  try {
+    const old = JSON.parse(await readFile(OUT_FILE, "utf8"));
+    prev = { at: old.generatedAt || null, byId: new Map((old.sources || []).map((s) => [s.id, s])) };
+  } catch {}
+  const freshTotal = totalJobs;
+  let carriedSources = 0;
+  for (const s of sources) {
+    if (s.count > 0 || s.strategy === "skipped") continue;
+    const before = prev.byId.get(s.id);
+    if (!before || !Array.isArray(before.jobs) || !before.jobs.length) continue;
+    const since = before.staleSince || prev.at;
+    const ageDays = since ? (Date.now() - Date.parse(since)) / 86400000 : Infinity;
+    if (!(ageDays <= CARRY_MAX_DAYS)) continue;
+    s.jobs = before.jobs;
+    s.count = before.jobs.length;
+    s.ok = true;
+    s.stale = true;
+    s.staleSince = since;
+    s.note = `fetch returned nothing today (${s.error || "no listings"}); these ${s.count} listings are carried over from ${since}, not a fresh read`;
+    totalJobs += s.count;
+    carriedSources++;
+    console.log(`  [OLD] ${s.id.padEnd(14)} -> kept ${s.count} listings from ${since}`);
+  }
+  if (freshTotal === 0 && carriedSources === 0) {
+    console.error("\n❌ Every source returned nothing and there was no recent data to keep. Leaving data/listings.json unchanged.");
+    process.exit(1);
+  }
+
   const now = new Date().toISOString();
   const payload = {
     generatedAt: now,
@@ -665,6 +700,8 @@ async function runAgent() {
     agent: "multi-source-fetching-agent-v2",
     total: totalJobs,
     totalJobs,
+    // How much of `total` is carried over from an earlier run (0 = all fresh).
+    staleSources: carriedSources,
     sources,
   };
 
