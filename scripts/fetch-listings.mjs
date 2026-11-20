@@ -1,8 +1,18 @@
 /**
- * Fetch AHK and Departer vacancies and write data/listings.json.
+ * Listings fetch agent: collect vacancies from every source that can be read
+ * without a paid key, and write data/listings.json for the portal.
  *
- * Runs in GitHub Actions, not in the browser: both sites block cross-origin
- * requests, and a static site has nowhere to run a scheduled job.
+ * Sources: LinkedIn public job search, AHK UAE, Departer, Charterhouse, Michael
+ * Page, Page Executive, Jobs.ch, the board searches (Indeed, Bayt, GulfTalent,
+ * Naukrigulf, Dubizzle, Jobs.ae, Laimoon, Foundit, StepStone) and the free public
+ * feeds Arbeitnow and Remotive. AIsa web search runs only if AISA_API_KEY is set.
+ *
+ * It does not get around blocks: a board that refuses automated access, or a feed
+ * that needs registration, is recorded with status "blocked" / "needs-registration"
+ * and a reason, so the gap is visible instead of silently empty.
+ *
+ * Runs in GitHub Actions (daily, plus "Run workflow"), not in the browser: the
+ * boards block cross-origin requests, and a static site has nowhere to run a job.
  *
  *   node scripts/fetch-listings.mjs
  *
@@ -216,32 +226,37 @@ const AISA_PLACE =
 
 async function collectWebSearch() {
   const key = process.env.AISA_API_KEY;
+  // No key, no web search: the keyless fallback returned dictionary pages and shops,
+  // not vacancies. The source is reported as "skipped" instead of filled with junk.
+  if (!key) {
+    const e = new Error("skipped: AISA_API_KEY is not set (optional; every other source runs without a key)");
+    e.code = "SKIPPED";
+    throw e;
+  }
   const seen = new Set();
   const jobs = [];
+  let lastHttp = 0;
+  let answered = 0;
 
   for (const query of AISA_QUERIES) {
     let results = [];
-    if (key) {
-      try {
-        const res = await fetch(AISA_SEARCH, {
-          method: "POST",
-          headers: {
-            authorization: `Bearer ${key}`,
-            "content-type": "application/json",
-            accept: "application/json",
-          },
-          body: JSON.stringify({ query, max_results: 8, topic: "general" }),
-        });
-        if (res.ok) {
-          const data = await res.json();
-          results = data.results || [];
-        }
-      } catch {}
-    }
-    if (!results.length) {
-      results = await boards.fetchDuckDuckGoJobs(query, 10000);
-    }
-
+    try {
+      const res = await fetch(AISA_SEARCH, {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${key}`,
+          "content-type": "application/json",
+          accept: "application/json",
+        },
+        body: JSON.stringify({ query, max_results: 8, topic: "general" }),
+      });
+      lastHttp = res.status;
+      if (res.ok) {
+        answered++;
+        const data = await res.json();
+        results = data.results || [];
+      }
+    } catch {}
     for (const r of results || []) {
       const url = String(r.url || "");
       if (!/^https?:\/\//i.test(url) || seen.has(url)) continue;
@@ -253,11 +268,21 @@ async function collectWebSearch() {
       jobs.push({
         title: r.title || url,
         company: host ? `via ${host}` : "via open web search",
-        location: place ? place[1] : "UAE",
+        location: place ? place[1] : "",
         url,
         kind: "page",
       });
     }
+  }
+  // Say what AIsa answered rather than letting the source look like an empty board.
+  if (!answered) {
+    throw new Error(
+      lastHttp === 402
+        ? "AIsa requires payment (HTTP 402): the key has no credit left. This source is optional; the others need no key"
+        : lastHttp === 401 || lastHttp === 403
+          ? `AIsa rejected the API key (HTTP ${lastHttp}); check the AISA_API_KEY secret`
+          : `AIsa did not answer${lastHttp ? ` (HTTP ${lastHttp})` : ""}`
+    );
   }
   return jobs;
 }
@@ -274,21 +299,66 @@ const BOARD_ROLES = [
 ];
 const pause = (ms) => new Promise((r) => setTimeout(r, ms));
 
+/* One role search after another, politely. A rate-limit answer (HTTP 429) gets one
+   slower retry; if the board still says no, the roles already read are kept and the
+   rest are skipped, instead of losing the whole source to one refusal. */
 async function collectBoard(url, parse) {
   const seen = new Set();
   const jobs = [];
+  let lastErr = null;
+  let waitMs = 2000;
   for (const role of BOARD_ROLES) {
-    for (const j of parse(await boards.fetchText(url(role), 20000))) {
+    let html = null;
+    for (let attempt = 0; attempt < 2 && html === null; attempt++) {
+      try {
+        html = await boards.fetchText(url(role), 20000);
+      } catch (err) {
+        lastErr = err;
+        if (!/HTTP 429/.test(String(err.message))) break;
+        waitMs = Math.min(waitMs * 3, 20000);
+        await pause(waitMs);
+      }
+    }
+    if (html === null) {
+      if (/HTTP 429/.test(String(lastErr && lastErr.message))) break; // still rate-limited: stop asking
+      continue;
+    }
+    for (const j of parse(html)) {
       if (seen.has(j.ref)) continue;
       seen.add(j.ref);
       jobs.push(j);
     }
-    await pause(1200);
+    await pause(waitMs);
   }
+  if (!jobs.length && lastErr) throw lastErr;
   return jobs;
 }
 const collectLinkedIn = () => collectBoard((r) => boards.linkedInUrl(r, "United Arab Emirates"), boards.parseLinkedIn);
-const collectRoleBoard = (boardId) => () => boards.fetchBoardByRoleSearch(boardId, BOARD_ROLES.slice(0, 4), "Dubai UAE", 11000);
+const collectRoleBoard = (boardId, where = "Dubai UAE") => () => boards.fetchBoardByRoleSearch(boardId, BOARD_ROLES.slice(0, 4), where, 11000);
+
+/* ── Free public job feeds (JSON, no API key) ─────────────────────────────
+   These publish everything; only senior roles are kept, so the file stays about
+   the portal's audience. The same role words in English and German. */
+const SENIOR_ROLE =
+  /\b(managing director|general manager|director|head of|chief|ceo|coo|cfo|cto|cmo|vp|vice president|country manager|regional manager|operations manager|business unit|geschäftsführ\w*|geschaeftsfuehr\w*|leiter\w*|leitung|bereichsleit\w*|niederlassungsleit\w*|prokurist\w*|directeur|directrice)\b/i;
+const seniorOnly = (jobs) => jobs.filter((j) => SENIOR_ROLE.test(j.title || ""));
+const collectArbeitnow = async () => seniorOnly(await boards.fetchArbeitnow(15000, 5));
+const collectRemotive = async () => seniorOnly(await boards.fetchRemotive(15000, 300));
+
+/* When a board returns nothing, look at its front door once to tell "blocked" from
+   "genuinely empty", so the file never presents a refusal as "no jobs today". */
+async function probe(url) {
+  try {
+    const res = await fetch(url, { headers: { "user-agent": UA, accept: "text/html" }, redirect: "follow", signal: AbortSignal.timeout(12000) });
+    const body = (await res.text()).slice(0, 60000);
+    if (res.status === 401 || res.status === 403 || res.status === 429 || res.status === 503) return { status: "blocked", reason: `site refused automated access (HTTP ${res.status})` };
+    if (/captcha|cf-chl|just a moment|access denied|are you a robot|verify you are human/i.test(body)) return { status: "blocked", reason: "site shows a bot check to automated requests" };
+    if (!res.ok) return { status: "unreachable", reason: `HTTP ${res.status}` };
+    return { status: "empty", reason: "page loaded but no listings matched the readers" };
+  } catch (err) {
+    return { status: "unreachable", reason: String((err && err.cause && err.cause.code) || (err && err.message) || err) };
+  }
+}
 
 /* `audience` says who a source is for: the market it covers, and the language a
    candidate needs before its listings are worth showing them. Two of these are
@@ -307,7 +377,20 @@ const SOURCES = [
   { id: "michaelpage", name: "Michael Page — Middle East", url: MPAGE_URL, parse: parseMichaelPage, audience: { market: "gulf" } },
   { id: "pageexecutive", name: "Page Executive — director level and above", url: PEXEC_URL, parse: parsePageExecutive, audience: { market: "gulf" } },
   { id: "linkedin", name: "LinkedIn — public job search, senior UAE roles", url: "https://www.linkedin.com/jobs/search?location=United%20Arab%20Emirates", collect: collectLinkedIn, audience: { market: "gulf" } },
-  { id: "websearch", name: "Open web search (AIsa)", url: AISA_SEARCH, collect: collectWebSearch, audience: { market: "gulf" } },
+  { id: "jobsae", name: "Jobs.ae — UAE", url: "https://www.jobs.ae", collect: collectRoleBoard("jobsae"), audience: { market: "gulf" } },
+  { id: "laimoon", name: "Laimoon — UAE / GCC", url: "https://jobs.laimoon.com", collect: collectRoleBoard("laimoon"), audience: { market: "gulf" } },
+  { id: "founditgulf", name: "Foundit Gulf — UAE / GCC", url: "https://www.founditgulf.com", collect: collectRoleBoard("founditgulf"), audience: { market: "gulf" } },
+  { id: "jobsch", name: "Jobs.ch — Switzerland (DACH)", url: "https://www.jobs.ch/en/vacancies/", collect: collectRoleBoard("jobsch", "Switzerland"), audience: { market: "dach" } },
+  { id: "stepstone", name: "StepStone — Germany (DACH)", url: "https://www.stepstone.de", collect: collectRoleBoard("stepstone", "Deutschland"), audience: { market: "dach", lang: "de" } },
+  { id: "arbeitnow", name: "Arbeitnow — public feed, Germany / Europe (senior roles)", url: "https://www.arbeitnow.com/api/job-board-api", collect: collectArbeitnow, audience: { market: "dach", lang: "de" } },
+  { id: "remotive", name: "Remotive — public feed, remote (senior roles)", url: "https://remotive.com/api/remote-jobs", collect: collectRemotive, audience: { market: "remote" } },
+  { id: "websearch", name: "Open web search (AIsa, optional key)", url: AISA_SEARCH, collect: collectWebSearch, audience: { market: "gulf" } },
+];
+
+/* Free sources that need a (free) registration before they answer. Listed in the
+   file so the gap is visible, never called without credentials. */
+const NEEDS_REGISTRATION = [
+  { id: "arbeitsagentur", name: "Bundesagentur für Arbeit — Jobsuche API", url: "https://rest.arbeitsagentur.de/jobboerse/jobsuche-service/", reason: "refuses the old public client key (HTTP 403); needs registered credentials" },
 ];
 
 /**
@@ -343,20 +426,27 @@ async function main() {
       const html = s.collect ? null : await get(s.url);
       const jobs = s.collect ? await s.collect() : s.parse(html);
       total += jobs.length;
+      // Zero listings is ambiguous (blocked? empty? reader broken?): probe once to say which.
+      const why = jobs.length ? { status: "ok", reason: null } : await probe(s.url);
       sources.push({
         id: s.id, name: s.name, url: s.url,
         audience: s.audience,
         ok: true,
+        status: why.status,
+        reason: why.reason || undefined,
         count: jobs.length,
         ms: Date.now() - t0,
         bytes: html ? html.length : undefined,
-        // Zero listings from a page that loaded is ambiguous: either the board is
-        // empty or the parser missed. Say which is unknown rather than implying calm.
-        note: jobs.length ? null : "page loaded but no listings matched — verify the parser against the live markup before trusting this as 'nothing open'",
+        note: jobs.length ? null : `0 listings: ${why.reason}`,
         jobs,
       });
-      console.log(`  ${s.id.padEnd(14)} ${String(jobs.length).padStart(3)} listings  (${html ? html.length + " bytes, " : ""}${Date.now() - t0}ms)`);
+      console.log(`  ${s.id.padEnd(14)} ${String(jobs.length).padStart(3)} listings  ${why.status === "ok" ? "" : "[" + why.status + ": " + why.reason + "] "}(${html ? html.length + " bytes, " : ""}${Date.now() - t0}ms)`);
     } catch (err) {
+      if (err && err.code === "SKIPPED") {
+        sources.push({ id: s.id, name: s.name, url: s.url, ok: false, status: "skipped", reason: err.message, count: 0, ms: Date.now() - t0, jobs: [] });
+        console.log(`  ${s.id.padEnd(14)}   - ${err.message}`);
+        continue;
+      }
       // Carry the last good read forward rather than publishing a zero. Only a
       // hard failure qualifies: a page that loaded and genuinely returned no
       // listings is still recorded as zero above, because a board going empty
@@ -366,12 +456,15 @@ async function main() {
       const since = carried ? (carried.staleSince || prev.at) : null;
       if (carried) { total += carried.count; stale++; }
 
+      const msg = String(err.message || err);
       sources.push({
         id: s.id, name: s.name, url: s.url,
         ok: false,
+        status: /HTTP 402/.test(msg) ? "needs-payment" : /HTTP 429/.test(msg) ? "rate-limited" : /HTTP (401|403|503)|rejected the API key/.test(msg) ? "blocked" : "unreachable",
+        reason: msg,
         count: carried ? carried.count : 0,
         ms: Date.now() - t0,
-        error: String(err.message || err),
+        error: msg,
         stale: carried ? true : undefined,
         staleSince: since || undefined,
         note: carried
@@ -384,6 +477,11 @@ async function main() {
         (carried ? `  (kept ${carried.count} from ${since})` : "  (no previous data to keep)")
       );
     }
+  }
+
+  for (const r of NEEDS_REGISTRATION) {
+    sources.push({ id: r.id, name: r.name, url: r.url, ok: false, status: "needs-registration", reason: r.reason, count: 0, jobs: [] });
+    console.log(`  ${r.id.padEnd(14)}   - not called: ${r.reason}`);
   }
 
   // Ensure every single job listing in every source has an automatically resolved `to` email address

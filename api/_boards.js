@@ -459,14 +459,23 @@ function parseAhk(html) {
 
 /* ---------------------------------------------------------------- 4. Public JSON Job Board APIs (Arbeitnow & Remotive) */
 
-async function fetchArbeitnow(timeoutMs = 9000) {
-  const res = await fetch("https://www.arbeitnow.com/api/job-board-api", {
-    headers: { "user-agent": UA, accept: "application/json" },
-    signal: AbortSignal.timeout(timeoutMs),
-  });
-  if (!res.ok) throw new Error(`Arbeitnow HTTP ${res.status}`);
-  const data = await res.json();
-  return (data.data || []).map((j) => ({
+async function fetchArbeitnow(timeoutMs = 9000, pages = 1) {
+  // Public JSON feed, no key. `pages` > 1 is for the scheduled agent; live search reads one.
+  const all = [];
+  for (let p = 1; p <= pages; p++) {
+    const res = await fetch(`https://www.arbeitnow.com/api/job-board-api${p > 1 ? `?page=${p}` : ""}`, {
+      headers: { "user-agent": UA, accept: "application/json" },
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!res.ok) {
+      if (p === 1) throw new Error(`Arbeitnow HTTP ${res.status}`);
+      break;
+    }
+    const data = await res.json();
+    all.push(...(data.data || []));
+    if (!data.links || !data.links.next) break;
+  }
+  return all.map((j) => ({
     title: String(j.title || "").trim(),
     company: String(j.company_name || "").trim(),
     location: String(j.location || (j.remote ? "Remote / Europe" : "Germany")).trim(),
@@ -479,8 +488,8 @@ async function fetchArbeitnow(timeoutMs = 9000) {
   }));
 }
 
-async function fetchRemotive(timeoutMs = 9000) {
-  const res = await fetch("https://remotive.com/api/remote-jobs?limit=35", {
+async function fetchRemotive(timeoutMs = 9000, limit = 35) {
+  const res = await fetch(`https://remotive.com/api/remote-jobs?limit=${Math.max(1, Math.min(500, limit))}`, {
     headers: { "user-agent": UA, accept: "application/json" },
     signal: AbortSignal.timeout(timeoutMs),
   });
