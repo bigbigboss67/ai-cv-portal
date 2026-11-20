@@ -488,6 +488,82 @@ async function fetchArbeitnow(timeoutMs = 9000, pages = 1) {
   }));
 }
 
+/* ---------------------------------------------------------------- 4b. Free-key job APIs (Adzuna, Jooble)
+   Both need a free key and are only called when one is configured.
+
+   Adzuna (developer.adzuna.com): GET /v1/api/jobs/{country}/search/{page}. Countries:
+   gb us at au be br ca ch de es fr in it mx nl nz pl sg za (no UAE / GCC). Free key:
+   25 calls/min, 250/day. Its terms limit commercial use to a 14-day trial and require
+   an "Adzuna" attribution label; the portal shows "Jobs by Adzuna" on those listings.
+
+   Jooble (help.jooble.org REST API): POST {cc.}jooble.org/api/{key} with a JSON body
+   {keywords, location, page}. One key per country domain (jooble.org = US,
+   ae.jooble.org, de.jooble.org, ...). Free plan: 100 requests/day per key. */
+const ADZUNA_COUNTRIES = new Set(["gb", "us", "at", "au", "be", "br", "ca", "ch", "de", "es", "fr", "in", "it", "mx", "nl", "nz", "pl", "sg", "za"]);
+
+async function fetchAdzuna({ appId, appKey, country, what, where = "", page = 1, resultsPerPage = 50, maxDaysOld = 30, timeoutMs = 12000 }) {
+  const cc = String(country || "").toLowerCase();
+  if (!ADZUNA_COUNTRIES.has(cc)) throw new Error(`Adzuna does not cover country "${cc}"`);
+  const qs = new URLSearchParams({
+    app_id: appId,
+    app_key: appKey,
+    results_per_page: String(resultsPerPage),
+    what: String(what || ""),
+    max_days_old: String(maxDaysOld),
+    "content-type": "application/json",
+  });
+  if (where) qs.set("where", where);
+  const res = await fetch(`https://api.adzuna.com/v1/api/jobs/${cc}/search/${page}?${qs}`, {
+    headers: { accept: "application/json" },
+    signal: AbortSignal.timeout(timeoutMs),
+  });
+  if (!res.ok) throw new Error(`Adzuna HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.results || []).map((j) => {
+    const min = Number(j.salary_min), max = Number(j.salary_max);
+    // Adzuna estimates many salaries; show a salary only when the ad states it.
+    const stated = j.salary_is_predicted === 0 || j.salary_is_predicted === "0";
+    const salary = stated && (min || max) ? [min, max].filter(Boolean).map((n) => Math.round(n).toLocaleString("en-GB")).join(" – ") + " / year" : "";
+    return {
+      title: String(j.title || "").trim(),
+      company: String((j.company && j.company.display_name) || "").trim(),
+      location: String((j.location && j.location.display_name) || "").trim(),
+      url: String(j.redirect_url || ""),
+      ref: "ADZ-" + String(j.id || ""),
+      posted: String(j.created || "").slice(0, 10),
+      salary,
+      text: String(j.description || "").trim(),
+      kind: "page",
+      src: "adzuna",
+    };
+  });
+}
+
+async function fetchJooble({ key, domain = "us", keywords, location, page = 1, timeoutMs = 12000 }) {
+  const cc = String(domain || "us").toLowerCase();
+  const host = cc === "us" ? "jooble.org" : `${cc}.jooble.org`;
+  const res = await fetch(`https://${host}/api/${encodeURIComponent(key)}`, {
+    method: "POST",
+    headers: { "content-type": "application/json", accept: "application/json" },
+    body: JSON.stringify({ keywords: String(keywords || ""), location: String(location || ""), page: String(page) }),
+    signal: AbortSignal.timeout(timeoutMs),
+  });
+  if (!res.ok) throw new Error(`Jooble (${host}) HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.jobs || []).map((j) => ({
+    title: String(j.title || "").trim(),
+    company: String(j.company || "").trim(),
+    location: String(j.location || "").trim(),
+    url: /^https?:\/\//i.test(String(j.link || "")) ? String(j.link) : j.link ? `https://${String(j.link).replace(/^\/+/, "")}` : "",
+    ref: "JOOBLE-" + String(j.id || ""),
+    posted: String(j.updated || "").slice(0, 10),
+    salary: String(j.salary || "").trim(),
+    text: htmlToLines(String(j.snippet || "")).slice(0, 1500),
+    kind: "page",
+    src: "jooble",
+  }));
+}
+
 async function fetchRemotive(timeoutMs = 9000, limit = 35) {
   const res = await fetch(`https://remotive.com/api/remote-jobs?limit=${Math.max(1, Math.min(500, limit))}`, {
     headers: { "user-agent": UA, accept: "application/json" },
@@ -1009,6 +1085,9 @@ module.exports = {
   parseJobsChCard,
   fetchArbeitnow,
   fetchRemotive,
+  fetchAdzuna,
+  fetchJooble,
+  ADZUNA_COUNTRIES,
   fetchDuckDuckGoJobs,
   fetchBoardByRoleSearch,
   harvestAndRankEmails,

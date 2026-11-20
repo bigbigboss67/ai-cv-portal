@@ -24,8 +24,13 @@ jobs:
         # Repository secrets are not ambient environment variables — a step
         # only sees what it is handed. Without this mapping the websearch
         # source throws "AISA_API_KEY not set" even though the secret exists.
+        # All optional: a source whose secret is missing is recorded as "skipped".
         env:
           AISA_API_KEY: ${{ secrets.AISA_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          ADZUNA_COUNTRIES: ${{ vars.ADZUNA_COUNTRIES }}
+          JOOBLE_KEYS: ${{ secrets.JOOBLE_KEYS }}
         run: node scripts/fetch-listings.mjs
 
       - name: Show what changed

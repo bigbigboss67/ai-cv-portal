@@ -4940,8 +4940,17 @@
       { id: "founditgulf", label: "Foundit Gulf" },
       { id: "stepstone", label: "StepStone DE" },
       { id: "arbeitnow", label: "Arbeitnow (DE)" },
-      { id: "remotive", label: "Remotive (Remote)" }
+      { id: "remotive", label: "Remotive (Remote)" },
+      { id: "adzuna", label: "Adzuna" },
+      { id: "jooble", label: "Jooble" }
     ];
+
+    /* Adzuna's API terms require an "Adzuna" label (at least 116x23 px) linking to
+       adzuna.co.uk on every listing it supplies. */
+    const ADZUNA_ATTRIBUTION =
+      `<a href="https://www.adzuna.co.uk" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" ` +
+      `style="display:inline-flex;align-items:center;justify-content:center;min-width:116px;min-height:23px;padding:2px 8px;border-radius:4px;` +
+      `background:#fff;border:1px solid #CBD5E1;color:#0F172A;font-size:11px;font-weight:700;text-decoration:none;">Jobs by Adzuna</a>`;
 
     const LANGUAGE_FILTER_OPTIONS = [
       { id: "all", label: "All Languages", icon: "🌐" },
@@ -9228,6 +9237,7 @@
                     <div>
                       <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:6px;">
                         <span class="source-tag">${escapeHtml((j.source || "LIVE").toUpperCase())}</span>
+                        ${j.source === "adzuna" ? ADZUNA_ATTRIBUTION : ""}
                         <span class="lang-req-badge" style="background:${langInfo.badgeColor};color:${langInfo.badgeText};border:1px solid ${langInfo.badgeBorder};" title="Language requirement for this mandate">
                           ${escapeHtml(langInfo.label)}
                         </span>
@@ -9379,6 +9389,7 @@
               <div>
                 <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px;">
                   <span class="source-tag">${escapeHtml((job.source || "LIVE").toUpperCase())}</span>
+                  ${job.source === "adzuna" ? ADZUNA_ATTRIBUTION : ""}
                   <span class="lang-req-badge" style="background:${langInfo.badgeColor};color:${langInfo.badgeText};border:1px solid ${langInfo.badgeBorder};">${escapeHtml(langInfo.label)}</span>
                   ${job.ref ? `<span style="font-family:var(--font-mono);font-size:11px;color:var(--text-muted);">Ref: ${escapeHtml(job.ref)}</span>` : ""}
                 </div>
@@ -9521,6 +9532,7 @@
             url: row.url || "#",
             ref: row.ref || "",
             posted: row.posted || "",
+            salary: row.salary || "", // only when the source states one
             foundAt,
             score: 0,
             to: row.to || "",
