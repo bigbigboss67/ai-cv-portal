@@ -82,6 +82,26 @@ function isSearchOrCategoryUrl(u) {
   }
 }
 
+/* r.jina.ai returns either plain Markdown or a JSON envelope
+   {"code":200,"data":{"title":...,"content":...}} depending on the Accept header.
+   Always hand back readable text: "<title>\n\n<content>" with Markdown emphasis removed. */
+function unwrapReaderResponse(body) {
+  const raw = String(body || "");
+  let text = raw;
+  if (/^\s*\{/.test(raw)) {
+    try {
+      const j = JSON.parse(raw);
+      const d = (j && (j.data || j)) || {};
+      const content = d.content || d.text || "";
+      if (content) text = (d.title ? `${d.title}\n\n` : "") + content;
+    } catch {}
+  }
+  return text
+    .replace(/\*\*([^*\n]+)\*\*/g, "$1") // **bold** -> bold
+    .replace(/^[ \t]*\*[ \t]+/gm, "• ") // "* item" -> "• item" (spaces only: keep blank lines)
+    .replace(/\n{3,}/g, "\n\n");
+}
+
 async function resolveAndEnrichEmails({ rawEmails = [], site = "", company = "", title = "", url = "", location = "", source = "", text = "" }) {
   const list = [...new Set((rawEmails || []).filter(Boolean))];
   if (list.length) {
@@ -230,9 +250,11 @@ async function handler(req, res) {
     try {
       html = await boards.fetchText(parsedUrl.href, 9000);
     } catch {
-      // Fallback to r.jina.ai reader
+      // Fallback to r.jina.ai reader. Asked for JSON it answers with an envelope
+      // ({"code":200,"data":{"title","content"}}) which was being shown as the posting
+      // text; unwrap it to the page content (Markdown) and its title.
       via = "r.jina.ai";
-      html = await boards.fetchText("https://r.jina.ai/" + parsedUrl.href, 10000);
+      html = unwrapReaderResponse(await boards.fetchText("https://r.jina.ai/" + parsedUrl.href, 10000));
     }
 
     const ld = via === "direct" ? extractJsonLdJob(html) : null;
@@ -297,4 +319,5 @@ async function handler(req, res) {
 }
 
 module.exports = handler;
+module.exports.unwrapReaderResponse = unwrapReaderResponse;
 

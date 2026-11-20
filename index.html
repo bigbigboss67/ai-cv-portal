@@ -8887,9 +8887,20 @@
     }
 
     function detectJobLanguageRequirement(job) {
-      const combined = `${job.title || ""} ${job.company || ""} ${(job.requirements || []).join(" ")} ${job.text || ""} ${job.ref || ""}`.toLowerCase();
+      const combined = `${job.title || ""} ${(job.requirements || []).join(" ")} ${job.text || ""}`.toLowerCase();
+      /* A language counts only when the posting asks for it ("fluent German",
+         "Arabic speaker", "Deutschkenntnisse"), or for German, when the ad itself is
+         written in German. Place names, company names (AHK, Departer) and a site's
+         language menu ("العربية") no longer label a job. */
+      const asksFor = (langs) =>
+        new RegExp(
+          `\\b(?:${langs})\\b[^.\\n]{0,40}\\b(?:speaking|speaker|fluent|fluency|language|languages|skills?|proficien\\w*|native|written|spoken|required|essential|mandatory|must|preferred|bilingual)\\b` +
+            `|\\b(?:fluent|fluency|native|bilingual|proficien\\w*|speak\\w*|business-level|business level)\\b[^.\\n]{0,40}\\b(?:${langs})\\b`,
+          "i"
+        ).test(combined);
+      const writtenInGerman = /\((?:m|w|d)\s*\/\s*(?:m|w|d)\s*\/\s*(?:m|w|d)\)|\b(?:geschäftsführer\w*|wir suchen|ihre aufgaben|ihr profil|wir bieten|stellenangebot)\b/i.test(combined);
 
-      if (/\b(german|deutsch|deutschsprachig|geschäftsführer|departer|ahk|dach|rwth|munich|frankfurt|berlin|stuttgart|germany|austria|switzerland|swiss)\b/i.test(combined)) {
+      if (asksFor("german|deutsch") || /\b(?:deutschsprachig\w*|deutschkenntnisse|sprachkenntnisse deutsch)\b/i.test(combined) || writtenInGerman) {
         return {
           lang: "german",
           label: "🇩🇪 German-Speaking Mandate",
@@ -8899,7 +8910,7 @@
           badgeText: "#f59e0b"
         };
       }
-      if (/\b(french|français|francophone|directeur général|alstom|totalenergies|l'oréal|french speaking|bilingual french|france|paris)\b/i.test(combined)) {
+      if (asksFor("french|français") || /\b(?:francophone|directeur général|directrice générale)\b/i.test(combined)) {
         return {
           lang: "french",
           label: "🇫🇷 French-Speaking Mandate",
@@ -8909,7 +8920,7 @@
           badgeText: "#60a5fa"
         };
       }
-      if (/\b(arabic|العربية|عربي|bilingual arabic|arabic speaking|arabic-speaking|emirati national|gcc national|uae national)\b/i.test(combined)) {
+      if (asksFor("arabic") || /arabic[- ]speak\w*|(?:اللغة العربية|إجادة العربية|يجيد العربية)/i.test(combined)) {
         return {
           lang: "arabic",
           label: "🇦🇪 Arabic / Bilingual Dedicated",
@@ -8919,7 +8930,7 @@
           badgeText: "#34d399"
         };
       }
-      if (/\b(spanish|español|italian|italiano|mandarin|chinese)\b/i.test(combined)) {
+      if (asksFor("spanish|español|italian|italiano|mandarin|chinese")) {
         return {
           lang: "other",
           label: "🌐 Multilingual Mandate",
@@ -9352,7 +9363,18 @@
       const date = jobDateLine(job);
       const langInfo = job.langInfo || detectJobLanguageRequirement(job);
       const salary = estimateCompRange(job);
-      const textLines = String(job.text || "")
+      // A reader's JSON envelope ({"code":200,"data":{"content":...}}) is unwrapped
+      // to its content, and Markdown emphasis is removed, so the panel shows prose.
+      let postingText = String(job.text || "");
+      if (/^\s*\{\s*"code"\s*:/.test(postingText)) {
+        try {
+          const env = JSON.parse(postingText);
+          const d = (env && env.data) || {};
+          postingText = (d.title ? d.title + "\n\n" : "") + (d.content || d.description || "");
+        } catch {}
+      }
+      postingText = postingText.replace(/\*\*([^*\n]+)\*\*/g, "$1").replace(/^[ \t]*\*[ \t]+/gm, "• ");
+      const textLines = postingText
         .split(/\r?\n+/)
         .map((l) => l.trim())
         .filter((l) => l && !PAGE_CHROME.test(l));
