@@ -837,6 +837,7 @@ async function fetchBoardByRoleSearch(boardId, roles = [], location = "Dubai UAE
     }
   };
   if (cfg && jobs.length < 4) {
+    const expectedRoot = cfg.host.split("/")[0].replace(/^www\./i, "").toLowerCase();
     for (const r of activeRoles.slice(0, 2)) {
       try {
         const q = `site:${cfg.host} "${r}" ${loc}`;

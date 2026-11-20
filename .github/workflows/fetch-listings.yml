@@ -31,7 +31,7 @@ jobs:
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           ADZUNA_COUNTRIES: ${{ vars.ADZUNA_COUNTRIES }}
           JOOBLE_KEYS: ${{ secrets.JOOBLE_KEYS }}
-        run: node scripts/fetch-listings.mjs
+        run: node scripts/job-fetching-agent.mjs
 
       - name: Show what changed
         run: |
