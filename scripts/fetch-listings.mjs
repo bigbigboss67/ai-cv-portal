@@ -345,6 +345,78 @@ const seniorOnly = (jobs) => jobs.filter((j) => SENIOR_ROLE.test(j.title || ""))
 const collectArbeitnow = async () => seniorOnly(await boards.fetchArbeitnow(15000, 5));
 const collectRemotive = async () => seniorOnly(await boards.fetchRemotive(15000, 300));
 
+/* ── Free-key APIs: Adzuna and Jooble ──────────────────────────────────────
+   Optional. Each runs only when its free key is in the environment (GitHub
+   secrets); otherwise it is reported as "skipped". Calls per day stay far below the
+   free limits (Adzuna 250/day; Jooble 100/day per key).                    */
+const skipped = (msg) => { const e = new Error(`skipped: ${msg}`); e.code = "SKIPPED"; return e; };
+const QUERIES_EN = ["managing director", "general manager", "operations director", "chief operating officer"];
+const QUERIES_DACH = ["Geschäftsführer", "General Manager", "Managing Director", "Leiter Operations"];
+const PLACE_BY_CC = {
+  ae: "United Arab Emirates", sa: "Saudi Arabia", qa: "Qatar", kw: "Kuwait", bh: "Bahrain", om: "Oman",
+  de: "Deutschland", at: "Österreich", ch: "Schweiz", gb: "United Kingdom", us: "United States",
+};
+const isDach = (cc) => ["de", "at", "ch"].includes(cc);
+
+async function collectAdzuna() {
+  const appId = process.env.ADZUNA_APP_ID, appKey = process.env.ADZUNA_APP_KEY;
+  if (!appId || !appKey) throw skipped("ADZUNA_APP_ID / ADZUNA_APP_KEY not set (free key: developer.adzuna.com)");
+  const countries = String(process.env.ADZUNA_COUNTRIES || "de,at,ch").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+  const unsupported = countries.filter((c) => !boards.ADZUNA_COUNTRIES.has(c));
+  const jobs = [];
+  const seen = new Set();
+  let lastErr = null;
+  for (const cc of countries.filter((c) => boards.ADZUNA_COUNTRIES.has(c))) {
+    for (const what of isDach(cc) ? QUERIES_DACH : QUERIES_EN) {
+      try {
+        for (const j of await boards.fetchAdzuna({ appId, appKey, country: cc, what, resultsPerPage: 50 })) {
+          if (seen.has(j.ref)) continue;
+          seen.add(j.ref);
+          jobs.push(j);
+        }
+      } catch (err) {
+        lastErr = err;
+        if (/HTTP (401|403|429)/.test(String(err.message))) break; // bad key or limit: stop this country
+      }
+      await pause(2600); // stay under 25 calls / minute
+    }
+  }
+  if (unsupported.length) console.log(`    adzuna: not covered by Adzuna, ignored: ${unsupported.join(", ")}`);
+  if (!jobs.length && lastErr) throw lastErr;
+  return seniorOnly(jobs);
+}
+
+async function collectJooble() {
+  // JOOBLE_KEYS = "ae=KEY1,de=KEY2": one free key per Jooble country site.
+  const pairs = String(process.env.JOOBLE_KEYS || "")
+    .split(",")
+    .map((p) => p.split("=").map((s) => s.trim()))
+    .filter(([cc, key]) => cc && key);
+  if (!pairs.length) throw skipped("JOOBLE_KEYS not set (free key per country: e.g. ae.jooble.org/api/about)");
+  const jobs = [];
+  const seen = new Set();
+  let lastErr = null;
+  for (const [ccRaw, key] of pairs) {
+    const cc = ccRaw.toLowerCase();
+    const location = PLACE_BY_CC[cc] || "";
+    for (const keywords of isDach(cc) ? QUERIES_DACH : QUERIES_EN) {
+      try {
+        for (const j of await boards.fetchJooble({ key, domain: cc, keywords, location })) {
+          if (seen.has(j.ref)) continue;
+          seen.add(j.ref);
+          jobs.push(j);
+        }
+      } catch (err) {
+        lastErr = err;
+        if (/HTTP (403|429)/.test(String(err.message))) break; // bad key or daily limit: next country
+      }
+      await pause(1500);
+    }
+  }
+  if (!jobs.length && lastErr) throw lastErr;
+  return seniorOnly(jobs);
+}
+
 /* When a board returns nothing, look at its front door once to tell "blocked" from
    "genuinely empty", so the file never presents a refusal as "no jobs today". */
 async function probe(url) {
@@ -384,6 +456,8 @@ const SOURCES = [
   { id: "stepstone", name: "StepStone — Germany (DACH)", url: "https://www.stepstone.de", collect: collectRoleBoard("stepstone", "Deutschland"), audience: { market: "dach", lang: "de" } },
   { id: "arbeitnow", name: "Arbeitnow — public feed, Germany / Europe (senior roles)", url: "https://www.arbeitnow.com/api/job-board-api", collect: collectArbeitnow, audience: { market: "dach", lang: "de" } },
   { id: "remotive", name: "Remotive — public feed, remote (senior roles)", url: "https://remotive.com/api/remote-jobs", collect: collectRemotive, audience: { market: "remote" } },
+  { id: "adzuna", name: "Adzuna — free key, DACH by default (no UAE coverage)", url: "https://api.adzuna.com/v1/api/jobs", collect: collectAdzuna, audience: { market: "dach" } },
+  { id: "jooble", name: "Jooble — free key per country (e.g. UAE, Germany)", url: "https://jooble.org/api/about", collect: collectJooble, audience: { market: "gulf" } },
   { id: "websearch", name: "Open web search (AIsa, optional key)", url: AISA_SEARCH, collect: collectWebSearch, audience: { market: "gulf" } },
 ];
 
