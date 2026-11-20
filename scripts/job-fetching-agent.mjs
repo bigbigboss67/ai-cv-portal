@@ -173,6 +173,7 @@ function cleanJob(raw, src, defaultCompany, defaultLoc) {
     url: raw.url,
     ref: raw.ref || makeRef(src, raw.url),
     posted: raw.posted || "live",
+    salary: raw.salary || "", // only when the source states one (Adzuna / Jooble)
     text: String(raw.text || title).slice(0, 1200),
     kind: raw.kind || "page",
     source: src,
@@ -245,6 +246,84 @@ async function fetchArbeitnowAgent() {
     if (j) jobs.push(j);
   }
   return { jobs: dedupeJobs(jobs, 35), strategy: "public-json-api" };
+}
+
+/* ---------------------------------------------------------------- Free-key APIs (optional)
+   Adzuna and Jooble run only when their free key is set (GitHub secrets); otherwise
+   the source is reported as "skipped" with where to get the key. Readers live in
+   api/_boards.js. Calls per day stay well under the free limits:
+   Adzuna 25/min and 250/day; Jooble 100/day per country key.
+     ADZUNA_APP_ID, ADZUNA_APP_KEY, ADZUNA_COUNTRIES (default "de,at,ch"; no UAE)
+     JOOBLE_KEYS = "ae=KEY,de=KEY" (one key per Jooble country site)             */
+const FREE_API_SENIOR_RE =
+  /\b(managing director|general manager|director|head of|chief|ceo|coo|cfo|cto|vp|vice president|country manager|regional manager|operations manager|geschäftsführ\w*|geschaeftsfuehr\w*|leiter\w*|leitung|bereichsleit\w*|niederlassungsleit\w*)\b/i;
+const FREE_API_QUERIES = {
+  en: ["managing director", "general manager", "operations director", "chief operating officer"],
+  dach: ["Geschäftsführer", "General Manager", "Managing Director", "Leiter Operations"],
+};
+const FREE_API_PLACE = {
+  ae: "United Arab Emirates", sa: "Saudi Arabia", qa: "Qatar", kw: "Kuwait", bh: "Bahrain", om: "Oman",
+  de: "Deutschland", at: "Österreich", ch: "Schweiz", gb: "United Kingdom", us: "United States",
+};
+const isDachCc = (cc) => ["de", "at", "ch"].includes(cc);
+const pause = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchAdzunaAgent() {
+  const appId = process.env.ADZUNA_APP_ID, appKey = process.env.ADZUNA_APP_KEY;
+  if (!appId || !appKey) {
+    return { jobs: [], strategy: "skipped", error: "skipped: ADZUNA_APP_ID / ADZUNA_APP_KEY not set (free key: developer.adzuna.com)" };
+  }
+  const countries = String(process.env.ADZUNA_COUNTRIES || "de,at,ch").split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+  const jobs = [];
+  const errors = [];
+  for (const cc of countries) {
+    if (!boards.ADZUNA_COUNTRIES.has(cc)) { errors.push(`Adzuna does not cover "${cc}"`); continue; }
+    for (const what of isDachCc(cc) ? FREE_API_QUERIES.dach : FREE_API_QUERIES.en) {
+      try {
+        for (const raw of await boards.fetchAdzuna({ appId, appKey, country: cc, what, resultsPerPage: 50 })) {
+          if (!FREE_API_SENIOR_RE.test(raw.title)) continue;
+          const j = cleanJob(raw, "adzuna", raw.company || "via Adzuna", raw.location || FREE_API_PLACE[cc] || "");
+          if (j) jobs.push(j);
+        }
+      } catch (err) {
+        errors.push(`${cc}: ${err.message}`);
+        if (/HTTP (401|403|429)/.test(String(err.message))) break; // bad key or limit reached: stop this country
+      }
+      await pause(2600); // stay under 25 calls / minute
+    }
+  }
+  const out = dedupeJobs(jobs, 80);
+  return { jobs: out, strategy: "adzuna-api", error: out.length ? undefined : errors[0] };
+}
+
+async function fetchJoobleAgent() {
+  const pairs = String(process.env.JOOBLE_KEYS || "")
+    .split(",")
+    .map((p) => p.split("=").map((s) => s.trim()))
+    .filter(([cc, key]) => cc && key);
+  if (!pairs.length) {
+    return { jobs: [], strategy: "skipped", error: "skipped: JOOBLE_KEYS not set (free key per country, e.g. ae.jooble.org/api/about)" };
+  }
+  const jobs = [];
+  const errors = [];
+  for (const [ccRaw, key] of pairs) {
+    const cc = ccRaw.toLowerCase();
+    for (const keywords of isDachCc(cc) ? FREE_API_QUERIES.dach : FREE_API_QUERIES.en) {
+      try {
+        for (const raw of await boards.fetchJooble({ key, domain: cc, keywords, location: FREE_API_PLACE[cc] || "" })) {
+          if (!FREE_API_SENIOR_RE.test(raw.title)) continue;
+          const j = cleanJob(raw, "jooble", raw.company || "via Jooble", raw.location || FREE_API_PLACE[cc] || "");
+          if (j) jobs.push(j);
+        }
+      } catch (err) {
+        errors.push(`${cc}: ${err.message}`);
+        if (/HTTP (403|429)/.test(String(err.message))) break; // bad key or daily limit: next country
+      }
+      await pause(1500);
+    }
+  }
+  const out = dedupeJobs(jobs, 80);
+  return { jobs: out, strategy: "jooble-api", error: out.length ? undefined : errors[0] };
 }
 
 async function fetchGenericBoardAgent(cfg) {
@@ -529,6 +608,8 @@ async function runAgent() {
   const tasks = [
     { id: "linkedin", fn: fetchLinkedInAgent },
     { id: "arbeitnow", fn: fetchArbeitnowAgent },
+    { id: "adzuna", fn: fetchAdzunaAgent },
+    { id: "jooble", fn: fetchJoobleAgent },
     ...BOARD_CONFIGS.map((cfg) => ({
       id: cfg.id,
       fn: async () => {
