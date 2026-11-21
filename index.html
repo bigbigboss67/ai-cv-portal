@@ -3299,6 +3299,9 @@
           <span>Tracker</span>
           <span class="tracker-badge" id="hudTrackerBadge">0</span>
         </button>
+        <button type="button" class="btn-pill-secondary" onclick="openExplainerVideoModal()" id="btnWatchGuide" title="Watch the 4-step walkthrough video with AI Guide" style="border-color:var(--accent-emerald);color:var(--accent-emerald);font-weight:700;">
+          &#9654; Watch Guide
+        </button>
         <button class="btn-pill-secondary" onclick="toggleCvDrawer()" id="btnToggleCvDrawer" title="Preview your live A4 CV">
           Preview CV
         </button>
@@ -4594,6 +4597,27 @@
           </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       MODAL: EXECUTIVE PORTAL WALKTHROUGH VIDEO (AI GUIDE)
+       =================================================================== -->
+  <div class="modal-backdrop" id="explainerVideoModal" onclick="if(event.target===this)closeExplainerVideoModal()">
+    <div class="modal-card" style="max-width:920px;padding:18px 20px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;border-bottom:1px solid var(--border-subtle);padding-bottom:10px;">
+        <div>
+          <div style="font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-emerald);">Interactive Walkthrough &middot; All 4 Steps</div>
+          <h3 style="margin:2px 0 0;font-size:18px;font-weight:800;color:var(--text-primary);">How to Use the Executive Career Portal</h3>
+        </div>
+        <button type="button" class="btn-pill-secondary" onclick="closeExplainerVideoModal()">Close &times;</button>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;background:#0b1120;border:1px solid var(--border-subtle);">
+        <video id="explainerVideoEl" controls playsinline preload="metadata" poster="media/portal-explainer-poster.png" style="width:100%;display:block;max-height:70vh;">
+          <source src="media/portal-explainer.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video playback.
+        </video>
       </div>
     </div>
   </div>
@@ -11511,6 +11535,22 @@ ${state.cv.contact}`;
       goToStep(3);
       autoFindRecipientEmail({ jobTarget: newJob, silent: true }).catch(() => {});
       showToast(`Converted listing & auto-filled email (${newJob.to})`);
+    }
+
+    function openExplainerVideoModal() {
+      const modal = document.getElementById("explainerVideoModal");
+      const vid = document.getElementById("explainerVideoEl");
+      if (modal) modal.classList.add("open");
+      if (vid) {
+        vid.play().catch(() => {});
+      }
+    }
+
+    function closeExplainerVideoModal() {
+      const modal = document.getElementById("explainerVideoModal");
+      const vid = document.getElementById("explainerVideoEl");
+      if (vid) vid.pause();
+      if (modal) modal.classList.remove("open");
     }
 
     function toggleTheme() {
